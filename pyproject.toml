@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "renewable-forecast"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb>=1.5,<2",
+    "pandas>=3,<4",
+    "pyarrow>=25,<26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+renewcast = "renewable_forecast.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -3,11 +3,15 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from renewable_forecast.backtest import (
+    run_backtest,
+    save_backtest_results,
+)
 from renewable_forecast.data_contract import (
     discover_parquet_files,
+    materialize_plant_series,
     save_report,
     validate_dataset,
-    materialize_plant_series,
 )
 
 
@@ -69,7 +73,25 @@ def build_parser() -> argparse.ArgumentParser:
         required=True,
     )
 
+    backtest_parser = commands.add_parser(
+        "backtest",
+        help="Executa o backtesting temporal.",
+    )
+
+    backtest_parser.add_argument(
+        "--input",
+        type=Path,
+        required=True,
+    )
+
+    backtest_parser.add_argument(
+        "--output-dir",
+        type=Path,
+        required=True,
+    )
+
     return parser
+
 
 def run_preparation(args: argparse.Namespace) -> int:
     files = discover_parquet_files(args.raw_dir)
@@ -133,6 +155,27 @@ def run_validation(args: argparse.Namespace) -> int:
     return 0 if report["status"] == "passed" else 1
 
 
+def run_backtest_command(
+    args: argparse.Namespace,
+) -> int:
+    predictions, fold_metrics, summary = run_backtest(
+        args.input
+    )
+
+    save_backtest_results(
+        predictions=predictions,
+        fold_metrics=fold_metrics,
+        summary=summary,
+        output_dir=args.output_dir,
+    )
+
+    print("\nResumo do backtesting:\n")
+    print(summary.round(3).to_string(index=False))
+    print(f"\nResultados salvos em: {args.output_dir}")
+
+    return 0
+
+
 def main() -> None:
     parser = build_parser()
     args = parser.parse_args()
@@ -142,6 +185,9 @@ def main() -> None:
 
     elif args.command == "prepare":
         exit_code = run_preparation(args)
+
+    elif args.command == "backtest":
+        exit_code = run_backtest_command(args)
 
     else:
         parser.error("Comando desconhecido.")

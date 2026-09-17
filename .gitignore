@@ -1,10 +1,31 @@
-__pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-.pytest_cache/
-.env
-.venv/
+# Dados e modelos locais
 data/raw/*
 !data/raw/.gitkeep
 data/interim/
+models/
+reports/tuning/
+
+# MLflow
+mlruns/
+mlflow.db
+mlflow_tracking*.db
+mlflow_tracking.db-*
+
+# Python
+__pycache__/
+*.py[cod]
 *.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Ambientes e IDE
+.env
+.venv/
+.vscode/
+
+reports/backtest/predictions.parquet
+reports/calibration/calibrated_predictions.parquet

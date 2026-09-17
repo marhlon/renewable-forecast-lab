@@ -1,0 +1,1005 @@
+{
+  "generated_at_utc": "2026-09-15T20:04:54.165212+00:00",
+  "status": "passed",
+  "file_count": 12,
+  "schema": {
+    "reference_file": "GERACAO_USINA-2_2025_09.parquet",
+    "consistent_between_files": false,
+    "different_from_reference": {
+      "GERACAO_USINA-2_2026_05.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_06.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_07.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_08.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ]
+    },
+    "missing_expected_columns": {},
+    "schemas": {
+      "GERACAO_USINA-2_2025_09.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2025_10.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2025_11.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2025_12.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_01.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_02.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_03.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_04.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "string"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_05.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_06.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_07.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ],
+      "GERACAO_USINA-2_2026_08.parquet": [
+        [
+          "din_instante",
+          "timestamp[ns]"
+        ],
+        [
+          "id_subsistema",
+          "string"
+        ],
+        [
+          "nom_subsistema",
+          "string"
+        ],
+        [
+          "id_estado",
+          "string"
+        ],
+        [
+          "nom_estado",
+          "string"
+        ],
+        [
+          "cod_modalidadeoperacao",
+          "string"
+        ],
+        [
+          "nom_tipousina",
+          "string"
+        ],
+        [
+          "nom_tipocombustivel",
+          "string"
+        ],
+        [
+          "nom_usina",
+          "string"
+        ],
+        [
+          "id_ons",
+          "string"
+        ],
+        [
+          "ceg",
+          "string"
+        ],
+        [
+          "val_geracao",
+          "double"
+        ]
+      ]
+    }
+  },
+  "dataset": {
+    "registros": 5958923,
+    "arquivos": 12,
+    "inicio": "2025-09-01 00:00:00",
+    "fim": "2026-08-31 23:00:00",
+    "instantes": 8760,
+    "target_ausente": 254784,
+    "id_ons_ausente": 345384
+  },
+  "files": [
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2025_09.parquet",
+      "registros": 491736,
+      "inicio": "2025-09-01 00:00:00",
+      "fim": "2025-09-30 23:00:00",
+      "instantes": 720,
+      "target_ausente": 720,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2025_10.parquet",
+      "registros": 483816,
+      "inicio": "2025-10-01 00:00:00",
+      "fim": "2025-10-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 0,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2025_11.parquet",
+      "registros": 471552,
+      "inicio": "2025-11-01 00:00:00",
+      "fim": "2025-11-30 23:00:00",
+      "instantes": 720,
+      "target_ausente": 408,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2025_12.parquet",
+      "registros": 485496,
+      "inicio": "2025-12-01 00:00:00",
+      "fim": "2025-12-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 744,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_01.parquet",
+      "registros": 495227,
+      "inicio": "2026-01-01 00:00:00",
+      "fim": "2026-01-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 312,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_02.parquet",
+      "registros": 450264,
+      "inicio": "2026-02-01 00:00:00",
+      "fim": "2026-02-28 23:00:00",
+      "instantes": 672,
+      "target_ausente": 0,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_03.parquet",
+      "registros": 490992,
+      "inicio": "2026-03-01 00:00:00",
+      "fim": "2026-03-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 624,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_04.parquet",
+      "registros": 473760,
+      "inicio": "2026-04-01 00:00:00",
+      "fim": "2026-04-30 23:00:00",
+      "instantes": 720,
+      "target_ausente": 720,
+      "id_ons_ausente": 0,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_05.parquet",
+      "registros": 530808,
+      "inicio": "2026-05-01 00:00:00",
+      "fim": "2026-05-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 63240,
+      "id_ons_ausente": 87048,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_06.parquet",
+      "registros": 514728,
+      "inicio": "2026-06-01 00:00:00",
+      "fim": "2026-06-30 23:00:00",
+      "instantes": 720,
+      "target_ausente": 61200,
+      "id_ons_ausente": 84240,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_07.parquet",
+      "registros": 533832,
+      "inicio": "2026-07-01 00:00:00",
+      "fim": "2026-07-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 63576,
+      "id_ons_ausente": 87048,
+      "timestamps_fora_da_hora": 0
+    },
+    {
+      "filename": "C:\\renewable-forecast-lab\\data\\raw\\GERACAO_USINA-2_2026_08.parquet",
+      "registros": 536712,
+      "inicio": "2026-08-01 00:00:00",
+      "fim": "2026-08-31 23:00:00",
+      "instantes": 744,
+      "target_ausente": 63240,
+      "id_ons_ausente": 87048,
+      "timestamps_fora_da_hora": 0
+    }
+  ],
+  "duplicates": {
+    "grupos_duplicados": 0,
+    "registros_excedentes": 0
+  },
+  "plant": {
+    "id_ons": "CJU_BA5EIGT",
+    "nom_usina": "CONJUNTO EÓLICO IGAPORÃ III 500KV",
+    "registros": 8760,
+    "instantes": 8760,
+    "inicio": "2025-09-01 00:00:00",
+    "fim": "2026-08-31 23:00:00",
+    "target_ausente": 0,
+    "horas_esperadas": 8760,
+    "cobertura_percentual": 100.0
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "Foi encontrado schema drift físico compatível. Os valores foram submetidos à validação numérica."
+    },
+    {
+      "severity": "warning",
+      "message": "Strings vazias em val_geracao foram normalizadas explicitamente para NULL."
+    }
+  ],
+  "schema_compatibility": {
+    "compatible": [
+      {
+        "file": "GERACAO_USINA-2_2026_05.parquet",
+        "column": "val_geracao",
+        "reference_type": "string",
+        "actual_type": "double"
+      },
+      {
+        "file": "GERACAO_USINA-2_2026_06.parquet",
+        "column": "val_geracao",
+        "reference_type": "string",
+        "actual_type": "double"
+      },
+      {
+        "file": "GERACAO_USINA-2_2026_07.parquet",
+        "column": "val_geracao",
+        "reference_type": "string",
+        "actual_type": "double"
+      },
+      {
+        "file": "GERACAO_USINA-2_2026_08.parquet",
+        "column": "val_geracao",
+        "reference_type": "string",
+        "actual_type": "double"
+      }
+    ],
+    "incompatible": []
+  },
+  "target_cast": {
+    "valores_nulos_originais": 251256,
+    "strings_vazias": 3528,
+    "valores_invalidos_nao_vazios": 0
+  },
+  "invalid_target_samples": []
+}

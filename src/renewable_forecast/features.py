@@ -46,6 +46,7 @@ FEATURE_COLUMNS = (
 
 def build_feature_frame(
     series: pd.DataFrame,
+    require_target: bool = True,
 ) -> pd.DataFrame:
     """Transforma uma série em uma tabela supervisionada sem leakage."""
 
@@ -148,11 +149,14 @@ def build_feature_frame(
         target.shift(1) - target.shift(2)
     )
 
+    required_for_output = list(FEATURE_COLUMNS)
+
+    if require_target:
+        required_for_output.append("val_geracao")
+
     feature_frame = (
         data
-        .dropna(
-            subset=FEATURE_COLUMNS + ["val_geracao"]
-        )
+        .dropna(subset=required_for_output)
         .reset_index(drop=True)
     )
 

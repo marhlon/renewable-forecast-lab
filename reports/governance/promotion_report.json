@@ -1,0 +1,36 @@
+{
+  "evidence_scope": "development_backtest",
+  "champion": "persistence_1h",
+  "challenger": "hist_gradient_boosting_calibrated_mean",
+  "decision": "approved_for_shadow",
+  "shadow_ready": true,
+  "statistically_superior": false,
+  "production_ready": false,
+  "requires_locked_holdout": true,
+  "checks": {
+    "mae_within_tolerance": true,
+    "absolute_bias_within_limit": true,
+    "rmse_improvement_sufficient": true,
+    "ramp_mae_improvement_sufficient": true,
+    "fold_win_rate_sufficient": true,
+    "mae_gain_ci_above_zero": false
+  },
+  "metrics": {
+    "candidate_mae": 10.40315369478272,
+    "baseline_mae": 10.709035595238095,
+    "candidate_bias": 0.2583027310120829,
+    "rmse_improvement_pct": 16.816862463252562,
+    "ramp_mae_improvement_pct": 40.17953530437344,
+    "fold_win_rate_pct": 60.0,
+    "mean_fold_mae_gain": 0.3058819004553754,
+    "mae_gain_ci_low": -0.4160773817803154,
+    "mae_gain_ci_high": 0.98002233207567
+  },
+  "thresholds": {
+    "mae_tolerance": 0.02,
+    "max_absolute_bias": 2.0,
+    "min_rmse_improvement_pct": 5.0,
+    "min_ramp_improvement_pct": 20.0,
+    "min_win_rate_pct": 60.0
+  }
+}

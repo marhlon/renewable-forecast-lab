@@ -1,0 +1,312 @@
+{
+  "input": "reports\\backtest\\predictions.parquet",
+  "candidate_model": "hist_gradient_boosting",
+  "baseline_model": "persistence_1h",
+  "history_window": 672,
+  "min_history": 168,
+  "ramp_threshold": 30.0,
+  "residual_definition": "actual_minus_prediction",
+  "calibration_scope": "previous_folds_only",
+  "offsets": [
+    {
+      "fold": 1,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 0.0,
+      "calibration_history_size": 0
+    },
+    {
+      "fold": 1,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 0.0,
+      "calibration_history_size": 0
+    },
+    {
+      "fold": 2,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.10784793733718281,
+      "calibration_history_size": 168
+    },
+    {
+      "fold": 2,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.8257045621092897,
+      "calibration_history_size": 168
+    },
+    {
+      "fold": 3,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.22449019118396077,
+      "calibration_history_size": 336
+    },
+    {
+      "fold": 3,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.4665998288556903,
+      "calibration_history_size": 336
+    },
+    {
+      "fold": 4,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.7943660462815669,
+      "calibration_history_size": 504
+    },
+    {
+      "fold": 4,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.48560779690192424,
+      "calibration_history_size": 504
+    },
+    {
+      "fold": 5,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.29240792952408823,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 5,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.49434109491359035,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 6,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 0.01095516347839967,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 6,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.45570999761332964,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 7,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.13726259013203376,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 7,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.5096835692185177,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 8,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 0.6132839357897586,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 8,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.5123549912947107,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 9,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 1.0011959022164443,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 9,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.43165494093457735,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 10,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 0.9240283876162401,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 10,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.3505362636472149,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 11,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 1.1781239193970487,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 11,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.11539153867681023,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 12,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 0.33760814433745,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 12,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.2671588208735955,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 13,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -1.2101410109563109,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 13,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -1.597671601740629,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 14,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -1.3245416507248566,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 14,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -1.4934525865768506,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 15,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -1.5451273552198326,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 15,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -2.0926077624866117,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 16,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.44246879796934585,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 16,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -1.2979191552833589,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 17,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.15894302596333962,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 17,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -1.0632420514179028,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 18,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": -0.3378230348958659,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 18,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -1.0006885731274693,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 19,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 1.2788265689549116,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 19,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": -0.020918472909695396,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 20,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 1.4703287419691642,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 20,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 0.17475595398710908,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 21,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 2.9051985518333847,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 21,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 1.5630874001632158,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 22,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 3.63372736415656,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 22,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 2.326770541459947,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 23,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 3.0114311517375656,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 23,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 2.7034800664033476,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 24,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 2.341044214508881,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 24,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 2.717100268563719,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 25,
+      "model": "hist_gradient_boosting_calibrated_mean",
+      "calibration_offset": 1.768855637223378,
+      "calibration_history_size": 672
+    },
+    {
+      "fold": 25,
+      "model": "hist_gradient_boosting_calibrated_median",
+      "calibration_offset": 2.4593025212781754,
+      "calibration_history_size": 672
+    }
+  ]
+}

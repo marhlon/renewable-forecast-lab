@@ -1,0 +1,508 @@
+
+docker info --format {{.OSType}}
+linux
+
+docker build --platform linux/amd64 -t renewcast-spark-m07:d45ea04ad95a C:\renewable-forecast-lab\infra\m07_spark
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 946B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.13-slim-bookworm
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.2s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#5 resolve docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 37B 0.0s done
+#4 DONE 0.1s
+
+#6 [4/6] RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt
+#6 CACHED
+
+#7 [5/6] RUN groupadd --gid 10001 renewcast     && useradd --uid 10001 --gid 10001 --no-create-home        --home-dir /tmp/renewcast --shell /usr/sbin/nologin renewcast
+#7 CACHED
+
+#8 [2/6] RUN apt-get update     && apt-get install -y --no-install-recommends openjdk-17-jre-headless     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [3/6] COPY requirements.txt /tmp/requirements.txt
+#9 CACHED
+
+#10 [6/6] WORKDIR /tmp
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 exporting manifest sha256:de291bdfa5f75782c8828b98633981e9ed7e041fa62577b84f1b5155d01d7eb9 done
+#11 exporting config sha256:a5b93fc853ac42f23604ba3bd225ca4aabd954a66c9c7b47cfe7d6313864c7ca 0.0s done
+#11 exporting attestation manifest sha256:6dd725fe864198166c67ebd00304b759308519c5d844519d6cfcb62fe4528342 0.1s done
+#11 exporting manifest list sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1
+#11 exporting manifest list sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1 0.2s done
+#11 naming to docker.io/library/renewcast-spark-m07:d45ea04ad95a 0.0s done
+#11 unpacking to docker.io/library/renewcast-spark-m07:d45ea04ad95a 0.0s done
+#11 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/oqosonoso24lfj8gu3c2jb6he
+
+docker image inspect renewcast-spark-m07:d45ea04ad95a
+[
+    {
+        "Id": "sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1",
+        "RepoTags": [
+            "renewcast-spark-m07:d45ea04ad95a"
+        ],
+        "RepoDigests": [
+            "renewcast-spark-m07@sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-19T17:23:09.791000168Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 582557076,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+                "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+                "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+                "sha256:23b6c0b719f48252ea1cc40e21738869048dbd8747e676e59b1502672cf98fe1",
+                "sha256:75937afafd5b89917af32b36d3935f5bcb16625e141fc75e210d5f9a3a906f26",
+                "sha256:f9b1c792d1563cff93fedc7be33d90d22f4e2a9b8bb026e33376830078ae9102",
+                "sha256:bd99deb60e3c8f4e9339c3e871580d3f376a0ed6918de254e06a500ce1979ec4",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-19T17:24:24.921676965Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1",
+            "size": 856
+        },
+        "Config": {
+            "Cmd": null,
+            "Entrypoint": [
+                "python",
+                "/work/tools/m07_transformacao.py"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "DEBIAN_FRONTEND=noninteractive",
+                "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "SPARK_LOCAL_IP=127.0.0.1",
+                "PYSPARK_PYTHON=/usr/local/bin/python"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "renewcast:renewcast",
+            "Volumes": null,
+            "WorkingDir": "/tmp"
+        }
+    }
+]
+
+docker run --rm --pull never --platform linux/amd64 --cpus 2 --memory 3g --pids-limit 512 --network none --hostname renewcast-spark --add-host renewcast-spark:127.0.0.1 --read-only --tmpfs /tmp:rw,size=512m --cap-drop ALL --security-opt no-new-privileges --mount type=bind,source=C:\renewable-forecast-lab\data\interim\CJU_BA5EIGT_hourly.parquet,target=/inputs/geracao.parquet,readonly --mount type=bind,source=C:\renewable-forecast-lab\tools,target=/work/tools,readonly --mount type=bind,source=C:\renewable-forecast-lab\notebooks,target=/work/notebooks,readonly --mount type=bind,source=C:\renewable-forecast-lab\reports\scale\CJU_BA5EIGT\m07_1\20261019T172422Z_877bd8f9,target=/output sha256:044f3dc6cf4e720083903b6aa968b74d42bc5d198121b841b7fb8fb85296cdd1 --input /inputs/geracao.parquet --output /output/results --shuffle-partitions 2 --author /work/notebooks/transformacao_spark.py
+Entrada real: 8760 linhas; 365 datas; 0 valores nulos.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/19 17:24:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/19 17:24:44 WARN MacAddressUtil: Failed to find a usable hardware address from the network interfaces; using random bytes: 6c:ff:50:c1:a9:81:e2:2b
+Spark iniciado: 4.0.1; cache Ivy=/tmp/renewcast-spark-051ij2k5/ivy.
+26/10/19 17:25:33 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 1)
+scala.MatchError: java.lang.UnsatisfiedLinkError: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: failed to map segment from shared object
+no zstd-jni-1.5.6-9 in java.library.path: /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Unsupported OS/arch, cannot find /linux/amd64/libzstd-jni-1.5.6-9.so or load zstd-jni-1.5.6-9 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.6-9 in your system. (of class java.lang.UnsatisfiedLinkError)
+	at org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2$.attachFilePath(FileDataSourceV2.scala:127)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:142)
+	at org.apache.spark.sql.execution.FileSourceScanExec$$anon$1.hasNext(DataSourceScanExec.scala:695)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.columnartorow_nextBatch_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.hashAgg_doAggregateWithKeys_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:50)
+	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:143)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:57)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:111)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:171)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$5(Executor.scala:647)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:80)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:77)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:650)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+26/10/19 17:25:33 ERROR TaskSetManager: Task 0 in stage 1.0 failed 1 times; aborting job
+Traceback (most recent call last):
+  File "/work/tools/m07_transformacao.py", line 392, in <module>
+    executar(args.input, args.output, args.conjunto, args.shuffle_partitions, args.author)
+  File "/work/tools/m07_transformacao.py", line 345, in executar
+    real = executar_caso(spark, normalized, meta, output / "real", module)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tools/m07_transformacao.py", line 266, in executar_caso
+    actual, spark_timing = coletar_spark(frame, meta, output, "spark_dataframe")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/tools/m07_transformacao.py", line 217, in coletar_spark
+    rows = [r.asDict() for r in result.collect()]
+                                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyspark/sql/classic/dataframe.py", line 443, in collect
+    sock_info = self._jdf.collectToPython()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 282, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/py4j/protocol.py", line 327, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o279.collectToPython.
+: java.util.concurrent.ExecutionException: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (localhost executor driver): scala.MatchError: java.lang.UnsatisfiedLinkError: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: failed to map segment from shared object
+no zstd-jni-1.5.6-9 in java.library.path: /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Unsupported OS/arch, cannot find /linux/amd64/libzstd-jni-1.5.6-9.so or load zstd-jni-1.5.6-9 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.6-9 in your system. (of class java.lang.UnsatisfiedLinkError)
+	at org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2$.attachFilePath(FileDataSourceV2.scala:127)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:142)
+	at org.apache.spark.sql.execution.FileSourceScanExec$$anon$1.hasNext(DataSourceScanExec.scala:695)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.columnartorow_nextBatch_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.hashAgg_doAggregateWithKeys_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:50)
+	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:143)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:57)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:111)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:171)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$5(Executor.scala:647)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:80)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:77)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:650)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+Driver stacktrace:
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.doExecuteBroadcast(BroadcastExchangeExec.scala:254)
+	at org.apache.spark.sql.execution.InputAdapter.doExecuteBroadcast(WholeStageCodegenExec.scala:523)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeBroadcastBcast$1(SparkPlan.scala:205)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.util.Utils$.doTryWithCallerStacktrace(Utils.scala:1378)
+	at org.apache.spark.util.LazyTry.tryT$lzycompute(LazyTry.scala:46)
+	at org.apache.spark.util.LazyTry.tryT(LazyTry.scala:46)
+	at org.apache.spark.util.LazyTry.get(LazyTry.scala:58)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeBroadcast$1(SparkPlan.scala:218)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.SparkPlan.executeBroadcast(SparkPlan.scala:214)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.prepareBroadcast(BroadcastHashJoinExec.scala:186)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.prepareRelation(BroadcastHashJoinExec.scala:200)
+	at org.apache.spark.sql.execution.joins.HashJoin.codegenOuter(HashJoin.scala:450)
+	at org.apache.spark.sql.execution.joins.HashJoin.codegenOuter$(HashJoin.scala:449)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.codegenOuter(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.joins.HashJoin.doConsume(HashJoin.scala:363)
+	at org.apache.spark.sql.execution.joins.HashJoin.doConsume$(HashJoin.scala:360)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doConsume(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.CodegenSupport.constructDoConsumeFunction(WholeStageCodegenExec.scala:227)
+	at org.apache.spark.sql.execution.CodegenSupport.consume(WholeStageCodegenExec.scala:198)
+	at org.apache.spark.sql.execution.CodegenSupport.consume$(WholeStageCodegenExec.scala:153)
+	at org.apache.spark.sql.execution.ProjectExec.consume(basicPhysicalOperators.scala:42)
+	at org.apache.spark.sql.execution.ProjectExec.doConsume(basicPhysicalOperators.scala:89)
+	at org.apache.spark.sql.execution.CodegenSupport.consume(WholeStageCodegenExec.scala:200)
+	at org.apache.spark.sql.execution.CodegenSupport.consume$(WholeStageCodegenExec.scala:153)
+	at org.apache.spark.sql.execution.RangeExec.consume(basicPhysicalOperators.scala:416)
+	at org.apache.spark.sql.execution.RangeExec.doProduce(basicPhysicalOperators.scala:603)
+	at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.RangeExec.produce(basicPhysicalOperators.scala:416)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+	at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+	at org.apache.spark.sql.execution.joins.HashJoin.doProduce(HashJoin.scala:357)
+	at org.apache.spark.sql.execution.joins.HashJoin.doProduce$(HashJoin.scala:356)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doProduce(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.produce(BroadcastHashJoinExec.scala:40)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+	at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+	at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+	at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+	at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doCodeGen(WholeStageCodegenExec.scala:666)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:729)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeRDD$1(SparkPlan.scala:188)
+	at scala.util.Try$.apply(Try.scala:217)
+	at org.apache.spark.util.Utils$.getTryWithCallerStacktrace(Utils.scala:1439)
+	at org.apache.spark.util.LazyTry.get(LazyTry.scala:58)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:201)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:197)
+	at org.apache.spark.sql.execution.TakeOrderedAndProjectExec.$anonfun$executeCollect$1(limit.scala:327)
+	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+	at org.apache.spark.sql.execution.TakeOrderedAndProjectExec.executeCollect(limit.scala:321)
+	at org.apache.spark.sql.classic.Dataset.$anonfun$collectToPython$1(Dataset.scala:2057)
+	at org.apache.spark.sql.classic.Dataset.$anonfun$withAction$2(Dataset.scala:2234)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:654)
+	at org.apache.spark.sql.classic.Dataset.$anonfun$withAction$1(Dataset.scala:2232)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$8(SQLExecution.scala:163)
+	at org.apache.spark.sql.execution.SQLExecution$.withSessionTagsApplied(SQLExecution.scala:272)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$7(SQLExecution.scala:125)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.artifact.ArtifactManager.$anonfun$withResources$1(ArtifactManager.scala:112)
+	at org.apache.spark.sql.artifact.ArtifactManager.withClassLoaderIfNeeded(ArtifactManager.scala:106)
+	at org.apache.spark.sql.artifact.ArtifactManager.withResources(ArtifactManager.scala:111)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:295)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId0$1(SQLExecution.scala:124)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:804)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId0(SQLExecution.scala:78)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:237)
+	at org.apache.spark.sql.classic.Dataset.withAction(Dataset.scala:2232)
+	at org.apache.spark.sql.classic.Dataset.collectToPython(Dataset.scala:2054)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:184)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+	Suppressed: org.apache.spark.util.Utils$OriginalTryStackTraceException: Full stacktrace of original doTryWithCallerStacktrace caller
+		at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+		at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+		at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.doExecuteBroadcast(BroadcastExchangeExec.scala:254)
+		at org.apache.spark.sql.execution.InputAdapter.doExecuteBroadcast(WholeStageCodegenExec.scala:523)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeBroadcastBcast$1(SparkPlan.scala:205)
+		at scala.util.Try$.apply(Try.scala:217)
+		at org.apache.spark.util.Utils$.doTryWithCallerStacktrace(Utils.scala:1378)
+		at org.apache.spark.util.LazyTry.tryT$lzycompute(LazyTry.scala:46)
+		at org.apache.spark.util.LazyTry.tryT(LazyTry.scala:46)
+		at org.apache.spark.util.LazyTry.get(LazyTry.scala:58)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeBroadcast$1(SparkPlan.scala:218)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.SparkPlan.executeBroadcast(SparkPlan.scala:214)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.prepareBroadcast(BroadcastHashJoinExec.scala:186)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.prepareRelation(BroadcastHashJoinExec.scala:200)
+		at org.apache.spark.sql.execution.joins.HashJoin.codegenOuter(HashJoin.scala:450)
+		at org.apache.spark.sql.execution.joins.HashJoin.codegenOuter$(HashJoin.scala:449)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.codegenOuter(BroadcastHashJoinExec.scala:40)
+		at org.apache.spark.sql.execution.joins.HashJoin.doConsume(HashJoin.scala:363)
+		at org.apache.spark.sql.execution.joins.HashJoin.doConsume$(HashJoin.scala:360)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doConsume(BroadcastHashJoinExec.scala:40)
+		at org.apache.spark.sql.execution.CodegenSupport.constructDoConsumeFunction(WholeStageCodegenExec.scala:227)
+		at org.apache.spark.sql.execution.CodegenSupport.consume(WholeStageCodegenExec.scala:198)
+		at org.apache.spark.sql.execution.CodegenSupport.consume$(WholeStageCodegenExec.scala:153)
+		at org.apache.spark.sql.execution.ProjectExec.consume(basicPhysicalOperators.scala:42)
+		at org.apache.spark.sql.execution.ProjectExec.doConsume(basicPhysicalOperators.scala:89)
+		at org.apache.spark.sql.execution.CodegenSupport.consume(WholeStageCodegenExec.scala:200)
+		at org.apache.spark.sql.execution.CodegenSupport.consume$(WholeStageCodegenExec.scala:153)
+		at org.apache.spark.sql.execution.RangeExec.consume(basicPhysicalOperators.scala:416)
+		at org.apache.spark.sql.execution.RangeExec.doProduce(basicPhysicalOperators.scala:603)
+		at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.RangeExec.produce(basicPhysicalOperators.scala:416)
+		at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+		at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+		at org.apache.spark.sql.execution.joins.HashJoin.doProduce(HashJoin.scala:357)
+		at org.apache.spark.sql.execution.joins.HashJoin.doProduce$(HashJoin.scala:356)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.doProduce(BroadcastHashJoinExec.scala:40)
+		at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.joins.BroadcastHashJoinExec.produce(BroadcastHashJoinExec.scala:40)
+		at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+		at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+		at org.apache.spark.sql.execution.ProjectExec.doProduce(basicPhysicalOperators.scala:55)
+		at org.apache.spark.sql.execution.CodegenSupport.$anonfun$produce$1(WholeStageCodegenExec.scala:99)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:260)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:257)
+		at org.apache.spark.sql.execution.CodegenSupport.produce(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.CodegenSupport.produce$(WholeStageCodegenExec.scala:94)
+		at org.apache.spark.sql.execution.ProjectExec.produce(basicPhysicalOperators.scala:42)
+		at org.apache.spark.sql.execution.WholeStageCodegenExec.doCodeGen(WholeStageCodegenExec.scala:666)
+		at org.apache.spark.sql.execution.WholeStageCodegenExec.doExecute(WholeStageCodegenExec.scala:729)
+		at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeRDD$1(SparkPlan.scala:188)
+		at scala.util.Try$.apply(Try.scala:217)
+		at org.apache.spark.util.Utils$.doTryWithCallerStacktrace(Utils.scala:1378)
+		at org.apache.spark.util.LazyTry.tryT$lzycompute(LazyTry.scala:46)
+		at org.apache.spark.util.LazyTry.tryT(LazyTry.scala:46)
+		... 42 more
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 1.0 failed 1 times, most recent failure: Lost task 0.0 in stage 1.0 (TID 1) (localhost executor driver): scala.MatchError: java.lang.UnsatisfiedLinkError: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: failed to map segment from shared object
+no zstd-jni-1.5.6-9 in java.library.path: /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Unsupported OS/arch, cannot find /linux/amd64/libzstd-jni-1.5.6-9.so or load zstd-jni-1.5.6-9 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.6-9 in your system. (of class java.lang.UnsatisfiedLinkError)
+	at org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2$.attachFilePath(FileDataSourceV2.scala:127)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:142)
+	at org.apache.spark.sql.execution.FileSourceScanExec$$anon$1.hasNext(DataSourceScanExec.scala:695)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.columnartorow_nextBatch_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.hashAgg_doAggregateWithKeys_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:50)
+	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:143)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:57)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:111)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:171)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$5(Executor.scala:647)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:80)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:77)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:650)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$3(DAGScheduler.scala:2935)
+	at scala.Option.getOrElse(Option.scala:201)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2935)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2927)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2927)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1295)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1295)
+	at scala.Option.foreach(Option.scala:437)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1295)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3207)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3141)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:3130)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:50)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:1009)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2484)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2505)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2524)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2549)
+	at org.apache.spark.rdd.RDD.$anonfun$collect$1(RDD.scala:1057)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:417)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:1056)
+	at org.apache.spark.sql.execution.SparkPlan.executeCollectIterator(SparkPlan.scala:469)
+	at org.apache.spark.sql.execution.exchange.BroadcastExchangeExec.$anonfun$relationFuture$1(BroadcastExchangeExec.scala:182)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$4(SQLExecution.scala:322)
+	at org.apache.spark.sql.execution.SQLExecution$.withSessionTagsApplied(SQLExecution.scala:272)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$3(SQLExecution.scala:320)
+	at org.apache.spark.JobArtifactSet$.withActiveJobArtifactState(JobArtifactSet.scala:94)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withThreadLocalCaptured$2(SQLExecution.scala:316)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: scala.MatchError: java.lang.UnsatisfiedLinkError: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: /tmp/libzstd-jni-1.5.6-913148387210957105710.so: failed to map segment from shared object
+no zstd-jni-1.5.6-9 in java.library.path: /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Unsupported OS/arch, cannot find /linux/amd64/libzstd-jni-1.5.6-9.so or load zstd-jni-1.5.6-9 from system libraries. Please try building from source the jar or providing libzstd-jni-1.5.6-9 in your system. (of class java.lang.UnsatisfiedLinkError)
+	at org.apache.spark.sql.execution.datasources.v2.FileDataSourceV2$.attachFilePath(FileDataSourceV2.scala:127)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:142)
+	at org.apache.spark.sql.execution.FileSourceScanExec$$anon$1.hasNext(DataSourceScanExec.scala:695)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.columnartorow_nextBatch_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.hashAgg_doAggregateWithKeys_0$(Unknown Source)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:50)
+	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:143)
+	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:57)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:111)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:171)
+	at org.apache.spark.scheduler.Task.run(Task.scala:147)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$5(Executor.scala:647)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:80)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:77)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:99)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:650)
+	... 3 more
+

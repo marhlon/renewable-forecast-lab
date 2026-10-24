@@ -1,0 +1,49 @@
+{
+  "schema": "renewcast-m07-base-professor-v1",
+  "verified": true,
+  "scope": "Linux nativo; leitura Parquet ZSTD e explicação didática; não Docker/Windows",
+  "native_zstd_parquet_read": true,
+  "rows_read": 51,
+  "example_rows": [
+    {
+      "dia": "2026-01-01",
+      "horas_presentes": 3,
+      "horas_validas": 2,
+      "geracao_media_mwmed": 6.0,
+      "cobertura": 0.08333333333333333,
+      "qualidade": "parcial"
+    },
+    {
+      "dia": "2026-01-02",
+      "horas_presentes": 0,
+      "horas_validas": 0,
+      "geracao_media_mwmed": null,
+      "cobertura": 0.0,
+      "qualidade": "sem_dados"
+    }
+  ],
+  "temporary_root": "/tmp",
+  "temporary_noexec": false,
+  "pyspark_version": "4.0.1",
+  "duckdb_version": "1.4.1",
+  "docker_executed": false,
+  "noexec_failure_reproduced_locally": false,
+  "student_parquet_used": false,
+  "evidence_id": "E99",
+  "session_date_local": "2026-10-19",
+  "session_timezone": "America/Sao_Paulo",
+  "packaged_at_utc": "2026-10-19T17:54:46.508736+00:00",
+  "source_attachment_sha256": "36d81313f20ec6ef4e22256ce14ea2b05d61e4acab7f6d25cd8a55ad7eb98e24",
+  "source_failed_runs": [
+    "20261019T172422Z_877bd8f9",
+    "20261019T174519Z_9fe0bb39"
+  ],
+  "diagnosis": "native loading error consistent with temporary mount noexec; effective mount flags absent from supplied log",
+  "student_author_file_replaced": false,
+  "code_sha256": {
+    "scripts/executar_m07_spark.py": "81a188e3919a00bab87d62e163199da1351ba542213ad1b209a3c03954fcf89d",
+    "tools/m07_transformacao.py": "ff46f0b58f549cfae86a7add0d33e2cab561ffdbdad7c8765188c13debd6eb1c"
+  },
+  "verification_script_sha256": "a7666732146dd5de1b81bd7cb238bc63485c298f0e4950da23189a48f546e55b",
+  "verification_log_sha256": "7808a7fb4adc28ebd49b654d1a7e5a3567a5272989130e9e9214aa217f5fdb40"
+}

@@ -1,0 +1,53 @@
+{
+  "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=-13.83506285%2C-13.82661024%2C-14.32898043%2C-13.99459845%2C-14.04405600%2C-13.86355786%2C-13.82937522%2C-13.84187496%2C-14.00546660%2C-14.01696831%2C-14.53557321%2C-13.98084040%2C-14.01545978%2C-13.97988782%2C-14.25403541&longitude=-42.70377690%2C-42.70428516%2C-42.57230176%2C-42.69078304%2C-42.65429301%2C-42.69089807%2C-42.69082273%2C-42.69056477%2C-42.66704098%2C-42.67641007%2C-42.57583880%2C-42.67878101%2C-42.66330327%2C-42.66518946%2C-42.54905022&models=gfs_global&hourly=wind_speed_100m%2Cwind_direction_100m&wind_speed_unit=ms&timezone=UTC&run=2026-07-31T12%3A00&forecast_hours=48&cell_selection=nearest&elevation=nan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan",
+  "request_params": {
+    "latitude": "-13.83506285,-13.82661024,-14.32898043,-13.99459845,-14.04405600,-13.86355786,-13.82937522,-13.84187496,-14.00546660,-14.01696831,-14.53557321,-13.98084040,-14.01545978,-13.97988782,-14.25403541",
+    "longitude": "-42.70377690,-42.70428516,-42.57230176,-42.69078304,-42.65429301,-42.69089807,-42.69082273,-42.69056477,-42.66704098,-42.67641007,-42.57583880,-42.67878101,-42.66330327,-42.66518946,-42.54905022",
+    "models": "gfs_global",
+    "hourly": "wind_speed_100m,wind_direction_100m",
+    "wind_speed_unit": "ms",
+    "timezone": "UTC",
+    "run": "2026-07-31T12:00",
+    "forecast_hours": 48,
+    "cell_selection": "nearest",
+    "elevation": "nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan"
+  },
+  "protocol": {
+    "schema_version": 1,
+    "weather_model": "gfs_global",
+    "run_time_utc": "2026-07-31T12:00:00+00:00",
+    "hours": 48,
+    "assumed_latency_hours": 6,
+    "availability_is_assumed": true,
+    "historical_availability_verified": false,
+    "availability_rule": "weather_run_time + assumed_latency_hours; not observed release time",
+    "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+    "request_plant_ids": [
+      "BAEAMC",
+      "BAEBAB",
+      "BAECED",
+      "BAEFAC",
+      "BAEGEL",
+      "BAEIBM",
+      "BAEJAT",
+      "BAEJUA",
+      "BAEMLG",
+      "BAEMNN",
+      "BAEPDA",
+      "BAEQUN",
+      "BAESBU",
+      "BAEUMB",
+      "BAEVLZ"
+    ],
+    "registry_historical_versions_verified": false,
+    "generation_timezone_verified": false
+  },
+  "http_status": 200,
+  "fetched_at_utc": "2026-09-29T00:25:06.211768+00:00",
+  "response_sha256": "1e33025d9574280a9f1381a20efec454af4377673e3d4ca0706de1c21afe62e5",
+  "response_bytes": 25131,
+  "http_last_modified": null,
+  "etag": null,
+  "attribution": "Weather data: NOAA GFS via Open-Meteo; locations: ONS/ANEEL.",
+  "documentation": "https://open-meteo.com/en/docs/single-runs-api"
+}

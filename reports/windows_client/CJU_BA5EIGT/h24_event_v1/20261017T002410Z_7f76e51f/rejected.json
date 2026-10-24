@@ -1,0 +1,22 @@
+{
+  "schema": "renewcast-client-receipt-v2",
+  "client_version": "1.1.0",
+  "issued_at_utc": "2026-10-17T00:24:20.554275+00:00",
+  "url": "http://127.0.0.1:61266",
+  "frozen": true,
+  "executable": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_dyj5tiwa\\renewcast\\renewcast.exe",
+  "working_directory": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_dyj5tiwa",
+  "conda_active": false,
+  "pythonpath_present": false,
+  "request_sha256": "9ed19c3782a6a0a8c3c1853c710b36d0ede3d12d71364c49605d5c374eb68ecb",
+  "contract_sha256": "ee038d65afcc1a29822d20c8e07a0d084b6210f69c2d0df89ded4d4f2bf6616b",
+  "requested_presentation_mode": "historical_replay",
+  "presentation": null,
+  "audit_response": null,
+  "http_status": 422,
+  "response": null,
+  "http_elapsed_ms": 9.228399983840063,
+  "state": "rejected",
+  "detail": "API recusou o pedido; conferir entrada e contrato.",
+  "exit_code": 2
+}

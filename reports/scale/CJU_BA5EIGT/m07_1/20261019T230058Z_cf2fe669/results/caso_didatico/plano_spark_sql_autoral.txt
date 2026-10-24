@@ -1,0 +1,69 @@
+== Physical Plan ==
+TakeOrderedAndProject (11)
++- * HashAggregate (10)
+   +- Exchange (9)
+      +- * HashAggregate (8)
+         +- * BroadcastHashJoin LeftOuter BuildRight (7)
+            :- * Project (2)
+            :  +- * Range (1)
+            +- BroadcastExchange (6)
+               +- * Filter (5)
+                  +- * ColumnarToRow (4)
+                     +- Scan parquet  (3)
+
+
+(1) Range [codegen id : 2]
+Output [1]: [id#109L]
+Arguments: Range (0, 4, step=1, splits=Some(2))
+
+(2) Project [codegen id : 2]
+Output [1]: [date_add(2026-01-01, cast(id#109L as int)) AS dia#110]
+Input [1]: [id#109L]
+
+(3) Scan parquet 
+Output [2]: [din_instante#107, val_geracao#108]
+Batched: true
+Location: InMemoryFileIndex [file:/output/results/caso_normalizado.parquet]
+PushedFilters: [IsNotNull(din_instante)]
+ReadSchema: struct<din_instante:timestamp_ntz,val_geracao:double>
+
+(4) ColumnarToRow [codegen id : 1]
+Input [2]: [din_instante#107, val_geracao#108]
+
+(5) Filter [codegen id : 1]
+Input [2]: [din_instante#107, val_geracao#108]
+Condition : isnotnull(din_instante#107)
+
+(6) BroadcastExchange
+Input [2]: [din_instante#107, val_geracao#108]
+Arguments: HashedRelationBroadcastMode(List(cast(input[0, timestamp_ntz, false] as date)),false), [plan_id=421]
+
+(7) BroadcastHashJoin [codegen id : 2]
+Left keys [1]: [dia#110]
+Right keys [1]: [cast(din_instante#107 as date)]
+Join type: LeftOuter
+Join condition: None
+
+(8) HashAggregate [codegen id : 2]
+Input [3]: [dia#110, din_instante#107, val_geracao#108]
+Keys [1]: [dia#110]
+Functions [6]: [partial_count(din_instante#107), partial_sum(CASE WHEN isnotnull(val_geracao#108) THEN 1 ELSE 0 END), partial_count(val_geracao#108), partial_avg(val_geracao#108), partial_min(val_geracao#108), partial_max(val_geracao#108)]
+Aggregate Attributes [7]: [count#177L, sum#178L, count#179L, sum#180, count#181L, min#182, max#183]
+Results [8]: [dia#110, count#184L, sum#185L, count#186L, sum#187, count#188L, min#189, max#190]
+
+(9) Exchange
+Input [8]: [dia#110, count#184L, sum#185L, count#186L, sum#187, count#188L, min#189, max#190]
+Arguments: hashpartitioning(dia#110, 2), ENSURE_REQUIREMENTS, [plan_id=426]
+
+(10) HashAggregate [codegen id : 3]
+Input [8]: [dia#110, count#184L, sum#185L, count#186L, sum#187, count#188L, min#189, max#190]
+Keys [1]: [dia#110]
+Functions [6]: [count(din_instante#107), sum(CASE WHEN isnotnull(val_geracao#108) THEN 1 ELSE 0 END), count(val_geracao#108), avg(val_geracao#108), min(val_geracao#108), max(val_geracao#108)]
+Aggregate Attributes [6]: [count(din_instante#107)#168L, sum(CASE WHEN isnotnull(val_geracao#108) THEN 1 ELSE 0 END)#169L, count(val_geracao#108)#171L, avg(val_geracao#108)#174, min(val_geracao#108)#175, max(val_geracao#108)#176]
+Results [10]: [dia#110, 24 AS horas_esperadas#159, count(din_instante#107)#168L AS horas_presentes#160L, sum(CASE WHEN isnotnull(val_geracao#108) THEN 1 ELSE 0 END)#169L AS horas_validas#161L, (count(din_instante#107)#168L - count(val_geracao#108)#171L) AS horas_nulas#162L, (24 - count(din_instante#107)#168L) AS horas_ausentes#163L, (cast(sum(CASE WHEN isnotnull(val_geracao#108) THEN 1 ELSE 0 END)#169L as double) / 24.0) AS cobertura#164, avg(val_geracao#108)#174 AS geracao_media_mwmed#165, min(val_geracao#108)#175 AS geracao_min_mwmed#166, max(val_geracao#108)#176 AS geracao_max_mwmed#167]
+
+(11) TakeOrderedAndProject
+Input [10]: [dia#110, horas_esperadas#159, horas_presentes#160L, horas_validas#161L, horas_nulas#162L, horas_ausentes#163L, cobertura#164, geracao_media_mwmed#165, geracao_min_mwmed#166, geracao_max_mwmed#167]
+Arguments: 5, [dia#110 ASC NULLS FIRST], [dia#110, horas_esperadas#159, horas_presentes#160L, horas_validas#161L, horas_nulas#162L, horas_ausentes#163L, cobertura#164, geracao_media_mwmed#165, geracao_min_mwmed#166, geracao_max_mwmed#167]
+
+

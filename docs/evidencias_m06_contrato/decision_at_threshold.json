@@ -1,0 +1,12 @@
+{
+  "policy_id": "CJU_BA5EIGT-h24-d2-drop22p77-cap120-v1",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "mode": "development_replay",
+  "method": "hgb_weather_classifier",
+  "forecast_origin": "2026-07-11T06:00:00Z",
+  "target_time": "2026-07-12T06:00:00Z",
+  "p_event": 0.5,
+  "threshold": 0.5,
+  "alarm": true,
+  "capacity_enforced_at_runtime": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "load_and_predict_with_fit_disabled": true,
+  "compatible_artifact_reused_without_fit": true,
+  "changed_model_rejected_before_joblib_load": true,
+  "changed_policy_rejected": true,
+  "p_event": 0.20179188830321645
+}

@@ -1,0 +1,5 @@
+dia,horas_esperadas,horas_presentes,horas_validas,horas_nulas,horas_ausentes,cobertura,geracao_media_mwmed,acao
+2026-01-01,24,3,3,0,21,0.125,6.0,revisar_cobertura
+2026-01-02,24,0,0,0,24,0.0,,investigar_coleta
+2026-01-03,24,24,0,24,0,0.0,,investigar_medicao
+2026-01-04,24,24,24,0,0,1.0,10.0,ok

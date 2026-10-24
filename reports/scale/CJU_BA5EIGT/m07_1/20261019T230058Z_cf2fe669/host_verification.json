@@ -1,0 +1,16 @@
+{
+  "schema": "renewcast-m07-host-v1",
+  "verified": true,
+  "run_id": "20261019T230058Z_cf2fe669",
+  "mode": "autoria",
+  "source_file": "C:\\renewable-forecast-lab\\data\\interim\\CJU_BA5EIGT_hourly.parquet",
+  "source_sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+  "source_preserved": true,
+  "image_id": "sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9",
+  "context_sha256": "d45ea04ad95ae33f42d3ba842cd83ca8da24ac92a760cee2d20ba89bca42ddaf",
+  "verification_sha256": "5dc634d72ec65742439dcedee362db4c6c2b2e516161c21c79835c621647783d",
+  "pipeline_sha256": "e3a59a7287db972b48de2956f0a503cd24e9f10818242e36003ff2ab0067bb57",
+  "image_inspection_sha256": "56c17e408cb92f6c7aeee5f3fd3cbc7d9ad0a6c336c72e1135937f78d658b8b8",
+  "controller_sha256": "81a188e3919a00bab87d62e163199da1351ba542213ad1b209a3c03954fcf89d",
+  "author_implementation_executed": true
+}

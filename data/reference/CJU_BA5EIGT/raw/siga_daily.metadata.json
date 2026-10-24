@@ -1,0 +1,9 @@
+{
+  "url": "https://dadosabertos.aneel.gov.br/dataset/6d90b77c-c5f5-4d81-bdec-7bc619494bb9/resource/2f65a1b0-19b8-4360-8238-b34ab4693d55/download/siga-empreendimentos-geracao-diario.csv",
+  "http_status": 200,
+  "fetched_at_utc": "2026-09-22T21:28:07.986896+00:00",
+  "http_last_modified": "Tue, 22 Sep 2026 10:40:58 GMT",
+  "etag": "\"1790073658.2245355-8418652-1847136755\"",
+  "sha256": "a617d47068df726aa58a22fe3d4d1b0456958654f8d97e0776d577eed459032f",
+  "bytes": 8418652
+}

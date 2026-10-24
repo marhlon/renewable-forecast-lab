@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "source_release_id": "20261010T231817Z_2aeba29a",
+  "context_id": "20261010T231817Z_2aeba29a_01430e3a",
+  "context_sha256": "581dfef40102cc914d22ec7187f75f801d8f0ece560b9d837cb77f046ccff77f",
+  "base_image_digest": "python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+  "base_image_lock_sha256": "c324384ef618918643767d5e0705ed0fc044eb369f57124570752bd4cfdf046e",
+  "image_id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "image_size_bytes": 228996849,
+  "controller_sha256": "fea9f237fbfed5ede5d21818c69587e20b504660d67844324cbbb9837142bed3",
+  "platform": "linux/amd64",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "reference_probability": 0.20465385372296466,
+  "container_probability": 0.20465385372296466,
+  "absolute_difference": 0.0,
+  "valid_request_status": 200,
+  "invalid_request_status": 422,
+  "model_retrained": false,
+  "scope": "Linux container compatibility for one request; no load test or operational approval",
+  "output_sha256": {
+    "environment.json": "e059479e26b9a896b5e325aeabebc7fde405cb382d54224933f4804d992995e4",
+    "image.json": "c9f5c0d13468ffda65f1c25adb8bde36845c611af59ca8c62d0f454b4d23498a",
+    "pipeline.log": "98ded6156a26c0b5291d0fc28cd8ec4c92904e8657d6bd61c5800836e1446542",
+    "rejected_request.json": "284b6a89d4a79be8dfcb8a49147abedd03e79e094225f7fb45b4806e53c5758e",
+    "requirements.linux.lock": "8801361866d41796cc0674d7fd7a50e5e1668f175eeabc1d66f4c53a6b88acef",
+    "response.json": "e1d474eceadde68a56202b69d3e3964ade8f29d436edffeeaaa46abf6020bd3e",
+    "server.log": "693df1b655cb077b60242a51b2482f2cd2a6fa129e9481f73fe02679dc4e041a"
+  }
+}

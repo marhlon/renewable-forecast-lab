@@ -1,0 +1,37 @@
+{
+  "schema": "renewcast-windows-client-verification-v2",
+  "verified": true,
+  "client_version": "1.1.0",
+  "presentation_policy_verified": true,
+  "run_id": "20261017T002410Z_7f76e51f",
+  "release": "C:\\renewable-forecast-lab\\dist\\client_windows\\20261017T002311Z_6e962150",
+  "release_sha256": "fa396e7a6a3d7add84fce0260af79305f36e712b476f3fd1981186441cd3a6ff",
+  "external_directory": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_dyj5tiwa",
+  "source_container_run": "C:\\renewable-forecast-lab\\reports\\containers\\CJU_BA5EIGT\\h24_event_v1\\20261013T185650Z_ffc01dd8",
+  "source_verification_sha256": "2680b327608d12e1d5340be81020102454eefe80b9aa797b74a5439a46fa5dea",
+  "image_id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "absolute_probability_difference": 0.0,
+  "expected_exits": {
+    "valid": 0,
+    "blocked": 7,
+    "rejected": 2,
+    "wrong_identity": 4,
+    "unavailable": 3
+  },
+  "child_path": "C:\\Windows\\System32;C:\\Windows",
+  "verified_without_conda_in_child": true,
+  "client_controller_sha256": "454d91a8234b840242a60714ab378a0fb715e9c4ad96aec9f5e88227cefcbc42",
+  "operational_policy_approved": false,
+  "scope": "Windows executable copied outside project on same PC; API still depends on Docker",
+  "output_sha256": {
+    "blocked.json": "f230a04c2edc434def6bcb26d3c5673a0a306599a8c9a23cfb3cb4a879a7a7e9",
+    "pipeline.log": "49c9eea32799974a0c0b4c3af0aed33013f011dc804ff837fa5819c739f85571",
+    "rejected.json": "663340c1b456413e969801cf28c63f83920861a55e1f2133236c1c9450c25111",
+    "server.log": "17e42e52829527a96fd5d74e5624a0e8ab8befc8e8aac8c55530df124b401d9c",
+    "unavailable.json": "a64d5d6d2c57b786ae5589156414ba1e0a83b2dbb0fcb977738fc6fe473a8ccd",
+    "valid.json": "360755eca8563c6f9569549bf58953094565715f417916514a0bb81f87025a51",
+    "wrong_identity.json": "0b8a602d4c5774b482462cee2203e2488b43349fcb6de62a7afe0dc0bb7fa773"
+  }
+}

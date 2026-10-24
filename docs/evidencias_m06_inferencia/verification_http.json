@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "separate_server_client_processes": true,
+  "training_input_unavailable_during_server_start_and_requests": true,
+  "valid_http_status": 200,
+  "p_event": 0.20179188830321645,
+  "alarm": false,
+  "training_rows": 717,
+  "training_events": 170,
+  "legacy_decisions_preserved": true,
+  "rejections": {
+    "weather_unavailable": 422,
+    "origin_before_model_cutoff": 422,
+    "wrong_target_time": 422,
+    "injected_target": 422,
+    "string_feature": 422,
+    "bool_feature": 422,
+    "unknown_feature": 422
+  },
+  "openapi_example_matches_artifact": true,
+  "performance_evaluation": false
+}

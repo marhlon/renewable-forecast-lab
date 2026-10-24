@@ -1,0 +1,4 @@
+phase,requests,success_2xx,rejected_4xx,failed_5xx,eligible_requests,server_error_rate,median_success_ms,p95_success_ms,slow_successes,p95_client_success_ms,action
+normal,20,20,0,0,20,0.0,36.0225,43.845195,0,52.377595000000014,within_exercise_rule
+invalid_payload,5,0,5,0,0,,,,0,,inspect_rejections
+incident,20,18,0,2,20,0.1,35.30995,800.7413,3,805.53095,review_service

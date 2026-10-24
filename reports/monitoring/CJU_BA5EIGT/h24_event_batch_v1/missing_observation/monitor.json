@@ -1,0 +1,74 @@
+{
+  "release": "2026.10.05-event-monitor-1",
+  "as_of": "2026-08-02T07:00:00Z",
+  "historical_simulation": true,
+  "source_db": "temporary scenario copy (removed after experiment)",
+  "source_db_sha256": "b0997e2e9c80324689dd470b12d81ad48853408fc4a25b27ac34e9d078e49a7c",
+  "model_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "monitor_code_sha256": "e5d0f9885cc1fb6543439e617c3d805b8635721592898e84919a642f8ef85311",
+  "rules": {
+    "schema_version": "1.0",
+    "min_observed": 168,
+    "max_missing_observations": 0,
+    "brier_relative_tolerance": 0.1,
+    "status": "didactic_development_rule",
+    "rationale": {
+      "min_observed": "Uma semana de emissões horárias como mínimo didático de triagem; não garante independência, representatividade ou precisão estatística.",
+      "max_missing_observations": "Investigar qualquer observação ausente após o prazo assumido neste lote; definir tolerância operacional exige acordo com a fonte.",
+      "brier_relative_tolerance": "Abrir revisão se o Brier superar a frequência fixa do treino em mais de 10%, após o mínimo. Não promove nem retreina automaticamente."
+    }
+  },
+  "rules_sha256": "1b0c20fdab1ae9d1bbc0e9a1a90fa8d8e2f9f34e1b3b18e2014fd3dd20766190",
+  "integrity": {
+    "status": "pass",
+    "issues": []
+  },
+  "data": {
+    "status": "investigate",
+    "expected_predictions": 24,
+    "recorded_predictions": 24,
+    "assessment_rows": 24,
+    "observed": 23,
+    "awaiting_label": 0,
+    "missing_observation": 1,
+    "due_label_completion": 0.9583333333333334
+  },
+  "performance": {
+    "status": "insufficient_evidence",
+    "metrics": {
+      "observed": 23,
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "tn": 17,
+      "brier": 0.13729052534506647,
+      "baseline_brier": 0.1931698735505471,
+      "baseline_probability": 0.2420749279538905,
+      "brier_skill": 0.28927568868992704,
+      "cost_total": 16.0,
+      "cost_per_observed": 0.6956521739130435,
+      "precision": 1.0,
+      "recall": 0.3333333333333333
+    },
+    "reference": "constant frequency from this artifact's training labels",
+    "statistical_guarantee": false
+  },
+  "service": {
+    "status": "not_measured",
+    "reason": "O lote não registra latência, uptime nem taxa de erros HTTP."
+  },
+  "action": {
+    "code": "investigate_data",
+    "priority": "high",
+    "instruction": "Investigar chegada, extração e associação temporal da geração; produzir nova avaliação em outro corte após a correção."
+  },
+  "automatic_retraining": false,
+  "actions_executed": false,
+  "scope": "Engineering audit of existing development batch; retrospective policy, assumed availability; no new holdout.",
+  "fault_injection": {
+    "scenario": "missing_observation",
+    "temporary_copy": true,
+    "original_db_sha256": "0c47a7ae86d2c3fadcb98a15ca24438e7330621f5c76c114428401e686d9b1f9"
+  }
+}

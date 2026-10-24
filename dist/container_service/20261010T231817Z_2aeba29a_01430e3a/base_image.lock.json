@@ -1,0 +1,5 @@
+{
+  "digest": "python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+  "tag": "python:3.12.13-slim-bookworm",
+  "context_sha256": "581dfef40102cc914d22ec7187f75f801d8f0ece560b9d837cb77f046ccff77f"
+}

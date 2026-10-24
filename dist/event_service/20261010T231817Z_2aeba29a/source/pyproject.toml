@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools==82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "renewcast-event-service"
+version = "0.1.0+20261010t231817z.2aeba29a"
+requires-python = ">=3.12,<3.13"
+description = "Snapshot de inferência Renewcast; sem pipeline de treino"
+dependencies = ["fastapi==0.142.2", "uvicorn==0.54.0", "pydantic==2.13.5", "numpy==2.5.3", "pandas==3.0.5", "scikit-learn==1.9.0", "joblib==1.6.0", "threadpoolctl==3.6.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

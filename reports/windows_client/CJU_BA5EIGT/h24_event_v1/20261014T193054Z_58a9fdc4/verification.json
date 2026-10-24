@@ -1,0 +1,33 @@
+{
+  "schema": "renewcast-windows-client-verification-v1",
+  "verified": true,
+  "run_id": "20261014T193054Z_58a9fdc4",
+  "release": "C:\\renewable-forecast-lab\\dist\\client_windows\\20261014T182138Z_d3f59ba1",
+  "release_sha256": "4bed3ce2b82296a46a279f73fc799df8f3bceb1d44c3b9704987792283a2d452",
+  "external_directory": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_x2axoqxi",
+  "source_container_run": "C:\\renewable-forecast-lab\\reports\\containers\\CJU_BA5EIGT\\h24_event_v1\\20261013T185650Z_ffc01dd8",
+  "source_verification_sha256": "2680b327608d12e1d5340be81020102454eefe80b9aa797b74a5439a46fa5dea",
+  "image_id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "absolute_probability_difference": 0.0,
+  "expected_exits": {
+    "valid": 0,
+    "rejected": 2,
+    "wrong_identity": 4,
+    "unavailable": 3
+  },
+  "child_path": "C:\\Windows\\System32;C:\\Windows",
+  "verified_without_conda_in_child": true,
+  "client_controller_sha256": "63369c0eff2481210d386ea43752c1970ae419bf63dd8c24612a71edf51d849b",
+  "operational_policy_approved": false,
+  "scope": "Windows executable copied outside project on same PC; API still depends on Docker",
+  "output_sha256": {
+    "pipeline.log": "5c14730fbedd9e1dbff884a90fcd6ae579397dec87fd438af56f997737f1d3eb",
+    "rejected.json": "3c99706d8d23c5403b1784ac8d037bb81e3fa569f158c39f1b517ec6f1a74bd5",
+    "server.log": "c085db0b28fcab06b1391dc981defca6ba18317c1ce98abd7c30a265acd8d6e2",
+    "unavailable.json": "dc1b575a8fa67766c8f510b9704d92f2c86629edc86ca34955365588d832b3d3",
+    "valid.json": "7c48a5c10006291f1defcee3dbe74f8cd057a2bcdc3a549059224a901ab9eccc",
+    "wrong_identity.json": "c742a3b72956125e13bd8f3f6ed0dd0f1afcb2d6cd62715378196b25ffa5fb9e"
+  }
+}

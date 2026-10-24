@@ -1,0 +1,5 @@
+fold,extra_fp,avoided_fn,break_even_cost_fn_over_fp,delta_cost_at_ratio_4
+1,1,8,0.125,-31
+2,16,3,5.333333333333333,4
+3,14,5,2.8,-6
+Geral,31,16,1.9375,-33

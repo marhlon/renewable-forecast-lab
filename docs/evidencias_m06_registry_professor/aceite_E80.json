@@ -1,0 +1,11 @@
+{
+  "accepted": true,
+  "received_at_local_date": "2026-10-07",
+  "run_id": "1c51054df97b439fa22c7d2dcc9f6edd",
+  "output_hashes_verified": 3,
+  "source_hashes_reconciled_with_prior_attachments": 5,
+  "summary_comparisons": 33,
+  "incident_ids": 10,
+  "code_matches_delivered_version": true,
+  "scope": "Reproduction of reviewed notebook accepted; not independent authorship of teacher corrections"
+}

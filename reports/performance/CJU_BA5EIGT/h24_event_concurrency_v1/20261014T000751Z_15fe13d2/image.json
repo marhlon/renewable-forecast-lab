@@ -1,0 +1,83 @@
+{
+  "Id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "RepoTags": [
+    "renewcast-event:79fdfae0b647"
+  ],
+  "RepoDigests": [
+    "renewcast-event@sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52"
+  ],
+  "Parent": "",
+  "Comment": "buildkit.dockerfile.v0",
+  "Created": "2026-10-13T18:57:48.46773464Z",
+  "DockerVersion": "",
+  "Author": "",
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Size": 228996849,
+  "GraphDriver": {
+    "Data": null,
+    "Name": "overlayfs"
+  },
+  "RootFS": {
+    "Type": "layers",
+    "Layers": [
+      "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+      "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+      "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+      "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+      "sha256:ebd22babb3f2c20a9dd57c800f2ce7f973e807ccea1aedabab7a55ade5447a6c",
+      "sha256:bcc1e87077a366f1f6cb046722c3d02e59ae60c4a403c78a390642c1d48183ed",
+      "sha256:25670be17aea443abd657db11a8b14af5234f6c2c2d79381dd351b76ec95b9ed",
+      "sha256:58530bc04a9e657bc4201015f3533e0a0f65b7a5f4c1f4a6806a63311688dcae",
+      "sha256:0f9503e677dafa85a205faf888b72df1a4f50f3243cd7ca0385e1cc64e2c58b6",
+      "sha256:83f0ee069ff40b7f444c7d2bd2512f18479cb35e70fb99dcbb561c8f04b43ea9",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+    ]
+  },
+  "Metadata": {
+    "LastTagTime": "2026-10-13T18:58:14.26328993Z"
+  },
+  "Descriptor": {
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "digest": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+    "size": 856
+  },
+  "Config": {
+    "ArgsEscaped": true,
+    "Cmd": [
+      "python",
+      "/app/serve.py"
+    ],
+    "Entrypoint": null,
+    "Env": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.12.13",
+      "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "PYTHONUNBUFFERED=1",
+      "PIP_DISABLE_PIP_VERSION_CHECK=1"
+    ],
+    "ExposedPorts": {
+      "8000/tcp": {}
+    },
+    "Healthcheck": {
+      "Interval": 5000000000,
+      "Retries": 6,
+      "StartPeriod": 20000000000,
+      "Test": [
+        "CMD",
+        "python",
+        "-c",
+        "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+      ],
+      "Timeout": 3000000000
+    },
+    "Labels": null,
+    "OnBuild": null,
+    "User": "10001:10001",
+    "Volumes": null,
+    "WorkingDir": "/app"
+  }
+}

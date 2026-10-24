@@ -1,0 +1,4 @@
+generation,from_version,to_version,previous_to_version,chain_ok,successes_2xx,model_sha256
+1,,v1,,1,3,8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a
+2,v1,v2,v1,1,3,7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d
+3,v2,v1,v2,1,3,8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a

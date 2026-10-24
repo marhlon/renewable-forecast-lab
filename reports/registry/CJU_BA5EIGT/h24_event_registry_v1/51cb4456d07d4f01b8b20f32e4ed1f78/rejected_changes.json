@@ -1,0 +1,7 @@
+[
+  {
+    "case": "stale_generation",
+    "expected_generation": 0,
+    "message": "Geração esperada 0; atual 1. Nenhuma alteração aplicada."
+  }
+]

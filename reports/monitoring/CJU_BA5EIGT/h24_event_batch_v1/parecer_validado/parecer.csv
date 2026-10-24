@@ -1,0 +1,5 @@
+scenario,integrity_status,data_status,performance_status,action,priority,observed,missing_observation,assessment_rows,expected_predictions
+normal,pass,ok,insufficient_evidence,collect_evidence,info,24,0,24,24
+missing_observation,pass,investigate,insufficient_evidence,investigate_data,high,23,1,24,24
+changed_probability,fail,blocked,blocked,repair_record,critical,24,0,24,24
+missing_assessment,fail,blocked,blocked,repair_record,critical,23,0,23,24

@@ -1,0 +1,19 @@
+{
+  "schema": "renewcast-client-receipt-v1",
+  "client_version": "1.0.0",
+  "issued_at_utc": "2026-10-14T18:22:45.327777+00:00",
+  "url": "http://127.0.0.1:64165",
+  "frozen": true,
+  "executable": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_lgkvki28\\renewcast\\renewcast.exe",
+  "working_directory": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_lgkvki28",
+  "conda_active": false,
+  "pythonpath_present": false,
+  "request_sha256": "912d0c261b02f41b1bfe845b9cd3b2fdf3abf3929259c8ed6c17a43d8f06ef8a",
+  "contract_sha256": "ee038d65afcc1a29822d20c8e07a0d084b6210f69c2d0df89ded4d4f2bf6616b",
+  "state": "unavailable",
+  "http_status": null,
+  "response": null,
+  "detail": "ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente",
+  "http_elapsed_ms": 2021.579100000963,
+  "exit_code": 3
+}

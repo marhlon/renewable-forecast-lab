@@ -1,0 +1,14 @@
+Renewcast — M06 Docker/CI — 13/10/2026
+
+Extraia na raiz C:\renewable-forecast-lab.
+Com renewable-forecast ativo:
+  python scripts/auditar_distribuicao.py
+  python scripts/preparar_container.py
+Com Docker Desktop/Linux iniciado:
+  python scripts/verificar_container.py
+
+Aula e demanda: docs/Aula_M06_Docker_CI.md
+Aceite dos anexos Windows: docs/Aceite_E85_Evidencias.json
+O pacote preserva os modelos, código autoral e parecer originais.
+O template em ci_examples não ativa CI e não publica nada ao extrair.
+O professor verificou componentes Python, mas não executou Docker/PowerShell/CI.

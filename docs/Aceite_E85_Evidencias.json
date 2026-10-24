@@ -1,0 +1,67 @@
+{
+  "evidence_id": "E85",
+  "review_date": "2026-10-13",
+  "student_run_id": "20261010T231840Z_388ee417",
+  "student_release_id": "20261010T231817Z_2aeba29a",
+  "checked_hashes": {
+    "pointer_hash": true,
+    "environment.json": true,
+    "response.json": true,
+    "rejected_request.json": true,
+    "installation.log": true,
+    "server.log": true
+  },
+  "attachments": {
+    "latest_run(1).json": "8223d8ccc75d2888c5350ec4a3448ee20553362d67d36337974ca313dc662d6b",
+    "verification(4).json": "e15f3b535e9852bb0bf1e27282f89370a907de67b6e3de92f20971b042f0d51a",
+    "environment.json": "37872130bc17f1e6ccb2176c98bc8c7306f522f0cb5d79e23b8d839e4042eb39",
+    "installation.log": "613451094aa2778c6ec84d42bb0890a8d46677cc0251bdb9a45f97a158f01349",
+    "parecer_distribuicao.md": "242f7c811ba1e718bf2db885dda52ca883ef108e983f7c704e787b538a07990c",
+    "rejected_request.json": "284b6a89d4a79be8dfcb8a49147abedd03e79e094225f7fb45b4806e53c5758e",
+    "response.json": "e1d474eceadde68a56202b69d3e3964ade8f29d436edffeeaaa46abf6020bd3e",
+    "server.log": "ac8301b055eca360a34f7247e523b245507b4cac446e18b21016a43cdfb15042",
+    "orcamento_distribuicao.csv": "af1b3dab76b5ef6bbc3962688f74c65488b33aa41d77b66274e4a326b42a15a7"
+  },
+  "accepted": [
+    "Windows isolated reproduction within submitted protocol",
+    "standard-library budget arithmetic and ordering"
+  ],
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "probability": 0.20465385372296466,
+  "absolute_difference": 0.0,
+  "budget": {
+    "wheels": 26,
+    "bytes": 72018219,
+    "mib": 68.6819257736206,
+    "top5_pct": 96.24246609042082,
+    "top2_pct": 68.35229568784533,
+    "remaining21_mib": 2.580746650695801
+  },
+  "code_review": [
+    "failure branch invents success if receipt missing; not exercised in these submitted outputs",
+    "latest release and run must be joined by release_id and release_manifest_sha256",
+    "model hash must not be replaced with release hash",
+    "not every Python change invalidates every binary wheel; tags/ABI/Requires-Python matter",
+    "SciPy and NumPy are the two largest; dependency evidence should be explicit"
+  ],
+  "not_demonstrated": [
+    "transfer to independent folder",
+    "Docker execution",
+    "remote CI execution"
+  ],
+  "scope": "review of supplied records and authored calculation; no independent execution on student Windows or access to their binary wheels/model",
+  "next_unit": "E86 Docker compatibility and CI gate",
+  "teacher_component_checks": {
+    "real_replica_release_audited": true,
+    "wheel_metadata_extracted": true,
+    "docker_context_prepared": true,
+    "linux_wheel_lock_recalculated": true,
+    "missing_receipt_rejected": true,
+    "mixed_latest_pointers_rejected": true,
+    "response_mismatch_rejected": true,
+    "docker_engine_available": false,
+    "docker_build_executed": false,
+    "powershell_executed": false,
+    "remote_ci_executed": false
+  }
+}

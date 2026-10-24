@@ -1,0 +1,159 @@
+{
+  "evidence": "E93",
+  "checks": [
+    {
+      "case": "valid",
+      "exit_code": 0,
+      "http_status": 200,
+      "state": "no_alarm",
+      "passed": true
+    },
+    {
+      "case": "blocked",
+      "exit_code": 7,
+      "http_status": 200,
+      "state": "presentation_blocked",
+      "passed": true
+    },
+    {
+      "case": "http_200_preserved_but_presentation_blocked",
+      "passed": true
+    },
+    {
+      "case": "explicit_presentation_mode_required",
+      "passed": true
+    },
+    {
+      "case": "existing_output_preserved",
+      "passed": true
+    },
+    {
+      "case": "rejected",
+      "exit_code": 2,
+      "http_status": 422,
+      "state": "rejected",
+      "passed": true
+    },
+    {
+      "case": "wrong_identity",
+      "exit_code": 4,
+      "http_status": 200,
+      "state": "invalid_response",
+      "passed": true
+    },
+    {
+      "case": "inconsistent_alarm_rejected",
+      "passed": true
+    },
+    {
+      "case": "unavailable",
+      "exit_code": 3,
+      "http_status": null,
+      "state": "unavailable",
+      "passed": true
+    }
+  ],
+  "domain": [
+    {
+      "case": "historical_replay",
+      "state": "historical_replay",
+      "passed": true
+    },
+    {
+      "case": "old_target",
+      "state": "target_elapsed",
+      "passed": true
+    },
+    {
+      "case": "recent",
+      "state": "current",
+      "passed": true
+    },
+    {
+      "case": "old_origin_future_target",
+      "state": "stale_origin",
+      "passed": true
+    },
+    {
+      "case": "future_origin",
+      "state": "future_origin",
+      "passed": true
+    },
+    {
+      "case": "age_boundary_inclusive",
+      "state": "current",
+      "passed": true
+    },
+    {
+      "case": "age_one_microsecond_over",
+      "state": "stale_origin",
+      "passed": true
+    },
+    {
+      "case": "target_boundary_exclusive",
+      "state": "target_elapsed",
+      "passed": true
+    },
+    {
+      "case": "equivalent_offsets",
+      "state": "current",
+      "passed": true
+    },
+    {
+      "case": "offset_change_elapsed_time",
+      "state": "stale_origin",
+      "passed": true
+    },
+    {
+      "case": "naive",
+      "passed": true
+    },
+    {
+      "case": "bad_mode",
+      "passed": true
+    },
+    {
+      "case": "negative_duration",
+      "passed": true
+    },
+    {
+      "case": "target_before_origin",
+      "passed": true
+    },
+    {
+      "case": "transport_failure_precedes_temporal_policy:unavailable",
+      "passed": true
+    },
+    {
+      "case": "transport_failure_precedes_temporal_policy:rejected",
+      "passed": true
+    },
+    {
+      "case": "transport_failure_precedes_temporal_policy:invalid_response",
+      "passed": true
+    }
+  ],
+  "client_version": "1.1.0",
+  "windows_executable_built": false,
+  "docker_executed": false,
+  "powershell_executed": false,
+  "model_retrained": false,
+  "model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f",
+  "reference_probability": 0.20179188830321645,
+  "scope": "CLI executed in separate native Python processes with existing Linux HGB replica and fit prohibited. Not the student's model or Windows executable.",
+  "source_sha256": {
+    "scripts/criar_cliente_windows.py": "fc5b4ce3aa60ce3419f9effae34491f12861baf9e3e59345f22b5b52e7655f36",
+    "scripts/verificar_cliente_windows.py": "454d91a8234b840242a60714ab378a0fb715e9c4ad96aec9f5e88227cefcbc42",
+    "tools/Consultar_Renewcast.ps1": "7dabc28e527d78660016123139bb2ddc31ac2830935763b5890a16c4bb4036db",
+    "tools/politica_atualidade.py": "3245c465a0b75d705f5725fd6944f374f5c10fbfd80979937c0c4047faf12f45",
+    "tools/renewcast_client.py": "39723455a54f3fde0fdeafac291987f93725097bc30b7799e95673cf69f3e8bb"
+  },
+  "validated_python_syntax": [
+    "scripts/criar_cliente_windows.py",
+    "scripts/verificar_cliente_windows.py",
+    "tools/politica_atualidade.py",
+    "tools/renewcast_client.py"
+  ],
+  "receipt_schema": "renewcast-client-receipt-v2",
+  "student_original_review_scope": "Source inspection and supplied UTC output; promoted implementation executed in teacher checks."
+}

@@ -1,0 +1,6 @@
+Cliente Renewcast de desenvolvimento. Copie a pasta inteira, incluindo _internal.
+Nao precisa de Conda/Python instalado. Precisa de API local ativa.
+Exemplo (terminal nesta pasta, API na porta 8000):
+.\renewcast.exe --url http://127.0.0.1:8000 --request example_request.json --contract contract.json --output consulta_001.json
+Cada consulta usa um arquivo de saida novo. Codigos: 0=decisao, 2=rejeicao HTTP, 3=indisponivel, 4=resposta incompatível, 5=entrada local invalida.
+0 com alarm=false nao e o mesmo que indisponivel. Sem nova aprovacao operacional.

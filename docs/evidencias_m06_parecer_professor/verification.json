@@ -1,0 +1,56 @@
+{
+  "scope": "teacher local replica; not execution on student's Windows or student's database",
+  "checks": [
+    {
+      "check": "real_lot_24_observed_not_29_snapshot_rows",
+      "passed": true
+    },
+    {
+      "check": "missing_database_no_creation",
+      "passed": true
+    },
+    {
+      "check": "unrelated_database_rejected",
+      "passed": true
+    },
+    {
+      "check": "other_model_manifest_rejected",
+      "passed": true
+    },
+    {
+      "check": "missing_metric",
+      "passed": true
+    },
+    {
+      "check": "different_metric",
+      "passed": true
+    },
+    {
+      "check": "other_scenario_model",
+      "passed": true
+    },
+    {
+      "check": "cli_failure_no_report_published",
+      "passed": true
+    },
+    {
+      "check": "zero_is_value_and_zero_reference_gives_null_skill",
+      "passed": true
+    },
+    {
+      "check": "original_ledger_unchanged",
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "source_db_sha256": "7fa27dccfca452e08418abe8e2e179431e874d7bf11bbe4e0ea1bcdda1c4c2da",
+  "inspection_code_sha256": "14291aeaefd7c23802064a0f02c289670b0ab38e207bf3779fe831a82b521d57",
+  "teacher_metrics": {
+    "observed": 24,
+    "brier": 0.11456217343445767,
+    "baseline_brier": 0.18756280676693604,
+    "baseline_probability": 0.2420749279538905,
+    "brier_skill": 0.3892063388835312
+  },
+  "synthetic_test_fixtures_are_production_inputs": false
+}

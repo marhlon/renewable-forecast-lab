@@ -1,0 +1,4 @@
+
+docker image inspect sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52
+[]
+error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.51/images/sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52/json": open //./pipe/dockerDesktopLinuxEngine: O sistema não pode encontrar o arquivo especificado.

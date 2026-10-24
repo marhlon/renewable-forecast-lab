@@ -1,0 +1,123 @@
+
+C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Scripts\python.exe -m pip download --only-binary=:all: --dest C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\wheelhouse pyinstaller==6.22.3
+Collecting pyinstaller==6.22.3
+  Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
+Collecting altgraph (from pyinstaller==6.22.3)
+  Downloading altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Collecting packaging>=22.0 (from pyinstaller==6.22.3)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pefile>=2022.5.30 (from pyinstaller==6.22.3)
+  Downloading pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller==6.22.3)
+  Downloading pyinstaller_hooks_contrib-2026.8-py3-none-any.whl.metadata (16 kB)
+Collecting pywin32-ctypes>=0.2.1 (from pyinstaller==6.22.3)
+  Downloading pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting setuptools>=42.0.0 (from pyinstaller==6.22.3)
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Downloading pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
+   ---------------------------------------- 1.5/1.5 MB 15.3 MB/s eta 0:00:00
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
+Downloading pyinstaller_hooks_contrib-2026.8-py3-none-any.whl (462 kB)
+Downloading pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Downloading altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pyinstaller-6.22.3-py3-none-win_amd64.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\packaging-26.3-py3-none-any.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pefile-2024.8.26-py3-none-any.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pyinstaller_hooks_contrib-2026.8-py3-none-any.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pywin32_ctypes-0.2.3-py3-none-any.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\setuptools-84.0.0-py3-none-any.whl
+Saved c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\altgraph-0.17.5-py2.py3-none-any.whl
+Successfully downloaded pyinstaller packaging pefile pyinstaller-hooks-contrib pywin32-ctypes setuptools altgraph
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Scripts\python.exe -m pip install --upgrade pip
+
+C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Scripts\python.exe -m pip install --no-index --find-links C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\wheelhouse pyinstaller==6.22.3
+Looking in links: c:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\wheelhouse
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pyinstaller-6.22.3-py3-none-win_amd64.whl
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\altgraph-0.17.5-py2.py3-none-any.whl (from pyinstaller==6.22.3)
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\packaging-26.3-py3-none-any.whl (from pyinstaller==6.22.3)
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pefile-2024.8.26-py3-none-any.whl (from pyinstaller==6.22.3)
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pyinstaller_hooks_contrib-2026.8-py3-none-any.whl (from pyinstaller==6.22.3)
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\pywin32_ctypes-0.2.3-py3-none-any.whl (from pyinstaller==6.22.3)
+Processing c:\renewable-forecast-lab\build\client_windows\20261014t182138z_d3f59ba1\wheelhouse\setuptools-84.0.0-py3-none-any.whl (from pyinstaller==6.22.3)
+Installing collected packages: altgraph, setuptools, pywin32-ctypes, pefile, packaging, pyinstaller-hooks-contrib, pyinstaller
+Successfully installed altgraph-0.17.5 packaging-26.3 pefile-2024.8.26 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.8 pywin32-ctypes-0.2.3 setuptools-84.0.0
+
+C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Scripts\python.exe -m pip check
+No broken requirements found.
+
+C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --noupx --onedir --console --name renewcast --distpath C:\renewable-forecast-lab\dist\client_windows\20261014T182138Z_d3f59ba1 --workpath C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work --specpath C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1 C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\renewcast_client.py
+198 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+231 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+231 INFO: Python: 3.12.13 (conda)
+262 INFO: Platform: Windows-11-10.0.26200-SP0
+262 INFO: Python environment: C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv
+263 INFO: wrote C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\renewcast.spec
+266 INFO: Removing temporary files and cleaning cache in C:\Users\marhl\AppData\Local\pyinstaller
+280 INFO: Module search paths (PYTHONPATH):
+['C:\\renewable-forecast-lab',
+ 'C:\\Users\\marhl\\Miniconda3\\envs\\renewable-forecast\\python312.zip',
+ 'C:\\Users\\marhl\\Miniconda3\\envs\\renewable-forecast\\DLLs',
+ 'C:\\Users\\marhl\\Miniconda3\\envs\\renewable-forecast\\Lib',
+ 'C:\\Users\\marhl\\Miniconda3\\envs\\renewable-forecast',
+ 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv',
+ 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages',
+ 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1']
+152 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+759 INFO: checking Analysis
+760 INFO: Building Analysis because Analysis-00.toc is non existent
+760 INFO: Looking for Python shared library...
+761 INFO: Using Python shared library: C:\Users\marhl\Miniconda3\envs\renewable-forecast\python312.dll
+761 INFO: Running Analysis Analysis-00.toc
+761 INFO: Target bytecode optimization level: 0
+761 INFO: Initializing module dependency graph...
+765 INFO: Initializing module graph hook caches...
+814 INFO: Analyzing modules for base_library.zip ...
+146 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+157 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+167 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+2609 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+2747 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+138 WARNING: Assuming this is not an Anaconda environment or an additional venv/pipenv/... environment manager is being used on top, because the conda-meta folder C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\conda-meta does not exist.
+4960 INFO: Processing standard module hook 'hook-math.py' from 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5329 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8037 INFO: Caching module dependency graph...
+8099 INFO: Analyzing C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\renewcast_client.py
+8299 INFO: Processing module hooks (post-graph stage)...
+8309 INFO: Performing binary vs. data reclassification (1 entries)
+8310 INFO: Looking for ctypes DLLs
+8315 INFO: Analyzing run-time hooks ...
+8318 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\renewable-forecast-lab\\build\\client_windows\\20261014T182138Z_d3f59ba1\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+8324 INFO: Creating base_library.zip...
+8353 INFO: Looking for dynamic libraries
+8549 INFO: Extra DLL search directories (AddDllDirectory): []
+8550 INFO: Extra DLL search directories (PATH): []
+9435 INFO: Warnings written to C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work\renewcast\warn-renewcast.txt
+9468 INFO: Graph cross-reference written to C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work\renewcast\xref-renewcast.html
+9493 INFO: checking PYZ
+9494 INFO: Building PYZ because PYZ-00.toc is non existent
+9494 INFO: Building PYZ (ZlibArchive) C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work\renewcast\PYZ-00.pyz
+9674 INFO: Building PYZ (ZlibArchive) C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work\renewcast\PYZ-00.pyz completed successfully.
+9681 INFO: checking PKG
+9681 INFO: Building PKG because PKG-00.toc is non existent
+9681 INFO: Building PKG (CArchive) renewcast.pkg
+9711 INFO: Building PKG (CArchive) renewcast.pkg completed successfully.
+9713 INFO: Bootloader C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+9714 INFO: checking EXE
+9714 INFO: Building EXE because EXE-00.toc is non existent
+9714 INFO: Building EXE from EXE-00.toc
+9714 INFO: Copying bootloader EXE to C:\renewable-forecast-lab\build\client_windows\20261014T182138Z_d3f59ba1\work\renewcast\renewcast.exe
+9843 INFO: Copying icon to EXE
+9917 INFO: Copying 0 resources to EXE
+9917 INFO: Embedding manifest in EXE
+9979 INFO: Appending PKG archive to EXE
+10059 INFO: Fixing EXE headers
+10398 INFO: Building EXE from EXE-00.toc completed successfully.
+10401 INFO: checking COLLECT
+10401 INFO: Building COLLECT because COLLECT-00.toc is non existent
+10401 INFO: Building COLLECT COLLECT-00.toc
+10668 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+10671 INFO: Build complete! The results are available in: C:\renewable-forecast-lab\dist\client_windows\20261014T182138Z_d3f59ba1

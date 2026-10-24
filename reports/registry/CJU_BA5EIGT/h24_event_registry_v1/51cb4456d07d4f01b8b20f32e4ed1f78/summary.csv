@@ -1,0 +1,7 @@
+step,version_id,generation,status_code,requests,p_event
+v1_before,v1,1,200,3,0.2697810532292007
+v1_stale,v1,1,503,1,
+v2_ready,v2,2,200,3,0.20465385372296466
+v2_injected_error,v2,2,500,2,
+v2_stale,v2,2,503,1,
+v1_restored,v1,3,200,3,0.2697810532292007

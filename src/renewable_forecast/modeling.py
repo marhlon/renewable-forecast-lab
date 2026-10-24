@@ -21,6 +21,11 @@ from renewable_forecast.features import (
     build_feature_frame,
 )
 
+from renewable_forecast.supervised import (
+    build_horizon_training_frame,
+    purged_time_series_splits,
+)
+
 
 # Lista intencional de configurações, não produto cartesiano.
 CANDIDATE_GRID = [
@@ -215,37 +220,66 @@ def constrained_refit(cv_results: dict[str, Any]) -> int:
     return int(ordering[0])
 
 
-def build_temporal_search() -> GridSearchCV:
-    """Cria busca temporal com cinco blocos mensais."""
-
-    temporal_cv = TimeSeriesSplit(
-        n_splits=5,
-        test_size=24 * 28,
-    )
+def build_temporal_search(*, cv=None, param_grid=None) -> GridSearchCV:
+    """Cria a busca e permite receber cortes previamente auditados."""
+    if cv is None:
+        cv = TimeSeriesSplit(n_splits=5, test_size=24 * 28)
 
     estimator = HistGradientBoostingRegressor(
         random_state=42,
+        early_stopping=False,
     )
 
     return GridSearchCV(
         estimator=estimator,
-        param_grid=CANDIDATE_GRID,
+        param_grid=CANDIDATE_GRID if param_grid is None else param_grid,
         scoring={
             "neg_mae": _negative_mae,
             "neg_rmse": _negative_rmse,
             "neg_ramp_mae": _negative_ramp_mae,
             "neg_absolute_bias": _negative_absolute_bias,
-            "neg_persistence_mae": (
-                _negative_persistence_mae
-            ),
+            "neg_persistence_mae": _negative_persistence_mae,
         },
         refit=constrained_refit,
-        cv=temporal_cv,
+        cv=cv,
         n_jobs=1,
         return_train_score=False,
         error_score="raise",
     )
 
+def fit_horizon_search(
+    series: pd.DataFrame,
+    *,
+    horizon_hours: int,
+    availability_delay_hours: int,
+    n_splits: int = 5,
+    test_size: int = 24 * 28,
+    param_grid=None,
+) -> tuple[GridSearchCV, pd.DataFrame]:
+    """Ajusta a busca usando X, y e cortes derivados da mesma tabela."""
+    frame = build_horizon_training_frame(
+        series,
+        horizon_hours=horizon_hours,
+        availability_delay_hours=availability_delay_hours,
+    )
+
+    folds = list(purged_time_series_splits(
+        frame,
+        n_splits=n_splits,
+        test_size=test_size,
+    ))
+
+    search = build_temporal_search(
+        cv=folds,
+        param_grid=param_grid,
+    )
+
+    search.fit(
+        frame[FEATURE_COLUMNS],
+        frame["target_generation"],
+    )
+
+    return search, frame
 
 def _configure_mlflow(experiment: str) -> None:
     repository_root = Path(__file__).resolve().parents[2]

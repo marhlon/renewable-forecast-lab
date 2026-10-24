@@ -1,0 +1,9 @@
+{
+  "conjunto": "CJU_BA5EIGT",
+  "method": "hgb_weather_classifier",
+  "forecast_origin": "2026-07-11 06:00:00+00:00",
+  "history_end": "2026-07-11 04:00:00+00:00",
+  "target_time": "2026-07-12 06:00:00+00:00",
+  "drop_threshold_mwmed": 22.77,
+  "p_event": 1.2
+}

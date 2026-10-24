@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "files": {
+    "folds.csv": "folds(5).csv",
+    "metadata.json": "metadata(20261003-141200).json",
+    "predictions.csv": "predictions(5).csv",
+    "probability_bins.csv": "probability_bins.csv",
+    "protocol.json": "protocol(5).json",
+    "summary.csv": "summary(5).csv",
+    "event_labels.csv": "event_labels.csv",
+    "fold_metrics.csv": "fold_metrics(5).csv"
+  },
+  "output_hashes_match": {
+    "event_labels.csv": true,
+    "predictions.csv": true,
+    "folds.csv": true,
+    "fold_metrics.csv": true,
+    "summary.csv": true,
+    "probability_bins.csv": true,
+    "protocol.json": true
+  },
+  "source_frame_and_metadata_match": true,
+  "code_hash_match": {
+    "local_bytes": true,
+    "normalized_lf": true,
+    "windows_crlf": false
+  },
+  "rows": {
+    "input": 744,
+    "validation_origins": 504,
+    "predictions": 1512,
+    "methods": 3,
+    "positive_events": 113
+  },
+  "reconciled": {
+    "summary_rows": 3,
+    "fold_metrics_rows": 9,
+    "probability_bins": 60,
+    "student_decision_rows": 24
+  },
+  "availability_boundaries_verified_from_export": true,
+  "estimators_refit": false,
+  "observations": [
+    "Core confusion counts and FP+4FN agree in all 24 student rows.",
+    "Student zero precision for no alarms differs from protocol NaN.",
+    "Code identity and exported plans do not prove estimators were rerun in this audit.",
+    "July development results are exploratory; no operational threshold approval."
+  ]
+}

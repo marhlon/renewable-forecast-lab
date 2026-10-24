@@ -1,0 +1,21 @@
+[
+  {
+    "comparison": "duckdb_vs_spark_dataframe",
+    "days": 4,
+    "passed": true,
+    "max_absolute_numeric_difference": 0.0,
+    "nulls_and_dates_equal": true
+  },
+  {
+    "comparison": "duckdb_vs_spark_sql_autoral",
+    "days": 4,
+    "passed": true,
+    "max_absolute_numeric_difference": 0.0,
+    "nulls_and_dates_equal": true
+  },
+  {
+    "comparison": "classificacao_cobertura",
+    "passed": true,
+    "days": 4
+  }
+]

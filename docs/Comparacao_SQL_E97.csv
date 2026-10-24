@@ -1,0 +1,6 @@
+dia,coluna,antes,depois
+2026-01-01,horas_presentes,2,3
+2026-01-01,horas_ausentes,22,21
+2026-01-02,horas_nulas,1,0
+2026-01-03,horas_presentes,0,24
+2026-01-03,horas_ausentes,24,0

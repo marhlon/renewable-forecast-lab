@@ -1,0 +1,2742 @@
+
+docker info --format {{.OSType}}
+linux
+
+docker pull --platform linux/amd64 python:3.12.13-slim-bookworm
+3.12.13-slim-bookworm: Pulling from library/python
+1634f3c69c84: Pulling fs layer
+8e0b0d5a4a04: Pulling fs layer
+e8e392f3681c: Pulling fs layer
+039e6f9f9752: Pulling fs layer
+1634f3c69c84: Download complete
+e8e392f3681c: Download complete
+8e0b0d5a4a04: Download complete
+039e6f9f9752: Download complete
+039e6f9f9752: Pull complete
+e8e392f3681c: Pull complete
+1634f3c69c84: Pull complete
+8e0b0d5a4a04: Pull complete
+Digest: sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+Status: Downloaded newer image for python:3.12.13-slim-bookworm
+docker.io/library/python:3.12.13-slim-bookworm
+
+docker image inspect python:3.12.13-slim-bookworm
+[
+    {
+        "Id": "sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+        "RepoTags": [
+            "python:3.12.13-slim-bookworm"
+        ],
+        "RepoDigests": [
+            "python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-08-05T01:14:10.835354632Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 45435604,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+                "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+                "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-13T18:56:56.28568541Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+            "size": 6546
+        },
+        "Config": {
+            "Cmd": [
+                "python3"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": ""
+        }
+    }
+]
+
+docker build --platform linux/amd64 --build-arg PYTHON_BASE=python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 -t renewcast-event:79fdfae0b647 C:\renewable-forecast-lab\dist\container_service\20261010T231817Z_2aeba29a_01430e3a
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.32kB 0.0s done
+#1 WARN: InvalidDefaultArgInFrom: Default value for ARG ${PYTHON_BASE} results in empty or invalid base image name (line 2)
+#1 WARN: InvalidDefaultArgInFrom: Default value for ARG ${PYTHON_BASE} results in empty or invalid base image name (line 12)
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#2 DONE 1.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [dependencies 1/7] FROM docker.io/library/python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#5 resolve docker.io/library/python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 0.0s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 190.50kB 0.0s done
+#4 DONE 0.2s
+
+#5 [dependencies 1/7] FROM docker.io/library/python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#5 DONE 0.3s
+
+#6 [dependencies 2/7] WORKDIR /capture
+#6 DONE 0.5s
+
+#7 [dependencies 3/7] COPY requirements.versions.txt ./
+#7 DONE 0.1s
+
+#8 [dependencies 4/7] RUN python -m pip download --only-binary=:all: --no-deps --dest /wheels -r requirements.versions.txt
+#8 3.415 Collecting annotated-doc==0.0.5 (from -r requirements.versions.txt (line 1))
+#8 3.598   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#8 3.760 Collecting annotated-types==0.8.0 (from -r requirements.versions.txt (line 2))
+#8 3.782   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#8 3.893 Collecting anyio==4.15.1 (from -r requirements.versions.txt (line 3))
+#8 3.927   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#8 4.037 Collecting click==8.5.0 (from -r requirements.versions.txt (line 4))
+#8 4.058   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#8 4.122 Collecting cloudpickle==3.1.2 (from -r requirements.versions.txt (line 5))
+#8 4.145   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#8 4.298 Collecting fastapi==0.142.2 (from -r requirements.versions.txt (line 6))
+#8 4.318   Downloading fastapi-0.142.2-py3-none-any.whl.metadata (27 kB)
+#8 4.403 Collecting h11==0.16.0 (from -r requirements.versions.txt (line 7))
+#8 4.425   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 4.483 Collecting idna==3.19 (from -r requirements.versions.txt (line 8))
+#8 4.503   Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+#8 4.566 Collecting joblib==1.6.0 (from -r requirements.versions.txt (line 9))
+#8 4.585   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#8 4.703 Collecting narwhals==2.26.0 (from -r requirements.versions.txt (line 10))
+#8 4.723   Downloading narwhals-2.26.0-py3-none-any.whl.metadata (15 kB)
+#8 12.11 Collecting numpy==2.5.3 (from -r requirements.versions.txt (line 11))
+#8 12.13   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 12.19 Collecting opentelemetry-api==1.44.0 (from -r requirements.versions.txt (line 12))
+#8 12.21   Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+#8 5.021 Collecting pandas==3.0.5 (from -r requirements.versions.txt (line 13))
+#8 5.041   Downloading pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 5.335 Collecting pydantic==2.13.5 (from -r requirements.versions.txt (line 14))
+#8 5.354   Downloading pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+#8 6.626 Collecting pydantic-core==2.46.5 (from -r requirements.versions.txt (line 15))
+#8 6.661   Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#8 6.733 Collecting python-dateutil==2.9.0.post0 (from -r requirements.versions.txt (line 16))
+#8 6.756   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 7.000 Collecting scikit-learn==1.9.0 (from -r requirements.versions.txt (line 17))
+#8 7.023   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 7.317 Collecting scipy==1.18.1 (from -r requirements.versions.txt (line 18))
+#8 7.337   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 7.420 Collecting six==1.17.0 (from -r requirements.versions.txt (line 19))
+#8 7.439   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 7.512 Collecting starlette==1.7.0 (from -r requirements.versions.txt (line 20))
+#8 7.535   Downloading starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+#8 7.586 Collecting threadpoolctl==3.6.0 (from -r requirements.versions.txt (line 21))
+#8 7.607   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 7.671 Collecting typing-extensions==4.16.0 (from -r requirements.versions.txt (line 22))
+#8 7.692   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 7.742 Collecting typing-inspection==0.4.4 (from -r requirements.versions.txt (line 23))
+#8 7.761   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#8 7.812 Collecting tzdata==2026.3 (from -r requirements.versions.txt (line 24))
+#8 7.832   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 7.912 Collecting uvicorn==0.54.0 (from -r requirements.versions.txt (line 25))
+#8 7.931   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#8 7.996 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#8 8.029 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#8 8.062 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#8 8.099 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#8 8.140 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#8 8.173 Downloading fastapi-0.142.2-py3-none-any.whl (144 kB)
+#8 8.220 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 8.251 Downloading idna-3.19-py3-none-any.whl (68 kB)
+#8 8.287 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#8 8.346 Downloading narwhals-2.26.0-py3-none-any.whl (474 kB)
+#8 8.425 Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 9.906    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 11.3 MB/s eta 0:00:00
+#8 9.930 Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+#8 9.964 Downloading pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.0 MB)
+#8 10.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 9.8 MB/s eta 0:00:00
+#8 10.62 Downloading pydantic-2.13.5-py3-none-any.whl (472 kB)
+#8 10.70 Downloading pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#8 10.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 10.7 MB/s eta 0:00:00
+#8 10.95 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 11.01 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 11.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 11.2 MB/s eta 0:00:00
+#8 11.86 Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 15.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 10.8 MB/s eta 0:00:00
+#8 15.16 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 22.11 Downloading starlette-1.7.0-py3-none-any.whl (78 kB)
+#8 22.17 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 22.21 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 22.25 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#8 22.29 Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+#8 14.95 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#8 15.49 Saved /wheels/annotated_doc-0.0.5-py3-none-any.whl
+#8 15.49 Saved /wheels/annotated_types-0.8.0-py3-none-any.whl
+#8 15.49 Saved /wheels/anyio-4.15.1-py3-none-any.whl
+#8 15.49 Saved /wheels/click-8.5.0-py3-none-any.whl
+#8 15.50 Saved /wheels/cloudpickle-3.1.2-py3-none-any.whl
+#8 15.50 Saved /wheels/fastapi-0.142.2-py3-none-any.whl
+#8 15.50 Saved /wheels/h11-0.16.0-py3-none-any.whl
+#8 15.51 Saved /wheels/idna-3.19-py3-none-any.whl
+#8 15.51 Saved /wheels/joblib-1.6.0-py3-none-any.whl
+#8 15.51 Saved /wheels/narwhals-2.26.0-py3-none-any.whl
+#8 15.52 Saved /wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+#8 15.53 Saved /wheels/opentelemetry_api-1.44.0-py3-none-any.whl
+#8 15.54 Saved /wheels/pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+#8 15.54 Saved /wheels/pydantic-2.13.5-py3-none-any.whl
+#8 15.55 Saved /wheels/pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+#8 15.55 Saved /wheels/python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+#8 15.57 Saved /wheels/scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+#8 15.67 Saved /wheels/scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+#8 15.67 Saved /wheels/six-1.17.0-py2.py3-none-any.whl
+#8 15.67 Saved /wheels/starlette-1.7.0-py3-none-any.whl
+#8 15.67 Saved /wheels/threadpoolctl-3.6.0-py3-none-any.whl
+#8 15.67 Saved /wheels/typing_extensions-4.16.0-py3-none-any.whl
+#8 15.67 Saved /wheels/typing_inspection-0.4.4-py3-none-any.whl
+#8 15.68 Saved /wheels/tzdata-2026.3-py2.py3-none-any.whl
+#8 15.68 Saved /wheels/uvicorn-0.54.0-py3-none-any.whl
+#8 15.68 Successfully downloaded annotated-doc annotated-types anyio click cloudpickle fastapi h11 idna joblib narwhals numpy opentelemetry-api pandas pydantic pydantic-core python-dateutil scikit-learn scipy six starlette threadpoolctl typing-extensions typing-inspection tzdata uvicorn
+#8 DONE 16.1s
+
+#9 [dependencies 5/7] COPY service.whl /service.whl
+#9 DONE 0.1s
+
+#10 [dependencies 6/7] COPY lock_linux.py ./
+#10 DONE 0.1s
+
+#11 [dependencies 7/7] RUN python lock_linux.py
+#11 DONE 0.8s
+
+#12 [runtime 2/8] COPY --from=dependencies /wheels /wheels
+#12 DONE 0.2s
+
+#13 [runtime 3/8] COPY --from=dependencies /requirements.linux.lock /requirements.linux.lock
+#13 DONE 0.1s
+
+#14 [runtime 4/8] RUN python -m pip install --no-index --only-binary=:all: --find-links /wheels --require-hashes -r /requirements.linux.lock && python -m pip check
+#14 2.154 Looking in links: /wheels
+#14 2.168 Processing /wheels/annotated_doc-0.0.5-py3-none-any.whl (from -r /requirements.linux.lock (line 1))
+#14 2.179 Processing /wheels/annotated_types-0.8.0-py3-none-any.whl (from -r /requirements.linux.lock (line 2))
+#14 2.184 Processing /wheels/anyio-4.15.1-py3-none-any.whl (from -r /requirements.linux.lock (line 3))
+#14 2.191 Processing /wheels/click-8.5.0-py3-none-any.whl (from -r /requirements.linux.lock (line 4))
+#14 2.196 Processing /wheels/cloudpickle-3.1.2-py3-none-any.whl (from -r /requirements.linux.lock (line 5))
+#14 2.201 Processing /wheels/fastapi-0.142.2-py3-none-any.whl (from -r /requirements.linux.lock (line 6))
+#14 2.217 Processing /wheels/h11-0.16.0-py3-none-any.whl (from -r /requirements.linux.lock (line 7))
+#14 2.223 Processing /wheels/idna-3.19-py3-none-any.whl (from -r /requirements.linux.lock (line 8))
+#14 2.232 Processing /wheels/joblib-1.6.0-py3-none-any.whl (from -r /requirements.linux.lock (line 9))
+#14 2.243 Processing /wheels/narwhals-2.26.0-py3-none-any.whl (from -r /requirements.linux.lock (line 10))
+#14 2.257 Processing /wheels/numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /requirements.linux.lock (line 11))
+#14 2.385 Processing /wheels/opentelemetry_api-1.44.0-py3-none-any.whl (from -r /requirements.linux.lock (line 12))
+#14 2.390 Processing /wheels/pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from -r /requirements.linux.lock (line 13))
+#14 2.528 Processing /wheels/pydantic-2.13.5-py3-none-any.whl (from -r /requirements.linux.lock (line 14))
+#14 2.543 Processing /wheels/pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from -r /requirements.linux.lock (line 15))
+#14 2.562 Processing /wheels/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (from -r /requirements.linux.lock (line 16))
+#14 2.569 Processing /wheels/renewcast_event_service-0.1.0+20261010t231817z.2aeba29a-py3-none-any.whl (from -r /requirements.linux.lock (line 17))
+#14 2.573 Processing /wheels/scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /requirements.linux.lock (line 18))
+#14 2.659 Processing /wheels/scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from -r /requirements.linux.lock (line 19))
+#14 2.982 Processing /wheels/six-1.17.0-py2.py3-none-any.whl (from -r /requirements.linux.lock (line 20))
+#14 10.30 Processing /wheels/starlette-1.7.0-py3-none-any.whl (from -r /requirements.linux.lock (line 21))
+#14 10.32 Processing /wheels/threadpoolctl-3.6.0-py3-none-any.whl (from -r /requirements.linux.lock (line 22))
+#14 10.32 Processing /wheels/typing_extensions-4.16.0-py3-none-any.whl (from -r /requirements.linux.lock (line 23))
+#14 10.34 Processing /wheels/typing_inspection-0.4.4-py3-none-any.whl (from -r /requirements.linux.lock (line 24))
+#14 10.35 Processing /wheels/tzdata-2026.3-py2.py3-none-any.whl (from -r /requirements.linux.lock (line 25))
+#14 10.37 Processing /wheels/uvicorn-0.54.0-py3-none-any.whl (from -r /requirements.linux.lock (line 26))
+#14 3.373 Installing collected packages: tzdata, typing-extensions, threadpoolctl, six, numpy, narwhals, idna, h11, cloudpickle, click, annotated-types, annotated-doc, uvicorn, typing-inspection, scipy, python-dateutil, pydantic-core, opentelemetry-api, joblib, anyio, starlette, scikit-learn, pydantic, pandas, fastapi, renewcast-event-service
+#14 27.46 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 cloudpickle-3.1.2 fastapi-0.142.2 h11-0.16.0 idna-3.19 joblib-1.6.0 narwhals-2.26.0 numpy-2.5.3 opentelemetry-api-1.44.0 pandas-3.0.5 pydantic-2.13.5 pydantic-core-2.46.5 python-dateutil-2.9.0.post0 renewcast-event-service-0.1.0+20261010t231817z.2aeba29a scikit-learn-1.9.0 scipy-1.18.1 six-1.17.0 starlette-1.7.0 threadpoolctl-3.6.0 typing-extensions-4.16.0 typing-inspection-0.4.4 tzdata-2026.3 uvicorn-0.54.0
+#14 27.46 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#14 28.96 No broken requirements found.
+#14 DONE 29.3s
+
+#15 [runtime 5/8] WORKDIR /app
+#15 DONE 0.2s
+
+#16 [runtime 6/8] COPY artifacts /app/artifacts
+#16 DONE 0.1s
+
+#17 [runtime 7/8] COPY reference_response.json context.json serve.py /app/
+#17 DONE 0.1s
+
+#18 [runtime 8/8] RUN python -c "import json,platform; x=json.load(open('context.json')); assert platform.python_version()==x['python_version'], 'Python da imagem diverge do protocolo'"
+#18 DONE 0.5s
+
+#19 exporting to image
+#19 exporting layers
+#19 exporting layers 25.6s done
+#19 exporting manifest sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708 0.0s done
+#19 exporting config sha256:85a4f5a1213ed4d1c6172dea6317743e22bc07d254f159b3a889dad794ae40a2 0.0s done
+#19 exporting attestation manifest sha256:304c31af384012cbe34b2d7e8e23a08d4e3c9eda3fc49a62a3f6203db41c37b9 0.1s done
+#19 exporting manifest list sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52
+#19 exporting manifest list sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52 0.0s done
+#19 naming to docker.io/library/renewcast-event:79fdfae0b647 done
+#19 unpacking to docker.io/library/renewcast-event:79fdfae0b647
+#19 unpacking to docker.io/library/renewcast-event:79fdfae0b647 9.7s done
+#19 DONE 35.6s
+
+ [33m2 warnings found (use docker --debug to expand):
+[0m - InvalidDefaultArgInFrom: Default value for ARG ${PYTHON_BASE} results in empty or invalid base image name (line 12)
+ - InvalidDefaultArgInFrom: Default value for ARG ${PYTHON_BASE} results in empty or invalid base image name (line 2)
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/26v26zqkqw5j1j3d08yl3373m
+
+docker image inspect renewcast-event:79fdfae0b647
+[
+    {
+        "Id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "RepoTags": [
+            "renewcast-event:79fdfae0b647"
+        ],
+        "RepoDigests": [
+            "renewcast-event@sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-13T18:57:48.46773464Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 228996849,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+                "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+                "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+                "sha256:ebd22babb3f2c20a9dd57c800f2ce7f973e807ccea1aedabab7a55ade5447a6c",
+                "sha256:bcc1e87077a366f1f6cb046722c3d02e59ae60c4a403c78a390642c1d48183ed",
+                "sha256:25670be17aea443abd657db11a8b14af5234f6c2c2d79381dd351b76ec95b9ed",
+                "sha256:58530bc04a9e657bc4201015f3533e0a0f65b7a5f4c1f4a6806a63311688dcae",
+                "sha256:0f9503e677dafa85a205faf888b72df1a4f50f3243cd7ca0385e1cc64e2c58b6",
+                "sha256:83f0ee069ff40b7f444c7d2bd2512f18479cb35e70fb99dcbb561c8f04b43ea9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-13T18:58:14.26328993Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "size": 856
+        },
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Healthcheck": {
+                "Interval": 5000000000,
+                "Retries": 6,
+                "StartPeriod": 20000000000,
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Timeout": 3000000000
+            },
+            "Labels": null,
+            "OnBuild": null,
+            "User": "10001:10001",
+            "Volumes": null,
+            "WorkingDir": "/app"
+        }
+    }
+]
+
+docker run -d --read-only --tmpfs /tmp:rw,size=64m --cap-drop ALL --security-opt no-new-privileges -p 127.0.0.1::8000 sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52
+a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": [
+            "492ceeed1ec56bed7899338c53f5d378b6a4e2befba338e11b5dd1c113f39d1d"
+        ],
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": []
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": [
+            "492ceeed1ec56bed7899338c53f5d378b6a4e2befba338e11b5dd1c113f39d1d"
+        ],
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker inspect a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7
+[
+    {
+        "Id": "a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7",
+        "Created": "2026-10-13T18:58:25.437088804Z",
+        "Path": "python",
+        "Args": [
+            "/app/serve.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 857,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-13T18:58:26.404936319Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "starting",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-13T18:58:31.769654461Z",
+                        "End": "2026-10-13T18:58:33.135851491Z",
+                        "ExitCode": 1,
+                        "Output": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 1344, in do_open\n    h.request(req.get_method(), req.selector, req.data, headers,\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1358, in request\n    self._send_request(method, url, body, headers, encode_chunked)\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1404, in _send_request\n    self.endheaders(body, encode_chunked=encode_chunked)\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1353, in endheaders\n    self._send_output(message_body, encode_chunked=encode_chunked)\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1113, in _send_output\n    self.send(msg)\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1057, in send\n    self.connect()\n  File \"/usr/local/lib/python3.12/http/client.py\", line 1023, in connect\n    self.sock = self._create_connection(\n                ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/socket.py\", line 865, in create_connection\n    raise exceptions[0]\n  File \"/usr/local/lib/python3.12/socket.py\", line 850, in create_connection\n    sock.connect(sa)\nConnectionRefusedError: [Errno 111] Connection refused\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 515, in open\n    response = self._open(req, data)\n               ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 532, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 1373, in http_open\n    return self.do_open(http.client.HTTPConnection, req)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/urllib/request.py\", line 1347, in do_open\n    raise URLError(err)\nurllib.error.URLError: \u003curlopen error [Errno 111] Connection refused\u003e\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+        "ResolvConfPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hostname",
+        "HostsPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/hosts",
+        "LogPath": "/var/lib/docker/containers/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7/a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7-json.log",
+        "Name": "/stupefied_brahmagupta",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": ""
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,size=64m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "a9896d76307d",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_DISABLE_PIP_VERSION_CHECK=1"
+            ],
+            "Cmd": [
+                "python",
+                "/app/serve.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health',timeout=2)"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 20000000000,
+                "Retries": 6
+            },
+            "Image": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "63bdef010d2cd80696aab6028390a5435fff2d32d66e7e0ba478f3bb22179a41",
+            "SandboxKey": "/var/run/docker/netns/63bdef010d2c",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "53828"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "aa:66:96:91:b5:fe",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "aa:66:96:91:b5:fe",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "e7ed23dfed965c11ab49f33745cdcf29d13980ecc8b61bded3a072a5dd5ff422",
+                    "EndpointID": "c931355d5965f6ac41041680dd900e42042c6bbf379eb01198beafd916019000",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:0a5fcf23402458fa479d68ba7c967d49aadd884a3096644cade33481326b6708",
+            "size": 2385,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+docker exec a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7 python -c "import json,platform,importlib.metadata as m; x=json.load(open('/app/context.json')); print(json.dumps({'python':platform.python_version(),'system':platform.system(),'dependencies':{n:m.version(n) for n in x['dependencies']}}))"
+{"python": "3.12.13", "system": "Linux", "dependencies": {"annotated-doc": "0.0.5", "annotated-types": "0.8.0", "anyio": "4.15.1", "click": "8.5.0", "cloudpickle": "3.1.2", "fastapi": "0.142.2", "h11": "0.16.0", "idna": "3.19", "joblib": "1.6.0", "narwhals": "2.26.0", "numpy": "2.5.3", "opentelemetry-api": "1.44.0", "pandas": "3.0.5", "pydantic": "2.13.5", "pydantic-core": "2.46.5", "python-dateutil": "2.9.0.post0", "scikit-learn": "1.9.0", "scipy": "1.18.1", "six": "1.17.0", "starlette": "1.7.0", "threadpoolctl": "3.6.0", "typing-extensions": "4.16.0", "typing-inspection": "0.4.4", "tzdata": "2026.3", "uvicorn": "0.54.0", "renewcast-event-service": "0.1.0+20261010t231817z.2aeba29a"}}
+
+docker exec a9896d76307de5f5245f1f8bf99136e946dbf16bdfd9ad9c06b18f165b4788f7 cat /requirements.linux.lock
+annotated-doc==0.0.5 --hash=sha256:117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101
+annotated-types==0.8.0 --hash=sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0
+anyio==4.15.1 --hash=sha256:6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101
+click==8.5.0 --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360
+cloudpickle==3.1.2 --hash=sha256:9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a
+fastapi==0.142.2 --hash=sha256:bd5f4d81f1e93a88bcd77caf4dfe3c2dbffc3805407a0007e9a114c18b3a670b
+h11==0.16.0 --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
+idna==3.19 --hash=sha256:815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4
+joblib==1.6.0 --hash=sha256:3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba
+narwhals==2.26.0 --hash=sha256:29326d74f107c347fd1009bd58e38d9f7c7c5b51e6de97bc93dbc325d9038b54
+numpy==2.5.3 --hash=sha256:b7e18c623bb5c95acb3b3328861272816ba199fb531921c5d6d0b675f1fde9e3
+opentelemetry-api==1.44.0 --hash=sha256:94b98c893a91b88657eaac1e3ba89618cdb85be6918196705354f34728b2cdef
+pandas==3.0.5 --hash=sha256:d373ce03ffd84010ed9839fa73672a9c8256990532e158440c0085db7d914b34
+pydantic==2.13.5 --hash=sha256:346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73
+pydantic-core==2.46.5 --hash=sha256:0fc5be0abd4a407e200d844b404e33639a554e7bd0d448e7b9ae181be4789ac2
+python-dateutil==2.9.0.post0 --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
+renewcast-event-service==0.1.0+20261010t231817z.2aeba29a --hash=sha256:c00682fdd470ffe6537a1bd6c02f1878ebbb38abb7b5f78c9dd5d531586f57e1
+scikit-learn==1.9.0 --hash=sha256:056c92bb67ad4c28463c2f2653d9701449201e7e7a9e94e321be0f71c4fef2b8
+scipy==1.18.1 --hash=sha256:f55fa87b6c612ecd6b058f167c53231b1d14e412efe361d3d6e38b3631c73218
+six==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
+starlette==1.7.0 --hash=sha256:67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e
+threadpoolctl==3.6.0 --hash=sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb
+typing-extensions==4.16.0 --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8
+typing-inspection==0.4.4 --hash=sha256:65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147
+tzdata==2026.3 --hash=sha256:dc096730c87af6cab1b171c9d532be840741ff5d459015e7f6947bd7d7e54931
+uvicorn==0.54.0 --hash=sha256:505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf

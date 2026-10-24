@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "policy_selection_checks": "120,156,zero,invalid,infeasible,tie-order",
+  "json_strict_null_handled": true,
+  "api_cases": [
+    {
+      "case": "p=0.0",
+      "status": 200
+    },
+    {
+      "case": "p=0.4999",
+      "status": 200
+    },
+    {
+      "case": "p=0.5",
+      "status": 200
+    },
+    {
+      "case": "p=1.0",
+      "status": 200
+    },
+    {
+      "case": "p_out_of_range",
+      "status": 422
+    },
+    {
+      "case": "p_boolean",
+      "status": 422
+    },
+    {
+      "case": "naive_time",
+      "status": 422
+    },
+    {
+      "case": "wrong_target",
+      "status": 422
+    },
+    {
+      "case": "wrong_history",
+      "status": 422
+    },
+    {
+      "case": "wrong_method",
+      "status": 422
+    },
+    {
+      "case": "wrong_event",
+      "status": 422
+    },
+    {
+      "case": "future_label",
+      "status": 422
+    }
+  ],
+  "non_finite_probabilities_rejected": true,
+  "equivalent_timezone_offsets": true,
+  "openapi_generated": true,
+  "estimators_loaded_or_refit": false
+}

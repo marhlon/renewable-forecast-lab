@@ -1,0 +1,9 @@
+{
+  "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/capacidade-geracao/CAPACIDADE_GERACAO.csv",
+  "http_status": 200,
+  "fetched_at_utc": "2026-09-22T21:28:06.855407+00:00",
+  "http_last_modified": "Tue, 22 Sep 2026 15:00:50 GMT",
+  "etag": "\"ada853c0aa78fb46d963d9b9b0dfb5e6\"",
+  "sha256": "afab94be2941e8534a9ba01ebe89a2bd2876baf240f7141548c38d64d28310a4",
+  "bytes": 1282133
+}

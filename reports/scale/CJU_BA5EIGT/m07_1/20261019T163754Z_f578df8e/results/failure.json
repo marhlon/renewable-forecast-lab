@@ -1,0 +1,4 @@
+{
+  "type": "PySparkRuntimeError",
+  "detail": "[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number."
+}

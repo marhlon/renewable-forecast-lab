@@ -1,0 +1,48 @@
+{
+  "conjunto_id": "CJU_BA5EIGT",
+  "membership_as_of": "2026-09-01",
+  "plants": 15,
+  "capacity_records": 27,
+  "capacity_ons_mw": 227.70000000000002,
+  "capacity_aneel_mw": 227.70000000000002,
+  "max_absolute_capacity_difference_mw": 0.0,
+  "sources": {
+    "relationships": {
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/usina_conjunto/RELACIONAMENTO_USINA_CONJUNTO.csv",
+      "http_status": 200,
+      "fetched_at_utc": "2026-09-22T21:28:05.056568+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 15:05:08 GMT",
+      "etag": "\"5abf817f18ead81175f209f8ab17ea09\"",
+      "sha256": "052776ef1c78beebf0d8c1947d4e3cdec5d5bb6c0587f8613be6714a8572b689",
+      "bytes": 336323
+    },
+    "capacity": {
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/capacidade-geracao/CAPACIDADE_GERACAO.csv",
+      "http_status": 200,
+      "fetched_at_utc": "2026-09-22T21:28:06.855407+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 15:00:50 GMT",
+      "etag": "\"ada853c0aa78fb46d963d9b9b0dfb5e6\"",
+      "sha256": "afab94be2941e8534a9ba01ebe89a2bd2876baf240f7141548c38d64d28310a4",
+      "bytes": 1282133
+    },
+    "siga_daily": {
+      "url": "https://dadosabertos.aneel.gov.br/dataset/6d90b77c-c5f5-4d81-bdec-7bc619494bb9/resource/2f65a1b0-19b8-4360-8238-b34ab4693d55/download/siga-empreendimentos-geracao-diario.csv",
+      "http_status": 200,
+      "fetched_at_utc": "2026-09-22T21:28:07.986896+00:00",
+      "http_last_modified": "Tue, 22 Sep 2026 10:40:58 GMT",
+      "etag": "\"1790073658.2245355-8418652-1847136755\"",
+      "sha256": "a617d47068df726aa58a22fe3d4d1b0456958654f8d97e0776d577eed459032f",
+      "bytes": 8418652
+    }
+  },
+  "ceg_normalization": "preserve full CEG; normalize leading zeros of numeric final suffix",
+  "join_contract": "one relationship, one aggregated capacity and one SIGA record per CEG",
+  "membership_dates": "start inclusive; end inclusive by calendar date",
+  "capacity_dates": "commercial operation <= date; deactivation > date or absent",
+  "historical_snapshot_verified": false,
+  "scope": "membership dates from current registry; historical coordinates/capacity versions not verified",
+  "coordinates_scope": "registered plant location, not individual turbine locations",
+  "ons_attribution": "Operador Nacional do Sistema Elétrico — dados abertos, CC-BY",
+  "aneel_attribution": "ANEEL — SIGA, Open Database License (ODbL)",
+  "transformations": "CEG formatting, capacity aggregation, kW to MW, decimal conversion and joins"
+}

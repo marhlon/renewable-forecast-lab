@@ -1,0 +1,6 @@
+# Parecer Técnico de Distribuição e Aprovabilidade
+
+1. **Reprodutibilidade**: A entrega é **reproduzível** no escopo isolado executado. O módulo foi importado de `C:\renewable-forecast-lab\venvs\m06_package\97697f9c7806\Lib\site-packages\renewable_forecast\decision_api.py`, com modelo preservado (hash `7ab0a5cbc45a...`) e diferença de probabilidade de 0.0e+00 (referência: 0.20465385372296466).
+2. **Orçamento e Dependências**: Os dois maiores arquivos no **wheelhouse** são `scipy-1.18.1-cp312-cp312-win_amd64.whl` e `numpy-2.5.3-cp312-cp312-win_amd64.whl`. Nenhum pode ser removido: scikit-learn é dependência direta do estimador e exige SciPy como **dependência transitiva** para álgebra linear.
+3. **Outra Versão do Python**: Se o destino utilizar outro Python, cada **wheel** pré-compilado em C/C++ ficará incompatível. Não se altera o manifesto; é necessário rodar `pip download` para a nova versão e gerar um **lock** atualizado.
+4. **Isolamento vs Operação**: O teste comprovou o **isolamento** do ambiente e a **reprodutibilidade** determinística de um pedido HTTP. Para autorizar operação comercial, ainda falta evidência de teste de carga (latência P95 sob concorrência) e monitoramento de *drift*.

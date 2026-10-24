@@ -1,0 +1,193 @@
+{
+  "run_id": "1c51054df97b439fa22c7d2dcc9f6edd",
+  "passed": true,
+  "source_directory": "/workspace/scratch/dad22b6607ff/m06_diagnostico_verification/1c51054df97b439fa22c7d2dcc9f6edd",
+  "source_sha256": {
+    "requests.csv": "97dfcd064475df94020473e44be1fdf5185d0b7e9b67ca06d995509d87e20841",
+    "summary.csv": "799dcd435310176b450085518161e00be38b37a9c4d69700a4dc7650b1138e8e",
+    "client_requests.csv": "8fb327df8ecc75c5dca39b44fb5af88f03cdd6014dbd68e5b1c4fedd62b34b41",
+    "server_requests.jsonl": "ef0bae6375d5e0d12327a0628d82f42d625ec5fb4ad6cde2115bf74abe05c5db",
+    "verification.json": "8fcf2446263715c1d680beb1d71ca452c53937f9a4e0ddcced9d2f0b724ce250"
+  },
+  "inspection_code_sha256": "3d6072651848d5700654659eac138b1bb48e14aac8b78d19d66face3d47d368c",
+  "summary_checks": [
+    {
+      "phase": "normal",
+      "metric": "action",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "eligible_requests",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "failed_5xx",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "median_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "p95_client_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "p95_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "rejected_4xx",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "requests",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "server_error_rate",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "slow_successes",
+      "passed": true
+    },
+    {
+      "phase": "normal",
+      "metric": "success_2xx",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "action",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "eligible_requests",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "failed_5xx",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "median_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "p95_client_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "p95_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "rejected_4xx",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "requests",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "server_error_rate",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "slow_successes",
+      "passed": true
+    },
+    {
+      "phase": "invalid_payload",
+      "metric": "success_2xx",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "action",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "eligible_requests",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "failed_5xx",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "median_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "p95_client_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "p95_success_ms",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "rejected_4xx",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "requests",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "server_error_rate",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "slow_successes",
+      "passed": true
+    },
+    {
+      "phase": "incident",
+      "metric": "success_2xx",
+      "passed": true
+    }
+  ],
+  "absolute_tolerance": 1e-09,
+  "relative_tolerance": 0,
+  "request_rows": 45,
+  "incident_rows": 10,
+  "inputs_preserved": true,
+  "models_retrained": false,
+  "new_http_requests": 0,
+  "scope": "Independent recalculation of an existing labelled HTTP exercise",
+  "output_sha256": {
+    "diagnostico.csv": "1099fc42b84a727ff0138e3e1697b6ccd75bad973f7d127a318b5631421aa02f",
+    "incidentes.csv": "0f2802fb45bb398368e2a678f5bb7b69efb62dd674f943a5555d547bf428e1f8",
+    "decisao.md": "ce7706074621532328e81568c669973bdd1b617103b58aaeeb894d3d7b275194"
+  }
+}

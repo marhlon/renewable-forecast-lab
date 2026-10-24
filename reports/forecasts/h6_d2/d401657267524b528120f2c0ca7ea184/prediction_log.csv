@@ -1,0 +1,2 @@
+forecast_origin,target_time,prediction,prediction_mean,target_available_at,model_run_id
+2026-09-01 01:00:00,2026-09-01 07:00:00,57.04960141851238,68.86076716924549,2026-09-01 09:00:00,d401657267524b528120f2c0ca7ea184

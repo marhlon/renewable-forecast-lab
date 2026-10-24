@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "case": "real_overlapping_http_requests",
+      "passed": true,
+      "max_active": 4
+    },
+    {
+      "case": "wrong_probability_200_500_422_separated",
+      "passed": true
+    },
+    {
+      "case": "quantile_and_strict_response_contract",
+      "passed": true
+    },
+    {
+      "case": "real_hgb_native_http_no_fit_nine_phases",
+      "passed": true,
+      "requests": 216,
+      "probability": 0.20179188830321645,
+      "model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f"
+    },
+    {
+      "case": "source_identity_and_mixed_release_rejected",
+      "passed": true,
+      "scope": "Real replica files, synthetic receipt only for reader unit check; no Docker execution"
+    },
+    {
+      "case": "p95_independent_numpy_recalculation_from_http_rows",
+      "passed": true,
+      "phases": 9
+    }
+  ],
+  "docker_executed": false,
+  "powershell_executed": false,
+  "scope": "Teacher native Linux replica and explicitly synthetic fault server; not student performance results."
+}

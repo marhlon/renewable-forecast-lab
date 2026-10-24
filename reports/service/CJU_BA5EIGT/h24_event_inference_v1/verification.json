@@ -1,0 +1,11 @@
+{
+  "valid_http_status": 200,
+  "order_invariance": true,
+  "missing_feature_http_status": 422,
+  "injected_probability_http_status": 422,
+  "request_sha256": "2d13524f017fccd9319922b2a646107b7775f2e085e2d59fa68a88aa3e441b33",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "estimator_executed": true,
+  "independent_performance_evaluation": false
+}

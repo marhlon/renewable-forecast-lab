@@ -1,0 +1,38 @@
+# Exemplo para adoção posterior: não ativa CI ao extrair este pacote.
+# Requer contexto preparado e revisado, incluindo artefatos e base_image.lock.json,
+# já disponível no checkout no caminho informado. Não publica imagem nem serviço.
+name: Renewcast - compatibilidade do container
+on:
+  workflow_dispatch:
+    inputs:
+      context_path:
+        description: Caminho relativo do contexto revisado e versionado
+        type: string
+        required: true
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      RENEWCAST_CONTEXT: ${{ inputs.context_path }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Exigir contexto e imagem base fixada
+        shell: bash
+        run: |
+          test -f "$RENEWCAST_CONTEXT/context.json"
+          test -f "$RENEWCAST_CONTEXT/base_image.lock.json"
+      - name: Construir e verificar
+        run: python scripts/verificar_container.py --context "$RENEWCAST_CONTEXT" --output-root reports/ci_container
+      - name: Guardar evidencias, inclusive em falha
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: evidencia-renewcast-container
+          path: reports/ci_container/
+          if-no-files-found: warn
+          retention-days: 7

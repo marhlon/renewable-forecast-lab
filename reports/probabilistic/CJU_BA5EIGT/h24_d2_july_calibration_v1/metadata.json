@@ -1,0 +1,19 @@
+{
+  "completed_at_utc": "2026-10-02T23:05:20.913254+00:00",
+  "input_rows": 744,
+  "validation_origins": 504,
+  "prediction_rows": 1008,
+  "methods": [
+    "hgb_uncalibrated",
+    "hgb_cqr_expansion"
+  ],
+  "protocol_sha256": "4653017031b515fb1acdd482466d15ad878634a4267638b84a89413801ee43e2",
+  "output_sha256": {
+    "predictions.csv": "044b4fecd2337d40c89f5dc77f49fc83ea76f0fbcfb73af3c7eb35dbcb190611",
+    "calibration_scores.csv": "b24fdd3ae3b80c9859b343c53b6fad0f4abb1a6fc05302f22ffdb7e3000623ec",
+    "folds.csv": "f7963c05c6cb9f135ed50c37a23ae068ae6cfda786130149213bbf2bc2f7ac2b",
+    "fold_metrics.csv": "e1b551e71d3bc4b3408c222da376973f4a78efac425d5c4288ab15807a41b003",
+    "summary.csv": "19e49101616a20a50581ffef251d16fa5102406b709f272fa45e13a979c12d32"
+  },
+  "model_promotion": false
+}

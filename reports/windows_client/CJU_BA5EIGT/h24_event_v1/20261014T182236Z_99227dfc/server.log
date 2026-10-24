@@ -1,0 +1,9 @@
+INFO:     172.17.0.1:44106 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40210 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53886 - "POST /predict-decision HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53896 - "POST /predict-decision HTTP/1.1" 422 Unprocessable Entity
+INFO:     172.17.0.1:53912 - "POST /predict-decision HTTP/1.1" 200 OK
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

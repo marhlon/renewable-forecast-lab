@@ -1,0 +1,64 @@
+{
+  "verified": true,
+  "run_id": "51cb4456d07d4f01b8b20f32e4ed1f78",
+  "release": "2026.10.07-registry-exercise-1",
+  "source_sha256": {
+    "v1/model.joblib": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+    "v1/manifest.json": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7",
+    "v1/example_request.json": "fd4a281f0b2cc6a4ecc3a6194e31c3da0244348009d812667dec75bece633f47",
+    "v2/model.joblib": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+    "v2/manifest.json": "214dcfc273dca9b6f363a428738a112ad37f3058043ef4aa3b1bea5ebbe7bfe4",
+    "v2/example_request.json": "2d13524f017fccd9319922b2a646107b7775f2e085e2d59fa68a88aa3e441b33",
+    "policy": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7"
+  },
+  "source_artifacts_unchanged": true,
+  "models_retrained": false,
+  "http_predictions_or_attempts": 13,
+  "successful_predictions": 9,
+  "injected_errors": 2,
+  "expected_stale_process_rejections": 2,
+  "deployment_probe_count": 5,
+  "registered_versions": 2,
+  "registration_idempotent": true,
+  "committed_generations": [
+    1,
+    2,
+    3
+  ],
+  "stale_generation_rejected": true,
+  "rollback_probability_restored": true,
+  "rollback_model_restored": true,
+  "final_active": {
+    "alias": "active",
+    "version_id": "v1",
+    "generation": 3,
+    "activation_id": "734c3a91dc524c0392b61d5d3eb8e16b",
+    "bundle_sha256": "a8a5217c1f95ec6cdaf7a219a49e9801fc4138ef3310a6359742c42ba3b11596",
+    "model_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+    "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+    "manifest_sha256": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7"
+  },
+  "rollback_evidence_request_ids": [
+    "b04b79e81ce2436791da04824aaabb15",
+    "e1a3d161a46145a3b2df0777ea6afc9d"
+  ],
+  "output_sha256": {
+    "client_requests.csv": "5bbfe9e58460edf96db42734eb69ea008b2174e89002ce1bface200c2c4b3747",
+    "server_requests.jsonl": "42fad075618249942bf24aa9aade59dd854ba3cd982a6c24915c16e4190bae0e",
+    "requests.csv": "1f02d05252b114af0cda1d9392e4c8abc7bec5bb7cb3f1fe22a2038ef5f0acf2",
+    "responses.json": "c16b899f85db4aff250453b4e40214e020ec08dae9baef6fd3a10fef8ed3a7fc",
+    "deployment_probes.json": "f9755a38403f6e7e8e458539760a46655fda7580d91665ad661f41d1f2313e34",
+    "rejected_changes.json": "4eea5836c47a144cee86c6a97d46f57d8cebdb192324e582f31ecbb4ce3c7407",
+    "deployments.csv": "dd0546981d71f803a57d6c956ed5ef8f1748176407764f4f526e638195708b27",
+    "versions.csv": "7ea670f9ed0b037d71c130e57ce8db3a52376dd6c9d716c9d5406f64cc7d056b",
+    "common_request.json": "2d13524f017fccd9319922b2a646107b7775f2e085e2d59fa68a88aa3e441b33",
+    "summary.csv": "ca4fc07206dcdfa9381e21a3641bf89c96f84bd1681b65db8a20ee738d4aa0a8",
+    "registry/registry.sqlite": "e454d843200a826a804aed174675de9ecd1b980664ec4917f4bc5b393a0155b9"
+  },
+  "code_sha256": {
+    "registry_exercise": "efbaf1d906c3744db060f95bcd4a47766749764cb132c9e4be52c6259230e001",
+    "event_registry": "37190732722dd5751ea0f2179ab1b4a4d8e6854808bb08c0d9bff1e25e6bc043",
+    "registry_service": "b8a95a5c5f7ace057249cece38c83d6fdba4936d9817ab8785fe461a253360a0"
+  },
+  "scope": "Local registry and restart/rollback exercise; intentional faults, historical common request, no new model-performance evaluation"
+}

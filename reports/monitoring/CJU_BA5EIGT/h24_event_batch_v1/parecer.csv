@@ -1,0 +1,5 @@
+cenario,diagnostico,quantidade_afetada,conduta
+normal,Registro coerente; 24 resultados disponíveis,0,Continuar reunindo evidências
+observacao_atrasada,"O prazo venceu, mas falta o resultado",1,Investigar a entrada dos dados
+probabilidade_alterada,Tabela e resposta registrada divergem,1,Recuperar a integridade do registro
+avaliacao_desaparecida,Uma emissão ficou sem registro de avaliação,1,Investigar a conciliação

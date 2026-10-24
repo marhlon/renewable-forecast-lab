@@ -1,0 +1,16 @@
+{
+  "completed_at_utc": "2026-10-03T12:04:36.793187+00:00",
+  "input_rows": 744,
+  "validation_origins": 504,
+  "prediction_rows": 1512,
+  "model_promotion": false,
+  "protocol_sha256": "d0db6d67fc474dabbdbc2960dff75cec1727554e96ce13167411d7ffde3924d8",
+  "output_sha256": {
+    "event_labels.csv": "97737afcfc882b43e49eceae137b5df65f207282d473b74475d4ef2c39857c8d",
+    "predictions.csv": "0acb0ff6da0bc4fe682eb224b6ae6113e7c01f9cb06d81dbb54d9c6814b7c6d9",
+    "folds.csv": "447d18b441c541937e46cb95535047e0a17110d80841a47062027bb32cad42ad",
+    "fold_metrics.csv": "601477e8dfac0a5f3a23677e334865b2358eb51c1c6ebe44c956844aac1a2359",
+    "summary.csv": "401541f02fbc63f7cddc4abf31eff59da61998668f70bdcac154a664091856bf",
+    "probability_bins.csv": "5488006b3d7b128e4831433c706fbd17c0aa336fe7c86914a625c260e16a89fc"
+  }
+}

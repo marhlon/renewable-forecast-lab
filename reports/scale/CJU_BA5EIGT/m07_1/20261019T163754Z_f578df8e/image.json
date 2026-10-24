@@ -1,0 +1,67 @@
+{
+  "Id": "sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259",
+  "RepoTags": [
+    "renewcast-spark-m07:aca458752ff1"
+  ],
+  "RepoDigests": [
+    "renewcast-spark-m07@sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259"
+  ],
+  "Parent": "",
+  "Comment": "buildkit.dockerfile.v0",
+  "Created": "2026-10-19T16:41:11.01961742Z",
+  "DockerVersion": "",
+  "Author": "",
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Size": 582555319,
+  "GraphDriver": {
+    "Data": null,
+    "Name": "overlayfs"
+  },
+  "RootFS": {
+    "Type": "layers",
+    "Layers": [
+      "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+      "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+      "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+      "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+      "sha256:23b6c0b719f48252ea1cc40e21738869048dbd8747e676e59b1502672cf98fe1",
+      "sha256:75937afafd5b89917af32b36d3935f5bcb16625e141fc75e210d5f9a3a906f26",
+      "sha256:f9b1c792d1563cff93fedc7be33d90d22f4e2a9b8bb026e33376830078ae9102",
+      "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+    ]
+  },
+  "Metadata": {
+    "LastTagTime": "2026-10-19T16:42:11.829051032Z"
+  },
+  "Descriptor": {
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "digest": "sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259",
+    "size": 856
+  },
+  "Config": {
+    "Cmd": null,
+    "Entrypoint": [
+      "python",
+      "/work/tools/m07_transformacao.py"
+    ],
+    "Env": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "LANG=C.UTF-8",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.12.13",
+      "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+      "DEBIAN_FRONTEND=noninteractive",
+      "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64",
+      "PYTHONUNBUFFERED=1",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "SPARK_LOCAL_IP=127.0.0.1",
+      "PYSPARK_PYTHON=/usr/local/bin/python"
+    ],
+    "Labels": null,
+    "OnBuild": null,
+    "User": "10001:10001",
+    "Volumes": null,
+    "WorkingDir": "/tmp"
+  }
+}

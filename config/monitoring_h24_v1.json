@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "min_observed": 168,
+  "max_missing_observations": 0,
+  "brier_relative_tolerance": 0.1,
+  "status": "didactic_development_rule",
+  "rationale": {
+    "min_observed": "Uma semana de emissões horárias como mínimo didático de triagem; não garante independência, representatividade ou precisão estatística.",
+    "max_missing_observations": "Investigar qualquer observação ausente após o prazo assumido neste lote; definir tolerância operacional exige acordo com a fonte.",
+    "brier_relative_tolerance": "Abrir revisão se o Brier superar a frequência fixa do treino em mais de 10%, após o mínimo. Não promove nem retreina automaticamente."
+  }
+}

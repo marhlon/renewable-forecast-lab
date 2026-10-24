@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "user_replay_accepted": true,
+  "json_attachments_reconciled": 6,
+  "screenshots_reviewed": 2,
+  "source_probability_matches_prior_predictions": true,
+  "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+  "reported_policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "policy_hash_matches_reference_serialized_crlf": true,
+  "user_policy_file_received": false,
+  "swagger_rejection": "method conflicts with loaded policy; other generic fields also violate the contract",
+  "estimator_executed": false,
+  "new_model_performance_claimed": false
+}

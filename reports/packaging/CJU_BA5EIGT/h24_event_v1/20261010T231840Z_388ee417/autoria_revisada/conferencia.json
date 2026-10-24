@@ -1,0 +1,12 @@
+{
+  "release_id": "20261010T231817Z_2aeba29a",
+  "run_id": "20261010T231840Z_388ee417",
+  "verification_sha256": "e15f3b535e9852bb0bf1e27282f89370a907de67b6e3de92f20971b042f0d51a",
+  "release_sha256": "a2788289412b62c74ad2e70b9df7d06e911be407c0d62bd6268862b412592e06",
+  "audit_code_sha256": "0590c84e3a1b8a9cacd8a24cf57a20e9966c2c25ed8271c74e60819b415585d1",
+  "wheel_count": 26,
+  "total_bytes": 72018219,
+  "total_mib": 68.6819257736206,
+  "top5_pct": 96.24246609042082,
+  "human_opinion_generated": false
+}

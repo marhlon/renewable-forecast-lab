@@ -1,0 +1,177 @@
+{
+  "schema": "renewcast-m07-spark-v1",
+  "verified": true,
+  "mode": "autoria",
+  "source": {
+    "source_file": "/inputs/geracao.parquet",
+    "source_sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+    "source_schema": {
+      "din_instante": "TIMESTAMP",
+      "id_subsistema": "VARCHAR",
+      "nom_subsistema": "VARCHAR",
+      "id_estado": "VARCHAR",
+      "nom_estado": "VARCHAR",
+      "cod_modalidadeoperacao": "VARCHAR",
+      "nom_tipousina": "VARCHAR",
+      "nom_tipocombustivel": "VARCHAR",
+      "nom_usina": "VARCHAR",
+      "id_ons": "VARCHAR",
+      "ceg": "VARCHAR",
+      "val_geracao": "DOUBLE"
+    },
+    "rows": 8760,
+    "null_generation": 0,
+    "first_reference": "2025-09-01T00:00:00",
+    "last_reference": "2026-08-31T23:00:00",
+    "first_day": "2025-09-01",
+    "last_day": "2026-08-31",
+    "days": 365,
+    "conjunto": "CJU_BA5EIGT",
+    "identity_checked_in_column": false,
+    "timestamp_semantics": "naive_reference_labels_preserved; no_timezone_conversion",
+    "daily_grid": "24 hourly labels per calendar date, including boundary dates",
+    "normalized_sha256": "b81718ef938d3f17db7d8c00dc2a2cd8e3626f0f0d812770cf09e28e3287d155"
+  },
+  "generated_at_utc": "2026-10-19T23:01:22.222356+00:00",
+  "runtime": {
+    "python": "3.12.13",
+    "pyspark": "4.0.1",
+    "duckdb": "1.4.1",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+    "java_version": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-deb12u1-Debian)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-deb12u1-Debian, mixed mode, sharing)"
+  },
+  "config": {
+    "master": "local[2]",
+    "shuffle_partitions": 2,
+    "adaptive_enabled": false,
+    "spark_startup_seconds": 9.123970130000089,
+    "startup_details": {
+      "ivy_directory": "/tmp/renewcast-spark-3138smq4/ivy",
+      "driver_host": "127.0.0.1",
+      "java_user_name": "renewcast",
+      "java_user_home": "/tmp/renewcast"
+    }
+  },
+  "real": {
+    "checks": [
+      {
+        "comparison": "duckdb_vs_spark_dataframe",
+        "days": 365,
+        "passed": true,
+        "max_absolute_numeric_difference": 0.0,
+        "nulls_and_dates_equal": true
+      },
+      {
+        "comparison": "duckdb_vs_spark_sql_autoral",
+        "days": 365,
+        "passed": true,
+        "max_absolute_numeric_difference": 4.263256414560601e-14,
+        "nulls_and_dates_equal": true
+      },
+      {
+        "comparison": "classificacao_cobertura",
+        "passed": true,
+        "days": 365
+      }
+    ],
+    "timings": [
+      {
+        "engine": "duckdb",
+        "setup_seconds": 0.49062629000036395,
+        "action_seconds": 0.03580830000282731,
+        "daily_rows": 365
+      },
+      {
+        "engine": "spark_dataframe",
+        "action_seconds": 2.8936879399989266,
+        "daily_rows": 365
+      },
+      {
+        "engine": "spark_sql_autoral",
+        "action_seconds": 0.8183584200014593,
+        "daily_rows": 365
+      }
+    ],
+    "input_partitions": 1,
+    "days": 365,
+    "complete_days": 365,
+    "missing_hours": 0,
+    "null_hours": 0
+  },
+  "synthetic_edge_case": {
+    "checks": [
+      {
+        "comparison": "duckdb_vs_spark_dataframe",
+        "days": 4,
+        "passed": true,
+        "max_absolute_numeric_difference": 0.0,
+        "nulls_and_dates_equal": true
+      },
+      {
+        "comparison": "duckdb_vs_spark_sql_autoral",
+        "days": 4,
+        "passed": true,
+        "max_absolute_numeric_difference": 0.0,
+        "nulls_and_dates_equal": true
+      },
+      {
+        "comparison": "classificacao_cobertura",
+        "passed": true,
+        "days": 4
+      }
+    ],
+    "timings": [
+      {
+        "engine": "duckdb",
+        "setup_seconds": 0.055227040000318084,
+        "action_seconds": 0.019589020001149038,
+        "daily_rows": 4
+      },
+      {
+        "engine": "spark_dataframe",
+        "action_seconds": 0.49926074000177323,
+        "daily_rows": 4
+      },
+      {
+        "engine": "spark_sql_autoral",
+        "action_seconds": 0.6014463400024397,
+        "daily_rows": 4
+      }
+    ],
+    "input_partitions": 1,
+    "days": 4,
+    "complete_days": 1,
+    "missing_hours": 45,
+    "null_hours": 25
+  },
+  "scope": "local transformation equivalence; not a cluster benchmark or model evaluation",
+  "code_sha256": {
+    "m07_transformacao.py": "ff46f0b58f549cfae86a7add0d33e2cab561ffdbdad7c8765188c13debd6eb1c",
+    "transformacao_spark.py": "6485dcc8b3ca4f223a3d4d6dddde787ad447baad980804077447aa4b37e2de50"
+  },
+  "author_implementation_executed": true,
+  "independent_authorship_not_proven_by_execution": true,
+  "output_sha256": {
+    "caso_didatico/comparacao.json": "44b419bad81818bda6792c6dfa0cc325c2628f3d22d30e03644ac8b0fcfd9d70",
+    "caso_didatico/duckdb_diario.csv": "95f0aad475ea652d12e768139d91141ad1d41a2c0f31d2c9259667d43d2d23fe",
+    "caso_didatico/plano_duckdb.txt": "2f8d4427f2adfcb2fa05fb323cfe2bc647b3f45ba3fc6175d189645bef063cf0",
+    "caso_didatico/plano_spark_dataframe.txt": "272dc210b23d878f5abaacc82ab54eb7648bfe8455b7721c0b20f2d61937194e",
+    "caso_didatico/plano_spark_sql_autoral.txt": "c4b63f7fa45a884c4b51271c09a677feb5781281a3c6f585c0b7ba9fe97189f8",
+    "caso_didatico/qualidade_diaria.csv": "6bfe9f1e0fceffbfab661f53dd44a34da9b54d6ec175b841320e35a73026c0be",
+    "caso_didatico/spark_dataframe_diario.csv": "95f0aad475ea652d12e768139d91141ad1d41a2c0f31d2c9259667d43d2d23fe",
+    "caso_didatico/spark_sql_diario.csv": "95f0aad475ea652d12e768139d91141ad1d41a2c0f31d2c9259667d43d2d23fe",
+    "caso_didatico/tempos.json": "5ed52385b38e818c45125cc8a79c4ddf1617c270f59403b42cf641750c13f86a",
+    "caso_didatico.parquet": "cebcdbba1a73bcac058bbaa23711c4153f94c70555681ba2fe967e25b0550d61",
+    "caso_normalizado.parquet": "dcd97e4e2c696f9846f1757c7841e3b0761f962f48a897ce2a6fd990157ea711",
+    "entrada_normalizada.parquet": "b81718ef938d3f17db7d8c00dc2a2cd8e3626f0f0d812770cf09e28e3287d155",
+    "real/comparacao.json": "42e443bc95af235c886b69abdc95c66cac159dec85ee81bb1ca4206fd38743cf",
+    "real/duckdb_diario.csv": "4718c7f0d5cc5dafb96908578903b90da091f24a79292f156ba7380616c887f4",
+    "real/plano_duckdb.txt": "4a8ab2e6ad5a41b04173a2e0b1313188272b3487a0f5993e88c6b54559e6bd8e",
+    "real/plano_spark_dataframe.txt": "d4cf4d600e248900afd2f63c767f57dfb88d6259dd4380016dd45d7ae5df3c2f",
+    "real/plano_spark_sql_autoral.txt": "11ae13f8d2963e1fa6d11457958fd2eeef1bac33771f8bf7ca458b5b79f89641",
+    "real/qualidade_diaria.csv": "31f7e4fcf958a1f8e5e2251105f03cdf3ef028b974c8af388771413ba7d2afb8",
+    "real/spark_dataframe_diario.csv": "4718c7f0d5cc5dafb96908578903b90da091f24a79292f156ba7380616c887f4",
+    "real/spark_sql_diario.csv": "7099ea756e288c62323ac24d9abe52e610bc2e95cfb50f4c1654f7df8f6cf7cb",
+    "real/tempos.json": "bee65a5b7b0e672f8125fe6b1ea4b8229f7996be26ef37666b89b589a4928c1d"
+  }
+}

@@ -1,0 +1,5 @@
+dia,horas_esperadas,horas_presentes,horas_validas,horas_nulas,horas_ausentes,cobertura,geracao_media_mwmed,geracao_min_mwmed,geracao_max_mwmed,qualidade
+2026-01-01,24,3,2,1,21,0.08333333333333333,6.0,0.0,12.0,parcial
+2026-01-02,24,0,0,0,24,0.0,,,,sem_dados
+2026-01-03,24,24,0,24,0,0.0,,,,sem_dados
+2026-01-04,24,24,24,0,0,1.0,10.0,10.0,10.0,completo

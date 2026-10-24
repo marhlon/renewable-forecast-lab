@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "separate_server_and_client_processes": true,
+  "module_cli_checked": true,
+  "default_input_output_paths_checked": true,
+  "valid_http_status": 200,
+  "invalid_http_status": 422,
+  "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+  "selected_policy_id": "CJU_BA5EIGT-h24-d2-drop22p77-cap120-v1",
+  "source_forecast_origin": "2026-07-11 06:00:00+00:00",
+  "estimator_executed": false,
+  "scope": "historical probability replay"
+}

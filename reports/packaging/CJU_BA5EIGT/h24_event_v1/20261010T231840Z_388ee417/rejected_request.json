@@ -1,0 +1,6 @@
+{
+  "status_code": 422,
+  "response": {
+    "detail": "Features incompatíveis. Ausentes: ['lag_1h']; adicionais: []."
+  }
+}

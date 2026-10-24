@@ -1,0 +1,20 @@
+{
+  "schema": "renewcast-client-contract-v1",
+  "conjunto": "CJU_BA5EIGT",
+  "fixed_response": {
+    "mode": "development_inference",
+    "model_id": "CJU_BA5EIGT-h24-event-7ab0a5cbc45a",
+    "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+    "manifest_sha256": "214dcfc273dca9b6f363a428738a112ad37f3058043ef4aa3b1bea5ebbe7bfe4",
+    "policy_id": "CJU_BA5EIGT-h24-d2-drop22p77-cap120-v1",
+    "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+    "method": "hgb_weather_classifier",
+    "drop_threshold_mwmed": 22.77,
+    "threshold": 0.5,
+    "feature_count": 32,
+    "estimator_executed": true,
+    "model_retrained": false,
+    "capacity_enforced_at_runtime": false,
+    "availability_is_assumed": true
+  }
+}

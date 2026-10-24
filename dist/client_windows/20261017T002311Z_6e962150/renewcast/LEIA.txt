@@ -1,0 +1,9 @@
+Cliente Renewcast de desenvolvimento. Copie a pasta inteira, incluindo _internal.
+Nao precisa de Conda/Python instalado. Precisa de API local ativa.
+Exemplo (terminal nesta pasta, API na porta 8000):
+.\renewcast.exe --url http://127.0.0.1:8000 --request example_request.json --contract contract.json --output consulta_001.json --presentation-mode historical_replay
+Lancador: .\Consultar_Renewcast.ps1 -Request .\example_request.json -Mode historical_replay
+Use -Mode operational para aplicar a regra temporal com o relogio real.
+Cada consulta usa um arquivo de saida novo. Codigos: 0=decisao, 2=rejeicao HTTP, 3=indisponivel, 4=resposta incompativel, 5=entrada local invalida, 7=apresentacao bloqueada. O lancador reserva 6 para falha propria.
+O pedido de exemplo e historico; operational deve bloquea-lo quando o alvo passou.
+0 com alarm=false nao e o mesmo que indisponivel. Sem nova aprovacao operacional.

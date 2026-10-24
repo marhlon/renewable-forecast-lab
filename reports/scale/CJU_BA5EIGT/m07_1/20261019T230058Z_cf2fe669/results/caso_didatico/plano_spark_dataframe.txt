@@ -1,0 +1,83 @@
+== Physical Plan ==
+TakeOrderedAndProject (14)
++- * Project (13)
+   +- * Project (12)
+      +- * BroadcastHashJoin LeftOuter BuildRight (11)
+         :- * Project (2)
+         :  +- * Range (1)
+         +- BroadcastExchange (10)
+            +- * HashAggregate (9)
+               +- Exchange (8)
+                  +- * HashAggregate (7)
+                     +- * Project (6)
+                        +- * Filter (5)
+                           +- * ColumnarToRow (4)
+                              +- Scan parquet  (3)
+
+
+(1) Range [codegen id : 3]
+Output [1]: [id#109L]
+Arguments: Range (0, 4, step=1, splits=Some(2))
+
+(2) Project [codegen id : 3]
+Output [1]: [date_add(2026-01-01, cast(id#109L as int)) AS dia#110]
+Input [1]: [id#109L]
+
+(3) Scan parquet 
+Output [2]: [din_instante#107, val_geracao#108]
+Batched: true
+Location: InMemoryFileIndex [file:/output/results/caso_normalizado.parquet]
+ReadSchema: struct<din_instante:timestamp_ntz,val_geracao:double>
+
+(4) ColumnarToRow [codegen id : 1]
+Input [2]: [din_instante#107, val_geracao#108]
+
+(5) Filter [codegen id : 1]
+Input [2]: [din_instante#107, val_geracao#108]
+Condition : isnotnull(cast(din_instante#107 as date))
+
+(6) Project [codegen id : 1]
+Output [2]: [val_geracao#108, cast(din_instante#107 as date) AS dia#112]
+Input [2]: [din_instante#107, val_geracao#108]
+
+(7) HashAggregate [codegen id : 1]
+Input [2]: [val_geracao#108, dia#112]
+Keys [1]: [dia#112]
+Functions [5]: [partial_count(1), partial_count(val_geracao#108), partial_avg(val_geracao#108), partial_min(val_geracao#108), partial_max(val_geracao#108)]
+Aggregate Attributes [6]: [count#132L, count#133L, sum#134, count#135L, min#136, max#137]
+Results [7]: [dia#112, count#138L, count#139L, sum#140, count#141L, min#142, max#143]
+
+(8) Exchange
+Input [7]: [dia#112, count#138L, count#139L, sum#140, count#141L, min#142, max#143]
+Arguments: hashpartitioning(dia#112, 2), ENSURE_REQUIREMENTS, [plan_id=341]
+
+(9) HashAggregate [codegen id : 2]
+Input [7]: [dia#112, count#138L, count#139L, sum#140, count#141L, min#142, max#143]
+Keys [1]: [dia#112]
+Functions [5]: [count(1), count(val_geracao#108), avg(val_geracao#108), min(val_geracao#108), max(val_geracao#108)]
+Aggregate Attributes [5]: [count(1)#121L, count(val_geracao#108)#122L, avg(val_geracao#108)#123, min(val_geracao#108)#124, max(val_geracao#108)#125]
+Results [6]: [dia#112, count(1)#121L AS horas_presentes#113L, count(val_geracao#108)#122L AS horas_validas#114L, avg(val_geracao#108)#123 AS geracao_media_mwmed#115, min(val_geracao#108)#124 AS geracao_min_mwmed#116, max(val_geracao#108)#125 AS geracao_max_mwmed#117]
+
+(10) BroadcastExchange
+Input [6]: [dia#112, horas_presentes#113L, horas_validas#114L, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+Arguments: HashedRelationBroadcastMode(List(input[0, date, true]),false), [plan_id=345]
+
+(11) BroadcastHashJoin [codegen id : 3]
+Left keys [1]: [dia#110]
+Right keys [1]: [dia#112]
+Join type: LeftOuter
+Join condition: None
+
+(12) Project [codegen id : 3]
+Output [6]: [dia#110, coalesce(horas_presentes#113L, 0) AS horas_presentes#126L, coalesce(horas_validas#114L, 0) AS horas_validas#127L, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+Input [7]: [dia#110, dia#112, horas_presentes#113L, horas_validas#114L, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+
+(13) Project [codegen id : 3]
+Output [10]: [dia#110, 24 AS horas_esperadas#128, horas_presentes#126L, horas_validas#127L, (horas_presentes#126L - horas_validas#127L) AS horas_nulas#129L, (24 - horas_presentes#126L) AS horas_ausentes#130L, (cast(horas_validas#127L as double) / 24.0) AS cobertura#131, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+Input [6]: [dia#110, horas_presentes#126L, horas_validas#127L, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+
+(14) TakeOrderedAndProject
+Input [10]: [dia#110, horas_esperadas#128, horas_presentes#126L, horas_validas#127L, horas_nulas#129L, horas_ausentes#130L, cobertura#131, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+Arguments: 5, [dia#110 ASC NULLS FIRST], [dia#110, horas_esperadas#128, horas_presentes#126L, horas_validas#127L, horas_nulas#129L, horas_ausentes#130L, cobertura#131, geracao_media_mwmed#115, geracao_min_mwmed#116, geracao_max_mwmed#117]
+
+

@@ -1,0 +1,116 @@
+{
+  "schema": "renewcast-e95-professor-v1",
+  "verified": true,
+  "scope": "Native Linux execution of PySpark/DuckDB on explicitly synthetic data only",
+  "real_student_parquet_available": false,
+  "docker_available_to_professor": false,
+  "windows_controller_executed": false,
+  "controller_python_syntax_checked": true,
+  "runtime": {
+    "python": "3.12.14",
+    "pyspark": "4.0.1",
+    "duckdb": "1.4.1",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "java_version": "openjdk version \"17.0.20\" 2026-07-21\nOpenJDK Runtime Environment (build 17.0.20+8-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20+8-1-24.04-Ubuntu, mixed mode, sharing)"
+  },
+  "main_fixture_rows": 8760,
+  "main_fixture_days": 365,
+  "guided_shuffle_partitions": 2,
+  "teacher_solution_shuffle_partitions": 4,
+  "guided_checks": [
+    {
+      "comparison": "duckdb_vs_spark_dataframe",
+      "days": 365,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    }
+  ],
+  "teacher_solution_checks": [
+    {
+      "comparison": "duckdb_vs_spark_dataframe",
+      "days": 365,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "duckdb_vs_spark_sql_autoral",
+      "days": 365,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "classificacao_cobertura",
+      "passed": true,
+      "days": 365
+    }
+  ],
+  "synthetic_edge_checks": [
+    {
+      "comparison": "duckdb_vs_spark_dataframe",
+      "days": 4,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "duckdb_vs_spark_sql_autoral",
+      "days": 4,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "classificacao_cobertura",
+      "passed": true,
+      "days": 4
+    }
+  ],
+  "manual_edge_case": {
+    "dates": 4,
+    "rows": 51,
+    "zero_is_valid": true,
+    "missing_day_preserved": true,
+    "null_day_distinguished": true
+  },
+  "invalid_inputs": [
+    {
+      "case": "duplicate",
+      "rejected": true,
+      "reason": "Entrada inválida: linhas=2, timestamps nulos=0, chaves repetidas=1, fora da hora=0, geração não finita=0."
+    },
+    {
+      "case": "null_timestamp",
+      "rejected": true,
+      "reason": "Entrada inválida: linhas=1, timestamps nulos=1, chaves repetidas=0, fora da hora=0, geração não finita=0."
+    },
+    {
+      "case": "off_hour",
+      "rejected": true,
+      "reason": "Entrada inválida: linhas=1, timestamps nulos=0, chaves repetidas=0, fora da hora=1, geração não finita=0."
+    },
+    {
+      "case": "infinite",
+      "rejected": true,
+      "reason": "Entrada inválida: linhas=1, timestamps nulos=0, chaves repetidas=0, fora da hora=0, geração não finita=1."
+    },
+    {
+      "case": "timezone",
+      "rejected": true,
+      "reason": "Esta unidade espera timestamp sem fuso, já normalizado. Recebido: TIMESTAMP WITH TIME ZONE. Não será feita conversão implícita."
+    }
+  ],
+  "source_file_hash_preserved": true,
+  "no_model_training": true,
+  "files_sha256": {
+    "infra/m07_spark/requirements.txt": "384d1fddd5db2ee338705f9ac4c3860434291fc9c473b4639e0b6f1ff2a56b57",
+    "notebooks/transformacao_spark.py": "0492c01ce0721d30197a101b29088fba185c121abce933e8b9c136ffb3045607",
+    "scripts/executar_m07_spark.py": "95d1ef35917a400398baa0f62552644544ebb2d4090046c608688568fa0242c0",
+    "tools/m07_transformacao.py": "6ab42d814c3492a13d5ab3891175e2534330a32a4e7daf64b9897170d0c355fc"
+  },
+  "guided_receipt_sha256": "d47d0970b7fd0d750ce49853f3594cc2c86a5e166cdbdc7ffb56e924a55424e0",
+  "teacher_solution_receipt_sha256": "2701c0be434cd32c2d4fc610eb071689a63521b1fc2e961f9e412e8193ca23ef",
+  "next_validation": "Student executes Docker controller on the existing ONS Parquet, then implements SQL and PySpark classification."
+}

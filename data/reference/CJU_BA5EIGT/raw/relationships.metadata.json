@@ -1,0 +1,9 @@
+{
+  "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/usina_conjunto/RELACIONAMENTO_USINA_CONJUNTO.csv",
+  "http_status": 200,
+  "fetched_at_utc": "2026-09-22T21:28:05.056568+00:00",
+  "http_last_modified": "Tue, 22 Sep 2026 15:05:08 GMT",
+  "etag": "\"5abf817f18ead81175f209f8ab17ea09\"",
+  "sha256": "052776ef1c78beebf0d8c1947d4e3cdec5d5bb6c0587f8613be6714a8572b689",
+  "bytes": 336323
+}

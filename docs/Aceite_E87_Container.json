@@ -1,0 +1,51 @@
+{
+  "evidence": "E87",
+  "date": "2026-10-13",
+  "scope": "Audit of nine student attachments, cross-checked against prior Windows evidence; no Docker execution by teacher",
+  "run_id": "20261013T185650Z_ffc01dd8",
+  "verification_sha256": "2680b327608d12e1d5340be81020102454eefe80b9aa797b74a5439a46fa5dea",
+  "source_release_id": "20261010T231817Z_2aeba29a",
+  "context_id": "20261010T231817Z_2aeba29a_01430e3a",
+  "checks": {
+    "environment.json": true,
+    "image.json": true,
+    "pipeline.log": true,
+    "rejected_request.json": true,
+    "requirements.linux.lock": true,
+    "response.json": true,
+    "server.log": true,
+    "pointer": true,
+    "windows_linux_dependencies_equal": true,
+    "entire_response_equal": true,
+    "image_id": true,
+    "image_size": true,
+    "controller": true,
+    "model_identity": true,
+    "policy_identity": true
+  },
+  "lock_versions_match_environment": true,
+  "dependency_count": 26,
+  "python": "3.12.13",
+  "platform": "linux/amd64",
+  "image_id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "image_size_bytes": 228996849,
+  "image_size_mib": 218.38841342926025,
+  "base_image_digest": "python@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "reference_probability": 0.20465385372296466,
+  "container_probability": 0.20465385372296466,
+  "absolute_difference": 0.0,
+  "http_statuses": [
+    200,
+    422
+  ],
+  "accepted": "Compatibility of this artifact, one request and the evaluated environments",
+  "not_established": [
+    "invariance on every platform or every request",
+    "load capacity",
+    "remote CI execution",
+    "production approval"
+  ],
+  "authorship": "Correct distinction of source artifacts and platform-specific wheels; universal guarantee requires correction. New concurrency lesson may proceed."
+}

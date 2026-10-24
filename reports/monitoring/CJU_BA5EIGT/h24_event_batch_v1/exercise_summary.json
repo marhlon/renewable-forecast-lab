@@ -1,0 +1,7 @@
+{
+  "normal": "collect_evidence",
+  "missing_observation": "investigate_data",
+  "changed_probability": "repair_record",
+  "missing_assessment": "repair_record",
+  "original_db_unchanged": true
+}

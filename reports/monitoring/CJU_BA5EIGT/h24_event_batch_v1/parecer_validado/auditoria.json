@@ -1,0 +1,85 @@
+{
+  "audit_passed": true,
+  "as_of": "2026-08-02T07:00:00Z",
+  "absolute_tolerance": 1e-09,
+  "inputs": {
+    "ledger": {
+      "path": "C:\\renewable-forecast-lab\\reports\\service\\CJU_BA5EIGT\\h24_event_batch_v1\\ledger.sqlite",
+      "sha256": "0c47a7ae86d2c3fadcb98a15ca24438e7330621f5c76c114428401e686d9b1f9"
+    },
+    "manifest": {
+      "path": "C:\\renewable-forecast-lab\\models\\CJU_BA5EIGT\\h24_event_batch_v1\\manifest.json",
+      "sha256": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7"
+    },
+    "normal": {
+      "path": "C:\\renewable-forecast-lab\\reports\\monitoring\\CJU_BA5EIGT\\h24_event_batch_v1\\normal\\monitor.json",
+      "sha256": "e749ebc3e10190d62f2eee010a1dd9802504fea10147b5210ece6feedfcf29e4"
+    },
+    "missing_observation": {
+      "path": "C:\\renewable-forecast-lab\\reports\\monitoring\\CJU_BA5EIGT\\h24_event_batch_v1\\missing_observation\\monitor.json",
+      "sha256": "bf5c8a39ab7081353b6ced71b1919ce7cac2301f669822428fa8cc3c85e81654"
+    },
+    "changed_probability": {
+      "path": "C:\\renewable-forecast-lab\\reports\\monitoring\\CJU_BA5EIGT\\h24_event_batch_v1\\changed_probability\\monitor.json",
+      "sha256": "7a3fb780009d524f095793ab15f8ae85dc4ad60df08efee32b8db9c54e5564d7"
+    },
+    "missing_assessment": {
+      "path": "C:\\renewable-forecast-lab\\reports\\monitoring\\CJU_BA5EIGT\\h24_event_batch_v1\\missing_assessment\\monitor.json",
+      "sha256": "cd192524af17f161fd307fc7df9584dce9bd56f2d420400585c6db9470abfa02"
+    }
+  },
+  "model_id": "CJU_BA5EIGT-h24-event-8ecd88cd427a",
+  "model_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+  "training_events": 168,
+  "training_rows": 694,
+  "metrics": {
+    "observed": 24,
+    "brier": 0.13260301577839723,
+    "baseline_brier": 0.18756280676693604,
+    "baseline_probability": 0.2420749279538905,
+    "brier_skill": 0.2930207322863929
+  },
+  "comparisons": [
+    {
+      "metric": "observed",
+      "recalculated": 24,
+      "reported": 24,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "metric": "brier",
+      "recalculated": 0.13260301577839723,
+      "reported": 0.13260301577839723,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "metric": "baseline_brier",
+      "recalculated": 0.18756280676693604,
+      "reported": 0.187562806766936,
+      "absolute_difference": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "metric": "baseline_probability",
+      "recalculated": 0.2420749279538905,
+      "reported": 0.2420749279538905,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "metric": "brier_skill",
+      "recalculated": 0.2930207322863929,
+      "reported": 0.2930207322863928,
+      "absolute_difference": 1.1102230246251565e-16,
+      "passed": true
+    }
+  ],
+  "input_hashes_unchanged": true,
+  "inspection_code_sha256": "14291aeaefd7c23802064a0f02c289670b0ab38e207bf3779fe831a82b521d57",
+  "synthetic_fallback_used": false,
+  "estimator_executed": false,
+  "production_approved": false,
+  "scope": "Independent metric calculation and exported scenario comparison; historical development batch."
+}

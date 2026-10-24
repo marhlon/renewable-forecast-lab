@@ -1,0 +1,1271 @@
+{
+  "release": "2026.10.02-interval-calibration-1",
+  "created_at_utc": "2026-10-02T22:43:09.170037+00:00",
+  "scope": "exploratory chronological development; not an independent holdout",
+  "source_frame_sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+  "source_metadata_sha256": "41ece2bdde847478f3da0740b9459f8e48ab71d10c4a7df6e70a1f28104c57d6",
+  "source_dataset": {
+    "created_at_utc": "2026-10-01T20:29:19.838630+00:00",
+    "conjunto": "CJU_BA5EIGT",
+    "generation_entity_evidence": "declared_by_cli",
+    "horizon_hours": 24,
+    "generation_timezone_hypothesis": "America/Sao_Paulo",
+    "generation_timezone_verified": false,
+    "generation_interval_semantics": "original_reference_label; interval_start_or_end_unverified",
+    "availability_delay_hours": 2,
+    "generation_availability_is_assumed": true,
+    "calendar_timezone": "America/Sao_Paulo",
+    "calendar_reference": "target_time",
+    "join_timezone": "UTC",
+    "join_keys": [
+      "forecast_origin",
+      "target_time"
+    ],
+    "join_type": "left; one_to_one; weather_origins_preserved",
+    "generation_rows_read": 8760,
+    "rows": 744,
+    "matched_generation_rows": 744,
+    "complete_rows": 744,
+    "forecast_origin_min": "2026-07-01T06:00:00+00:00",
+    "forecast_origin_max": "2026-08-01T05:00:00+00:00",
+    "historical_feature_columns": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_6h",
+      "lag_12h",
+      "lag_24h",
+      "lag_48h",
+      "lag_168h",
+      "rolling_mean_6h",
+      "rolling_std_6h",
+      "rolling_mean_24h",
+      "rolling_std_24h",
+      "rolling_mean_168h",
+      "rolling_std_168h",
+      "hour_sin_1",
+      "hour_cos_1",
+      "hour_sin_2",
+      "hour_cos_2",
+      "hour_sin_3",
+      "hour_cos_3",
+      "hour_sin_4",
+      "hour_cos_4",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos",
+      "recent_delta_1h"
+    ],
+    "weather_feature_columns": [
+      "wind_speed_mean_ms",
+      "wind_speed_spatial_std_ms",
+      "wind_u_mean_ms",
+      "wind_v_mean_ms",
+      "wind_speed_cubed_mean_m3s3"
+    ],
+    "model_feature_columns": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_6h",
+      "lag_12h",
+      "lag_24h",
+      "lag_48h",
+      "lag_168h",
+      "rolling_mean_6h",
+      "rolling_std_6h",
+      "rolling_mean_24h",
+      "rolling_std_24h",
+      "rolling_mean_168h",
+      "rolling_std_168h",
+      "hour_sin_1",
+      "hour_cos_1",
+      "hour_sin_2",
+      "hour_cos_2",
+      "hour_sin_3",
+      "hour_cos_3",
+      "hour_sin_4",
+      "hour_cos_4",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos",
+      "recent_delta_1h",
+      "wind_speed_mean_ms",
+      "wind_speed_spatial_std_ms",
+      "wind_u_mean_ms",
+      "wind_v_mean_ms",
+      "wind_speed_cubed_mean_m3s3"
+    ],
+    "target_column": "target_generation",
+    "training_performed": false,
+    "generation_file_sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+    "weather_csv_sha256": "2df7b2f43937d24a2557c7793592f46b7a7759d682ab9df80f5ed7b7a62b0065",
+    "weather_metadata_sha256": "0cfcfc27bb9571ebf5cf1b601c8e29536a081fd94ca5d9414e1f4f10e50234f7",
+    "code_sha256": "491f6c3ea8ffbdc1729d6a25c8aa3da8132f00892813d93a7796d7ad12a840c9",
+    "generation_features_code_sha256": "de2f3e129713c348a7cbc7f00d6894df3dc048fecc3366364e0d2c93a8c60233",
+    "generation_supervised_code_sha256": "e5957eb87bee9af6c4e4fcc79cc67246e1ac7d5744e6c4fff27150e8ea054111",
+    "output_sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+    "source_weather": {
+      "created_at_utc": "2026-10-01T20:29:16.522083+00:00",
+      "input_csv_sha256": "51db80d4ba30d2008924e007ca69d5fcc2205b20b354c75289cf58bd3c10763b",
+      "input_metadata_sha256": "7c8fe9dc38918ac0c18f6b7bb979946dac3c7905eb63a1e8286ee57ca336d89d",
+      "code_sha256": "de95c4e5df99b5be8843f9bebf1664ed42368640329dd6d8b9c194741a86bd61",
+      "output_sha256": "2df7b2f43937d24a2557c7793592f46b7a7759d682ab9df80f5ed7b7a62b0065",
+      "source_selection": {
+        "created_at_utc": "2026-10-01T20:29:11.907970+00:00",
+        "horizon_hours": 24,
+        "origin_start": "2026-07-01T06:00:00+00:00",
+        "origin_end_inclusive": "2026-08-01T05:00:00+00:00",
+        "origins": 744,
+        "decision_rows": 11160,
+        "selected_rows": 11160,
+        "policy": "valid_time == origin + horizon; available_at <= origin; latest eligible run_time",
+        "historical_availability_verified": false,
+        "generation_timezone_verified": false,
+        "sources": [
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260701T0000Z",
+            "weather_run_time": "2026-07-01T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "eb986434f2d7d9b0cbba86c1e86f7fb8846efb13f188423f0f96634368f79254",
+            "normalized_csv_sha256": "9860abc7bb51ed2d26de2e1b93db512d6135ffb9c4f8ff727b1d30270e07dccf",
+            "metadata_sha256": "e6cc303fee7e8fc204d39aed051f72e1656acd89a8bfcbd293b7c581d6c5fd23"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260701T0600Z",
+            "weather_run_time": "2026-07-01T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1f59e7f55bdb1fbd08e52404b25c1f921211b975cc287cdc84ab109e52eac627",
+            "normalized_csv_sha256": "c015aa21ec164dc34eae41659ded026fc679040a16f7a6f5908e9e78f2b3d67d",
+            "metadata_sha256": "d89ae1297095e62ce8324b168051aece70bf45f8214a87fc4966d98c2195b229"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260701T1200Z",
+            "weather_run_time": "2026-07-01T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b9479167d97ce05e70a08d0b78bbd28912936d785a7fc2b1e9462cf24ace0e5c",
+            "normalized_csv_sha256": "83d1196b7459c8ce581dcd56ba0ae8ae0c07e38969f5e8b2207138fb5335beba",
+            "metadata_sha256": "29efeb2c61bf4f085288840bd6ad9329a1a88cee42d601039a687b3934102aa2"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260701T1800Z",
+            "weather_run_time": "2026-07-01T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "495cde52fd47b9c83e2d8e2ad596fb9af0fa4903501c4a86dce7eeec7e9c44d0",
+            "normalized_csv_sha256": "d5b3d07f2c70cfdfbde01f4b8829ba6e1001d67f1fde7139b66f247a9f20df0a",
+            "metadata_sha256": "6b723ff7feda0721aac6b6890b3a663a71e933dcfc6abba902edf7996ab578db"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260702T0000Z",
+            "weather_run_time": "2026-07-02T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c861a59f9b8b9e8f76b376c806d8f8a276a0fe333bf76f1737ab6e7b120b4bff",
+            "normalized_csv_sha256": "d40c920fc82d62dcea375a41d668cdabddb20366b1eb768de59eca71e2500882",
+            "metadata_sha256": "07c2b3982f62f4f7080f291086f07f7179e8ad34391d026e00fe50cdf11acfe1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260702T0600Z",
+            "weather_run_time": "2026-07-02T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b7ac8b30354a29b413acb760d520976c682e6465eb2e4cc33716c343263667ad",
+            "normalized_csv_sha256": "538bbfd8f25e3830d501e75ab3533c2a31dd1f8f2486bed1c45bdcb2dead09fa",
+            "metadata_sha256": "39d4a6e54c028e10d8a470b2658ac3dbab3dbcb3c764b22f3bd121c996db5f5c"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260702T1200Z",
+            "weather_run_time": "2026-07-02T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "e6e9ac8c9f09cf79e3a86f28b26a08739a470cacc8d163fec4d9ca1cda68fdaa",
+            "normalized_csv_sha256": "e411753af5a9bb4a11cd3f0d8bb4aac5e895271e18b09b22df0fad0423eaf357",
+            "metadata_sha256": "c57dfa9a68b257cd04fd6c54505be6112b1f2c3434e840cf838c27fe6bd79b22"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260702T1800Z",
+            "weather_run_time": "2026-07-02T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c70b02358ad2b2aa190664823d875c6d61f8bc81b322ec550a130cf5b4a0c378",
+            "normalized_csv_sha256": "29688f6cb6192be8b6fed7acd19890bfb1788c3fbaa72ca459a6b18700c71f23",
+            "metadata_sha256": "8cd6df543c46094f08ee27adeb6387bc62648f0e8d3bdf95f88bb9c868514130"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260703T0000Z",
+            "weather_run_time": "2026-07-03T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0573b444cf3512117c9428ba90ba2a6aa15b07793c8411d0fc20845564ab5c46",
+            "normalized_csv_sha256": "90416cc2e562f173d72448e3ad626887b892ce979defd5caa6481b5eee0d21f4",
+            "metadata_sha256": "6e1515cfd48430654a720e20c342e07d817bc9e44aef631457da1bf5b47dc957"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260703T0600Z",
+            "weather_run_time": "2026-07-03T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "de4a04ac34baaff1fc3c56d4b154c302959c5a5f21310ea4d43f20adcf342366",
+            "normalized_csv_sha256": "d1d7a8870d8e2e9170583b33bba4984dfaf6791b550c7ef7070506c57367932d",
+            "metadata_sha256": "3ca8dabc60ec5f16bebc64a0c9de6431d06f0e5d51e71f6a8b4a11a274cd71c2"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260703T1200Z",
+            "weather_run_time": "2026-07-03T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "26d4c4e85cb6a0fefb641017508c429863f7ead471c7377413f129283ed53708",
+            "normalized_csv_sha256": "77e7416b263a613f251354696e16fcbcde06806c18e3f2e03df98cedca99ed3f",
+            "metadata_sha256": "640c4c45d093d7ab81c779cf6aa7e904aa7695e2044ac39e2b3516597fae47f9"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260703T1800Z",
+            "weather_run_time": "2026-07-03T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "bad1e5fc73d6d71c8ff471327f24b323f85bc4b5c822ae6bfe6241d6ad0c7f1e",
+            "normalized_csv_sha256": "8753c1a65cd537bcb27cc5702aee9fd4aab27363142192a3d8effcedfba89c61",
+            "metadata_sha256": "c3a3b6123d3aede6391381e93c586cb1c0df63c11475c760bf8860acf502c8cb"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260704T0000Z",
+            "weather_run_time": "2026-07-04T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "f0cb20fef33db58abeb78615537d691963c7539a8f9c23082031c0d00fb8d537",
+            "normalized_csv_sha256": "6a868e6941c55969ce8cb3cfb18bf8ebe4ada35ffb2c52da0f284287e8e66029",
+            "metadata_sha256": "d3449dc168e88eb39324f8f02ca4a77b32aeb12006c33a80456dea08a2437e82"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260704T0600Z",
+            "weather_run_time": "2026-07-04T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "43d7837647bb2f2abf3baef82c6bde9d6e47220cc7f39d76d33d63bf97e42289",
+            "normalized_csv_sha256": "0aec83ed38bae168bbb7c0cad23e5e70173754c645b9eefb8f52b411efe392d1",
+            "metadata_sha256": "edcfd6c7918b6fddd5f7fe538448d22ab1d385afcc5f69f3dc17b9b3ae7a97d1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260704T1200Z",
+            "weather_run_time": "2026-07-04T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "db18cbdb05cf366a71c1974822b9487dd258b90849c58ed0fcbf7fa58507d419",
+            "normalized_csv_sha256": "2eb1d0021878ef105e7da068cf3ac3bfa6276cb3d2b79ef8d87ca0000e18b2a3",
+            "metadata_sha256": "c8c048ff693b3dc6ab332a27d1d21126a12531935dcc04ff30165c57f59a1707"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260704T1800Z",
+            "weather_run_time": "2026-07-04T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "5d859599706cfe5c529c3b9ae31f570c91d72fd9f6c12e635cc458e5461ab7a3",
+            "normalized_csv_sha256": "51e4dc96d6088cb27e9736115688e94469d5a24a3be5d36ad8499e5a59ea0136",
+            "metadata_sha256": "273234eaa016c7f1adf5c3c2a4fe377cc5b55686f9cb13831e6251754fd37446"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260705T0000Z",
+            "weather_run_time": "2026-07-05T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1b99e13093fa1df2aa9c81ad38d7c020e14a98f378a7b225a20072d57d55184c",
+            "normalized_csv_sha256": "a5ffe6ae091d3e29bd9b69ea80b54cea5111933e9d69fb8770a516e00bccad79",
+            "metadata_sha256": "0c1cdc8e9e0a53dca79ca85774b6237ade6271129e793b7379a4694e5307a8c6"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260705T0600Z",
+            "weather_run_time": "2026-07-05T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9b3ff26b5ef44a54557faab2b4a6a24d2091458e806e61841df55e75edf5fa5f",
+            "normalized_csv_sha256": "17e00462b12a428ec771fb8e1d99ef5ed625e8d72f240a067ae746ab262aff33",
+            "metadata_sha256": "16f4819bef9bccbc732945a378feb19a14fc33f1d1086d738ed2b8862b672344"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260705T1200Z",
+            "weather_run_time": "2026-07-05T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c294e9efd223413c0e39340a5fc17179f07066c4d53858cb5e87c5828dbea866",
+            "normalized_csv_sha256": "fe1fdee55082d6860afd51c2442cc589b9ccebf9feb42ebe4e4b190906a289a3",
+            "metadata_sha256": "d3635ad57c83754ec84213d2c968d250442e5ee4948fed05e8c0aa3ea48a2939"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260705T1800Z",
+            "weather_run_time": "2026-07-05T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9c4a0dffcfc3a1b9e24e7efde6542301f3177eefc32fbe6f847993238d730825",
+            "normalized_csv_sha256": "ebcec0cb347cf17dbfbc9a8b09ec0163213853116061f7de546eb525ece46eea",
+            "metadata_sha256": "c4208019869bef0f5266f146515ef885e25e065da14a8af14630482cf06ed9f4"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260706T0000Z",
+            "weather_run_time": "2026-07-06T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9fdf8efd992d7b5d737aceac1e766bd3d6852a75a681fb27d9edca2dd0b7d560",
+            "normalized_csv_sha256": "43238f19687b58bd0a9ba68c32141196e9ac2d4413319e33ef25406d4f2448e8",
+            "metadata_sha256": "1a41c0844cd8f15727430ea9f8199a16af5abf0e03ceabc97e3cad5ae73a2ad5"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260706T0600Z",
+            "weather_run_time": "2026-07-06T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b587296059a38062b0c979b4f654e57ee5c097cdb6251897ea42cf900da600b8",
+            "normalized_csv_sha256": "b361e5ffae798bb2c597cd950c9954836173e7e68c2c750c3074624788eb2a94",
+            "metadata_sha256": "7df8e407c7df8b52bda96502d04ade265603a9152dcfccb1ace1ef2962e8fbc6"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260706T1200Z",
+            "weather_run_time": "2026-07-06T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "299bc7d6b1b4ca13be9df9157aa422789770ce233c48e40b6226ca270a6a7980",
+            "normalized_csv_sha256": "1f89240565ea57488654c0584cc6e1ef9797260fd812e1b3f525b5e89abc5ee7",
+            "metadata_sha256": "aa05d992fd3453eabd099307192421d9adc1b58e6aceb22cfa05a4729bc2f72e"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260706T1800Z",
+            "weather_run_time": "2026-07-06T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0414bd8acc56a654f5b1016014da3ea5140015721a16479d08c66bf4a6093e34",
+            "normalized_csv_sha256": "cd2ad1d957282470da4de6d0c2a8997a1a2f6cf1fac9f14fdf479ccef08770af",
+            "metadata_sha256": "6bee37323f914a9bcb04e10fc0d8930f740c07da448a95201479655d9db20d06"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260707T0000Z",
+            "weather_run_time": "2026-07-07T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "d47c98ff96992a17c63754b6dbcb3dda277bd65688b76dc02558ba638d460fc4",
+            "normalized_csv_sha256": "2fb5b782785c69e94b89a8d4f2c5cb2214e7beff6e6686bc8e08415b86bb3efb",
+            "metadata_sha256": "84860ca058477e2c1e14487b9a22e3964c62cb84fdb521959a8d2433b1a98674"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260707T0600Z",
+            "weather_run_time": "2026-07-07T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "61a156bdba756d271c9f09e2b0924cc4d096aa0056477b37956db451e4b825dc",
+            "normalized_csv_sha256": "5c02e3f3b54c9d7a84bba88b4d5d6e0dc04f0c37ecbd7972c884cafba53ecf5b",
+            "metadata_sha256": "ed1d1c629ad1e99df7faec346b624c5ac17ecb537e4c6d3bd08f72d9e25a3e54"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260707T1200Z",
+            "weather_run_time": "2026-07-07T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "3e26b32d78e557f22b84dd3a0a0da85e06333e0e45d010084e5ee6a861a3dedd",
+            "normalized_csv_sha256": "dde6dd63fabe602f0f935530fa29b89e7a074d6c88b5e9f73f2fe700eb50cfb0",
+            "metadata_sha256": "f33fb0364c26b5699d89748562b0a488503057a8a8d5871d21e1fe7383ce92b4"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260707T1800Z",
+            "weather_run_time": "2026-07-07T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "18acb90e80176421baad5ca77fc37bc5daf300229d82b7e0826e9f9f41b39954",
+            "normalized_csv_sha256": "3c5a7e38290b63f83c1fe5ec18b446a9bb0dd6490bceaf8b971644783ba5d5d8",
+            "metadata_sha256": "360efde1c15e7bf6ef4b0606a7c684238452e57f227b6b18da463bb115bce71b"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260708T0000Z",
+            "weather_run_time": "2026-07-08T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "34cace2ed222742c07658474e1beab605567a5815a0ba76944735f18d95d3886",
+            "normalized_csv_sha256": "0036b92c31bf6def9163504389da4f11a849404fb2dad6a407b9b83155e6a46f",
+            "metadata_sha256": "2fce82d46cba7ce5bda6281882671ccadb54df840701f1db8a877f23fd813367"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260708T0600Z",
+            "weather_run_time": "2026-07-08T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "bfb352e2987a7832604de0e4df7a36ff9ed4ac26f734bcf1a2a4a12ccfecc2bf",
+            "normalized_csv_sha256": "19b0242fbc43bf02819edec55404c1246bf8e2f16e56584df4ce2318571859fa",
+            "metadata_sha256": "b4b0ce7a2c9006e7992e74f29d6b79708ef5f6a373f6366aade3d8e05f22a486"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260708T1200Z",
+            "weather_run_time": "2026-07-08T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "498cc9d9db7de12e25cd5167b1bc40810519fbd5b0574d5df70d9a1eae2ef2eb",
+            "normalized_csv_sha256": "4e7b580668d5df89508b64b5450d001b86849877f9756e004dc06fc5eca7b2dd",
+            "metadata_sha256": "b9bfba8d6d7f08bb4acd6d53470663c1d749573f44c4da750aa17f0d27e3dade"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260708T1800Z",
+            "weather_run_time": "2026-07-08T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "4fd523d9485350f4367d4d8ebf2c93758407cb0dba3136b43203c0e9f0b652a8",
+            "normalized_csv_sha256": "34533b369f372fff785f4acd00983c72054d7fcaa6a53e7bf5c034caa203cd5e",
+            "metadata_sha256": "a588e9b00e735b27edd33e5efbdf7f148ee868aca458c4ce9a79c18d3ebbcb8f"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260709T0000Z",
+            "weather_run_time": "2026-07-09T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "cb3bda7440617c3bd347232e67097f919ab10fd3195b7ba07e58f1a0f77f60cc",
+            "normalized_csv_sha256": "8905c02f121a9aaefe540ea72725392fa8822f2fd68eab5a768099a2801453ac",
+            "metadata_sha256": "92cefc2bc866a988fa6866a7bfea847443c23538ecc846c23d4f08886969e00b"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260709T0600Z",
+            "weather_run_time": "2026-07-09T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "ebd1ed94ee96da98a9e8af5daabe771de7d2d065f49c15b15918af396f266f19",
+            "normalized_csv_sha256": "73826fef45ab2b9a1903d5da2bc52f751d3f307baca3f84667c9837345852a29",
+            "metadata_sha256": "724ce3a45ff41390f32c6030150d5c86a919b0c3d5abfabd3281c54982331be3"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260709T1200Z",
+            "weather_run_time": "2026-07-09T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b8c608091ed6e12aa1d84e321b9a0761529dec5b7fe569236058bb1d3c032f8b",
+            "normalized_csv_sha256": "f5cda0bd08d5535421abd4383424f2fda0b19e7e5098043fbcaf948478eb9c25",
+            "metadata_sha256": "07ae5f2275df8241987485b645d845dd60485aee0224b5ceae827a67cf945d33"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260709T1800Z",
+            "weather_run_time": "2026-07-09T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "071f07c46fb976afa5441e68830bd705e9803c1a35328c3dca8b129f4fbef1eb",
+            "normalized_csv_sha256": "3ada4c3d07d0443a41a0b965fb8fdad20db347ec1a543d61f3c674deab216fc7",
+            "metadata_sha256": "ab59ccb33083d45c1ab23990072d5e3e2c8db7013f39596383e8e6ab6c2c36af"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260710T0000Z",
+            "weather_run_time": "2026-07-10T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "742263b3afab2fd9bf6783ba985e648ceadd63bcf18f0a6843c066fb318cbaca",
+            "normalized_csv_sha256": "81b0753e4ee8302c856b766f2cf8fa5b12d43f06939675e382ce3f198d3b8995",
+            "metadata_sha256": "a0102089709737ac1d081da6bc82b0ab918fb15addb3e838aa6ffc8d58c92a70"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260710T0600Z",
+            "weather_run_time": "2026-07-10T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "4837820a4544e83415947f58c931dbeb243f7dc4236e930fcbf05e2dbf6a2ec1",
+            "normalized_csv_sha256": "57dd5d004c2a375ef4cfa685a266908450e6854f9e1dc07ffd72e6113e7886ce",
+            "metadata_sha256": "6e30236bbace653cc3f5373d4de9fa6d35c7d1ffeae11263f901d431dbde8742"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260710T1200Z",
+            "weather_run_time": "2026-07-10T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "030e8858de994490d5d029f2f2bfc36603fbacd77773251d4c3f1459d26892f8",
+            "normalized_csv_sha256": "ac3861cdf3bb4454ea82dff73ce25e22b8b6a42c83aac9f5547d4222c69f68fd",
+            "metadata_sha256": "29b8feb68ec748f7da3c6f0027eec6f449e7bf9a1944ea4dab18184934ebb06d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260710T1800Z",
+            "weather_run_time": "2026-07-10T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "96670699ec722d8b3f416aa1a38f404ba1e5ff55a9873c2008744c4a9a75e7f5",
+            "normalized_csv_sha256": "2fb79370224e239ce68cc68cb862de1ed793f43a42a7913d14ab82e7658d359a",
+            "metadata_sha256": "14595235bb8d6dd3525398b9b2bea8acd951061b8515c54d031302fce59b3fd1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260711T0000Z",
+            "weather_run_time": "2026-07-11T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "5bc843183e2f8eaa3be9ecb638ee025bcac82379d09c1a58512befc1585fcf41",
+            "normalized_csv_sha256": "d8e74ec78c6465383890ad11ab7be34ee427eb099d40701d84214c688b19343d",
+            "metadata_sha256": "7e823b686e602766f3a1e98640bb74d2a82f2b96aa9901a3febfbe06872fbef7"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260711T0600Z",
+            "weather_run_time": "2026-07-11T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0ba5c7532a8fb4a815c29dc70a4872f22f481de7fd49967d1ef47960c217a0ef",
+            "normalized_csv_sha256": "35b3fb739a925ffd36453e8682aad1eb4d5178c99c323ac2381d77aa5e9822c8",
+            "metadata_sha256": "ec21b7af7df9d7d75f1206d12c85bc8d23147068117994ba51cf6994fb74df14"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260711T1200Z",
+            "weather_run_time": "2026-07-11T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "743f01e1f22915a28a53090e27e490816a56cb6f59f6d924812634b14602426b",
+            "normalized_csv_sha256": "883f50c06a0761eeedbde279532b2cd1d968a021430b723342f9e1e3179a3a84",
+            "metadata_sha256": "70b6e5987f58b170bc532ca6eea68906ef3ea4f144aa36893fd83244d4971500"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260711T1800Z",
+            "weather_run_time": "2026-07-11T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "028db04320749e81d3ba83eb159383f1c28b9ac293684fce105c203c2075863e",
+            "normalized_csv_sha256": "3babb6baf4dc81d2193b604020315087212106c36d0e01ef477970eb416e9faa",
+            "metadata_sha256": "33cdf32a60334a218dd3e79b04acdcc6c90a969169d64b6e0a1a4fa73f29cb06"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260712T0000Z",
+            "weather_run_time": "2026-07-12T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "f533607991acee82b13575a9a1e9c1e65dafd07106fba118543e83ee65b1c534",
+            "normalized_csv_sha256": "ef80aa22b1f02508799bb44eca0b7ea81034c9f388abb98cc66efa5c3137f878",
+            "metadata_sha256": "a412898d63f19c1e5f513ece3dee8d327ebd58b0be0f359770195ce2ad482da5"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260712T0600Z",
+            "weather_run_time": "2026-07-12T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "e1257f3d7bb39994aaca6dab55ac997830d1db72c4dcd546e478a4197a6f34f8",
+            "normalized_csv_sha256": "f3a166c64059b367926da7d8df72cbce3ba30e762cb11a83704ff18087b822fc",
+            "metadata_sha256": "652226e5f378786566d63b6763ddc389b28e55479c74527e1e5a822a1e2dcf84"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260712T1200Z",
+            "weather_run_time": "2026-07-12T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6a53a16dcb84bc56ce3a950ffd2d95cc2cc68ecdbc245a1cf539ab822198ef8d",
+            "normalized_csv_sha256": "af56dd9711b4a20328f2d3a1473f4ad74b2fc49d6c2d1b74f6969c8eb8cb050b",
+            "metadata_sha256": "562a69b67ab888dd2e3924021b239d5dcd73fa73855bec79f30350985fb81ec8"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260712T1800Z",
+            "weather_run_time": "2026-07-12T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "50bb1f8fd3b23fd8f257f6235e2f81b2eddedf9d96a4f741681ed7944f8d4563",
+            "normalized_csv_sha256": "2ca2b24aac8b0186f2ee8bcfd79569842bb89ba5c39ac1dd79fd6b6847263ed7",
+            "metadata_sha256": "59c65efd60fba0fb5eb6595f360cf8b7e867b92d89ee4ef250ed49fbcc0db446"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260713T0000Z",
+            "weather_run_time": "2026-07-13T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "25531ea0ac3a49deb08956120158bae5df9f24d2ce691f74aac009f692255751",
+            "normalized_csv_sha256": "3b0ae1525d248085babf5471205658acf2c01e770287472cd907642570a41507",
+            "metadata_sha256": "7b24662403d5812dc104f28b178b624657ec0558bf6b54f841ce5cb99fff6d5d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260713T0600Z",
+            "weather_run_time": "2026-07-13T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "a2f3957ed670ff6cf80d8241a613b0daad6f5f45744c5a2d692bad987be30a2f",
+            "normalized_csv_sha256": "8dc0a732a11ade2eb4cc9b7b620302f61d6ef1d33ced1dda88c0f6ac774e72ce",
+            "metadata_sha256": "f5df83a8880460b66f94ccf6c0339257123eb48b39891cd2a1959e5f67ea6bd2"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260713T1200Z",
+            "weather_run_time": "2026-07-13T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "3c7ed6d5da33a4d90d886e38d90e644a8f116e65e36ad1a542918ff2ff15ab6f",
+            "normalized_csv_sha256": "0a4443c3abe7cc301d7defdb3ce529c863efda6f81aa1b41deaa5194a358a086",
+            "metadata_sha256": "57042a7acd5a40a455d4ecfa60c9cf6f4cb32d05fcebffa67341b413ad11add0"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260713T1800Z",
+            "weather_run_time": "2026-07-13T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "5f394ae391719bbac29a964497acbfdb958af6d9498caabdf4befba76d923944",
+            "normalized_csv_sha256": "34bd45bbc4ba7c9221922bc2c42890336a28c3be5c0bd8a3f2cdbf129a5b2289",
+            "metadata_sha256": "d637b4fe5e52798dafba5cf0ece1975141ce247ed0ab24fc1a976ccbf0d28bee"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260714T0000Z",
+            "weather_run_time": "2026-07-14T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "448aed1c510f41902f48321276e2b9b06d112e95a88672381da5e552d7c711a4",
+            "normalized_csv_sha256": "e8e1a2f4cee0e31ee166c1c0dbfe8b8825be72bccc89430d86406acb381fe76f",
+            "metadata_sha256": "0149db10a13411afe0fb28022b34420d26686f495adea51efada9e03b5ad2265"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260714T0600Z",
+            "weather_run_time": "2026-07-14T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "88b9470f7ccb5569d998c47f789c3187aeff3c7ce569b5e90c4fb083d66b637f",
+            "normalized_csv_sha256": "e25b5f06ba71050bed4bcaa4966d3b60b5c41bb85ccbd5974606c724842daf1c",
+            "metadata_sha256": "a566fb01fe6a6c7ecdfaee3e2cb64bbe19f096b4799780ea6d842c2b16051578"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260714T1200Z",
+            "weather_run_time": "2026-07-14T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "ca251827d6e35f67d1df619786cbb4066a9bf458a1f1ff9ed25cb3f00aa7c8b1",
+            "normalized_csv_sha256": "8662f024f3662df9fecd122b5902ba336ccacd33a49cf6b1ad399add108eca63",
+            "metadata_sha256": "1112e606ac74d5a69261117d91eccc90e2a4adc2671724a7928de9edfe4785c9"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260714T1800Z",
+            "weather_run_time": "2026-07-14T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "e59795ebbc301934aa446f1eb314f73c559b3e50bc3affed66ea87c63398be29",
+            "normalized_csv_sha256": "bf35412c1300352b19784f82597bf6207026f9801bb6d133ab2905578a3baa72",
+            "metadata_sha256": "2d020decd3bfd45a0e17b779d392fe770d29d92ec388192294a470207eac57f0"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260715T0000Z",
+            "weather_run_time": "2026-07-15T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "2ff066b9bd50a6fcf3e8426087df6fb75f0481446aa29794b5818ca9a9bd37e3",
+            "normalized_csv_sha256": "48c8f41bad7c237e327250af1df13c5bbd64a12ad4c68384104884031e3fa105",
+            "metadata_sha256": "3f94adaf96ba19538371b028766a4faddda66dd28bfffb47e428308de2cdf8de"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260715T0600Z",
+            "weather_run_time": "2026-07-15T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "676b5af457e2936bf1b991e669eaa2e807dbb16efc13d434c7224f415c0e244e",
+            "normalized_csv_sha256": "8c3063bc6a46ccab3eb863dae38e5d609b3e635a47de6d9e1a7836f0e8e37afa",
+            "metadata_sha256": "4674aeacaa9f1b5824d219e2e5c490be583529a19e63b3c42f0da8cd8d2a7f6a"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260715T1200Z",
+            "weather_run_time": "2026-07-15T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0e6f6df8153ea993a75e7bec0b2ab030eaf848143a0f3031dcb7cf12d88c8a7f",
+            "normalized_csv_sha256": "55b1322d160334b964f6cad2e56be3cda0a69f6b8a80ca2bab1e5cc32488daae",
+            "metadata_sha256": "6f1a6f84c4dcf651318085a5f2ee5c63e8a69fa07d9eff54d7e3d03712753d04"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260715T1800Z",
+            "weather_run_time": "2026-07-15T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "99b30e20189fe9d1e413a03852091969218943475831a8de38a7fb233363da53",
+            "normalized_csv_sha256": "f3ce321fd034f9f658f62c1f61fc4a4e1128267a5a4d81184e683f996561751c",
+            "metadata_sha256": "504faad1552e0ab01ee5aaa0031e5beaca10237e0d3171fec51cfd7ca69e6153"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260716T0000Z",
+            "weather_run_time": "2026-07-16T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1e818ba64cde61dd13201f6948bc4a45a378ab2ffc04acb54f3366f59a3c75a0",
+            "normalized_csv_sha256": "0ee32cd5739df0a46a2e8b42416c4a7415c170b3948d9d8016976c8cce16feb9",
+            "metadata_sha256": "39c9db7880e666c1d2750b9969b74f86db477db132c88d532db7e3dbc6abbb82"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260716T0600Z",
+            "weather_run_time": "2026-07-16T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c6615c5b10abe4a3d9f8177c7b4aa5900470327086530e014f5e27b1f986d3f2",
+            "normalized_csv_sha256": "5925c0319471e12a255c76863bb58d7ee2b8ba5d24cbee05ab5d22436bc6ac91",
+            "metadata_sha256": "cb692c53c6c1cb4bc86448080cd0c5727a814e4c15e6e101ea22b9e126c360c7"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260716T1200Z",
+            "weather_run_time": "2026-07-16T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "60533bf8d0b4925c65d1a47c510aca2773296b93759a6b1618022b05827aae9e",
+            "normalized_csv_sha256": "fab5425b976ec8b521fa4bf1298c898928dff418d1bad788df4d539b44d6c59a",
+            "metadata_sha256": "10153c6cb3886f377d92469c977263b686811aa32318469ed3c30e9966a3e9a1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260716T1800Z",
+            "weather_run_time": "2026-07-16T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6ba73f3f54d3858f67ecace047a9886310788c646dc922b5a1f3c6ffa141bb50",
+            "normalized_csv_sha256": "6e46311c8b65f7bb8e75a284cad093c26cffeebba56fbd4131d345f6fcc2d652",
+            "metadata_sha256": "57c06f06d5276160b4b6d6bf6f67155814f84064f3bc4105ad4b4a593e0837ab"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260717T0000Z",
+            "weather_run_time": "2026-07-17T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "153dae1a2abfbddc1cc2f2a7da865c3c7da5224359fdd481d0fefaf5d7d5a8e1",
+            "normalized_csv_sha256": "b3794191987dc0034ad479a403437ae59a0b7942d2a73a7d61640f8bd91c4266",
+            "metadata_sha256": "2e94437a81670829a115e28e264d5d8485921c0bc8b380a96bf621414c227158"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260717T0600Z",
+            "weather_run_time": "2026-07-17T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "74dda578d04932db3b20073088553a53a7981dc766ea379fdb86fa71aed5940f",
+            "normalized_csv_sha256": "3a74caa1a9889c10b1eedea4c25a2dc739d7a1a709c3a20db7cbacd83d355078",
+            "metadata_sha256": "3446cb2c87bc04badd21c6de32a19ed6b3b4b6818c41f4fa05284b7de1cbbd7d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260717T1200Z",
+            "weather_run_time": "2026-07-17T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6ef06de3173db96b39bd5f22d2e63057d54b375e3140275f466617ce743408bf",
+            "normalized_csv_sha256": "086b25610b0997bd866087a4ec76d096b8b72533f40c83ae1c403f46804f55c2",
+            "metadata_sha256": "cfe93e716daf5e0c4cbdefad067fcb8daf6f64e622cde93563930422047a01a9"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260717T1800Z",
+            "weather_run_time": "2026-07-17T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6eaaa65995740683ac544ab9594b7e34f07026986419ab4e4fcaa17184e15995",
+            "normalized_csv_sha256": "c9dbbc5e344c19ee847c90c36037f324dbf89a6e505962194f9afdf4d6448a60",
+            "metadata_sha256": "53ff52932f5c785bd3bedcaba90ec92759c3bc00a16c850c6a0331fb59936175"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260718T0000Z",
+            "weather_run_time": "2026-07-18T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "598e9115b8f9bb87ce77391a8a6b9eadfccd47a695c2462231415e8edd1f7eda",
+            "normalized_csv_sha256": "edd9011c7ea466a3786b134753532482db123381798a7928d21b0ad326534684",
+            "metadata_sha256": "b953f28e73849ff6a361ed62c22a1eed9f847a90a8bf83bbe5b14b850d15d76b"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260718T0600Z",
+            "weather_run_time": "2026-07-18T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "57ee0ba4373cf89f00632589a37e558218b8700474447b7f2baf69a0bce99bf1",
+            "normalized_csv_sha256": "25f62f1d413e5dfb3d9f15cec9c2da8dc6e56fa19266607b0369562c90325fa7",
+            "metadata_sha256": "f0f5b2f556a3dfd5fd4d510eaae050381d9a427628a54d0a0ca6d3d4e3298584"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260718T1200Z",
+            "weather_run_time": "2026-07-18T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "8f11b9a2a8a0a549e1ee0a32ce7caba0611341a4ae0a22326292307ef1469a89",
+            "normalized_csv_sha256": "7e08cdf84a4beac81aecde88d5330049a4cb525ae3d8cd6156fccfe5bacc3e92",
+            "metadata_sha256": "ba2e6e51b5a61830f59204d1895a17a41ea10121fd0483a7c7c43c31921f160d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260718T1800Z",
+            "weather_run_time": "2026-07-18T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6a30cf315ff52e78a14e99f5f743103b909f370c4da1720edfd8fd14806d5345",
+            "normalized_csv_sha256": "9627bbc7db6425adc1242ec6cfdc9b3f2f93f5e89854ce9638313b8f5f7a38ec",
+            "metadata_sha256": "ae60f107d603e1f30557000c85f08ca811d8598e650c35abff75bd461750dba5"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260719T0000Z",
+            "weather_run_time": "2026-07-19T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "218bba96747bafe152141c378ae62849619349ac77f49db31376cdff7dccac55",
+            "normalized_csv_sha256": "38d0ca38804d09e5cdef3e9dfd6d2ceb00a363e2b78b99418479d29937fa3e3b",
+            "metadata_sha256": "3b08515356b8b0990dc4e30cf2a8d6df49d316f9d11813fb9bb295cec4f9f561"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260719T0600Z",
+            "weather_run_time": "2026-07-19T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "5778daf76bd37deb434acadb65b294ccbd46996533d5c86f4d124613a72baf1a",
+            "normalized_csv_sha256": "23d6606f2035cf9c87e46465b041cb7c2a82cecf08759c201a8b6517bf94864a",
+            "metadata_sha256": "3aa6ca8df41036d742971b7857cb1045132fa40944efd8750f04cf777a62036d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260719T1200Z",
+            "weather_run_time": "2026-07-19T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c92ccce4a94d2cbb41779bf39ee5974e372b078e715ec88532af7b9b56a811ef",
+            "normalized_csv_sha256": "037877a680eb99ef9a96801761a39fc5e0a2f54e96dbb09860a7b31fa0526b78",
+            "metadata_sha256": "3b45781b4ef30c7382cf0d484b353d29f7d524486f712bf701b58482da4cd49e"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260719T1800Z",
+            "weather_run_time": "2026-07-19T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "a1e5b7ac1987dc2e34cfca67a2925f9ffdfd7db967565da84a3f87148db81a4d",
+            "normalized_csv_sha256": "a5477d9f885dd241f94b93d7aebe23350b6d82398bb83d222140415a8538d4c8",
+            "metadata_sha256": "e2f18b7c85e8692d30dd1d07cb1f360057fcc26b3e6a87614e80ac8d66cb9781"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260720T0000Z",
+            "weather_run_time": "2026-07-20T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0ae0aa8d53a7961573103c34d8c2a0c4490428cdd55979cc35fc590fb11252a8",
+            "normalized_csv_sha256": "cddf4ea618fd2a8d07223f5d0c555efb971f67d35bb87a093688e6768faf795d",
+            "metadata_sha256": "6d37b1e5542789d554ca9485d139fbb168793f0de8d05f83b8d458e5e0b84bc1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260720T0600Z",
+            "weather_run_time": "2026-07-20T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "fac54f4be9302d335b91fc71a7a71ca67946805e9cf731ad6197b9675e3b9746",
+            "normalized_csv_sha256": "b401649fec45dcb2689804149297615971a54b12bc153e19f5f0a10315b5377b",
+            "metadata_sha256": "46ccda3b24bf45d8208dfc51a8f2bbcc62b8a031a9e76f63c2106f9bc4b7ce51"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260720T1200Z",
+            "weather_run_time": "2026-07-20T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "eadaad53c7fbf5dd9abce6797e23ee83bc3860e307dbcc4a9f434d7db66f82c4",
+            "normalized_csv_sha256": "62c479f64bca7bdb4bd2df3b474d8a34318bfaa2b11a7b09adfabaa3baf4cb15",
+            "metadata_sha256": "773546aca8fbe7c13c54fbca9dd212d8830aec2193931a612d8390f8b42c2aae"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260720T1800Z",
+            "weather_run_time": "2026-07-20T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "e2a6cc9f4712645e5ce400239e57d130ea496b2b6949df3a58cdcbe16eedbe52",
+            "normalized_csv_sha256": "ba49324c901f169637e67269c1006b299498e8df9c1d2d04f778966736f47a23",
+            "metadata_sha256": "7a61a33b5728f63f8ac54da50766b3cefd2288447f3d04d7ef87e8a84863186e"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260721T0000Z",
+            "weather_run_time": "2026-07-21T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c9a72150ddd9b817e4bd77c4d5ce82d4341358572cdcda0bb6da0bb5f55a8913",
+            "normalized_csv_sha256": "75de41a5d62771615e43dd5fa87337366fc9742b0d33dba1dbcede521c0f8b96",
+            "metadata_sha256": "569e36a4e8976e0311e80329424eff43437d57801cc11c1a5d56424e95aead7a"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260721T0600Z",
+            "weather_run_time": "2026-07-21T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0525e37131f482a16a4ad1f949433cc1571b5d8c3fa80189ebc8a3a6280f5402",
+            "normalized_csv_sha256": "0c380fa1b0843945cb3f501b57cc92fe7f89db98d09a9a06fafb9663ac2d36e5",
+            "metadata_sha256": "4b58af44fe6f70ad6ff11575333c3ec592bcc001cbe1abe508cbe10dd5669d2d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260721T1200Z",
+            "weather_run_time": "2026-07-21T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c0021d7f1847e108948712b33716c7ca2b785acfdf19f4f516526722c07c434d",
+            "normalized_csv_sha256": "c5397d327b2c128b5216bce33e11b9f2669b2517ed58d7c1b6293a0bc0a9d763",
+            "metadata_sha256": "4d3dd10c76c249b7fb066a5bb7b03a990b8d61ec5f37a55ef1bbfdc94ce11ecc"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260721T1800Z",
+            "weather_run_time": "2026-07-21T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1d2b3bb387369e049fea2e13cd117e49f771abd59b5f543ba600e652a9b3a6aa",
+            "normalized_csv_sha256": "8fe8ffc1ffc62549f8e73aff5fb5ef50897b12eacbc85d1f9870180c44db6c77",
+            "metadata_sha256": "56811d0492b3ca5d67dbea2e1fffb4978d8cf309bcb83b8a9975c2d633f437a3"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260722T0000Z",
+            "weather_run_time": "2026-07-22T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "5ebcd5d04a2e615be4cef906fe1fdcce72ef55d2b58ce6ddd78884055a48f6d6",
+            "normalized_csv_sha256": "c52f2737212f5619ffd118cfa42ee6139240bf55c3ab387ef0e7b3b2d62f6890",
+            "metadata_sha256": "0ebc061362b07be7a67cd0e69da0e5384d3c57e8a86b32abbd3bcfff1a8c2976"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260722T0600Z",
+            "weather_run_time": "2026-07-22T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "09595f8052190c66807ed4fc2729651a62faae0ed6d2421dcb5c88952d6d2ea0",
+            "normalized_csv_sha256": "48a1449bb24616451545d6cfe89c111d2c2ef94fad0fe768841df9d61047a4fd",
+            "metadata_sha256": "649c8a9092719f2aec75cad9ab8c330974fbc2164b907590a1e87ce0a027fd10"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260722T1200Z",
+            "weather_run_time": "2026-07-22T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "19008adb8c2bba852593387b14dfb9ffd7eca2820e44b3e49b3490d24a572f45",
+            "normalized_csv_sha256": "556a1f4a2fd96de41bbb0eda98648358f82c16a6a7d7a0af028769eebe5f4166",
+            "metadata_sha256": "b59d288aee44738116d8a0944a0b6e7623e168227803e28123c639a2b1f7043d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260722T1800Z",
+            "weather_run_time": "2026-07-22T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "d692bf7d9318c059e3c464f897feff1b28b858e874b3031c9f1668802f3f7c94",
+            "normalized_csv_sha256": "a683106f29764519ebd66afbfcada1c12e404a5338c21a2c3aa463e1311f72b2",
+            "metadata_sha256": "79650dfae3ac47d7849e0a2b2fb9cdbbb7d2d11b685655b4bf116c22f2acfefb"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260723T0000Z",
+            "weather_run_time": "2026-07-23T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "67bf33fc0446915976024fab2cbfd700f16ebb9c7e1c20de1bc784ec810118f4",
+            "normalized_csv_sha256": "9c96f9a4367a691d34bfd5a0c948e17491ffe30e4f7f1b98a155ae4f245fb9fd",
+            "metadata_sha256": "3619e62be43feb2c407febf8144cdcd0473abbb2493c9dcd48903e41a741309f"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260723T0600Z",
+            "weather_run_time": "2026-07-23T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9baf0f6ad6287aa3916589237f1872b700ce30a465e08a8641c1671775c66fb4",
+            "normalized_csv_sha256": "5dc8ab2fb6da1831e9737a1033e2f166ede2e5d025d1ea9b9bf0b01082b73bff",
+            "metadata_sha256": "a6ba5f66add042d66c5f9149d2ca13327028ed7c9e8deb59997349a65366ebd3"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260723T1200Z",
+            "weather_run_time": "2026-07-23T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "ffe7b32a57953b0baf7c6f04e9d6b9b8e3cddcfbee29468badbe75cadc434950",
+            "normalized_csv_sha256": "290a25deb7f7d6770866a52b695298b6d8f7ab3d45ca256fc4e1fc02b5a48bbb",
+            "metadata_sha256": "4094b062776534674d9dc8ab0c2c83cd1582f71e940946643fb713757be21308"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260723T1800Z",
+            "weather_run_time": "2026-07-23T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "88bb593c901883b7954a432b39c7f98cf461cb04ffefe07f8769b55bfb33361a",
+            "normalized_csv_sha256": "0aa594953ec851eb4585e609925337f44df994cc7a5823f9082613c3a7cdaaf3",
+            "metadata_sha256": "da35cdaa629136d3517f726c55fed51777dd16438a6c6977c4854f3ee9740652"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260724T0000Z",
+            "weather_run_time": "2026-07-24T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9214fdc86d29ae64ad85196647d0ffb5d6145a7f36f4c7cff917711069713268",
+            "normalized_csv_sha256": "b2b83a6f077585fb4948390defec8097bf2a64823fec22226c40517af138c891",
+            "metadata_sha256": "a636bbb17f72908bb2d22cdd4b1019af9bbf2e131e78ecb92174eff0714ed2bb"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260724T0600Z",
+            "weather_run_time": "2026-07-24T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "e9b27738f73faa42578fddfa9f08a121e5cf4f3439e3db7d1215ce63ba4ed80e",
+            "normalized_csv_sha256": "079ec579d15337f0e92336c72f920f175e40b7306dd7c0101cc16dc309a1e235",
+            "metadata_sha256": "4fdd69352923e09f4f7f6af487e95d87cbbe725dde115aee10483265f3372090"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260724T1200Z",
+            "weather_run_time": "2026-07-24T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "2753d2b998023abdd74b60ad44ed2f2dc050b3584247b62475fd4250c2004fdb",
+            "normalized_csv_sha256": "8e18195d08c9e2c6778fb9e542390db8ec325e9b25ba734d04f1a3ef4d5828a4",
+            "metadata_sha256": "426b1fae5e2dd782a2ea358acba3777310e5310ca8242561cfbf33df7f444115"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260724T1800Z",
+            "weather_run_time": "2026-07-24T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "57217f75d51726fbd4b90601c4d9422b12a78d2051898e2889bfbbeab8f72629",
+            "normalized_csv_sha256": "5300a88725035c2a039257bb4b9a22f99c2b68ac46598def9196ac8c4a3d5b5c",
+            "metadata_sha256": "e2600f6776138f3a33463d0aa3545031f87317874922200aebe7b68eeb9b0cd7"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260725T0000Z",
+            "weather_run_time": "2026-07-25T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1ea55022a791187b1a3c42992bb9f00a8ef881136d6a2a48210e991ae5f9cf23",
+            "normalized_csv_sha256": "7675895ebb0b0f7b7d289a2c0559cb4a12747d160ad9fac45e0f7c3836545edc",
+            "metadata_sha256": "fbaccb3beeb425f960d4ea083ab7c9c937ad70dcb65cc0a50a7dfd17cded37d8"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260725T0600Z",
+            "weather_run_time": "2026-07-25T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "6bf4750e0bbf763f7631cf0d3dcbc56a2f5129845390f17666a3bf96f9ea5469",
+            "normalized_csv_sha256": "0fb6b9167d6d950481f5a358844086d6659c1b3c19d6904a86c496a4cef8c9d4",
+            "metadata_sha256": "f10fd8c7019a7636e1ac863bd43833fa5cdaae96c4f19e28b4c14dd42dafb28b"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260725T1200Z",
+            "weather_run_time": "2026-07-25T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b5adebbe104fb3c9fa3637c246bb988f4c627c45383882aaeedd3e85f30e79bb",
+            "normalized_csv_sha256": "300818da424c22317f89e3050ce629a8636cc56cb0aa3973ffecbcec1797b665",
+            "metadata_sha256": "692fcc5e70b91da124c4842967f20991b38ee4dca9e2e677f190390f31a1ac3e"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260725T1800Z",
+            "weather_run_time": "2026-07-25T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c5a4617e8a4ecb3cfa603b9c5ef78280a1ebc5d24aee8d31cfc67fe1474a3dfa",
+            "normalized_csv_sha256": "372bb50ce3bffce1e7c69209894d0bab20091de77cf27ff808ae5d73f02c601c",
+            "metadata_sha256": "c14fcb32f3ff6906f028ff33f607edbb87a23ed56261c35d2ec2ec6342177583"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260726T0000Z",
+            "weather_run_time": "2026-07-26T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "8f4a37d47bc3eb3056e266c77f4f1e55a3e4ad680d5bce13ef27d6ed0b2e8d88",
+            "normalized_csv_sha256": "808a554137a391aee9ea4fd89fb68486a40afef1b463d16a61669a15ed8dfdcb",
+            "metadata_sha256": "5a10003dc1a3386c412a0d734346f7e26ad0d58d04d8eccbf441869bfc748f57"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260726T0600Z",
+            "weather_run_time": "2026-07-26T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "567aa81f0fb916dc347b3554f2c9d4081a01111cb27990b84c44c8149a7bd9e8",
+            "normalized_csv_sha256": "9037598bd81497ceff29f94038a8b907c3261d65f06f18d8c69b4648182eae16",
+            "metadata_sha256": "dac9d7a3fdb10f790f596cd88a9fdf5162eecaa5cf3e48d439204dbde2655e69"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260726T1200Z",
+            "weather_run_time": "2026-07-26T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "b68ee1c42e0be9fa3d6298e817c590dbf6aea1f95df0f22f2a25b89064c7e104",
+            "normalized_csv_sha256": "f0d2b32dde7c31b6d379539fcb25ec0d69e1c4f2648cade949bbb682ecc419cb",
+            "metadata_sha256": "d81f7306d4ecfa2eb8e0f0f5340bb07bf001db5aeecd077520dbc35add708116"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260726T1800Z",
+            "weather_run_time": "2026-07-26T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "320586a1b521ffab933b2b79fe4dc753eebab12c6ff7e67d074e67455fe3eed7",
+            "normalized_csv_sha256": "65508735495da621c915ffa391a86c1fe53e46a5a2e6703581ba242ad99339d8",
+            "metadata_sha256": "81402c4be13f79344867442434e198fdba84b021d9a31c42dce86af96a052fa6"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260727T0000Z",
+            "weather_run_time": "2026-07-27T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "192283eac7d96932192576898031cbc58e93bb7029149d77f34b342f51491305",
+            "normalized_csv_sha256": "27446bcf7e17b88d6b58a6e4306bbe3c6b88b8d089eb3ae3d4a9801ed62771fa",
+            "metadata_sha256": "fdeade2a9d54eca0470b7570a6ae611d2b19feedd0982dcbc5b041c9faf655e0"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260727T0600Z",
+            "weather_run_time": "2026-07-27T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "316d86a6b7e009e9dd96c78a830eb5f6b2cc504dd13039a2f83d3690cbf126bc",
+            "normalized_csv_sha256": "c89545df80898c4793ce6cf8b897fe5fb9d5441c9b74b487dcdaff21f6cc0141",
+            "metadata_sha256": "85e4eaff2e5366234e22770c2167774a7f9aaf58fd466b9a42da37e3587af9a7"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260727T1200Z",
+            "weather_run_time": "2026-07-27T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "82f4e15d9fae18d35f1b7f115872a93bbecd7bac3c03ccd9662cf7f6fac5c908",
+            "normalized_csv_sha256": "dbba139f63b6387772f9b046f32565eb4fe08096eaa270b1b47f32088cdd8103",
+            "metadata_sha256": "a3f5d0c03a1c2f0548b066af2889df56032005424c92db852c8d3bc31d23ceca"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260727T1800Z",
+            "weather_run_time": "2026-07-27T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "a17edfcf6ad9356ff83dcea8864b848292e24013fe0eff540b9bd5ef556f25e0",
+            "normalized_csv_sha256": "035b5bee400de273aa3c5dc8890120dd6e3172d47d66ce6f22b15f0daad77f15",
+            "metadata_sha256": "ae75da7be1ca2732b411228c366b7f3f7a2e032924a67868f5d5ed0673bc59f8"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260728T0000Z",
+            "weather_run_time": "2026-07-28T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "dfcf4907027d0e1db9825f71f06558a1d002ccce844faafad1e9a688c4acc98f",
+            "normalized_csv_sha256": "7c5e6ba5facb4467488a0261e6f6a161929b02130ec764e6ca26dd7e75edd954",
+            "metadata_sha256": "967b9215cb65b3bd8eb4df1c541df39f49edc4c07f65753d4b921f4beafb7e20"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260728T0600Z",
+            "weather_run_time": "2026-07-28T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "048162606b21f1edea59ba027487fc69604e496a1f7271bb5496750021da110a",
+            "normalized_csv_sha256": "53e19e512db2851355a4f843d03331332169085e3b775e274b182c4532682a39",
+            "metadata_sha256": "d37422970cd355742800fc8d5741c6018a0d5be606f56a67a92fb48b2b9a8e80"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260728T1200Z",
+            "weather_run_time": "2026-07-28T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "f524ec9e628cdfaf53e5bf32366d42d195006d12533091860fda701a0d95a9dc",
+            "normalized_csv_sha256": "f36183526b5bbe0a18e96830835cc9c24a2457d58f2f06b0ec4d95ee8b639bbb",
+            "metadata_sha256": "e1716a83fa23075c7b165b06338a75e8324ac8b8ce831c4a170ed4a5b7948076"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260728T1800Z",
+            "weather_run_time": "2026-07-28T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "c77fe91e0da9686ea4fa362ca0578b51bac9f646e9a4314eb8e9834ab6d89671",
+            "normalized_csv_sha256": "d37239d505eb7004c7d1cf2a8718e60943b6335ea6a0b46cb6e04eba07c74bed",
+            "metadata_sha256": "ded6aeef123b28942191696ee12b7d39ee72e988f99a0f659347366baca7140a"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260729T0000Z",
+            "weather_run_time": "2026-07-29T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "a946b655591b6b3ce00b41b7aa766e4302d71b7003d05ff285cd09cfbe089c42",
+            "normalized_csv_sha256": "9121884db0eabc71844db32751bcbc7c2974e70c559c99ed24b73d60885b04d4",
+            "metadata_sha256": "149302e897e44a35040fed3dbc83d615796500953b77e446de73887268078f0c"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260729T0600Z",
+            "weather_run_time": "2026-07-29T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "ecf9e4f704bb23e7e7a52a25609894603ac181eea6a3fecb8c91a0b980d15100",
+            "normalized_csv_sha256": "55e9041ea7b96de8c11e5eed35349b25e8ec97d6268cab07aec21a37ccf8fab5",
+            "metadata_sha256": "2049673b1eb5990e129a2f3b152196fbce035e925368d35e663e2a30821eb072"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260729T1200Z",
+            "weather_run_time": "2026-07-29T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "a55dd3a7a4b231e74c1d8f0c867c0ede53b091dc7c42cc030785ba561c24753a",
+            "normalized_csv_sha256": "3b9036f2e4c2701149ffe70fe938f664b8d4cc1ac914730a0e006e85aa03a87c",
+            "metadata_sha256": "2d80f457b058dfc74ba9f1656b2daeef477d7db7d5d0a1359aae686c780dd16d"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260729T1800Z",
+            "weather_run_time": "2026-07-29T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "9505add91ee44841e90000c5e2b3199e867d2eaccfef2184c1b3168a04dd9748",
+            "normalized_csv_sha256": "90abe86b0bd00588ae95f9a7d190309eab88212c7a9516742b9b58a639fde55e",
+            "metadata_sha256": "ceeec502f8113a78b215f36442c1b23e689662e6d977c0125175e1dff65e6e58"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260730T0000Z",
+            "weather_run_time": "2026-07-30T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "600a32562c58dd6fb2f7749496c49d6337027f4aa21f651a9df80433ade43e89",
+            "normalized_csv_sha256": "00266bafe121d2d626c74a24de8c30cd8ddd52e270bc527e38a16da196555b3e",
+            "metadata_sha256": "3bcf47d5d9fc3f15e7862712a4dd749e4aab40b23e7240854e29a9308068d4d2"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260730T0600Z",
+            "weather_run_time": "2026-07-30T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "0d90bf718558680aeaa46fe0d59254ff32d9f611494484d4b54288e316a338c3",
+            "normalized_csv_sha256": "35e494090b798fcc8bab73b661b77a8344bd9c6d31b9a5459612e0f4d8c40b4f",
+            "metadata_sha256": "4e3a45f9fae79d63f642993b0c6dbf78a9ad85cd4cecdd970e9b1f9be4e16809"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260730T1200Z",
+            "weather_run_time": "2026-07-30T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "ff26246570b4e8848529d10e5504cfa79fb119e38df9dd394811dbd56045b8ed",
+            "normalized_csv_sha256": "7dc19bfc20db24a9ee4f96aa1f2703d35c91527232d641dd61d53091719605e9",
+            "metadata_sha256": "42fdfdd128be745aeece86e60f37a071ef85d73a0cba1283495d12e5f743fce1"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260730T1800Z",
+            "weather_run_time": "2026-07-30T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "cb3dca9b0e3adbef4def5a35a041fe2d277582c01ab41dfb9383de71659841d7",
+            "normalized_csv_sha256": "08fd1e297562f55e41e097ea33f1232f64bddb80b3316a0dadd876ef34333210",
+            "metadata_sha256": "80b50ab66420f9ec221ad61b64fbd7b567373f9f1ec6b68f7a7d37d810d008f6"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260731T0000Z",
+            "weather_run_time": "2026-07-31T00:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "94392f3905b0e7ed7f1439b183be32f2445e4c0c41a3969acf028bca4d6eda68",
+            "normalized_csv_sha256": "3ccd41acbb3429d9e483d1898974d2e3d4df3d80a01a92e2467cb13a23976c98",
+            "metadata_sha256": "ecc753ad390fbb16573261d300273b39723dac2c186bb4f10c90fe229dc597ca"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260731T0600Z",
+            "weather_run_time": "2026-07-31T06:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "d3ff22d555db3359e2bd2489bef34253a62a1429885f513673d8c9b90427560b",
+            "normalized_csv_sha256": "d75f65ce094e476b5978a1449ac862b8177c6bc9ee38788652d22b4c1ea288bd",
+            "metadata_sha256": "42a9643a2d4f1b12f04d4f0c664e5fefa51f5c105b621cbd76bf61d651b39317"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260731T1200Z",
+            "weather_run_time": "2026-07-31T12:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "1e33025d9574280a9f1381a20efec454af4377673e3d4ca0706de1c21afe62e5",
+            "normalized_csv_sha256": "c3ef616a8fc7dac866c4306f80729c2a4bc45d8791b2b5e918197aa5cf1cae44",
+            "metadata_sha256": "b23f0295beea6acf25d97f37752090021dc8a815be1cf90decd7018cdc79e459"
+          },
+          {
+            "directory": "C:\\renewable-forecast-lab\\data\\external\\weather\\CJU_BA5EIGT\\gfs_20260731T1800Z",
+            "weather_run_time": "2026-07-31T18:00:00+00:00",
+            "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+            "response_sha256": "3374cbd390e033d55217b27a1d3944a556f774eae60a53f4a77d22b2a432abcf",
+            "normalized_csv_sha256": "222b050d3cacaded05936b28a119a327f3ace6ec53f06d0f11bdf190e131e845",
+            "metadata_sha256": "5581380b34ae99109f667c6d9e86b83bc62a7aa940312866beb60c79d40eaf14"
+          }
+        ],
+        "output_sha256": "51db80d4ba30d2008924e007ca69d5fcc2205b20b354c75289cf58bd3c10763b"
+      },
+      "feature_columns": [
+        "wind_speed_mean_ms",
+        "wind_speed_spatial_std_ms",
+        "wind_u_mean_ms",
+        "wind_v_mean_ms",
+        "wind_speed_cubed_mean_m3s3"
+      ],
+      "wind_height_m": 100,
+      "weighting": "installed_capacity; fixed registry for this sample",
+      "coverage_policy": "all plants and capacity weight sum 1; otherwise NaN features",
+      "spatial_std": "weighted population standard deviation across locations",
+      "wind_speed_cubed_mean_m3s3": "weighted mean of local speed cubed; not electrical power",
+      "rows": 744,
+      "complete_rows": 744
+    }
+  },
+  "code_sha256": "4c31754c6dcdfc9c3176df5b9acc9aa3204b53f75e35b3d324140cf7f7f78efb",
+  "feature_columns": [
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_6h",
+    "lag_12h",
+    "lag_24h",
+    "lag_48h",
+    "lag_168h",
+    "rolling_mean_6h",
+    "rolling_std_6h",
+    "rolling_mean_24h",
+    "rolling_std_24h",
+    "rolling_mean_168h",
+    "rolling_std_168h",
+    "hour_sin_1",
+    "hour_cos_1",
+    "hour_sin_2",
+    "hour_cos_2",
+    "hour_sin_3",
+    "hour_cos_3",
+    "hour_sin_4",
+    "hour_cos_4",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "recent_delta_1h",
+    "wind_speed_mean_ms",
+    "wind_speed_spatial_std_ms",
+    "wind_u_mean_ms",
+    "wind_v_mean_ms",
+    "wind_speed_cubed_mean_m3s3"
+  ],
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "alpha": 0.2,
+  "n_splits": 3,
+  "test_size_hours": 168,
+  "calibration_size_hours": 48,
+  "partition_rule": "last eligible 48 rows by default calibrate; fit labels < first calibration origin; calibration labels < first validation origin",
+  "score": "max(base_p10-y, y-base_p90, 0); expansion-only CQR-inspired variant",
+  "rank": "ceil((n_cal+1)*(1-alpha)); kth order statistic; no interpolation",
+  "prediction_rule": "same fitted models in calibration and validation; no refit; expansion frozen within validation fold",
+  "comparison": "paired raw/expanded bounds from identical models and origins; P50 unchanged; no additional baseline",
+  "bounds_meaning": "central interval target 80%; does not impose 10% error in each tail",
+  "coverage_guarantee": "none claimed: chronological dependent data do not establish CQR exchangeability assumptions",
+  "postprocessing": "floor zero and sort raw quantiles; expanded lower bound floored at zero; nonnegative target domain",
+  "estimator_params_by_quantile": {
+    "0.1": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.03,
+      "loss": "quantile",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": 0.1,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "0.5": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.03,
+      "loss": "quantile",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": 0.5,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "0.9": {
+      "categorical_features": "from_dtype",
+      "early_stopping": false,
+      "interaction_cst": null,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.03,
+      "loss": "quantile",
+      "max_bins": 255,
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_iter": 250,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 20,
+      "monotonic_cst": null,
+      "n_iter_no_change": 10,
+      "quantile": 0.9,
+      "random_state": 42,
+      "scoring": "loss",
+      "tol": 1e-07,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "parameter_origin": "previous exploratory h6 configuration; no new search; July has been inspected",
+  "threads": 2,
+  "model_promotion": false,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "release": "2026.10.04-event-batch-1",
+  "code_sha256": "318791f7c4ef1e245c19e4cc163bfc3f398c745f81d2e13d8675e06d7f2c383a",
+  "model_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+  "manifest_sha256": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "policy": {
+    "schema_version": "1.0",
+    "policy_id": "CJU_BA5EIGT-h24-d2-drop22p77-cap120-v1",
+    "status": "development",
+    "conjunto": "CJU_BA5EIGT",
+    "horizon_hours": 24,
+    "availability_delay_hours": 2,
+    "drop_mw": 22.77,
+    "event_reference": "last_available_generation",
+    "cost_fp": 1.0,
+    "cost_fn": 4.0,
+    "max_alarms_on_selection": 120,
+    "selection_rows": 504,
+    "capacity_enforced_at_runtime": false,
+    "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+    "selected": {
+      "method": "hgb_weather_classifier",
+      "threshold": 0.5,
+      "alarms": 109,
+      "cost_total": 191.0,
+      "precision": 0.6788990825688074,
+      "recall": 0.6548672566371682
+    }
+  },
+  "source_frame_sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+  "origin_start": "2026-07-31T06:00:00Z",
+  "origin_end": "2026-08-01T05:00:00Z",
+  "scope": "historical engineering simulation; retrospective development policy",
+  "availability_is_assumed": true,
+  "independent_performance_evaluation": false,
+  "capacity_enforced_at_runtime": false
+}

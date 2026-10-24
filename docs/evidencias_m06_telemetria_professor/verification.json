@@ -1,0 +1,92 @@
+{
+  "verified": true,
+  "run_id": "e44070f19e1145eabea093d7f9664371",
+  "release": "2026.10.05-http-telemetry-1",
+  "created_at_utc": "2026-10-05T19:24:57.391815+00:00",
+  "requests_excluding_warmup": 45,
+  "warmup_requests": 1,
+  "all_statuses_as_planned": true,
+  "request_id_join": "one_to_one",
+  "all_successful_predictions_equal": true,
+  "input_artifacts_unchanged": true,
+  "model_retrained": false,
+  "network": "loopback_http",
+  "workers": 1,
+  "request_pattern": "sequential repeated historical example; labelled lab faults",
+  "model_sha256": "6c5994903f21018d5025139153502b3dd4a204aacddf6e85c112eed5739ea4ae",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "input_sha256": {
+    "model": "6c5994903f21018d5025139153502b3dd4a204aacddf6e85c112eed5739ea4ae",
+    "manifest": "e18629e5c7f8b1eea8b964b5b2e9e06b7f1bf6538d1eb245f776e8c1b6ab052c",
+    "request": "a999f477557ce17c01537a824144e48d1af942b1fdf1e1111f752d7ccf791822",
+    "policy": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7"
+  },
+  "rules": {
+    "status": "didactic",
+    "p95_success_limit_ms": 250.0,
+    "max_server_error_rate": 0.01,
+    "error_denominator": "2xx + 5xx; 4xx tracked separately",
+    "p95_definition": "linear empirical quantile over successful responses"
+  },
+  "summary": [
+    {
+      "phase": "normal",
+      "requests": 20,
+      "success_2xx": 20,
+      "rejected_4xx": 0,
+      "failed_5xx": 0,
+      "eligible_requests": 20,
+      "server_error_rate": 0.0,
+      "median_success_ms": 3.9229184999999998,
+      "p95_success_ms": 4.79985245,
+      "slow_successes": 0,
+      "p95_client_success_ms": 5.3182815,
+      "action": "within_exercise_rule"
+    },
+    {
+      "phase": "invalid_payload",
+      "requests": 5,
+      "success_2xx": 0,
+      "rejected_4xx": 5,
+      "failed_5xx": 0,
+      "eligible_requests": 0,
+      "server_error_rate": null,
+      "median_success_ms": null,
+      "p95_success_ms": null,
+      "slow_successes": 0,
+      "p95_client_success_ms": null,
+      "action": "inspect_rejections"
+    },
+    {
+      "phase": "incident",
+      "requests": 20,
+      "success_2xx": 18,
+      "rejected_4xx": 0,
+      "failed_5xx": 2,
+      "eligible_requests": 20,
+      "server_error_rate": 0.1,
+      "median_success_ms": 3.6268469999999997,
+      "p95_success_ms": 756.62244305,
+      "slow_successes": 3,
+      "p95_client_success_ms": 757.8630294,
+      "action": "review_service"
+    }
+  ],
+  "output_sha256": {
+    "requests.csv": "804a3cad65abcdc78a5d8956f66595e2160faaffa24252c62396cf6c7c4a2e2a",
+    "summary.csv": "264539cefb9359e15470935f0487a93e3de8f185dd757abb449d3aa4e7a48c83",
+    "server_requests.jsonl": "87bb77a9c63e163a71d1724467d7541ded18fda397ae6f266ec75c6d0403e472",
+    "client_requests.csv": "874b3209a10b9a99d53d68186d1726703b7b6a07650cfcc83dbc701a4ea45d20"
+  },
+  "code_sha256": {
+    "service_exercise": "faf7c82fa87148c63502fbdc97fc555884d9b9c766769da66999f6bdc90696f9",
+    "http_telemetry": "25649d21def338fff59ac3c0c5f4c2451311f0cc64585f2f3976baf845d66330"
+  },
+  "scope": "instrumentation exercise, not throughput benchmark, live shadow, uptime or model-quality evaluation",
+  "teacher_verification": {
+    "actual_http": true,
+    "fit_forbidden": true,
+    "contract_tests_passed": 6,
+    "student_windows_execution": false
+  }
+}

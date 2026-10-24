@@ -1,0 +1,21 @@
+{
+  "source_predictions": "/workspace/scratch/dad22b6607ff/upload/predictions(5).csv",
+  "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+  "inspection_code_sha256": "65a298ab88be9d5171965f0b0eb2141b7e02b29938981139fa1f43b043cb696f",
+  "thresholds": [
+    0.2,
+    0.5
+  ],
+  "cost_fp": 1.0,
+  "cost_fn": 4.0,
+  "cost_unit": "hypothetical relative unit per hourly decision; not currency",
+  "evaluation_scope": "existing exploratory development predictions; no new holdout",
+  "probabilities_unchanged": true,
+  "models_retrained": false,
+  "operational_policy_approved": false,
+  "output_sha256": {
+    "threshold_metrics.csv": "579d1bc7f140daf03b1ca33035318d69e598b54aadb11317b99f74405d07142d",
+    "cost_sensitivity.csv": "27cdb7cccb7bd5351fe161bc31130aff8a1c56eabf0c1fef2e3e33aa135d9105",
+    "hgb_tradeoffs.csv": "3a362c67b8d54e0347ab12b512ce7b2e48c4d4f45802a4ff97ef40d1ef163ae5"
+  }
+}

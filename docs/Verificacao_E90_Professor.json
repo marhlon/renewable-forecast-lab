@@ -1,0 +1,48 @@
+{
+  "evidence": "E90",
+  "checks": [
+    {
+      "case": "valid",
+      "exit_code": 0,
+      "http_status": 200,
+      "state": "no_alarm",
+      "passed": true
+    },
+    {
+      "case": "existing_output_preserved",
+      "passed": true
+    },
+    {
+      "case": "rejected",
+      "exit_code": 2,
+      "http_status": 422,
+      "state": "rejected",
+      "passed": true
+    },
+    {
+      "case": "wrong_identity",
+      "exit_code": 4,
+      "http_status": 200,
+      "state": "invalid_response",
+      "passed": true
+    },
+    {
+      "case": "inconsistent_alarm_rejected",
+      "passed": true
+    },
+    {
+      "case": "unavailable",
+      "exit_code": 3,
+      "http_status": null,
+      "state": "unavailable",
+      "passed": true
+    }
+  ],
+  "windows_executable_built": false,
+  "docker_executed": false,
+  "powershell_executed": false,
+  "model_retrained": false,
+  "model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f",
+  "reference_probability": 0.20179188830321645,
+  "scope": "CLI executed in separate native Python processes with existing Linux HGB replica and fit prohibited. Not the student's model or Windows executable."
+}

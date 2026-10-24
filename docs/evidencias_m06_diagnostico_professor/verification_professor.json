@@ -1,0 +1,21 @@
+{
+  "real_summary_comparisons": 33,
+  "undefined_metrics_preserved": true,
+  "student_incident_ids_correct": 10,
+  "false_zero_rejected": true,
+  "correct_hash_in_wrong_field_rejected": true,
+  "invalid_explicit_path_never_falls_back": true,
+  "latest_run_pointer_supported": true,
+  "duplicate_request_id_rejected": true,
+  "injected_faults_grounded_in_ids": true,
+  "source_files_unchanged": true,
+  "verification_scope": "Professor executed corrected notebook on copies of actual user attachments. No new API calls, model fit or Windows execution.",
+  "run_id": "1c51054df97b439fa22c7d2dcc9f6edd",
+  "code_sha256": "3d6072651848d5700654659eac138b1bb48e14aac8b78d19d66face3d47d368c",
+  "source_sha256": {
+    "requests.csv": "97dfcd064475df94020473e44be1fdf5185d0b7e9b67ca06d995509d87e20841",
+    "summary.csv": "799dcd435310176b450085518161e00be38b37a9c4d69700a4dc7650b1138e8e",
+    "server_requests.jsonl": "ef0bae6375d5e0d12327a0628d82f42d625ec5fb4ad6cde2115bf74abe05c5db",
+    "client_requests.csv": "8fb327df8ecc75c5dca39b44fb5af88f03cdd6014dbd68e5b1c4fedd62b34b41"
+  }
+}

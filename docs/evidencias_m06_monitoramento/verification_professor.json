@@ -1,0 +1,29 @@
+{
+  "scenario_actions": {
+    "normal": "collect_evidence",
+    "missing_observation": "investigate_data",
+    "changed_probability": "repair_record",
+    "missing_assessment": "repair_record",
+    "original_db_unchanged": true
+  },
+  "contract_tests": "6 passed",
+  "model_retrained": false,
+  "estimator_loaded": false,
+  "scope": "teacher verification on existing real development batch and isolated fault copies",
+  "html_check": "content and markup parsed; no browser visual inspection",
+  "normal_metrics": {
+    "observed": 24,
+    "tp": 2,
+    "fp": 0,
+    "fn": 4,
+    "tn": 18,
+    "brier": 0.11456217343445767,
+    "baseline_brier": 0.187562806766936,
+    "baseline_probability": 0.2420749279538905,
+    "brier_skill": 0.38920633888353107,
+    "cost_total": 16.0,
+    "cost_per_observed": 0.6666666666666666,
+    "precision": 1.0,
+    "recall": 0.3333333333333333
+  }
+}

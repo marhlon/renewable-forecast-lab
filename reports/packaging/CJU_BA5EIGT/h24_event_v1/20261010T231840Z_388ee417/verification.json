@@ -1,0 +1,42 @@
+{
+  "verified": true,
+  "run_id": "20261010T231840Z_388ee417",
+  "release_id": "20261010T231817Z_2aeba29a",
+  "release_directory": "C:\\renewable-forecast-lab\\dist\\event_service\\20261010T231817Z_2aeba29a",
+  "release_manifest_sha256": "a2788289412b62c74ad2e70b9df7d06e911be407c0d62bd6268862b412592e06",
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "module_path": "C:\\renewable-forecast-lab\\venvs\\m06_package\\97697f9c7806\\Lib\\site-packages\\renewable_forecast\\decision_api.py",
+  "venv_directory": "C:\\renewable-forecast-lab\\venvs\\m06_package\\97697f9c7806",
+  "installed_distribution": "renewcast-event-service",
+  "reference_probability": 0.20465385372296466,
+  "reproduced_probability": 0.20465385372296466,
+  "absolute_difference": 0.0,
+  "probability_tolerance": 1e-12,
+  "valid_request_status": 200,
+  "invalid_request_status": 422,
+  "fresh_venv": true,
+  "isolated_python": true,
+  "installation_no_index": true,
+  "model_retrained": false,
+  "same_machine": true,
+  "cross_platform_verified": false,
+  "platform": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.13",
+    "implementation": "CPython"
+  },
+  "dependency_count_including_service": 26,
+  "wheelhouse_bytes": 72018219,
+  "install_seconds": 173.86397460001172,
+  "startup_seconds": 7.233558400010224,
+  "scope": "single-request software compatibility; not a new statistical validation or production approval",
+  "output_sha256": {
+    "environment.json": "37872130bc17f1e6ccb2176c98bc8c7306f522f0cb5d79e23b8d839e4042eb39",
+    "response.json": "e1d474eceadde68a56202b69d3e3964ade8f29d436edffeeaaa46abf6020bd3e",
+    "rejected_request.json": "284b6a89d4a79be8dfcb8a49147abedd03e79e094225f7fb45b4806e53c5758e",
+    "installation.log": "613451094aa2778c6ec84d42bb0890a8d46677cc0251bdb9a45f97a158f01349",
+    "server.log": "ac8301b055eca360a34f7247e523b245507b4cac446e18b21016a43cdfb15042"
+  }
+}

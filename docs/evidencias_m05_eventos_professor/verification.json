@@ -1,0 +1,11 @@
+{
+  "input": "real h24 E48 dataset; no Windows repository accessed",
+  "event_definition_and_boundary": "passed",
+  "same_origins_three_methods": "passed",
+  "training_availability": "passed",
+  "historical_frequency_uses_training_only": "passed",
+  "brier_and_confusion_matrix_reconciled": "passed",
+  "first_fold_future_label_invariance": "passed",
+  "scaler_fitted_on_214_training_rows_only": "passed",
+  "artifact_hashes": "passed"
+}

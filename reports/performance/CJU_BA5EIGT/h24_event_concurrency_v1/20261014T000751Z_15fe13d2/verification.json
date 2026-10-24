@@ -1,0 +1,27 @@
+{
+  "schema": "renewcast-concurrency-receipt-v1",
+  "run_id": "20261014T000751Z_15fe13d2",
+  "measurement_complete": true,
+  "phase_count": 9,
+  "attempts": 1080,
+  "all_responses_correct": true,
+  "image_id": "sha256:ec1b7b36cf72f6a7610389c6c27cc7b4a1500a0d03d669d9472317f2e45f8c52",
+  "model_retrained": false,
+  "protocol_sha256": "db9ec2732c4dd606bb62ded3199b161579fa750ff97bef73de763d24be1b99ea",
+  "operational_policy_approved": false,
+  "scope": "closed-loop local benchmark; one payload; no production capacity or model-accuracy claim",
+  "output_sha256": {
+    "api_source.txt": "38651befbce26a69677cfd28228958cca189355a94ded0c23bcb753f2f350429",
+    "container.json": "85aaa0dd596faad261869ceaab8a0fea9e7f0c4567f71ab4042621402f7f4d56",
+    "container_final.json": "7810f90385c8985303e2534f624cd12165ecc01cd99cd86db5cb900d66129ae3",
+    "image.json": "c9f5c0d13468ffda65f1c25adb8bde36845c611af59ca8c62d0f454b4d23498a",
+    "pipeline.log": "74f77bfff742fc3bcb66d0da5a511b3a58c5d837d0d1e9ec9bb1018fd577e409",
+    "protocol.json": "db9ec2732c4dd606bb62ded3199b161579fa750ff97bef73de763d24be1b99ea",
+    "reference_response.json": "e1d474eceadde68a56202b69d3e3964ade8f29d436edffeeaaa46abf6020bd3e",
+    "request.json": "912d0c261b02f41b1bfe845b9cd3b2fdf3abf3929259c8ed6c17a43d8f06ef8a",
+    "requests.csv": "f31a596dcf9291f4aea31d673046f4e9895d071534c0b8e837f654e8d28b6d2c",
+    "server.log": "a575cc21df55b0051d2f79256260156565a05dfe69482cc947b90c065ce3cfba",
+    "summary.csv": "94dce109bf6cbb44e22203d9c3fa0e9984a28764bbc52487074233db99399893",
+    "warmup.csv": "06df70ba445196d84b44ebe403cc7b7a8bb8e289fd16b0ffdb639bc4d42bcd3b"
+  }
+}

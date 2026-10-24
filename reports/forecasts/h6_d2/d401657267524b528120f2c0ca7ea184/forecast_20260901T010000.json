@@ -1,0 +1,22 @@
+{
+  "model_run_id": "d401657267524b528120f2c0ca7ea184",
+  "forecast_origin": "2026-09-01 01:00:00",
+  "target_time": "2026-09-01 07:00:00",
+  "horizon_hours": 6,
+  "availability_delay_hours": 2,
+  "availability_is_assumed": true,
+  "history_end": "2026-08-31 23:00:00",
+  "history_reference_time": "2026-09-01 00:00:00",
+  "prediction": 57.04960141851238,
+  "prediction_mean": 68.86076716924549,
+  "persistence_prediction": 126.7295,
+  "offset_mean": 11.81116575073311,
+  "calibration_n": 168,
+  "calibration_active": true,
+  "calibration_latest_available_at": "2026-09-01 00:00:00",
+  "calibration_missing_observations": 0,
+  "target_available_at": "2026-09-01 09:00:00",
+  "target_observed_in_input": false,
+  "model_sha256": "eb148981d50c736de6b6fb4dbf2fa3adf2bae1bb746419a83abe021fc8319e79",
+  "model_retrained": false
+}

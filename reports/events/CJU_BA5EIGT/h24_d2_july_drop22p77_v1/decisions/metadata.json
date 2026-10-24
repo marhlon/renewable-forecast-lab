@@ -1,0 +1,22 @@
+{
+  "source_predictions": "C:\\renewable-forecast-lab\\reports\\events\\CJU_BA5EIGT\\h24_d2_july_drop22p77_v1\\predictions.csv",
+  "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+  "inspection_code_sha256": "8fce7e2e745243a9db47be9804162ff2b884730acf5ddf50b57fc892fe7ca0f5",
+  "thresholds": [
+    0.2,
+    0.5
+  ],
+  "cost_fp": 1.0,
+  "cost_fn": 4.0,
+  "cost_unit": "hypothetical relative unit per hourly decision; not currency",
+  "evaluation_scope": "existing exploratory development predictions; no new holdout",
+  "probabilities_unchanged": true,
+  "models_retrained": false,
+  "operational_policy_approved": false,
+  "output_sha256": {
+    "threshold_metrics.csv": "78a1f6fe2a1cd154063626efac5b82507b1cfac77d956cbf76c40745abe9a8fa",
+    "cost_sensitivity.csv": "7b728888169b3f666d2c4f1eb8cb4a6be6ed759986af1b3a588a0ea26b4707ae",
+    "hgb_tradeoffs.csv": "dc4531e755258b14af3975ac7578e6ddcbc14d5b2963b00cabb7397f853a2ea1",
+    "policy.json": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7"
+  }
+}

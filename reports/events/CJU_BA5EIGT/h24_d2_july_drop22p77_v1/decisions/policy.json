@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "CJU_BA5EIGT-h24-d2-drop22p77-cap120-v1",
+  "status": "development",
+  "conjunto": "CJU_BA5EIGT",
+  "horizon_hours": 24,
+  "availability_delay_hours": 2,
+  "drop_mw": 22.77,
+  "event_reference": "last_available_generation",
+  "cost_fp": 1.0,
+  "cost_fn": 4.0,
+  "max_alarms_on_selection": 120,
+  "selection_rows": 504,
+  "capacity_enforced_at_runtime": false,
+  "source_predictions_sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+  "selected": {
+    "method": "hgb_weather_classifier",
+    "threshold": 0.5,
+    "alarms": 109,
+    "cost_total": 191.0,
+    "precision": 0.6788990825688074,
+    "recall": 0.6548672566371682
+  }
+}

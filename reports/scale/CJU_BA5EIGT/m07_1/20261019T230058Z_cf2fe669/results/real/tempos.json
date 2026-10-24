@@ -1,0 +1,18 @@
+[
+  {
+    "engine": "duckdb",
+    "setup_seconds": 0.49062629000036395,
+    "action_seconds": 0.03580830000282731,
+    "daily_rows": 365
+  },
+  {
+    "engine": "spark_dataframe",
+    "action_seconds": 2.8936879399989266,
+    "daily_rows": 365
+  },
+  {
+    "engine": "spark_sql_autoral",
+    "action_seconds": 0.8183584200014593,
+    "daily_rows": 365
+  }
+]

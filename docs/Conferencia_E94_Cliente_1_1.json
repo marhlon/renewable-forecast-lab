@@ -1,0 +1,141 @@
+{
+  "schema": "renewcast-e94-review-v1",
+  "accepted": true,
+  "run_id": "20261017T002410Z_7f76e51f",
+  "checks": [
+    {
+      "check": "hash:pipeline.log",
+      "passed": true
+    },
+    {
+      "check": "hash:server.log",
+      "passed": true
+    },
+    {
+      "check": "hash:valid.json",
+      "passed": true
+    },
+    {
+      "check": "hash:blocked.json",
+      "passed": true
+    },
+    {
+      "check": "hash:rejected.json",
+      "passed": true
+    },
+    {
+      "check": "hash:wrong_identity.json",
+      "passed": true
+    },
+    {
+      "check": "hash:unavailable.json",
+      "passed": true
+    },
+    {
+      "check": "client_version",
+      "passed": true
+    },
+    {
+      "check": "verification_accepted",
+      "passed": true
+    },
+    {
+      "check": "valid:exit",
+      "passed": true
+    },
+    {
+      "check": "valid:isolated",
+      "passed": true
+    },
+    {
+      "check": "blocked:exit",
+      "passed": true
+    },
+    {
+      "check": "blocked:isolated",
+      "passed": true
+    },
+    {
+      "check": "rejected:exit",
+      "passed": true
+    },
+    {
+      "check": "rejected:isolated",
+      "passed": true
+    },
+    {
+      "check": "wrong_identity:exit",
+      "passed": true
+    },
+    {
+      "check": "wrong_identity:isolated",
+      "passed": true
+    },
+    {
+      "check": "unavailable:exit",
+      "passed": true
+    },
+    {
+      "check": "unavailable:isolated",
+      "passed": true
+    },
+    {
+      "check": "replay_response",
+      "passed": true
+    },
+    {
+      "check": "blocked_http_200",
+      "passed": true
+    },
+    {
+      "check": "blocked_audit_only",
+      "passed": true
+    },
+    {
+      "check": "presentation_target_elapsed",
+      "passed": true
+    },
+    {
+      "check": "same_request_and_contract",
+      "passed": true
+    },
+    {
+      "check": "identity",
+      "passed": true
+    },
+    {
+      "check": "rejected",
+      "passed": true
+    },
+    {
+      "check": "wrong_identity",
+      "passed": true
+    },
+    {
+      "check": "unavailable",
+      "passed": true
+    },
+    {
+      "check": "parity",
+      "passed": true
+    },
+    {
+      "check": "not_operational_approval",
+      "passed": true
+    },
+    {
+      "check": "controller_same_as_delivered",
+      "passed": true
+    },
+    {
+      "check": "server_post_codes",
+      "passed": true
+    }
+  ],
+  "attached_verification_sha256": "ccaafa797b71a8fead623e78d306eabe1e586c03a29a32247d92a26a4a18b935",
+  "output_hashes_verified": 7,
+  "model_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+  "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+  "scope": "audit of eight supplied files; seven output hashes; same-PC Windows external-copy exercise; no independent rerun of exe or Docker",
+  "operational_policy_approved": false
+}

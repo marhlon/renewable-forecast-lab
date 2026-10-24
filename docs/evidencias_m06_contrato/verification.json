@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "release": "2026.10.03-decision-api-2",
+  "user_success_response_reproduced": true,
+  "user_invalid_probability_rejection_reproduced": true,
+  "user_swagger_rejection_reproduced": true,
+  "openapi_examples_match_loaded_policy": true,
+  "example_at_threshold_http": 200,
+  "example_at_threshold_alarm": true,
+  "invalid_example_http": 422,
+  "input_body_still_required": true,
+  "new_estimator_run": false
+}

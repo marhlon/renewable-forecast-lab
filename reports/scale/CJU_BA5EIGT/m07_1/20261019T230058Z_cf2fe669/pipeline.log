@@ -1,0 +1,143 @@
+
+docker info --format {{.OSType}}
+linux
+
+docker build --platform linux/amd64 -t renewcast-spark-m07:d45ea04ad95a C:\renewable-forecast-lab\infra\m07_spark
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 946B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.13-slim-bookworm
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#5 resolve docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 37B 0.0s done
+#4 DONE 0.0s
+
+#6 [3/6] COPY requirements.txt /tmp/requirements.txt
+#6 CACHED
+
+#7 [5/6] RUN groupadd --gid 10001 renewcast     && useradd --uid 10001 --gid 10001 --no-create-home        --home-dir /tmp/renewcast --shell /usr/sbin/nologin renewcast
+#7 CACHED
+
+#8 [2/6] RUN apt-get update     && apt-get install -y --no-install-recommends openjdk-17-jre-headless     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [4/6] RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt
+#9 CACHED
+
+#10 [6/6] WORKDIR /tmp
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 exporting manifest sha256:de291bdfa5f75782c8828b98633981e9ed7e041fa62577b84f1b5155d01d7eb9 0.0s done
+#11 exporting config sha256:a5b93fc853ac42f23604ba3bd225ca4aabd954a66c9c7b47cfe7d6313864c7ca done
+#11 exporting attestation manifest sha256:27c05f3837617ac3e4f7b97603263e2c51e17d7540386a1f4fb5ada650668ec3 0.1s done
+#11 exporting manifest list sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9
+#11 exporting manifest list sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9 0.0s done
+#11 naming to docker.io/library/renewcast-spark-m07:d45ea04ad95a 0.0s done
+#11 unpacking to docker.io/library/renewcast-spark-m07:d45ea04ad95a 0.0s done
+#11 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/u8q6s8z2wgv57gdef8puv6nly
+
+docker image inspect renewcast-spark-m07:d45ea04ad95a
+[
+    {
+        "Id": "sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9",
+        "RepoTags": [
+            "renewcast-spark-m07:d45ea04ad95a"
+        ],
+        "RepoDigests": [
+            "renewcast-spark-m07@sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-19T17:23:09.791000168Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 582557076,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+                "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+                "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+                "sha256:23b6c0b719f48252ea1cc40e21738869048dbd8747e676e59b1502672cf98fe1",
+                "sha256:75937afafd5b89917af32b36d3935f5bcb16625e141fc75e210d5f9a3a906f26",
+                "sha256:f9b1c792d1563cff93fedc7be33d90d22f4e2a9b8bb026e33376830078ae9102",
+                "sha256:bd99deb60e3c8f4e9339c3e871580d3f376a0ed6918de254e06a500ce1979ec4",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-19T23:00:57.255428057Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9",
+            "size": 856
+        },
+        "Config": {
+            "Cmd": null,
+            "Entrypoint": [
+                "python",
+                "/work/tools/m07_transformacao.py"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "DEBIAN_FRONTEND=noninteractive",
+                "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "SPARK_LOCAL_IP=127.0.0.1",
+                "PYSPARK_PYTHON=/usr/local/bin/python"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "renewcast:renewcast",
+            "Volumes": null,
+            "WorkingDir": "/tmp"
+        }
+    }
+]
+
+docker run --rm --pull never --platform linux/amd64 --cpus 2 --memory 3g --pids-limit 512 --network none --hostname renewcast-spark --add-host renewcast-spark:127.0.0.1 --read-only --tmpfs /tmp:rw,exec,nosuid,nodev,size=512m --cap-drop ALL --security-opt no-new-privileges --mount type=bind,source=C:\renewable-forecast-lab\data\interim\CJU_BA5EIGT_hourly.parquet,target=/inputs/geracao.parquet,readonly --mount type=bind,source=C:\renewable-forecast-lab\tools,target=/work/tools,readonly --mount type=bind,source=C:\renewable-forecast-lab\notebooks,target=/work/notebooks,readonly --mount type=bind,source=C:\renewable-forecast-lab\reports\scale\CJU_BA5EIGT\m07_1\20261019T230058Z_cf2fe669,target=/output sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9 --input /inputs/geracao.parquet --output /output/results --shuffle-partitions 2 --author /work/notebooks/transformacao_spark.py
+Entrada real: 8760 linhas; 365 datas; 0 valores nulos.
+Temporário: /tmp; montagem noexec=False.
+WARNING: Using incubator modules: jdk.incubator.vector
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/19 23:01:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/19 23:01:05 WARN MacAddressUtil: Failed to find a usable hardware address from the network interfaces; using random bytes: 6f:49:2c:a2:c6:f3:f7:b9
+Spark iniciado: 4.0.1; cache Ivy=/tmp/renewcast-spark-3138smq4/ivy.
+Conferência aprovada: 365 dias; 365 completos; 0 horas ausentes; 0 nulas.
+Caso didático: zero real, nulo, dia ausente, dia todo nulo e dia completo conferidos.
+Autoria SQL/PySpark conferida.
+Evidências: /output/results

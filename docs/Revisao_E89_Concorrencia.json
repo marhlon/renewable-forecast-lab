@@ -1,0 +1,164 @@
+{
+  "evidence": "E89",
+  "run_id": "20261014T000751Z_15fe13d2",
+  "basis": "Pasted code and rounded console; not original CSV or new receipt hashes",
+  "raw_artifacts_received": false,
+  "author_function_accepted_under_loader_contract": true,
+  "operational_policy_approved": false,
+  "phase_values_transcribed": [
+    {
+      "round": 1,
+      "concurrency": 1,
+      "p95_correct_ms": 80.3,
+      "correct_per_second": 19.13,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 1,
+      "concurrency": 4,
+      "p95_correct_ms": 148.17,
+      "correct_per_second": 33.45,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 1,
+      "concurrency": 8,
+      "p95_correct_ms": 345.32,
+      "correct_per_second": 30.46,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 2,
+      "concurrency": 4,
+      "p95_correct_ms": 219.64,
+      "correct_per_second": 27.82,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 2,
+      "concurrency": 8,
+      "p95_correct_ms": 392.36,
+      "correct_per_second": 25.75,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 2,
+      "concurrency": 1,
+      "p95_correct_ms": 70.72,
+      "correct_per_second": 20.49,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 3,
+      "concurrency": 8,
+      "p95_correct_ms": 287.13,
+      "correct_per_second": 39.8,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 3,
+      "concurrency": 1,
+      "p95_correct_ms": 38.6,
+      "correct_per_second": 45.89,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    },
+    {
+      "round": 3,
+      "concurrency": 4,
+      "p95_correct_ms": 168.4,
+      "correct_per_second": 45.07,
+      "failed": 0,
+      "correct_200": 120,
+      "attempts": 120
+    }
+  ],
+  "summary_from_rounded_values": [
+    {
+      "concurrency": 1,
+      "median_useful_rps": 20.49,
+      "worst_p95_ms": 80.3,
+      "eligible": true
+    },
+    {
+      "concurrency": 4,
+      "median_useful_rps": 33.45,
+      "worst_p95_ms": 219.64,
+      "eligible": true
+    },
+    {
+      "concurrency": 8,
+      "median_useful_rps": 30.46,
+      "worst_p95_ms": 392.36,
+      "eligible": false
+    }
+  ],
+  "choice": {
+    "concurrency": 4,
+    "reason": "Concorrência 4 escolhida por ser a menor opção elegível que alcançou pelo menos 95% da melhor mediana de vazão útil (33.45 req/s). Apresentou mediana de vazão de 33.45 req/s e pior P95 de 219.64 ms (respeitando o limite de 250 ms)."
+  },
+  "target_useful_rps": 31.7775,
+  "paired_effects": [
+    {
+      "round": 1,
+      "c4_vs_c1_pct": 74.85624673288032
+    },
+    {
+      "round": 2,
+      "c4_vs_c1_pct": 35.77354807223037
+    },
+    {
+      "round": 3,
+      "c4_vs_c1_pct": -1.786881673567231
+    }
+  ],
+  "median_gain_pct": 63.250366032210856,
+  "worst_p95_ratio": 2.7352428393524284,
+  "checks": [
+    {
+      "case": "transcribed_student_console",
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    },
+    {
+      "case": "synthetic_lower_concurrency_retains_95pct",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "case": "synthetic_no_eligible_candidate",
+      "expected": null,
+      "actual": null,
+      "passed": true
+    },
+    {
+      "case": "synthetic_missing_latency_is_not_zero",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "case": "synthetic_inclusive_latency_boundary",
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+┌───────────────────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│             #0            │
+│__internal_decompress_integ│
+│    ral_integer(#1, 24)    │
+│             #2            │
+│             #3            │
+│             #4            │
+│             #5            │
+│             #6            │
+│             #7            │
+│             #8            │
+│             #9            │
+│                           │
+│          ~0 rows          │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│          ORDER_BY         │
+│    ────────────────────   │
+│         c.dia ASC         │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│             #0            │
+│__internal_compress_integra│
+│     l_utinyint(#1, 24)    │
+│             #2            │
+│             #3            │
+│             #4            │
+│             #5            │
+│             #6            │
+│             #7            │
+│             #8            │
+│             #9            │
+│                           │
+│          ~25 rows         │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│            dia            │
+│      horas_esperadas      │
+│      horas_presentes      │
+│       horas_validas       │
+│        horas_nulas        │
+│       horas_ausentes      │
+│         cobertura         │
+│    geracao_media_mwmed    │
+│     geracao_min_mwmed     │
+│     geracao_max_mwmed     │
+│                           │
+│          ~25 rows         │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│            dia            │
+│      horas_presentes      │
+│       horas_validas       │
+│    geracao_media_mwmed    │
+│     geracao_min_mwmed     │
+│     geracao_max_mwmed     │
+│                           │
+│          ~25 rows         │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         HASH_JOIN         │
+│    ────────────────────   │
+│      Join Type: RIGHT     │
+│   Conditions: dia = dia   ├──────────────┐
+│                           │              │
+│          ~25 rows         │              │
+└─────────────┬─────────────┘              │
+┌─────────────┴─────────────┐┌─────────────┴─────────────┐
+│   PERFECT_HASH_GROUP_BY   ││         SEQ_SCAN          │
+│    ────────────────────   ││    ────────────────────   │
+│         Groups: #0        ││           Table:          │
+│                           ││      calendario_dias      │
+│        Aggregates:        ││                           │
+│        count_star()       ││   Type: Sequential Scan   │
+│         count(#1)         ││      Projections: dia     │
+│          avg(#2)          ││                           │
+│          min(#3)          ││                           │
+│          max(#4)          ││          ~4 rows          │
+└─────────────┬─────────────┘└───────────────────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│ CAST(din_instante AS DATE)│
+│        val_geracao        │
+│        val_geracao        │
+│        val_geracao        │
+│        val_geracao        │
+│                           │
+│          ~51 rows         │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│       READ_PARQUET        │
+│    ────────────────────   │
+│         Function:         │
+│        READ_PARQUET       │
+│                           │
+│        Projections:       │
+│        din_instante       │
+│        val_geracao        │
+│                           │
+│          ~51 rows         │
+└───────────────────────────┘

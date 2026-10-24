@@ -1,0 +1,78 @@
+def create_app(policy_path: Path, model_dir: Path | None = None, threads: int = 2) -> FastAPI:
+    """Carrega uma política validada uma vez; mudanças exigem reiniciar o serviço."""
+    raw = policy_path.read_bytes()
+    policy = DecisionPolicy.model_validate_json(raw)
+    policy_sha256 = hashlib.sha256(raw).hexdigest()
+    app = FastAPI(title="Renewcast — API local de decisão", version=RELEASE)
+    runtime = EventRuntime(model_dir, policy.model_dump(mode="json"), policy_sha256, threads) if model_dir else None
+    inference_examples = None
+    if model_dir is not None and (model_dir / "example_request.json").is_file():
+        import json
+        inference_examples = {"features_reais": {
+            "summary": "32 features históricas; probabilidade calculada pelo servidor",
+            "value": json.loads((model_dir / "example_request.json").read_text(encoding="utf-8")),
+        }}
+    # Exemplos didáticos compatíveis com a política carregada; não são nova inferência.
+    origin_example = datetime(2026, 7, 11, 6, tzinfo=timezone.utc)
+    at_threshold = {
+        "conjunto": policy.conjunto,
+        "method": policy.selected.method,
+        "forecast_origin": origin_example.isoformat(),
+        "history_end": (origin_example - timedelta(hours=policy.availability_delay_hours)).isoformat(),
+        "target_time": (origin_example + timedelta(hours=policy.horizon_hours)).isoformat(),
+        "drop_threshold_mwmed": policy.drop_mw,
+        "p_event": policy.selected.threshold,
+    }
+    examples = {
+        "no_limiar": {
+            "summary": "Válido: probabilidade igual ao limiar — alarme verdadeiro",
+            "description": "Probabilidade didática para demonstrar p >= threshold; não é previsão recalculada.",
+            "value": at_threshold,
+        },
+        "probabilidade_invalida": {
+            "summary": "Inválido: p_event=1.2 — rejeição HTTP 422 esperada",
+            "value": {**at_threshold, "p_event": 1.2},
+        },
+    }
+
+    @app.exception_handler(RequestValidationError)
+    async def validation_error_handler(request, exc):
+        # Evita reproduzir valores inválidos (NaN/Inf) no próprio JSON de erro.
+        errors = [{k: err[k] for k in ("loc", "msg", "type")} for err in exc.errors()]
+        return JSONResponse(status_code=422, content={"detail": errors})
+
+    @app.get("/health")
+    async def health():
+        return {"status": "ok", "release": RELEASE, "policy_id": policy.policy_id,
+                "model_loaded": runtime is not None}
+
+    @app.get("/policy", response_model=DecisionPolicy)
+    async def get_policy():
+        return policy
+
+    @app.post("/decisions", response_model=DecisionResponse)
+    async def post_decision(request: DecisionRequest = Body(..., openapi_examples=examples)):
+        try:
+            return decidir(request, policy, policy_sha256)
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.get("/model")
+    async def get_model():
+        if runtime is None:
+            raise HTTPException(status_code=503, detail="Inicie o servidor com --model-dir para habilitar inferência.")
+        return {k: runtime.manifest[k] for k in (
+            "model_id", "model_sha256", "training_cutoff", "latest_train_label_available_at",
+            "training_rows", "training_events", "feature_columns", "classes", "scope", "versions",
+        )}
+
+    @app.post("/predict-decision", response_model=EventPredictionResponse)
+    async def predict_decision(request: EventPredictRequest = Body(..., openapi_examples=inference_examples)):
+        if runtime is None:
+            raise HTTPException(status_code=503, detail="Nenhum classificador carregado; informe --model-dir.")
+        try:
+            return runtime.predict(request)
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    return app

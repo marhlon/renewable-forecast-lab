@@ -1,0 +1,101 @@
+{
+  "verified": true,
+  "scope": "native Linux, Java user.home deliberately set to ?; synthetic four-day fixture; not Docker/non-root",
+  "runtime": {
+    "uid": 0,
+    "registered_user": "root",
+    "java_user_name": "root",
+    "java_user_home": "?",
+    "ivy_directory": "/tmp/renewcast-spark-93_nptme/ivy",
+    "driver_host": "127.0.0.1"
+  },
+  "corrected_comparisons": [
+    {
+      "comparison": "duckdb_vs_spark_dataframe",
+      "days": 4,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "duckdb_vs_spark_sql_autoral",
+      "days": 4,
+      "passed": true,
+      "max_absolute_numeric_difference": 0.0,
+      "nulls_and_dates_equal": true
+    },
+    {
+      "comparison": "classificacao_cobertura",
+      "passed": true,
+      "days": 4
+    }
+  ],
+  "original_sql_discrepancies": [
+    {
+      "dia": "2026-01-01",
+      "coluna": "horas_presentes",
+      "antes": 2,
+      "depois": 3
+    },
+    {
+      "dia": "2026-01-01",
+      "coluna": "horas_ausentes",
+      "antes": 22,
+      "depois": 21
+    },
+    {
+      "dia": "2026-01-02",
+      "coluna": "horas_nulas",
+      "antes": 1,
+      "depois": 0
+    },
+    {
+      "dia": "2026-01-03",
+      "coluna": "horas_presentes",
+      "antes": 0,
+      "depois": 24
+    },
+    {
+      "dia": "2026-01-03",
+      "coluna": "horas_ausentes",
+      "antes": 24,
+      "depois": 0
+    }
+  ],
+  "original_classifier_preserved": true,
+  "unreachable_raise_removed": true,
+  "docker_executed": false,
+  "nonroot_execution_available": false,
+  "bad_java_home_injected": true,
+  "student_real_parquet_available": false,
+  "schema": "renewcast-m07-correction-review-v1",
+  "evidence_id": "E97",
+  "review_date_utc": "2026-10-19",
+  "received_evidence": {
+    "file_name": "Texto colado(9).txt",
+    "sha256": "680b8ab06e41f997c942ae4fc6d43a28552dd0d511dabd07322cec4429dee717",
+    "user_failed_run_id": "20261019T163754Z_f578df8e",
+    "preflight_reported_rows": 8760,
+    "preflight_reported_dates": 365,
+    "preflight_reported_nulls": 0,
+    "spark_transformation_completed": false
+  },
+  "verification_script_sha256": "6ec6571cbab18994b5dc5159bdca16c5294a2ab82db36c68b1844be1e6b6e586",
+  "verification_log_sha256": "06b71c6994878b8cb8dcd48eb2a67f834d4ea63403a2967d1f48fb993e221e0d",
+  "runtime_versions": {
+    "pyspark": "4.0.1",
+    "duckdb": "1.4.1",
+    "py4j": "0.10.9.9",
+    "java_major": 17
+  },
+  "python_compile_passed": true,
+  "runner_help_passed": true,
+  "authorship": "student implementation reviewed; SQL corrections assisted by teacher; classification preserved",
+  "changes_sha256": {
+    "infra/m07_spark/Dockerfile": "30e8db6fccb7f69323fcb6e4f571679023aa0bc0f6e5738e035cd1e3fc7f6fe3",
+    "infra/m07_spark/requirements.txt": "384d1fddd5db2ee338705f9ac4c3860434291fc9c473b4639e0b6f1ff2a56b57",
+    "scripts/executar_m07_spark.py": "cb98b2b187011207b26df06cbf99ed127b98a9865bc846ce7075f2ab7b7e23c8",
+    "tools/m07_transformacao.py": "9f68f567a9b16be9a127b1bfd69a01cb895cfe1b24c4106f59dfe66933c4193a",
+    "notebooks/transformacao_spark.py": "6485dcc8b3ca4f223a3d4d6dddde787ad447baad980804077447aa4b37e2de50"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "evidence_id": "E84",
+  "date": "2026-10-09",
+  "scope": "Teacher verification using the existing Linux replica; no student Windows execution claimed.",
+  "platform": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.14",
+    "implementation": "CPython"
+  },
+  "replica_model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f",
+  "original_and_relocated_reproductions": [
+    {
+      "verified": true,
+      "run_id": "20261009T215051Z_7afbccaf",
+      "release_id": "20261009T214846Z_d24dd2f5",
+      "release_directory": "/workspace/scratch/dad22b6607ff/m06_package_verification/releases/20261009T214846Z_d24dd2f5",
+      "release_manifest_sha256": "ea4361d5be519cedaa81599b0cb31764f52b46136e5bf41b2f9dddd99bab10c9",
+      "model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f",
+      "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "module_path": "/workspace/scratch/dad22b6607ff/m06_package_verification/venvs/721d7e28a1e6/lib/python3.12/site-packages/renewable_forecast/decision_api.py",
+      "venv_directory": "/workspace/scratch/dad22b6607ff/m06_package_verification/venvs/721d7e28a1e6",
+      "installed_distribution": "renewcast-event-service",
+      "reference_probability": 0.20179188830321645,
+      "reproduced_probability": 0.20179188830321645,
+      "absolute_difference": 0.0,
+      "probability_tolerance": 1e-12,
+      "valid_request_status": 200,
+      "invalid_request_status": 422,
+      "fresh_venv": true,
+      "isolated_python": true,
+      "installation_no_index": true,
+      "model_retrained": false,
+      "same_machine": true,
+      "cross_platform_verified": false,
+      "platform": {
+        "system": "Linux",
+        "machine": "x86_64",
+        "python": "3.12.14",
+        "implementation": "CPython"
+      },
+      "dependency_count_including_service": 25,
+      "wheelhouse_bytes": 78071737,
+      "install_seconds": 12.4684934349998,
+      "startup_seconds": 1.2255762100000993,
+      "scope": "single-request software compatibility; not a new statistical validation or production approval",
+      "output_sha256": {
+        "environment.json": "3230710b46419759e05e2530de436f96635dc5271d51434cbd5dd9dca392cb1b",
+        "response.json": "7bc157283d386ad7b64002eb65936fb0ce3de0e113c8bbc19f7bcf951d4528ba",
+        "rejected_request.json": "150f0e09adc168d6a343acbcc34f85cd4d1237b0685eab8b4dabbf50b6a70426",
+        "installation.log": "b476e04ad8f004d89c31cd3dbef97c17be83d35c0fe3939175b7642d9161c6dc",
+        "server.log": "47e5a2568ea3efdbdb5e41eff7623ac82717cd54217358de0316f125cf40d13c"
+      }
+    },
+    {
+      "verified": true,
+      "run_id": "20261009T215308Z_25144d87",
+      "release_id": "20261009T214846Z_d24dd2f5",
+      "release_directory": "/workspace/scratch/dad22b6607ff/m06_package_verification/destino independente/release",
+      "release_manifest_sha256": "ea4361d5be519cedaa81599b0cb31764f52b46136e5bf41b2f9dddd99bab10c9",
+      "model_sha256": "bfb7c6315caeb2d56485411e06c4d90a8cfe32c7273868966297cee131fb0a8f",
+      "policy_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "module_path": "/workspace/scratch/dad22b6607ff/m06_package_verification/destino independente/venvs/b7610cc72d33/lib/python3.12/site-packages/renewable_forecast/decision_api.py",
+      "venv_directory": "/workspace/scratch/dad22b6607ff/m06_package_verification/destino independente/venvs/b7610cc72d33",
+      "installed_distribution": "renewcast-event-service",
+      "reference_probability": 0.20179188830321645,
+      "reproduced_probability": 0.20179188830321645,
+      "absolute_difference": 0.0,
+      "probability_tolerance": 1e-12,
+      "valid_request_status": 200,
+      "invalid_request_status": 422,
+      "fresh_venv": true,
+      "isolated_python": true,
+      "installation_no_index": true,
+      "model_retrained": false,
+      "same_machine": true,
+      "cross_platform_verified": false,
+      "platform": {
+        "system": "Linux",
+        "machine": "x86_64",
+        "python": "3.12.14",
+        "implementation": "CPython"
+      },
+      "dependency_count_including_service": 25,
+      "wheelhouse_bytes": 78071737,
+      "install_seconds": 10.889990916999977,
+      "startup_seconds": 1.1249377060000825,
+      "scope": "single-request software compatibility; not a new statistical validation or production approval",
+      "output_sha256": {
+        "environment.json": "c8aed74764843bcd3b56cca3fb7c6d3c361fcc00d79442b1e37c29a862ab0468",
+        "response.json": "7bc157283d386ad7b64002eb65936fb0ce3de0e113c8bbc19f7bcf951d4528ba",
+        "rejected_request.json": "150f0e09adc168d6a343acbcc34f85cd4d1237b0685eab8b4dabbf50b6a70426",
+        "installation.log": "f71812d91cdcd0ca70546f41427ba572aa29688acc49a174b5dbd1cb945ef6b4",
+        "server.log": "c30162971bbff2b782fa59b948d39d1a0cad71ffc562169a620c94a6c73b1f7e"
+      }
+    }
+  ],
+  "tampered_example_request_rejected_before_installation": true,
+  "tamper_error": "Integridade reprovada: artifacts/example_request.json",
+  "windows_powershell_executed": false,
+  "student_execution_received": false,
+  "new_backtest": false,
+  "model_retrained": false,
+  "source_sha256": {
+    "scripts/empacotar_servico.py": "e6cdd1d1c00b648a889353e62c114d3c9a18aa048c3fb97138c57c52738f3d78",
+    "scripts/reproduzir_servico.py": "0d62fc46a29163497fc2c1c4a6fbff7e658c8d8e6644f32cf9e18f66da31acd2",
+    "scripts/run_m06_empacotamento.ps1": "fb25a27152541b356b4082ea8c326c91a5ff61aa599732b6e03c8b669ad53688"
+  },
+  "limits": [
+    "same host and Python installation underneath venv",
+    "one valid request, plus incomplete contract rejection",
+    "no claim of Docker, standalone exe, production approval or cross-platform reproduction"
+  ]
+}

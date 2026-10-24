@@ -1,0 +1,632 @@
+
+docker info --format {{.OSType}}
+linux
+
+docker build --platform linux/amd64 -t renewcast-spark-m07:aca458752ff1 C:\renewable-forecast-lab\infra\m07_spark
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 620B 0.0s done
+#1 DONE -6.4s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.13-slim-bookworm
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2
+#5 resolve docker.io/library/python:3.12.13-slim-bookworm@sha256:4766d8b510c428e595d74b9cc5bbb2fae8e26316fffb4adc89908d79aacd58a2 0.1s done
+#5 CACHED
+
+#4 [internal] load build context
+#4 transferring context: 87B done
+#4 DONE 0.1s
+
+#6 [2/5] RUN apt-get update     && apt-get install -y --no-install-recommends openjdk-17-jre-headless     && rm -rf /var/lib/apt/lists/*
+#6 0.678 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#6 0.726 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#6 0.759 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#6 0.867 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+#6 1.995 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#6 1.997 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [354 kB]
+#6 3.674 Fetched 9393 kB in 3s (3023 kB/s)
+#6 3.674 Reading package lists...
+#6 4.678 Reading package lists...
+#6 5.114 Building dependency tree...
+#6 5.339 Reading state information...
+#6 5.746 The following additional packages will be installed:
+#6 5.746   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+#6 5.746   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+#6 5.746   libavahi-common3 libbrotli1 libcups2 libdbus-1-3 libexpat1 libfontconfig1
+#6 5.746   libfreetype6 libglib2.0-0 libgraphite2-3 libharfbuzz0b libjpeg62-turbo
+#6 5.749   liblcms2-2 libnspr4 libnss3 libpcsclite1 libpng16-16
+#6 5.753 Suggested packages:
+#6 5.753   default-jre libasound2-plugins alsa-utils cups-common low-memory-monitor
+#6 5.753   liblcms2-utils pcscd libnss-mdns fonts-dejavu-extra fonts-ipafont-gothic
+#6 5.753   fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic
+#6 5.753 Recommended packages:
+#6 5.753   alsa-ucm-conf alsa-topology-conf dbus libglib2.0-data shared-mime-info
+#6 5.753   xdg-user-dirs
+#6 5.854 The following NEW packages will be installed:
+#6 5.855   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+#6 5.855   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+#6 5.857   libavahi-common3 libbrotli1 libcups2 libdbus-1-3 libexpat1 libfontconfig1
+#6 5.858   libfreetype6 libglib2.0-0 libgraphite2-3 libharfbuzz0b libjpeg62-turbo
+#6 5.860   liblcms2-2 libnspr4 libnss3 libpcsclite1 libpng16-16 openjdk-17-jre-headless
+#6 5.944 0 upgraded, 25 newly installed, 0 to remove and 7 not upgraded.
+#6 5.944 Need to get 53.0 MB of archives.
+#6 5.944 After this operation, 216 MB of additional disk space will be used.
+#6 5.944 Get:1 http://deb.debian.org/debian bookworm/main amd64 ca-certificates-java all 20230710~deb12u1 [11.9 kB]
+#6 5.965 Get:2 http://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-core all 2.37-6 [1068 kB]
+#6 6.096 Get:3 http://deb.debian.org/debian bookworm/main amd64 fontconfig-config amd64 2.14.1-4 [315 kB]
+#6 6.130 Get:4 http://deb.debian.org/debian bookworm/main amd64 java-common all 0.74 [6388 B]
+#6 6.132 Get:5 http://deb.debian.org/debian bookworm/main amd64 libasound2-data all 1.2.8-1 [20.5 kB]
+#6 6.136 Get:6 http://deb.debian.org/debian bookworm/main amd64 libasound2 amd64 1.2.8-1+b1 [362 kB]
+#6 6.171 Get:7 http://deb.debian.org/debian bookworm/main amd64 libavahi-common-data amd64 0.8-10+deb12u1 [107 kB]
+#6 6.187 Get:8 http://deb.debian.org/debian bookworm/main amd64 libavahi-common3 amd64 0.8-10+deb12u1 [42.1 kB]
+#6 6.191 Get:9 http://deb.debian.org/debian bookworm/main amd64 libdbus-1-3 amd64 1.14.10-1~deb12u1 [201 kB]
+#6 6.210 Get:10 http://deb.debian.org/debian bookworm/main amd64 libavahi-client3 amd64 0.8-10+deb12u1 [45.8 kB]
+#6 6.217 Get:11 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
+#6 6.286 Get:12 http://deb.debian.org/debian bookworm/main amd64 libcups2 amd64 2.4.2-3+deb12u9 [245 kB]
+#6 6.350 Get:13 http://deb.debian.org/debian-security bookworm-security/main amd64 libexpat1 amd64 2.5.0-1+deb12u4 [106 kB]
+#6 6.369 Get:14 http://deb.debian.org/debian-security bookworm-security/main amd64 libpng16-16 amd64 1.6.39-2+deb12u6 [277 kB]
+#6 6.444 Get:15 http://deb.debian.org/debian bookworm/main amd64 libfreetype6 amd64 2.12.1+dfsg-5+deb12u4 [398 kB]
+#6 6.479 Get:16 http://deb.debian.org/debian bookworm/main amd64 libfontconfig1 amd64 2.14.1-4 [386 kB]
+#6 6.553 Get:17 http://deb.debian.org/debian bookworm/main amd64 libglib2.0-0 amd64 2.74.6-2+deb12u9 [1403 kB]
+#6 6.928 Get:18 http://deb.debian.org/debian bookworm/main amd64 libgraphite2-3 amd64 1.3.14-1+deb12u1 [74.6 kB]
+#6 6.933 Get:19 http://deb.debian.org/debian bookworm/main amd64 libharfbuzz0b amd64 6.0.0+dfsg-3 [1945 kB]
+#6 7.148 Get:20 http://deb.debian.org/debian bookworm/main amd64 libjpeg62-turbo amd64 1:2.1.5-2 [166 kB]
+#6 7.188 Get:21 http://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2+deb12u1 [154 kB]
+#6 7.209 Get:22 http://deb.debian.org/debian bookworm/main amd64 libnspr4 amd64 2:4.35-1 [113 kB]
+#6 7.224 Get:23 http://deb.debian.org/debian-security bookworm-security/main amd64 libnss3 amd64 2:3.87.1-1+deb12u4 [1331 kB]
+#6 7.359 Get:24 http://deb.debian.org/debian bookworm/main amd64 libpcsclite1 amd64 1.9.9-2 [49.7 kB]
+#6 7.362 Get:25 http://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jre-headless amd64 17.0.20.1+1-1~deb12u1 [43.9 MB]
+#6 12.25 debconf: delaying package configuration, since apt-utils is not installed
+#6 12.33 Fetched 53.0 MB in 6s (8182 kB/s)
+#6 12.41 Selecting previously unselected package ca-certificates-java.
+#6 12.41 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6695 files and directories currently installed.)
+#6 12.47 Preparing to unpack .../00-ca-certificates-java_20230710~deb12u1_all.deb ...
+#6 12.48 Unpacking ca-certificates-java (20230710~deb12u1) ...
+#6 12.58 Selecting previously unselected package fonts-dejavu-core.
+#6 12.58 Preparing to unpack .../01-fonts-dejavu-core_2.37-6_all.deb ...
+#6 12.60 Unpacking fonts-dejavu-core (2.37-6) ...
+#6 12.84 Selecting previously unselected package fontconfig-config.
+#6 12.84 Preparing to unpack .../02-fontconfig-config_2.14.1-4_amd64.deb ...
+#6 13.12 Unpacking fontconfig-config (2.14.1-4) ...
+#6 13.24 Selecting previously unselected package java-common.
+#6 13.24 Preparing to unpack .../03-java-common_0.74_all.deb ...
+#6 13.25 Unpacking java-common (0.74) ...
+#6 13.33 Selecting previously unselected package libasound2-data.
+#6 13.33 Preparing to unpack .../04-libasound2-data_1.2.8-1_all.deb ...
+#6 13.34 Unpacking libasound2-data (1.2.8-1) ...
+#6 13.47 Selecting previously unselected package libasound2:amd64.
+#6 13.47 Preparing to unpack .../05-libasound2_1.2.8-1+b1_amd64.deb ...
+#6 13.50 Unpacking libasound2:amd64 (1.2.8-1+b1) ...
+#6 13.63 Selecting previously unselected package libavahi-common-data:amd64.
+#6 13.63 Preparing to unpack .../06-libavahi-common-data_0.8-10+deb12u1_amd64.deb ...
+#6 13.65 Unpacking libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+#6 13.77 Selecting previously unselected package libavahi-common3:amd64.
+#6 13.77 Preparing to unpack .../07-libavahi-common3_0.8-10+deb12u1_amd64.deb ...
+#6 13.78 Unpacking libavahi-common3:amd64 (0.8-10+deb12u1) ...
+#6 13.88 Selecting previously unselected package libdbus-1-3:amd64.
+#6 13.88 Preparing to unpack .../08-libdbus-1-3_1.14.10-1~deb12u1_amd64.deb ...
+#6 13.89 Unpacking libdbus-1-3:amd64 (1.14.10-1~deb12u1) ...
+#6 13.99 Selecting previously unselected package libavahi-client3:amd64.
+#6 14.00 Preparing to unpack .../09-libavahi-client3_0.8-10+deb12u1_amd64.deb ...
+#6 14.01 Unpacking libavahi-client3:amd64 (0.8-10+deb12u1) ...
+#6 14.09 Selecting previously unselected package libbrotli1:amd64.
+#6 14.09 Preparing to unpack .../10-libbrotli1_1.0.9-2+b6_amd64.deb ...
+#6 14.10 Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+#6 14.22 Selecting previously unselected package libcups2:amd64.
+#6 14.23 Preparing to unpack .../11-libcups2_2.4.2-3+deb12u9_amd64.deb ...
+#6 14.24 Unpacking libcups2:amd64 (2.4.2-3+deb12u9) ...
+#6 14.37 Selecting previously unselected package libexpat1:amd64.
+#6 14.38 Preparing to unpack .../12-libexpat1_2.5.0-1+deb12u4_amd64.deb ...
+#6 14.39 Unpacking libexpat1:amd64 (2.5.0-1+deb12u4) ...
+#6 14.49 Selecting previously unselected package libpng16-16:amd64.
+#6 14.50 Preparing to unpack .../13-libpng16-16_1.6.39-2+deb12u6_amd64.deb ...
+#6 14.51 Unpacking libpng16-16:amd64 (1.6.39-2+deb12u6) ...
+#6 14.61 Selecting previously unselected package libfreetype6:amd64.
+#6 14.61 Preparing to unpack .../14-libfreetype6_2.12.1+dfsg-5+deb12u4_amd64.deb ...
+#6 14.62 Unpacking libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+#6 14.75 Selecting previously unselected package libfontconfig1:amd64.
+#6 14.75 Preparing to unpack .../15-libfontconfig1_2.14.1-4_amd64.deb ...
+#6 14.77 Unpacking libfontconfig1:amd64 (2.14.1-4) ...
+#6 20.97 Selecting previously unselected package libglib2.0-0:amd64.
+#6 20.97 Preparing to unpack .../16-libglib2.0-0_2.74.6-2+deb12u9_amd64.deb ...
+#6 20.99 Unpacking libglib2.0-0:amd64 (2.74.6-2+deb12u9) ...
+#6 14.89 Selecting previously unselected package libgraphite2-3:amd64.
+#6 14.90 Preparing to unpack .../17-libgraphite2-3_1.3.14-1+deb12u1_amd64.deb ...
+#6 14.92 Unpacking libgraphite2-3:amd64 (1.3.14-1+deb12u1) ...
+#6 15.03 Selecting previously unselected package libharfbuzz0b:amd64.
+#6 15.03 Preparing to unpack .../18-libharfbuzz0b_6.0.0+dfsg-3_amd64.deb ...
+#6 15.04 Unpacking libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+#6 15.25 Selecting previously unselected package libjpeg62-turbo:amd64.
+#6 15.25 Preparing to unpack .../19-libjpeg62-turbo_1%3a2.1.5-2_amd64.deb ...
+#6 15.27 Unpacking libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+#6 15.39 Selecting previously unselected package liblcms2-2:amd64.
+#6 15.40 Preparing to unpack .../20-liblcms2-2_2.14-2+deb12u1_amd64.deb ...
+#6 15.41 Unpacking liblcms2-2:amd64 (2.14-2+deb12u1) ...
+#6 15.53 Selecting previously unselected package libnspr4:amd64.
+#6 15.53 Preparing to unpack .../21-libnspr4_2%3a4.35-1_amd64.deb ...
+#6 15.54 Unpacking libnspr4:amd64 (2:4.35-1) ...
+#6 15.64 Selecting previously unselected package libnss3:amd64.
+#6 15.65 Preparing to unpack .../22-libnss3_2%3a3.87.1-1+deb12u4_amd64.deb ...
+#6 15.66 Unpacking libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+#6 15.97 Selecting previously unselected package libpcsclite1:amd64.
+#6 15.98 Preparing to unpack .../23-libpcsclite1_1.9.9-2_amd64.deb ...
+#6 15.99 Unpacking libpcsclite1:amd64 (1.9.9-2) ...
+#6 16.28 Selecting previously unselected package openjdk-17-jre-headless:amd64.
+#6 16.28 Preparing to unpack .../24-openjdk-17-jre-headless_17.0.20.1+1-1~deb12u1_amd64.deb ...
+#6 16.33 Unpacking openjdk-17-jre-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#6 26.07 Setting up libexpat1:amd64 (2.5.0-1+deb12u4) ...
+#6 26.11 Setting up libgraphite2-3:amd64 (1.3.14-1+deb12u1) ...
+#6 26.15 Setting up liblcms2-2:amd64 (2.14-2+deb12u1) ...
+#6 26.18 Setting up java-common (0.74) ...
+#6 19.67 Setting up libglib2.0-0:amd64 (2.74.6-2+deb12u9) ...
+#6 19.71 No schema files found: doing nothing.
+#6 19.73 Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+#6 19.77 Setting up libasound2-data (1.2.8-1) ...
+#6 19.81 Setting up libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+#6 19.84 Setting up libnspr4:amd64 (2:4.35-1) ...
+#6 19.88 Setting up libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+#6 19.92 Setting up libdbus-1-3:amd64 (1.14.10-1~deb12u1) ...
+#6 19.96 Setting up libpng16-16:amd64 (1.6.39-2+deb12u6) ...
+#6 20.03 Setting up fonts-dejavu-core (2.37-6) ...
+#6 20.21 Setting up libpcsclite1:amd64 (1.9.9-2) ...
+#6 20.25 Setting up libasound2:amd64 (1.2.8-1+b1) ...
+#6 20.29 Setting up ca-certificates-java (20230710~deb12u1) ...
+#6 20.34 No JRE found. Skipping Java certificates setup.
+#6 20.35 Setting up fontconfig-config (2.14.1-4) ...
+#6 20.83 Setting up libavahi-common3:amd64 (0.8-10+deb12u1) ...
+#6 20.87 Setting up libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+#6 20.93 Setting up libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+#6 21.00 Setting up libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+#6 21.06 Setting up libfontconfig1:amd64 (2.14.1-4) ...
+#6 21.17 Setting up libavahi-client3:amd64 (0.8-10+deb12u1) ...
+#6 21.32 Setting up libcups2:amd64 (2.4.2-3+deb12u9) ...
+#6 21.37 Setting up openjdk-17-jre-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#6 21.69 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+#6 21.70 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+#6 21.71 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+#6 21.73 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+#6 21.75 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+#6 21.80 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#6 21.92 Processing triggers for ca-certificates-java (20230710~deb12u1) ...
+#6 22.69 Adding debian:ACCVRAIZ1.pem
+#6 22.70 Adding debian:AC_RAIZ_FNMT-RCM.pem
+#6 22.74 Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+#6 22.75 Adding debian:ANF_Secure_Server_Root_CA.pem
+#6 22.75 Adding debian:Actalis_Authentication_Root_CA.pem
+#6 22.76 Adding debian:AffirmTrust_Commercial.pem
+#6 22.77 Adding debian:AffirmTrust_Networking.pem
+#6 22.77 Adding debian:AffirmTrust_Premium.pem
+#6 22.78 Adding debian:AffirmTrust_Premium_ECC.pem
+#6 22.78 Adding debian:Amazon_Root_CA_1.pem
+#6 22.79 Adding debian:Amazon_Root_CA_2.pem
+#6 22.79 Adding debian:Amazon_Root_CA_3.pem
+#6 22.80 Adding debian:Amazon_Root_CA_4.pem
+#6 22.81 Adding debian:Atos_TrustedRoot_2011.pem
+#6 22.81 Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+#6 22.85 Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068_2.pem
+#6 22.85 Adding debian:Baltimore_CyberTrust_Root.pem
+#6 22.86 Adding debian:Buypass_Class_2_Root_CA.pem
+#6 22.86 Adding debian:Buypass_Class_3_Root_CA.pem
+#6 22.87 Adding debian:CA_Disig_Root_R2.pem
+#6 22.89 Adding debian:CFCA_EV_ROOT.pem
+#6 22.89 Adding debian:COMODO_Certification_Authority.pem
+#6 22.90 Adding debian:COMODO_ECC_Certification_Authority.pem
+#6 22.91 Adding debian:COMODO_RSA_Certification_Authority.pem
+#6 22.92 Adding debian:Certainly_Root_E1.pem
+#6 22.93 Adding debian:Certainly_Root_R1.pem
+#6 22.93 Adding debian:Certigna.pem
+#6 22.95 Adding debian:Certigna_Root_CA.pem
+#6 22.95 Adding debian:Certum_EC-384_CA.pem
+#6 22.95 Adding debian:Certum_Trusted_Network_CA.pem
+#6 22.97 Adding debian:Certum_Trusted_Network_CA_2.pem
+#6 22.98 Adding debian:Certum_Trusted_Root_CA.pem
+#6 22.98 Adding debian:Comodo_AAA_Services_root.pem
+#6 23.00 Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+#6 23.00 Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+#6 23.02 Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+#6 23.04 Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+#6 23.04 Adding debian:DigiCert_Assured_ID_Root_CA.pem
+#6 23.05 Adding debian:DigiCert_Assured_ID_Root_G2.pem
+#6 23.05 Adding debian:DigiCert_Assured_ID_Root_G3.pem
+#6 23.06 Adding debian:DigiCert_Global_Root_CA.pem
+#6 23.06 Adding debian:DigiCert_Global_Root_G2.pem
+#6 23.07 Adding debian:DigiCert_Global_Root_G3.pem
+#6 23.07 Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+#6 23.08 Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+#6 23.08 Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+#6 23.09 Adding debian:DigiCert_Trusted_Root_G4.pem
+#6 23.11 Adding debian:E-Tugra_Certification_Authority.pem
+#6 23.11 Adding debian:E-Tugra_Global_Root_CA_ECC_v3.pem
+#6 23.12 Adding debian:E-Tugra_Global_Root_CA_RSA_v3.pem
+#6 23.12 Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+#6 23.12 Adding debian:Entrust_Root_Certification_Authority.pem
+#6 23.12 Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+#6 23.12 Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+#6 23.13 Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+#6 23.14 Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+#6 23.14 Adding debian:GLOBALTRUST_2020.pem
+#6 23.15 Adding debian:GTS_Root_R1.pem
+#6 23.15 Adding debian:GTS_Root_R2.pem
+#6 23.15 Adding debian:GTS_Root_R3.pem
+#6 23.16 Adding debian:GTS_Root_R4.pem
+#6 23.18 Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+#6 23.18 Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+#6 23.18 Adding debian:GlobalSign_Root_CA.pem
+#6 23.19 Adding debian:GlobalSign_Root_CA_-_R3.pem
+#6 23.19 Adding debian:GlobalSign_Root_CA_-_R6.pem
+#6 23.20 Adding debian:GlobalSign_Root_E46.pem
+#6 23.21 Adding debian:GlobalSign_Root_R46.pem
+#6 23.21 Adding debian:Go_Daddy_Class_2_CA.pem
+#6 23.22 Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+#6 23.22 Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+#6 23.23 Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+#6 23.23 Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+#6 23.25 Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+#6 23.25 Adding debian:HiPKI_Root_CA_-_G1.pem
+#6 23.25 Adding debian:Hongkong_Post_Root_CA_1.pem
+#6 23.27 Adding debian:Hongkong_Post_Root_CA_3.pem
+#6 23.29 Adding debian:ISRG_Root_X1.pem
+#6 23.29 Adding debian:ISRG_Root_X2.pem
+#6 23.29 Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+#6 23.30 Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+#6 23.30 Adding debian:Izenpe.com.pem
+#6 23.30 Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+#6 23.31 Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+#6 23.32 Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+#6 23.32 Adding debian:NAVER_Global_Root_Certification_Authority.pem
+#6 23.32 Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+#6 23.33 Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+#6 23.34 Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+#6 23.34 Adding debian:QuoVadis_Root_CA_1_G3.pem
+#6 23.34 Adding debian:QuoVadis_Root_CA_2.pem
+#6 23.36 Adding debian:QuoVadis_Root_CA_2_G3.pem
+#6 23.36 Adding debian:QuoVadis_Root_CA_3.pem
+#6 23.37 Adding debian:QuoVadis_Root_CA_3_G3.pem
+#6 23.37 Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+#6 23.38 Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+#6 23.38 Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+#6 23.40 Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+#6 23.40 Adding debian:SZAFIR_ROOT_CA2.pem
+#6 23.40 Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+#6 23.41 Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+#6 23.41 Adding debian:SecureSign_RootCA11.pem
+#6 23.42 Adding debian:SecureTrust_CA.pem
+#6 23.43 Adding debian:Secure_Global_CA.pem
+#6 23.43 Adding debian:Security_Communication_ECC_RootCA1.pem
+#6 23.44 Adding debian:Security_Communication_RootCA2.pem
+#6 23.45 Adding debian:Security_Communication_RootCA3.pem
+#6 23.45 Adding debian:Security_Communication_Root_CA.pem
+#6 23.46 Adding debian:Starfield_Class_2_CA.pem
+#6 23.46 Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+#6 23.47 Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+#6 23.47 Adding debian:SwissSign_Gold_CA_-_G2.pem
+#6 23.47 Adding debian:SwissSign_Silver_CA_-_G2.pem
+#6 23.50 Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+#6 23.50 Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+#6 23.50 Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+#6 23.51 Adding debian:TWCA_Global_Root_CA.pem
+#6 23.51 Adding debian:TWCA_Root_Certification_Authority.pem
+#6 23.52 Adding debian:TeliaSonera_Root_CA_v1.pem
+#6 23.52 Adding debian:Telia_Root_CA_v2.pem
+#6 23.52 Adding debian:TrustCor_ECA-1.pem
+#6 23.53 Adding debian:TrustCor_RootCert_CA-1.pem
+#6 23.54 Adding debian:TrustCor_RootCert_CA-2.pem
+#6 23.54 Adding debian:Trustwave_Global_Certification_Authority.pem
+#6 23.55 Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+#6 23.56 Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+#6 23.56 Adding debian:TunTrust_Root_CA.pem
+#6 23.57 Adding debian:UCA_Extended_Validation_Root.pem
+#6 23.57 Adding debian:UCA_Global_G2_Root.pem
+#6 23.57 Adding debian:USERTrust_ECC_Certification_Authority.pem
+#6 23.58 Adding debian:USERTrust_RSA_Certification_Authority.pem
+#6 23.58 Adding debian:XRamp_Global_CA_Root.pem
+#6 23.58 Adding debian:certSIGN_ROOT_CA.pem
+#6 23.59 Adding debian:certSIGN_Root_CA_G2.pem
+#6 23.59 Adding debian:e-Szigno_Root_CA_2017.pem
+#6 23.60 Adding debian:ePKI_Root_Certification_Authority.pem
+#6 23.60 Adding debian:emSign_ECC_Root_CA_-_C3.pem
+#6 23.61 Adding debian:emSign_ECC_Root_CA_-_G3.pem
+#6 23.61 Adding debian:emSign_Root_CA_-_C1.pem
+#6 23.62 Adding debian:emSign_Root_CA_-_G1.pem
+#6 23.62 Adding debian:vTrus_ECC_Root_CA.pem
+#6 23.64 Adding debian:vTrus_Root_CA.pem
+#6 23.73 done.
+#6 DONE 24.0s
+
+#7 [3/5] COPY requirements.txt /tmp/requirements.txt
+#7 DONE 0.2s
+
+#8 [4/5] RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt
+#8 4.639 Collecting pyspark==4.0.1 (from -r /tmp/requirements.txt (line 1))
+#8 4.823   Downloading pyspark-4.0.1.tar.gz (434.2 MB)
+#8 61.12      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 434.2/434.2 MB 6.7 MB/s eta 0:00:00
+#8 73.33   Installing build dependencies: started
+#8 79.29   Installing build dependencies: finished with status 'done'
+#8 79.29   Getting requirements to build wheel: started
+#8 80.64   Getting requirements to build wheel: finished with status 'done'
+#8 80.64   Preparing metadata (pyproject.toml): started
+#8 82.49   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 82.71 Collecting py4j==0.10.9.9 (from -r /tmp/requirements.txt (line 2))
+#8 82.73   Downloading py4j-0.10.9.9-py2.py3-none-any.whl.metadata (1.3 kB)
+#8 83.55 Collecting duckdb==1.4.1 (from -r /tmp/requirements.txt (line 3))
+#8 83.58   Downloading duckdb-1.4.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (14 kB)
+#8 83.63 Downloading py4j-0.10.9.9-py2.py3-none-any.whl (203 kB)
+#8 83.83 Downloading duckdb-1.4.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (20.5 MB)
+#8 86.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.5/20.5 MB 6.6 MB/s eta 0:00:00
+#8 86.59 Building wheels for collected packages: pyspark
+#8 86.60   Building wheel for pyspark (pyproject.toml): started
+#8 134.7   Building wheel for pyspark (pyproject.toml): finished with status 'done'
+#8 147.1   Created wheel for pyspark: filename=pyspark-4.0.1-py2.py3-none-any.whl size=434813858 sha256=713dcdfdd617a3ff7ebeafd818203fa396a9218cf95f5d72638ce5eb40e8187a
+#8 147.1   Stored in directory: /tmp/pip-ephem-wheel-cache-1fftksh8/wheels/31/9f/68/f89fb34ccd886909be7d0e390eaaf97f21efdf540c0ee8dbcd
+#8 147.2 Successfully built pyspark
+#8 147.2 Installing collected packages: py4j, pyspark, duckdb
+#8 160.8 Successfully installed duckdb-1.4.1 py4j-0.10.9.9 pyspark-4.0.1
+#8 160.8 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 163.0 
+#8 163.0 [notice] A new release of pip is available: 25.0.1 -> 26.2.1
+#8 163.0 [notice] To update, run: pip install --upgrade pip
+#8 DONE 169.7s
+
+#9 [5/5] WORKDIR /tmp
+#9 DONE 0.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 66.9s done
+#10 exporting manifest sha256:9191f66c39808b3bd0b6b203e35151b3266683a47f99843ffb51e5086cbd5a28 done
+#10 exporting config sha256:75c6cb9e34d15d2a537110f8d30a5b508b3775c5abe8e068861edca8b3fd55d2 0.0s done
+#10 exporting attestation manifest sha256:ecae03f22a64d5ea547f3e9b68bc2b57b1e812f3e20cccc698f3f2381e2cbcb8 0.1s done
+#10 exporting manifest list sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259
+#10 exporting manifest list sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259 0.0s done
+#10 naming to docker.io/library/renewcast-spark-m07:aca458752ff1 done
+#10 unpacking to docker.io/library/renewcast-spark-m07:aca458752ff1
+#10 unpacking to docker.io/library/renewcast-spark-m07:aca458752ff1 9.0s done
+#10 DONE 69.6s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/my79cooouayyitmh5bjxkkam9
+
+docker image inspect renewcast-spark-m07:aca458752ff1
+[
+    {
+        "Id": "sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259",
+        "RepoTags": [
+            "renewcast-spark-m07:aca458752ff1"
+        ],
+        "RepoDigests": [
+            "renewcast-spark-m07@sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-19T16:41:11.01961742Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 582555319,
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:bbbb19fa59e928e9d2412742b476b97f157cd95304b1f9fd3a82d221f661acde",
+                "sha256:0632d0601fca2055c070f7382e63078c292b98d8fa4a5388ee04bd6b1ea0582e",
+                "sha256:da835b7922cb8503b751d1cd1a3ac2309a9608198554e43fdd225591a1ec16f4",
+                "sha256:23b6c0b719f48252ea1cc40e21738869048dbd8747e676e59b1502672cf98fe1",
+                "sha256:75937afafd5b89917af32b36d3935f5bcb16625e141fc75e210d5f9a3a906f26",
+                "sha256:f9b1c792d1563cff93fedc7be33d90d22f4e2a9b8bb026e33376830078ae9102",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-19T16:42:11.829051032Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259",
+            "size": 856
+        },
+        "Config": {
+            "Cmd": null,
+            "Entrypoint": [
+                "python",
+                "/work/tools/m07_transformacao.py"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.13",
+                "PYTHON_SHA256=c08bc65a81971c1dd5783182826503369466c7e67374d1646519adf05207b684",
+                "DEBIAN_FRONTEND=noninteractive",
+                "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64",
+                "PYTHONUNBUFFERED=1",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "SPARK_LOCAL_IP=127.0.0.1",
+                "PYSPARK_PYTHON=/usr/local/bin/python"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "10001:10001",
+            "Volumes": null,
+            "WorkingDir": "/tmp"
+        }
+    }
+]
+
+docker run --rm --pull never --platform linux/amd64 --cpus 2 --memory 3g --pids-limit 512 --network none --read-only --tmpfs /tmp:rw,size=512m --cap-drop ALL --security-opt no-new-privileges --mount type=bind,source=C:\renewable-forecast-lab\data\interim\CJU_BA5EIGT_hourly.parquet,target=/inputs/geracao.parquet,readonly --mount type=bind,source=C:\renewable-forecast-lab\tools,target=/work/tools,readonly --mount type=bind,source=C:\renewable-forecast-lab\notebooks,target=/work/notebooks,readonly --mount type=bind,source=C:\renewable-forecast-lab\reports\scale\CJU_BA5EIGT\m07_1\20261019T163754Z_f578df8e,target=/output sha256:e5d8657043bac7be8c9f6d70e6a3d433934c137dd3f8bada1fca483cf81d1259 --input /inputs/geracao.parquet --output /output/results --shuffle-partitions 2
+Entrada real: 8760 linhas; 365 datas; 0 valores nulos.
+WARNING: Using incubator modules: jdk.incubator.vector
+2026-10-19T16:42:28.506387951Z main ERROR Could not determine local host name java.net.UnknownHostException: 7486fe700234: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1671)
+	at org.apache.logging.log4j.core.util.NetUtils.getHostname(NetUtils.java:71)
+	at org.apache.logging.log4j.core.util.NetUtils.getLocalHostname(NetUtils.java:56)
+	at org.apache.logging.log4j.core.LoggerContext.lambda$setConfiguration$2(LoggerContext.java:667)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:667)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:762)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:784)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:300)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:153)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:46)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:138)
+	at org.apache.logging.log4j.spi.AbstractLoggerAdapter.getContext(AbstractLoggerAdapter.java:136)
+	at org.apache.logging.slf4j.Log4jLoggerFactory.getContext(Log4jLoggerFactory.java:58)
+	at org.apache.logging.log4j.spi.AbstractLoggerAdapter.getLogger(AbstractLoggerAdapter.java:46)
+	at org.apache.logging.slf4j.Log4jLoggerFactory.getLogger(Log4jLoggerFactory.java:32)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:432)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:457)
+	at org.apache.spark.internal.SparkLoggerFactory.getLogger(SparkLoggerFactory.java:31)
+	at org.apache.spark.network.util.JavaUtils.<clinit>(JavaUtils.java:44)
+	at org.apache.spark.internal.config.ConfigHelpers$.byteFromString(ConfigBuilder.scala:68)
+	at org.apache.spark.internal.config.ConfigBuilder.$anonfun$bytesConf$1(ConfigBuilder.scala:281)
+	at org.apache.spark.internal.config.ConfigBuilder.$anonfun$bytesConf$1$adapted(ConfigBuilder.scala:281)
+	at org.apache.spark.internal.config.TypedConfigBuilder.$anonfun$transform$1(ConfigBuilder.scala:102)
+	at org.apache.spark.internal.config.TypedConfigBuilder.createWithDefault(ConfigBuilder.scala:166)
+	at org.apache.spark.internal.config.package$.<clinit>(package.scala:465)
+	at org.apache.spark.deploy.SparkSubmitArguments.$anonfun$loadEnvironmentArguments$5(SparkSubmitArguments.scala:171)
+	at scala.Option.orElse(Option.scala:477)
+	at org.apache.spark.deploy.SparkSubmitArguments.loadEnvironmentArguments(SparkSubmitArguments.scala:171)
+	at org.apache.spark.deploy.SparkSubmitArguments.<init>(SparkSubmitArguments.scala:100)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2$$anon$3.<init>(SparkSubmit.scala:1101)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.parseArguments(SparkSubmit.scala:1101)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:72)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1132)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1141)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.UnknownHostException: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1666)
+	... 35 more
+
+2026-10-19T16:42:28.929194621Z main ERROR Could not determine local host name java.net.UnknownHostException: 7486fe700234: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1671)
+	at org.apache.logging.log4j.core.util.NetUtils.getHostname(NetUtils.java:71)
+	at org.apache.logging.log4j.core.util.NetUtils.getLocalHostname(NetUtils.java:56)
+	at org.apache.logging.log4j.core.LoggerContext.lambda$setConfiguration$2(LoggerContext.java:667)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:667)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:762)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:784)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:300)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:153)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:46)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:99)
+	at org.apache.spark.internal.Logging$.islog4j2DefaultConfigured(Logging.scala:466)
+	at org.apache.spark.internal.Logging.initializeLogging(Logging.scala:337)
+	at org.apache.spark.internal.Logging.initializeLogIfNecessary(Logging.scala:318)
+	at org.apache.spark.internal.Logging.initializeLogIfNecessary$(Logging.scala:312)
+	at org.apache.spark.deploy.SparkSubmit.initializeLogIfNecessary(SparkSubmit.scala:64)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1132)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1141)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.UnknownHostException: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1666)
+	... 20 more
+
+2026-10-19T16:42:28.959253661Z main ERROR Could not determine local host name java.net.UnknownHostException: 7486fe700234: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1671)
+	at org.apache.logging.log4j.core.util.NetUtils.getHostname(NetUtils.java:71)
+	at org.apache.logging.log4j.core.util.NetUtils.getLocalHostname(NetUtils.java:56)
+	at org.apache.logging.log4j.core.LoggerContext.lambda$setConfiguration$2(LoggerContext.java:667)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:667)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:762)
+	at org.apache.logging.log4j.core.LoggerContext.setConfigLocation(LoggerContext.java:738)
+	at org.apache.spark.internal.Logging.initializeLogging(Logging.scala:347)
+	at org.apache.spark.internal.Logging.initializeLogIfNecessary(Logging.scala:318)
+	at org.apache.spark.internal.Logging.initializeLogIfNecessary$(Logging.scala:312)
+	at org.apache.spark.deploy.SparkSubmit.initializeLogIfNecessary(SparkSubmit.scala:64)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1132)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1141)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.net.UnknownHostException: 7486fe700234: Temporary failure in name resolution
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getLocalHost(InetAddress.java:1666)
+	... 15 more
+
+Exception in thread "main" java.lang.IllegalArgumentException: basedir must be absolute: ?/.ivy2.5.2/local
+	at org.apache.ivy.util.Checks.checkAbsolute(Checks.java:48)
+	at org.apache.ivy.plugins.repository.file.FileRepository.setBaseDir(FileRepository.java:137)
+	at org.apache.ivy.plugins.repository.file.FileRepository.<init>(FileRepository.java:44)
+	at org.apache.spark.util.MavenUtils$.createRepoResolvers(MavenUtils.scala:159)
+	at org.apache.spark.util.MavenUtils$.buildIvySettings(MavenUtils.scala:287)
+	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:118)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:341)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:961)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:204)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:227)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:96)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1132)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1141)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Traceback (most recent call last):
+  File "/work/tools/m07_transformacao.py", line 375, in <module>
+    executar(args.input, args.output, args.conjunto, args.shuffle_partitions, args.author)
+  File "/work/tools/m07_transformacao.py", line 326, in executar
+    spark = sessao(partitions)
+            ^^^^^^^^^^^^^^^^^^
+  File "/work/tools/m07_transformacao.py", line 154, in sessao
+    .getOrCreate())
+     ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyspark/sql/session.py", line 556, in getOrCreate
+    sc = SparkContext.getOrCreate(sparkConf)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyspark/core/context.py", line 523, in getOrCreate
+    SparkContext(conf=conf or SparkConf())
+  File "/usr/local/lib/python3.12/site-packages/pyspark/core/context.py", line 205, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/usr/local/lib/python3.12/site-packages/pyspark/core/context.py", line 444, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+                                       ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/pyspark/java_gateway.py", line 111, in launch_gateway
+    raise PySparkRuntimeError(
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.

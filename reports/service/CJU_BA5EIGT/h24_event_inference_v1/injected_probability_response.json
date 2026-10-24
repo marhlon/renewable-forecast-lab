@@ -1,0 +1,12 @@
+{
+  "detail": [
+    {
+      "loc": [
+        "body",
+        "p_event"
+      ],
+      "msg": "Extra inputs are not permitted",
+      "type": "extra_forbidden"
+    }
+  ]
+}

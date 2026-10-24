@@ -1,0 +1,4 @@
+activation_id,alias,generation,action,from_version,to_version,to_bundle_sha256,reason,evidence_request_ids_json,committed_at
+5dfd2cef151c49bba59c21f3cc89fbeb,active,1,activate,,v1,c378979b7b74ef50e9df018e3059e1e53e376f23594cc6abe4908941dc7ef11c,Inicialização do exercício local,[],2026-10-07T19:14:10.386388+00:00
+557961d6a16741e69af1385da30d2873,active,2,activate,v1,v2,50ab666bf8b3231baef46373241ef509b28ccdfc079b05cf8eec0202e71debab,Ativação técnica do candidato no laboratório; sem promoção estatística,[],2026-10-07T19:14:10.532413+00:00
+f3c2fdb1aaea43f989fc023a2fbf6444,active,3,rollback,v2,v1,c378979b7b74ef50e9df018e3059e1e53e376f23594cc6abe4908941dc7ef11c,Exercício: duas falhas HTTP 500 injetadas; restaurar versão anterior,"[""9d2c940f0bcb462db3992830a8530320"", ""bde2377f4e104cc39a6c632e92be152c""]",2026-10-07T19:14:10.907579+00:00

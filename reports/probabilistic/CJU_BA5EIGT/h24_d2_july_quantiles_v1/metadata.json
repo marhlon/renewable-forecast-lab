@@ -1,0 +1,38 @@
+{
+  "completed_at_utc": "2026-10-02T21:13:35.430311+00:00",
+  "input_rows": 744,
+  "validation_origins": 504,
+  "prediction_rows": 1008,
+  "methods": [
+    "persistence_residual_quantiles",
+    "hgb_weather_quantiles"
+  ],
+  "baseline_offsets_by_fold": [
+    {
+      "fold": 1,
+      "p10": -66.73185000000001,
+      "p50": 0.1667500000000004,
+      "p90": 86.27680000000008
+    },
+    {
+      "fold": 2,
+      "p10": -65.88629999999999,
+      "p50": -0.04574999999999818,
+      "p90": 81.0406
+    },
+    {
+      "fold": 3,
+      "p10": -60.5121,
+      "p50": -0.027249999999998664,
+      "p90": 75.71180000000001
+    }
+  ],
+  "protocol_sha256": "ab12f1a17ff217124c76212ab3ffdf6315c29c281cbcd8db9228ba62b2fedb13",
+  "output_sha256": {
+    "predictions.csv": "e7de5de9a11dcb7891bc51b440a3a09651b4e39c086abcc382361f121a6156bf",
+    "fold_metrics.csv": "7871cac41b9f6da3f43ccceaed7ef56eff8b18b4c3e6f4a6f63597ebb1aef33e",
+    "summary.csv": "0d932723e2b2ebee6dd7d2d6569f4caefe46a2e85c6dd5474ce7b7b62cfe845a",
+    "folds.csv": "888375f881434b7e7a6ee766aa767743066b73a28d515d81600a9b1a85fa5f88"
+  },
+  "model_promotion": false
+}

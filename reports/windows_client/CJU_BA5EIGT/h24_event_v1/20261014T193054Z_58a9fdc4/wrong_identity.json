@@ -1,0 +1,19 @@
+{
+  "schema": "renewcast-client-receipt-v1",
+  "client_version": "1.0.0",
+  "issued_at_utc": "2026-10-14T19:31:19.102730+00:00",
+  "url": "http://127.0.0.1:49343",
+  "frozen": true,
+  "executable": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_x2axoqxi\\renewcast\\renewcast.exe",
+  "working_directory": "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_cliente_x2axoqxi",
+  "conda_active": false,
+  "pythonpath_present": false,
+  "request_sha256": "912d0c261b02f41b1bfe845b9cd3b2fdf3abf3929259c8ed6c17a43d8f06ef8a",
+  "contract_sha256": "6f691d2c9d90cd2e554b80e555e67fc5d5a4602599aeccbb24424516ec197f8a",
+  "http_status": 200,
+  "response": null,
+  "http_elapsed_ms": 27.579199999308912,
+  "state": "invalid_response",
+  "detail": "Contrato divergente: model_sha256.",
+  "exit_code": 4
+}

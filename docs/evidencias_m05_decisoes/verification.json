@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "student_decision_rows_reconciled": 24,
+  "invalid_cases_rejected": 8,
+  "explicit_invalid_path_rejected": true,
+  "paired_label_mismatch_rejected": true,
+  "undefined_precision_nan": true,
+  "default_path_from_other_working_directory": true,
+  "new_models_trained": false
+}

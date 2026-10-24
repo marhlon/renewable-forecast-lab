@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "output_hashes_match": {
+    "threshold_metrics.csv": true,
+    "cost_sensitivity.csv": true,
+    "hgb_tradeoffs.csv": true
+  },
+  "source_predictions_hash_match": true,
+  "threshold_rows_reconciled": 24,
+  "sensitivity_rows_reconciled": 120,
+  "tradeoff_rows_reconciled": 4,
+  "student_policy_at_120": {
+    "method": "hgb_weather_classifier",
+    "threshold": 0.5,
+    "alarms": 109,
+    "cost_total": 191.0,
+    "precision": 0.6788990825688074,
+    "recall": 0.6548672566371682
+  },
+  "zero_budget_undefined_precision_requires_json_null": true,
+  "policy_saved_in_student_outputs": false,
+  "inspection_code_hash_reported": "20eeba1caf42d80d7d13965e1795a82bfa8ca1f9b1b01947d499139593adff6d",
+  "inspection_code_bytes_received": false,
+  "note": "Function reviewed from pasted code; original file bytes unavailable for code hash verification. No estimators refit."
+}

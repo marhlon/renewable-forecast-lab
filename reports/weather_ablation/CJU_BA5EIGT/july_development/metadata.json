@@ -1,0 +1,14 @@
+{
+  "completed_at_utc": "2026-09-29T00:26:58.757965+00:00",
+  "input_rows": 744,
+  "validation_rows": 504,
+  "protocol_sha256": "c1dfc390bd73ab6658525f8f6e47a453da13200ba1d914fff2f66d24d024d0b4",
+  "output_sha256": {
+    "predictions.csv": "291e9aec32608505b4ec7423de814401e372cf3411fcefad001ffeb4a0f7df76",
+    "fold_metrics.csv": "15dd02b4094b28935f511bab03a658b93083dd09c270335951288ed3e09a14f5",
+    "summary.csv": "5190f1d9b997aa92d551e3d4608f2a7d4337fcdfd09a04de1ec0131d2d98cd43",
+    "folds.csv": "d2e719dd31e9b0dc918c4ce93ac63a60dd20963786c7edfb6e9bf281c69424ac"
+  },
+  "scope": "exploratory_development_ablation; not independent final evaluation",
+  "model_promotion": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "renewcast-databricks-input-v1",
+  "conjunto": "CJU_BA5EIGT",
+  "parameters": {
+    "horizon_hours": 24,
+    "availability_delay_hours_assumed": 2,
+    "window_hours": 6,
+    "cutoff": "2026-07-11T06:00:00"
+  },
+  "generation_rows": 8760,
+  "training_rows": 7485,
+  "files": {
+    "geracao.parquet": {
+      "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "bytes": 125727
+    },
+    "treino_referencia.parquet": {
+      "sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "bytes": 394579
+    }
+  },
+  "distributed_notebook_sha256": "a57cc0961c75548aa400b30eb77568d9a692c12d0d7b8e1c9a168f0dd9579233",
+  "historical_source_versions_verified": false,
+  "availability_is_assumed": true,
+  "package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "preparation_sources_sha256": {
+    "C:\\renewable-forecast-lab\\data\\interim\\CJU_BA5EIGT_hourly.parquet": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+    "C:\\renewable-forecast-lab\\reports\\scale\\CJU_BA5EIGT\\m07_2_delta\\snapshot_treino.json": "81a4fd6aea9f00487133ac3a3dcaf0f7e4c1f96101b9ccf7c2afdf4ad3db82aa",
+    "C:\\renewable-forecast-lab\\notebooks\\databricks\\m07_3_reproducao.ipynb": "a57cc0961c75548aa400b30eb77568d9a692c12d0d7b8e1c9a168f0dd9579233",
+    "C:\\renewable-forecast-lab\\reports\\scale\\CJU_BA5EIGT\\laboratorio_temporal\\treino_autoria.parquet\\part-00000-1e27d39b-3b07-47a4-bb68-d2255698dd71-c000.snappy.parquet": "0dd9d9d2bfb513aec68f99adca986e223264ba80a7fce50e8c237529af5e81f8"
+  }
+}

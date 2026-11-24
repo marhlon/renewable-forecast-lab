@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_m09_transformer_blocks.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 12,
+  "test_file_sha256": "9bd6817434f982624d29449f28383a1b420f63e9fab319e5e13669f421127bda",
+  "module_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "2c23dca77361be27b9dc545067f4377c72adfbe37fc178069001f93531cbedc5"
+}

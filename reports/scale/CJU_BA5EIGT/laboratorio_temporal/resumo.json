@@ -1,0 +1,20 @@
+{
+  "horas_grade": 8760,
+  "horas_presentes": 8760,
+  "origens_com_features": 8753,
+  "linhas_com_features_e_alvo": 8729,
+  "alvos_sem_valor": 24,
+  "horizonte": 24,
+  "atraso": 2,
+  "janela": 6,
+  "spark_version": "4.0.1",
+  "particoes_configuradas": 2,
+  "semantica_temporal": "rotulos existentes; fuso e intervalo fisico nao verificados",
+  "disponibilidade_assumida": true,
+  "modelos_treinados": false,
+  "linhas_treino_autoria": 7485,
+  "corte_treino": "2026-07-11T06:00:00",
+  "primeira_origem_treino": "2025-09-01T07:00:00",
+  "ultima_origem_treino": "2026-07-10T03:00:00",
+  "ultimo_alvo_disponivel_treino": "2026-07-11T05:00:00"
+}

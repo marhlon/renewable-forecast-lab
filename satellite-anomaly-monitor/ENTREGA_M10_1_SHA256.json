@@ -1,0 +1,158 @@
+{
+  "schema": "satmon-delivery-sha256-v1",
+  "run_id": "20261118T203614Z_7e13daae",
+  "files": {
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/anomaly_types.csv": {
+      "bytes": 13299,
+      "sha256": "e0cadee4ee9697c5ca8d4f9e81067454d7d7a00d063ee0de33cbc77660eec8bc"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/channel_50.csv.gz": {
+      "bytes": 1035363,
+      "sha256": "881d216d9fca320cee5e6aef836f5f2f08a9b25a91b745f95a12699d9a0e7543"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/channel_51.csv.gz": {
+      "bytes": 1030945,
+      "sha256": "2692b3d8db062fb216a3a57d748f4bb4a9a7d08dbf85d1b78dd9473e9573f080"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/channel_52.csv.gz": {
+      "bytes": 1032206,
+      "sha256": "081759f986e913f210954676083c05ed45d0a7f8e041b034fb143c052409289f"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/channels.csv": {
+      "bytes": 3782,
+      "sha256": "27a4d6819642effc2a590d49e5bd2c7a915c06a1eb78502c34bed055d1c76d5d"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/esa_metadata_croissant.json": {
+      "bytes": 45386,
+      "sha256": "ea90c17c334d5d7e481277f85968495cb4078297af0f0040ec36bd70ea2a6530"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/labels.csv": {
+      "bytes": 245564,
+      "sha256": "1564d630f1ec1387d699ec81531ce57118051a220c8b7cba050a446a652b9082"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_2007/source.json": {
+      "bytes": 3512,
+      "sha256": "488589157b1f536988f7ec2a91ac693010766f0b017d7f113596a3d33f7a305c"
+    },
+    "satellite-anomaly-monitor/docs/Aula_M10_1_Contrato_Telemetria.md": {
+      "bytes": 13357,
+      "sha256": "361e5db14e21b1659ccf3d2be7984a5366b6965421d7a4b55dff3369329ccc81"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/auditar_resultados.py": {
+      "bytes": 15302,
+      "sha256": "4c9b358c45731404ae386c97eea3a8ef95507e27507a099f696815b819b9c547"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/auditoria_resultados.json": {
+      "bytes": 9249,
+      "sha256": "1eb6a00a978182e517797a479f6b9ef6abbbb454c6c7f1c59e5b29d7ec9fa223"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/conferencia_autoral.log": {
+      "bytes": 165,
+      "sha256": "f9d8297a535a2007083dd0c757a71152663aa58c143b03f44d133513613334a3"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/empacotar_entrega.py": {
+      "bytes": 8273,
+      "sha256": "8f0e39f58f0937993b2bb42cd742d5075260e71fc3c8bee95500b24076358869"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/execucao_autoral.log": {
+      "bytes": 1367,
+      "sha256": "6e9faecb278dd4e948a9077cbb0e52a53e7b2d3a2932d45ba6f395aa8bc186ce"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/execucao_autoral_falha_resolucao.log": {
+      "bytes": 871,
+      "sha256": "0e4b9eeeaaa85bffc1cabff61190f6fe9e8b1eb379eab95293e5285a04abd150"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/executar_m10_1_antes_ajuste_resolucao.py": {
+      "bytes": 9407,
+      "sha256": "e0e60bcf3340ac7d35bdf315bb5735c1f63e6f5f82acf4808b7ef0b574c2db32"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_1_local/registro_execucao.json": {
+      "bytes": 2802,
+      "sha256": "b2159182c73db4df623de5ade2ef75ca05dcf9e5e96e81bb012fade144bb3e2c"
+    },
+    "satellite-anomaly-monitor/docs/Explicacao_M10_1_Passo_a_Passo.md": {
+      "bytes": 9741,
+      "sha256": "b48f3a75709e8b3d8a39b86b8f7da7993a42d125c99b0ddace02a2e6012190e6"
+    },
+    "satellite-anomaly-monitor/LEIA_ENTREGA_M10_1.md": {
+      "bytes": 2489,
+      "sha256": "b509de48110fd4df4e3b3304fd98934df39baf9991fd065569d972e858d56cdf"
+    },
+    "satellite-anomaly-monitor/LEIA_M10_1.md": {
+      "bytes": 1203,
+      "sha256": "31814dac3e5f16b4cf18b76de189a432877095ef6c80e4c21238e93768bd5591"
+    },
+    "satellite-anomaly-monitor/notebooks/m10_sincronizacao_autoral.py": {
+      "bytes": 3814,
+      "sha256": "ac48cfc0bb24dac3dafad0e14a9e9bb555ef39b36699a09a22094d00e6638acd"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T202955Z_34b6fa2e/conferencia.json": {
+      "bytes": 281,
+      "sha256": "346f81494b21d3103bbf98042651f53dd0b762d42e9b9e0ac24a478d07c30eea"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/categorias.csv": {
+      "bytes": 148,
+      "sha256": "7675824b619b8af5942876c1b279de12c8e53de76861c7e3e87037cd35f278cb"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/cobertura_eventos.csv": {
+      "bytes": 3460,
+      "sha256": "3a719c3aab72966a5469198eba3a5ed9251ea5c89ec0f28f695d863d59bae664"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/conferencia.json": {
+      "bytes": 281,
+      "sha256": "346f81494b21d3103bbf98042651f53dd0b762d42e9b9e0ac24a478d07c30eea"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/contraprova_sintetica.csv": {
+      "bytes": 253,
+      "sha256": "a3592a18a9b6a3c238b903b9a3cf497cb0f114199815a91a45701fa0b66ca828"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/eventos_fonte.csv": {
+      "bytes": 4876,
+      "sha256": "a58dc670236100ef8d3bc08632c8c0e468f376abd6646dd95c5c4800bc491114"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/grade_features.csv.gz": {
+      "bytes": 4555959,
+      "sha256": "20d6be0446fcb938b70155238269ec81a2082417a7a32128f536c013df6920bd"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/perfil_canais.csv": {
+      "bytes": 380,
+      "sha256": "84add2985695732351c14b59e0110d10db21b97f8e5e518bf8863923781df4cc"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/relatorio.html": {
+      "bytes": 13367,
+      "sha256": "10da8275af52ffba7800b355abd217ad0935f621f0886daa7e7526f86f608492"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/resultado.json": {
+      "bytes": 2929,
+      "sha256": "27e2d37c04348768194c20f4f2de325cb3f0b157d5fafcab3b34ffeaed649ca9"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/20261118T203614Z_7e13daae/rotulos_grade.csv.gz": {
+      "bytes": 890888,
+      "sha256": "902f1e61ca5970bf7ea0bb5398f0271f89e82e12272da22f6cbb320eabe721e4"
+    },
+    "satellite-anomaly-monitor/reports/m10_1/latest_run.json": {
+      "bytes": 254,
+      "sha256": "d4fa74f695fda5210119f079e3601794cbf900819b5e9ad2c590ee2d5c7fc41b"
+    },
+    "satellite-anomaly-monitor/reports/parecer_m10_1.md": {
+      "bytes": 8767,
+      "sha256": "b1aa7cb20d428fefe0cc0ed1ec643af03a374193678a9265caf4d41cc9b49b20"
+    },
+    "satellite-anomaly-monitor/scripts/executar_m10_1.py": {
+      "bytes": 9513,
+      "sha256": "5b5d24f6f605366c3cdae05a5b9b862bcf8ce80775a807421b33211600732184"
+    },
+    "satellite-anomaly-monitor/src/satmon/__init__.py": {
+      "bytes": 49,
+      "sha256": "0b357fc9d3f32da94f69938914ae05c76ab869014a1e3820a9e666263341f14e"
+    },
+    "satellite-anomaly-monitor/src/satmon/temporal.py": {
+      "bytes": 5846,
+      "sha256": "428580e03cb61ffbb5ca6d306863e339ca8f2cfe3c1006f7256dde35a80b6a99"
+    },
+    "satellite-anomaly-monitor/tests/test_m10_sincronizacao_autoral.py": {
+      "bytes": 7634,
+      "sha256": "84038dbb49516f26aa67f2e1a4eadcc7b22b61aa836f07ec01b64f98e54b2051"
+    }
+  }
+}

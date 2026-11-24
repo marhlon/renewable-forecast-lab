@@ -1,0 +1,30 @@
+{
+  "schema": "satmon-m10-3-esa-test-source-v1",
+  "source_doi": "10.5281/zenodo.15237121",
+  "mission": "ESA-Mission1 (v2)",
+  "start": "2011-01-01T00:00:00+00:00",
+  "stop_exclusive": "2014-01-01T00:00:00+00:00",
+  "channels": [
+    "channel_50",
+    "channel_51",
+    "channel_52"
+  ],
+  "step_seconds": 900,
+  "max_age_seconds": 180,
+  "source_spec_m10_2_sha256": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+  "source_members_sha256": {
+    "channel_50.zip": "803023626e29355d6dabcc85b432cf6a016b2b3ae073be9d41b0f2a952e5d4b4",
+    "channel_51.zip": "72dde30b021dc0fb3756e59371c3ca1e57c7534e1db91bb99f0affb66aa1917f",
+    "channel_52.zip": "c6c1a88d9b42e2465f46e02117d104b03e63fdd86eaae3b7e78ab0138cdbf7b0",
+    "channels.csv": "27a4d6819642effc2a590d49e5bd2c7a915c06a1eb78502c34bed055d1c76d5d",
+    "labels.csv": "1564d630f1ec1387d699ec81531ce57118051a220c8b7cba050a446a652b9082",
+    "anomaly_types.csv": "e0cadee4ee9697c5ca8d4f9e81067454d7d7a00d063ee0de33cbc77660eec8bc"
+  },
+  "grid_rows": 105216,
+  "license": "CC BY 3.0 IGO; recorte e grade adaptados de European Space Agency",
+  "availability": "UTC e disponibilidade na medição assumidos, não verificados em operação.",
+  "files": {
+    "grade_teste.csv.gz": "459118150635089bf1ccd32f1c9eb4c293fa69495b1b76d45c41e32e730c88ee",
+    "eventos_teste.csv": "8418b3d8116672c5b1b91c377c9e32b017e18a966aa5da4d8444af202cdd6b4e"
+  }
+}

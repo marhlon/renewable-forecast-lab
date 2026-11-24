@@ -1,0 +1,90 @@
+{
+  "schema": "satmon-esa-curated-source-v1",
+  "record_id": "15237121",
+  "doi": "10.5281/zenodo.15237121",
+  "source_url": "https://zenodo.org/records/15237121",
+  "archive_url": "https://zenodo.org/api/records/15237121/files/ESA-Mission1.zip/content",
+  "archive_size": 3776246073,
+  "archive_md5_declared": "md5:9770ad12ed730238f37c42d5c27ab436",
+  "whole_archive_checksum_verified": false,
+  "individual_zip_members_crc32_verified": true,
+  "members": [
+    {
+      "name": "ESA-Mission1/channels/channel_50.zip",
+      "compressed": 25693020,
+      "size": 25693020,
+      "offset": 2302057035,
+      "method": 0,
+      "crc32": 3319868204,
+      "sha256_extracted_zip": "803023626e29355d6dabcc85b432cf6a016b2b3ae073be9d41b0f2a952e5d4b4",
+      "selected_rows": 348901,
+      "derived_csv_sha256": "881d216d9fca320cee5e6aef836f5f2f08a9b25a91b745f95a12699d9a0e7543"
+    },
+    {
+      "name": "ESA-Mission1/channels/channel_51.zip",
+      "compressed": 25654814,
+      "size": 25654814,
+      "offset": 2327750121,
+      "method": 0,
+      "crc32": 1583543653,
+      "sha256_extracted_zip": "72dde30b021dc0fb3756e59371c3ca1e57c7534e1db91bb99f0affb66aa1917f",
+      "selected_rows": 348901,
+      "derived_csv_sha256": "2692b3d8db062fb216a3a57d748f4bb4a9a7d08dbf85d1b78dd9473e9573f080"
+    },
+    {
+      "name": "ESA-Mission1/channels/channel_52.zip",
+      "compressed": 25664721,
+      "size": 25664721,
+      "offset": 2353405001,
+      "method": 0,
+      "crc32": 238607423,
+      "sha256_extracted_zip": "c6c1a88d9b42e2465f46e02117d104b03e63fdd86eaae3b7e78ab0138cdbf7b0",
+      "selected_rows": 348901,
+      "derived_csv_sha256": "081759f986e913f210954676083c05ed45d0a7f8e041b034fb143c052409289f"
+    }
+  ],
+  "channels": [
+    "channel_50",
+    "channel_51",
+    "channel_52"
+  ],
+  "selection_reason": "same group 10, target noncategorical channels; compact source archives and at least 15 anomaly annotation rows each in full mission; no model performance used",
+  "exploratory_calendar_slice": "2007-01-01 inclusive to 2008-01-01 exclusive; contract development, not untouched holdout",
+  "source_timezone": "naive measurement index; label strings end in Z; UTC interpretation assumed for this laboratory",
+  "source_values": "preserved; anonymized channel and physical-unit identifiers; no conversion to engineering units",
+  "license_declaration": {
+    "@type": "sc:CreativeWork",
+    "name": "Attribution 3.0 IGO (CC BY 3.0 IGO)",
+    "url": "https://creativecommons.org/licenses/by/3.0/igo/"
+  },
+  "files": {
+    "anomaly_types.csv": {
+      "bytes": 13299,
+      "sha256": "e0cadee4ee9697c5ca8d4f9e81067454d7d7a00d063ee0de33cbc77660eec8bc"
+    },
+    "channel_50.csv.gz": {
+      "bytes": 1035363,
+      "sha256": "881d216d9fca320cee5e6aef836f5f2f08a9b25a91b745f95a12699d9a0e7543"
+    },
+    "channel_51.csv.gz": {
+      "bytes": 1030945,
+      "sha256": "2692b3d8db062fb216a3a57d748f4bb4a9a7d08dbf85d1b78dd9473e9573f080"
+    },
+    "channel_52.csv.gz": {
+      "bytes": 1032206,
+      "sha256": "081759f986e913f210954676083c05ed45d0a7f8e041b034fb143c052409289f"
+    },
+    "channels.csv": {
+      "bytes": 3782,
+      "sha256": "27a4d6819642effc2a590d49e5bd2c7a915c06a1eb78502c34bed055d1c76d5d"
+    },
+    "esa_metadata_croissant.json": {
+      "bytes": 45386,
+      "sha256": "ea90c17c334d5d7e481277f85968495cb4078297af0f0040ec36bd70ea2a6530"
+    },
+    "labels.csv": {
+      "bytes": 245564,
+      "sha256": "1564d630f1ec1387d699ec81531ce57118051a220c8b7cba050a446a652b9082"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "57d9408018bf45279962da8fa30e6b68",
+  "source_run_id": "c9f73918630644f688cfd7f6a26e58fa",
+  "source_oof_sha256": "ac0210905f53d115b6dca622087312fb52c98b7c7abbf9d789ab219356c2c82b",
+  "source_protocol": {
+    "horizon_hours": 6,
+    "availability_delay_hours": 2,
+    "availability_is_assumed": true,
+    "holdout_start": "2026-08-04 00:00:00",
+    "holdout_days": 28,
+    "cv_splits": 5,
+    "cv_test_rows": 672,
+    "cv_label_boundary": "strictly_before_validation_origin",
+    "early_stopping": false,
+    "mae_constraint_ratio": 1.02,
+    "absolute_bias_constraint": 2.0
+  },
+  "window_hours": 168,
+  "min_history": 48,
+  "window_clock": "target_available_at",
+  "window_bounds": "[forecast_origin-window, forecast_origin)",
+  "insufficient_history_offset": 0.0,
+  "history_residual": "target_generation - original_prediction",
+  "reset_at_fold_boundary": false,
+  "corrected_rows": 3304,
+  "total_rows": 3360,
+  "evaluation_scope": "development_post_selection_prequential",
+  "holdout_evaluated": false,
+  "calibration_rule": "mean_fold_mae <= raw AND mean_absolute_fold_bias <= 2",
+  "summary_metrics": "equal_weight_fold_means_except_global_signed_bias"
+}

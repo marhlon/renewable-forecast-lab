@@ -1,0 +1,89 @@
+{
+  "schema": "satmon-m10-2-package-v1",
+  "files": {
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/canais_grade.csv.gz": {
+      "bytes": 3172268,
+      "sha256": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/eventos.csv": {
+      "bytes": 11777,
+      "sha256": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/protocolo.json": {
+      "bytes": 2108,
+      "sha256": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0"
+    },
+    "satellite-anomaly-monitor/docs/COMECE_M10_2.md": {
+      "bytes": 6412,
+      "sha256": "a939dd9fdfed335d556c4ff8a73deb043f5660c4d8d8aadc7b9b1d8f059ea807"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/auditoria.json": {
+      "bytes": 596,
+      "sha256": "ec09ef7e33d1fcd870681e564faa53052b033e3d8ba9668957eefdd95acd1c0b"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/casos_reais.csv": {
+      "bytes": 874,
+      "sha256": "c56da698d7a5b31f4d9c4494ae713f50cf642f6bc9915fb60e53a325b8690517"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/cobertura_eventos.csv": {
+      "bytes": 3869,
+      "sha256": "4d5050138188f77069e6eed4aabc95e3e1a126b1c5de9626f3d0f5ba23e34caa"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/contextos.csv": {
+      "bytes": 321,
+      "sha256": "e5890e216a92a445d6f38880a67ea256c0acb0cc1270340c09e72ebb9c22f2f3"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/escores_desenvolvimento.csv.gz": {
+      "bytes": 1940862,
+      "sha256": "c24fab70235aea6fd10c7ab1082eb7d5cbe9c51134ec05799fa66516e39088d2"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/metricas.csv": {
+      "bytes": 217,
+      "sha256": "24c9cc8443efe8fba8b9827aae6b02fe5dc6b133493c7dfc22849e1a8e204e6c"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/relatorio.html": {
+      "bytes": 10817,
+      "sha256": "0eda286de394c33e02dc7a6b0c036d1d71ed35e22a22223fe6441c595df42de4"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/resultado.json": {
+      "bytes": 3198,
+      "sha256": "88db9761fc1b3777e6ba0483218b0d444ce32f0c49987d88e0d695f51b687149"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2/sensibilidade_evento.csv": {
+      "bytes": 257,
+      "sha256": "da677fe05d18a7d8beaf3ba7326a5047a630f8e20ed7e57e11a9524058474eda"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_1_Escore_Robusto.md": {
+      "bytes": 6374,
+      "sha256": "7610596249db7feb1d4b551f4626c740e491482f1e6a1165124e06ac47ce0c7e"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_2_PCA_Reconstrucao.md": {
+      "bytes": 5500,
+      "sha256": "4d1128fb5bd57fa22f386a86565749db26aa6a632614f9fe24b5a37e65c2a8ff"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_3_Isolation_Forest_e_Avaliacao.md": {
+      "bytes": 8475,
+      "sha256": "e19549045b1e550fcc2cbf44f71c27d296eeae88d9491f857401148eea5c37ee"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Resposta_M10_2.md": {
+      "bytes": 665,
+      "sha256": "9c0fb9f77caafe4a8e63acab488416ae1280668c248cdfa9732d81ff5b78cff7"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/pca_projecao.png": {
+      "bytes": 65888,
+      "sha256": "dcf86117336484539773ed1e24e0640a5d5d06594d77202b986cbdb1850976f3"
+    },
+    "satellite-anomaly-monitor/notebooks/LEIA_M10_2.md": {
+      "bytes": 308,
+      "sha256": "990c5ef4aad507851a6b46cc55fb2bdcbf5a435493bce3f2f15b95d8b5d21e58"
+    },
+    "satellite-anomaly-monitor/scripts/executar_m10_2.py": {
+      "bytes": 16300,
+      "sha256": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098"
+    },
+    "satellite-anomaly-monitor/src/satmon/detectores_m10_2.py": {
+      "bytes": 4292,
+      "sha256": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372"
+    }
+  }
+}

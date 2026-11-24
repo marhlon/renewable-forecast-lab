@@ -1,0 +1,33 @@
+{
+  "schema": "renewcast-mlp-protocol-v1",
+  "horizon_hours": 24,
+  "availability_delay_hours_assumed": 2,
+  "context_hours": 24,
+  "seeds": [
+    17,
+    29,
+    41
+  ],
+  "hidden": 32,
+  "dropout": 0.1,
+  "batch_size": 128,
+  "max_epochs": 60,
+  "patience": 8,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "optimizer": "AdamW",
+  "selection_rule": "lowest selection MSE; first epoch wins ties; no refit",
+  "seed_selection": "none; report every seed",
+  "cpu_threads": 2,
+  "dtype_mlp": "float32",
+  "num_workers": 0,
+  "drop_last": false,
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "code_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+  "authorship_sha256": null,
+  "report_scope": "previously explored development week; not untouched holdout"
+}

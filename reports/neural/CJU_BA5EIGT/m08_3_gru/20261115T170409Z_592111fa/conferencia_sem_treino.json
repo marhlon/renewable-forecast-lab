@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "portas_numpy_vs_grucell_e_entradas_preservadas",
+    "vinte_quatro_passos_numpy_vs_gru",
+    "estado_reiniciado_entre_chamadas",
+    "ordem_do_lote_nao_muda_previsao",
+    "ultimo_lote_e_ultimo_estado",
+    "gru_929_parametros",
+    "shapes_invalidos_rejeitados",
+    "avaliador_4_mais_1_mse20",
+    "avaliador_modos_mistos_e_excecoes",
+    "avaliador_preserva_pesos_e_gradientes",
+    "avaliador_rejeita_vazio_shape_nan_overflow"
+  ],
+  "checks_count": 11,
+  "max_grucell_difference": 2.220446049250313e-16,
+  "tolerance_grucell": 1e-12,
+  "training_uses": "torch.nn.GRU and autograd; numpy step is a separate semantic check",
+  "authorship_sha256": "6d8dde1412f1b7815a1a3483cefb6f89240f8f63a48144446616e1231f394de2"
+}

@@ -1,0 +1,7 @@
+{
+  "validation_mae": 11.369173909576798,
+  "validation_rmse": 16.750014349273187,
+  "validation_ramp_mae": 31.179880847301455,
+  "validation_absolute_bias": 2.1871515976414737,
+  "validation_persistence_mae": 11.314612648809524
+}

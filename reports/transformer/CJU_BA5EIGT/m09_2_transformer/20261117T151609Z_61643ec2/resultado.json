@@ -1,0 +1,141 @@
+{
+  "schema": "renewcast-transformer-composition-result-v1",
+  "completed": true,
+  "run_id": "20261117T151609Z_61643ec2",
+  "status": "local didactic composition for review; not a distributed course acceptance",
+  "forecast_origin": "2026-07-03T04:00:00",
+  "history_start": "2026-07-02T03:00:00",
+  "history_end": "2026-07-03T02:00:00",
+  "availability_delay_hours_assumed": 2,
+  "physical_timezone_verified": false,
+  "partition_rows": {
+    "ajuste": 7079,
+    "selecao": 168,
+    "avaliacao": 168,
+    "excluidas_disponibilidade": 52
+  },
+  "excluded_incomplete": 18,
+  "shapes": {
+    "source": [
+      1,
+      24,
+      1
+    ],
+    "queries": [
+      1,
+      6,
+      1
+    ],
+    "source_embedding": [
+      1,
+      24,
+      16
+    ],
+    "memory": [
+      1,
+      24,
+      16
+    ],
+    "decoder": [
+      1,
+      6,
+      16
+    ]
+  },
+  "parameter_count": 11200,
+  "query_slots": 6,
+  "checks": {
+    "passed": true,
+    "checks": [
+      "multiplas_cabecas_retangulares_e_mascara_vs_pytorch",
+      "encoder_post_norm_vs_pytorch",
+      "residuais_e_normalizacao_por_token",
+      "decoder_self_cross_ffn_vs_pytorch",
+      "cross_attention_respeita_mascara_de_memoria",
+      "duas_camadas_encoder_decoder_vs_pilhas_pytorch",
+      "decoder_duas_camadas_preserva_prefixo_com_memoria_fixa",
+      "batch_nao_mistura_origens",
+      "posicao_fixa_altera_equivariancia_do_encoder",
+      "ultima_consulta_pode_mudar_apos_empilhamento",
+      "contratos_de_cabecas_mascaras_e_posicao_impar",
+      "gradientes_atravessam_blocos_sem_atualizar_parametros",
+      "recarregamento_configuracao_e_pesos"
+    ],
+    "checks_count": 13,
+    "tolerance": 1e-12,
+    "max_difference": 6.661338147750939e-16,
+    "differences": {
+      "mha_output": 0.0,
+      "mha_weights": 0.0,
+      "mha_row_sums": 2.220446049250313e-16,
+      "encoder_free": 0.0,
+      "encoder_causal": 4.440892098500626e-16,
+      "residual_attention": 0.0,
+      "residual_ffn": 0.0,
+      "norm1": 0.0,
+      "norm2": 0.0,
+      "decoder": 6.661338147750939e-16,
+      "cross_mask": 0.0,
+      "stack_memory": 0.0,
+      "stack_decoder": 6.661338147750939e-16,
+      "decoder_prefix": 0.0,
+      "batch_permutation": 0.0,
+      "without_position": 4.440892098500626e-16,
+      "last_query_one_layer": 0.0,
+      "reload": 0.0
+    },
+    "gradient_paths": {
+      "source_projection": 1.1325574375031862,
+      "encoder_value_projection": 4.390851497987397,
+      "decoder_cross_value_projection": 6.550242524191484
+    },
+    "future_decoder_delta": 2.808372951937531,
+    "fixed_position_delta": 1.4627723722006247,
+    "last_query_two_layers_delta": 0.06132611481851291,
+    "parameter_count": 11200,
+    "optimizer_steps": 0,
+    "training_performed": false
+  },
+  "real_decoder_prefix_difference": 0.0,
+  "changed_query_slots_difference": 3.23832655045314,
+  "reload_difference": 0.0,
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "source_package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "code_sha256": {
+    "laboratorio_transformer.py": "46fe3d383d34dd5cff08af211d4a452a1ebaca6f9007231212bf7123fd24edf8",
+    "m09_transformer_verificacao.py": "498f7d64a464dede47afbf1386c130fd4cd8678aade3d8f2171f3d0e0e88e03c",
+    "transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+    "m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "device": "cpu",
+    "dtype": "float64"
+  },
+  "models_trained": false,
+  "optimizer_steps": 0,
+  "pretrained_weights_used": false,
+  "forecast_metrics_computed": false,
+  "future_targets_used": false,
+  "operational_approval": false,
+  "elapsed_seconds": 0.3307957999641076,
+  "output_sha256": {
+    "conferencia.json": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+    "config.json": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+    "estado_transformer.pt": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+    "fluxo.csv": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+    "janela.csv": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+    "pesos_atencao.csv": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+    "preprocessing.json": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+    "relatorio.html": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+    "representacoes_decoder.csv": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+    "representacoes_encoder.csv": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4"
+  }
+}

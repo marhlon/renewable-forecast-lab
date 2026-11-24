@@ -1,0 +1,133 @@
+{
+  "schema": "renewcast-autograd-m08-1-v1",
+  "run_id": "20261030T145848Z_f3a52130",
+  "training_state": "completed",
+  "code_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "source_package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "torch_version": "2.7.1+cpu",
+  "python_version": "3.12.13",
+  "device": "cpu",
+  "dtype": "float64",
+  "threads": 2,
+  "feature_columns": [
+    "geracao_em_history_end",
+    "media_historico_mwmed"
+  ],
+  "shapes": {
+    "X": [
+      7291,
+      2
+    ],
+    "y": [
+      7291,
+      1
+    ],
+    "w": [
+      2,
+      1
+    ],
+    "b": []
+  },
+  "split": {
+    "fit_rows": 7291,
+    "excluded_rows": 26,
+    "validation_rows": 168,
+    "validation_origin_start": "2026-07-03 04:00:00",
+    "fit_last_target_available_at": "2026-07-03 03:00:00",
+    "validation_origin_end": "2026-07-10 03:00:00"
+  },
+  "normalization_fit_only": true,
+  "learning_rate": 0.05,
+  "quadratic_stability_upper_bound": 0.550816954646894,
+  "requested_steps": 400,
+  "completed_steps": 400,
+  "optimization_seconds": 0.5291360999690369,
+  "gradient_checks": [
+    {
+      "case": "manual",
+      "loss": 2.5,
+      "dw": [
+        [
+          -1.0
+        ],
+        [
+          -2.0
+        ]
+      ],
+      "db": -3.0,
+      "analytic_max_difference": 0.0,
+      "finite_difference_max_error": 1.9728929601114942e-10
+    },
+    {
+      "case": "oito_linhas_reais",
+      "loss": 0.4888570139178945,
+      "dw": [
+        [
+          -0.35187847025220786
+        ],
+        [
+          0.9641250209738808
+        ]
+      ],
+      "db": 1.3233009035831669,
+      "analytic_max_difference": 2.220446049250313e-16,
+      "finite_difference_max_error": 2.194000536803742e-11
+    }
+  ],
+  "pitfalls": {
+    "first_dw": [
+      [
+        -1.0
+      ],
+      [
+        -2.0
+      ]
+    ],
+    "accumulated_dw": [
+      [
+        -2.0
+      ],
+      [
+        -4.0
+      ]
+    ],
+    "mse_before_step": 2.5,
+    "mse_after_step_lr_0p1": 1.305,
+    "incorrect_broadcast_shape": [
+      2,
+      2
+    ],
+    "incorrect_shape_rejected": true
+  },
+  "authorship_file_sha256": null,
+  "authorship_checked": false,
+  "validation_used_for_early_stopping": false,
+  "evaluation_scope": "single previously explored development week; not a new untouched holdout",
+  "availability_is_assumed": true,
+  "operational_model_approved": false,
+  "fit_mse_standardized_final": 0.6346101118839145,
+  "least_squares_fit_mse": 0.634610085614128,
+  "optimization_gap": 2.626978645725586e-08,
+  "validation_metrics": {
+    "linear_autograd": {
+      "mae_mwmed": 37.03571274923828,
+      "rmse_mwmed": 52.01779633323838,
+      "signed_bias_observed_minus_predicted": 22.45994407623489
+    },
+    "persistence_d2": {
+      "mae_mwmed": 37.99164583333333,
+      "rmse_mwmed": 55.43434225554642,
+      "signed_bias_observed_minus_predicted": -3.016872023809524
+    }
+  },
+  "reload_max_absolute_difference": 0.0,
+  "output_sha256": {
+    "curva_treino.csv": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+    "linear_state.pt": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+    "predictions.csv": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9"
+  }
+}

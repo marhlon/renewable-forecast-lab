@@ -1,0 +1,83 @@
+{
+  "schema": "renewcast-m09-1-correction-delivery-v1",
+  "verified_at_utc": "2026-11-17T14:48:07.791259+00:00",
+  "verified": true,
+  "run_directory": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf",
+  "proof_directory": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be",
+  "commands": {
+    "laboratorio": [
+      "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+      "-W",
+      "error::UserWarning",
+      "notebooks/laboratorio_atencao.py",
+      "--autoria",
+      "notebooks/m09_atencao_autoral.py"
+    ],
+    "testes": [
+      "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_m09_atencao_autoral.py",
+      "-v"
+    ]
+  },
+  "validation": {
+    "schema": "renewcast-m09-1-html-authorship-validation-v1",
+    "verified_at_utc": "2026-11-17T14:44:47.992241+00:00",
+    "verified": true,
+    "run_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\20261117T144205Z_917f4acf",
+    "proof_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\comprovacao_20261117T144147Z_e63fc0be",
+    "html_float_cells_checked": 72,
+    "html_timestamps_checked": 24,
+    "position_integers_preserved": true,
+    "userwarning_treated_as_error": true,
+    "laboratory_stderr_empty": true,
+    "autoria_argument_recorded": true,
+    "authorship_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+    "code_sha256": {
+      "laboratorio_atencao.py": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8"
+    },
+    "integrated_check_groups": 8,
+    "additional_tests_passed": 6,
+    "maximum_difference_pytorch": 4.440892098500626e-16,
+    "unchanged_mathematical_artifacts": [
+      "pesos_livres.csv",
+      "pesos_causais.csv",
+      "janela_e_representacoes.csv",
+      "projecoes.json"
+    ],
+    "only_expected_format_change_from_distributed_script": true,
+    "input_and_output_hashes_valid": true,
+    "models_trained": false,
+    "m08_training_or_tests_repeated": false
+  },
+  "files_sha256": {
+    "notebooks/laboratorio_atencao.py": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8",
+    "notebooks/m09_atencao_autoral.py": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+    "tests/test_m09_atencao_autoral.py": "fc4ec9245e8169bf841e3906f4613893706de8950c4a07ab6eae6771b0d049de",
+    "docs/Conferencia_M09_1_20261117.md": "6fe87e6584035ad6ea18bb2c5877292b342c1aeb33e5308557a3c92994e4aaa9",
+    "reports/parecer_m09_atencao.md": "58ad2ea0fe967225add26a4dad87c164822cbc2e51f2453082b312a8e4c2b15d",
+    "docs/Explicacao_M09_1_Passo_a_Passo.md": "05d9c5987be81ba5edcce653e704e3aec9fb9facc35ce828ec90e9968f6ccfcf",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/conferencia.json": "c1c95845fdbc2ea2bbffae6bab83b24b71e6b9e879af5715f8910dcb0c60fd60",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/resultado.json": "c113d87309c77772fc09f04f7a42127253cfceb65e7226ca6f3d8ef3586340f9",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/pesos_livres.csv": "002c457ba829b8a29e9fb838ccbe1538b46b2853cb86c3b5ba01b9a22ee5eafb",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/pesos_causais.csv": "197301c9eefbdafe57279e5a58ac6ea56690251685f95026c76aae9d096b6dcd",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/janela_e_representacoes.csv": "1e7c3d2f77c955b9dce1e79e9c4bea6cc8fbf29f2ed5d1309d1811855ad7692a",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/projecoes.json": "7cfe00f5fb68aa973e67d15810bb30c0f29b9068062598fd832f947b6bf04465",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/relatorio.html": "40fd7ea323896e806124f8779be195977f9ae4b036b9ca4de1832189166a3d03",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/execucao.json": "0d7cba0c563e29eb9bd6d3192b3e4f0d3860a9d4c6c89efe5f17031b1b38f976",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/validacao_html_autoria.json": "2a61b72f1f448acdb497e26ac6ad4ce0bc11d0105712400401bff2d075b56a3d",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/correcao_html.patch": "73692ae6c5695d8fbdc70848394a7dcdcfb4d7b8ca7566632401d93b97217ac6",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/laboratorio_stdout.log": "d87b35a9da8768cb52ddb2a2125d19cecd3d581257d49fb87d16a14f7c250ad0",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/laboratorio_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/testes_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/comprovacao_20261117T144147Z_e63fc0be/testes_stderr.log": "30c7319f78441ff5f54ccc35b0e1b5db817992088fdb5d85d7bdda0587e43a01",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/mapas_atencao_20261116.png": "231b7f6467aadbba4f73379de6bf565011c444921e22520566929142197adfbb",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a"
+  },
+  "scope": "M09.1 HTML correction and explicit authored-function execution; no M09.2 implementation and no repeated M08 training or tests."
+}

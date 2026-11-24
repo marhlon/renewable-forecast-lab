@@ -1,0 +1,6 @@
+﻿M10.2 recebido: 20261119T101049Z_253ff59f; grade preservada. Buscando política só em 2008–2010.
+Política gravada: score_isolation, limiar 0.7199442558, 2 confirmações.
+       particao  ids_detectados  ids_observaveis  alarmes_sem_anotacao  taxa_sem_anotacao_por_dia  atraso_mediano_min
+desenvolvimento               3                8                     4                   0.003797            26.82835
+          teste               0                8                     0                   0.000000                 NaN
+Relatório: C:\renewable-forecast-lab\satellite-anomaly-monitor\reports\m10_3\20261123T195301Z_332fb306\relatorio.html

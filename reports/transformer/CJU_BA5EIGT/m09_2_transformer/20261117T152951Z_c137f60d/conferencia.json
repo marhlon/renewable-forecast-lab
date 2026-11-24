@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": [
+    "multiplas_cabecas_retangulares_e_mascara_vs_pytorch",
+    "encoder_post_norm_vs_pytorch",
+    "residuais_e_normalizacao_por_token",
+    "decoder_self_cross_ffn_vs_pytorch",
+    "cross_attention_respeita_mascara_de_memoria",
+    "duas_camadas_encoder_decoder_vs_pilhas_pytorch",
+    "decoder_duas_camadas_preserva_prefixo_com_memoria_fixa",
+    "batch_nao_mistura_origens",
+    "posicao_fixa_altera_equivariancia_do_encoder",
+    "ultima_consulta_pode_mudar_apos_empilhamento",
+    "contratos_de_cabecas_mascaras_e_posicao_impar",
+    "gradientes_atravessam_blocos_sem_atualizar_parametros",
+    "recarregamento_configuracao_e_pesos"
+  ],
+  "checks_count": 13,
+  "tolerance": 1e-12,
+  "max_difference": 6.661338147750939e-16,
+  "differences": {
+    "mha_output": 0.0,
+    "mha_weights": 0.0,
+    "mha_row_sums": 2.220446049250313e-16,
+    "encoder_free": 0.0,
+    "encoder_causal": 4.440892098500626e-16,
+    "residual_attention": 0.0,
+    "residual_ffn": 0.0,
+    "norm1": 0.0,
+    "norm2": 0.0,
+    "decoder": 6.661338147750939e-16,
+    "cross_mask": 0.0,
+    "stack_memory": 0.0,
+    "stack_decoder": 6.661338147750939e-16,
+    "decoder_prefix": 0.0,
+    "batch_permutation": 0.0,
+    "without_position": 4.440892098500626e-16,
+    "last_query_one_layer": 0.0,
+    "reload": 0.0
+  },
+  "gradient_paths": {
+    "source_projection": 1.1325574375031862,
+    "encoder_value_projection": 4.390851497987397,
+    "decoder_cross_value_projection": 6.550242524191484
+  },
+  "future_decoder_delta": 2.808372951937531,
+  "fixed_position_delta": 1.4627723722006247,
+  "last_query_two_layers_delta": 0.06132611481851291,
+  "parameter_count": 11200,
+  "optimizer_steps": 0,
+  "training_performed": false
+}

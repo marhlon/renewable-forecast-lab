@@ -1,0 +1,13 @@
+{
+  "schema": "satmon-m10-4-diagnostic-protocol-v1",
+  "seeds": [17, 29, 41],
+  "variantes": ["tres_canais", "sem_50", "sem_51", "sem_52"],
+  "quantil_dev": 0.9995,
+  "metodo_quantil": "higher",
+  "consecutivos": 2,
+  "ajuste": "2004–2007; máscaras, linhas, escala e configuração fixadas a partir de M10.2; mesma coorte de três canais inclusive nas ablações.",
+  "desenvolvimento": "2008–2010; referência M10.3 congelada para três canais/semente 17; demais variantes recebem apenas o quantil fixo de seus próprios escores de desenvolvimento. Nenhuma busca de limiar.",
+  "diagnostico": "2011–2013 foi aberto no M10.3. Usado para explicação retrospectiva, nunca para selecionar parâmetros ou confirmar um candidato novo.",
+  "comparacao": "Mesmo universo de instantes e IDs para todas as variantes; AP em instantes utilizáveis fora de Rare Event e Communication Gap, e métricas de início segundo M10.3. Quantil comum não iguala a taxa empírica (empates e sequências).",
+  "criterio": "Nenhuma variante é promovida. A dispersão entre sementes mede sensibilidade algorítmica neste recorte, sem ser intervalo de confiança."
+}

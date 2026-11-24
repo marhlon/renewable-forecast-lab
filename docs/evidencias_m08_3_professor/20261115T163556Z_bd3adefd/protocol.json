@@ -1,0 +1,65 @@
+{
+  "schema": "renewcast-gru-protocol-v1",
+  "seeds": [
+    17,
+    29,
+    41
+  ],
+  "horizon_hours": 24,
+  "context_hours": 24,
+  "availability_delay_hours_assumed": 2,
+  "fit_rows": 7079,
+  "selection_rows": 168,
+  "evaluation_rows": 168,
+  "excluded_unavailable_rows": 52,
+  "excluded_incomplete_rows": 18,
+  "architectures": {
+    "mlp": "24->32 ReLU->dropout .1->1; 833 parameters",
+    "gru": "1 layer, 16 hidden, reset per window, head dropout .1; 929 parameters"
+  },
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "max_epochs": 60,
+  "patience": 8,
+  "batch_size": 128,
+  "cpu_threads": 2,
+  "dtype_neural": "float32",
+  "gradient_clipping": false,
+  "selection_rule": "lowest selection MSE; first epoch wins ties; no refit",
+  "seed_selection": "none; every prescribed seed is reported",
+  "hgb_parameters": {
+    "max_iter": 200,
+    "max_leaf_nodes": 15,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 20,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "random_state": 17
+  },
+  "hgb_early_stopping": false,
+  "input_sha256": {
+    "manifesto_entrada.json": "1576b7fd46775ee074569318b6cb81466c0f459b66c87727bc7159cd79755e36",
+    "geracao.parquet": "b286eb4fb625cded4a59bcce0063081c714ca66422ec720ce4b4117ddf5e1fc3",
+    "treino_referencia.parquet": "0aabb6829c0a3c7b6b0795a7f5e8447c4660859f8ce1610cb481a96c4b876f34"
+  },
+  "source_package_id": "d0a487b16c9b40ab78661d901ddf52ff9fbe592f62d9ae0fda75352bcb4da87f",
+  "code_sha256": {
+    "laboratorio_gru.py": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+    "m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+    "m08_3_verificacao.py": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+    "neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "authorship_sha256": null,
+  "scope": "previously explored development week; no new untouched holdout",
+  "weather_inputs_used": false,
+  "physical_timezone_verified": false
+}

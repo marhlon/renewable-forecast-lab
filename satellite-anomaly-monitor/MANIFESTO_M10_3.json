@@ -1,0 +1,113 @@
+{
+  "schema": "satmon-m10-3-package-v1",
+  "files": {
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_3/eventos_teste.csv": {
+      "bytes": 3129,
+      "sha256": "8418b3d8116672c5b1b91c377c9e32b017e18a966aa5da4d8444af202cdd6b4e"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_3/grade_teste.csv.gz": {
+      "bytes": 1344593,
+      "sha256": "459118150635089bf1ccd32f1c9eb4c293fa69495b1b76d45c41e32e730c88ee"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_3/proveniencia.json": {
+      "bytes": 1415,
+      "sha256": "125b9824693b162b8aeffb853550ffaf0d7a183f1047fb73d13d4131465c7ca4"
+    },
+    "satellite-anomaly-monitor/docs/COMECE_M10_3.md": {
+      "bytes": 4520,
+      "sha256": "8f0511b9c5d3d0ad56bc32951dbbdfa35d50954f6efceb7175f8d757658b5340"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/alarmes_desenvolvimento.csv": {
+      "bytes": 689,
+      "sha256": "f96022b6840d495995c93d0b62ece93291e5d4de267402c895f7297e1756e6a3"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/alarmes_teste.csv": {
+      "bytes": 33,
+      "sha256": "62132f90de90acb2567bb529782719ff53d67a80c614e48868faf7ad33292f9a"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/candidatos_dev.csv": {
+      "bytes": 5700,
+      "sha256": "1b437541cf87c3a632a6e5cee15ae928a4550830e0f249d136890dd946c97781"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/cobertura_canais_desenvolvimento.csv": {
+      "bytes": 168,
+      "sha256": "db5ba3e957b48cae5d9c263a5934bc5b0955b317c16425a1fded0bd86e6763cc"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/cobertura_canais_teste.csv": {
+      "bytes": 164,
+      "sha256": "9e190e034faea485a37a04c6d16c0437ff26a05cba9aa62909940789d744fb89"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/escores_teste.csv.gz": {
+      "bytes": 461815,
+      "sha256": "7014083037cc24c15c94e7b46fc92987942fc1e719863be02d721ed8c37c8f43"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/eventos_desenvolvimento.csv": {
+      "bytes": 604,
+      "sha256": "4ac6feeffb5aa1847bcbfb2bef58e6367b52a3a428a8a8177c9709753e0ffa31"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/eventos_teste.csv": {
+      "bytes": 501,
+      "sha256": "7f59442584e6abfcfb02ef445717fffbadb77e1f81dcc86e0d70ab0fc28f9612"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/metricas_episodios.csv": {
+      "bytes": 717,
+      "sha256": "3603f2581ffff6e7043a9a9911c1c3916b6ea42cd81a45faf03c64cdbe009097"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/politica_congelada.json": {
+      "bytes": 1379,
+      "sha256": "219f18e40d8bb69c7ee48af39084957159f09f7d9fc2a211e8deb99067176b27"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/relatorio.html": {
+      "bytes": 4820,
+      "sha256": "be7b2ca9deb6519a3d992d90bc5ee26e3a2b6b49ba3b982b75c67e6adf86653f"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/resultado.json": {
+      "bytes": 3868,
+      "sha256": "ddd4217d890a4a55b7505bffd8baf6ea1b218d506b6742ff90e46fa2d634d9d1"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_3/revisao_m10_2_windows.json": {
+      "bytes": 1956,
+      "sha256": "b92a90b27d91556e9fdf4bf697d21f55f82df451999ab0a46bc0d799b99e839f"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/Aula_1_Da_Leitura_ao_Alarme.md": {
+      "bytes": 4064,
+      "sha256": "e5388ec7c63775940d0347cd9c9bcbaf1ef691a94e40ab2eaf62bb9ff482cfa3"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/Aula_2_Limiar_e_Avaliacao.md": {
+      "bytes": 5490,
+      "sha256": "44dc26281cf981854161f12001d5fba9c76b8d17d4003f68480691ce1de2793b"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/Aula_3_Teste_Temporal_e_Decisao.md": {
+      "bytes": 5059,
+      "sha256": "388287d560f2b5695a4d6288f68602a21df4adb6515d674d2b13fc2425adce1e"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/Resposta_M10_3.md": {
+      "bytes": 1239,
+      "sha256": "d4ebfe7fa9536ec2714c8cbbe9b906fdbf46aa4f67567732d00b1db733b941e5"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/Revisao_M10_2_Windows.md": {
+      "bytes": 2535,
+      "sha256": "acabd2045fd1143a40e6de040f57c142b43b21fc6520d3d13c23b8c129da75aa"
+    },
+    "satellite-anomaly-monitor/docs/m10_3/protocolo_politica.json": {
+      "bytes": 1823,
+      "sha256": "a0ebbf6ebdcc4039c2dbe015376943ea749f2039b45b287b632597ce0602f6a2"
+    },
+    "satellite-anomaly-monitor/notebooks/LEIA_M10_3.md": {
+      "bytes": 228,
+      "sha256": "a509f1b5e0011e0f9ee5efc3c54938b194900987c2140fb6d2f89959a22f3c1a"
+    },
+    "satellite-anomaly-monitor/scripts/executar_m10_3.py": {
+      "bytes": 20681,
+      "sha256": "e4c57aa54d6657e2f83b611b18791f839bbd6524e34198c78ad2c883ee2644f0"
+    },
+    "satellite-anomaly-monitor/src/satmon/alarmes_m10_3.py": {
+      "bytes": 9420,
+      "sha256": "08040b65364ef4e3858596e653f249aa8864fc4a856abbfbf62cbad9998c127d"
+    },
+    "satellite-anomaly-monitor/tests/test_m10_3_alarmes.py": {
+      "bytes": 2769,
+      "sha256": "5b815e93823363660b13cd90b8195b02df5f68c6f0f496cbad9c73c33d31c55e"
+    }
+  }
+}

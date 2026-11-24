@@ -1,0 +1,9 @@
+﻿PCA: duas contas geométricas conferidas.
+Ajuste com 136,202 linhas; desenvolvimento com 105,042 linhas comparáveis.
+         escore  average_precision  linhas  positivos
+      constante           0.037214  105042       3909
+  score_robusto           0.716427  105042       3909
+      score_pca           0.502013  105042       3909
+score_isolation           0.758149  105042       3909
+PCA: diferença máxima para scikit-learn = 3.73e-14.
+Relatório: C:\renewable-forecast-lab\satellite-anomaly-monitor\reports\m10_2\20261119T101049Z_253ff59f\relatorio.html

@@ -1,0 +1,207 @@
+{
+  "schema": "renewcast-gru-result-v1",
+  "completed": true,
+  "run_id": "20261115T164955Z_5e435b09",
+  "checks": {
+    "passed": true,
+    "checks": [
+      "portas_numpy_vs_grucell_e_entradas_preservadas",
+      "vinte_quatro_passos_numpy_vs_gru",
+      "estado_reiniciado_entre_chamadas",
+      "ordem_do_lote_nao_muda_previsao",
+      "ultimo_lote_e_ultimo_estado",
+      "gru_929_parametros",
+      "shapes_invalidos_rejeitados",
+      "avaliador_4_mais_1_mse20",
+      "avaliador_modos_mistos_e_excecoes",
+      "avaliador_preserva_pesos_e_gradientes",
+      "avaliador_rejeita_vazio_shape_nan_overflow"
+    ],
+    "checks_count": 11,
+    "max_grucell_difference": 2.220446049250313e-16,
+    "tolerance_grucell": 1e-12,
+    "training_uses": "torch.nn.GRU and autograd; numpy step is a separate semantic check"
+  },
+  "partition_counts": {
+    "ajuste": 7079,
+    "selecao": 168,
+    "avaliacao": 168,
+    "excluidas_disponibilidade": 52
+  },
+  "excluded_incomplete": 18,
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "source_package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "code_sha256": {
+    "laboratorio_gru.py": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+    "m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+    "m08_3_verificacao.py": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+    "neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0"
+  },
+  "training": [
+    {
+      "architecture": "mlp_24h",
+      "seed": 17,
+      "best_epoch": 8,
+      "epochs_executed": 16,
+      "best_selection_mse": 0.4354173007151563,
+      "training_seconds": 14.414264700026251,
+      "parameter_count": 833,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 7221,
+      "parameter_bytes_float32": 3332
+    },
+    {
+      "architecture": "mlp_24h",
+      "seed": 29,
+      "best_epoch": 20,
+      "epochs_executed": 28,
+      "best_selection_mse": 0.4457003548189536,
+      "training_seconds": 17.917938099999446,
+      "parameter_count": 833,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 7221,
+      "parameter_bytes_float32": 3332
+    },
+    {
+      "architecture": "mlp_24h",
+      "seed": 41,
+      "best_epoch": 15,
+      "epochs_executed": 23,
+      "best_selection_mse": 0.4348128375602619,
+      "training_seconds": 15.210280500003137,
+      "parameter_count": 833,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 7221,
+      "parameter_bytes_float32": 3332
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 17,
+      "best_epoch": 23,
+      "epochs_executed": 31,
+      "best_selection_mse": 0.48080368644097693,
+      "training_seconds": 46.32781059999252,
+      "parameter_count": 929,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 8061,
+      "parameter_bytes_float32": 3716
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 29,
+      "best_epoch": 38,
+      "epochs_executed": 46,
+      "best_selection_mse": 0.44159565085969293,
+      "training_seconds": 45.95502729999134,
+      "parameter_count": 929,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 8061,
+      "parameter_bytes_float32": 3716
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 41,
+      "best_epoch": 24,
+      "epochs_executed": 32,
+      "best_selection_mse": 0.4595232056249448,
+      "training_seconds": 34.51913329999661,
+      "parameter_count": 929,
+      "stop_reason": "patience",
+      "checkpoint_bytes": 8061,
+      "parameter_bytes_float32": 3716
+    }
+  ],
+  "reload_checks": [
+    {
+      "architecture": "mlp_24h",
+      "seed": 17,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "architecture": "mlp_24h",
+      "seed": 29,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "architecture": "mlp_24h",
+      "seed": 41,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 17,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 29,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "architecture": "gru_24h",
+      "seed": 41,
+      "max_difference_mwmed": 0.0
+    }
+  ],
+  "reload_tolerance_mwmed": 1e-06,
+  "neural_seed_summary": [
+    {
+      "architecture": "mlp_24h",
+      "median_mae": 33.15978842314019,
+      "min_mae": 32.724828086773655,
+      "max_mae": 33.700811473289775,
+      "interpretation": "seed range, not confidence interval or ensemble"
+    },
+    {
+      "architecture": "gru_24h",
+      "median_mae": 34.9112268513053,
+      "min_mae": 34.573202435059805,
+      "max_mae": 35.67596978081066,
+      "interpretation": "seed range, not confidence interval or ensemble"
+    }
+  ],
+  "process_memory": {
+    "peak_mib": 396.28125,
+    "source": "Windows GetProcessMemoryInfo PeakWorkingSetSize",
+    "scope": "whole process lifetime; not per-model memory",
+    "error": null
+  },
+  "elapsed_seconds": 187.49889089999488,
+  "availability_is_assumed": true,
+  "physical_timezone_verified": false,
+  "operational_policy_approved": false,
+  "heldout_test_used": false,
+  "scope": "previously explored development week; no new untouched holdout",
+  "output_sha256": {
+    "curvas.csv": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+    "curvas.png": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+    "gru_24h_seed_17.pt": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+    "gru_24h_seed_29.pt": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+    "gru_24h_seed_41.pt": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+    "hgb_24h.joblib": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+    "janelas_avaliacao.csv": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+    "linear_24h.json": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+    "mlp_24h_seed_17.pt": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+    "mlp_24h_seed_29.pt": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+    "mlp_24h_seed_41.pt": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+    "origens_sem_janela.csv": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+    "particoes.csv": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+    "predictions.csv": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+    "preprocessing.json": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+    "protocol.json": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+    "relatorio.html": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+    "summary.csv": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140"
+  }
+}

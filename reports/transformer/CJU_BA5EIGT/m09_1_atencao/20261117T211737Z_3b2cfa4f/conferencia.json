@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "numpy_vs_pytorch_retangular_batched_com_mascara_e_readonly",
+    "caso_manual_pesos_075_025_saida15",
+    "mascara_causal_prefixo_e_diagonal",
+    "perturbacao_de_posicao_posterior_bloqueada",
+    "ultima_consulta_igual_na_atencao_de_uma_camada",
+    "softmax_estavel_scores_grandes",
+    "linha_totalmente_bloqueada_e_mascara_incompativel_rejeitadas",
+    "equivariancia_sem_posicao"
+  ],
+  "checks_count": 8,
+  "max_difference_pytorch": 4.440892098500626e-16,
+  "tolerance": 1e-12,
+  "authorship_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea"
+}

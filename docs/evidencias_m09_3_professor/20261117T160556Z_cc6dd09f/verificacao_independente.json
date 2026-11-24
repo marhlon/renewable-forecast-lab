@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "run_id": "20261117T160556Z_cc6dd09f",
+  "checks": [
+    "hashes_dos_artefatos",
+    "dez_variantes_pareadas_e_trinta_metricas_recalculadas",
+    "passo26_corresponde_ao_alvo_e_cada_trajetoria_tem26_horas",
+    "contraprova_passo24_erra_o_horario_em2_horas",
+    "pinball_e_cobertura_recalculados",
+    "inferencia_repetida_identica_pesos_congelados",
+    "ambiente_privado_novo_reproduz_resultado_da_prova_inicial",
+    "snapshot_publico_fixado_e_verificado"
+  ],
+  "checks_count": 8,
+  "max_summary_metric_difference": 7.105427357601002e-15,
+  "source_result_sha256": "b0e0b360b7d06f7f1d212dce99b17cbdcfef52fa5ddb2dbf79b4d6f039e00256",
+  "interpreter": "fresh private venv; full controller executed on Linux",
+  "windows_execution_performed": false,
+  "context_hours": 24,
+  "forecast_steps": 26,
+  "target_step_one_based": 26,
+  "pretraining_overlap_verified": false
+}

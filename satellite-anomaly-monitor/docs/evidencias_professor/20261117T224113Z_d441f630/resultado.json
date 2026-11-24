@@ -1,0 +1,77 @@
+{
+  "schema": "satmon-m10-1-contract-v1",
+  "completed": true,
+  "run_id": "20261117T224113Z_d441f630",
+  "source_doi": "10.5281/zenodo.15237121",
+  "source_spec_sha256": "488589157b1f536988f7ec2a91ac693010766f0b017d7f113596a3d33f7a305c",
+  "grid_rows": 350400,
+  "grid_step_seconds": 90,
+  "max_age_seconds": 180,
+  "all_channels_usable": 350346,
+  "raw_rows_total": 1046703,
+  "event_annotation_rows": 33,
+  "event_ids": 10,
+  "category_summary": [
+    {
+      "category": "Anomaly",
+      "source_annotation_rows": 7,
+      "distinct_annotation_ids": 3,
+      "grid_rows_with_annotation": 5732
+    },
+    {
+      "category": "Rare Event",
+      "source_annotation_rows": 26,
+      "distinct_annotation_ids": 7,
+      "grid_rows_with_annotation": 3303
+    },
+    {
+      "category": "Communication Gap",
+      "source_annotation_rows": 0,
+      "distinct_annotation_ids": 0,
+      "grid_rows_with_annotation": 0
+    }
+  ],
+  "physical_units_known": false,
+  "availability_is_assumed": true,
+  "measurement_axis_utc_interpretation_assumed": true,
+  "grid_protocol_is_exploratory": true,
+  "unannotated_is_not_proven_normal": true,
+  "future_sample_used": false,
+  "labels_used_as_features": false,
+  "models_trained": false,
+  "operational_approval": false,
+  "checks": {
+    "passed": true,
+    "groups": 5,
+    "checks": [
+      "valores_idades_e_expiracao",
+      "invariancia_ao_futuro",
+      "multicanal_assincrono_e_sem_mutacao",
+      "fronteiras_exatas",
+      "entradas_invalidas"
+    ],
+    "nearest_counterexample_uses_future_at_second_7": true
+  },
+  "authorship_sha256": null,
+  "code_sha256": {
+    "runner": "e0e60bcf3340ac7d35bdf315bb5735c1f63e6f5f82acf4808b7ef0b574c2db32",
+    "temporal.py": "428580e03cb61ffbb5ca6d306863e339ca8f2cfe3c1006f7256dde35a80b6a99"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "elapsed_seconds": 15.80814311300037,
+  "output_sha256": {
+    "categorias.csv": "0ab50658828b10cc53e0020a0ea124d4f6ed0edcf5e19f9df641331415136eb3",
+    "cobertura_eventos.csv": "9692578bb05e32e55ada24b138ce8e3e3796a5ea306bc01ebb2cd1be2edd4106",
+    "conferencia.json": "4bdf9a99648e1106b88965a9ac101b378841b26ef851b1a7616f7446416d8adb",
+    "contraprova_sintetica.csv": "c14fb487cb57a2940a9bffebb4797061977a19458e5997d202dd1cda32fb856d",
+    "eventos_fonte.csv": "fa8d02a666aee62efe243e4d9ff03ad5a7ea49f9b359c81ddb51e92d5d4c6d21",
+    "grade_features.csv.gz": "60ac25d2b060f39581ef1fbf7cee0ead7917520f517166a3d41a8ffd5932fba4",
+    "perfil_canais.csv": "68f0cafc5f12d24b50cbf9dfd9beb540df1ca92fc275af16eb01880a05c42980",
+    "relatorio.html": "0bc8a739daec3aefa275fb72925549bd1916e7fc0af1752c4c8781b8c0359954",
+    "rotulos_grade.csv.gz": "0e2abdb68aa3f697b455755177490e51600deecda545c62aa8168e50fde450e5"
+  }
+}

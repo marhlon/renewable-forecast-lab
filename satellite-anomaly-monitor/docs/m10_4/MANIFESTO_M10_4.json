@@ -1,0 +1,28 @@
+{
+  "schema": "satmon-m10-4-delivery-v1",
+  "sha256": {
+    "satellite-anomaly-monitor/docs/COMECE_M10_4.md": "147ae4fa8468e1849168a4f77bfe957fe5bfbcfc9a7afeeafe7e01e3af020290",
+    "satellite-anomaly-monitor/scripts/executar_m10_4.py": "f77cd8180831498cad4e4180d97a39bb696e90b46e526f1ecb2771218b06ce4f",
+    "satellite-anomaly-monitor/src/satmon/diagnostico_m10_4.py": "31adeb7929c886ef0318f7e66ad69c3c86f20438b56f5592475b2e3c1629adcc",
+    "satellite-anomaly-monitor/tests/test_m10_4_diagnostico.py": "36c65d15dbb4dd6f019808fcfb2091390c1dd13309d120704744f293c17ae138",
+    "satellite-anomaly-monitor/docs/m10_4/Aula_01_Limite_de_Confirmacao.md": "fbe48f30388578ab81d6c299ff9d035948c9b91c064303b495c7cfd81b740bf8",
+    "satellite-anomaly-monitor/docs/m10_4/Aula_02_Ablacao_e_Estabilidade.md": "a4b67a5459988753689420f6bbcc7ec32a5b33d3a67953317cad23c38f0357c2",
+    "satellite-anomaly-monitor/docs/m10_4/Aula_03_Decisao_e_Validade_Externa.md": "7ea7c91a55645cdcfcca0290e14d32418a0001b1b09ed7201e724f7c3e00f0ce",
+    "satellite-anomaly-monitor/docs/m10_4/Modelo_limite_confirmacao.py.txt": "313061baf3ddf5b4e77b033dcbb0b6fd4066b6d3cfe233070651d4a8d21416f9",
+    "satellite-anomaly-monitor/docs/m10_4/Resposta_M10_4.md": "7ffb3b0af57b723a9c5e0c7de0a229aa00cd68c2d26753fe98fa779aebc5a13a",
+    "satellite-anomaly-monitor/docs/m10_4/Revisao_M10_3_Windows.md": "eea659facce681d753190d69adf4b839654166cdb61f767a95252e640d5058e2",
+    "satellite-anomaly-monitor/docs/m10_4/protocolo_diagnostico.json": "a597d42732175d7a7e828a63c0cbd096d9e60d23345f431599891d911a1bd98e",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/LEIA_EVIDENCIAS.md": "dc7ea232c566a75eefe260e6a73bbbaee7f93fca511146f0c4c4c3e0ab1677e1",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/Revisao_M10_3_Windows.json": "dd3dabe193b0f19f06810843a6fd41f0dbe783441d30c33439dc0e6036eb8366",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/alcance_do_corte.png": "61145bb5b7216967ee7dda6e03e7a1945b6ae2e2842e432c06018284b2eadced",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/associacao_canais_ano.csv": "4c6483bcaf5ceb253f20dc7ef43ddb58cf22a3fef66bcfd2693fea2b29d8a378",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/estabilidade_sementes.csv": "557f67a61c378230147a8abdc2cad77446659dbc832900c7b70ccf6d7e3d26bc",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/limites_por_id.csv": "ee5c14d492d174b9634649c52c914f6d32732536a062ad4ab80f70b2f35b909d",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/metricas_ablacao.csv": "3f843e3f273ac96585f07cf3fcf00ad73fcd40f1e3594e8aa14d1a3e9299a13d",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/mudancas_por_id.csv": "7a52481f800126bbc4fb02aa3a199d9ff0ac573f1d7926765b010bf7b2ee488c",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/perfil_canais_ano.csv": "e17ee7e8625d57100eda37fdf534ba44452d243f624f887313b5f31547b54a0e",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/perfil_escores_ano.csv": "fcb84779f0e2bb9c82891b3986e3ea0788314ec79f69ed4451bd3396028f9a77",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/relatorio.html": "dd839297b883ca192d0adbfd285efdef6a99833dce000d1f7c5107fa994a6179",
+    "satellite-anomaly-monitor/docs/evidencias_m10_4/resultado.json": "00ca75e7686bce6b2a5d8ff12cb42bb1b54f61f84ed2319b76ecc2a909963406"
+  }
+}

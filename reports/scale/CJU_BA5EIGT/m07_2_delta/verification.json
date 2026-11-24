@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "signature": {
+    "input_sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+    "code_sha256": "e469ae9232098badd60f14a0e22e2e8b784dcaaea54626569219a95f9034793f",
+    "temporal_code_sha256": "c0e4d07943b72dab2dd9923182c524ddbfb14c2d0c4afde852ef62050ff5d4ac",
+    "incremento": 12.0,
+    "image_id": "sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9",
+    "training_files": {
+      "part-00000-1e27d39b-3b07-47a4-bb68-d2255698dd71-c000.snappy.parquet": "0dd9d9d2bfb513aec68f99adca986e223264ba80a7fce50e8c237529af5e81f8"
+    }
+  },
+  "output_sha256": {
+    "conclusao.json": "edfdd0d1f271c0cfc59ecec15851fc525f2f7487e90c974e1c84b8a78ed3f374",
+    "geracao_delta/_delta_log/00000000000000000000.crc": "e2e75530efe53b2eca367f8a0bc525402ed5e2058eef2b421d343f62d39915d3",
+    "geracao_delta/_delta_log/00000000000000000000.json": "9e80b463ac35aee679e814b3ce1b86b8217874fca407c29e602599110de59008",
+    "geracao_delta/_delta_log/00000000000000000001.crc": "5fa8e5cf678e38dae9f41b24bf05eb4a1fd6967672ef4daff00ab826d79717ea",
+    "geracao_delta/_delta_log/00000000000000000001.json": "0384d4881a0eec3ce48ef487a0eb80c398be568eb5cbb5ba8882467d2e9c43c2",
+    "geracao_delta/part-00000-29929df3-ba54-42aa-aaf5-747f2b6941fa-c000.snappy.parquet": "97f1a2be370533e7b7ea043e29fbfe178ea4a4afbbc241d48553497b885bc86e",
+    "geracao_delta/part-00000-673bc8ae-4156-4aa0-95b6-237cecc0f104-c000.snappy.parquet": "663496d333d9402363cd0fd94738b1cc8632bd8d42dab215abe718ef2b25fec0",
+    "historico_delta.json": "43d312d4fcfbe6f4bab955f470b9e3196390375bebe3a86fc7987d3d9f0f95eb",
+    "impacto_correcao.csv": "c13d0db4e7a145f982393bc7aee2c49d08ccccf400bde76c06e30c30b0f65eb1",
+    "snapshot_treino.json": "81a4fd6aea9f00487133ac3a3dcaf0f7e4c1f96101b9ccf7c2afdf4ad3db82aa"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "satmon-m10-2-source-v1",
+  "source_doi": "10.5281/zenodo.15237121",
+  "mission": "ESA-Mission1 (v2)",
+  "channels": [
+    "channel_50",
+    "channel_51",
+    "channel_52"
+  ],
+  "start": "2004-01-01T00:00:00Z",
+  "split": "2008-01-01T00:00:00Z",
+  "stop_exclusive": "2011-01-01T00:00:00Z",
+  "reserved_not_exported": "2011-01-01 a 2014-01-01; sem escores nesta rodada",
+  "step_seconds": 900,
+  "max_age_seconds": 180,
+  "grid_rows": 245472,
+  "raw_rows_admitted_by_channel": {
+    "channel_50": 2437879,
+    "channel_51": 2437879,
+    "channel_52": 2437879
+  },
+  "availability": "Última medição anterior ou simultânea na mesma partição; UTC e disponibilidade na medição assumidos.",
+  "fit_filter": "Três valores utilizáveis; excluir Anomaly, Rare Event e Communication Gap.",
+  "ranking_filter": "Desenvolvimento com três valores utilizáveis; excluir Rare Event e Communication Gap. Anomaly positivo; sem anotação, negativo provisório.",
+  "source_members_sha256": {
+    "channel_50.zip": "803023626e29355d6dabcc85b432cf6a016b2b3ae073be9d41b0f2a952e5d4b4",
+    "channel_51.zip": "72dde30b021dc0fb3756e59371c3ca1e57c7534e1db91bb99f0affb66aa1917f",
+    "channel_52.zip": "c6c1a88d9b42e2465f46e02117d104b03e63fdd86eaae3b7e78ab0138cdbf7b0",
+    "channels.csv": "27a4d6819642effc2a590d49e5bd2c7a915c06a1eb78502c34bed055d1c76d5d",
+    "labels.csv": "1564d630f1ec1387d699ec81531ce57118051a220c8b7cba050a446a652b9082",
+    "anomaly_types.csv": "e0cadee4ee9697c5ca8d4f9e81067454d7d7a00d063ee0de33cbc77660eec8bc"
+  },
+  "settings": {
+    "pca_components": 2,
+    "forest_trees": 128,
+    "forest_max_samples": 256,
+    "kmeans_clusters": 3,
+    "kmeans_n_init": 10,
+    "random_state": 17
+  },
+  "files": {
+    "canais_grade.csv.gz": {
+      "sha256": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4",
+      "bytes": 3172268
+    },
+    "eventos.csv": {
+      "sha256": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e",
+      "bytes": 11777
+    }
+  },
+  "license": "CC BY 3.0 IGO; recorte e transformação didáticos, fonte European Space Agency"
+}

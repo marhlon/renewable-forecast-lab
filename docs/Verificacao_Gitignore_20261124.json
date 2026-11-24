@@ -1,0 +1,35 @@
+{
+  "schema": "renewcast-gitignore-review-v1",
+  "review_date": "2026-11-24",
+  "passed": true,
+  "cases_checked": 100,
+  "failures": [],
+  "tracked_paths": 14607,
+  "tracked_paths_matching_ignore_rules": 13638,
+  "tracked_matching_rules_by_prefix": {
+    "venvs": 6815,
+    "build": 6602,
+    "dist": 180,
+    "reports": 28,
+    "notebooks": 4,
+    "tools": 2,
+    "backups": 1,
+    "renewcast_m06_atualidade_20261014.zip": 1,
+    "renewcast_m06_cliente_windows_20261014.zip": 1,
+    "renewcast_m06_concorrencia_20261013.zip": 1,
+    "renewcast_m07_base_20261019.zip": 1,
+    "renewcast_m07_correcao_20261019.zip": 1,
+    "renewcast_m07_spark_20261017.zip": 1
+  },
+  "method": "git check-ignore --no-index; all curated reference input files included; read-only index inspection",
+  "index_modified_by_review": false,
+  "readme_validation": {
+    "relative_links_checked": 21,
+    "missing_links": [],
+    "links_hidden_by_ignore": [],
+    "last_section": "Resultados e limites",
+    "balanced_code_fences": true,
+    "contains_absolute_user_path": false,
+    "passed": true
+  }
+}

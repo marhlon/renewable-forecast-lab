@@ -1,0 +1,111 @@
+== Physical Plan ==
+AdaptiveSparkPlan (19)
++- InMemoryTableScan (1)
+      +- InMemoryRelation (2)
+            +- AdaptiveSparkPlan (18)
+               +- Project (17)
+                  +- Project (16)
+                     +- Window (15)
+                        +- Sort (14)
+                           +- Project (13)
+                              +- BroadcastHashJoin LeftOuter BuildRight (12)
+                                 :- Generate (7)
+                                 :  +- HashAggregate (6)
+                                 :     +- Exchange (5)
+                                 :        +- HashAggregate (4)
+                                 :           +- Scan parquet  (3)
+                                 +- BroadcastExchange (11)
+                                    +- Project (10)
+                                       +- Filter (9)
+                                          +- Scan parquet  (8)
+
+
+(1) InMemoryTableScan
+Output [11]: [serie#46, forecast_origin#58, history_end#54, target_time#55, target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, features_validas#57, target_generation#53]
+Arguments: [serie#46, forecast_origin#58, history_end#54, target_time#55, target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, features_validas#57, target_generation#53]
+
+(2) InMemoryRelation
+Arguments: [serie#46, forecast_origin#58, history_end#54, target_time#55, target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, features_validas#57, target_generation#53], StorageLevel(disk, memory, deserialized, 1 replicas)
+
+(3) Scan parquet 
+Output [1]: [din_instante#0]
+Batched: true
+Location: InMemoryFileIndex [file:/input/geracao.parquet]
+ReadSchema: struct<din_instante:timestamp_ntz>
+
+(4) HashAggregate
+Input [1]: [din_instante#0]
+Keys: []
+Functions [2]: [partial_min(din_instante#0), partial_max(din_instante#0)]
+Aggregate Attributes [2]: [min#59, max#60]
+Results [2]: [min#61, max#62]
+
+(5) Exchange
+Input [2]: [min#61, max#62]
+Arguments: SinglePartition, ENSURE_REQUIREMENTS, [plan_id=133]
+
+(6) HashAggregate
+Input [2]: [min#61, max#62]
+Keys: []
+Functions [2]: [min(din_instante#0), max(din_instante#0)]
+Aggregate Attributes [2]: [min(din_instante#0)#25, max(din_instante#0)#26]
+Results [2]: [min(din_instante#0)#25 AS inicio#21, max(din_instante#0)#26 AS fim#22]
+
+(7) Generate
+Input [2]: [inicio#21, fim#22]
+Arguments: explode(sequence(inicio#21, fim#22, Some(INTERVAL '01' HOUR), Some(UTC))), false, [din_instante#28]
+
+(8) Scan parquet 
+Output [2]: [din_instante#30, val_geracao#41]
+Batched: true
+Location: InMemoryFileIndex [file:/input/geracao.parquet]
+PushedFilters: [IsNotNull(din_instante)]
+ReadSchema: struct<din_instante:timestamp_ntz,val_geracao:double>
+
+(9) Filter
+Input [2]: [din_instante#30, val_geracao#41]
+Condition : isnotnull(din_instante#30)
+
+(10) Project
+Output [3]: [din_instante#30, val_geracao#41, true AS registro_presente#29]
+Input [2]: [din_instante#30, val_geracao#41]
+
+(11) BroadcastExchange
+Input [3]: [din_instante#30, val_geracao#41, registro_presente#29]
+Arguments: HashedRelationBroadcastMode(List(input[0, timestamp_ntz, true]),false), [plan_id=137]
+
+(12) BroadcastHashJoin
+Left keys [1]: [din_instante#28]
+Right keys [1]: [din_instante#30]
+Join type: LeftOuter
+Join condition: None
+
+(13) Project
+Output [3]: [din_instante#28, val_geracao#41, coalesce(registro_presente#29, false) AS registro_presente#45]
+Input [4]: [din_instante#28, din_instante#30, val_geracao#41, registro_presente#29]
+
+(14) Sort
+Input [3]: [din_instante#28, val_geracao#41, registro_presente#45]
+Arguments: [din_instante#28 ASC NULLS FIRST], false, 0
+
+(15) Window
+Input [3]: [din_instante#28, val_geracao#41, registro_presente#45]
+Arguments: [lag(val_geracao#41, -2, null) windowspecdefinition(din_instante#28 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -2, -2)) AS geracao_em_history_end#47, count(val_geracao#41) windowspecdefinition(din_instante#28 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -7, -2)) AS horas_validas_historico#48L, avg(val_geracao#41) windowspecdefinition(din_instante#28 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -7, -2)) AS media_parcial#50, lead(val_geracao#41, 24, null) windowspecdefinition(din_instante#28 ASC NULLS FIRST, specifiedwindowframe(RowFrame, 24, 24)) AS target_generation#53], [din_instante#28 ASC NULLS FIRST]
+
+(16) Project
+Output [6]: [din_instante#28, registro_presente#45, geracao_em_history_end#47, horas_validas_historico#48L, CASE WHEN (horas_validas_historico#48L = 6) THEN media_parcial#50 END AS media_historico_mwmed#52, target_generation#53]
+Input [7]: [din_instante#28, val_geracao#41, registro_presente#45, geracao_em_history_end#47, horas_validas_historico#48L, media_parcial#50, target_generation#53]
+
+(17) Project
+Output [11]: [CJU_BA5EIGT AS serie#46, din_instante#28 AS forecast_origin#58, din_instante#28 + INTERVAL '-02' HOUR AS history_end#54, din_instante#28 + INTERVAL '24' HOUR AS target_time#55, din_instante#28 + INTERVAL '26' HOUR AS target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, (isnotnull(geracao_em_history_end#47) AND isnotnull(media_historico_mwmed#52)) AS features_validas#57, target_generation#53]
+Input [6]: [din_instante#28, registro_presente#45, geracao_em_history_end#47, horas_validas_historico#48L, media_historico_mwmed#52, target_generation#53]
+
+(18) AdaptiveSparkPlan
+Output [11]: [serie#46, forecast_origin#58, history_end#54, target_time#55, target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, features_validas#57, target_generation#53]
+Arguments: isFinalPlan=false
+
+(19) AdaptiveSparkPlan
+Output [11]: [serie#46, forecast_origin#58, history_end#54, target_time#55, target_available_at#56, registro_presente#45, geracao_em_history_end#47, media_historico_mwmed#52, horas_validas_historico#48L, features_validas#57, target_generation#53]
+Arguments: isFinalPlan=false
+
+

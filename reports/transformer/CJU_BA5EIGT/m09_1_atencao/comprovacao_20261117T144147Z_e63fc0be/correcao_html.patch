@@ -1,0 +1,11 @@
+--- distribuicao/notebooks/laboratorio_atencao.py
++++ notebooks/laboratorio_atencao.py
+@@ -166,7 +166,7 @@
+ <p class="note">Projecoes fixas nao treinadas. As saidas sao representacoes ponderadas do historico; nao sao previsoes h24.</p>'''
+     page+=f'<p>Origem: {origin}. Historico: {times[0]} a {times[-1]}. Cada linha e uma consulta; cada coluna e uma hora consultada. Escala visual relativa em cada painel.</p><div class="matrices">'
+     page+=svg_matrix(full['pesos'][0],'Atencao livre no contexto conhecido')+svg_matrix(causal['pesos'][0],'Atencao causal por prefixo')+'</div>'
+-    page+='<h2>Medicoes e representacoes</h2>'+context.round(6).to_html(index=False)
++    page+='<h2>Medicoes e representacoes</h2>'+context.to_html(index=False, float_format=lambda valor: f"{valor:.6f}")
+     page+=f'<p>Ultima consulta: diferenca livre/causal = {detail["last_query_full_causal_difference"]:.3g}. Permutacao sem posicao: {without_position_delta:.3g}; com posicoes fixas: {with_position_delta:.6f}.</p></html>'
+     (out/'relatorio.html').write_text(page,encoding='utf-8')
+     for name,expected in hashes.items():

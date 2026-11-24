@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "notebooks/laboratorio_transformer.py",
+    "--verificar",
+    "--input-dir",
+    "C:\\renewable-forecast-lab\\build\\m09_2_entrada_ausente_para_contraprova"
+  ],
+  "returncode": 0,
+  "input_path_was_absent": true,
+  "parquet_inputs_required": false
+}

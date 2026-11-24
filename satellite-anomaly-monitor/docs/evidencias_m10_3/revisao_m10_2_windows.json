@@ -1,0 +1,42 @@
+{
+  "schema": "satmon-m10-2-windows-review-v1",
+  "run_id": "20261119T101049Z_253ff59f",
+  "resultado_sha256": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+  "outputs_verified": {
+    "casos_reais.csv": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8",
+    "cobertura_eventos.csv": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313",
+    "contextos.csv": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee",
+    "escores_desenvolvimento.csv.gz": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "metricas.csv": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c",
+    "relatorio.html": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c",
+    "sensibilidade_evento.csv": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866"
+  },
+  "authorship_sha256": "5d8b070af9a0e4417b1c0e910db43a8a24ea69c2ecaa49aa4fc1eee31d6e180d",
+  "pasted_source_matches_windows_result": true,
+  "runner_core_and_source_spec_match_m10_2": true,
+  "geometric_examples_passed": 2,
+  "scored_rows_checked": 105165,
+  "max_delta_pca_from_pasted_function": 0.0,
+  "independent_normal_vector_check": true,
+  "robust_scores_and_source_values_reconciled": true,
+  "annotation_flags_and_ranking_cohort_recomputed": true,
+  "recomputed_ap": {
+    "completo": {
+      "constante": 0.03721368595418975,
+      "score_robusto": 0.7164270010708353,
+      "score_pca": 0.5020133451392704,
+      "score_isolation": 0.7581493124419436
+    },
+    "sem_id_134": {
+      "constante": 0.009539012996170684,
+      "score_robusto": 0.3561143431434299,
+      "score_pca": 0.017141857855501104,
+      "score_isolation": 0.32490994463443384
+    }
+  },
+  "user_packaged_zip_received": false,
+  "user_written_answers_received": false,
+  "eight_extra_tests_independently_reexecuted": false,
+  "scored_reserved_period_in_this_audit": false,
+  "refit_in_this_audit": false
+}

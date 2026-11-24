@@ -1,0 +1,289 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>M09.3 previsao pre-treinada</title>
+<style>body{font:16px system-ui;max-width:1200px;margin:32px auto;padding:18px;color:#172d39}table{border-collapse:collapse;font-size:13px}td,th{padding:7px;border:1px solid #ccd6dd}.scroll{overflow:auto}.note{padding:14px;background:#fff5df;border-left:4px solid #bd8030}</style>
+<h1>M09.3 — previsao com Chronos-Bolt Tiny</h1><p class="note">Pesos pre-treinados congelados; contexto 24h igual aos baselines. Semana de desenvolvimento ja examinada. Nao e promocao operacional nem prova de ausencia de sobreposicao no pre-treino.</p><p>Revisao a0e552de83495b5c28c14c71c374f3e33280b340; 8,652,672 parametros; CPU/float32. H24 desde a origem exige 26 passos desde history_end: selecionado indice25.</p><h2>Mesmas 168 origens</h2><div class="scroll"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>method</th>
+      <th>seed</th>
+      <th>rows</th>
+      <th>mae_mwmed</th>
+      <th>rmse_mwmed</th>
+      <th>bias_observed_minus_predicted_mwmed</th>
+      <th>mae_gain_vs_hgb_pct</th>
+      <th>mae_gain_vs_persistence_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>persistence_d2</td>
+      <td>NaN</td>
+      <td>168</td>
+      <td>37.991646</td>
+      <td>55.434342</td>
+      <td>-3.016872</td>
+      <td>-17.534022</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>linear_24h</td>
+      <td>NaN</td>
+      <td>168</td>
+      <td>33.678664</td>
+      <td>44.938111</td>
+      <td>15.148681</td>
+      <td>-4.191032</td>
+      <td>11.352449</td>
+    </tr>
+    <tr>
+      <td>hgb_24h</td>
+      <td>17.000000</td>
+      <td>168</td>
+      <td>32.323956</td>
+      <td>44.221683</td>
+      <td>13.119039</td>
+      <td>0.000000</td>
+      <td>14.918252</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>17.000000</td>
+      <td>168</td>
+      <td>32.724828</td>
+      <td>44.019866</td>
+      <td>10.655947</td>
+      <td>-1.240169</td>
+      <td>13.863094</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>29.000000</td>
+      <td>168</td>
+      <td>33.700811</td>
+      <td>44.892316</td>
+      <td>12.652757</td>
+      <td>-4.259550</td>
+      <td>11.294152</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>41.000000</td>
+      <td>168</td>
+      <td>33.159788</td>
+      <td>44.069511</td>
+      <td>13.724280</td>
+      <td>-2.585798</td>
+      <td>12.718210</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>17.000000</td>
+      <td>168</td>
+      <td>35.675970</td>
+      <td>45.200733</td>
+      <td>18.525120</td>
+      <td>-10.370060</td>
+      <td>6.095224</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>29.000000</td>
+      <td>168</td>
+      <td>34.911227</td>
+      <td>43.816199</td>
+      <td>17.993098</td>
+      <td>-8.004189</td>
+      <td>8.108148</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>41.000000</td>
+      <td>168</td>
+      <td>34.573202</td>
+      <td>43.066020</td>
+      <td>14.777710</td>
+      <td>-6.958450</td>
+      <td>8.997882</td>
+    </tr>
+    <tr>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>168</td>
+      <td>31.340738</td>
+      <td>45.380136</td>
+      <td>2.962412</td>
+      <td>3.041763</td>
+      <td>17.506237</td>
+    </tr>
+  </tbody>
+</table></div><h2>Primeiros alvos alinhados</h2><div class="scroll"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>forecast_origin</th>
+      <th>history_end</th>
+      <th>target_time</th>
+      <th>target_available_at</th>
+      <th>method</th>
+      <th>seed</th>
+      <th>target_generation</th>
+      <th>prediction</th>
+      <th>p10</th>
+      <th>p50</th>
+      <th>p90</th>
+      <th>lead_hours</th>
+      <th>index_zero_based</th>
+      <th>absolute_error</th>
+      <th>squared_error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2026-07-03 04:00:00</td>
+      <td>2026-07-03 02:00:00</td>
+      <td>2026-07-04 04:00:00</td>
+      <td>2026-07-04 06:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>182.055500</td>
+      <td>70.742828</td>
+      <td>47.659431</td>
+      <td>70.742828</td>
+      <td>107.082260</td>
+      <td>26</td>
+      <td>25</td>
+      <td>111.312672</td>
+      <td>12390.510866</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 05:00:00</td>
+      <td>2026-07-03 03:00:00</td>
+      <td>2026-07-04 05:00:00</td>
+      <td>2026-07-04 07:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>168.158000</td>
+      <td>57.481354</td>
+      <td>42.015694</td>
+      <td>57.481354</td>
+      <td>87.215851</td>
+      <td>26</td>
+      <td>25</td>
+      <td>110.676646</td>
+      <td>12249.320023</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 06:00:00</td>
+      <td>2026-07-03 04:00:00</td>
+      <td>2026-07-04 06:00:00</td>
+      <td>2026-07-04 08:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>172.421000</td>
+      <td>50.215702</td>
+      <td>41.214607</td>
+      <td>50.215702</td>
+      <td>73.044174</td>
+      <td>26</td>
+      <td>25</td>
+      <td>122.205298</td>
+      <td>14934.134845</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 07:00:00</td>
+      <td>2026-07-03 05:00:00</td>
+      <td>2026-07-04 07:00:00</td>
+      <td>2026-07-04 09:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>85.312000</td>
+      <td>58.468231</td>
+      <td>43.359604</td>
+      <td>58.468231</td>
+      <td>91.359085</td>
+      <td>26</td>
+      <td>25</td>
+      <td>26.843769</td>
+      <td>720.587923</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 08:00:00</td>
+      <td>2026-07-03 06:00:00</td>
+      <td>2026-07-04 08:00:00</td>
+      <td>2026-07-04 10:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>50.997000</td>
+      <td>65.194618</td>
+      <td>42.874779</td>
+      <td>65.194618</td>
+      <td>108.779938</td>
+      <td>26</td>
+      <td>25</td>
+      <td>14.197618</td>
+      <td>201.572363</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 09:00:00</td>
+      <td>2026-07-03 07:00:00</td>
+      <td>2026-07-04 09:00:00</td>
+      <td>2026-07-04 11:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>48.483000</td>
+      <td>54.377678</td>
+      <td>41.445755</td>
+      <td>54.377678</td>
+      <td>86.917542</td>
+      <td>26</td>
+      <td>25</td>
+      <td>5.894678</td>
+      <td>34.747228</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 10:00:00</td>
+      <td>2026-07-03 08:00:00</td>
+      <td>2026-07-04 10:00:00</td>
+      <td>2026-07-04 12:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>49.136500</td>
+      <td>54.389957</td>
+      <td>38.619278</td>
+      <td>54.389957</td>
+      <td>88.846497</td>
+      <td>26</td>
+      <td>25</td>
+      <td>5.253457</td>
+      <td>27.598815</td>
+    </tr>
+    <tr>
+      <td>2026-07-03 11:00:00</td>
+      <td>2026-07-03 09:00:00</td>
+      <td>2026-07-04 11:00:00</td>
+      <td>2026-07-04 13:00:00</td>
+      <td>chronos_bolt_tiny_zero_shot</td>
+      <td>NaN</td>
+      <td>49.654500</td>
+      <td>51.256527</td>
+      <td>40.754272</td>
+      <td>51.256527</td>
+      <td>76.645660</td>
+      <td>26</td>
+      <td>25</td>
+      <td>1.602027</td>
+      <td>2.566490</td>
+    </tr>
+  </tbody>
+</table></div><h2>Intervalo preditivo bruto</h2><pre>{
+  "pinball_p10": 6.724571170134771,
+  "pinball_p50": 15.67036912136986,
+  "pinball_p90": 9.284080198051816,
+  "coverage_80": 0.8035714285714286,
+  "below_p10": 0.11904761904761904,
+  "above_p90": 0.07738095238095238,
+  "mean_width_mwmed": 83.59523707344418,
+  "interval_score_80": 160.08651368186588,
+  "crossing_rows": 0,
+  "negative_p50_rows": 0,
+  "clipped": false,
+  "recalibrated": false
+}</pre><p>Inferencia dos lotes: 0.187s; carga: 0.165s; aquecimento: 0.025s. Pico do processo: 434.234375 MiB. Os tempos nao incluem instalacao/download.</p><p>Fontes completas: protocol.json, resultado.json, alinhamento_alvos.csv, trajetorias_26_passos.csv e comparacao_pareada.csv.</p></html>

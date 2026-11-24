@@ -1,0 +1,221 @@
+{
+  "schema": "renewcast-m08-2-teacher-verification-v1",
+  "date": "2026-11-04",
+  "scope": "Executed in Linux on the local verification package derived from earlier user data; not a Windows run",
+  "input_provenance": "M07 generation reconstructed from consistent fields of the full temporal table previously supplied; no new ONS retrieval",
+  "code_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+  "check_results": {
+    "passed": true,
+    "run_dir": "/workspace/scratch/dad22b6607ff/audit_m082/execucoes_professor/20261104T222303Z_ec96500d",
+    "checks": [
+      "particoes_7079_168_168_52_e_18",
+      "janelas_por_horario_com_lacuna",
+      "futuro_nao_altera_features",
+      "duas_fronteiras_estritas",
+      "lotes_4_1_mse20_e_rejeicao_media50",
+      "eval_no_grad_preserva_modo_pesos_gradientes",
+      "833_parametros_e_shape",
+      "tres_seeds_sem_escolha_pelo_relatorio",
+      "epoca_argmin_da_selecao",
+      "cada_epoca_ve_todas_as_linhas",
+      "scalers_apenas_ajuste",
+      "tres_recarregamentos_delta_zero",
+      "mesmas_168_origens_cinco_resultados",
+      "metricas_recalculadas",
+      "hashes_saida_e_entrada_preservados"
+    ]
+  },
+  "protocol": {
+    "schema": "renewcast-mlp-protocol-v1",
+    "horizon_hours": 24,
+    "availability_delay_hours_assumed": 2,
+    "context_hours": 24,
+    "seeds": [
+      17,
+      29,
+      41
+    ],
+    "hidden": 32,
+    "dropout": 0.1,
+    "batch_size": 128,
+    "max_epochs": 60,
+    "patience": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "selection_rule": "lowest selection MSE; first epoch wins ties; no refit",
+    "seed_selection": "none; report every seed",
+    "cpu_threads": 2,
+    "dtype_mlp": "float32",
+    "num_workers": 0,
+    "drop_last": false,
+    "input_sha256": {
+      "manifesto_entrada.json": "1576b7fd46775ee074569318b6cb81466c0f459b66c87727bc7159cd79755e36",
+      "geracao.parquet": "b286eb4fb625cded4a59bcce0063081c714ca66422ec720ce4b4117ddf5e1fc3",
+      "treino_referencia.parquet": "0aabb6829c0a3c7b6b0795a7f5e8447c4660859f8ce1610cb481a96c4b876f34"
+    },
+    "code_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+    "authorship_sha256": null,
+    "report_scope": "previously explored development week; not untouched holdout"
+  },
+  "result": {
+    "schema": "renewcast-mlp-result-v1",
+    "completed": true,
+    "python": "3.12.14",
+    "torch": "2.7.1+cpu",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "rows_source_training": 7485,
+    "excluded_incomplete": 18,
+    "partitions": {
+      "ajuste": {
+        "rows": 7079,
+        "origin_start": "2025-09-02T01:00:00",
+        "origin_end": "2026-06-23T23:00:00",
+        "latest_target_available_at": "2026-06-25T01:00:00"
+      },
+      "selecao": {
+        "rows": 168,
+        "origin_start": "2026-06-25T02:00:00",
+        "origin_end": "2026-07-02T01:00:00",
+        "latest_target_available_at": "2026-07-03T03:00:00"
+      },
+      "avaliacao": {
+        "rows": 168,
+        "origin_start": "2026-07-03T04:00:00",
+        "origin_end": "2026-07-10T03:00:00",
+        "latest_target_available_at": "2026-07-11T05:00:00"
+      },
+      "excluidas_disponibilidade": {
+        "rows": 52,
+        "origin_start": "2026-06-24T00:00:00",
+        "origin_end": "2026-07-03T03:00:00",
+        "latest_target_available_at": "2026-07-04T05:00:00"
+      }
+    },
+    "parameter_count_mlp": 833,
+    "fit_input_tensor_bytes_float32": 679584,
+    "memory_scope": "input tensor only; not peak process memory",
+    "training": [
+      {
+        "seed": 17,
+        "best_epoch": 8,
+        "epochs_executed": 16,
+        "best_selection_mse": 0.43541730364846504,
+        "training_seconds": 1.2956231590001153,
+        "stop_reason": "patience"
+      },
+      {
+        "seed": 29,
+        "best_epoch": 20,
+        "epochs_executed": 28,
+        "best_selection_mse": 0.44570034915797613,
+        "training_seconds": 2.537557733000085,
+        "stop_reason": "patience"
+      },
+      {
+        "seed": 41,
+        "best_epoch": 15,
+        "epochs_executed": 23,
+        "best_selection_mse": 0.4348128310679768,
+        "training_seconds": 2.01819352099983,
+        "stop_reason": "patience"
+      }
+    ],
+    "reload": [
+      {
+        "seed": 17,
+        "max_difference_mwmed": 0.0
+      },
+      {
+        "seed": 29,
+        "max_difference_mwmed": 0.0
+      },
+      {
+        "seed": 41,
+        "max_difference_mwmed": 0.0
+      }
+    ],
+    "evaluator_check": {
+      "batch_sizes": [
+        4,
+        1
+      ],
+      "correct_mse": 20.0,
+      "incorrect_unweighted_mse": 50.0,
+      "eval_no_grad_mode_restore_checked": true,
+      "empty_loader_rejected": true
+    },
+    "mlp_seed_mae": {
+      "median": 33.15978832964137,
+      "min": 32.72482783690616,
+      "max": 33.700811147656005,
+      "not_confidence_interval": true
+    },
+    "source_package_id": "d0a487b16c9b40ab78661d901ddf52ff9fbe592f62d9ae0fda75352bcb4da87f",
+    "availability_is_assumed": true,
+    "timezone_verified": false,
+    "operational_approval": false,
+    "output_sha256": {
+      "curvas.csv": "dcf2e08dcde14ca9f2c7d6477e60ae78d125e7e3830d5d3bb13af17f057a2b4f",
+      "janelas_avaliacao.csv": "9908050ae78e41f469cc0494079986c4d95556ef5cbef885538513d9f988d0e4",
+      "linear_24h.json": "ff112b183d746537e89a2443ee8362f0efa2977e227783785839892434c3466a",
+      "mlp_seed_17.pt": "05b98eb80d0fc5cbbec7483f3baed3f53e95e8adcff271ad2fa44aa0442448e3",
+      "mlp_seed_29.pt": "073579cd45c1429333c6a21f5f6483bede00e98fd29793db5e96217adc547c21",
+      "mlp_seed_41.pt": "d86c270e10adb4dc15d21dc364fec9f8adeb8ee03003dae9850ae23b0fb7266c",
+      "origens_sem_janela.csv": "6ff46428826a2d76f4ed61316ef17c830898509748cb74d8cadcf75ff903b997",
+      "particoes.csv": "639621cddc6e73d14d9bee69d8b89e1134384c61ad561e5ebde21e174336d136",
+      "predictions.csv": "79b849adf65c506b81cbcdba56910f0a8814acca47c31075d02ca16f4501d387",
+      "protocol.json": "015040ed9580d46a16ed377c35017a7a6f5eb097c9b99306eebe597862e748d9",
+      "summary.csv": "1c44795d96b333f43fb16362aa7c153b62713e652648caac7556a09be1c08974"
+    }
+  },
+  "metrics": [
+    {
+      "method": "persistence_d2",
+      "seed": null,
+      "rows": 168,
+      "mae_mwmed": 37.9916458333,
+      "rmse_mwmed": 55.4343422555,
+      "bias_observed_minus_predicted_mwmed": -3.0168720238
+    },
+    {
+      "method": "linear_24h",
+      "seed": null,
+      "rows": 168,
+      "mae_mwmed": 33.678663659,
+      "rmse_mwmed": 44.9381109826,
+      "bias_observed_minus_predicted_mwmed": 15.1486811361
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 17.0,
+      "rows": 168,
+      "mae_mwmed": 32.7248278369,
+      "rmse_mwmed": 44.0198660069,
+      "bias_observed_minus_predicted_mwmed": 10.6559467945
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 29.0,
+      "rows": 168,
+      "mae_mwmed": 33.7008111477,
+      "rmse_mwmed": 44.8923158621,
+      "bias_observed_minus_predicted_mwmed": 12.652756382
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 41.0,
+      "rows": 168,
+      "mae_mwmed": 33.1597883296,
+      "rmse_mwmed": 44.0695110965,
+      "bias_observed_minus_predicted_mwmed": 13.7242792941
+    }
+  ],
+  "conclusions": [
+    "M08.2 package executed and checked by the teacher; student execution and authorship remain pending.",
+    "All three seeds are reported; the range is not a confidence interval.",
+    "The report week was previously explored development data; no operational promotion."
+  ]
+}

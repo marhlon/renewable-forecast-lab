@@ -1,0 +1,5 @@
+escore,average_precision,id_removido,linhas,positivos
+constante,0.009539012996170684,id_134,102107,974
+score_robusto,0.3561143431434298,id_134,102107,974
+score_pca,0.017141857855501104,id_134,102107,974
+score_isolation,0.32490994463443396,id_134,102107,974

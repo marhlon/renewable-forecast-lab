@@ -1,0 +1,42 @@
+[
+  {
+    "package": "pyarrow",
+    "version": "26.0.1",
+    "compatible_windows_wheels": [
+      "pyarrow-26.0.1-cp312-cp312-win_amd64.whl"
+    ],
+    "found": true
+  },
+  {
+    "package": "psutil",
+    "version": "7.2.2",
+    "compatible_windows_wheels": [
+      "psutil-7.2.2-cp37-abi3-win_amd64.whl"
+    ],
+    "found": true
+  },
+  {
+    "package": "regex",
+    "version": "2026.11.15",
+    "compatible_windows_wheels": [
+      "regex-2026.11.15-cp312-cp312-win_amd64.whl"
+    ],
+    "found": true
+  },
+  {
+    "package": "tokenizers",
+    "version": "0.21.1",
+    "compatible_windows_wheels": [
+      "tokenizers-0.21.1-cp39-abi3-win_amd64.whl"
+    ],
+    "found": true
+  },
+  {
+    "package": "safetensors",
+    "version": "0.5.3",
+    "compatible_windows_wheels": [
+      "safetensors-0.5.3-cp38-abi3-win_amd64.whl"
+    ],
+    "found": true
+  }
+]

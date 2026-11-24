@@ -1,0 +1,8 @@
+forecast_origin,delta_historico_mwmed,delta_media_mwmed,delta_alvo_mwmed,pertence_ao_treino
+2026-07-09 01:00:00,0.0,0.0,12.0,True
+2026-07-10 03:00:00,12.0,2.0,0.0,True
+2026-07-10 04:00:00,0.0,2.0,0.0,False
+2026-07-10 05:00:00,0.0,2.0,0.0,False
+2026-07-10 06:00:00,0.0,2.0,0.0,False
+2026-07-10 07:00:00,0.0,2.0,0.0,False
+2026-07-10 08:00:00,0.0,2.0,0.0,False

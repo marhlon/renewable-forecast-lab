@@ -1,0 +1,11 @@
+﻿ESA Mission1/2007: 1,046,703 medições; 350,400 instantes da grade.
+   channel  raw_rows  null_values  median_spacing_seconds  p99_spacing_seconds  largest_spacing_seconds  spacing_over_180s  usable_grid_rows  unusable_grid_rows  usable_fraction
+channel_50    348901            0                    90.0               90.003                   1170.0                 41            350346                  54         0.999846
+channel_51    348901            0                    90.0               90.003                   1170.0                 41            350346                  54         0.999846
+channel_52    348901            0                    90.0               90.003                   1170.0                 41            350346                  54         0.999846
+         category  source_annotation_rows  distinct_annotation_ids  grid_rows_with_annotation
+          Anomaly                       7                        3                       5732
+       Rare Event                      26                        7                       3303
+Communication Gap                       0                        0                          0
+Cinco conferências aprovadas; rótulos e features separados; nenhum treino.
+Relatório: C:\renewable-forecast-lab\satellite-anomaly-monitor\reports\m10_1\20261118T203614Z_7e13daae\relatorio.html

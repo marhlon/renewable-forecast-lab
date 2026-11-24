@@ -1,0 +1,65 @@
+{
+  "evidencia": "E104",
+  "data_local": "2026-10-27",
+  "escopo": "Linux nativo, PySpark4.0.1/Delta4.0.1/Java17; nao Docker Windows",
+  "fonte_teste": "Geracao reconstruida por alinhamento temporal dos dois Parquets enviados pelo aluno; nao arquivo bruto original",
+  "fonte_comparacao": "Parquet real de treino recebido, 7485 linhas",
+  "resultado": "aprovado",
+  "conclusao": {
+    "schema": "renewcast-delta-lab-v1",
+    "completed": true,
+    "spark_version": "4.0.1",
+    "delta_version": "4.0.1",
+    "snapshot_original": 0,
+    "snapshot_corrigido": 1,
+    "snapshot_apos_reenvio": 1,
+    "horas": 8760,
+    "linhas_treino": 7485,
+    "correcao_simulada": true,
+    "instante_corrigido": "2026-07-10T01:00:00",
+    "valor_original": 165.522,
+    "valor_corrigido": 177.522,
+    "incremento_mwmed": 12.0,
+    "origens_com_mudanca": 7,
+    "linhas_treino_com_mudanca": 2,
+    "snapshot_original_reproduzido": true,
+    "reenvio_alterou_dados": false,
+    "schema_incompativel_rejeitado": true,
+    "duplicidade_rejeitada": true,
+    "disponibilidade_assumida": true,
+    "historical_source_versions_verified": false,
+    "models_trained": false
+  },
+  "conferencia_independente": {
+    "snapshot_log_versions": [
+      0,
+      1
+    ],
+    "linhas_raw_alteradas": 1,
+    "linha_corrigida": "(datetime.datetime(2026, 7, 10, 1, 0), 165.522, 177.522)",
+    "delta_media_seis_origens": 2,
+    "delta_historico_uma_origem": 12,
+    "delta_alvo_uma_origem": 12,
+    "anexos_preservados": true
+  },
+  "limites": [
+    "Lançador Docker/Windows nao executado aqui.",
+    "Não se verificou publicação histórica ONS nem se treinou modelo.",
+    "Correção +12 explicitamente hipotética."
+  ],
+  "sha256_codigo": "e469ae9232098badd60f14a0e22e2e8b784dcaaea54626569219a95f9034793f",
+  "dependencias": [
+    {
+      "name": "delta-spark_2.13-4.0.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/io/delta/delta-spark_2.13/4.0.1/delta-spark_2.13-4.0.1.jar",
+      "sha256": "a1e76860b19fe1e6b205a4ea7a9099a2f9575d39bb71d49b3e679b299d0efb91",
+      "bytes": 7731162
+    },
+    {
+      "name": "delta-storage-4.0.1.jar",
+      "url": "https://repo.maven.apache.org/maven2/io/delta/delta-storage/4.0.1/delta-storage-4.0.1.jar",
+      "sha256": "ecc42c5aaa51c423312d9e4e48aa4a12b34740bf2c37de0e8f279277ec3d12e4",
+      "bytes": 78832
+    }
+  ]
+}

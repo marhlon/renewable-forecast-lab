@@ -1,0 +1,85 @@
+{
+  "schema": "renewcast-m08-3-delivery-verification-v1",
+  "verified_at_utc": "2026-11-15T17:11:43.735966+00:00",
+  "verified": true,
+  "experiment_directory": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f",
+  "numpy_check_file": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170409Z_592111fa/conferencia_sem_treino.json",
+  "implementation_sha256": "6d8dde1412f1b7815a1a3483cefb6f89240f8f63a48144446616e1231f394de2",
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "code_sha256": {
+    "laboratorio_gru.py": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+    "m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+    "m08_3_verificacao.py": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+    "neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0"
+  },
+  "checks": {
+    "numpy_check_groups": 11,
+    "max_grucell_difference": 2.220446049250313e-16,
+    "tolerance": 1e-12,
+    "additional_unittest_count": 5,
+    "additional_unittest_passed": true,
+    "source_files_match_distributed_zip": true,
+    "all_local_input_and_output_hashes_valid": true,
+    "nine_variants_on_same_168_origins": true,
+    "metrics_recomputed_from_predictions": true,
+    "selected_epochs_match_selection_argmin": true,
+    "six_checkpoint_reload_differences_zero": true,
+    "curves_visually_verified": true,
+    "document_links_valid": true
+  },
+  "seed_summaries": [
+    {
+      "architecture": "mlp_24h",
+      "median_mae": 33.15978842314019,
+      "min_mae": 32.724828086773655,
+      "max_mae": 33.700811473289775,
+      "interpretation": "seed range, not confidence interval or ensemble"
+    },
+    {
+      "architecture": "gru_24h",
+      "median_mae": 34.9112268513053,
+      "min_mae": 34.573202435059805,
+      "max_mae": 35.67596978081066,
+      "interpretation": "seed range, not confidence interval or ensemble"
+    }
+  ],
+  "process_memory": {
+    "peak_mib": 396.04296875,
+    "source": "Windows GetProcessMemoryInfo PeakWorkingSetSize",
+    "scope": "whole process lifetime; not per-model memory",
+    "error": null
+  },
+  "report_word_count": 854,
+  "files_sha256": {
+    "notebooks/m08_gru_autoral.py": "6d8dde1412f1b7815a1a3483cefb6f89240f8f63a48144446616e1231f394de2",
+    "tests/test_m08_gru_autoral.py": "218619d274db7104484a1059f6041d3283fedb08749b70946f8f31e826ed6ccd",
+    "reports/parecer_m08_gru.md": "76a28af1e41048a314ae130a4fd1725e22b0e4db4b4ec476a105246690ca2dd5",
+    "docs/Explicacao_M08_3_Passo_a_Passo.md": "6087059395b81310eb5a1e2173ff0628f698641da0c8efd4184f59ffdf52cd7d",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170409Z_592111fa/conferencia_sem_treino.json": "a50ad88fa53fa3e084ddce50effcafdaf07b8125082688254fea740a223a4c8f",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/resultado.json": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/curvas.csv": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/curvas.png": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/relatorio.html": "c30cf63aa59bec47aea5a64f147b240a3663d6ae35fe6df77adb8f734f6b8715",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/preprocessing.json": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/janelas_avaliacao.csv": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/particoes.csv": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/origens_sem_janela.csv": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa"
+  },
+  "operational_policy_approved": false,
+  "scope": "Experiment and NumPy verification are separate; selected review artifacts, without model binaries."
+}

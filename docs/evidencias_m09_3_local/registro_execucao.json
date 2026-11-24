@@ -1,0 +1,72 @@
+{
+  "schema": "renewcast-m09-3-execution-record-v1",
+  "recorded_at_utc": "2026-11-17T21:48:58.310016+00:00",
+  "evidence_type": "observed_process_results_and_generated_protocol",
+  "note": "Registro dos comandos observados. Não é transcrição bruta do terminal.",
+  "working_directory": "C:\\renewable-forecast-lab",
+  "recorded_paths_use_forward_slashes": true,
+  "run_id": "20261117T213329Z_3b201a01",
+  "baseline_run_id": "20261115T170309Z_90a6625f",
+  "commands_observed": [
+    {
+      "purpose": "Conferência integrada sem inferência",
+      "argv": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "notebooks/laboratorio_pre_treinado.py",
+        "--autoria",
+        "notebooks/m09_alinhamento_autoral.py",
+        "--verificar"
+      ],
+      "exit_code": 0,
+      "verification_groups_passed": 5,
+      "output_directory": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213319Z_983deae2"
+    },
+    {
+      "purpose": "Inferência autoral completa em Windows/CPU",
+      "argv": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "scripts/executar_m09_3.py",
+        "--autoria",
+        "notebooks/m09_alinhamento_autoral.py",
+        "--offline",
+        "--baseline-run-dir",
+        "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f"
+      ],
+      "exit_code": 0,
+      "output_directory": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01"
+    },
+    {
+      "purpose": "Testes adicionais do alinhamento",
+      "argv": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_m09_alinhamento_autoral.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_run": 10,
+      "tests_passed": 10
+    },
+    {
+      "purpose": "Abrir o relatório no aplicativo padrão do Windows",
+      "powershell_command": "Invoke-Item -LiteralPath 'C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_3_pre_treinado\\20261117T213329Z_3b201a01\\relatorio.html'",
+      "exit_code": 0,
+      "visual_browser_inspection": false,
+      "note": "Abertura solicitada ao Windows. Automação visual indisponível nesta sessão."
+    }
+  ],
+  "authorship_sha256": "aa5c08ffa7ecea83648cf76f9f0a97581873266c34458f4eac86fc4f894acee1",
+  "protocol_sha256": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6",
+  "resultado_sha256": "19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0",
+  "audit_sha256": "3079ebc0ec10ce6f5725043a3cc8ad70e3c7be38fd248cd0ca9ed274cc02fb63",
+  "tests_source_sha256": "39ca85fd4d3fa25aede2c9fea9d05aeb9cfba4cff77b4f6cb73a51561c1be935",
+  "environment_reused": true,
+  "snapshot_reused": true,
+  "network_downloads_in_this_execution": false,
+  "vendor_warning": "Aviso de depreciação de past_key_values em dependência; execução concluída com código 0."
+}

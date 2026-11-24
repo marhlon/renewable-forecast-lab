@@ -1,0 +1,100 @@
+{
+  "schema": "renewcast-m08-3-student-review-v1",
+  "verified": true,
+  "student_run_id": "20261115T164955Z_5e435b09",
+  "tests_run": 5,
+  "tests_passed": true,
+  "conformance": {
+    "passed": true,
+    "checks": [
+      "portas_numpy_vs_grucell_e_entradas_preservadas",
+      "vinte_quatro_passos_numpy_vs_gru",
+      "estado_reiniciado_entre_chamadas",
+      "ordem_do_lote_nao_muda_previsao",
+      "ultimo_lote_e_ultimo_estado",
+      "gru_929_parametros",
+      "shapes_invalidos_rejeitados",
+      "avaliador_4_mais_1_mse20",
+      "avaliador_modos_mistos_e_excecoes",
+      "avaliador_preserva_pesos_e_gradientes",
+      "avaliador_rejeita_vazio_shape_nan_overflow"
+    ],
+    "checks_count": 11,
+    "max_grucell_difference": 2.220446049250313e-16,
+    "tolerance_grucell": 1e-12,
+    "training_uses": "torch.nn.GRU and autograd; numpy step is a separate semantic check"
+  },
+  "hash_files_verified": 8,
+  "summary_metrics_verified": 27,
+  "raw_prediction_rows": 1512,
+  "input_source_files_received": false,
+  "checkpoints_received": false,
+  "code_received_as_text": true,
+  "source_code_independence_certified": false,
+  "authorship_sha256": "6d8dde1412f1b7815a1a3483cefb6f89240f8f63a48144446616e1231f394de2",
+  "tests_sha256": "218619d274db7104484a1059f6041d3283fedb08749b70946f8f31e826ed6ccd",
+  "source_result_sha256": "60e58cc9837d987eb346c2e7af339c35972c78bb8fad1fc7f4e53fee02a60eab",
+  "source_files_sha256": {
+    "curvas.csv": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+    "origens_sem_janela.csv": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+    "particoes.csv": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+    "predictions.csv": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+    "preprocessing.json": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+    "protocol.json": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+    "relatorio.html": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+    "summary.csv": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140"
+  },
+  "partition_boundaries": {
+    "ajuste": {
+      "rows": 7079,
+      "first_origin": "2025-09-02T01:00:00",
+      "last_origin": "2026-06-23T23:00:00",
+      "latest_label_available": "2026-06-25T01:00:00"
+    },
+    "avaliacao": {
+      "rows": 168,
+      "first_origin": "2026-07-03T04:00:00",
+      "last_origin": "2026-07-10T03:00:00",
+      "latest_label_available": "2026-07-11T05:00:00"
+    },
+    "excluidas_disponibilidade": {
+      "rows": 52,
+      "first_origin": "2026-06-24T00:00:00",
+      "last_origin": "2026-07-03T03:00:00",
+      "latest_label_available": "2026-07-04T05:00:00"
+    },
+    "selecao": {
+      "rows": 168,
+      "first_origin": "2026-06-25T02:00:00",
+      "last_origin": "2026-07-02T01:00:00",
+      "latest_label_available": "2026-07-03T03:00:00"
+    }
+  },
+  "teacher_scaler_max_differences": {
+    "mean_x": 0.0,
+    "scale_x": 0.0,
+    "mean_y": 0.0,
+    "scale_y": 0.0
+  },
+  "teacher_environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "student_environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0"
+  },
+  "hgb_difference_cause": "not identified: different library versions and binary input packages; no isolated intervention",
+  "reported_process_peak_mib": 396.28125,
+  "comparison_scope": "same previously explored development week; not untouched holdout",
+  "training_reexecuted": false,
+  "operational_promotion": false
+}

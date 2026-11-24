@@ -1,0 +1,21 @@
+{
+  "schema": "satmon-m10-2-audit-v1",
+  "resultado_referencia": "20261118T235740Z_ed5c4029",
+  "execucao_modo_autoria_em_linux": "20261119T000313Z_d043f248",
+  "pacotes_compativeis": {
+    "python": "3.12.14",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.0"
+  },
+  "delta_pca_maximo_modo_autoria": 3.952393967665557e-14,
+  "auditoria_dos_dois_runs": [
+    "hashes",
+    "coorte comum",
+    "ausentes sem escores",
+    "união independente do id_134",
+    "AP com agrupamento de empates"
+  ],
+  "execucao_windows_do_aluno": false,
+  "periodo_posterior_pontuado": false
+}

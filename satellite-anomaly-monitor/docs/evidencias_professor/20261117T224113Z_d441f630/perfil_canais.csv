@@ -1,0 +1,4 @@
+channel,raw_rows,null_values,median_spacing_seconds,p99_spacing_seconds,largest_spacing_seconds,spacing_over_180s,usable_grid_rows,unusable_grid_rows,usable_fraction
+channel_50,348901,0,90.0,90.003,1170.0,41,350346,54,0.999845890410959
+channel_51,348901,0,90.0,90.003,1170.0,41,350346,54,0.999845890410959
+channel_52,348901,0,90.0,90.003,1170.0,41,350346,54,0.999845890410959

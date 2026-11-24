@@ -1,0 +1,104 @@
+{
+  "schema": "satmon-m10-2-result-v1",
+  "completed": true,
+  "run_id": "20261119T101049Z_253ff59f",
+  "source_spec_sha256": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+  "source_slice": [
+    "2004-01-01T00:00:00Z",
+    "2008-01-01T00:00:00Z",
+    "2011-01-01T00:00:00Z"
+  ],
+  "grid_rows_fit": 140256,
+  "fit_rows_used": 136202,
+  "grid_rows_dev": 105216,
+  "dev_rows_unscored": 51,
+  "dev_rows_scored": 105165,
+  "dev_rows_evaluated": 105042,
+  "dev_positive_points": 3909,
+  "dev_anomaly_ids": 8,
+  "dev_anomaly_ids_without_eval_points": 0,
+  "average_precision": {
+    "constante": 0.03721368595418975,
+    "score_robusto": 0.7164270010708352,
+    "score_pca": 0.5020133451392703,
+    "score_isolation": 0.7581493124419436
+  },
+  "sensitivity_to_largest_annotation": {
+    "id": "id_134",
+    "removed_positive_points": 2935,
+    "share_of_all_positive_points": 0.7508314146840624,
+    "average_precision": {
+      "constante": 0.009539012996170684,
+      "score_robusto": 0.3561143431434298,
+      "score_pca": 0.017141857855501104,
+      "score_isolation": 0.32490994463443396
+    },
+    "refit": false,
+    "diagnostic_only": true
+  },
+  "robust_medians": [
+    0.7512429356575012,
+    0.7756929993629456,
+    0.7554947733879089
+  ],
+  "robust_scaled_mads": [
+    0.014186630022525787,
+    0.012607549238204955,
+    0.012607549238204955
+  ],
+  "pca_center_in_scaled_space": [
+    0.22249242846536618,
+    0.23558881432447693,
+    0.2825677760181486
+  ],
+  "pca_components": [
+    [
+      0.5436410728186272,
+      0.585962184481928,
+      0.6009182159843208
+    ],
+    [
+      -0.3803833778836455,
+      0.8102201057319441,
+      -0.4459280952099177
+    ]
+  ],
+  "pca_explained_variance_ratios": [
+    0.9905147483695907,
+    0.005086815980087712
+  ],
+  "max_pca_difference_vs_sklearn": 3.730349362740526e-14,
+  "authorship_sha256": "5d8b070af9a0e4417b1c0e910db43a8a24ea69c2ecaa49aa4fc1eee31d6e180d",
+  "code_sha256": {
+    "runner": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "core": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372"
+  },
+  "small_projection_checks_passed": true,
+  "settings": {
+    "pca_components": 2,
+    "forest_trees": 128,
+    "forest_max_samples": 256,
+    "kmeans_clusters": 3,
+    "kmeans_n_init": 10,
+    "random_state": 17
+  },
+  "platform": "win32",
+  "versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.0"
+  },
+  "threshold_selected": false,
+  "holdout_scored": false,
+  "operational_approval": false,
+  "output_sha256": {
+    "casos_reais.csv": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8",
+    "cobertura_eventos.csv": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313",
+    "contextos.csv": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee",
+    "escores_desenvolvimento.csv.gz": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "metricas.csv": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c",
+    "relatorio.html": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c",
+    "sensibilidade_evento.csv": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866"
+  }
+}

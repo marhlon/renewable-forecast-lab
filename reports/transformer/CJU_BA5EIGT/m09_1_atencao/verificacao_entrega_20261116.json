@@ -1,0 +1,66 @@
+{
+  "schema": "renewcast-m09-1-delivery-verification-v1",
+  "verified_at_utc": "2026-11-16T23:06:27.189385+00:00",
+  "verified": true,
+  "real_window_run": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2",
+  "standalone_check": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225948Z_dd45caf2/conferencia.json",
+  "implementation_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+  "code_sha256": {
+    "laboratorio_atencao.py": "f2e69380f341bc8ab79b62be4519e83dea3002c0f2fed9ce33e63387a5d57144"
+  },
+  "support_code_sha256": {
+    "attention_math.py": "92dd9bdcb38cdcbfab9829a3644ba621db5bd467919c944411b572c2f32ce6f1",
+    "m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9"
+  },
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pytorch": "2.7.1+cpu"
+  },
+  "checks": {
+    "integrated_groups_passed": 8,
+    "max_difference_pytorch": 4.440892098500626e-16,
+    "tolerance": 1e-12,
+    "additional_unittest_count": 6,
+    "additional_unittest_passed": true,
+    "inputs_and_outputs_hashes_valid": true,
+    "distributed_attention_sources_preserved": true,
+    "weight_rows_sum_to_one": true,
+    "maximum_row_sum_error": 1.3322676295501878e-15,
+    "forbidden_causal_weights_exactly_zero": true,
+    "outputs_recomputed_from_weights": true,
+    "convex_bounds_verified": true,
+    "historical_measurements_match_input": true,
+    "html_tooltips_verified": 1152,
+    "map_png_visually_verified": true,
+    "relative_document_links_valid": true
+  },
+  "last_query_full_causal_difference": 0.0,
+  "permutation_without_position": 1.4210854715202004e-14,
+  "permutation_fixed_positions": 4.6390829343196955,
+  "report_words": 558,
+  "models_trained": false,
+  "forecast_metrics_computed": false,
+  "m08_training_or_tests_repeated": false,
+  "files_sha256": {
+    "notebooks/m09_atencao_autoral.py": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+    "tests/test_m09_atencao_autoral.py": "fc4ec9245e8169bf841e3906f4613893706de8950c4a07ab6eae6771b0d049de",
+    "reports/parecer_m09_atencao.md": "d123553a9c76722bfe5ce15a51ba5832ced09dfa82fe6d3350bb2f0a98995fd5",
+    "docs/Explicacao_M09_1_Passo_a_Passo.md": "320d6bed2831a1016dc53378301db6c3f9f4d68357c91639b35dd50745ca6fb0",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/conferencia.json": "c1c95845fdbc2ea2bbffae6bab83b24b71e6b9e879af5715f8910dcb0c60fd60",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/resultado.json": "d3322c6e9d242750af798f08a1d8cc8cd1aa6a7b719159fd0e01fedd6beb2a16",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/pesos_livres.csv": "002c457ba829b8a29e9fb838ccbe1538b46b2853cb86c3b5ba01b9a22ee5eafb",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/pesos_causais.csv": "197301c9eefbdafe57279e5a58ac6ea56690251685f95026c76aae9d096b6dcd",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/janela_e_representacoes.csv": "1e7c3d2f77c955b9dce1e79e9c4bea6cc8fbf29f2ed5d1309d1811855ad7692a",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/projecoes.json": "7cfe00f5fb68aa973e67d15810bb30c0f29b9068062598fd832f947b6bf04465",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225949Z_530c99e2/relatorio.html": "180e266f158c33af2d277c4c4f940b0d6a35c555d61a4f91589d00f4179a35b2",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261116T225948Z_dd45caf2/conferencia.json": "c1c95845fdbc2ea2bbffae6bab83b24b71e6b9e879af5715f8910dcb0c60fd60",
+    "reports/transformer/CJU_BA5EIGT/m09_1_atencao/mapas_atencao_20261116.png": "231b7f6467aadbba4f73379de6bf565011c444921e22520566929142197adfbb",
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a"
+  }
+}

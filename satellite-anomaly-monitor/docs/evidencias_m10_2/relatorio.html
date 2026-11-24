@@ -1,0 +1,375 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>M10.2 — detectores</title>
+    <style>body{font:16px/1.55 system-ui;margin:2em auto;padding:0 18px;max-width:1100px;color:#132630}
+    table{border-collapse:collapse;font-size:14px;width:100%;margin:0.8em 0}th,td{text-align:right;padding:6px;border:1px solid #d5e0e6}
+    th{background:#e9f2f5}th:first-child,td:first-child{text-align:left}.scroll{overflow:auto}pre{overflow:auto;background:#edf2f6;padding:10px}</style><h1>M10.2 — três detectores, mesmos instantes</h1><p>ESA Mission1: ajuste 2004–2007; desenvolvimento 2008–2010. 105,042 instantes comparados, 3,909 positivos anotados. Sem limiar ou teste final.</p><h2>Ranking de instantes</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>escore</th>
+      <th>average_precision</th>
+      <th>linhas</th>
+      <th>positivos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>constante</td>
+      <td>0.037214</td>
+      <td>105042</td>
+      <td>3909</td>
+    </tr>
+    <tr>
+      <td>score_robusto</td>
+      <td>0.716427</td>
+      <td>105042</td>
+      <td>3909</td>
+    </tr>
+    <tr>
+      <td>score_pca</td>
+      <td>0.502013</td>
+      <td>105042</td>
+      <td>3909</td>
+    </tr>
+    <tr>
+      <td>score_isolation</td>
+      <td>0.758149</td>
+      <td>105042</td>
+      <td>3909</td>
+    </tr>
+  </tbody>
+</table><p>AP favorece identificar instantes anotados no ranking. Eventos longos podem dominar a métrica. Sem anotação é um negativo provisório no cálculo.</p><h2>Casos para explicar</h2><div class='scroll'><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>caso</th>
+      <th>timestamp</th>
+      <th>anotacao_anomaly</th>
+      <th>channel_50_value</th>
+      <th>channel_51_value</th>
+      <th>channel_52_value</th>
+      <th>score_robusto</th>
+      <th>score_pca</th>
+      <th>score_isolation</th>
+      <th>rank_score_robusto_pct</th>
+      <th>rank_score_pca_pct</th>
+      <th>rank_score_isolation_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pca_relativamente_alto</td>
+      <td>2008-02-01 07:45:00+00:00</td>
+      <td>True</td>
+      <td>0.752308</td>
+      <td>0.774632</td>
+      <td>0.754434</td>
+      <td>0.084148</td>
+      <td>0.018878</td>
+      <td>0.469113</td>
+      <td>1.847832</td>
+      <td>90.362426</td>
+      <td>24.540184</td>
+    </tr>
+    <tr>
+      <td>robusto_relativamente_alto</td>
+      <td>2009-06-12 16:00:00+00:00</td>
+      <td>True</td>
+      <td>0.668324</td>
+      <td>0.685335</td>
+      <td>0.674702</td>
+      <td>7.166944</td>
+      <td>0.000002</td>
+      <td>0.719944</td>
+      <td>98.250224</td>
+      <td>0.828240</td>
+      <td>98.662440</td>
+    </tr>
+    <tr>
+      <td>isolation_alto_sem_anotacao</td>
+      <td>2008-12-25 16:00:00+00:00</td>
+      <td>False</td>
+      <td>0.776758</td>
+      <td>0.802269</td>
+      <td>0.785262</td>
+      <td>2.361044</td>
+      <td>0.050872</td>
+      <td>0.731665</td>
+      <td>96.708459</td>
+      <td>93.366939</td>
+      <td>99.991908</td>
+    </tr>
+  </tbody>
+</table></div><p>Rank em % é posição no recorte de desenvolvimento, não probabilidade.</p><h2>Eventos Anomaly no desenvolvimento</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>id</th>
+      <th>categoria</th>
+      <th>particao</th>
+      <th>anotacoes_canal_intervalo</th>
+      <th>inicio_utc</th>
+      <th>fim_utc</th>
+      <th>linhas_na_grade</th>
+      <th>linhas_utilizaveis</th>
+      <th>linhas_entram_no_ranking_dev</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id_134</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2009-05-25T13:18:10.299Z</td>
+      <td>2009-06-25T15:35:22.296Z</td>
+      <td>2985</td>
+      <td>2935</td>
+      <td>2935</td>
+    </tr>
+    <tr>
+      <td>id_138</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2009-10-13T06:39:52.281Z</td>
+      <td>2009-10-13T21:32:22.281Z</td>
+      <td>60</td>
+      <td>60</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>id_142</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2010-04-22T01:18:52.254Z</td>
+      <td>2010-04-22T01:45:52.254Z</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>id_145</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2010-05-19T00:50:22.248Z</td>
+      <td>2010-05-22T18:03:52.248Z</td>
+      <td>357</td>
+      <td>357</td>
+      <td>357</td>
+    </tr>
+    <tr>
+      <td>id_149</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2010-09-07T02:23:22.233Z</td>
+      <td>2010-09-07T02:38:22.233Z</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>id_150</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2010-10-26T17:24:52.224Z</td>
+      <td>2010-10-26T17:45:52.224Z</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>id_18</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2008-09-08T14:18:37.338Z</td>
+      <td>2008-09-08T17:09:37.341Z</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>id_20</td>
+      <td>Anomaly</td>
+      <td>desenvolvimento</td>
+      <td>3</td>
+      <td>2008-01-30T03:21:37.374Z</td>
+      <td>2008-02-04T18:33:37.371Z</td>
+      <td>541</td>
+      <td>541</td>
+      <td>541</td>
+    </tr>
+  </tbody>
+</table><h2>Sensibilidade ao evento de maior presença</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>escore</th>
+      <th>average_precision</th>
+      <th>id_removido</th>
+      <th>linhas</th>
+      <th>positivos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>constante</td>
+      <td>0.009539</td>
+      <td>id_134</td>
+      <td>102107</td>
+      <td>974</td>
+    </tr>
+    <tr>
+      <td>score_robusto</td>
+      <td>0.356114</td>
+      <td>id_134</td>
+      <td>102107</td>
+      <td>974</td>
+    </tr>
+    <tr>
+      <td>score_pca</td>
+      <td>0.017142</td>
+      <td>id_134</td>
+      <td>102107</td>
+      <td>974</td>
+    </tr>
+    <tr>
+      <td>score_isolation</td>
+      <td>0.324910</td>
+      <td>id_134</td>
+      <td>102107</td>
+      <td>974</td>
+    </tr>
+  </tbody>
+</table><p>Somente os instantes desse ID foram retirados da avaliação. Os escores permanecem fixos. A prevalência e a coorte mudaram; compare métodos dentro de cada tabela.</p><h2>Agrupamento para investigar contexto</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>grupo_kmeans</th>
+      <th>linhas</th>
+      <th>positivos</th>
+      <th>mediana_escore_pca</th>
+      <th>mediana_escore_robusto</th>
+      <th>fracao_positiva_anotada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>44488</td>
+      <td>3170</td>
+      <td>0.001514</td>
+      <td>1.264833</td>
+      <td>0.071255</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>33821</td>
+      <td>12</td>
+      <td>0.000078</td>
+      <td>1.686558</td>
+      <td>0.000355</td>
+    </tr>
+    <tr>
+      <td>2.0</td>
+      <td>26733</td>
+      <td>727</td>
+      <td>0.000646</td>
+      <td>0.253097</td>
+      <td>0.027195</td>
+    </tr>
+  </tbody>
+</table><p>O ID do grupo é arbitrário. Não foi usado para definir rótulo nem alarme.</p><h2>Configuração e limites</h2><pre>{
+  &quot;schema&quot;: &quot;satmon-m10-2-result-v1&quot;,
+  &quot;completed&quot;: true,
+  &quot;run_id&quot;: &quot;20261118T235740Z_ed5c4029&quot;,
+  &quot;source_spec_sha256&quot;: &quot;4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0&quot;,
+  &quot;source_slice&quot;: [
+    &quot;2004-01-01T00:00:00Z&quot;,
+    &quot;2008-01-01T00:00:00Z&quot;,
+    &quot;2011-01-01T00:00:00Z&quot;
+  ],
+  &quot;grid_rows_fit&quot;: 140256,
+  &quot;fit_rows_used&quot;: 136202,
+  &quot;grid_rows_dev&quot;: 105216,
+  &quot;dev_rows_unscored&quot;: 51,
+  &quot;dev_rows_scored&quot;: 105165,
+  &quot;dev_rows_evaluated&quot;: 105042,
+  &quot;dev_positive_points&quot;: 3909,
+  &quot;dev_anomaly_ids&quot;: 8,
+  &quot;dev_anomaly_ids_without_eval_points&quot;: 0,
+  &quot;average_precision&quot;: {
+    &quot;constante&quot;: 0.03721368595418975,
+    &quot;score_robusto&quot;: 0.7164270010708352,
+    &quot;score_pca&quot;: 0.5020133451392703,
+    &quot;score_isolation&quot;: 0.7581493124419436
+  },
+  &quot;sensitivity_to_largest_annotation&quot;: {
+    &quot;id&quot;: &quot;id_134&quot;,
+    &quot;removed_positive_points&quot;: 2935,
+    &quot;share_of_all_positive_points&quot;: 0.7508314146840624,
+    &quot;average_precision&quot;: {
+      &quot;constante&quot;: 0.009539012996170684,
+      &quot;score_robusto&quot;: 0.3561143431434298,
+      &quot;score_pca&quot;: 0.017141857855501104,
+      &quot;score_isolation&quot;: 0.32490994463443396
+    },
+    &quot;refit&quot;: false,
+    &quot;diagnostic_only&quot;: true
+  },
+  &quot;robust_medians&quot;: [
+    0.7512429356575012,
+    0.7756929993629456,
+    0.7554947733879089
+  ],
+  &quot;robust_scaled_mads&quot;: [
+    0.014186630022525787,
+    0.012607549238204955,
+    0.012607549238204955
+  ],
+  &quot;pca_center_in_scaled_space&quot;: [
+    0.22249242846536618,
+    0.23558881432447693,
+    0.2825677760181486
+  ],
+  &quot;pca_components&quot;: [
+    [
+      0.5436410728185647,
+      0.5859621844819535,
+      0.6009182159843522
+    ],
+    [
+      -0.38038337788305643,
+      0.8102201057319146,
+      -0.44592809521047305
+    ]
+  ],
+  &quot;pca_explained_variance_ratios&quot;: [
+    0.9905147483695924,
+    0.005086815980086898
+  ],
+  &quot;max_pca_difference_vs_sklearn&quot;: 3.552713678800501e-14,
+  &quot;authorship_sha256&quot;: null,
+  &quot;code_sha256&quot;: {
+    &quot;runner&quot;: &quot;d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098&quot;,
+    &quot;core&quot;: &quot;6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372&quot;
+  },
+  &quot;small_projection_checks_passed&quot;: true,
+  &quot;settings&quot;: {
+    &quot;pca_components&quot;: 2,
+    &quot;forest_trees&quot;: 128,
+    &quot;forest_max_samples&quot;: 256,
+    &quot;kmeans_clusters&quot;: 3,
+    &quot;kmeans_n_init&quot;: 10,
+    &quot;random_state&quot;: 17
+  },
+  &quot;platform&quot;: &quot;linux&quot;,
+  &quot;versions&quot;: {
+    &quot;python&quot;: &quot;3.12.14&quot;,
+    &quot;pandas&quot;: &quot;2.2.3&quot;,
+    &quot;numpy&quot;: &quot;2.3.5&quot;,
+    &quot;scikit-learn&quot;: &quot;1.8.0&quot;
+  },
+  &quot;threshold_selected&quot;: false,
+  &quot;holdout_scored&quot;: false,
+  &quot;operational_approval&quot;: false
+}</pre></html>

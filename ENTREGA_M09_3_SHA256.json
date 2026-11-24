@@ -1,0 +1,186 @@
+{
+  "schema": "renewcast-delivery-sha256-v1",
+  "run_id": "20261117T213329Z_3b201a01",
+  "files": {
+    "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet": {
+      "bytes": 125727,
+      "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+    },
+    "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json": {
+      "bytes": 1594,
+      "sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34"
+    },
+    "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet": {
+      "bytes": 394579,
+      "sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+    },
+    "docs/Aula_M09_3_Pre_Treinado.md": {
+      "bytes": 15521,
+      "sha256": "0dffda12217b800238b7e781c9441d84018173fd504358d274e5359a6d784374"
+    },
+    "docs/evidencias_m09_3_local/auditar_resultados.py": {
+      "bytes": 20111,
+      "sha256": "84455672a0aba61675f3f0b61cb4d2f5ef40c8c05a1e89df550e9f0d80b5ae71"
+    },
+    "docs/evidencias_m09_3_local/auditoria_resultados.json": {
+      "bytes": 8477,
+      "sha256": "3079ebc0ec10ce6f5725043a3cc8ad70e3c7be38fd248cd0ca9ed274cc02fb63"
+    },
+    "docs/evidencias_m09_3_local/comparacao_modelos.png": {
+      "bytes": 147185,
+      "sha256": "40c61b681fe9ff29a815f93c4d865014d9888f26130a2182c41bdb713a0e2e1b"
+    },
+    "docs/evidencias_m09_3_local/empacotar_entrega.py": {
+      "bytes": 9412,
+      "sha256": "29d258c114c7df671cfb8fc4cfd24e44ac976fb3488dfd8720582e6b1af374a6"
+    },
+    "docs/evidencias_m09_3_local/gerar_figuras.py": {
+      "bytes": 5044,
+      "sha256": "db360b533bf873b904cbebe3137214363ddca989d2f2ffffca885e8e66158cb1"
+    },
+    "docs/evidencias_m09_3_local/intervalos_previsoes.png": {
+      "bytes": 338984,
+      "sha256": "6ea47c21ba022223ca009c3e8f67d0e3620d0a5177c4a722dd96ea9352adac42"
+    },
+    "docs/evidencias_m09_3_local/registro_execucao.json": {
+      "bytes": 3073,
+      "sha256": "5221ca135151c3be2efcc3612dd70ed8f93bb78f59492b3e5f2cbf223d92e606"
+    },
+    "docs/Explicacao_M09_3_Passo_a_Passo.md": {
+      "bytes": 10762,
+      "sha256": "1a5dd482f0e9c3b7504b638b7b601b3cf9bd28b31bb35b2d6d3863d6292fef40"
+    },
+    "docs/model_source_m09_3.json": {
+      "bytes": 848,
+      "sha256": "bad40d6ac92b8f78315dca9283b104869296a578f984e88890b62bbdf59348fb"
+    },
+    "docs/requirements_m09_3.lock.txt": {
+      "bytes": 538,
+      "sha256": "515e15365fe28bc62c686d01fa4fef4bae195655177be7cad16e5b8bc0d3ecff"
+    },
+    "LEIA_ENTREGA_M09_3_20261117.md": {
+      "bytes": 2695,
+      "sha256": "06340f72e04dc148544e472f22c45cf8cc23a0cadaa3a1847e407bb1ee165997"
+    },
+    "models/pretrained/chronos-bolt-tiny/a0e552de83495b5c28c14c71c374f3e33280b340/config.json": {
+      "bytes": 1120,
+      "sha256": "278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0"
+    },
+    "models/pretrained/chronos-bolt-tiny/a0e552de83495b5c28c14c71c374f3e33280b340/README.md": {
+      "bytes": 8659,
+      "sha256": "cc7f60bc7290b5e6146589dae9842a3c9b59d254e9d1d65fc2ef127f3c2498cd"
+    },
+    "notebooks/laboratorio_pre_treinado.py": {
+      "bytes": 17324,
+      "sha256": "2076dbaecbaca2214e73119525dca32edd1c29f937d085db34d0fbc6ad9dea00"
+    },
+    "notebooks/m08_3_base.py": {
+      "bytes": 8078,
+      "sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9"
+    },
+    "notebooks/m09_alinhamento_autoral.py": {
+      "bytes": 3479,
+      "sha256": "aa5c08ffa7ecea83648cf76f9f0a97581873266c34458f4eac86fc4f894acee1"
+    },
+    "notebooks/m09_pre_treinado_core.py": {
+      "bytes": 5511,
+      "sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/particoes.csv": {
+      "bytes": 658822,
+      "sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv": {
+      "bytes": 293086,
+      "sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/preprocessing.json": {
+      "bytes": 2177,
+      "sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json": {
+      "bytes": 2296,
+      "sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/resultado.json": {
+      "bytes": 7533,
+      "sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced"
+    },
+    "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv": {
+      "bytes": 961,
+      "sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a"
+    },
+    "reports/parecer_m09_pre_treinado.md": {
+      "bytes": 6503,
+      "sha256": "96e5c9deef17fe475d78b6bd39e2b95e631f5044a9ccec4221a283f424273eb3"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213319Z_983deae2/conferencia.json": {
+      "bytes": 389,
+      "sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv": {
+      "bytes": 39694,
+      "sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/comparacao_pareada.csv": {
+      "bytes": 17868,
+      "sha256": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/conferencia.json": {
+      "bytes": 389,
+      "sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/latencias_lotes.csv": {
+      "bytes": 324,
+      "sha256": "99a30b13b57c85eb27f2f6aaa0765932beb9e46249d875dc300d6ba72151179a"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv": {
+      "bytes": 343050,
+      "sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json": {
+      "bytes": 3476,
+      "sha256": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantile_metrics.json": {
+      "bytes": 411,
+      "sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz": {
+      "bytes": 138147,
+      "sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/relatorio.html": {
+      "bytes": 8422,
+      "sha256": "19bf4a28922b4d79bfacdb273c433639cef41da25ad9a2c5c827a841a9da804b"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/resultado.json": {
+      "bytes": 4280,
+      "sha256": "19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/summary.csv": {
+      "bytes": 1225,
+      "sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/trajetorias_26_passos.csv": {
+      "bytes": 1021256,
+      "sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96"
+    },
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/latest_run.json": {
+      "bytes": 266,
+      "sha256": "1352f4ab276fa382eba0e99d85f6c33b82e45ba70055edb8bc0425ef2698ad3a"
+    },
+    "scripts/executar_m09_3.py": {
+      "bytes": 5599,
+      "sha256": "891513d975b8371bd9662db5c841d737a79955ec16ed8180fa38634dd135dda0"
+    },
+    "tests/test_m09_alinhamento_autoral.py": {
+      "bytes": 8767,
+      "sha256": "39ca85fd4d3fa25aede2c9fea9d05aeb9cfba4cff77b4f6cb73a51561c1be935"
+    }
+  },
+  "excludes": [
+    ".venvs",
+    "model.safetensors"
+  ]
+}

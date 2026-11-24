@@ -1,6 +1,6 @@
 # Do ferro ao pró — roteiro auditável de aprendizagem
 
-Marlon Alves Bomfim · versão didática 1.54 · 19 de outubro de 2026 (UTC)
+Marlon Alves Bomfim · versão didática 1.66 · 17 de novembro de 2026 (America/Sao_Paulo)
 
 **Objetivo:** desenvolver autonomia para formular problemas de Ciência de Dados, construir soluções, avaliar evidências, explicar escolhas e manter entregas utilizáveis. A trilha terá ferramentas, fundamentos e provas práticas. Concluir a trilha fornece evidências de competência; o nível de cargo também depende da atuação profissional.
 
@@ -8,11 +8,11 @@ Este documento mantém o estado atual do produto, as evidências de aprendizagem
 
 **Como usar:** começar pelo painel da formação e pelo checkpoint atuais abaixo; consultar a matriz M00–M14 e a unidade ativa; depois localizar a evidência pelo ID. Os identificadores permanecem estáveis. Conteúdo demonstrado é reconhecido; não repetir preparação do ambiente ou entregas já aceitas.
 
-**Painel principal — formação completa, auditado em 19/10/2026 UTC**
+**Painel principal — formação completa, atualizado em 17/11/2026**
 
 A formação contém **14 marcos, M01–M14, mais o preparatório M00**. O primeiro produto, Renewcast/P1, tem um inventário próprio de dez entregas técnicas. Esses denominadores têm significados diferentes: uma entrega do produto não equivale a um marco de formação, e vários itens do P1 pertencem ao mesmo marco.
 
-**Estado da formação:** M01–M06 têm trabalho aplicado registrado, em diferentes graus de conclusão. M07.1 recebeu código e tentativas em E96/E98; a inicialização passou após E97, mas a leitura Spark falhou no codec nativo Zstd. E99 entrega correção de montagem e uma retomada básica de PySpark após o aluno relatar falta de compreensão. Planos/partições estão didaticamente adiados. M08–M14 continuam sem entrega prática correspondente. M00 está parcialmente demonstrado. Não há percentual global validado de conclusão da formação ou domínio profissional.
+**Estado da formação:** M01–M06 têm trabalho aplicado registrado. E103 aceita M07.1; E105/E106 encerram a entrega técnica M07.2. E108 aceita M07.3 pela exportação Databricks: 8.760 registros de origem, 7.485 linhas de treino, duas configurações sem divergências e tabelas Delta identificadas. O parecer autoral sustenta manter o recorte local; leitura do plano e causalidade receberam revisão orientada. M07 encerra o escopo dessas três unidades, sem certificação de escala ou produção. Não repetir Spark/Delta/Databricks. E110 aceita M08.1: função NumPy e parecer recebidos com autoria assistida explicitamente declarada; gradiente conferido nesta revisão e resultados Windows relatados coerentes com a referência. Arquivos brutos dessas execuções Windows não foram recebidos. E112 aceita a função de avaliação e o parecer M08.2 recebidos em texto, com assistência declarada e relato Windows de 05/11. A função foi executada nesta revisão; arquivos Windows não anexados. E114 aceita a execução Windows M08.3, a célula NumPy e os cinco testes recebidos. Nove anexos auditados, oito hashes e 27 métricas reconciliados; código confrontado com PyTorch. A defesa da decisão pelo aluno ainda pode ser consolidada na próxima unidade, sem repetir treino. E116 aceita o código de atenção recebido, seis casos e comparação PyTorch executados nesta revisão, além dos logs Windows do modo normal. E117 reconhece a composição Transformer M09.2 relatada em Windows, com runner/verificador recebidos e revisados; o módulo dos blocos e os artefatos completos não foram anexados. E118 entrega M09.3 executável: Chronos-Bolt Tiny com revisão fixa e previsões nas mesmas168 origens; controlador/ambiente privado executados em Linux. E119 aceita a execução Windows M09.3 normal, onze hashes, trinta métricas e alinhamento autoral executado nesta revisão. Os recibos auxiliares de uma segunda rodada permanecem distintos; parecer próprio não anexado. E120 inicia M10.1 com pacote real ESA e laboratório completo executado em Linux: execução do aluno pendente. M11–M14 posteriores. Não há percentual global validado.
 
 **Correção do indicador:** os “70%” anteriormente destacados eram somente 7/10 itens do inventário do primeiro produto, contados com pesos iguais e escopos exploratórios. Apresentá-los como andamento geral da formação foi inadequado. Esse valor sai do painel principal. Os marcos pendentes continuam pendentes; nenhuma alteração documental os torna aprendidos ou entregues.
 
@@ -25,10 +25,10 @@ A formação contém **14 marcos, M01–M14, mais o preparatório M00**. O prime
 | M04 — Meteorologia e horizontes | HTTP/cache, seleção as-of, pesos espaciais, h6/h24 e inferência por artefato | Abordado com entregas técnicas demonstradas; correção autoral E51 e verificação operacional dos contratos temporais pendentes |
 | M05 — Incerteza e eventos | Quantis, calibração, classificação, custos e seleção autoral | Núcleo técnico concluído no desenvolvimento; consolidação de aprendizagem e transferência ainda a avaliar |
 | M06 — Entrega e MLOps | E71–E93: inferência, lote, monitor, registro, distribuição, concorrência e cliente; E94: oito anexos do cliente 1.1 auditados | M06.5 encerrado no protocolo local: sete hashes e 32 conferências aprovadas. CI remoto, shadow ao vivo, monitoramento contínuo e Registry MLflow permanecem entregas separadas |
-| M07 — Dados em escala | E95–E99: tentativas, revisão de código e retomada didática | Spark iniciou, mas a primeira action falhou na leitura Zstd. Correção adicional entregue; ensino retomado em DataFrame, colunas e agregações. Reprodução e compreensão pendentes; planos/partições adiados, Delta/Databricks não iniciados |
-| M08 — Deep learning temporal | Sem entrega prática correspondente | Não iniciado: PyTorch, autograd, DataLoader e treino de rede temporal |
-| M09 — Transformers | Sem entrega prática correspondente | Não iniciado: atenção e comparação com modelo temporal pré-treinado |
-| M10 — Telemetria e anomalias | Planejamento do P2 | Não iniciado na prática: detector e avaliação por eventos/canais |
+| M07 — Dados em escala | E103/E106: temporal/Delta aceitos; E108: notebook Databricks com saídas e parecer recebidos | Unidades M07.1–M07.3 encerradas no escopo demonstrado. Decisão local/cloud aceita; plano e medição receberam revisão orientada. Escala real e operação não demonstradas |
+| M08 — Deep learning temporal | E110/E112/E114: autograd, MLP e GRU executados e implementações recebidas aceitas; assistência anterior declarada | Entregas técnicas M08.1–M08.3 aceitas. Defesa M08.3 e transferência/retomada independentes ainda a consolidar; não repetir treino ou código aceito |
+| M09 — Transformers | E116/E117: atenção e composição; E119: previsão pré-treinada Windows, resultados e função de alinhamento conferidos | M09.3 técnica aceita no escopo recebido. Defesa integrada própria ainda não anexada; não repetir inferência para avançar |
+| M10 — Telemetria e anomalias | E120: recorte ESA Mission1, canais50–52, contrato temporal e eventos; referência Linux executada | M10.1 ativa: sincronização causal com idade máxima e auditoria de anotações. Execução/autoria do aluno pendentes; M10.2–M10.4 posteriores |
 | M11 — LLMs e IA generativa | Planejamento do P3 | Não iniciado na prática: tokenização, geração estruturada, avaliação e adaptação delimitada |
 | M12 — RAG | Planejamento do P3 | Não iniciado na prática: recuperação, embeddings, índice e respostas com evidências |
 | M13 — Agentes e LLMOps | Planejamento do P3 | Não iniciado na prática: ferramentas tipadas, estado, limites e avaliação |
@@ -38,7 +38,7 @@ A formação contém **14 marcos, M01–M14, mais o preparatório M00**. O prime
 
 **Inventário secundário — entregas técnicas do P1/Renewcast**
 
-**8 de 10 itens demonstrados no escopo declarado; item 8 em andamento e item 10 pendente.** É uma contagem de artefatos/experimentos do primeiro produto, sem estimativa de esforço ou prazo e sem equivalência a conclusão do curso. E71 confirma lote SQLite, idempotência e conciliação pelo aluno; E72 reconhece SQL autoral, regra de dados e falha simulada. E74 confirma a reprodução do monitor nos quatro cenários. E80 encerra a reprodução do diagnóstico HTTP corrigido. E83 aceita a reprodução do registro local, ativação, rollback e saída SQL corrigida do aluno, após o desbloqueio de E82. O parecer independente segue pendente. Shadow ao vivo e monitoramento contínuo continuam pendentes. E51 e as hipóteses de tempo/disponibilidade/cadastro permanecem registradas.
+**8 de 10 itens encerrados no critério declarado; item 8 em andamento e item 10 com execução aceita, aguardando a defesa prevista para o fechamento.** É uma contagem de artefatos/experimentos do primeiro produto, sem estimativa de esforço ou prazo e sem equivalência a conclusão do curso. E71 confirma lote SQLite, idempotência e conciliação pelo aluno; E72 reconhece SQL autoral, regra de dados e falha simulada. E74 confirma a reprodução do monitor nos quatro cenários. E80 encerra a reprodução do diagnóstico HTTP corrigido. E83 aceita a reprodução do registro local, ativação, rollback e saída SQL corrigida do aluno, após o desbloqueio de E82. O parecer independente segue pendente. Shadow ao vivo e monitoramento contínuo continuam pendentes. E51 e as hipóteses de tempo/disponibilidade/cadastro permanecem registradas.
 
 | Entrega técnica do P1 | Estado atual | Evidência e limite |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ A formação contém **14 marcos, M01–M14, mais o preparatório M00**. O prime
 | 7. Quantis e previsão de eventos | Concluída no escopo exploratório | E53–E62: quantis, calibração e eventos reproduzidos. E63: seleção autoral sob capacidade implementada corretamente. Validação operacional segue separada |
 | 8. Serviço/lote, shadow e monitoramento | Em andamento | E69/E71: inferência e lote; E72: SQL; E74/E76: monitor/parecer; E80: diagnóstico HTTP; E83: registro/rollback e SQL corrigido; E85/E87: empacotamento e Docker. E89: lógica de escolha aceita com dados do console, sem recálculo de P95 a partir de requests.csv. CI remoto, shadow ao vivo e telemetria contínua ainda não demonstrados |
 | 9. Utilitário Windows distribuível | Concluída a versão 1.1 no protocolo local | E94: cinco cenários com saídas 0/7/2/4/3, cópia externa sem Conda/PYTHONPATH, paridade de probabilidade zero; oito anexos auditados, sete hashes coincidentes. Escopo: mesmo PC, API Docker; não aprovação operacional |
-| 10. Comparação neural/fundacional | Pendente | Treino PyTorch e benchmark temporal Transformer ainda não demonstrados |
+| 10. Comparação neural/fundacional | Execução e implementação aceitas; fechamento documental parcial | E119: comparação Windows e função de alinhamento aceitas. Parecer/decisão própria exigidos para o encerramento ainda não anexados. Não repetir a execução técnica |
 
 **Correspondência entre o inventário do P1 e os marcos da formação**
 
@@ -76,12 +76,12 @@ As sete primeiras entregas se concentram em M01–M05. M06 já avançou dentro d
 
 | Campo | Estado atual |
 | --- | --- |
-| Projeto e ambiente | P1 — Renewcast, C:\renewable-forecast-lab, ambiente renewable-forecast existente |
-| Última entrega do aluno conferida | E98: Texto colado(10).txt mostra duas execuções com Spark iniciado e falha Zstd antes da SQL autoral. O aluno relata não compreender PySpark. Correção de código anterior não prova compreensão; E94 permanece aceito |
-| Retomada atual | M07.1: esclarecer arquivos e ensinar transformação linha por linha a partir de SQL. Uma retomada técnica com E99; suspender a rodada de quatro partições e o parecer físico por enquanto. P1 permanece 8/10 entregas técnicas, sem percentual global da formação |
-| Último resultado do professor | E99: ajuste da montagem temporária para exec e diagnóstico antecipado de noexec. Leitura Parquet Zstd e exemplo didático de agregação/classificação executados em Linux nativo. Docker/Windows e montagem noexec não reproduzidos aqui; retomada do aluno pendente |
-| Unidade ativa | M07.1 — transformação diária, equivalência DuckDB/PySpark/Spark SQL, nulos, calendário, lazy/action, shuffle e partições |
-| Próxima ação | Ler Aula_M07_1_PySpark_Desde_a_Base.md, aplicar renewcast_m07_base_20261019.zip e executar somente --autoria. O ZIP não substitui a autoria. Explicar o efeito de trocar a geração NULL por 6 no pequeno exemplo; planos e quatro partições ficam para depois |
+| Projeto e ambiente | P2 — satellite-anomaly-monitor, subpasta própria em C:\renewable-forecast-lab; ambiente renewable-forecast existente. P1 preservado com pendências operacionais separadas |
+| Última entrega do aluno conferida | E119: execução20261117T212230Z_965de3d1, onze hashes e30 métricas;1.512 previsões de baseline preservadas; cinco grupos do alinhamento autoral executados. Recibos de213329Z são de outra execução, sem resultado completo anexado |
+| Retomada atual | M10.1 — produto P2 satellite-anomaly-monitor, dados reais ESA, sincronização, frescor e anotações. A decisão M09.3 do aluno pode ser consolidada sem bloquear esta prática |
+| Último resultado do professor | E120:1.046.703 medições ESA em2007;350.400 instantes na grade,350.346 utilizáveis; cinco contraprovas e auditoria independente NumPy. Sem detector ou treinamento; execução Linux |
+| Unidade ativa | M10.1 — contrato multicanal, busca causal e identidade dos eventos; M10.2 posterior com recorte ampliado antes de comparar detectores |
+| Próxima ação | Extrair renewcast_m10_1_telemetria.zip na raiz e executar python satellite-anomaly-monitor/scripts/executar_m10_1.py. Dados reais já incluídos, sem instalação/Docker/treino. Ler satellite-anomaly-monitor/docs/Aula_M10_1_Contrato_Telemetria.md e implementar sincronizar_causal conforme seção7 |
 | O que permanece pendente | Fuso e semântica início/fim da geração, disponibilidade meteorológica histórica e versões cadastrais; autonomia/transferência didática ainda exigem provas próprias |
 | Avaliação reservada anterior | Encerrada em E24; não reutilizar como novo teste final intocado |
 
@@ -214,6 +214,27 @@ O roteiro de 09/09 orçava 270–385 horas. Depois apareceram estimativas de 18�
 | E97 | renewcast_m07_correcao_20261019.zip e Verificacao_E97_Professor.json | Correção orientada do usuário Docker, cache/endereço Spark e SQL; caso manual executado no Linux nativo com user.home=? e cinco discrepâncias anteriores demonstradas. Execução Docker/Windows corrigida e explicação do aluno pendentes |
 | E98 | Texto colado(10).txt e relato do aluno, 19/10/2026 | Dois runs iniciam Spark e falham em libzstd-jni ao coletar o primeiro resultado. Não alcançam o plano SQL autoral. O aluno relata falta de compreensão de PySpark; a progressão didática anterior foi prematura |
 | E99 | renewcast_m07_base_20261019.zip e Aula_M07_1_PySpark_Desde_a_Base.md | Correção localizada de montagem, detecção de noexec e explicação por operações/SQL. Professor executa exemplo em Linux nativo e lê Zstd; Docker e aprendizagem do aluno permanecem pendentes |
+| E100 | Dezesseis anexos do run 20261019T230058Z_cf2fe669 e resposta conceitual do aluno, 19/10/2026 | Quinze hashes de anexos e três de código conferidos; 365 datas e 8.760 presentes reconciliados; DataFrame/SQL/DuckDB equivalentes. Exercício NULL→6 aceito. Próxima autoria: calendário e preenchimento seletivo; M07.1 ainda em aprendizagem |
+| E101 | Código colado, aula_calendario.csv e plano_resumo.txt de 25/10/2026 | Calendário/classificação e plano conferidos; soma declarada fora de agg, ausente no CSV/plano. Correção orientada e laboratório temporal completo entregues. Conclusão pelo aluno ainda pendente |
+| E102 | Logs reais de 27/10/2026, autoria selecionar_treino e falha com corte | Tabela e contraprovas executadas; autoria correta. Cópia montada ainda tinha NotImplementedError. Correção de entrega incorporada; execução Windows com corte pendente |
+| E103 | Log Windows e sete arquivos de dados/plano de 27/10/2026 local | 21 conferências aprovadas; Parquets8.760/7.485 e seleção integral exata; bloqueio encerrado |
+| E104 | Aula, script e verificação M07.2 Delta | Correção simulada+12, versões0/1, sete origens e duas linhas do treino; snapshot0 reproduz o Parquet. Núcleo Linux executado; Windows/autoria pendentes |
+| E105 | Log Windows Delta e planejador autoral enviados em29/10; chamada de conferência entregue | Reprodução técnica M07.2 aceita pelo log; código autoral correto nas dependências, validação de fuso orientada e informada como aplicada. Arquivos desta execução Windows não recebidos; chamada no CSV e defesa conceitual a consolidar |
+| E106 | Log de planejar_recalculo_temporal.py,29/10 | Quatro conjuntos iguais ao CSV da execução Windows; histórico1,média6,alvo1,união7; duas origens no treino. Não houve novo Spark/MERGE. Aceite técnico M07.2 |
+| E107 | Pacote, notebook e aula M07.3 Databricks; teste local do professor | Preparador de três arquivos e notebook com tabelas gerenciadas, ID/versão, confronto integral, duas configurações e recibo. Núcleo aprovado localmente; criação de volume/UI/serverless e execução do aluno ainda pendentes |
+| E108 | Notebook Databricks exportado e scale_comparison.md, 29/10 | Sete células iguais ao distribuído; 8.760/7.485 linhas, zero divergências; tabelas/versões e fronteiras conferidas. Reprodução aceita, parecer revisado; JSON do recibo separado não recebido |
+| E109 | Aula, script e verificação M08.1 Autograd | Gradiente, modelo afim, exclusão temporal, curva, taxa e recarregamento testados em Linux/CPU na entrega original. O aceite posterior do aluno com assistência está registrado em E110 |
+| E110 | Função gradiente_mse e parecer M08.1 recebidos em texto, 04/11 | Aceite com autoria assistida; função transcrita/testada e interpretação conferida. Resultados Windows relatados, sem arquivos brutos nesta mensagem. M07.3 reapresentado era a versão anterior, correção E108 preservada |
+| E111 | Aula, código e verificação M08.2 Dataset/MLP | Três sementes em Linux/CPU, comparação com linear nas mesmas janelas, seleção temporal e 15 conferências aprovadas. Pendência original do aluno posteriormente encerrada no escopo de E112 |
+| E112 | Função avaliar_lotes e parecer M08.2, relato de 05/11; registro15/11 | Aceite com assistência declarada. Função executada nas contraprovas; decisões, divisões e métricas relatadas conferidas. Arquivos Windows não anexados |
+| E113 | Pacote, aula e referência M08.3 GRU,15/11 | Nove variantes pareadas, portas/estado e checkpoints conferidos em Linux. Execução/célula do aluno posteriormente aceitas em E114; defesa ainda a consolidar |
+| E114 | Execução Windows M08.3, nove anexos, célula NumPy e cinco testes,15/11 | Oito hashes e27 métricas reconciliados; cinco testes e comparação PyTorch aprovados. Aceite técnico; defesa do aluno ainda não recebida |
+| E115 | Aula/laboratório M09.1 atenção escalada,15/11 | Q/K/V, máscara, posição e janela real; oito grupos conferidos em Linux, sem treino. Entrega posterior do aluno reconhecida em E116 |
+| E116 | Atenção autoral, seis casos e logs Windows recebidos | Função e casos transcritos/executados; seis aprovados e oito grupos PyTorch. Erro --autoria é argumento faltante; código aceito |
+| E117 | Runner/verificador Transformer anexados e logs Windows,17/11 | Dois arquivos compilam e foram revisados;13 grupos relatados. Módulo dos blocos/artefatos completos não anexados; alcance da revisão preservado |
+| E118 | Pacote/aula M09.3 e benchmark Chronos-Bolt Tiny,17/11 | Controlador/ambiente privado e inferência executados em Linux, snapshot fixado, alinhamento26 passos e métricas auditados. Execução do aluno pendente |
+| E119 | Execução Windows M09.3, função e anexos,17/11 | Onze hashes e30 métricas da rodada212230Z conferidos;1.512 baselines preservados, alinhamento executado e aceito. Recibos da rodada213329Z são distintos; parecer próprio não anexado |
+| E120 | P2/M10.1: contrato ESA real,17/11 | Pacote completo offline,1.046.703 medições,350.400 instantes, cinco contraprovas e auditoria independente. Referência Linux executada; aluno pendente. Nenhum detector treinado |
 
 E09–E11 são propostas de pesquisa, não experimentos executados. Referências bibliográficas contidas nesses documentos não foram todas verificadas; elas não constituem resultados do projeto.
 
@@ -231,8 +252,8 @@ E09–E11 são propostas de pesquisa, não experimentos executados. Referências
 | Ablação meteorológica | E41/E46: h6 e h24 com 504 previsões cada; ganhos vs histórico 19,21%/24,58%, vs persistência 56,10%/2,03%. E47 recalcula incerteza h24 | E43 registra interpretação h6 do aluno. Resultado h24 executado; distinção entre ganho de features e superioridade sobre baseline apresentada pelo professor, ainda sem defesa independente |
 | Quantis, eventos, API/shadow e monitoramento | E71/E72: lote/SQL; E74/E76: monitor/parecer; E80: diagnóstico HTTP corrigido encerrado; E81: registro/rollback entregue | Núcleo autoral anterior reconhecido e revisão reproduzida. E83: fluxo e saída da revisão orientada conferidos nos anexos do aluno, com resposta 200 e hash da recuperação identificados. Parecer independente ainda pendente. Shadow ao vivo, monitoramento contínuo e cota não concluídos |
 | Distribuição e concorrência | E85–E94: distribuição, concorrência e cliente 1.1 aceitos nos respectivos protocolos | E94 fecha M06.5 com evidências anexadas; atualidade separada do sucesso HTTP. Limites operacionais permanecem explícitos |
-| Transformação em Spark | E96/E97: revisão de código; E98: falha posterior e lacuna didática relatada; E99: aula de base | Sintaxe da classificação correta não equivale a entendimento. Começar por DataFrame, expressão de coluna, agregação e action; reprodução Docker pendente. Comparação de planos adiada |
-| Spark, DL, Transformers, LLMs, RAG e agentes | Pendentes nesta trilha | Sem prática registrada desses marcos; não atribuir nota zero |
+| Transformação em Spark, Delta e Databricks | E100–E108: tabela temporal e seleção, planejador de revisões e reprodução Databricks conferidos | M07 concluído no escopo das unidades. Parecer de versões/local-cloud aceito; Exchange/broadcast, AQE, janela e cronômetro revisados pelo professor, sem nova prova independente dessas correções |
+| DL, Transformers, LLMs, RAG e agentes | E114:GRU; E116/E117:atenção/composição; E119:pré-treinado Windows e alinhamento aceitos | Defesa integrada M09.3 própria não anexada; E120 entrega M10.1. M11–M14 posteriores. Operação, retenção e autoria independente não certificadas |
 | Telemetria e defesa final | Planejadas | Propostas de pesquisa são escopo, não experimentos concluídos |
 
 **Aprendizagem:** há evidências aplicadas e notas em cenários específicos; uma competência sem prova suficiente fica como “não avaliada”, sem apagar o trabalho já realizado.
@@ -265,10 +286,10 @@ Estados técnicos atuais: **demonstrado no escopo** = entrega executada com evid
 | M04 | Meteorologia e múltiplos horizontes | HTTP/JSON/cache, UTC, as-of, pesos espaciais, pandas | h6/h24 comparados e inferência h24 reproduzida | E50 encerra a sexta macroentrega; E51 registra validação física autoral parcial e correção de nomes exatos. Contrato temporal operacional continua não verificado |
 | M05 | Incerteza e eventos | Quantis, pinball, cobertura, classificação, Pipeline, Brier/AP, calibration bins e custo | Núcleo técnico e seleção autoral concluídos no desenvolvimento | E63: política correta sob capacidade120; aprendizagem continua por revisão de limites, sem reabrir a entrega técnica |
 | M06 | Entrega e MLOps | CLI/MLflow Tracking, joblib, JSON, FastAPI/Uvicorn, SQLite, ASGI, wheel, pip, venv, Docker, PyInstaller, PowerShell e política temporal | E69–E94: entregas locais e cliente 1.1 aceitos; M06.5 encerrado | Registry MLflow, shadow ao vivo, CI remoto e monitoramento contínuo seguem separados; não reabrir entregas aceitas para impedir M07 |
-| M07 | Dados em escala | PySpark, Spark SQL, Delta, Databricks | E95–E99: M07.1 ativa com retomada básica | Execução bloqueada no Zstd e compreensão a construir; corrigir infraestrutura e ensinar operações antes dos planos. Delta/Databricks não iniciados |
-| M08 | Deep learning temporal | PyTorch, DataLoader, autograd, nn.Module | Pendente | Modelo temporal treinado/avaliado ainda sem entrega |
-| M09 | Transformers | Atenção em NumPy/PyTorch; Hugging Face | Pendente | Atenção explicada e comparação fundacional ainda sem entrega |
-| M10 | Telemetria e anomalias | PCA, IsolationForest, métricas por evento | Pendente | Produto P2 ainda não iniciado com evidência prática |
+| M07 | Dados em escala | PySpark, Spark SQL, Delta, Databricks | E103/E106/E108: três unidades executadas e conferidas | Escopo das unidades encerrado; plano/medição revisados. JSON do recibo separado não recebido, embora sua gravação conste da exportação; não bloqueia a progressão |
+| M08 | Deep learning temporal | PyTorch, DataLoader, autograd, nn.Module, GRU | E110/E112/E114: três unidades técnicas aceitas; cinco testes do aluno e célula GRU conferidos | Consolidar defesa da decisão GRU/HGB no parecer seguinte; preservar limites de autoria e evidência. Não reabrir treino ou implementação aceitos |
+| M09 | Transformers | Atenção NumPy/PyTorch, encoder–decoder, Chronos-Bolt Tiny | E119: execução Windows e alinhamento recebidos e auditados; E117 composição relatada | Consolidar parecer próprio, sem refazer experimentos. Técnica recebida permite iniciar M10.1; corpus de pré-treino/overlap e operação não certificados |
+| M10 | Telemetria e anomalias | PCA, IsolationForest, métricas por evento | E120: M10.1 preparada/executada pelo professor, aluno pendente | Produto P2 iniciado pela entrega do contrato ESA; comparação de detectores e avaliação ainda não executadas |
 | M11 | LLMs e IA generativa | Tokenização, geração, JSON/Pydantic, PEFT/LoRA | Pendente | Aplicação generativa avaliada ainda sem entrega |
 | M12 | RAG | TF-IDF, embeddings, Qdrant, reranking | Pendente | Recuperação e resposta avaliadas separadamente ainda sem entrega |
 | M13 | Agentes e LLMOps | Ferramentas tipadas, SQL parametrizado, estado, LangGraph | Pendente | Produto P3 com ferramentas e avaliação ainda sem entrega |
@@ -350,34 +371,34 @@ Os destinos abaixo são relativos à raiz de cada projeto. Esta seção define o
 
 **M07 — aprender a decidir quando distribuir o processamento.**
 
-- **M07.1/E95–E99 — ativa:** mesma tabela diária ONS e mesmo objetivo final. E98 confirma que Spark agora inicia, mas a action DataFrame falha ao carregar Zstd; não há plano SQL autoral ou resultados finais para analisar. O aluno relata não compreender PySpark. E99 explicita exec em /tmp e antecipa diagnóstico noexec; preserva notebooks/transformacao_spark.py. Retomada: ensinar DataFrame, F, withColumn, groupBy/agg, alias, join, col/lit e when em um exemplo pequeno, com paralelo em SQL. Executar uma vez --autoria e interpretar o exemplo. Comparação de partições 2/4 e reports/scale_comparison.md ficam adiados até a base estar entendida. Aula_M07_1_PySpark_Desde_a_Base.md é a referência imediata.
-- **M07.2:** gravar/ler uma tabela Delta e exercitar schema, transações e versão; conferir igualdade lógica com a saída DuckDB, inclusive nulos e timestamps.
-- **M07.3:** executar a mesma transformação num ambiente Databricks disponível e registrar configuração, duração, custo quando aplicável e dependências. Organizar camadas de dados pela finalidade, sem multiplicar cópias sem necessidade.
+- **M07.1/E95–E103 — entrega técnica aceita:** tabela real, calendário, plano, janelas e seleção por disponibilidade executados. E103 compara os Parquets e confere todas as linhas. A defesa pendente pode ser consolidada na interpretação de revisões em M07.2, sem novos bloqueios de calendário ou contagem.
+- **M07.2/E104–E106 — entrega técnica encerrada:** Delta reproduzido no Windows e planejador autoral confrontado com impacto real do CSV; sete origens e duas linhas do treino. Código autoral reconhecido; chamada de conferência escrita pelo professor. Interpretação de versões consolidada no parecer M07.3, sem repetir execuções ou adicionar outro exercício separado.
+- **M07.3/E107–E108 — encerrada no escopo demonstrado:** notebook Databricks exportado e parecer recebidos. Código das sete células igual ao distribuído, 8.760/7.485 linhas e zero divergências em 2/4 partições solicitadas; tabelas/versões e limites temporais registrados. Interpretação de snapshots e decisão local/cloud aceitas; Exchange 10/broadcast, janela das 03h, duração, JIT/Photon e AQE corrigidos por revisão orientada. Recibo separado não recebido; exportação registra sua gravação. Não exigir repetição do ambiente nem do experimento.
 - **Entrega:** código da transformação, resultado comparável e `reports/scale_comparison.md`.
 - **Prova:** explicar um shuffle no plano, modificar o particionamento e discutir por que Spark pode ser mais lento no recorte pequeno. Execução local de Spark não certifica uso de Databricks.
 - **Léxico:** lazy evaluation, action, partition, shuffle, execution plan, transaction, Delta, job.
 
 **M08 — aprender o treinamento de uma rede.**
 
-- **M08.1:** construir tensors, inspecionar dimensões, calcular uma derivada com autograd e verificar um caso manual.
-- **M08.2:** preparar Dataset/DataLoader com janelas temporais; escrever treino e avaliação de uma rede compacta, com perda, otimização, regularização e controle do orçamento computacional.
-- **M08.3:** treinar uma arquitetura temporal pequena, como GRU, comparar com HGB e persistir/carregar pesos. Registrar seeds, escala das variáveis, janelas, tempo e memória.
+- **M08.1/E109–E110 — aceita com assistência:** função NumPy e parecer recebidos; fórmula, shapes, preservação de entradas e diferenças finitas conferidos. O relato Windows distingue convergência, instabilidade e viés; autoria assistida declarada. Arquivos brutos das três execuções Windows não recebidos. Não repetir a unidade nem certificar independência por igualdade numérica.
+- **M08.2/E111–E112 — aceita no escopo assistido:** avaliar_lotes e parecer recebidos; ponderação por exemplos, eval/no_grad, modos mistos e exceções conferidos por execução. Relato Windows de 05/11: divisão7.079/168/168, exclusões52+18, seleção de época e todas as sementes; MAE medianoMLP33,159788 contra linear33,678664 MWmed. Decisão de manter linear como referência aceita. Arquivos Windows não anexados; não alegar auditoria de hashes ou autoria independente. Não repetir esta unidade.
+- **M08.3/E113–E114 — execução e implementação aceitas:** runWindows20261115T164955Z_5e435b09, nove arquivos recebidos; oito hashes,27 métricas,partições/curvas reconciliados. Célula NumPy e cinco testes executados e aprovados; comparação GRUCell/24passos em float64 aprovada. HGB localMAE32,323956, diferente da referência Linux por causa não isolada. Seis recarregamentos zero constam do recibo, sem pesos Windows anexados. Defesa da decisão pelo aluno ainda não recebida; pode ser consolidada com atenção, sem repetição de treino.
 - **Entrega:** modelo reproduzível em `src/` e curva de treino/validação em `reports/neural/`.
 - **Prova:** explicar batch, shape, gradiente e diferença entre `train()` e `eval()`; diagnosticar sobreajuste, erro de dimensão e vazamento na normalização.
 - **Léxico:** tensor, shape, batch, forward, loss, gradient, backward, optimizer, epoch, checkpoint.
 
 **M09 — atenção e modelo fundacional.**
 
-- **M09.1:** calcular uma atenção pequena com NumPy/PyTorch; identificar Q, K, V, produto matricial, escala, softmax, máscara e dimensões.
-- **M09.2:** conectar atenção, posição, encoder/decoder e representação de sequências; distinguir Transformer de modelo de linguagem.
-- **M09.3:** executar um modelo temporal pré-treinado compacto e comparar com o benchmark, documentando contexto, horizonte, revisão dos pesos, limites conhecidos de dados de pré-treino, latência e memória. Chronos é um candidato histórico, a confirmar conforme a variante e o ambiente.
+- **M09.1/E115–E116 — execução e implementação aceitas no escopo recebido:** modos normais Windows relatados, código NumPy e seis casos executados nesta revisão; comparação PyTorch oito grupos aprovada. CLI antiga --autoria exige caminho do arquivo; erro de argumento não invalida a função. Interpretação pode integrar o parecer M09.3, sem repetir código.
+- **M09.2/E117 — composição recebida e reprodução relatada:** runner/verificador anexados compilam e foram revisados; logs Windows de13 grupos, encoder[1,24,16], decoder[1,6,16],11.200 parâmetros e deltas zero de prefixo/reload. Módulo dos blocos não anexado; sem auditoria completa ou reexecução independente. Os slots são sintéticos, não previsões; nenhum fit. Avançar para pesos pré-treinados.
+- **M09.3/E118–E119 — execução e alinhamento aceitos:** Chronos-Bolt Tiny congelado,26 passos para h24/d2. Execução Windows normal20261117T212230Z_965de3d1: onze hashes e30 métricas conferidos,1.512 previsões anteriores preservadas; função em texto passou cinco grupos e seleção no NPZ real. MAE31,340738 versusHGB32,323956, ganho3,041763%; RMSE piora2,619649%. Parecer próprio citado mas não anexado. Segunda rodada213329Z tem recibos auxiliares, sem resultado completo recebido. Não repetir inferência para avançar; registrar esses limites.
 - **Entrega:** cálculo de atenção explicado e relatório comparativo em `reports/transformer/`.
 - **Prova:** explicar o efeito de uma máscara errada e adaptar contexto/horizonte sem misturar dados futuros. Uso de pesos pré-treinados não comprova ausência de sobreposição com dados de pré-treino desconhecidos.
 - **Léxico:** attention, query, key, value, embedding, position, mask, encoder, decoder, pretrained.
 
 **M10 — transferência para telemetria satelital.**
 
-- **M10.1:** iniciar `satellite-anomaly-monitor` com um recorte ESA: canais, frequência, sincronização, labels e eventos. Reutilizar contratos e protocolos temporais aprendidos.
+- **M10.1/E120 — ativa, referência entregue e executada:** satellite-anomaly-monitor com recorte ESA Mission1v2/2007, canais50–52. Busca causal, idade máxima180s, grade90s, anotações preservadas e separadas das features. Cinco contraprovas e busca independente NumPy no recorte real aprovadas em Linux. Execução/autoria do aluno pendentes. Recorte exploratório com três IDs de anomalia: não é benchmark oficial nem evidência de detector.
 - **M10.2:** comparar um escore estatístico robusto, PCA por reconstrução e Isolation Forest; usar agrupamento apenas como investigação de contextos, sem assumir significado físico dos clusters.
 - **M10.3:** selecionar limiares na validação, medir precisão/recall por evento, falsos alarmes por tempo, atraso e desempenho por canal. Separar eventos e janelas para evitar contaminação entre partições.
 - **M10.4:** investigar contribuições de canais, estabilidade e uma ablação. Incluir rede temporal ou autoencoder somente após a comparação dos baselines.
@@ -551,8 +572,9 @@ Falha crítica aqui significa um erro que invalida a conclusão central, como tr
 | M04 | Pesos, atraso, equivalência espacial, ablações h6/h24 e artefato h24 reproduzidos; função geométrica entregue em E51 | Corrigir busca por substring para nomes exatos, explicar invariância à ordem e desigualdade vetorial; contrato temporal operacional ainda pendente |
 | M05 | E55–E59: pinball/calibração; E61/E62: classificação e custos; E63: seleção autoral sob capacidade correta | Explicar por que109<=120 no desenvolvimento não garante cota futura; retomada de estabilidade/custos e transferência independente |
 | M06 | E71/E72: lote/SQL; E74/E76: monitor/parecer; E80: diagnóstico HTTP corrigido reproduzido | E81 propõe transferência para controle de versões: alias versus processo, geração, atomicidade e recuperação. E83: execução do aluno recebida e saída da consulta orientada reconciliada; parecer independente ainda pendente. Telemetria contínua, Registry MLflow, CI e distribuição posteriores |
-| M07–M09 | E98 registra novo bloqueio e dificuldade de compreensão; E99 retoma a base | M07.1 ativa: transformação PySpark e uma execução corrigida; planos adiados. Delta/Databricks, rede temporal e atenção/Transformer pendentes |
-| M10–M14 | Propostas e planejamento; sem entregas práticas completas | Telemetria, LLMs, RAG, agentes, decisão e defesa final |
+| M07 | E103/E106/E108: temporal, revisão Delta e reprodução Databricks; parecer de snapshots/local-cloud recebido | Escopo das unidades concluído. Interpretação de plano/medição corrigida pelo professor; transferência autônoma a múltiplas séries/escala não demonstrada |
+| M08–M09 | E114/E116/E117/E119: redes, atenção, composição e transferência pré-treinada recebidas no alcance documentado | Execução e alinhamento M09.3 aceitos; defesa própria integrada ainda não anexada. Não repetir unidades técnicas aceitas. Autoria independente/retomada não certificadas |
+| M10–M14 | E120 prepara e executa referência M10.1; M11–M14 seguem sem entrega prática | Aluno executa contrato ESA no P2; detectores, LLMs, RAG, agentes e defesa final posteriores |
 
 Não se atribui uma nota global por marco sem observar suas provas. A ausência de avaliação de transferência não transforma uma entrega técnica executada em “não iniciada”.
 
@@ -569,7 +591,7 @@ Modelo de registro de tentativa, a preencher apenas depois da prática:
 | Termos lexicais | Até cinco, ligados às operações realizadas |
 | Feedback e correção | Causa do erro; evidência; alteração e resultado |
 | Revisão | Data prevista/real, pergunta e resultado em D+1/D+3/D+7/D+14/D+30 |
-| Próxima ação | Registrar uma tarefa pequena da unidade ativa e seu critério de compreensão; consultar o checkpoint atual no início deste roteiro |
+| Próxima ação | Entregar uma unidade completa com problema, teoria, implementação, experimento, autoria e critério de conclusão; consultar o checkpoint atual |
 
 As tentativas anteriores permanecem no registro. Nota melhor não apaga dificuldade anterior; alteração de material do professor recebe motivo e data. Conclusões históricas ficam ligadas à versão que foi realmente executada.
 
@@ -577,12 +599,17 @@ O progresso será informado como **unidades avaliadas**, **unidades consolidadas
 
 **Ritmo, continuidade e retomada**
 
+- **Ajuste de condução em 25/10/2026:** organizar aulas em problemas completos, com todos os passos disponíveis no início e encerramento definido. Exemplos mínimos servem para esclarecer uma dificuldade dentro da unidade; não serão apresentados como sucessivos avanços de marco. Revisões já demonstradas serão incorporadas ao trabalho aplicado. Este ajuste não acrescenta marcos nem certifica domínio por execução de código fornecido.
+
 - Reserva inicial: 12 blocos de 40 minutos = 8 horas semanais, distribuídos em conceito/recuperação, implementação/investigação e revisão. Até quatro horas adicionais são opcionais.
 - O tempo restante será reestimado após três unidades realmente avaliadas. Domínio demonstrado gera dispensa; uma lacuna abre trabalho focalizado.
 - Antes de cada aula, ler o checkpoint e a última tentativa. Começar pela unidade ativa, preservando o objetivo e as decisões já registradas.
 - Uma mudança de ferramenta registra problema, motivo e impacto. Ela não substitui silenciosamente os marcos nem apaga o trabalho concluído.
 - Se uma conexão ou instalação impedir a ferramenta, trabalhar na parte independente da unidade e registrar a parte técnica pendente. Não declarar a ferramenta aprendida por uma simulação.
 - Contratação de GPU/API/cloud é uma decisão posterior com necessidade e orçamento explícitos. O escopo inicial permanece executável em CPU e dados delimitados.
+
+
+
 
 
 **Diário histórico das sessões — leia cada estado na data do registro.** As expressões “próximo passo”, “pendente” e os percentuais abaixo descrevem aquela sessão; o painel e o checkpoint no início concentram o estado atual. Evidências posteriores podem encerrar as pendências antigas.
@@ -1805,3 +1832,212 @@ Versão1.51, 14/10/2026 — aceites E91/E92 e integração E93; painel, inventá
 - Professor: leitura real do codec Zstd e exemplo de DataFrame, agregação, calendário, cobertura e when executados em Linux nativo; resultado3/2/6 para o primeiro dia e 0/0/NULL no dia vazio. Docker e falha noexec não reproduzidos neste ambiente; registro em Verificacao_E99_Professor.json.
 - Próxima ação limitada: aplicar E99, executar --autoria uma vez, explicar a mudança no exemplo se NULL virar6. Não repetir --shuffle-partitions4 até a leitura básica estar entendida. A unidade conserva o objetivo; Delta continua posterior, sem avançar o marco por mais um pacote criado.
 - Roteiro1.54: painel, checkpoint, matrizes e aprendizagem atualizados. Corrigida também uma instrução antiga de M06 indevidamente inserida no modelo genérico de registro de tentativa. Aceites anteriores preservados; sem percentual global.
+
+
+### 19/10/2026 — E100 reprodução Spark aceita e primeira interpretação conceitual correta
+
+- Execução recebida: 20261019T230058Z_cf2fe669, modo autoria. Imagem sha256:4493611d28044f61634426ee70efb3a410b649510261ae10ebd1a839a4e0e0d9. Host, log e recibo interno confirmam conclusão; /tmp sem noexec. Encerrado o bloqueio anterior para esta execução. Não solicitar nova instalação ou build para responder à próxima prática.
+- Auditoria em Verificacao_E100_Spark.json: 30 verificações estruturais/de integridade e três comparações numéricas de CSV. Quinze hashes de anexos conferidos, sendo três encadeados pelo recibo do host e doze saídas do manifesto; mais três hashes de código compatíveis com controlador, núcleo e autoria corrigida entregues. Dos 21 outputs declarados, 12 foram recebidos; os nove resultados do caso didático não foram anexados. O sucesso do caso didático vem do recibo conferido, não de recálculo dos seus CSVs nesta revisão.
+- CSVs reais: 365 datas de 2025-09-01 a 2026-08-31; todas com 24 horas presentes/válidas, zero nulas/ausentes e classificação completo; soma 8.760. Diferença DataFrame/DuckDB zero; SQL/DuckDB máxima 4,263256414560601e-14, dentro das tolerâncias do protocolo. Comparações diretas de 3.285 células numéricas em cada par. Não se declara ausência de diferenças de bytes entre todas as implementações.
+- Limites: Parquets anexados conferidos por hash, sem decodificação/reagregação nesta auditoria; original completo não anexado, preservação informada pelo controlador. Identidade do conjunto declarada sem checagem em coluna pelo pipeline; timestamps mantêm rótulos sem fuso. Hashes demonstram consistência com manifestos, não atestação externa assinada. Sem rodada com quatro partições ou prova de cluster.
+- Aprendizagem: aluno explica corretamente a troca de NULL por 6: presentes 3, válidas 3, nulas 0, ausentes 21, cobertura 0,125 e parcial. Média permanece 6; reconhecida distinção entre zero, nulo e ausência, sem inferir domínio integral de PySpark a partir dessa resposta.
+- Próxima prática restrita e concreta: completar_calendario(dias,resumo) com LEFT JOIN e fillna apenas nas contagens. Explicar a diferença entre dia sem registros e dia com 24 registros nulos e o efeito do INNER JOIN. Material Revisao_E100_Spark.md. Código pode ser enviado no chat; não requer alterar a autoria já validada nem reexecutar Docker. Planos/partições depois da base; M07.2 Delta continua na sequência.
+- Roteiro 1.55: painel, checkpoint, matriz, aprendizagem e evidência atualizados. M07.1 em andamento com reprodução técnica aceita. P1 permanece 8/10 entregas técnicas; sem percentual global de formação.
+
+### 25/10/2026 — E101: crítica à fragmentação, revisão dos anexos e laboratório temporal
+
+- O aluno relata tarefas simples, repetitivas e desconectadas do objetivo profissional. A crítica procede quanto à condução: executar infraestrutura e adicionar uma expressão isolada não constituem progressão suficiente. A sequência passa a unidades completas, com aula, problema aplicado, autoria e fechamento previamente definidos.
+- Os quatro casos de calendário/classificação estão corretos no CSV recebido. O plano mostra partial_count/partial_avg, Exchange por dia em duas partições e agregação final; é um plano inicial, isFinalPlan=false. Isso não permite afirmar medição de escala, paralelismo efetivo ou domínio independente da ferramenta.
+- O código anexado cria geracao_observada_mwh como expressão Python, não a inclui em agg e depois tenta selecioná-la. O CSV não contém essa coluna; o plano não contém partial_sum. Código e resultados representam versões diferentes. Corrigida a inclusão da expressão em agg; a definição da variável por si só não altera o DataFrame.
+- Material entregue: renewcast_m07_laboratorio_temporal.zip, com correção do calendário, laboratorio_temporal_spark.py, Aula_M07_Laboratorio_Temporal.md e verificação do professor. O laboratório usa a série real já existente no computador do aluno, a imagem Spark já registrada e saídas próprias em reports/scale/CJU_BA5EIGT/laboratorio_temporal.
+- Teoria aplicada: grade completa para que lag/lead representem horas; janelas inclusivas -7/-2 para atraso2/janela6; completude do histórico; features separadas de alvo; rótulos disponíveis estritamente antes do corte de treino. Contraprovas sintéticas identificadas: lacuna que desloca lag e alteração de futuro que preserva features.
+- Autoria: selecionar_treino(tabela,corte), seguida de parecer técnico de uma página. A entrega inteira é especificada no material, sem nova lista indefinida de exercícios de contagem. A seleção será conferida pelo conjunto de linhas, incluindo a igualdade ao corte.
+- Restrições preservadas: atraso assumido; eixo de timestamps original sem validar fuso/intervalo físico; nenhuma declaração de novo teste reservado, desempenho de modelo ou adequação operacional. M07.2 Delta e M07.3 Databricks continuam posteriores; M08–M14 não são marcados como iniciados por este pacote.
+- Roteiro1.56: painel, checkpoint, matriz, registro didático e ritmo atualizados. O diário anterior permanece histórico. Sem novo percentual global.
+
+
+### 27/10/2026 — E102: autoria recebida, falha de integração e correção do laboratório
+
+- Evidência do aluno: duas execuções sem corte mostram 8.760 horas na grade/presentes, 8.753 origens com features, 8.729 com features e alvo e 24 alvos sem valor. Ambas executam as contraprovas de lacuna e futuro. Os Parquets reais não foram anexados; os números são reconhecidos como logs recebidos.
+- A função selecionar_treino enviada combina features_validas, alvo preenchido e disponibilidade estritamente anterior ao corte. Está correta; não solicitar sua reimplementação nem tratar essa falha como desconhecimento de PySpark.
+- A tentativa com --corte-treino chega à linha 73 do arquivo montado e executa NotImplementedError. O caminho de montagem no comando aponta para notebooks/laboratorio_temporal_spark.py do projeto. Portanto, a cópia em execução ainda é o esqueleto inicial. Os registros não permitem afirmar se a alteração não foi salva ou se uma nova extração a substituiu. CalledProcessError é a propagação do mesmo erro ao processo Windows.
+- Correção entregue: arquivo completo com a implementação recebida e banner 20261027-selecao-incorporada. Validação do corte ocorre antes do Spark; conferência da seleção ocorre antes da substituição de resultados. Resumo registra primeira/última origem e última disponibilidade de alvo. A gravação dos vários arquivos não foi transformada em transação atômica; Delta continua tópico posterior.
+- Retomada exata: substituir somente o script do laboratório; não reextrair o pacote inicial, não criar novas cópias em notebooks, não reinstalar dependências. Executar o comando com corte 2026-07-11 06:00:00. Para série completa com início 2025-09-01 00:00, a expectativa é 7.485 linhas, primeira origem 2025-09-01 07:00 e última 2026-07-10 03:00; disponibilidade máxima 2026-07-11 05:00. A igualdade ao corte é excluída.
+- Material anterior preservado; pacote e aula atualizados para não redistribuir a função vazia. A evidência de aprendizagem inclui a autoria efetivamente enviada. Corrigir um arquivo entregue não aumenta o progresso do currículo. M07.2 permanece como próxima unidade após o fechamento delimitado do laboratório, sem inserir novas microtarefas.
+- Verificação desta correção pelo professor: execução integral da CLI com corte em Linux/PySpark4.0.1/Java17, série sintética explícita de8.760 horas; 7.485 linhas gravadas em Parquet, limites de origem/disponibilidade e demais contagens conferidos. Contraprovas passaram no mesmo fluxo. Corte com fuso foi recusado antes de iniciar Docker/Spark. A execução Windows com os dados reais continua pendente.
+
+
+### 27/10/2026 — E103: laboratório temporal e arquivos reais aceitos
+
+- Log Windows com banner 20261027-selecao-incorporada e corte 2026-07-11 06:00:00. 8.760 horas, 8.753 origens com features, 8.729 com features/alvo, 24 alvos ausentes e 7.485 linhas de treino. A falha NotImplementedError está encerrada.
+- Dois Parquets, resumo, amostra, duas contraprovas e plano efetivamente abertos; originais preservados. EXCEPT ALL nos dois sentidos mostra igualdade integral entre treino e filtro correto. Schemas, origens consecutivas e relações temporais conferidos em todas as linhas; amostra de36 linhas coincide.
+- Primeira origem2025-09-01 07h, última2026-07-10 03h, maior disponibilidade2026-07-11 05h. A origem10/07 04h é excluída pela igualdade ao corte. Filtrar apenas origem anterior admitiria7.511 linhas,26 indevidas.
+- Contraprovas recebidas:129 versusNULL; features130/127,5 invariantes e alvo156→1.156. Valores do histórico/alvo alinhados permitiram recálculo interno das janelas, diferença máxima5,684341886080802e-14. O bruto ONS não foi recebido; não se apresenta essa consistência interna como auditoria da fonte.
+- Plano contém Generate, LEFT broadcast join, Sort, Window e cache; frames -2/-2,-7/-2,+24/+24. isFinalPlan=false não mede desempenho. Evidências/hashes em docs/Auditoria_M07_1_E103.json e parecer técnico no mesmo pacote.
+- Decisão: aceite técnico M07.1 e autoria da seleção reconhecida. Não repetir laboratório/instalação. Defesa conceitual consolidável na nova atividade, sem bloquear a próxima aula.
+
+### 27/10/2026 — E104: Delta e reprodução após correção simulada
+
+- Aula completa e script de referência integralmente implementado. Pacote renewcast_m07_delta_reproducao.zip acrescenta arquivos; não substitui a autoria anterior nem contém função vazia no fluxo executado.
+- Spark4.0.1 existente mais dois JARs oficiais Delta4.0.1, hashes fixados; download7.809.994 bytes. Sem build novo ou PySpark no Conda Windows. Contêiner sem rede. Saída reports/scale/CJU_BA5EIGT/m07_2_delta; execução concluída e íntegra pode ser reutilizada.
+- Experimento: Delta0 igual ao Parquet; treino reproduzido e snapshot fixado; rejeição de lote duplicado/schema extra; MERGE simulado +12 em10/07/2026 01h; Delta1; análise do impacto; reabertura de0; reenvio sem alterar dados.
+- Professor executou núcleo em Linux/Spark4.0.1/Delta4.0.1/Java17 usando geração reconstruída dos anexos e comparando ao treino real enviado. Valor165,522→177,522; sete origens afetadas; duas linhas de treino alteradas; snapshot0 reproduz7.485 linhas. Rejeições e idempotência conferidas. Leitura independente do log Delta e Parquet confirma exatamente uma medição alterada. Docker Windows ainda não foi executado aqui.
+- Distinções: instante medido, disponibilidade original, disponibilidade de revisão e commit são relógios diferentes. Snapshot criado hoje não prova histórico ONS de julho. Time travel depende de retenção de log/dados; VACUUM não é limpeza genérica. Idempotência dos dados não exige em todo motor ausência de novo commit.
+- Autoria: notebooks/planejar_recalculo_temporal.py, função planejar_recalculo(instantes, horizonte, atraso, janela), conjuntos de origens afetadas por histórico/média/alvo e união. Uma correção:h24/d2/w6 gera1/6/1/7; duas horas adjacentes geram2/7/2/9. Comparar caso simples ao CSV e explicar escolha de snapshot. Não reexecutar treino nem criar novas microtarefas de contagem.
+- Próxima unidade segue M07.3 Databricks. M08–M14 e limitações operacionais preservados. Não houve treino de modelo nem novo percentual de conclusão.
+
+
+### 29/10/2026 — E105: Delta executado no Windows e planejador autoral revisado
+
+- Log recebido: Spark4.0.1/Delta4.0.1, completed=true, 8.760 horas,7.485 linhas de treino, versões original0/corrigida1/após reenvio1. Medição simulada em10/07/2026 01h:165,522→177,522 MWmed. Sete origens alteradas, duas pertencentes ao treino; versão0 reproduzida; reenvio não altera dados; schema e duplicidade rejeitados. Aceite técnico com base no log; arquivos brutos dessa execução Windows não anexados nesta mensagem.
+- Planejador enviado anteriormente pelo aluno calcula histórico=t+d, média=t+d…t+d+w−1 e alvo=t−h com união de conjuntos. Conferência do professor aprovou1/6/1/7 e2/7/2/9, duplicatas, entrada vazia e h6/d0/w1. Faltava rejeitar datetime com fuso; correção orientada, e aluno informou ter feito. Não foi recebida nova cópia do código corrigido.
+- Executar um arquivo que apenas define funções pode terminar com sucesso sem saída: o corpo não é chamado. Não se interpreta silêncio como execução do planejamento nem como falha de Spark.
+- Entrega localizada: planejar_recalculo_temporal.py preserva a lógica autoral, incorpora validação de fuso e acrescenta conferência escrita pelo professor. main chama a função e compara os quatro conjuntos com os deltas de impacto_correcao.csv; usa parâmetros de snapshot_treino.json e correção de conclusao.json. Caminhos explícitos, leitura apenas, nenhuma nova pasta de relatórios/backup. O aluno salva no mesmo arquivo e usa o mesmo comando.
+- Verificação dessa chamada no ambiente do professor: coincide com o CSV da execução E104; imprime sete origens e duas no treino. Contraprova de fuso e casos de sobreposição/duplicação/vazio aprovados. Não se apresenta isso como execução no Windows do aluno.
+- Interpretação do impacto: alvo na origem09/07 01h recebe+12; histórico em10/07 03h recebe+12; médias em10/07 03–08h recebem+2. No treino entram09/07 01h e10/07 03h;10/07 04h tem target_available_at igual ao corte11/07 06h e é excluída pelo critério estrito.
+- O plano é conservador para revisões múltiplas: valores podem se compensar. A igualdade exata com mudanças numéricas é exigida aqui para a única correção positiva do laboratório.
+- Versão0 reproduz a base fixada no experimento; versão1 representa o dataset corrigido para uma execução deliberadamente nova. Hora da medição não estabelece quando a revisão ficou conhecida; snapshots locais não provam publicação histórica ONS. Interpretação autoral ainda não recebida.
+- Próxima unidade curricular: M07.3 Databricks. Não solicitar nova execução M07.1/Delta nem novos microexercícios de contagem. O roadmap não marca Databricks executado nem altera percentual global.
+
+
+### 29/10/2026 — E106: conferência do planejador recebida e M07.2 técnico encerrado
+
+- Aluno executou notebooks/planejar_recalculo_temporal.py. Quatro conjuntos coincidem com impacto_correcao.csv: histórico1, média6, alvo1, união7. Origens09/07 01h e10/07 03h pertencem ao treino;10/07 04–08h não pertencem.
+- Evidência recebida por log; não se afirma auditoria independente dos arquivos Windows não anexados. A lógica autoral foi revisada e a chamada de leitura foi fornecida pelo professor.
+- Decisão: entrega técnica M07.2 encerrada. Não pedir outro Spark, MERGE, backup ou contagem. A defesa conceitual de snapshots é consolidada em scale_comparison.md da próxima unidade.
+
+### 29/10/2026 — E107: Databricks como reprodução verificável
+
+- Aula completa e notebook IPYNB com16 células. Caminho de referência: Databricks Free Edition/serverless; documentação oficial consultada. Não exige trial pago, JAR, PySpark local novo ou cluster clássico. Workspace do aluno não acessado pelo professor.
+- Preparador lê a geração original e o treino aceito, verifica parâmetros, consolida dois Parquets e um manifesto em dist/databricks/CJU_BA5EIGT/m07_3. Reenvio do mesmo pacote é conferido; entrada original preservada. A geração corrigida simulada de M07.2 não é a entrada desta reprodução.
+- Notebook usa catálogo/schema/volume, hashes pós-upload, tabelas Delta gerenciadas criadas uma vez, propriedades do pacote, ID e versão consultados, leitura versionAsOf e comparação por FULL JOIN de todas as colunas. Não há overwrite, DROP, VACUUM ou treino de modelo.
+- Verificação local identificou risco de literal temporal: datetime ingênuo6h virou9h em sessão UTC com Python no fuso local, admitindo7.488 linhas. Corte convertido explicitamente de texto para timestamp_ntz restaurou7.485 sem mudar o contrato. Correção incorporada antes da entrega e explicada na aula. Não invalida os artefatos M07.1/M07.2 já comparados; é uma adaptação da portabilidade.
+- Professor executou células de entrada, transformação, publicação e confronto em Linux/Spark4.0.1/Delta4.0.1. Usou geração reconstruída dos anexos E103 e treino real recebido, não o bruto ONS. Ambas as configurações2/4 reproduziram7.485 linhas com zero divergências; tabela relida igual; reuso sem novo commit de dados; valores adulterados e finalidade incompatível rejeitados. Notebook válido e preparador idempotente.
+- Não executados pelo professor: criação do volume Unity Catalog/UI, conta cloud/serverless, recibo no volume e comando Windows. O relatório Verificacao_M07_3_Professor.json explicita esse limite. Tempos locais não são publicados como desempenho Databricks.
+- Autoria delimitada: reports/scale_comparison.md com identidade/versões, Exchange/Window e chave, escopo dos dois tempos e escolha justificada de ambiente. Exportar notebook com saídas e recibo. Aula preserva distinção entre zero custo medido e custo não medido.
+- Próxima unidade curricular após essa entrega: M08/PyTorch. M07.3 continua não executado pelo aluno até a evidência chegar. Percentual global e inventário P1 não alterados por criação de pacote.
+
+
+### 29/10/2026 — E108: Databricks executado e parecer revisado
+
+- Entradas recebidas: m07_3_reproducao.ipynb e scale_comparison.md. Inspeção offline de 13 condições; sete células de código coincidem com a distribuição, sem outputs de erro. Não houve reexecução cloud nem acesso ao workspace pelo professor.
+- Fonte: workspace.renewcast_m07.geracao_m073_f66e094498ef, ID e3c3dc5d-912c-4933-a14e-a7b476bbb374, versão0, 8.760 linhas. Treino: workspace.renewcast_m07.treino_m073_f66e094498ef, ID f0f6f4fa-3879-4e07-8f5c-3c89b9f2e128, versão0, 7.485 linhas. Fronteiras reproduzem 2025-09-01 07h / 2026-07-10 03h; último alvo disponível 2026-07-11 05h.
+- Configurações solicitadas2/4: 3,691632100s / 2,993797549s; zero divergências e diferenças double máximas zero. Duração inclui comparação integral e termina antes do explain. Um ensaio por configuração não prova ganho causal de particionamento.
+- Parecer: decisão de manter exploração local aceita. Correções orientadas: alteração M07.2 era simulada, não retificação ONS demonstrada; Exchange10 é lado de broadcast do JOIN; média emitida03h/d2/w6 usa20h–01h; Photon não é código Java/Photon compilado por JIT; plano inicial/isFinalPlan=false não prova coalescência AQE; memória e custos não medidos. Revisão não é nova autoria independente.
+- Exportação registra recibo_20261029T232749Z_4848481e.json no volume; JSON separado não anexado. Código/saídas documentados, sem autenticação independente do workspace. Aceite delimitado preserva essa limitação e não exige repetir o experimento.
+- M07.1–M07.3 encerrados no escopo executado. Próxima unidade M08.1, sem novos exercícios Spark ou promoção operacional.
+
+### 29/10/2026 — E109: tensores, autograd e otimização com o treino real
+
+- Entrega renewcast_m08_autograd.zip: notebooks/laboratorio_autograd.py, docs/Aula_M08_1_Autograd.md e verificação do professor. Execução normal completa; autoria opcional explicitamente separada, sem função vazia bloqueando a primeira execução.
+- Entrada: treino M07.3 consolidado de7.485 linhas; duas features históricas h24/d2/w6. Ajuste7.291, exclusão por disponibilidade26, validação de desenvolvimento168. Normalização somente no ajuste; semana já explorada, sem novo holdout intocado.
+- Teoria/código: shapes [n,2]/[2,1]/[n,1], regra da cadeia do MSE, forward/backward/step, gradientes acumulados, broadcasting indevido, diferenças finitas e limite de estabilidade da quadrática. Caso manualMSE2,5→1,305 após um passo de taxa0,1.
+- Professor executou Python3.12/PyTorch2.7.1+cpu em Linux: gradiente conferido, recarregamento com diferença0, gap para mínimos quadrados2,63e-8. Taxa0,8 acima do limite≈0,550817 produziu perda≈1,78e16 após30passos. Os dois cenários foram definidos como demonstrações de estabilidade, sem tuning pelo erro futuro.
+- No padrão, validação de desenvolvimento: MAE≈37,036 versus persistência≈37,992 MWmed, mas viés observado−previsto≈+22,460 MWmed. Resultado ilustra que minimizar bem o erro de ajuste não garante boa previsão. Não comparar diretamente com HGB/vento em outros protocolos nem promover este modelo.
+- Autoria: função NumPy gradiente_mse e parecer de shapes, sinal, taxa, otimização e generalização. Windows e aprendizagem do aluno ainda pendentes. M08.2/M08.3/M09–M14 permanecem posteriores. Inventário P1 sem mudança e nenhum percentual global atribuído.
+
+Versão1.61,29/10/2026 — E108 aceita a reprodução Databricks e revisa conclusões; E109 entrega a próxima unidade completa. Painel, checkpoint, matriz, evidências e aprendizagem reconciliados.
+
+
+### 04/11/2026 — E110: gradiente e parecer M08.1 aceitos com assistência
+
+- Recebidos no texto: m08_gradiente_autoral.py e parecer de três execuções Windows (20261104T131859Z_8f277a44, 20261104T132027Z_d5a8612c e 20261104T132133Z_97eada41). Código e redação declarados assistidos por Codex. Não foram recebidos os arquivos de resultado/curva dessas execuções.
+- Gradiente conferido nesta revisão: caso manual dw=[[-1],[-2]], db=-3; MSE 2,5→1,305. Diferenças finitas em 17 exemplos com diferença máxima 1,263e-10; entradas somente para leitura preservadas; cinco shapes inválidos rejeitados.
+- Parecer distingue broadcasting, backward/step/zero_grad, convergência versus generalização, taxa instável com perda finita e evidência de desenvolvimento. Limite quadrático corretamente delimitado. Aceite M08.1 no escopo assistido, sem certificar solução independente.
+- Relato: taxa0,05 termina em0,6346101118839145; taxa0,8 em1,7769091784326462e16; MAE37,035713 e viés+22,459944 MWmed. Consistente com referência anterior; não foi recalculado dos arquivos Windows nesta revisão.
+- Hash do laboratório informado coincide com o distribuído. O hash do treino Windows foi apenas relatado, diferente do professor; sem afirmação de identidade binária. Texto M07.3 reapresentado era anterior à revisão E108; parecer corrigido preservado.
+
+### 04/11/2026 — E111: próxima unidade completa, Dataset/DataLoader e MLP
+
+- Entrega renewcast_m08_2_dataset_mlp.zip: script completo notebooks/laboratorio_mlp.py, aula com leitura de código/álgebra/protocolo/autoria, verificação e figura das curvas do professor. Usa ambiente renewable-forecast existente e os três arquivos M07.3. Não instala pacotes nem exige reexecução Spark/Databricks.
+- Janela por timestamps exatos, 24 valores de o−25h a o−2h; alvo o+24h; disponibilidade o+26h. MLP 24→32→1, 833 parâmetros, CPU/float32, AdamW, Dropout0,1, até60épocas, paciência8, sementes17/29/41. Nenhuma semente escolhida pela avaliação.
+- Ajuste7079, seleção168, avaliação168, exclusões por disponibilidade52 e por janela inicial18. Escalas apenas no ajuste. A semana de avaliação (03/07 04h a10/07 03h) já foi examinada; não é novo holdout intocado.
+- Referência Linux/Python3.12.14/PyTorch2.7.1+cpu: MAE persistência37,991646; linear24h33,678664; MLP17=32,724828, MLP29=33,700811, MLP41=33,159788 MWmed. Viés continua positivo nas redes; MLP não supera linear em todas as sementes. Faixa entre seeds não é IC; sem promoção operacional.
+- Quinze conferências aprovadas: janelas com lacuna, invariância a futuro, fronteiras estritas, avaliação ponderada 4+1, modos/gradientes, shapes, sementes, checkpoint, escalas, recarregamento, pareamento, métricas e hashes. Recarregamento com diferença zero. Professor executou sobre pacote local de conferência derivado dos dados anteriores; não atribuir esses resultados ao Windows do aluno.
+- Autoria solicitada: avaliar_lotes(modelo, loader), preservando modo/pesos/gradientes e calculando SSE/n, e parecer 400–700 palavras com interpretação temporal, épocas, sementes e decisão. Modo normal completo; --autoria usa a função do aluno na seleção após contraprova. Prática do aluno ainda pendente.
+- Painel, checkpoint, matriz, aprendizagem e inventário reconciliados. P1 permanece8/10 entregas; M08.2 ativo, M08.3/GRU posterior, M09–M14 sem avanço artificial. Sem percentual global de formação.
+
+Versão1.62,04/11/2026 — E110 aceita M08.1 com assistência declarada; E111 entrega a próxima unidade executável e verificada.
+
+
+### 15/11/2026 — E112: aceite da avaliação em lotes e do parecer M08.2
+
+- Entrega referente a 05/11: função avaliar_lotes e parecer MLP, com implementação/redação assistidas por Codex declaradas. Registra-se o aceite persistente agora, sem alterar a data da execução relatada.
+- Função transcrita e executada em PyTorch 2.7.1+cpu: MSE 20 no caso 4+1; modos mistos restaurados em sucesso/exceção; pesos/gradientes preservados; loader vazio, shape incorreto, NaN e overflow rejeitados. Subtração no dtype original e quadrado/redução em float64, conforme contrato.
+- Relato Windows: 7.079 ajuste, 168 seleção, 168 avaliação, 52 exclusões por disponibilidade, 18 janelas incompletas. Sementes 17/29/41: MAE 32,724828/33,700811/33,159788; linear 33,678664. MLP 29 perde ligeiramente em MAE, embora as três melhorem RMSE. Mediana não é ensemble; faixa não é IC. Manter linear como referência simples e MLP candidata de estudo é decisão aceita.
+- Arquivos brutos Windows, hashes e figura do aluno não anexados. Concordância byte a byte relatada permanece evidência declarada; não se certifica autoria independente. Revisão em docs/Revisao_M08_2.md. Não repetir M07, M08.1 ou M08.2 para avançar.
+
+### 15/11/2026 — E113: M08.3 GRU executável, aula e comparação com HGB
+
+- Pacote renewcast_m08_3_gru.zip; modelo src/renewable_forecast/neural_gru.py; laboratório notebooks/laboratorio_gru.py; aula docs/Aula_M08_3_GRU.md. Mesma entrada M07.3 e contratos temporais M08.2. Sem instalação, download, Docker ou função vazia bloqueando o modo normal.
+- Referência Linux/Python 3.12.14/PyTorch 2.7.1+cpu/scikit-learn 1.8.0, CPU, dois threads: run 20261115T163556Z_bd3adefd. Pacote M07.3 do professor preservado; não declarado binariamente idêntico ao Windows. Escalas somente no ajuste; mesmas 168 origens; seis redes e três baselines; parâmetros registrados antes do treino; nenhuma busca para fazer a GRU vencer.
+- GRU 929 parâmetros, uma camada/16 estados, estado reiniciado por janela, Dropout explícito na cabeça. MLP 833 no mesmo protocolo; linear 25, HGB fixo nos 24 lags sem vento, persistência. AdamW 0,001; até 60 épocas; paciência 8; sementes 17/29/41, todas reportadas.
+- MAE HGB 31,846768; mediana MLP 33,159788; mediana GRU34,911227 MWmed. Todas as GRUs perdem MAE para linear/HGB; duas melhoram RMSE contra HGB. Semana já examinada; não é novo holdout e não promove modelo operacional.
+- Onze grupos de contraprovas e nove de auditoria: portas/GRUCell, 24 passos, estado, lotes/shapes, avaliador recebido, fronteiras, normalização, métricas/pareamento, checkpoints, hashes e futuro/lacunas. Seis recarregamentos com diferença zero. Pico residente aproximadamente 454 MiB do processo inteiro; tempos registrados sem benchmark causal. PowerShell e coleta nativa de memória Windows não executados nesta sessão.
+- Autoria: passo_gru em NumPy devolvendo r/z/n/h, sem importar a referência; conferir com --autoria notebooks/m08_gru_autoral.py --verificar, sem repetir treino. Parecer explica portas, shapes, estado, épocas, métricas e decisão. Encerramento pelo aceite dessa entrega, sem microtarefas retrospectivas.
+- Painel, checkpoint, inventário, matriz e aprendizagem reconciliados. M08.2 aceito; M08.3 ativo, execução do aluno pendente. M09 posterior; M10–M14 inalterados. P1 permanece 8/10; nenhum percentual global inventado.
+
+Versão 1.63, 15/11/2026 — E112 registra o aceite M08.2; E113 entrega M08.3 executável e verificada.
+
+
+### 15/11/2026 — E114: execução Windows e célula GRU do aluno aceitas
+
+- Recebidos nove anexos da execução 20261115T164955Z_5e435b09: resumo, previsões, curvas, partições, origens sem janela, normalização, protocolo, resultado e HTML. Oito arquivos possuem hashes internos e todos coincidem. Recalculados os 27 valores de MAE/RMSE/viés das nove variantes, nas mesmas 168 origens, 1.512 linhas.
+- Divisão 7.079/168/168, 52 exclusões por disponibilidade e 18 janelas incompletas; fronteiras estritas e épocas/paciência conferidas. Código declarado coincide com quatro fontes distribuídas; Parquets e checkpoints Windows não anexados. Diferença zero em seis recarregamentos consta do recibo, sem nova execução independente do load.
+- Função NumPy passo_gru e cinco testes recebidos em texto, transcritos e executados: cinco aprovados. Reset após transformação recorrente com viés, estado não nulo, inputs somente leitura, shapes, NaN e sigmoide estável em ±1000. Onze grupos da conferência PyTorch/24passos aprovados; maior diferença 2,22e-16. Código aceito, sem pedir alteração, reenvio ou novo treino. Autoria independente não certificada.
+- MAE Windows: persistência 37,991646; linear 33,678664; HGB 32,323956; medianas MLP 33,159788 e GRU 34,911227 MWmed. HGB é a referência provisória por MAE neste recorte. GRU 41 vence RMSE mas perde erro absoluto em 96/168 origens; redução de soma quadrática não implica menor MAE ou menor viés. Tempos agregados MLP 47,54s e GRU 126,80s, sem benchmark causal.
+- HGB Linux 31,846768 versus Windows 32,323956: versões scikit-learn 1.8/1.9 e pacotes binários de entrada distintos; normalizadores/partições/alvos avaliados iguais. Diferença máxima de previsão HGB 10,179216 MWmed. Causa não isolada; não chamar de arredondamento nem invalidar execução. Usar números locais; sem exigir troca de dependências.
+- Material Revisao_M08_3.md e recibo verificacao.json. Execução/implementação M08.3 aceitas. Parecer decisório do aluno não recebido e pode integrar a próxima aula. M08 não equivale a domínio independente total ou operação aprovada; não repetir as entregas aceitas.
+
+### 15/11/2026 — E115: M09.1 atenção, máscaras e posição, entrega executável
+
+- Pacote renewcast_m09_1_atencao.zip, aula docs/Aula_M09_1_Atencao.md; núcleo NumPy em src/renewable_forecast/attention_math.py e laboratorio notebooks/laboratorio_atencao.py. Ambiente existente; sem instalação, treino, Docker ou download de pesos. Contrato M07.3 reutilizado do M08.3, sem substituir código autoral do aluno.
+- Referência Linux/CPU/PyTorch2.7.1+cpu, run 20261115T215729Z_f462e113: oito grupos de contraprovas, delta PyTorch 4,44e-16. Janela real 02/07/2026 03h–03/07/2026 02h para origem 03/07 04h, mesmo eixo NTZ. Q/K [1,24,4], V [1,24,1], pesos [1,24,24]. Projeções fixas não treinadas; saídas são representações, não forecasts.
+- Atenção livre no passado disponível distingue-se de máscara causal de prefixo. Última consulta igual na camada única; permutação sem posição preserva equivariância, posições fixas quebram essa equivalência de conteúdo. HTML com mapas, CSVs e recibo exportados. Não se declara Transformer completo ou comparação fundacional executada.
+- Autoria: atencao_escalada NumPy com máscara True=permitido, softmax estável e contraexemplos; conferir sem dados/treino com --autoria ... --verificar. Parecer explica máscaras, dimensões e limites; pode integrar decisão M08.3 ainda pendente. Execução/autoria do aluno M09.1 pendentes. M09.2/M09.3 seguem o roteiro; M10–M14 inalterados.
+- Painel, checkpoint, inventário, matriz e aprendizagem reconciliados. P1 continua 8/10 entregas técnicas, item 10 parcial e comparação fundacional pendente; nenhum percentual global atribuído.
+
+Versão didática 1.64, 15/11/2026 — E114 aceita entrega técnica GRU do aluno; E115 prepara e verifica a próxima unidade de atenção.
+
+
+### 17/11/2026 — E116: atenção autoral executada nesta revisão
+
+- Código NumPy e seis casos recebidos em 16/11 foram transcritos e executados: seis aprovados. A função passou nos oito grupos PyTorch, delta 4,44e-16. Logs Windows normais 20261116T225653Z_d6086b39 e 20261117T150330Z_b5b7c30d reconhecidos; não se atribui a eles a execução autoral feita agora no professor.
+- CLI da atenção exige --autoria notebooks/m09_atencao_autoral.py; sem esse caminho argparse rejeita antes do cálculo. Execução normal usa referência. A função não requer correção; não repetir a unidade para avançar. Defesa pode integrar M09.3; autoria independente não certificada.
+
+### 17/11/2026 — E117: composição Transformer recebida
+
+- Dois anexos, convertidos em laboratorio_transformer.py e m09_transformer_verificacao.py, compilam como Python. Revisão confirma orquestração de duas camadas encoder/decoder post-norm, conversão de máscara ao PyTorch, cross-attention, perturbação de prefixo com memória fixa, conectividade de gradientes sem optimizer.step e persistência.
+- Logs Windows: run 20261117T154658Z_0897bf5a completa e 20261117T154706Z_6cd8d15b verificar; 13 grupos, delta 6,66e-16, 11.200 parâmetros, encoder [1,24,16],decoder [1,6,16], prefixo/reload zero. São representações não treinadas; seis slots não definem seis horizontes.
+- transformer_blocks.py e resultados completos não anexados: não se afirma reexecução independente das 13 conferências nem auditoria de toda a implementação. Reprodução relatada e código recebido reconhecidos nesse escopo; não exigir outra rodada igual para começar M09.3. Revisao_M09_1_2.md registra os limites.
+
+### 17/11/2026 — E118: previsão pré-treinada e comparação pareada
+
+- Pacote renewcast_m09_3_pre_treinado.zip, aula Aula_M09_3_Pre_Treinado.md, controlador scripts/executar_m09_3.py e laboratório. Preparação em .venvs/m09_3_chronos, sem alterar Conda chamador. Dependências fixadas; primeira execução baixa componentes CPU e 33 MiB de pesos; sem API paga/GPU. Modo offline reutiliza ambiente/snapshot verificados.
+- Chronos-Bolt Tiny, revisão a0e552de83495b5c28c14c71c374f3e33280b340, 8.652.672 parâmetros, model.safetensors SHA 75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32. Arquivos públicos e model card preservados/verificados; trust_remote_code=False e carga local safetensors.
+- Contexto 24h bruto em MWmed; normalização interna do pré-treinado; P50 principal prescrito, P10/P90 brutos. H24/d2 exige 26 passos desde history_end, índice 25. Baselines congelados M08.3 reutilizados com hashes, mesmas 168 origens/alvos; sem retreino ou escolha de contexto após ver a avaliação.
+- Professor Linux/CPU, dois threads/float32, controlador executado criando ambiente novo e depois reutilizando offline. Run final 20261117T160556Z_cc6dd09f. MAE 31,340739 contra HGB Linux 31,846768: ganho 1,59%; RMSE 45,380137 contra 44,051119; viés+2,962412. Cobertura 80,36%, largura 83,60, sem calibração/recorte. Não é garantia futura ou promoção operacional. Windows deve comparar com seu HGB local 32,323956 e seus próprios hashes.
+- Oito grupos independentes de auditoria: hashes, dez variantes/30 métricas, 26 passos, contraprova passo 24, pinball/cobertura, repetição, reprodução em ambiente privado e snapshot. Maior divergência nas métricas 7,11e-15; inferência repetida idêntica. Wheels Windows/Python3.12 consultados; Windows não executado nesta sessão. Overlap de pré-treino não verificado.
+- Autoria de alinhamento por timestamps e parecer integrado consolidam M08/M09; modo normal completo. Após aceite M09.3 segue M10. CI/shadow/monitoramento contínuo do P1 permanecem separados; inventário permanece 8/10 até execução/fechamento das entregas pendentes. Sem percentual global novo.
+
+Versão didática 1.65, 17/11/2026 — E116/E117 reconhecem trabalho recebido; E118 entrega a próxima unidade aplicada e verificada.
+
+### 17/11/2026 — E119: recebimento e revisão do pré-treinado Windows
+
+- Rodada normal recebida:20261117T212230Z_965de3d1. Os onze hashes das saídas coincidem;30 métricas recalculadas, maior diferença7,11e-15. As1.512 previsões dos nove baselines coincidem com predictions anterior recebido, identificado no protocolo.
+- Alinhamento autoral em texto transcrito e executado: cinco grupos aprovados e seleção deP10/P50/P90 igual ao NPZ real[168,9,26]. Lead26 e índice25 nas168 origens;4.368 trajetórias conferidas. O arquivo binário da função e o Parquet de geração com o hash declarado não foram anexados.
+- ChronosMAE31,340738 contraHGB32,323956: ganho0,983218MWmed/3,041763%. RMSE45,380136 contra44,221683: piora2,619649%.95 vitórias/73 derrotas; quatro dos sete blocos de24 origens melhoram. Cobertura135/168,20 abaixo/13 acima, largura83,595237. Sem clipping ou recalibração.
+- Auditoria/registro auxiliares referem213329Z_3b201a01. Seu resultado completo não foi recebido; protocolo/latência/HTML da rodada anexada têm outros hashes. Não fundir os recibos. O empacotador gera uma lista declarativa de comandos/exitcodes, sem executá-los; essa lista não comprova os dez testes citados. A função foi conferida por execução própria nesta revisão.
+- Revisao_M09_3_Windows.md registra o aceite técnico e a decisão do professor de manterChronos/HGB no desenvolvimento. Parecer próprio do aluno citado no empacotador não anexado; pode consolidar interpretação em três parágrafos, sem outro treino. Item10 permanece parcial pelo critério de encerramento que exigia essa defesa. A pendência não bloqueia a práticaM10.1.
+
+### 17/11/2026 — E120: início aplicado do P2, contrato de telemetria ESA
+
+- Entrega renewcast_m10_1_telemetria.zip, aula completa e código normal funcional em satellite-anomaly-monitor. NumPy/pandas existentes, offline, sem Docker, instalação ou modelos.
+- Fonte ESA Anomaly DatasetMission1v2, DOI10.5281/zenodo.15237121. Canais50–52 do grupo10, ano2007:348.901 medições por canal. Valores preservados; nomes/unidades anonimizados. Membros de origem obtidos por intervalos HTTP e CRC verificado; checksum do ZIP inteiro não foi verificado. Identidades de membros e CSVs derivados registradas.
+- Protocolo exploratório: grade90s, idade máxima180s.350.400 instantes,350.346 utilizáveis por canal,54 não utilizáveis. Mediana90s, maior lacuna1.170s. Conferência por buscaNumPy independente do merge_asof reconciliou valores, idade, disponibilidade e união dos intervalos anotados.
+-33 linhas de anotação, dezIDs: três deAnomaly e sete deRareEvent. Nenhuma anotaçãoCommunicationGap no recorte, embora existam41 intervalos de amostragem acima180s. Não confundir lacuna medida com categoria anotada; não chamar sem anotação de normalidade comprovada.
+- Cinco contraprovas: expiração, preservação de entradas, relógios distintos, alteração do futuro e fronteiras/entradas inválidas. Nenhum detector ou treino executado. Fonte sem registro de chegada; leitura UTC dos instantes e disponibilidade ainda assumidas.
+- Atividade: implementar sincronizar_causal, conferir contraprovas e tabela real, explicar grade versus medição/evento e as hipóteses restantes. M10.2 amplia e fixa o recorte antes dos detectores; M10.3 avalia eventos e limiares. Referência Linux encerrada; execução/autoria do alunoM10.1 pendentes.
+- Painel, checkpoint, matriz, aprendizagem e inventário reconciliados. P1 mantém pendências operacionais e defesa documental separadas; não há percentual global ou certificação de senioridade por execução.
+
+Versão didática1.66,17/11/2026 — E119 aceita a entrega técnica recebida e E120 entrega a próxima prática do P2, com referência executada.

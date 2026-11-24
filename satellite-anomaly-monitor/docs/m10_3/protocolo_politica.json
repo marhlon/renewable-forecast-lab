@@ -1,0 +1,19 @@
+{
+  "schema": "satmon-m10-3-policy-protocol-v1",
+  "grid_step_seconds": 900,
+  "consecutivos": 2,
+  "max_alarmes_sem_anotacao_por_dia_equivalente_no_dev": 0.5,
+  "candidatos_quantil": [0.9, 0.925, 0.95, 0.975, 0.98, 0.985, 0.99, 0.995, 0.9975, 0.999, 0.9995],
+  "metodos_em_ordem_de_desempate": ["score_robusto", "score_pca", "score_isolation"],
+  "quantil_metodo": "higher",
+  "regra_de_selecao": "Exigir ao menos um ID detectado e respeitar o teto de alarmes sem anotação no desenvolvimento. Maximizar IDs detectados, minimizar taxa sem anotação, minimizar mediana de atraso, preferir método pela ordem fixa e quantil maior.",
+  "inicio_de_alarme": "Segundo instante consecutivo utilizável com escore >= limiar. Um início por sequência. Reiniciar após abaixo do limiar, ausência ou início de período.",
+  "regra_de_associacao": "Avaliar somente o instante do disparo. Rare Event/Communication Gap têm precedência como ignorados. Para Anomaly, parear a um único ID ainda não detectado, por fim do intervalo ativo mais próximo e depois ID. Se todos já foram detectados, marcar repetição.",
+  "relogio_de_atraso": "Minutos desde o primeiro início anotado em qualquer dos três canais do mesmo ID, somente entre os IDs detectados.",
+  "denominador_taxa": "Cada instante utilizável fora de todas as categorias anotadas representa 900 s de exposição. Taxa por 24 h equivalentes de exposição, não por dia de calendário.",
+  "desenvolvimento_inicio_utc": "2008-01-01T00:00:00Z",
+  "teste_inicio_utc": "2011-01-01T00:00:00Z",
+  "teste_fim_exclusivo_utc": "2014-01-01T00:00:00Z",
+  "source_spec_m10_2_sha256": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+  "nota": "Teto didático, sem validação de capacidade operacional. O piloto não reproduz o protocolo oficial ESA-ADB."
+}

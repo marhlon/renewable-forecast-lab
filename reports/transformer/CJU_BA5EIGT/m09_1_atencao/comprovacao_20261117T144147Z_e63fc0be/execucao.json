@@ -1,0 +1,57 @@
+{
+  "schema": "renewcast-m09-1-execution-proof-v1",
+  "started_at_utc": "2026-11-17T14:41:47.090433+00:00",
+  "cwd": "C:\\renewable-forecast-lab",
+  "script_sha256": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8",
+  "implementation_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+  "runs": {
+    "laboratorio": {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-W",
+        "error::UserWarning",
+        "notebooks/laboratorio_atencao.py",
+        "--autoria",
+        "notebooks/m09_atencao_autoral.py"
+      ],
+      "returncode": 0,
+      "stdout": "laboratorio_stdout.log",
+      "stderr": "laboratorio_stderr.log",
+      "stdout_sha256": "d87b35a9da8768cb52ddb2a2125d19cecd3d581257d49fb87d16a14f7c250ad0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\20261117T144205Z_917f4acf"
+    },
+    "testes": {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_m09_atencao_autoral.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "testes_stdout.log",
+      "stderr": "testes_stderr.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "30c7319f78441ff5f54ccc35b0e1b5db817992088fdb5d85d7bdda0587e43a01"
+    }
+  },
+  "proof_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\comprovacao_20261117T144147Z_e63fc0be",
+  "completed": true,
+  "finished_at_utc": "2026-11-17T14:44:47.993248+00:00",
+  "output_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\20261117T144205Z_917f4acf",
+  "authorship_hash_matches": true,
+  "user_warnings_treated_as_errors": true,
+  "laboratory_stderr_empty": true,
+  "html_numbers_six_decimals": true,
+  "html_datetime_preserved": true,
+  "integrated_groups_passed": 8,
+  "additional_tests_passed": 6,
+  "max_difference_pytorch": 4.440892098500626e-16,
+  "verified": true,
+  "validation_file": "validacao_html_autoria.json"
+}

@@ -1,0 +1,237 @@
+{
+  "schema": "satmon-m10-2-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-19T10:15:01.884919+00:00",
+  "run_id": "20261119T101049Z_253ff59f",
+  "run_directory": "reports/m10_2/20261119T101049Z_253ff59f",
+  "audit_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "method": "Persisted-score audit; NumPy tie-block AP; complementary PCA projection. No model, authored function, reference or runner imported; no refit.",
+  "checks": {
+    "source_input_code_author_output_hashes": true,
+    "latest_result_identity": true,
+    "time_grid_age_partition_and_freshness": true,
+    "fit_and_development_cohorts_recomputed": true,
+    "category_masks_and_union_coverage_per_id": true,
+    "robust_scores_recomputed": true,
+    "pca_scores_from_persisted_components": true,
+    "full_ap_recomputed_with_ties": true,
+    "sensitivity_ap_uses_same_fixed_scores": true,
+    "case_selection_and_percentiles": true,
+    "context_aggregates_from_persisted_assignments": true
+  },
+  "checked_hashes": {
+    "data/reference/esa_mission1_m10_2/protocolo.json": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+    "data/reference/esa_mission1_m10_2/canais_grade.csv.gz": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4",
+    "data/reference/esa_mission1_m10_2/eventos.csv": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e",
+    "scripts/executar_m10_2.py": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "src/satmon/detectores_m10_2.py": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372",
+    "notebooks/m10_2_pca_autoral.py": "5d8b070af9a0e4417b1c0e910db43a8a24ea69c2ecaa49aa4fc1eee31d6e180d",
+    "reports/m10_2/20261119T101049Z_253ff59f/casos_reais.csv": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8",
+    "reports/m10_2/20261119T101049Z_253ff59f/cobertura_eventos.csv": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313",
+    "reports/m10_2/20261119T101049Z_253ff59f/contextos.csv": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee",
+    "reports/m10_2/20261119T101049Z_253ff59f/escores_desenvolvimento.csv.gz": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "reports/m10_2/20261119T101049Z_253ff59f/metricas.csv": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c",
+    "reports/m10_2/20261119T101049Z_253ff59f/relatorio.html": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c",
+    "reports/m10_2/20261119T101049Z_253ff59f/sensibilidade_evento.csv": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866"
+  },
+  "cohort_counts": {
+    "grid_rows_fit": 140256,
+    "fit_rows_used": 136202,
+    "grid_rows_dev": 105216,
+    "dev_rows_unscored": 51,
+    "dev_rows_scored": 105165,
+    "dev_rows_evaluated": 105042,
+    "dev_positive_points": 3909
+  },
+  "dev_scored_but_excluded_by_category": 123,
+  "time_contract": [
+    {
+      "channel": "channel_50",
+      "grid_rows_with_value": 245406,
+      "no_previous_sample_rows": 2,
+      "expired_sample_rows": 64
+    },
+    {
+      "channel": "channel_51",
+      "grid_rows_with_value": 245406,
+      "no_previous_sample_rows": 2,
+      "expired_sample_rows": 64
+    },
+    {
+      "channel": "channel_52",
+      "grid_rows_with_value": 245406,
+      "no_previous_sample_rows": 2,
+      "expired_sample_rows": 64
+    }
+  ],
+  "full_average_precision": {
+    "constante": 0.03721368595418975,
+    "score_robusto": 0.7164270010708352,
+    "score_pca": 0.5020133451392704,
+    "score_isolation": 0.7581493124419436
+  },
+  "largest_anomaly_id": "id_134",
+  "largest_id_grid_rows": 2985,
+  "largest_id_usable_eval_rows": 2935,
+  "largest_id_share_of_positive_points": 0.7508314146840624,
+  "reduced_cohort_rows": 102107,
+  "reduced_positive_points": 974,
+  "average_precision_without_largest_id_fixed_scores": {
+    "constante": 0.009539012996170684,
+    "score_robusto": 0.3561143431434298,
+    "score_pca": 0.0171418578555011,
+    "score_isolation": 0.3249099446344339
+  },
+  "pca_independent_projection_max_abs_difference": 3.8191672047105385e-14,
+  "pca_retained_variance_fraction": 0.9956015643498123,
+  "cases_recomputed": [
+    {
+      "caso": "pca_relativamente_alto",
+      "timestamp": "2008-02-01 07:45:00+00:00",
+      "anotacao_anomaly": true,
+      "channel_50_value": 0.7523080110549927,
+      "channel_51_value": 0.7746321558952332,
+      "channel_52_value": 0.7544338703155518,
+      "score_robusto": 0.08414823946451845,
+      "score_pca": 0.018878295465934974,
+      "score_isolation": 0.46911346811077176,
+      "rank_score_robusto_pct": 1.8478322956531672,
+      "rank_score_pca_pct": 90.36242645798824,
+      "rank_score_isolation_pct": 24.540183926429428
+    },
+    {
+      "caso": "robusto_relativamente_alto",
+      "timestamp": "2009-06-12 16:00:00+00:00",
+      "anotacao_anomaly": true,
+      "channel_50_value": 0.6683238744735718,
+      "channel_51_value": 0.6853353977203369,
+      "channel_52_value": 0.6747016310691833,
+      "score_robusto": 7.166944180459423,
+      "score_pca": 2.282279553060848e-06,
+      "score_isolation": 0.7199442558330269,
+      "rank_score_robusto_pct": 98.25022372003579,
+      "rank_score_pca_pct": 0.8282401325184213,
+      "rank_score_isolation_pct": 98.66243978599036
+    },
+    {
+      "caso": "isolation_alto_sem_anotacao",
+      "timestamp": "2008-12-25 16:00:00+00:00",
+      "anotacao_anomaly": false,
+      "channel_50_value": 0.776758074760437,
+      "channel_51_value": 0.8022690415382385,
+      "channel_52_value": 0.7852617502212524,
+      "score_robusto": 2.361043869108195,
+      "score_pca": 0.05087194609989905,
+      "score_isolation": 0.7316654776320398,
+      "rank_score_robusto_pct": 96.70845947335351,
+      "rank_score_pca_pct": 93.36693893871023,
+      "rank_score_isolation_pct": 99.99190799870527
+    }
+  ],
+  "coverage_development_anomaly_ids": [
+    {
+      "id": "id_134",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2009-05-25T13:18:10.299Z",
+      "fim_utc": "2009-06-25T15:35:22.296Z",
+      "linhas_na_grade": 2985,
+      "linhas_utilizaveis": 2935,
+      "linhas_entram_no_ranking_dev": 2935
+    },
+    {
+      "id": "id_138",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2009-10-13T06:39:52.281Z",
+      "fim_utc": "2009-10-13T21:32:22.281Z",
+      "linhas_na_grade": 60,
+      "linhas_utilizaveis": 60,
+      "linhas_entram_no_ranking_dev": 60
+    },
+    {
+      "id": "id_142",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2010-04-22T01:18:52.254Z",
+      "fim_utc": "2010-04-22T01:45:52.254Z",
+      "linhas_na_grade": 2,
+      "linhas_utilizaveis": 2,
+      "linhas_entram_no_ranking_dev": 2
+    },
+    {
+      "id": "id_145",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2010-05-19T00:50:22.248Z",
+      "fim_utc": "2010-05-22T18:03:52.248Z",
+      "linhas_na_grade": 357,
+      "linhas_utilizaveis": 357,
+      "linhas_entram_no_ranking_dev": 357
+    },
+    {
+      "id": "id_149",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2010-09-07T02:23:22.233Z",
+      "fim_utc": "2010-09-07T02:38:22.233Z",
+      "linhas_na_grade": 1,
+      "linhas_utilizaveis": 1,
+      "linhas_entram_no_ranking_dev": 1
+    },
+    {
+      "id": "id_150",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2010-10-26T17:24:52.224Z",
+      "fim_utc": "2010-10-26T17:45:52.224Z",
+      "linhas_na_grade": 2,
+      "linhas_utilizaveis": 2,
+      "linhas_entram_no_ranking_dev": 2
+    },
+    {
+      "id": "id_18",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2008-09-08T14:18:37.338Z",
+      "fim_utc": "2008-09-08T17:09:37.341Z",
+      "linhas_na_grade": 11,
+      "linhas_utilizaveis": 11,
+      "linhas_entram_no_ranking_dev": 11
+    },
+    {
+      "id": "id_20",
+      "categoria": "Anomaly",
+      "particao": "desenvolvimento",
+      "anotacoes_canal_intervalo": 3,
+      "inicio_utc": "2008-01-30T03:21:37.374Z",
+      "fim_utc": "2008-02-04T18:33:37.371Z",
+      "linhas_na_grade": 541,
+      "linhas_utilizaveis": 541,
+      "linhas_entram_no_ranking_dev": 541
+    }
+  ],
+  "limits": {
+    "forest_checkpoint_available": false,
+    "forest_scores_reproduced": false,
+    "forest_score_ap_audited_from_persisted_values": true,
+    "kmeans_centers_available": false,
+    "kmeans_assignment_reproduced": false,
+    "kmeans_aggregates_audited_from_persisted_values": true,
+    "raw_archive_members_reacquired_or_verified_now": false,
+    "input_grid_source_hashes_and_time_contract_verified": true,
+    "reserved_period_evaluated": false,
+    "new_models_fitted": false,
+    "notes": "This audits the supplied grid, not the unavailable full raw mission or physical arrival latency. Annotation completeness and operational performance remain unverified."
+  }
+}

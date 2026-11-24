@@ -1,0 +1,9 @@
+"""Calcule o maior corte que permite k leituras consecutivas nesta grade."""
+
+
+def limite_confirmacao(escores, utilizavel, *, consecutivos):
+    """Retorne {'limiar_maximo': ..., 'indice_confirmacao': ...}."""
+    # Comece sem janela vencedora. Examine somente janelas completas e utilizáveis.
+    # Compare o menor escore da janela com o melhor mínimo anterior.
+    # Substitua esta linha pela sua implementação.
+    raise NotImplementedError("Implemente conforme a Aula 01 da M10.4.")

@@ -1,0 +1,135 @@
+ID,Channel,StartTime,EndTime,Category,partition
+id_1,channel_50,2004-12-02T03:08:37.527Z,2004-12-09T02:47:37.524Z,Rare Event,ajuste
+id_1,channel_51,2004-12-02T03:07:07.527Z,2004-12-09T01:35:37.524Z,Rare Event,ajuste
+id_1,channel_52,2004-12-02T03:08:37.527Z,2004-12-09T01:17:37.524Z,Rare Event,ajuste
+id_10,channel_50,2005-03-31T08:18:22.509Z,2005-04-04T00:00:00.000Z,Anomaly,ajuste
+id_10,channel_51,2005-03-31T08:18:22.509Z,2005-04-04T00:00:00.000Z,Anomaly,ajuste
+id_10,channel_52,2005-03-31T08:18:22.509Z,2005-04-04T00:00:00.000Z,Anomaly,ajuste
+id_12,channel_50,2003-12-31T03:10:07.569Z,2004-01-04T00:00:00.000Z,Anomaly,ajuste
+id_12,channel_51,2003-12-31T03:10:07.569Z,2004-01-04T00:00:00.000Z,Anomaly,ajuste
+id_12,channel_52,2003-12-31T03:10:07.569Z,2004-01-04T00:00:00.000Z,Anomaly,ajuste
+id_15,channel_50,2007-04-25T21:02:07.410Z,2007-04-25T21:09:37.413Z,Rare Event,ajuste
+id_15,channel_50,2007-04-26T00:02:07.410Z,2007-04-26T00:11:07.410Z,Rare Event,ajuste
+id_15,channel_51,2007-04-25T21:00:37.413Z,2007-04-25T21:12:37.413Z,Rare Event,ajuste
+id_15,channel_51,2007-04-26T00:03:37.413Z,2007-04-26T00:11:07.410Z,Rare Event,ajuste
+id_15,channel_52,2007-04-25T21:03:37.413Z,2007-04-25T21:09:37.413Z,Rare Event,ajuste
+id_15,channel_52,2007-04-25T23:57:37.413Z,2007-04-26T00:12:37.413Z,Rare Event,ajuste
+id_16,channel_50,2005-07-07T22:57:49.500Z,2005-07-07T23:50:19.500Z,Rare Event,ajuste
+id_16,channel_51,2005-07-07T22:54:49.500Z,2005-07-08T00:05:19.500Z,Rare Event,ajuste
+id_16,channel_52,2005-07-07T22:57:49.500Z,2005-07-08T00:00:49.500Z,Rare Event,ajuste
+id_17,channel_50,2005-01-16T22:32:37.521Z,2005-01-16T22:44:37.521Z,Rare Event,ajuste
+id_17,channel_50,2005-01-17T03:04:07.521Z,2005-01-19T17:50:37.521Z,Rare Event,ajuste
+id_17,channel_51,2005-01-16T22:32:37.521Z,2005-01-16T23:04:07.521Z,Rare Event,ajuste
+id_17,channel_51,2005-01-17T03:04:07.521Z,2005-01-19T17:50:37.521Z,Rare Event,ajuste
+id_17,channel_52,2005-01-16T22:34:07.521Z,2005-01-16T22:41:37.521Z,Rare Event,ajuste
+id_17,channel_52,2005-01-17T03:04:07.521Z,2005-01-19T17:50:37.521Z,Rare Event,ajuste
+id_27,channel_50,2007-10-26T12:39:37.383Z,2007-10-26T16:30:37.386Z,Rare Event,ajuste
+id_27,channel_51,2007-10-26T12:39:37.383Z,2007-10-26T16:30:37.386Z,Rare Event,ajuste
+id_27,channel_52,2007-10-26T12:39:37.383Z,2007-10-26T16:30:37.386Z,Rare Event,ajuste
+id_28,channel_50,2007-12-24T02:33:37.374Z,2007-12-24T05:12:37.374Z,Rare Event,ajuste
+id_28,channel_51,2007-12-24T02:33:37.374Z,2007-12-24T05:12:37.374Z,Rare Event,ajuste
+id_28,channel_52,2007-12-24T02:33:37.374Z,2007-12-24T05:12:37.374Z,Rare Event,ajuste
+id_39,channel_50,2004-08-23T00:17:37.539Z,2004-08-23T03:32:37.539Z,Rare Event,ajuste
+id_39,channel_51,2004-08-23T00:17:37.539Z,2004-08-23T03:37:07.539Z,Rare Event,ajuste
+id_39,channel_52,2004-08-23T00:22:07.539Z,2004-08-23T02:46:07.539Z,Rare Event,ajuste
+id_50,channel_50,2007-07-30T05:03:37.398Z,2007-07-30T06:11:07.395Z,Rare Event,ajuste
+id_50,channel_51,2007-07-30T04:39:37.398Z,2007-07-30T06:50:07.395Z,Rare Event,ajuste
+id_50,channel_52,2007-07-30T04:29:07.395Z,2007-07-30T06:18:37.398Z,Rare Event,ajuste
+id_91,channel_50,2004-04-07T19:17:37.557Z,2004-04-07T19:29:37.557Z,Anomaly,ajuste
+id_91,channel_51,2004-04-07T19:17:37.557Z,2004-04-07T19:44:37.557Z,Anomaly,ajuste
+id_91,channel_52,2004-04-07T19:19:07.557Z,2004-04-07T19:23:37.557Z,Anomaly,ajuste
+id_93,channel_50,2004-05-15T02:23:37.551Z,2004-05-15T02:53:37.551Z,Anomaly,ajuste
+id_93,channel_51,2004-05-15T02:22:07.551Z,2004-05-15T02:32:37.551Z,Anomaly,ajuste
+id_95,channel_50,2004-09-15T20:59:37.536Z,2004-09-18T00:00:00.000Z,Rare Event,ajuste
+id_95,channel_51,2004-09-15T20:56:37.536Z,2004-09-18T00:00:00.000Z,Rare Event,ajuste
+id_95,channel_52,2004-09-15T20:56:37.536Z,2004-09-18T00:00:00.000Z,Rare Event,ajuste
+id_96,channel_50,2004-11-03T14:40:07.530Z,2004-11-05T03:58:07.530Z,Anomaly,ajuste
+id_96,channel_51,2004-11-03T14:40:07.530Z,2004-11-05T02:20:37.530Z,Anomaly,ajuste
+id_96,channel_52,2004-11-03T14:40:07.530Z,2004-11-05T04:23:37.530Z,Anomaly,ajuste
+id_101,channel_50,2005-09-01T14:45:34.488Z,2005-09-05T05:26:04.491Z,Anomaly,ajuste
+id_101,channel_51,2005-09-01T14:45:34.488Z,2005-09-05T01:51:34.491Z,Anomaly,ajuste
+id_101,channel_52,2005-09-01T14:45:34.488Z,2005-09-05T03:17:04.491Z,Anomaly,ajuste
+id_102,channel_50,2005-09-27T21:42:43.485Z,2005-09-30T04:00:43.488Z,Anomaly,ajuste
+id_102,channel_51,2005-09-27T21:42:43.485Z,2005-09-30T03:27:43.488Z,Anomaly,ajuste
+id_102,channel_52,2005-09-27T21:42:43.485Z,2005-09-30T03:33:43.488Z,Anomaly,ajuste
+id_103,channel_50,2005-10-22T09:18:34.482Z,2005-10-24T20:39:34.485Z,Anomaly,ajuste
+id_103,channel_51,2005-10-22T09:15:34.482Z,2005-10-24T22:08:04.485Z,Anomaly,ajuste
+id_103,channel_52,2005-10-22T09:15:34.482Z,2005-10-24T22:38:04.485Z,Anomaly,ajuste
+id_106,channel_50,2006-04-28T00:00:31.461Z,2006-04-28T20:59:01.458Z,Rare Event,ajuste
+id_106,channel_51,2006-04-28T00:00:31.461Z,2006-04-28T20:59:01.458Z,Rare Event,ajuste
+id_106,channel_52,2006-04-28T00:00:31.461Z,2006-04-28T20:59:01.458Z,Rare Event,ajuste
+id_107,channel_50,2006-04-22T06:47:01.461Z,2006-04-22T06:59:01.461Z,Anomaly,ajuste
+id_107,channel_51,2006-04-22T06:45:31.461Z,2006-04-22T06:56:01.461Z,Anomaly,ajuste
+id_107,channel_52,2006-04-22T06:45:31.461Z,2006-04-22T06:50:01.461Z,Anomaly,ajuste
+id_112,channel_50,2006-11-26T14:09:31.434Z,2006-11-29T19:00:31.434Z,Rare Event,ajuste
+id_112,channel_51,2006-11-26T14:09:31.434Z,2006-11-29T19:03:31.434Z,Rare Event,ajuste
+id_112,channel_52,2006-11-26T14:03:31.434Z,2006-11-29T19:48:31.434Z,Rare Event,ajuste
+id_116,channel_50,2007-04-14T08:16:28.413Z,2007-04-20T07:02:07.410Z,Anomaly,ajuste
+id_116,channel_51,2007-04-14T08:16:28.413Z,2007-04-20T07:02:07.410Z,Anomaly,ajuste
+id_116,channel_52,2007-04-14T08:16:28.413Z,2007-04-20T07:02:07.410Z,Anomaly,ajuste
+id_117,channel_50,2007-05-10T11:44:07.410Z,2007-05-10T16:56:07.410Z,Rare Event,ajuste
+id_117,channel_51,2007-05-10T11:39:37.410Z,2007-05-10T16:08:07.410Z,Rare Event,ajuste
+id_117,channel_52,2007-05-10T11:38:07.410Z,2007-05-10T16:47:07.410Z,Rare Event,ajuste
+id_121,channel_50,2007-09-25T23:00:37.389Z,2007-09-25T23:17:07.389Z,Anomaly,ajuste
+id_121,channel_51,2007-09-25T23:00:37.389Z,2007-09-25T23:20:07.389Z,Anomaly,ajuste
+id_121,channel_52,2007-09-25T23:00:37.389Z,2007-09-25T23:18:37.389Z,Anomaly,ajuste
+id_122,channel_50,2007-09-29T11:59:07.386Z,2007-09-29T12:11:07.386Z,Anomaly,ajuste
+id_123,channel_50,2007-10-07T01:11:07.386Z,2007-10-07T08:26:07.386Z,Rare Event,ajuste
+id_123,channel_51,2007-10-07T01:11:07.386Z,2007-10-07T06:51:37.389Z,Rare Event,ajuste
+id_123,channel_52,2007-10-07T01:11:07.386Z,2007-10-07T08:26:07.386Z,Rare Event,ajuste
+id_125,channel_50,2007-12-27T10:14:07.374Z,2007-12-29T22:57:37.377Z,Rare Event,ajuste
+id_125,channel_51,2007-12-27T10:15:37.377Z,2007-12-29T13:02:07.374Z,Rare Event,ajuste
+id_125,channel_51,2007-12-29T14:29:07.374Z,2007-12-29T22:57:37.377Z,Rare Event,ajuste
+id_125,channel_52,2007-12-27T10:14:07.374Z,2007-12-29T11:14:07.374Z,Rare Event,ajuste
+id_125,channel_52,2007-12-29T14:29:07.374Z,2007-12-29T22:57:37.377Z,Rare Event,ajuste
+id_18,channel_50,2008-09-08T14:18:37.338Z,2008-09-08T17:09:37.341Z,Anomaly,desenvolvimento
+id_18,channel_51,2008-09-08T14:18:37.338Z,2008-09-08T16:53:07.338Z,Anomaly,desenvolvimento
+id_18,channel_52,2008-09-08T14:18:37.338Z,2008-09-08T16:53:07.338Z,Anomaly,desenvolvimento
+id_20,channel_50,2008-01-30T03:21:37.374Z,2008-02-04T18:33:37.371Z,Anomaly,desenvolvimento
+id_20,channel_51,2008-01-30T03:21:37.374Z,2008-02-04T18:33:37.371Z,Anomaly,desenvolvimento
+id_20,channel_52,2008-01-30T03:21:37.374Z,2008-02-04T18:33:37.371Z,Anomaly,desenvolvimento
+id_29,channel_50,2008-06-07T15:39:37.350Z,2008-06-07T16:42:37.350Z,Rare Event,desenvolvimento
+id_29,channel_51,2008-06-07T15:39:37.350Z,2008-06-07T16:42:37.350Z,Rare Event,desenvolvimento
+id_29,channel_52,2008-06-07T15:39:37.350Z,2008-06-07T16:42:37.350Z,Rare Event,desenvolvimento
+id_31,channel_50,2008-06-10T16:20:07.350Z,2008-06-10T19:42:37.350Z,Rare Event,desenvolvimento
+id_31,channel_51,2008-06-10T16:20:07.350Z,2008-06-10T19:42:37.350Z,Rare Event,desenvolvimento
+id_31,channel_52,2008-06-10T16:20:07.350Z,2008-06-10T19:42:37.350Z,Rare Event,desenvolvimento
+id_32,channel_50,2008-10-15T20:27:37.332Z,2008-10-15T23:36:37.332Z,Rare Event,desenvolvimento
+id_32,channel_51,2008-10-15T20:27:37.332Z,2008-10-15T23:36:37.332Z,Rare Event,desenvolvimento
+id_32,channel_52,2008-10-15T20:27:37.332Z,2008-10-15T23:36:37.332Z,Rare Event,desenvolvimento
+id_33,channel_50,2009-03-08T10:36:37.311Z,2009-03-08T13:51:37.311Z,Rare Event,desenvolvimento
+id_33,channel_51,2009-03-08T10:36:37.311Z,2009-03-08T13:51:37.311Z,Rare Event,desenvolvimento
+id_33,channel_52,2009-03-08T10:36:37.311Z,2009-03-08T13:51:37.311Z,Rare Event,desenvolvimento
+id_34,channel_50,2009-06-10T20:06:52.299Z,2009-06-10T23:33:52.296Z,Rare Event,desenvolvimento
+id_34,channel_51,2009-06-10T20:06:52.299Z,2009-06-10T23:33:52.296Z,Rare Event,desenvolvimento
+id_34,channel_52,2009-06-10T20:06:52.299Z,2009-06-10T23:33:52.296Z,Rare Event,desenvolvimento
+id_40,channel_50,2009-09-20T14:36:52.284Z,2009-09-20T14:42:52.284Z,Rare Event,desenvolvimento
+id_40,channel_51,2009-09-20T14:36:52.284Z,2009-09-20T14:48:52.284Z,Rare Event,desenvolvimento
+id_40,channel_52,2009-09-20T14:38:22.284Z,2009-09-20T14:42:52.284Z,Rare Event,desenvolvimento
+id_44,channel_50,2010-05-22T18:05:22.248Z,2010-05-23T00:35:22.248Z,Rare Event,desenvolvimento
+id_44,channel_51,2010-05-22T18:05:22.248Z,2010-05-23T05:45:52.251Z,Rare Event,desenvolvimento
+id_44,channel_52,2010-05-22T18:05:22.248Z,2010-05-23T06:12:52.251Z,Rare Event,desenvolvimento
+id_47,channel_50,2010-03-07T11:36:52.260Z,2010-03-07T14:23:22.257Z,Rare Event,desenvolvimento
+id_47,channel_51,2010-03-07T11:35:22.257Z,2010-03-07T14:08:22.257Z,Rare Event,desenvolvimento
+id_47,channel_52,2010-03-07T11:32:22.257Z,2010-03-07T14:23:22.257Z,Rare Event,desenvolvimento
+id_48,channel_50,2009-11-22T12:38:22.275Z,2009-11-22T14:26:22.275Z,Rare Event,desenvolvimento
+id_48,channel_51,2009-11-22T12:47:22.275Z,2009-11-22T14:56:22.275Z,Rare Event,desenvolvimento
+id_48,channel_52,2009-11-22T12:45:52.275Z,2009-11-22T17:33:52.275Z,Rare Event,desenvolvimento
+id_134,channel_50,2009-05-25T13:18:10.299Z,2009-06-25T15:35:22.296Z,Anomaly,desenvolvimento
+id_134,channel_51,2009-05-25T13:18:10.299Z,2009-06-25T12:08:22.296Z,Anomaly,desenvolvimento
+id_134,channel_52,2009-05-25T13:18:10.299Z,2009-06-23T02:29:22.296Z,Anomaly,desenvolvimento
+id_138,channel_50,2009-10-13T06:39:52.281Z,2009-10-13T21:32:22.281Z,Anomaly,desenvolvimento
+id_138,channel_51,2009-10-13T06:39:52.281Z,2009-10-13T21:32:22.281Z,Anomaly,desenvolvimento
+id_138,channel_52,2009-10-13T06:39:52.281Z,2009-10-13T21:32:22.281Z,Anomaly,desenvolvimento
+id_142,channel_50,2010-04-22T01:20:22.251Z,2010-04-22T01:24:52.254Z,Anomaly,desenvolvimento
+id_142,channel_51,2010-04-22T01:18:52.254Z,2010-04-22T01:32:22.251Z,Anomaly,desenvolvimento
+id_142,channel_52,2010-04-22T01:20:22.251Z,2010-04-22T01:45:52.254Z,Anomaly,desenvolvimento
+id_145,channel_50,2010-05-19T00:50:22.248Z,2010-05-22T18:03:52.248Z,Anomaly,desenvolvimento
+id_145,channel_51,2010-05-19T00:51:52.248Z,2010-05-22T18:03:52.248Z,Anomaly,desenvolvimento
+id_145,channel_52,2010-05-19T00:50:22.248Z,2010-05-22T18:03:52.248Z,Anomaly,desenvolvimento
+id_149,channel_50,2010-09-07T02:23:22.233Z,2010-09-07T02:27:52.233Z,Anomaly,desenvolvimento
+id_149,channel_51,2010-09-07T02:24:52.233Z,2010-09-07T02:36:52.233Z,Anomaly,desenvolvimento
+id_149,channel_52,2010-09-07T02:23:22.233Z,2010-09-07T02:38:22.233Z,Anomaly,desenvolvimento
+id_150,channel_50,2010-10-26T17:24:52.224Z,2010-10-26T17:39:52.224Z,Anomaly,desenvolvimento
+id_150,channel_51,2010-10-26T17:24:52.224Z,2010-10-26T17:38:22.221Z,Anomaly,desenvolvimento
+id_150,channel_52,2010-10-26T17:24:52.224Z,2010-10-26T17:45:52.224Z,Anomaly,desenvolvimento

@@ -1,0 +1,14 @@
+{
+  "pinball_p10": 6.724570904468355,
+  "pinball_p50": 15.67036935978844,
+  "pinball_p90": 9.284080234382266,
+  "coverage_80": 0.8035714285714286,
+  "below_p10": 0.11904761904761904,
+  "above_p90": 0.07738095238095238,
+  "mean_width_mwmed": 83.59523750486828,
+  "interval_score_80": 160.0865113885062,
+  "crossing_rows": 0,
+  "negative_p50_rows": 0,
+  "clipped": false,
+  "recalibrated": false
+}

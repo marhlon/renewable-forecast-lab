@@ -1,0 +1,53 @@
+{
+    "titulo": "DicionarioDados_GeracaoPorUsina",
+    "dicionario_simplificado": [
+        {
+            "descricao": "Data de referência",
+            "codigo": "din_instante"
+        },
+        {
+            "descricao": "Subsistema da Usina",
+            "codigo": "id_subsistema"
+        },
+        {
+            "descricao": "Nome do Subsistema",
+            "codigo": "nom_subsistema"
+        },
+        {
+            "descricao": "Estado onde está localizado a Usina",
+            "codigo": "id_estado"
+        },
+        {
+            "descricao": "Nome do Estado",
+            "codigo": "nom_estado"
+        },
+        {
+            "descricao": "Modalidade de Operação da Usina",
+            "codigo": "cod_modalidadeoperacao"
+        },
+        {
+            "descricao": "Tipo da Usina",
+            "codigo": "nom_tipousina"
+        },
+        {
+            "descricao": "Tipo de Combustível",
+            "codigo": "nom_tipocombustivel"
+        },
+        {
+            "descricao": "Nome da Usina",
+            "codigo": "nom_usina"
+        },
+        {
+            "descricao": "Identificador ONS",
+            "codigo": "id_ons"
+        },
+        {
+            "descricao": "Código Único do Empreendimento de Geração (CEG), estabelecido pela ANEEL",
+            "codigo": "ceg"
+        },
+        {
+            "descricao": "Geração de Energia na unidade de medida MWmed",
+            "codigo": "val_geracao"
+        }
+    ]
+}

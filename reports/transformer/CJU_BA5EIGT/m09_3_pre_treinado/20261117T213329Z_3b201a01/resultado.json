@@ -1,0 +1,100 @@
+{
+  "schema": "renewcast-pretrained-result-v1",
+  "completed": true,
+  "run_id": "20261117T213329Z_3b201a01",
+  "model_repo": "amazon/chronos-bolt-tiny",
+  "model_revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+  "model_file_sha256": {
+    "README.md": "cc7f60bc7290b5e6146589dae9842a3c9b59d254e9d1d65fc2ef127f3c2498cd",
+    "config.json": "278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0",
+    "model.safetensors": "75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32"
+  },
+  "parameter_count": 8652672,
+  "baseline_run_id": "20261115T170309Z_90a6625f",
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "checks": {
+    "passed": true,
+    "checks": [
+      "passo26_h24_d2",
+      "comprimentos_distintos_por_exemplo",
+      "eixos_quantile_batch_time",
+      "entradas_preservadas",
+      "trajetoria_curta_tempo_nao_horario_e_quantile_duplicado_rejeitados"
+    ],
+    "example_correct_step": 26,
+    "example_wrong_step24_target": "2026-07-04T02:00:00",
+    "example_required_target": "2026-07-04T04:00:00"
+  },
+  "temporal_invariance_checked": true,
+  "repeated_inference_max_difference": 0.0,
+  "model_load_seconds": 0.1743387000169605,
+  "warmup_seconds": 0.02401539997663349,
+  "inference_seconds": 0.19883989985100925,
+  "batch_size": 16,
+  "cpu_threads": 2,
+  "process_peak_mib": 397.29296875,
+  "process_peak_scope": "whole process; not isolated model memory",
+  "versions": {
+    "torch": "2.7.1+cpu",
+    "chronos-forecasting": "1.5.3",
+    "transformers": "4.49.0",
+    "accelerate": "1.5.2",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.1"
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "chronological_rows": 168,
+  "quantile_rows": 168,
+  "selected_forecast_index": 25,
+  "forecast_metric": {
+    "mae_mwmed": 31.34073824273972,
+    "rmse_mwmed": 45.38013595018692,
+    "bias_observed_minus_predicted_mwmed": 2.962412058149065
+  },
+  "interval_metrics": {
+    "pinball_p10": 6.724571170134771,
+    "pinball_p50": 15.67036912136986,
+    "pinball_p90": 9.284080198051816,
+    "coverage_80": 0.8035714285714286,
+    "below_p10": 0.11904761904761904,
+    "above_p90": 0.07738095238095238,
+    "mean_width_mwmed": 83.59523707344418,
+    "interval_score_80": 160.08651368186588,
+    "crossing_rows": 0,
+    "negative_p50_rows": 0,
+    "clipped": false,
+    "recalibrated": false
+  },
+  "paired_mae_gain_vs_hgb": 0.9832180186758828,
+  "origins_abs_error_better_than_hgb": 95,
+  "frozen_parameters": true,
+  "models_trained": false,
+  "weights_finetuned": false,
+  "optimizer_steps": 0,
+  "future_targets_used_as_inputs": false,
+  "pretraining_overlap_verified": false,
+  "availability_is_assumed": true,
+  "physical_timezone_verified": false,
+  "untouched_holdout": false,
+  "operational_approval": false,
+  "elapsed_seconds_before_report": 15.613527900073677,
+  "output_sha256": {
+    "alinhamento_alvos.csv": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+    "comparacao_pareada.csv": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83",
+    "conferencia.json": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787",
+    "latencias_lotes.csv": "99a30b13b57c85eb27f2f6aaa0765932beb9e46249d875dc300d6ba72151179a",
+    "predictions.csv": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+    "protocol.json": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6",
+    "quantile_metrics.json": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1",
+    "quantis_26_passos.npz": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+    "relatorio.html": "19bf4a28922b4d79bfacdb273c433639cef41da25ad9a2c5c827a841a9da804b",
+    "summary.csv": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d",
+    "trajetorias_26_passos.csv": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96"
+  }
+}

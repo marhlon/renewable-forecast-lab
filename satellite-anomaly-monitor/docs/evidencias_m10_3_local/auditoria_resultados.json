@@ -1,0 +1,282 @@
+{
+  "schema": "satmon-m10-3-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-23T19:57:32.052966+00:00",
+  "run_id": "20261123T195301Z_332fb306",
+  "run_directory": "reports/m10_3/20261123T195301Z_332fb306",
+  "audit_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "method": "Independent causal counter and union-interval assignment; 33 DEV candidates, exactly one frozen TEST policy. No project code imported, model fit or forest reconstruction.",
+  "checks": {
+    "pinned_m10_2_source_and_all_hashes": true,
+    "frozen_policy_code_author_latest_hashes": true,
+    "all_33_development_candidates_recomputed": true,
+    "feasibility_and_tiebreak_winner": true,
+    "one_fixed_test_policy_replayed": true,
+    "missing_rows_preserved_and_ignore_not_used_for_resets": true,
+    "id_union_assignment_repetition_and_ignore_precedence": true,
+    "nominal_exposure_and_rates": true,
+    "undefined_precision_and_delays_preserved": true,
+    "event_and_channel_details_recomputed": true,
+    "sample_age_availability_and_partition_contract": true
+  },
+  "checked_hashes": {
+    "reports/m10_2/20261119T101049Z_253ff59f/resultado.json": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+    "docs/m10_3/protocolo_politica.json": "a0ebbf6ebdcc4039c2dbe015376943ea749f2039b45b287b632597ce0602f6a2",
+    "reports/m10_3/20261123T195301Z_332fb306/politica_congelada.json": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81",
+    "notebooks/m10_3_alarme_autoral.py": "22d3db91fc613a8356bfb6226d766bd026bf1a1f3764d52f9e5f4e1e8480bdd8",
+    "scripts/executar_m10_3.py": "e4c57aa54d6657e2f83b611b18791f839bbd6524e34198c78ad2c883ee2644f0",
+    "src/satmon/alarmes_m10_3.py": "08040b65364ef4e3858596e653f249aa8864fc4a856abbfbf62cbad9998c127d",
+    "data/reference/esa_mission1_m10_2/protocolo.json": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+    "data/reference/esa_mission1_m10_2/canais_grade.csv.gz": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4",
+    "data/reference/esa_mission1_m10_2/eventos.csv": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e",
+    "reports/m10_2/20261119T101049Z_253ff59f/casos_reais.csv": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8",
+    "reports/m10_2/20261119T101049Z_253ff59f/cobertura_eventos.csv": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313",
+    "reports/m10_2/20261119T101049Z_253ff59f/contextos.csv": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee",
+    "reports/m10_2/20261119T101049Z_253ff59f/escores_desenvolvimento.csv.gz": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "reports/m10_2/20261119T101049Z_253ff59f/metricas.csv": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c",
+    "reports/m10_2/20261119T101049Z_253ff59f/relatorio.html": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c",
+    "reports/m10_2/20261119T101049Z_253ff59f/sensibilidade_evento.csv": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866",
+    "scripts/executar_m10_2.py": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "src/satmon/detectores_m10_2.py": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372",
+    "reports/m10_3/20261123T195301Z_332fb306/alarmes_desenvolvimento.csv": "a1bc8335ee8d9f41b0268aa580b63df5314b6d257bbc5b5966041ab1225d577d",
+    "reports/m10_3/20261123T195301Z_332fb306/alarmes_teste.csv": "3fd3d0c5113dfd44f6f46700da059dc5a69b0394294010a88eb7e364e25e1b89",
+    "reports/m10_3/20261123T195301Z_332fb306/candidatos_dev.csv": "d46d657efaf531fe9ac433a4489a2862284011456ab1839e45d009a62da0926e",
+    "reports/m10_3/20261123T195301Z_332fb306/cobertura_canais_desenvolvimento.csv": "b1049bbbeeef3bcc889fe34650e805d85888950db5b79106e104d3310edb905e",
+    "reports/m10_3/20261123T195301Z_332fb306/cobertura_canais_teste.csv": "53711ff3aaf3b4abc349aee2c84c712c47873bd08769fbb79b33bae8da4ae186",
+    "reports/m10_3/20261123T195301Z_332fb306/escores_teste.csv.gz": "f1a63b628ae93a21505eb7fd39f07891c21dd3c0f40af3e1cb5d4906445e143d",
+    "reports/m10_3/20261123T195301Z_332fb306/eventos_desenvolvimento.csv": "1d60e0380fdce5f72ab9dcc37a503ee4b126540a6f81c19714cea80d53c1b286",
+    "reports/m10_3/20261123T195301Z_332fb306/eventos_teste.csv": "65a784138ee3543faadff8e6ad66970e7a937204a5043b2f3cfb9b4577c6154f",
+    "reports/m10_3/20261123T195301Z_332fb306/metricas_episodios.csv": "58d4e3212f91b64cf5779643180c9335ead0694585867aee3e402fb52f6664b3",
+    "reports/m10_3/20261123T195301Z_332fb306/relatorio.html": "10c02db86e823ad009e3f6c5932d41f962f54f737f68945780cf4a798d21e592",
+    "data/reference/esa_mission1_m10_3/proveniencia.json": "125b9824693b162b8aeffb853550ffaf0d7a183f1047fb73d13d4131465c7ca4",
+    "data/reference/esa_mission1_m10_3/grade_teste.csv.gz": "459118150635089bf1ccd32f1c9eb4c293fa69495b1b76d45c41e32e730c88ee",
+    "data/reference/esa_mission1_m10_3/eventos_teste.csv": "8418b3d8116672c5b1b91c377c9e32b017e18a966aa5da4d8444af202cdd6b4e"
+  },
+  "candidate_count": 33,
+  "viable_candidate_count": 29,
+  "selected_policy": {
+    "metodo": "score_isolation",
+    "quantil": 0.9995,
+    "limiar": 0.7199442558330269,
+    "viavel": true,
+    "instantes_na_grade": 105216,
+    "instantes_utilizaveis": 105165,
+    "ids_anomalia": 8,
+    "ids_observaveis": 8,
+    "ids_nao_observaveis": 0,
+    "ids_detectados": 3,
+    "recall_observaveis": 0.375,
+    "recall_todos_ids": 0.375,
+    "precisao_por_inicio_avaliavel": 0.23076923076923078,
+    "alarmes_total": 15,
+    "alarmes_atribuidos": 3,
+    "alarmes_repetidos_no_evento": 6,
+    "alarmes_sem_anotacao": 4,
+    "alarmes_ignorados_categoria": 2,
+    "exposicao_sem_anotacao_dias_equivalentes": 1053.46875,
+    "taxa_sem_anotacao_por_dia": 0.0037969802141734153,
+    "atraso_mediano_min": 26.82835,
+    "atraso_p90_min": 98.46783,
+    "escolhida": true
+  },
+  "same_cutoff_selected_for_quantiles": [
+    0.975,
+    0.98,
+    0.985,
+    0.99,
+    0.995,
+    0.9975,
+    0.999,
+    0.9995
+  ],
+  "metrics_recomputed": [
+    {
+      "particao": "desenvolvimento",
+      "instantes_na_grade": 105216,
+      "instantes_utilizaveis": 105165,
+      "ids_anomalia": 8,
+      "ids_observaveis": 8,
+      "ids_nao_observaveis": 0,
+      "ids_detectados": 3,
+      "recall_observaveis": 0.375,
+      "recall_todos_ids": 0.375,
+      "precisao_por_inicio_avaliavel": 0.23076923076923078,
+      "alarmes_total": 15,
+      "alarmes_atribuidos": 3,
+      "alarmes_repetidos_no_evento": 6,
+      "alarmes_sem_anotacao": 4,
+      "alarmes_ignorados_categoria": 2,
+      "exposicao_sem_anotacao_dias_equivalentes": 1053.46875,
+      "taxa_sem_anotacao_por_dia": 0.0037969802141734153,
+      "atraso_mediano_min": 26.82835,
+      "atraso_p90_min": 98.46783,
+      "pontos_atingiram_limiar": 2822,
+      "maior_sequencia_acima": 832,
+      "escore_maximo_utilizavel": 0.7593997320951837
+    },
+    {
+      "particao": "teste",
+      "instantes_na_grade": 105216,
+      "instantes_utilizaveis": 105212,
+      "ids_anomalia": 8,
+      "ids_observaveis": 8,
+      "ids_nao_observaveis": 0,
+      "ids_detectados": 0,
+      "recall_observaveis": 0.0,
+      "recall_todos_ids": 0.0,
+      "precisao_por_inicio_avaliavel": null,
+      "alarmes_total": 0,
+      "alarmes_atribuidos": 0,
+      "alarmes_repetidos_no_evento": 0,
+      "alarmes_sem_anotacao": 0,
+      "alarmes_ignorados_categoria": 0,
+      "exposicao_sem_anotacao_dias_equivalentes": 1065.2083333333333,
+      "taxa_sem_anotacao_por_dia": 0.0,
+      "atraso_mediano_min": null,
+      "atraso_p90_min": null,
+      "pontos_atingiram_limiar": 0,
+      "maior_sequencia_acima": 0,
+      "escore_maximo_utilizavel": 0.7164359650668679
+    }
+  ],
+  "nominal_exposure_grid_rows": {
+    "desenvolvimento": 101133,
+    "teste": 102260
+  },
+  "test_event_states": [
+    {
+      "id": "id_11",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2012-04-20T23:00:52.140000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 3
+    },
+    {
+      "id": "id_160",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2011-08-12T19:57:52.179000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 2
+    },
+    {
+      "id": "id_166",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2012-01-07T03:42:52.158000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 1
+    },
+    {
+      "id": "id_176",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2013-02-09T23:44:22.089000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 3
+    },
+    {
+      "id": "id_177",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2013-03-24T16:59:22.080000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 3
+    },
+    {
+      "id": "id_184",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2013-10-01T01:14:22.050000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 1
+    },
+    {
+      "id": "id_186",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2013-11-11T05:27:52.044000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 3
+    },
+    {
+      "id": "id_187",
+      "estado": "perdido",
+      "inicio_anotado_utc": "2013-11-19T14:59:22.041000+00:00",
+      "primeiro_alarme_utc": null,
+      "atraso_min": null,
+      "anotacoes_canal_intervalo": 3
+    }
+  ],
+  "channel_coverage_recomputed": {
+    "desenvolvimento": [
+      {
+        "canal_anotado": "channel_50",
+        "ids_anotados": 8,
+        "ids_observaveis": 6,
+        "ids_primeiro_alarme_no_intervalo": 3,
+        "fracao_entre_observaveis": 0.5
+      },
+      {
+        "canal_anotado": "channel_51",
+        "ids_anotados": 8,
+        "ids_observaveis": 8,
+        "ids_primeiro_alarme_no_intervalo": 3,
+        "fracao_entre_observaveis": 0.375
+      },
+      {
+        "canal_anotado": "channel_52",
+        "ids_anotados": 8,
+        "ids_observaveis": 8,
+        "ids_primeiro_alarme_no_intervalo": 3,
+        "fracao_entre_observaveis": 0.375
+      }
+    ],
+    "teste": [
+      {
+        "canal_anotado": "channel_50",
+        "ids_anotados": 5,
+        "ids_observaveis": 4,
+        "ids_primeiro_alarme_no_intervalo": 0,
+        "fracao_entre_observaveis": 0.0
+      },
+      {
+        "canal_anotado": "channel_51",
+        "ids_anotados": 6,
+        "ids_observaveis": 5,
+        "ids_primeiro_alarme_no_intervalo": 0,
+        "fracao_entre_observaveis": 0.0
+      },
+      {
+        "canal_anotado": "channel_52",
+        "ids_anotados": 8,
+        "ids_observaveis": 8,
+        "ids_primeiro_alarme_no_intervalo": 0,
+        "fracao_entre_observaveis": 0.0
+      }
+    ]
+  },
+  "freeze_evidence": {
+    "policy_sha256": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81",
+    "frozen_at_utc": "2026-11-23T19:53:01.365342+00:00",
+    "test_opened_at_freeze_declared": false,
+    "test_scores_file_mtime_utc": "2026-11-23T19:53:15.111181736+00:00",
+    "frozen_before_test_scores_file_mtime": true,
+    "first_test_read_timestamp_available": false,
+    "limit": "File chronology and declarations support the preserved artifact order; no independent timestamp records the first test-file read."
+  },
+  "forest_reconstruction_receipt_only": {
+    "declared_original_fit_only": true,
+    "declared_max_development_score_delta": 0.0,
+    "forest_reconstructed_by_auditor": false,
+    "limit": "The runner asserted matching development scores/starts before test scoring. No checkpoint or rebuilt development score vector is persisted to independently repeat that assertion."
+  },
+  "analytic_k1_conclusion": "With zero usable points reaching the frozen threshold, no positive confirmation count could emit an alarm. This follows from the condition; k=1 was not replayed on the test.",
+  "test_alternative_policies_evaluated": 0,
+  "models_fitted_by_auditor": 0,
+  "limits": "This checks persisted artifacts, episode rules and the supplied temporal grid, not physical ground-arrival latency, annotation completeness, ESA operational validity or the full raw mission archives."
+}

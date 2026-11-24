@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "passo26_h24_d2",
+    "comprimentos_distintos_por_exemplo",
+    "eixos_quantile_batch_time",
+    "entradas_preservadas",
+    "trajetoria_curta_tempo_nao_horario_e_quantile_duplicado_rejeitados"
+  ],
+  "example_correct_step": 26,
+  "example_wrong_step24_target": "2026-07-04T02:00:00",
+  "example_required_target": "2026-07-04T04:00:00"
+}

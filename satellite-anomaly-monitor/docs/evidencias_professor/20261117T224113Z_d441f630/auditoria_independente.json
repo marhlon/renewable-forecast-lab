@@ -1,0 +1,34 @@
+{
+  "schema": "satmon-m101-independent-audit-v1",
+  "passed": true,
+  "run_id": "20261117T224113Z_d441f630",
+  "output_hashes_verified": 9,
+  "method": "NumPy searchsorted and independent interval union; no merge_asof imported",
+  "channels": {
+    "channel_50": {
+      "raw_rows": 348901,
+      "all_grid_values_and_ages_recomputed": true,
+      "usable": 350346,
+      "unusable": 54,
+      "source_numeric_values_and_times_preserved": true
+    },
+    "channel_51": {
+      "raw_rows": 348901,
+      "all_grid_values_and_ages_recomputed": true,
+      "usable": 350346,
+      "unusable": 54,
+      "source_numeric_values_and_times_preserved": true
+    },
+    "channel_52": {
+      "raw_rows": 348901,
+      "all_grid_values_and_ages_recomputed": true,
+      "usable": 350346,
+      "unusable": 54,
+      "source_numeric_values_and_times_preserved": true
+    }
+  },
+  "labels_separate_from_features": true,
+  "all_label_categories_independently_recomputed": true,
+  "models_trained": false,
+  "measurement_timezone_and_availability_remain_assumed": true
+}

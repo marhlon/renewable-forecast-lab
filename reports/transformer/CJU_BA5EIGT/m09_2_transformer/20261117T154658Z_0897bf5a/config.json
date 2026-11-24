@@ -1,0 +1,24 @@
+{
+  "schema": "renewcast-transformer-composition-config-v1",
+  "model": {
+    "input_size": 1,
+    "d_model": 16,
+    "n_heads": 4,
+    "d_ff": 32,
+    "n_layers": 2,
+    "dropout": 0.1
+  },
+  "seed": 1092,
+  "dtype": "float64",
+  "cpu_threads": 2,
+  "query_slots": 6,
+  "query_input": "zeros in standardized scalar space; not future targets or horizons",
+  "block_layout": "post_norm; no additional norm after stacks",
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "weights_trained": false,
+  "pretrained_weights_used": false
+}

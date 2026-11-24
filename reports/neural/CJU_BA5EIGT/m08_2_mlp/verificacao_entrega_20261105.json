@@ -1,0 +1,76 @@
+{
+  "schema": "renewcast-m08-2-delivery-verification-v1",
+  "verified_at_utc": "2026-11-05T15:31:15.522380+00:00",
+  "verified": true,
+  "assisted_by": "Codex, at user request; not independent student authorship",
+  "author_run": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398",
+  "reference_run": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721",
+  "authorship_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+  "code_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "checks": {
+    "unittest_tests": 8,
+    "unittest_passed": true,
+    "weighted_4_plus_1_mse": 20.0,
+    "restore_on_forward_error_checked": true,
+    "mixed_modes_and_existing_gradients_preserved": true,
+    "empty_and_invalid_shapes_and_nonfinite_errors_rejected": true,
+    "all_local_output_and_input_hashes_valid": true,
+    "metrics_recomputed_from_predictions": true,
+    "paired_168_origins": true,
+    "all_epochs_saw_7079_examples": true,
+    "selected_epochs_match_selection_argmin": true,
+    "reference_and_authorship_curves_summary_predictions_byte_equal": true,
+    "reload_differences_mwmed": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "chart_visually_verified": true,
+    "report_words": 656,
+    "relative_document_links_valid": true
+  },
+  "training": [
+    {
+      "seed": 17,
+      "best_epoch": 8,
+      "epochs_executed": 16,
+      "best_selection_mse": 0.4354173007151563,
+      "training_seconds": 35.05860210000537,
+      "stop_reason": "patience"
+    },
+    {
+      "seed": 29,
+      "best_epoch": 20,
+      "epochs_executed": 28,
+      "best_selection_mse": 0.4457003548189536,
+      "training_seconds": 82.39422710007057,
+      "stop_reason": "patience"
+    },
+    {
+      "seed": 41,
+      "best_epoch": 15,
+      "epochs_executed": 23,
+      "best_selection_mse": 0.4348128375602619,
+      "training_seconds": 59.042290100012906,
+      "stop_reason": "patience"
+    }
+  ],
+  "operational_approval": false,
+  "submission_files_sha256": {
+    "notebooks/m08_avaliacao_autoral.py": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+    "tests/test_m08_avaliacao_autoral.py": "de0fa66546416717fe6f1a79295b4e338f21f4e8bbae2c68bd4fde8df33373e7",
+    "reports/parecer_m08_mlp.md": "4703fd914e4ec3c2fea9541f40eb242527f8a71e3bab40a9d21afd4b62dff704",
+    "docs/Explicacao_M08_2_Passo_a_Passo.md": "2d103c57e2132d7d8a4962647f091b99b4af9c181feba4addafdf10a9c2d6ee7",
+    "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/resultado.json": "4d8f62339556b70332bd64ccc98c61e72161d35372232a9a7a7339f16fd4db8e",
+    "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/summary.csv": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+    "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/curvas.csv": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+    "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/protocol.json": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+    "reports/neural/CJU_BA5EIGT/m08_2_mlp/curvas_autoria_20261105.png": "71ec9e12f2892168093742dc45a95ec1a555d7732ee83939f9b1dd8828f0316b"
+  },
+  "scope": "Selected review files; full checkpoints and predictions remain in the local run directories."
+}

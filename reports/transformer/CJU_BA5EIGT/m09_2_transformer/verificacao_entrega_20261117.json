@@ -1,0 +1,79 @@
+{
+  "schema": "renewcast-m09-2-local-delivery-v1",
+  "verified_at_utc": "2026-11-17T15:32:48.119799+00:00",
+  "verified": true,
+  "status": "local didactic laboratory for review; no automatic curricular acceptance",
+  "run_directory": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2",
+  "standalone_check": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T152951Z_c137f60d/conferencia.json",
+  "parameter_count": 11200,
+  "shapes": {
+    "source": [
+      1,
+      24,
+      1
+    ],
+    "queries": [
+      1,
+      6,
+      1
+    ],
+    "source_embedding": [
+      1,
+      24,
+      16
+    ],
+    "memory": [
+      1,
+      24,
+      16
+    ],
+    "decoder": [
+      1,
+      6,
+      16
+    ]
+  },
+  "integrated_checks_passed": 13,
+  "unittest_tests_passed": 12,
+  "max_reference_difference": 6.661338147750939e-16,
+  "tolerance": 1e-12,
+  "reload_difference": 0.0,
+  "decoder_prefix_difference": 0.0,
+  "head_selector_logic_checked": true,
+  "browser_visual_check_available": false,
+  "browser_limitation": "Native apps pipe and browser access host unavailable",
+  "diagram_visually_verified": true,
+  "models_trained": false,
+  "pretrained_weights_used": false,
+  "forecast_metrics_computed": false,
+  "files_sha256": {
+    "src/renewable_forecast/transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+    "notebooks/laboratorio_transformer.py": "46fe3d383d34dd5cff08af211d4a452a1ebaca6f9007231212bf7123fd24edf8",
+    "notebooks/m09_transformer_verificacao.py": "498f7d64a464dede47afbf1386c130fd4cd8678aade3d8f2171f3d0e0e88e03c",
+    "notebooks/m08_3_base.py": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+    "tests/test_m09_transformer_blocks.py": "9bd6817434f982624d29449f28383a1b420f63e9fab319e5e13669f421127bda",
+    "docs/Aula_M09_2_Transformer.md": "7ff26ef072800c837adf4c6309e6dc8bd878d6851b9fb85daf0ed817c851da0d",
+    "reports/parecer_m09_transformer.md": "5926b7ee5a0ee5fbbf7ea34bf0de903e891e56ee0a31f06f60bf7e70aad33a17",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/conferencia.json": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/config.json": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/estado_transformer.pt": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/execucao_testes.json": "8b061f1098b5f3d5decc63c817ab2b0e6db8103ee471eeb58867861eb42a2b0f",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/execucao_verificar.json": "766fdb2a64a30e3cc415d898e567f2bf4f77cc5281954894a2e5be6a24b02448",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/fluxo.csv": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/janela.csv": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/pesos_atencao.csv": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/preprocessing.json": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/relatorio.html": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_decoder.csv": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_encoder.csv": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/resultado.json": "bac655e84d38b29f3132ccab9bafa22d667e65a8a356137521029249cb8b982e",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/seletor_js_test.log": "b847534cc0f1582127cd9994e696e9311b4305e396ce1269beb30ce00a111944",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/testes_stderr.log": "2c23dca77361be27b9dc545067f4377c72adfbe37fc178069001f93531cbedc5",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/testes_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/validacao_artefatos.json": "ee9c01ebb07d188b93dac238a51f35a747d857696f8a76a3155c297f351ce7e6",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/verificar_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/verificar_stdout.log": "b8c5132f0373f6cafab36bf0292b948967e3047d67a7920a6c513dfaae6d82ca",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T152951Z_c137f60d/conferencia.json": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+    "reports/transformer/CJU_BA5EIGT/m09_2_transformer/fluxo_transformer_20261117.png": "eeac7628477a6090eeec1d605a5be5279e5c4232bd9abeb99f00ecb6504d93f4"
+  }
+}

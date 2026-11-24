@@ -1,0 +1,41 @@
+{
+  "data": "2026-10-25",
+  "escopo": "Linux nativo, Java17, PySpark4.0.1; series sinteticas identificadas",
+  "resultado": "aprovado",
+  "docker_windows_executado_pelo_professor": false,
+  "serie_real_usuario_recebida": false,
+  "verificacoes": {
+    "calendario_energia_mwh": [
+      18,
+      null,
+      null,
+      240
+    ],
+    "lacuna_na_hora_limite": "129 sem grade; NULL com grade",
+    "futuro_alterado": "duas features preservadas; alvo 156 -> 1156",
+    "duplicidade": "rejeitada",
+    "corte_estrito": "25 linhas sinteticas elegiveis; inclusao da igualdade rejeitada",
+    "parquet_sintetico_8760": {
+      "horas_grade": 8760,
+      "horas_presentes": 8760,
+      "origens_com_features": 8753,
+      "linhas_com_features_e_alvo": 8729,
+      "alvos_sem_valor": 24,
+      "horizonte": 24,
+      "atraso": 2,
+      "janela": 6,
+      "spark_version": "4.0.1",
+      "particoes_configuradas": 2,
+      "semantica_temporal": "rotulos existentes; fuso e intervalo fisico nao verificados",
+      "disponibilidade_assumida": true,
+      "modelos_treinados": false
+    },
+    "sintaxe_e_cli": "aprovadas"
+  },
+  "implementacao": "Contraprovas usam spark.range e expressoes nativas; uma tentativa previa com fontes Python encontrou falha de worker neste ambiente. O fluxo final acima passou.",
+  "autoria_aluno": "selecionar_treino reservada; execucao principal funciona sem --corte-treino",
+  "sha256_codigo": {
+    "notebooks/aula_calendario_spark.py": "76e69aeac3a51e986e303202bf56f8be3359fbbf55ed8ab17dbf80655e5a1200",
+    "notebooks/laboratorio_temporal_spark.py": "cef39dae7bdb0bcf0a0e2f936e487275e016ab155d72edaa90fc185df50c8496"
+  }
+}

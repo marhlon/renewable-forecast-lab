@@ -1,0 +1,47 @@
+{
+  "schema": "satmon-m10-2-execution-record-v1",
+  "recorded_at_utc": "2026-11-19T10:16:35.269373+00:00",
+  "working_directory": "C:\\renewable-forecast-lab",
+  "python_executable": "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+  "laboratory_executions_in_this_task": 1,
+  "laboratory": {
+    "exit_code": 0,
+    "run_id": "20261119T101049Z_253ff59f",
+    "command": "python satellite-anomaly-monitor/scripts/executar_m10_2.py --autoria satellite-anomaly-monitor/notebooks/m10_2_pca_autoral.py",
+    "log": "execucao_autoral.log",
+    "small_geometric_checks": 2
+  },
+  "unit_tests": {
+    "exit_code": 0,
+    "passed": 8,
+    "command": "python -m unittest discover -s satellite-anomaly-monitor/tests -p test_m10_2_pca_autoral.py -v",
+    "source_sha256": "bcd8d7294ea7be86bf4a4d087531b511b6bcbd9fd3c42bb27e42d77e12b99759"
+  },
+  "authorship_sha256": "5d8b070af9a0e4417b1c0e910db43a8a24ea69c2ecaa49aa4fc1eee31d6e180d",
+  "resultado_sha256": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+  "audit_sha256": "1c9cbac30a1e2f874f2b35f86c497f900150f893911d3e32e8de441f550450ae",
+  "code_sha256": {
+    "runner": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "core": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372"
+  },
+  "runner_and_core_match_original_zip": {
+    "scripts/executar_m10_2.py": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "src/satmon/detectores_m10_2.py": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372"
+  },
+  "max_pca_difference_vs_sklearn": 3.730349362740526e-14,
+  "environment_versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.0"
+  },
+  "open_report": {
+    "exit_code": 0,
+    "command": "Invoke-Item -LiteralPath 'C:\\renewable-forecast-lab\\satellite-anomaly-monitor\\reports\\m10_2\\20261119T101049Z_253ff59f\\relatorio.html'",
+    "visual_browser_inspection": false
+  },
+  "new_packages_installed": false,
+  "data_downloaded": false,
+  "threshold_selected": false,
+  "reserved_period_used": false
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "renewcast-training-snapshot-v1",
+  "table_relative_path": "geracao_delta",
+  "delta_version": 0,
+  "cutoff": "2026-07-11T06:00:00",
+  "horizon_hours": 24,
+  "availability_delay_hours_assumed": 2,
+  "window_hours": 6,
+  "features_code_sha256": "c0e4d07943b72dab2dd9923182c524ddbfb14c2d0c4afde852ef62050ff5d4ac",
+  "rows": 7485,
+  "historical_source_versions_verified": false,
+  "models_trained": false
+}

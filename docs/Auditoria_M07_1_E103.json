@@ -1,0 +1,103 @@
+{
+  "evidencia": "E103",
+  "data_local": "2026-10-27",
+  "aprovado": true,
+  "checks": {
+    "mesmo_schema": true,
+    "selecao_sem_linhas_extras": true,
+    "selecao_sem_linhas_faltantes": true,
+    "origens_unicas_horarias": true,
+    "tres_relacoes_temporais": true,
+    "resumo_horas_grade": true,
+    "resumo_horas_presentes": true,
+    "resumo_origens_com_features": true,
+    "resumo_linhas_com_features_e_alvo": true,
+    "resumo_alvos_sem_valor": true,
+    "resumo_linhas_treino_autoria": true,
+    "primeira_origem_treino": true,
+    "ultima_origem_treino": true,
+    "ultimo_alvo_disponivel_treino": true,
+    "fronteira_igualdade_excluida": true,
+    "sobreposicao_historico_alvo_coerente": true,
+    "cobertura_reconstrucao_interna": true,
+    "janelas_recalculadas_consistencia_interna": true,
+    "amostra_igual_primeiras_36": true,
+    "contraprova_lacuna": true,
+    "contraprova_futuro": true
+  },
+  "parquet_completo": "part-00000-be7eab36-1fa7-42a8-9c69-6f844635045d-c000.snappy.parquet",
+  "parquet_treino": "part-00000-1e27d39b-3b07-47a4-bb68-d2255698dd71-c000.snappy.parquet",
+  "linhas_completo": 8760,
+  "linhas_treino": 7485,
+  "linhas_filtro_incorreto_por_origem": 7511,
+  "linhas_indevidas_por_filtro_origem": 26,
+  "maior_diferenca_media_recalculada": 5.684341886080802e-14,
+  "fronteira": [
+    {
+      "serie": "CJU_BA5EIGT",
+      "forecast_origin": "2026-07-10 02:00:00",
+      "history_end": "2026-07-10 00:00:00",
+      "target_time": "2026-07-11 02:00:00",
+      "target_available_at": "2026-07-11 04:00:00",
+      "registro_presente": true,
+      "geracao_em_history_end": 170.7905,
+      "media_historico_mwmed": 172.41891666666666,
+      "horas_validas_historico": 6,
+      "features_validas": true,
+      "target_generation": 74.3265
+    },
+    {
+      "serie": "CJU_BA5EIGT",
+      "forecast_origin": "2026-07-10 03:00:00",
+      "history_end": "2026-07-10 01:00:00",
+      "target_time": "2026-07-11 03:00:00",
+      "target_available_at": "2026-07-11 05:00:00",
+      "registro_presente": true,
+      "geracao_em_history_end": 165.522,
+      "media_historico_mwmed": 174.95541666666668,
+      "horas_validas_historico": 6,
+      "features_validas": true,
+      "target_generation": 75.4365
+    },
+    {
+      "serie": "CJU_BA5EIGT",
+      "forecast_origin": "2026-07-10 04:00:00",
+      "history_end": "2026-07-10 02:00:00",
+      "target_time": "2026-07-11 04:00:00",
+      "target_available_at": "2026-07-11 06:00:00",
+      "registro_presente": true,
+      "geracao_em_history_end": 166.522,
+      "media_historico_mwmed": 173.44166666666663,
+      "horas_validas_historico": 6,
+      "features_validas": true,
+      "target_generation": 59.475
+    },
+    {
+      "serie": "CJU_BA5EIGT",
+      "forecast_origin": "2026-07-10 05:00:00",
+      "history_end": "2026-07-10 03:00:00",
+      "target_time": "2026-07-11 05:00:00",
+      "target_available_at": "2026-07-11 07:00:00",
+      "registro_presente": true,
+      "geracao_em_history_end": 172.0265,
+      "media_historico_mwmed": 172.8540833333333,
+      "horas_validas_historico": 6,
+      "features_validas": true,
+      "target_generation": 62.2775
+    }
+  ],
+  "limites": [
+    "Arquivo original de geracao nao recebido; recálculo da janela verifica consistencia interna dos outputs.",
+    "Atraso de duas horas assumido; fuso e intervalo fisico nao verificados.",
+    "Plano anexado e isFinalPlan=false; nao mede duracao ou memoria."
+  ],
+  "sha256": {
+    "part-00000-be7eab36-1fa7-42a8-9c69-6f844635045d-c000.snappy.parquet": "db639e9c332375446baaa77b8a1025f66c6233832a5cb3b237dda6c1293567b0",
+    "part-00000-1e27d39b-3b07-47a4-bb68-d2255698dd71-c000.snappy.parquet": "0dd9d9d2bfb513aec68f99adca986e223264ba80a7fce50e8c237529af5e81f8",
+    "resumo.json": "1cef556d5810ffe10b3e63fcf4b4476b982d7db3f0182659a9eadd7b677de579",
+    "amostra.csv": "322f6a1b7e377f5272c15e53945ccbc9e2cd500e4b7290a8732d3ddce0d5c020",
+    "contraprova_lacuna.csv": "1f8aafe543565a8105eb72f8f239ecfe980b9945d9f03c6f9177f0f613b239df",
+    "contraprova_futuro.csv": "3683d8f7a6b750e78c5db306ca9aacd887f55047aa61c61ea38367fde6b95150",
+    "plano_temporal.txt": "f393a34eb1588cdb828322f430dc7a1a74d7a654141ab509da779773377654e4"
+  }
+}

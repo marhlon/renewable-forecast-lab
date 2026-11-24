@@ -1,0 +1,45 @@
+{
+  "schema": "satmon-m10-3-execution-record-v1",
+  "recorded_at_utc": "2026-11-23T23:00:01.557986+00:00",
+  "working_directory": "C:\\renewable-forecast-lab",
+  "python_executable": "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+  "laboratory_executions_in_this_task": 1,
+  "laboratory": {
+    "exit_code": 0,
+    "run_id": "20261123T195301Z_332fb306",
+    "command": "python satellite-anomaly-monitor/scripts/executar_m10_3.py --autoria satellite-anomaly-monitor/notebooks/m10_3_alarme_autoral.py",
+    "log": "execucao_autoral.log"
+  },
+  "unit_tests": {
+    "exit_code": 0,
+    "passed": 10,
+    "command": "python -m unittest discover -s satellite-anomaly-monitor/tests -p test_m10_3_alarme_autoral.py -v",
+    "source_sha256": "c75ea44bc2d2c7a72f5bab67e87859a7fb9c47fe443d48a2f986c2bc0bc47828"
+  },
+  "authorship_sha256": "22d3db91fc613a8356bfb6226d766bd026bf1a1f3764d52f9e5f4e1e8480bdd8",
+  "resultado_sha256": "498921e786aa5943f514a16f1bf10b607dde4d645cb8cb71f49a3531f7204a8e",
+  "frozen_policy_sha256": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81",
+  "audit_sha256": "a81e242c7f433ca9f7a1d2197dd94791313cf9adb0a206dee96859054d036c3f",
+  "runner_and_core_match_original_zip": {
+    "scripts/executar_m10_3.py": "e4c57aa54d6657e2f83b611b18791f839bbd6524e34198c78ad2c883ee2644f0",
+    "src/satmon/alarmes_m10_3.py": "08040b65364ef4e3858596e653f249aa8864fc4a856abbfbf62cbad9998c127d"
+  },
+  "source_m10_2_run_id": "20261119T101049Z_253ff59f",
+  "original_forest_reconstructed_by_laboratory": true,
+  "max_development_score_reconstruction_delta": 0.0,
+  "audit_replayed_only_frozen_policy_on_test": true,
+  "alternative_policy_executed_on_test": false,
+  "environment_versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0"
+  },
+  "open_report": {
+    "exit_code": 0,
+    "command": "Invoke-Item -LiteralPath 'C:\\renewable-forecast-lab\\satellite-anomaly-monitor\\reports\\m10_3\\20261123T195301Z_332fb306\\relatorio.html'",
+    "visual_browser_inspection": false
+  },
+  "packages_installed": false,
+  "data_downloaded": false
+}

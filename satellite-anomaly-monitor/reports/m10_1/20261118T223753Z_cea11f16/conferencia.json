@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "groups": 5,
+  "checks": [
+    "valores_idades_e_expiracao",
+    "invariancia_ao_futuro",
+    "multicanal_assincrono_e_sem_mutacao",
+    "fronteiras_exatas",
+    "entradas_invalidas"
+  ],
+  "nearest_counterexample_uses_future_at_second_7": true
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "satmon-m10-4-result-v1",
+  "completed": true,
+  "run_id": "20261123T235056Z_d98b7536",
+  "source_m10_2_run_id": "20261119T101049Z_253ff59f",
+  "source_m10_3_run_id": "20261123T195301Z_332fb306",
+  "inputs_sha256": {
+    "receipt_m10_2": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+    "receipt_m10_3": "498921e786aa5943f514a16f1bf10b607dde4d645cb8cb71f49a3531f7204a8e",
+    "scores_dev": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "scores_test": "f1a63b628ae93a21505eb7fd39f07891c21dd3c0f40af3e1cb5d4906445e143d",
+    "policy": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81"
+  },
+  "protocol_sha256": "a597d42732175d7a7e828a63c0cbd096d9e60d23345f431599891d911a1bd98e",
+  "runner_sha256": "f77cd8180831498cad4e4180d97a39bb696e90b46e526f1ecb2771218b06ce4f",
+  "core_sha256": "31adeb7929c886ef0318f7e66ad69c3c86f20438b56f5592475b2e3c1629adcc",
+  "authorship_sha256": null,
+  "author_cases_passed": 7,
+  "verified_against_reference_real_data": false,
+  "seeds": [
+    17,
+    29,
+    41
+  ],
+  "same_full_channel_cohort": true,
+  "fitted_rows": 136202,
+  "forests_fitted_only_on_adjustment": 11,
+  "original_scores_used_verbatim": true,
+  "test_used_to_choose_parameters": false,
+  "test_is_retrospective": true,
+  "frozen_policy_unchanged": true,
+  "operational_approval": false,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0"
+  },
+  "python": "3.12.14",
+  "elapsed_seconds": 11.453194869000072,
+  "output_sha256": {
+    "associacao_canais_ano.csv": "4c6483bcaf5ceb253f20dc7ef43ddb58cf22a3fef66bcfd2693fea2b29d8a378",
+    "estabilidade_sementes.csv": "557f67a61c378230147a8abdc2cad77446659dbc832900c7b70ccf6d7e3d26bc",
+    "limites_por_id.csv": "ee5c14d492d174b9634649c52c914f6d32732536a062ad4ab80f70b2f35b909d",
+    "metricas_ablacao.csv": "3f843e3f273ac96585f07cf3fcf00ad73fcd40f1e3594e8aa14d1a3e9299a13d",
+    "mudancas_por_id.csv": "7a52481f800126bbc4fb02aa3a199d9ff0ac573f1d7926765b010bf7b2ee488c",
+    "perfil_canais_ano.csv": "e17ee7e8625d57100eda37fdf534ba44452d243f624f887313b5f31547b54a0e",
+    "perfil_escores_ano.csv": "fcb84779f0e2bb9c82891b3986e3ea0788314ec79f69ed4451bd3396028f9a77",
+    "relatorio.html": "dd839297b883ca192d0adbfd285efdef6a99833dce000d1f7c5107fa994a6179"
+  }
+}

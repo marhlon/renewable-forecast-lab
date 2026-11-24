@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "all_source_input_output_hashes_valid": true,
+  "attention_rows": 6048,
+  "head_query_distributions": 288,
+  "max_row_sum_error": 1.6653345369377348e-15,
+  "causal_forbidden_weights_zero": true,
+  "ffn_width_32_verified": true,
+  "coordinate_columns_verified": 16,
+  "encoder_rows": 24,
+  "decoder_rows": 6,
+  "metadata_columns_preserved": true,
+  "html_svg_count": 12,
+  "html_tooltips": 3024,
+  "head_selector_logic_mock_checked": true,
+  "browser_visual_check_available": false,
+  "browser_limitation": "Native apps pipe and browser access host unavailable",
+  "diagram": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/fluxo_transformer_20261117.png",
+  "pretrained_weights_used": false,
+  "models_trained": false
+}

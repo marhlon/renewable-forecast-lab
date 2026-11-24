@@ -1,0 +1,81 @@
+{
+  "schema": "renewcast-attention-lab-v1",
+  "completed": true,
+  "run_id": "20261116T225526Z_8c0df819",
+  "checks": {
+    "passed": true,
+    "checks": [
+      "numpy_vs_pytorch_retangular_batched_com_mascara_e_readonly",
+      "caso_manual_pesos_075_025_saida15",
+      "mascara_causal_prefixo_e_diagonal",
+      "perturbacao_de_posicao_posterior_bloqueada",
+      "ultima_consulta_igual_na_atencao_de_uma_camada",
+      "softmax_estavel_scores_grandes",
+      "linha_totalmente_bloqueada_e_mascara_incompativel_rejeitadas",
+      "equivariancia_sem_posicao"
+    ],
+    "checks_count": 8,
+    "max_difference_pytorch": 4.440892098500626e-16,
+    "tolerance": 1e-12
+  },
+  "forecast_origin": "2026-07-03T04:00:00",
+  "history_start": "2026-07-02T03:00:00",
+  "history_end": "2026-07-03T02:00:00",
+  "horizon_hours": 24,
+  "availability_delay_hours_assumed": 2,
+  "context_hours": 24,
+  "q_shape": [
+    1,
+    24,
+    4
+  ],
+  "k_shape": [
+    1,
+    24,
+    4
+  ],
+  "v_shape": [
+    1,
+    24,
+    1
+  ],
+  "weights_shape": [
+    1,
+    24,
+    24
+  ],
+  "output_shape": [
+    1,
+    24,
+    1
+  ],
+  "models_trained": false,
+  "forecast_metrics_computed": false,
+  "random_projections_are_untrained": true,
+  "target_not_used_in_attention": true,
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "source_package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "numpy": "2.5.3",
+  "pytorch": "2.7.1+cpu",
+  "python": "3.12.13",
+  "permutation_difference_without_position": 1.4210854715202004e-14,
+  "permutation_difference_with_fixed_positions": 4.6390829343196955,
+  "last_query_full_causal_difference": 0.0,
+  "authorship_sha256": null,
+  "code_sha256": {
+    "laboratorio_atencao.py": "f2e69380f341bc8ab79b62be4519e83dea3002c0f2fed9ce33e63387a5d57144"
+  },
+  "scope": "attention arithmetic on historical context; not a trained Transformer or pretrained model",
+  "output_sha256": {
+    "conferencia.json": "373cc211f34e48fab2df6cc65a52f772d9bd0a9fefce3ad5604745bbe0afa865",
+    "janela_e_representacoes.csv": "1e7c3d2f77c955b9dce1e79e9c4bea6cc8fbf29f2ed5d1309d1811855ad7692a",
+    "pesos_causais.csv": "197301c9eefbdafe57279e5a58ac6ea56690251685f95026c76aae9d096b6dcd",
+    "pesos_livres.csv": "002c457ba829b8a29e9fb838ccbe1538b46b2853cb86c3b5ba01b9a22ee5eafb",
+    "projecoes.json": "7cfe00f5fb68aa973e67d15810bb30c0f29b9068062598fd832f947b6bf04465",
+    "relatorio.html": "180e266f158c33af2d277c4c4f940b0d6a35c555d61a4f91589d00f4179a35b2"
+  }
+}

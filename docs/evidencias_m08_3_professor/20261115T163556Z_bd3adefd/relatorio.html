@@ -1,0 +1,119 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8">
+<title>Renewcast M08.3</title><style>body{font:16px system-ui;max-width:1200px;margin:32px auto;padding:16px;color:#17223b}
+table{border-collapse:collapse;font-size:14px}td,th{padding:8px;border:1px solid #ccd5e3}img{max-width:100%}
+code{background:#eef2f8;padding:3px}.note{border-left:4px solid #b45309;padding:12px;background:#fff7ed}</style>
+<h1>M08.3 — memoria recorrente e comparacao pareada</h1>
+<p>Execucao <code>20261115T163556Z_bd3adefd</code>. CPU, 2 threads; janela 24h, horizonte 24h, atraso assumido 2h.</p>
+<p class="note">Semana de desenvolvimento ja examinada. Nenhuma semente foi escolhida pelo desempenho abaixo.
+Esta tabela nao certifica generalizacao, causalidade ou superioridade em outros periodos.</p>
+<h2>Mesmas 168 origens de avaliacao</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>method</th>
+      <th>seed</th>
+      <th>rows</th>
+      <th>mae_mwmed</th>
+      <th>rmse_mwmed</th>
+      <th>bias_observed_minus_predicted_mwmed</th>
+      <th>parameters</th>
+      <th>training_seconds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>persistence_d2</td>
+      <td>—</td>
+      <td>168</td>
+      <td>37.991646</td>
+      <td>55.434342</td>
+      <td>-3.016872</td>
+      <td>—</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>linear_24h</td>
+      <td>—</td>
+      <td>168</td>
+      <td>33.678664</td>
+      <td>44.938111</td>
+      <td>15.148681</td>
+      <td>25.0</td>
+      <td>0.004456</td>
+    </tr>
+    <tr>
+      <td>hgb_24h</td>
+      <td>17.0</td>
+      <td>168</td>
+      <td>31.846768</td>
+      <td>44.051119</td>
+      <td>11.662000</td>
+      <td>—</td>
+      <td>0.246595</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>17.0</td>
+      <td>168</td>
+      <td>32.724828</td>
+      <td>44.019866</td>
+      <td>10.655947</td>
+      <td>833.0</td>
+      <td>1.121723</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>29.0</td>
+      <td>168</td>
+      <td>33.700811</td>
+      <td>44.892316</td>
+      <td>12.652756</td>
+      <td>833.0</td>
+      <td>2.006964</td>
+    </tr>
+    <tr>
+      <td>mlp_24h</td>
+      <td>41.0</td>
+      <td>168</td>
+      <td>33.159788</td>
+      <td>44.069511</td>
+      <td>13.724279</td>
+      <td>833.0</td>
+      <td>1.676905</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>17.0</td>
+      <td>168</td>
+      <td>35.675970</td>
+      <td>45.200733</td>
+      <td>18.525119</td>
+      <td>929.0</td>
+      <td>9.355578</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>29.0</td>
+      <td>168</td>
+      <td>34.911227</td>
+      <td>43.816199</td>
+      <td>17.993098</td>
+      <td>929.0</td>
+      <td>13.966585</td>
+    </tr>
+    <tr>
+      <td>gru_24h</td>
+      <td>41.0</td>
+      <td>168</td>
+      <td>34.573203</td>
+      <td>43.066021</td>
+      <td>14.777713</td>
+      <td>929.0</td>
+      <td>9.629498</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Treinamento e selecao</h2><img src="curvas.png" alt="Curvas de ajuste e selecao das seis redes">
+<p>O tempo inclui treino e avaliacoes de ajuste/selecao em cada epoca; nao e benchmark controlado entre plataformas.</p>
+<p>Memoria: {&#x27;peak_mib&#x27;: 453.99609375, &#x27;source&#x27;: &#x27;getrusage ru_maxrss&#x27;, &#x27;scope&#x27;: &#x27;whole process lifetime; not per-model memory&#x27;, &#x27;error&#x27;: None}</p>
+<p>Consulte particoes.csv, janelas_avaliacao.csv, curvas.csv, predictions.csv, protocol.json e resultado.json.</p>
+</html>

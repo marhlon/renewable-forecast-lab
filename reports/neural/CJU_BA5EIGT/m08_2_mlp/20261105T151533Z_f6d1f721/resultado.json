@@ -1,0 +1,113 @@
+{
+  "schema": "renewcast-mlp-result-v1",
+  "completed": true,
+  "python": "3.12.13",
+  "torch": "2.7.1+cpu",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "rows_source_training": 7485,
+  "excluded_incomplete": 18,
+  "partitions": {
+    "ajuste": {
+      "rows": 7079,
+      "origin_start": "2025-09-02T01:00:00",
+      "origin_end": "2026-06-23T23:00:00",
+      "latest_target_available_at": "2026-06-25T01:00:00"
+    },
+    "selecao": {
+      "rows": 168,
+      "origin_start": "2026-06-25T02:00:00",
+      "origin_end": "2026-07-02T01:00:00",
+      "latest_target_available_at": "2026-07-03T03:00:00"
+    },
+    "avaliacao": {
+      "rows": 168,
+      "origin_start": "2026-07-03T04:00:00",
+      "origin_end": "2026-07-10T03:00:00",
+      "latest_target_available_at": "2026-07-11T05:00:00"
+    },
+    "excluidas_disponibilidade": {
+      "rows": 52,
+      "origin_start": "2026-06-24T00:00:00",
+      "origin_end": "2026-07-03T03:00:00",
+      "latest_target_available_at": "2026-07-04T05:00:00"
+    }
+  },
+  "parameter_count_mlp": 833,
+  "fit_input_tensor_bytes_float32": 679584,
+  "memory_scope": "input tensor only; not peak process memory",
+  "training": [
+    {
+      "seed": 17,
+      "best_epoch": 8,
+      "epochs_executed": 16,
+      "best_selection_mse": 0.4354173007151563,
+      "training_seconds": 41.48565889999736,
+      "stop_reason": "patience"
+    },
+    {
+      "seed": 29,
+      "best_epoch": 20,
+      "epochs_executed": 28,
+      "best_selection_mse": 0.4457003548189536,
+      "training_seconds": 74.40767380001489,
+      "stop_reason": "patience"
+    },
+    {
+      "seed": 41,
+      "best_epoch": 15,
+      "epochs_executed": 23,
+      "best_selection_mse": 0.4348128375602619,
+      "training_seconds": 66.17829760001041,
+      "stop_reason": "patience"
+    }
+  ],
+  "reload": [
+    {
+      "seed": 17,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "seed": 29,
+      "max_difference_mwmed": 0.0
+    },
+    {
+      "seed": 41,
+      "max_difference_mwmed": 0.0
+    }
+  ],
+  "evaluator_check": {
+    "batch_sizes": [
+      4,
+      1
+    ],
+    "correct_mse": 20.0,
+    "incorrect_unweighted_mse": 50.0,
+    "eval_no_grad_mode_restore_checked": true,
+    "empty_loader_rejected": true
+  },
+  "mlp_seed_mae": {
+    "median": 33.15978842314019,
+    "min": 32.724828086773655,
+    "max": 33.700811473289775,
+    "not_confidence_interval": true
+  },
+  "source_package_id": "f66e094498ef5cd3586d167b691027e5e8af312674ba4bb0b59473f0f6f2e656",
+  "availability_is_assumed": true,
+  "timezone_verified": false,
+  "operational_approval": false,
+  "output_sha256": {
+    "curvas.csv": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+    "janelas_avaliacao.csv": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+    "linear_24h.json": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+    "mlp_seed_17.pt": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+    "mlp_seed_29.pt": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+    "mlp_seed_41.pt": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+    "origens_sem_janela.csv": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+    "particoes.csv": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+    "predictions.csv": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+    "protocol.json": "bfbe548eacc10f9cabf3bbe8112a69e7fb1b4c69696f4a38995804602f579d66",
+    "summary.csv": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f"
+  }
+}

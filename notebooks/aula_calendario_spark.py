@@ -68,6 +68,8 @@ def montar_diario(horaria, dias):
     """Cada operacao devolve um novo DataFrame; nao altera a entrada."""
     from pyspark.sql import functions as F
 
+    geracao_observada_mwh = F.sum("val_geracao").alias("geracao_observada_mwh")
+
     # Extrai a data; o timestamp original continua existindo.
     com_dia = horaria.withColumn("dia", F.to_date("din_instante"))
 
@@ -76,6 +78,7 @@ def montar_diario(horaria, dias):
         F.count("*").alias("horas_presentes"),
         F.count("val_geracao").alias("horas_validas"),
         F.avg("val_geracao").alias("geracao_media_mwmed"),
+        geracao_observada_mwh,
     )
     diario = completar_calendario(dias, resumo)
 
@@ -93,6 +96,7 @@ def montar_diario(horaria, dias):
     return resumo, diario.select(
         "dia", "horas_esperadas", "horas_presentes", "horas_validas",
         "horas_nulas", "horas_ausentes", "cobertura", "geracao_media_mwmed",
+        "geracao_observada_mwh"
     )
 
 

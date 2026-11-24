@@ -1,0 +1,11 @@
+test_conta_manual_e_escala_pela_dimensao (test_m09_atencao_autoral.AtencaoEscaladaTest.test_conta_manual_e_escala_pela_dimensao) ... ok
+test_lotes_retangulares_readonly_e_eixo_das_chaves (test_m09_atencao_autoral.AtencaoEscaladaTest.test_lotes_retangulares_readonly_e_eixo_das_chaves) ... ok
+test_mascara_exclui_chave_antes_da_normalizacao (test_m09_atencao_autoral.AtencaoEscaladaTest.test_mascara_exclui_chave_antes_da_normalizacao) ... ok
+test_prefixos_bloqueiam_perturbacao_posterior (test_m09_atencao_autoral.AtencaoEscaladaTest.test_prefixos_bloqueiam_perturbacao_posterior) ... ok
+test_rejeita_dimensoes_mascaras_e_valores_invalidos (test_m09_atencao_autoral.AtencaoEscaladaTest.test_rejeita_dimensoes_mascaras_e_valores_invalidos) ... ok
+test_scores_grandes_sem_overflow_no_softmax (test_m09_atencao_autoral.AtencaoEscaladaTest.test_scores_grandes_sem_overflow_no_softmax) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.047s
+
+OK

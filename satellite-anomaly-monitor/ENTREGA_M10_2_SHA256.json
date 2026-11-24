@@ -1,0 +1,126 @@
+{
+  "schema": "satmon-delivery-sha256-v1",
+  "run_id": "20261119T101049Z_253ff59f",
+  "files": {
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/canais_grade.csv.gz": {
+      "bytes": 3172268,
+      "sha256": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/eventos.csv": {
+      "bytes": 11777,
+      "sha256": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e"
+    },
+    "satellite-anomaly-monitor/data/reference/esa_mission1_m10_2/protocolo.json": {
+      "bytes": 2108,
+      "sha256": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0"
+    },
+    "satellite-anomaly-monitor/docs/COMECE_M10_2.md": {
+      "bytes": 6412,
+      "sha256": "a939dd9fdfed335d556c4ff8a73deb043f5660c4d8d8aadc7b9b1d8f059ea807"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2_local/auditar_resultados.py": {
+      "bytes": 19947,
+      "sha256": "76b24be8b2c6d54fb6891f1c10bb37a860715f86616ee12936972a13bc48098a"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2_local/auditoria_resultados.json": {
+      "bytes": 9534,
+      "sha256": "1c9cbac30a1e2f874f2b35f86c497f900150f893911d3e32e8de441f550450ae"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2_local/empacotar_entrega.py": {
+      "bytes": 7404,
+      "sha256": "fd955aaa47fe5c1c6b09659196f4c367dd56c2f5ed32ab1312a061bf6bd002aa"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2_local/execucao_autoral.log": {
+      "bytes": 573,
+      "sha256": "372672db4a18145dfdd32066468de345df36bb4eb1a41c6fcdae43f1673865dd"
+    },
+    "satellite-anomaly-monitor/docs/evidencias_m10_2_local/registro_execucao.json": {
+      "bytes": 2164,
+      "sha256": "e32188c7f46d15d1cb72d6bfb9a626ee36506399dba1dec115955614b87f245f"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_1_Escore_Robusto.md": {
+      "bytes": 6374,
+      "sha256": "7610596249db7feb1d4b551f4626c740e491482f1e6a1165124e06ac47ce0c7e"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_2_PCA_Reconstrucao.md": {
+      "bytes": 5500,
+      "sha256": "4d1128fb5bd57fa22f386a86565749db26aa6a632614f9fe24b5a37e65c2a8ff"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Aula_3_Isolation_Forest_e_Avaliacao.md": {
+      "bytes": 8475,
+      "sha256": "e19549045b1e550fcc2cbf44f71c27d296eeae88d9491f857401148eea5c37ee"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Explicacao_Passo_a_Passo.md": {
+      "bytes": 8450,
+      "sha256": "9f898b65c981814f35a8bc3e697b2aafd09ab3316a801545e5b74e08514226cc"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/pca_projecao.png": {
+      "bytes": 65888,
+      "sha256": "dcf86117336484539773ed1e24e0640a5d5d06594d77202b986cbdb1850976f3"
+    },
+    "satellite-anomaly-monitor/docs/m10_2/Resposta_M10_2.md": {
+      "bytes": 7254,
+      "sha256": "063e2b45f61b8e286ad4e81b73ee5befe277cfa7ce59eaac319a7d5bfce3d0b7"
+    },
+    "satellite-anomaly-monitor/LEIA_ENTREGA_M10_2_20261119.md": {
+      "bytes": 2311,
+      "sha256": "091de110f6650442ecc07e27206c2423f5c2ce27d1c83803f5a368d43639243a"
+    },
+    "satellite-anomaly-monitor/notebooks/m10_2_pca_autoral.py": {
+      "bytes": 571,
+      "sha256": "5d8b070af9a0e4417b1c0e910db43a8a24ea69c2ecaa49aa4fc1eee31d6e180d"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/casos_reais.csv": {
+      "bytes": 878,
+      "sha256": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/cobertura_eventos.csv": {
+      "bytes": 3913,
+      "sha256": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/contextos.csv": {
+      "bytes": 325,
+      "sha256": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/escores_desenvolvimento.csv.gz": {
+      "bytes": 1939889,
+      "sha256": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/metricas.csv": {
+      "bytes": 222,
+      "sha256": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/relatorio.html": {
+      "bytes": 11260,
+      "sha256": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/resultado.json": {
+      "bytes": 3361,
+      "sha256": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/20261119T101049Z_253ff59f/sensibilidade_evento.csv": {
+      "bytes": 262,
+      "sha256": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866"
+    },
+    "satellite-anomaly-monitor/reports/m10_2/latest_run.json": {
+      "bytes": 254,
+      "sha256": "4070b038a32ef7363c899311303472c12268cccf8a23b3f8b4817bf8adf70543"
+    },
+    "satellite-anomaly-monitor/scripts/executar_m10_2.py": {
+      "bytes": 16300,
+      "sha256": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098"
+    },
+    "satellite-anomaly-monitor/src/satmon/__init__.py": {
+      "bytes": 49,
+      "sha256": "0b357fc9d3f32da94f69938914ae05c76ab869014a1e3820a9e666263341f14e"
+    },
+    "satellite-anomaly-monitor/src/satmon/detectores_m10_2.py": {
+      "bytes": 4292,
+      "sha256": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372"
+    },
+    "satellite-anomaly-monitor/tests/test_m10_2_pca_autoral.py": {
+      "bytes": 4834,
+      "sha256": "bcd8d7294ea7be86bf4a4d087531b511b6bcbd9fd3c42bb27e42d77e12b99759"
+    }
+  }
+}

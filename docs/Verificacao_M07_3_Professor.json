@@ -1,0 +1,72 @@
+{
+  "teacher_execution": "local Linux, Spark4.0.1, Delta4.0.1; NOT Databricks",
+  "cloud_setup_and_receipt_not_executed": true,
+  "input_generation": "reconstructed from E103 attachments, not raw ONS file",
+  "reference_training": "real E103 attachment",
+  "source_comparison": {
+    "rows_union": 8760,
+    "rows_left": 8760,
+    "rows_right": 8760,
+    "mismatched_rows": 0,
+    "max_diff_val_geracao": 0.0
+  },
+  "configurations": [
+    {
+      "shuffle_partitions_requested": 2,
+      "comparison_seconds": 3.9426405320000413,
+      "rows_union": 7485,
+      "rows_left": 7485,
+      "rows_right": 7485,
+      "mismatched_rows": 0,
+      "max_diff_geracao_em_history_end": 0.0,
+      "max_diff_media_historico_mwmed": 0.0,
+      "max_diff_target_generation": 0.0
+    },
+    {
+      "shuffle_partitions_requested": 4,
+      "comparison_seconds": 2.1948574119999193,
+      "rows_union": 7485,
+      "rows_left": 7485,
+      "rows_right": 7485,
+      "mismatched_rows": 0,
+      "max_diff_geracao_em_history_end": 0.0,
+      "max_diff_media_historico_mwmed": 0.0,
+      "max_diff_target_generation": 0.0
+    }
+  ],
+  "training_comparison": {
+    "rows_union": 7485,
+    "rows_left": 7485,
+    "rows_right": 7485,
+    "mismatched_rows": 0,
+    "max_diff_geracao_em_history_end": 0.0,
+    "max_diff_media_historico_mwmed": 0.0,
+    "max_diff_target_generation": 0.0
+  },
+  "idempotent_reuse_passed": true,
+  "modified_values_rejected": true,
+  "wrong_role_rejected": true,
+  "schema": "renewcast-m073-teacher-verification-v1",
+  "date": "2026-10-29",
+  "notebook_valid": true,
+  "all_code_cells_compile": true,
+  "local_preparation_rerun_identical": true,
+  "naive_cutoff_counterexample": {
+    "requested_label": "2026-07-11T06:00:00",
+    "implicit_literal_rendered_utc": "2026-07-11T09:00:00",
+    "implicit_rows": 7488,
+    "explicit_ntz_rows": 7485,
+    "fixed_in_delivered_notebook": true
+  },
+  "files_sha256": {
+    "notebooks/databricks/m07_3_reproducao.ipynb": "a57cc0961c75548aa400b30eb77568d9a692c12d0d7b8e1c9a168f0dd9579233",
+    "scripts/preparar_m07_databricks.py": "13ee3ba73e2580f94b502efeb1c730ed609a237fcab3f9dcb53485834d1f82e7"
+  },
+  "not_executed": [
+    "Databricks account/workspace",
+    "Unity Catalog CREATE VOLUME and UI upload",
+    "cloud runtime receipt cell",
+    "Windows preparation command"
+  ],
+  "no_claim_of_cloud_performance": true
+}

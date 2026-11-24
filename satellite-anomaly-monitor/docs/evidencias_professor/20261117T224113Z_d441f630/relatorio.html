@@ -1,0 +1,459 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>M10.1 — contrato ESA</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;line-height:1.5}table{border-collapse:collapse}th,td{padding:8px;border:1px solid #ddd}code{background:#eee}</style><h1>ESA Mission1 — contrato temporal do P2</h1><p>Recorte real de 2007. Três canais do grupo 10; nomes/unidades anonimizados. Rótulos retrospectivos separados das features. Nenhum detector foi treinado.</p><h2>Amostragem e frescor</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>channel</th>
+      <th>raw_rows</th>
+      <th>null_values</th>
+      <th>median_spacing_seconds</th>
+      <th>p99_spacing_seconds</th>
+      <th>largest_spacing_seconds</th>
+      <th>spacing_over_180s</th>
+      <th>usable_grid_rows</th>
+      <th>unusable_grid_rows</th>
+      <th>usable_fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>channel_50</td>
+      <td>348901</td>
+      <td>0</td>
+      <td>90.0</td>
+      <td>90.003</td>
+      <td>1170.0</td>
+      <td>41</td>
+      <td>350346</td>
+      <td>54</td>
+      <td>0.999846</td>
+    </tr>
+    <tr>
+      <td>channel_51</td>
+      <td>348901</td>
+      <td>0</td>
+      <td>90.0</td>
+      <td>90.003</td>
+      <td>1170.0</td>
+      <td>41</td>
+      <td>350346</td>
+      <td>54</td>
+      <td>0.999846</td>
+    </tr>
+    <tr>
+      <td>channel_52</td>
+      <td>348901</td>
+      <td>0</td>
+      <td>90.0</td>
+      <td>90.003</td>
+      <td>1170.0</td>
+      <td>41</td>
+      <td>350346</td>
+      <td>54</td>
+      <td>0.999846</td>
+    </tr>
+  </tbody>
+</table><h2>Anotações: ID, canal e intervalo</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>source_annotation_rows</th>
+      <th>distinct_annotation_ids</th>
+      <th>grid_rows_with_annotation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Anomaly</td>
+      <td>7</td>
+      <td>3</td>
+      <td>5732</td>
+    </tr>
+    <tr>
+      <td>Rare Event</td>
+      <td>26</td>
+      <td>7</td>
+      <td>3303</td>
+    </tr>
+    <tr>
+      <td>Communication Gap</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table><p>IDs não são contagens de amostras nem garantia de episódios independentes. Rare Event permanece distinto de Anomaly. Sem anotação não significa normalidade comprovada.</p><h2>Eventos preservados</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ID</th>
+      <th>Channel</th>
+      <th>StartTime</th>
+      <th>EndTime</th>
+      <th>Category</th>
+      <th>grid_rows_in_interval</th>
+      <th>usable_grid_rows_in_interval</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id_15</td>
+      <td>channel_50</td>
+      <td>2007-04-25 21:02:07.410000+00:00</td>
+      <td>2007-04-25 21:09:37.413000+00:00</td>
+      <td>Rare Event</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>id_15</td>
+      <td>channel_50</td>
+      <td>2007-04-26 00:02:07.410000+00:00</td>
+      <td>2007-04-26 00:11:07.410000+00:00</td>
+      <td>Rare Event</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>id_15</td>
+      <td>channel_51</td>
+      <td>2007-04-25 21:00:37.413000+00:00</td>
+      <td>2007-04-25 21:12:37.413000+00:00</td>
+      <td>Rare Event</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>id_15</td>
+      <td>channel_51</td>
+      <td>2007-04-26 00:03:37.413000+00:00</td>
+      <td>2007-04-26 00:11:07.410000+00:00</td>
+      <td>Rare Event</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>id_15</td>
+      <td>channel_52</td>
+      <td>2007-04-25 21:03:37.413000+00:00</td>
+      <td>2007-04-25 21:09:37.413000+00:00</td>
+      <td>Rare Event</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>id_15</td>
+      <td>channel_52</td>
+      <td>2007-04-25 23:57:37.413000+00:00</td>
+      <td>2007-04-26 00:12:37.413000+00:00</td>
+      <td>Rare Event</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>id_27</td>
+      <td>channel_50</td>
+      <td>2007-10-26 12:39:37.383000+00:00</td>
+      <td>2007-10-26 16:30:37.386000+00:00</td>
+      <td>Rare Event</td>
+      <td>154</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <td>id_27</td>
+      <td>channel_51</td>
+      <td>2007-10-26 12:39:37.383000+00:00</td>
+      <td>2007-10-26 16:30:37.386000+00:00</td>
+      <td>Rare Event</td>
+      <td>154</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <td>id_27</td>
+      <td>channel_52</td>
+      <td>2007-10-26 12:39:37.383000+00:00</td>
+      <td>2007-10-26 16:30:37.386000+00:00</td>
+      <td>Rare Event</td>
+      <td>154</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <td>id_28</td>
+      <td>channel_50</td>
+      <td>2007-12-24 02:33:37.374000+00:00</td>
+      <td>2007-12-24 05:12:37.374000+00:00</td>
+      <td>Rare Event</td>
+      <td>106</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td>id_28</td>
+      <td>channel_51</td>
+      <td>2007-12-24 02:33:37.374000+00:00</td>
+      <td>2007-12-24 05:12:37.374000+00:00</td>
+      <td>Rare Event</td>
+      <td>106</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td>id_28</td>
+      <td>channel_52</td>
+      <td>2007-12-24 02:33:37.374000+00:00</td>
+      <td>2007-12-24 05:12:37.374000+00:00</td>
+      <td>Rare Event</td>
+      <td>106</td>
+      <td>106</td>
+    </tr>
+    <tr>
+      <td>id_50</td>
+      <td>channel_50</td>
+      <td>2007-07-30 05:03:37.398000+00:00</td>
+      <td>2007-07-30 06:11:07.395000+00:00</td>
+      <td>Rare Event</td>
+      <td>45</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td>id_50</td>
+      <td>channel_51</td>
+      <td>2007-07-30 04:39:37.398000+00:00</td>
+      <td>2007-07-30 06:50:07.395000+00:00</td>
+      <td>Rare Event</td>
+      <td>87</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>id_50</td>
+      <td>channel_52</td>
+      <td>2007-07-30 04:29:07.395000+00:00</td>
+      <td>2007-07-30 06:18:37.398000+00:00</td>
+      <td>Rare Event</td>
+      <td>73</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>id_116</td>
+      <td>channel_50</td>
+      <td>2007-04-14 08:16:28.413000+00:00</td>
+      <td>2007-04-20 07:02:07.410000+00:00</td>
+      <td>Anomaly</td>
+      <td>5711</td>
+      <td>5697</td>
+    </tr>
+    <tr>
+      <td>id_116</td>
+      <td>channel_51</td>
+      <td>2007-04-14 08:16:28.413000+00:00</td>
+      <td>2007-04-20 07:02:07.410000+00:00</td>
+      <td>Anomaly</td>
+      <td>5711</td>
+      <td>5697</td>
+    </tr>
+    <tr>
+      <td>id_116</td>
+      <td>channel_52</td>
+      <td>2007-04-14 08:16:28.413000+00:00</td>
+      <td>2007-04-20 07:02:07.410000+00:00</td>
+      <td>Anomaly</td>
+      <td>5711</td>
+      <td>5697</td>
+    </tr>
+    <tr>
+      <td>id_117</td>
+      <td>channel_50</td>
+      <td>2007-05-10 11:44:07.410000+00:00</td>
+      <td>2007-05-10 16:56:07.410000+00:00</td>
+      <td>Rare Event</td>
+      <td>208</td>
+      <td>208</td>
+    </tr>
+    <tr>
+      <td>id_117</td>
+      <td>channel_51</td>
+      <td>2007-05-10 11:39:37.410000+00:00</td>
+      <td>2007-05-10 16:08:07.410000+00:00</td>
+      <td>Rare Event</td>
+      <td>179</td>
+      <td>179</td>
+    </tr>
+    <tr>
+      <td>id_117</td>
+      <td>channel_52</td>
+      <td>2007-05-10 11:38:07.410000+00:00</td>
+      <td>2007-05-10 16:47:07.410000+00:00</td>
+      <td>Rare Event</td>
+      <td>206</td>
+      <td>206</td>
+    </tr>
+    <tr>
+      <td>id_121</td>
+      <td>channel_50</td>
+      <td>2007-09-25 23:00:37.389000+00:00</td>
+      <td>2007-09-25 23:17:07.389000+00:00</td>
+      <td>Anomaly</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>id_121</td>
+      <td>channel_51</td>
+      <td>2007-09-25 23:00:37.389000+00:00</td>
+      <td>2007-09-25 23:20:07.389000+00:00</td>
+      <td>Anomaly</td>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>id_121</td>
+      <td>channel_52</td>
+      <td>2007-09-25 23:00:37.389000+00:00</td>
+      <td>2007-09-25 23:18:37.389000+00:00</td>
+      <td>Anomaly</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>id_122</td>
+      <td>channel_50</td>
+      <td>2007-09-29 11:59:07.386000+00:00</td>
+      <td>2007-09-29 12:11:07.386000+00:00</td>
+      <td>Anomaly</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>id_123</td>
+      <td>channel_50</td>
+      <td>2007-10-07 01:11:07.386000+00:00</td>
+      <td>2007-10-07 08:26:07.386000+00:00</td>
+      <td>Rare Event</td>
+      <td>290</td>
+      <td>290</td>
+    </tr>
+    <tr>
+      <td>id_123</td>
+      <td>channel_51</td>
+      <td>2007-10-07 01:11:07.386000+00:00</td>
+      <td>2007-10-07 06:51:37.389000+00:00</td>
+      <td>Rare Event</td>
+      <td>227</td>
+      <td>227</td>
+    </tr>
+    <tr>
+      <td>id_123</td>
+      <td>channel_52</td>
+      <td>2007-10-07 01:11:07.386000+00:00</td>
+      <td>2007-10-07 08:26:07.386000+00:00</td>
+      <td>Rare Event</td>
+      <td>290</td>
+      <td>290</td>
+    </tr>
+    <tr>
+      <td>id_125</td>
+      <td>channel_50</td>
+      <td>2007-12-27 10:14:07.374000+00:00</td>
+      <td>2007-12-29 22:57:37.377000+00:00</td>
+      <td>Rare Event</td>
+      <td>2429</td>
+      <td>2429</td>
+    </tr>
+    <tr>
+      <td>id_125</td>
+      <td>channel_51</td>
+      <td>2007-12-27 10:15:37.377000+00:00</td>
+      <td>2007-12-29 13:02:07.374000+00:00</td>
+      <td>Rare Event</td>
+      <td>2031</td>
+      <td>2031</td>
+    </tr>
+    <tr>
+      <td>id_125</td>
+      <td>channel_51</td>
+      <td>2007-12-29 14:29:07.374000+00:00</td>
+      <td>2007-12-29 22:57:37.377000+00:00</td>
+      <td>Rare Event</td>
+      <td>339</td>
+      <td>339</td>
+    </tr>
+    <tr>
+      <td>id_125</td>
+      <td>channel_52</td>
+      <td>2007-12-27 10:14:07.374000+00:00</td>
+      <td>2007-12-29 11:14:07.374000+00:00</td>
+      <td>Rare Event</td>
+      <td>1960</td>
+      <td>1960</td>
+    </tr>
+    <tr>
+      <td>id_125</td>
+      <td>channel_52</td>
+      <td>2007-12-29 14:29:07.374000+00:00</td>
+      <td>2007-12-29 22:57:37.377000+00:00</td>
+      <td>Rare Event</td>
+      <td>339</td>
+      <td>339</td>
+    </tr>
+  </tbody>
+</table><h2>Contrato executado</h2><pre>{
+  &quot;schema&quot;: &quot;satmon-m10-1-contract-v1&quot;,
+  &quot;completed&quot;: true,
+  &quot;run_id&quot;: &quot;20261117T224113Z_d441f630&quot;,
+  &quot;source_doi&quot;: &quot;10.5281/zenodo.15237121&quot;,
+  &quot;source_spec_sha256&quot;: &quot;488589157b1f536988f7ec2a91ac693010766f0b017d7f113596a3d33f7a305c&quot;,
+  &quot;grid_rows&quot;: 350400,
+  &quot;grid_step_seconds&quot;: 90,
+  &quot;max_age_seconds&quot;: 180,
+  &quot;all_channels_usable&quot;: 350346,
+  &quot;raw_rows_total&quot;: 1046703,
+  &quot;event_annotation_rows&quot;: 33,
+  &quot;event_ids&quot;: 10,
+  &quot;category_summary&quot;: [
+    {
+      &quot;category&quot;: &quot;Anomaly&quot;,
+      &quot;source_annotation_rows&quot;: 7,
+      &quot;distinct_annotation_ids&quot;: 3,
+      &quot;grid_rows_with_annotation&quot;: 5732
+    },
+    {
+      &quot;category&quot;: &quot;Rare Event&quot;,
+      &quot;source_annotation_rows&quot;: 26,
+      &quot;distinct_annotation_ids&quot;: 7,
+      &quot;grid_rows_with_annotation&quot;: 3303
+    },
+    {
+      &quot;category&quot;: &quot;Communication Gap&quot;,
+      &quot;source_annotation_rows&quot;: 0,
+      &quot;distinct_annotation_ids&quot;: 0,
+      &quot;grid_rows_with_annotation&quot;: 0
+    }
+  ],
+  &quot;physical_units_known&quot;: false,
+  &quot;availability_is_assumed&quot;: true,
+  &quot;measurement_axis_utc_interpretation_assumed&quot;: true,
+  &quot;grid_protocol_is_exploratory&quot;: true,
+  &quot;unannotated_is_not_proven_normal&quot;: true,
+  &quot;future_sample_used&quot;: false,
+  &quot;labels_used_as_features&quot;: false,
+  &quot;models_trained&quot;: false,
+  &quot;operational_approval&quot;: false,
+  &quot;checks&quot;: {
+    &quot;passed&quot;: true,
+    &quot;groups&quot;: 5,
+    &quot;checks&quot;: [
+      &quot;valores_idades_e_expiracao&quot;,
+      &quot;invariancia_ao_futuro&quot;,
+      &quot;multicanal_assincrono_e_sem_mutacao&quot;,
+      &quot;fronteiras_exatas&quot;,
+      &quot;entradas_invalidas&quot;
+    ],
+    &quot;nearest_counterexample_uses_future_at_second_7&quot;: true
+  },
+  &quot;authorship_sha256&quot;: null,
+  &quot;code_sha256&quot;: {
+    &quot;runner&quot;: &quot;e0e60bcf3340ac7d35bdf315bb5735c1f63e6f5f82acf4808b7ef0b574c2db32&quot;,
+    &quot;temporal.py&quot;: &quot;428580e03cb61ffbb5ca6d306863e339ca8f2cfe3c1006f7256dde35a80b6a99&quot;
+  },
+  &quot;versions&quot;: {
+    &quot;python&quot;: &quot;3.12.14&quot;,
+    &quot;numpy&quot;: &quot;2.3.5&quot;,
+    &quot;pandas&quot;: &quot;2.2.3&quot;
+  },
+  &quot;elapsed_seconds&quot;: 15.80814311300037
+}</pre>

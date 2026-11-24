@@ -1,0 +1,65 @@
+{
+  "schema": "renewcast-m08-1-delivery-verification-v1",
+  "verified_at_utc": "2026-11-04T16:07:18.268281+00:00",
+  "assisted_by": "Codex, at user request; not independent student authorship",
+  "verified": true,
+  "input_hashes_valid_against_local_manifest": true,
+  "input_sha256": {
+    "manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "treino_referencia.parquet": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+  },
+  "authorship_file_sha256": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+  "readonly_inputs_preserved": true,
+  "invalid_shapes_rejected": true,
+  "runs": {
+    "padrao_0p05": {
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44",
+      "all_output_hashes_valid": true,
+      "gradient_checks_passed": true,
+      "reload_difference": 0.0,
+      "first_loss": 1.0000000000000002,
+      "final_loss": 0.6346101118839145,
+      "curve_rows": 401,
+      "authorship_checked": false
+    },
+    "contraprova_0p8": {
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c",
+      "all_output_hashes_valid": true,
+      "gradient_checks_passed": true,
+      "reload_difference": 0.0,
+      "first_loss": 1.0000000000000002,
+      "final_loss": 1.7769091784326462e+16,
+      "curve_rows": 31,
+      "authorship_checked": false
+    },
+    "autoral_0p05": {
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41",
+      "all_output_hashes_valid": true,
+      "gradient_checks_passed": true,
+      "reload_difference": 0.0,
+      "first_loss": 1.0000000000000002,
+      "final_loss": 0.6346101118839145,
+      "curve_rows": 401,
+      "authorship_checked": true
+    }
+  },
+  "operational_model_approved": false,
+  "files_sha256": {
+    "notebooks/m08_gradiente_autoral.py": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+    "notebooks/laboratorio_autograd.py": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+    "reports/parecer_m08_autograd.md": "e72f05aee2985f569d6ff8c4d604ce2579d91450c822ed1e535efb023a1b83a1",
+    "docs/Explicacao_M08_1_Passo_a_Passo.md": "0ac65ef70e670d261fbf0aca168fb988100c2f2a6650e82576b93e09c608d91c",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/curva_treino.csv": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/linear_state.pt": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/predictions.csv": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/resultado.json": "40b013b41834c1062765d28d6ff94a3984e4af48c7cb83d0cb7c0a130645bf6d",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/curva_treino.csv": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/linear_state.pt": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/predictions.csv": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/resultado.json": "bf09db201fb2104206e238818d234c9b8bb7cef9a9b140194f500bb4d240b941",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/curva_treino.csv": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/linear_state.pt": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/predictions.csv": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+    "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/resultado.json": "d222d66b1d1ddac4b1eb2367e6abf5c2528666939d6e1aeb8222e918e2e34cc2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "renewcast-m09-1-html-authorship-validation-v1",
+  "verified_at_utc": "2026-11-17T14:44:47.992241+00:00",
+  "verified": true,
+  "run_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\20261117T144205Z_917f4acf",
+  "proof_directory": "C:\\renewable-forecast-lab\\reports\\transformer\\CJU_BA5EIGT\\m09_1_atencao\\comprovacao_20261117T144147Z_e63fc0be",
+  "html_float_cells_checked": 72,
+  "html_timestamps_checked": 24,
+  "position_integers_preserved": true,
+  "userwarning_treated_as_error": true,
+  "laboratory_stderr_empty": true,
+  "autoria_argument_recorded": true,
+  "authorship_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+  "code_sha256": {
+    "laboratorio_atencao.py": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8"
+  },
+  "integrated_check_groups": 8,
+  "additional_tests_passed": 6,
+  "maximum_difference_pytorch": 4.440892098500626e-16,
+  "unchanged_mathematical_artifacts": [
+    "pesos_livres.csv",
+    "pesos_causais.csv",
+    "janela_e_representacoes.csv",
+    "projecoes.json"
+  ],
+  "only_expected_format_change_from_distributed_script": true,
+  "input_and_output_hashes_valid": true,
+  "models_trained": false,
+  "m08_training_or_tests_repeated": false
+}

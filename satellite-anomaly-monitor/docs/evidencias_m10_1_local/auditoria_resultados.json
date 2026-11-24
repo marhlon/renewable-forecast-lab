@@ -1,0 +1,237 @@
+{
+  "schema": "satmon-m10-1-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-18T20:41:30.375142+00:00",
+  "run_id": "20261118T203614Z_7e13daae",
+  "run_directory": "reports/m10_1/20261118T203614Z_7e13daae",
+  "method": "NumPy searchsorted on persisted raw timestamps; no merge_asof, synchronizer, reference or runner imported.",
+  "audit_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "checks": {
+    "all_input_output_source_code_author_hashes": true,
+    "latest_result_identity": true,
+    "all_grid_rows_compared_independently": true,
+    "sample_time_age_value_usable": true,
+    "no_future_samples_and_maximum_age": true,
+    "expired_sample_evidence_preserved": true,
+    "profile_recomputed": true,
+    "source_events_and_closed_interval_annotations_recomputed": true,
+    "labels_separate_from_features": true,
+    "categories_ids_and_event_coverage_recomputed": true
+  },
+  "checked_hashes": {
+    "data/reference/esa_mission1_2007/source.json": "488589157b1f536988f7ec2a91ac693010766f0b017d7f113596a3d33f7a305c",
+    "data/reference/esa_mission1_2007/anomaly_types.csv": "e0cadee4ee9697c5ca8d4f9e81067454d7d7a00d063ee0de33cbc77660eec8bc",
+    "data/reference/esa_mission1_2007/channel_50.csv.gz": "881d216d9fca320cee5e6aef836f5f2f08a9b25a91b745f95a12699d9a0e7543",
+    "data/reference/esa_mission1_2007/channel_51.csv.gz": "2692b3d8db062fb216a3a57d748f4bb4a9a7d08dbf85d1b78dd9473e9573f080",
+    "data/reference/esa_mission1_2007/channel_52.csv.gz": "081759f986e913f210954676083c05ed45d0a7f8e041b034fb143c052409289f",
+    "data/reference/esa_mission1_2007/channels.csv": "27a4d6819642effc2a590d49e5bd2c7a915c06a1eb78502c34bed055d1c76d5d",
+    "data/reference/esa_mission1_2007/esa_metadata_croissant.json": "ea90c17c334d5d7e481277f85968495cb4078297af0f0040ec36bd70ea2a6530",
+    "data/reference/esa_mission1_2007/labels.csv": "1564d630f1ec1387d699ec81531ce57118051a220c8b7cba050a446a652b9082",
+    "scripts/executar_m10_1.py": "5b5d24f6f605366c3cdae05a5b9b862bcf8ce80775a807421b33211600732184",
+    "src/satmon/temporal.py": "428580e03cb61ffbb5ca6d306863e339ca8f2cfe3c1006f7256dde35a80b6a99",
+    "notebooks/m10_sincronizacao_autoral.py": "ac48cfc0bb24dac3dafad0e14a9e9bb555ef39b36699a09a22094d00e6638acd",
+    "reports/m10_1/20261118T203614Z_7e13daae/categorias.csv": "7675824b619b8af5942876c1b279de12c8e53de76861c7e3e87037cd35f278cb",
+    "reports/m10_1/20261118T203614Z_7e13daae/cobertura_eventos.csv": "3a719c3aab72966a5469198eba3a5ed9251ea5c89ec0f28f695d863d59bae664",
+    "reports/m10_1/20261118T203614Z_7e13daae/conferencia.json": "346f81494b21d3103bbf98042651f53dd0b762d42e9b9e0ac24a478d07c30eea",
+    "reports/m10_1/20261118T203614Z_7e13daae/contraprova_sintetica.csv": "a3592a18a9b6a3c238b903b9a3cf497cb0f114199815a91a45701fa0b66ca828",
+    "reports/m10_1/20261118T203614Z_7e13daae/eventos_fonte.csv": "a58dc670236100ef8d3bc08632c8c0e468f376abd6646dd95c5c4800bc491114",
+    "reports/m10_1/20261118T203614Z_7e13daae/grade_features.csv.gz": "20d6be0446fcb938b70155238269ec81a2082417a7a32128f536c013df6920bd",
+    "reports/m10_1/20261118T203614Z_7e13daae/perfil_canais.csv": "84add2985695732351c14b59e0110d10db21b97f8e5e518bf8863923781df4cc",
+    "reports/m10_1/20261118T203614Z_7e13daae/relatorio.html": "10da8275af52ffba7800b355abd217ad0935f621f0886daa7e7526f86f608492",
+    "reports/m10_1/20261118T203614Z_7e13daae/rotulos_grade.csv.gz": "902f1e61ca5970bf7ea0bb5398f0271f89e82e12272da22f6cbb320eabe721e4"
+  },
+  "grid_rows": 350400,
+  "raw_rows_total": 1046703,
+  "profiles_recomputed": [
+    {
+      "channel": "channel_50",
+      "raw_rows": 348901,
+      "null_values": 0,
+      "median_spacing_seconds": 90.0,
+      "p99_spacing_seconds": 90.003,
+      "largest_spacing_seconds": 1170.0,
+      "spacing_over_180s": 41,
+      "usable_grid_rows": 350346,
+      "unusable_grid_rows": 54,
+      "usable_fraction": 0.999845890410959
+    },
+    {
+      "channel": "channel_51",
+      "raw_rows": 348901,
+      "null_values": 0,
+      "median_spacing_seconds": 90.0,
+      "p99_spacing_seconds": 90.003,
+      "largest_spacing_seconds": 1170.0,
+      "spacing_over_180s": 41,
+      "usable_grid_rows": 350346,
+      "unusable_grid_rows": 54,
+      "usable_fraction": 0.999845890410959
+    },
+    {
+      "channel": "channel_52",
+      "raw_rows": 348901,
+      "null_values": 0,
+      "median_spacing_seconds": 90.0,
+      "p99_spacing_seconds": 90.003,
+      "largest_spacing_seconds": 1170.0,
+      "spacing_over_180s": 41,
+      "usable_grid_rows": 350346,
+      "unusable_grid_rows": 54,
+      "usable_fraction": 0.999845890410959
+    }
+  ],
+  "sample_reuse": [
+    {
+      "channel": "channel_50",
+      "raw_rows": 348901,
+      "usable_grid_rows": 350346,
+      "distinct_raw_samples_used": 348870,
+      "raw_samples_not_used": 31,
+      "samples_used_more_than_once": 1476,
+      "additional_grid_uses": 1476,
+      "max_grid_uses_per_sample": 2,
+      "no_previous_sample_grid_rows": 1,
+      "expired_grid_rows": 53,
+      "missing_latest_value_grid_rows": 0,
+      "examples": [
+        {
+          "sample_time": "2007-04-14T08:12:31.416000+00:00",
+          "value": 0.7427392601966857,
+          "grid_times": [
+            "2007-04-14T08:13:30+00:00",
+            "2007-04-14T08:15:00+00:00"
+          ],
+          "age_seconds": [
+            58.584,
+            148.584
+          ]
+        },
+        {
+          "sample_time": "2007-04-14T08:16:28.413000+00:00",
+          "value": 0.7108463644981384,
+          "grid_times": [
+            "2007-04-14T08:16:30+00:00",
+            "2007-04-14T08:18:00+00:00"
+          ],
+          "age_seconds": [
+            1.587,
+            91.587
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "channel_51",
+      "raw_rows": 348901,
+      "usable_grid_rows": 350346,
+      "distinct_raw_samples_used": 348870,
+      "raw_samples_not_used": 31,
+      "samples_used_more_than_once": 1476,
+      "additional_grid_uses": 1476,
+      "max_grid_uses_per_sample": 2,
+      "no_previous_sample_grid_rows": 1,
+      "expired_grid_rows": 53,
+      "missing_latest_value_grid_rows": 0,
+      "examples": [
+        {
+          "sample_time": "2007-04-14T08:12:31.416000+00:00",
+          "value": 0.7671893835067749,
+          "grid_times": [
+            "2007-04-14T08:13:30+00:00",
+            "2007-04-14T08:15:00+00:00"
+          ],
+          "age_seconds": [
+            58.584,
+            148.584
+          ]
+        },
+        {
+          "sample_time": "2007-04-14T08:16:28.413000+00:00",
+          "value": 0.7352964878082275,
+          "grid_times": [
+            "2007-04-14T08:16:30+00:00",
+            "2007-04-14T08:18:00+00:00"
+          ],
+          "age_seconds": [
+            1.587,
+            91.587
+          ]
+        }
+      ]
+    },
+    {
+      "channel": "channel_52",
+      "raw_rows": 348901,
+      "usable_grid_rows": 350346,
+      "distinct_raw_samples_used": 348870,
+      "raw_samples_not_used": 31,
+      "samples_used_more_than_once": 1476,
+      "additional_grid_uses": 1476,
+      "max_grid_uses_per_sample": 2,
+      "no_previous_sample_grid_rows": 1,
+      "expired_grid_rows": 53,
+      "missing_latest_value_grid_rows": 0,
+      "examples": [
+        {
+          "sample_time": "2007-04-14T08:12:31.416000+00:00",
+          "value": 0.7480561733245848,
+          "grid_times": [
+            "2007-04-14T08:13:30+00:00",
+            "2007-04-14T08:15:00+00:00"
+          ],
+          "age_seconds": [
+            58.584,
+            148.584
+          ]
+        },
+        {
+          "sample_time": "2007-04-14T08:16:28.413000+00:00",
+          "value": 0.7150982022285461,
+          "grid_times": [
+            "2007-04-14T08:16:30+00:00",
+            "2007-04-14T08:18:00+00:00"
+          ],
+          "age_seconds": [
+            1.587,
+            91.587
+          ]
+        }
+      ]
+    }
+  ],
+  "real_channel_clocks_coincide": true,
+  "all_channels_usable": 350346,
+  "event_annotation_rows": 33,
+  "distinct_event_ids": 10,
+  "category_summary_recomputed": [
+    {
+      "category": "Anomaly",
+      "source_annotation_rows": 7,
+      "distinct_annotation_ids": 3,
+      "grid_rows_with_annotation": 5732
+    },
+    {
+      "category": "Rare Event",
+      "source_annotation_rows": 26,
+      "distinct_annotation_ids": 7,
+      "grid_rows_with_annotation": 3303
+    },
+    {
+      "category": "Communication Gap",
+      "source_annotation_rows": 0,
+      "distinct_annotation_ids": 0,
+      "grid_rows_with_annotation": 0
+    }
+  ],
+  "event_intervals_with_no_grid_point": 0,
+  "source_checksum_limits": {
+    "derived_local_files_sha256_verified_now": true,
+    "whole_archive_checksum_verified_by_this_audit": false,
+    "whole_archive_checksum_verified_declared_by_source": false,
+    "individual_zip_members_crc32_verified_declared_by_source": true
+  },
+  "limits": "Consistency of this exploratory UTC grid does not establish physical units, actual arrival latency, annotation completeness, detector performance or operational approval."
+}

@@ -1,0 +1,39 @@
+name: Bloco 3 - contratos locais
+on:
+  push:
+    branches: ["codex/bloco3-ci-20261126"]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bloco3-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: src
+      PYTHONNOUSERSITE: "1"
+      OMP_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: config/requirements_ci_bloco3.txt
+      - name: Dependencias dos contratos
+        run: python -m pip install -r config/requirements_ci_bloco3.txt
+      - name: PyTorch CPU fixado
+        run: python -m pip install "torch==2.7.1+cpu" --index-url https://download.pytorch.org/whl/cpu
+      - name: Verificar contrato temporal
+        run: python scripts/verificar_ci_bloco3.py
+      - name: Contraprova deve falhar pela razao esperada
+        run: |
+          python -c "import json,subprocess,sys; r=subprocess.run([sys.executable,'scripts/verificar_ci_bloco3.py','--contraprova'],capture_output=True,text=True); d=json.loads(r.stdout); assert r.returncode==1 and d['invariant']=='lag2_exact_timestamp' and d['passed'] is False"
+      - name: Contratos de dados, operacao local e redes
+        run: python -m pytest -q -p no:cacheprovider tests/test_bloco3_data.py tests/test_bloco3_ops.py tests/test_bloco3_transferencia_neural.py

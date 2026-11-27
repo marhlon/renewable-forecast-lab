@@ -2,6 +2,8 @@
 
 Marlon Alves Bomfim · versão didática 1.66 · 17 de novembro de 2026 (America/Sao_Paulo)
 
+> **Retomada local de 24/11/2026:** este arquivo conserva a versão 1.66 e seu histórico; o painel abaixo não incorpora todas as entregas posteriores. Para o fechamento M00–M09, consultar o [roadmap reconciliado](ROADMAP_M00_M09.md) e o [cadastro de pendências](../config/roadmap_m00_m09.json). Há evidências locais M10.1–M10.4 e M11.1–M11.2 posteriores a este painel. A retomada não altera retroativamente aceites, não certifica autonomia e não equivale a uma nova versão didática emitida pelo professor.
+
 **Objetivo:** desenvolver autonomia para formular problemas de Ciência de Dados, construir soluções, avaliar evidências, explicar escolhas e manter entregas utilizáveis. A trilha terá ferramentas, fundamentos e provas práticas. Concluir a trilha fornece evidências de competência; o nível de cargo também depende da atuação profissional.
 
 Este documento mantém o estado atual do produto, as evidências de aprendizagem e o histórico das sessões. O painel da formação e o checkpoint no início são a referência para decidir a próxima ação. O inventário de entregas do P1 é secundário e não mede a conclusão da formação. As notas históricas conservam o estado da data em que foram escritas; uma pendência antiga pode ter sido resolvida em evidência posterior. A versão didática é independente da tag de software `v0.2.0`.

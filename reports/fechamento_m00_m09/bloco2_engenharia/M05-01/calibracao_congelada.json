@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-11-25T19:26:43.680425+00:00",
+  "n": 312,
+  "rank": 251,
+  "alpha": 0.2,
+  "nonnegative_expansion": 15.123976015276753,
+  "quantile_crossings_before_sort": 8,
+  "raw": {
+    "n": 312,
+    "coverage": 0.7019230769230769,
+    "width": 101.54080889578918,
+    "interval_score": 189.74467805392027,
+    "pinball_p10": 9.558753275277658,
+    "pinball_p50": 15.859503104693381,
+    "pinball_p90": 9.415714530114364,
+    "pinball_mean": 11.611323636695134,
+    "correction": 0.0
+  },
+  "cqr": {
+    "n": 312,
+    "coverage": 0.8044871794871795,
+    "width": 131.78876092634272,
+    "interval_score": 181.61897135928362,
+    "pinball_p10": 10.14403814643469,
+    "pinball_p50": 15.859503104693381,
+    "pinball_p90": 8.017858989493671,
+    "pinball_mean": 11.340466746873915,
+    "correction": 0.0
+  },
+  "serial_dependence_prevents_exchangeability_guarantee": true
+}

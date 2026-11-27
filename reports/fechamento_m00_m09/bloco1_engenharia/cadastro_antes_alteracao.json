@@ -1,0 +1,2652 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-25",
+  "scope": [
+    "M00",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09"
+  ],
+  "descricao": "Pendências de fechamento M00–M09 reconciliadas com arquivos locais. Não é percentual da formação nem substitui aceites históricos.",
+  "roteiro_historico": {
+    "path": "docs/Roteiro_Auditavel_Data_Science.md",
+    "versao_local": "1.66",
+    "data_local": "2026-11-17"
+  },
+  "regras": {
+    "fonte_estado": "Este cadastro; roteiro histórico preservado. Validação documental não certifica autonomia nem operação.",
+    "assistencia": "Registrar assistência recebida. Provas independentes exigem resposta do aluno e revisão própria.",
+    "criterio_temporal": "Congelar hipóteses, dados elegíveis, modelo e critérios antes do novo teste.",
+    "portoes": {
+      "formacao": "Fechamento das competências centrais M00–M09.",
+      "operacao": "Pré-condições documentadas para uma avaliação de uso operacional do P1; não autoriza produção.",
+      "ampliacao": "Entregas adicionais: novos modelos, multissérie, escala e cloud; não bloqueiam o núcleo formativo."
+    }
+  },
+  "items": [
+    {
+      "id": "M00-01",
+      "modulo": "M00",
+      "etapa": 2,
+      "titulo": "Transferir o diagnóstico para outro caso",
+      "natureza": "transferencia",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M00-01/protocolo.json",
+        "reports/fechamento_m00_m09/M00-01/resultado.json",
+        "reports/fechamento_m00_m09/M00-01/parecer.md",
+        "reports/fechamento_m00_m09/M00-01/resposta_independente.md",
+        "docs/learning/checkpoint.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Receber um caso novo sem implementação resolvida; explicar ambiente, contrato e falha.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Adaptar a solução e justificar limites em revisão registrada, declarando a assistência recebida.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M00-01/protocolo.json",
+          "sha256": "db83200952f49c122e5b0b483fddc765c756b384268ee74945affea9f9b76035",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M00-01/resultado.json",
+          "sha256": "dfdc4dfce25d01d2ffc459f75a3c2b0fe85e94071b72f6401843fde7436c4dec",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M00-01/parecer.md",
+          "sha256": "7e6325f380421ae83f7ff4cc1c53afb1da0501acf3830f00f1a4e8e455a45546",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M00-01/resposta_independente.md",
+          "sha256": "2a56c777029eaacc451fda649c4a9d5c94f3b4f9f64f5ecf727f83afb84ecc07",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/learning/checkpoint.md",
+          "sha256": "eb28f657759b2c6fc01ca7286419f49f68c4db814ad81280e79fe43450f027a3",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "notebooks/laboratorio_diagnostico_sql.py",
+          "sha256": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Diagnostico_SQL.md",
+          "sha256": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M01-01",
+      "modulo": "M01",
+      "etapa": 2,
+      "titulo": "Defender JOIN, nulos e janelas SQL",
+      "natureza": "transferencia",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M00-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/inspecao_lote_sql.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M01-01/protocolo.json",
+        "reports/fechamento_m00_m09/M01-01/resultado.json",
+        "reports/fechamento_m00_m09/M01-01/parecer.md",
+        "reports/fechamento_m00_m09/M01-01/consultas.sql"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Explicar granularidade, chave, LEFT/INNER JOIN, NULL e ordenação de LAG.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Prever manualmente a saída de uma janela e distinguir dado ausente de zero.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M01-01/protocolo.json",
+          "sha256": "9bc62dae567c0cbddb67ff1446cd1a94cb3ede33ce1ca2f7a9d702aa6c0827ff",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-01/resultado.json",
+          "sha256": "67dce20fab2b0033810c98d03eaa9401872eb5dabfaa4ea8f3f756dbc83a9de4",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-01/parecer.md",
+          "sha256": "88db892f8a69e25e1e42fd03f4d58fd689f035baaeb860d1a7cbd4d78536c26b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-01/consultas.sql",
+          "sha256": "8b0794ee90dbf9fdd6b306542ab1097379689d3821e199f4fe0be23a9cee9600",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "notebooks/laboratorio_diagnostico_sql.py",
+          "sha256": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Diagnostico_SQL.md",
+          "sha256": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M01-02",
+      "modulo": "M01",
+      "etapa": 2,
+      "titulo": "Aplicar o diagnóstico SQL em outro mês ou conjunto",
+      "natureza": "transferencia",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M01-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/inspecao_lote_sql.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M01-02/protocolo.json",
+        "reports/fechamento_m00_m09/M01-02/resultado.json",
+        "reports/fechamento_m00_m09/M01-02/parecer.md",
+        "reports/fechamento_m00_m09/M01-02/consultas.sql",
+        "reports/fechamento_m00_m09/M01-02/diagnostico.csv",
+        "docs/data_card.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Escolher outro recorte antes de calcular; preservar fonte e calendário.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Reconciliar contagens e divergências sem reaproveitar respostas prontas do exemplo anterior.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M01-02/protocolo.json",
+          "sha256": "57b42fabbd37bcbd614abf1bef5512c6030f4a178f2eca4242e910b011c317e2",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-02/resultado.json",
+          "sha256": "761fb87e3afe55acbd0f4e553707ac5a3243a57ceef96b8bbedfe4a8ed5714a9",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-02/parecer.md",
+          "sha256": "60650aca7f44cd26fd2e74c6a51fe2fe841c047a8555a6d3d815b4b053281c7b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-02/consultas.sql",
+          "sha256": "cd13cb06c1d956a717e4f0d44b65376760938b5faee0cc0c0758773e1d86a5e3",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M01-02/diagnostico.csv",
+          "sha256": "ce031b9429ae5a8093a269c242dc0f9db2b0bffed16976c2c85767fc46f1157b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/data_card.md",
+          "sha256": "455b145fb796fcf12af815fbaf5494c2b09388565a17275b0557157c98ccdf4b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "notebooks/laboratorio_diagnostico_sql.py",
+          "sha256": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Diagnostico_SQL.md",
+          "sha256": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-01",
+      "modulo": "M02",
+      "etapa": 3,
+      "titulo": "Probabilidade e distribuições aplicadas ao problema",
+      "natureza": "construcao",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-01/protocolo.json",
+        "reports/fechamento_m00_m09/M02-01/resultado.json",
+        "reports/fechamento_m00_m09/M02-01/parecer.md",
+        "notebooks/laboratorio_probabilidade.py",
+        "reports/fechamento_m00_m09/M02-01/exercicios.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Explicar probabilidade condicional, taxa-base, esperança, variância e distribuições adequadas ao evento.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Resolver casos novos e distinguir amostra, população e hipótese de independência.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M02-01/protocolo.json",
+          "sha256": "30b0476985b0dc197e7e0258cbbdfc23f4d0cb550cd54ed1effbea47516fa02c",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-01/resultado.json",
+          "sha256": "9b18038791eb79709aa66d3e4714edaf17b02c21c8f85e71b88d854021218928",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-01/parecer.md",
+          "sha256": "b1b02d5954d90e53cfbbe11edaf8c82c1342ac007b68323e1edbb8cc57a9935d",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "notebooks/laboratorio_probabilidade.py",
+          "sha256": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-01/exercicios.md",
+          "sha256": "d0a26bb8d6bc0c94715318bd018c38d0a87aad0529177c432ce356aa2cf1f25f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md",
+          "sha256": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md",
+          "sha256": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-02",
+      "modulo": "M02",
+      "etapa": 3,
+      "titulo": "Estimação, viés e intervalos",
+      "natureza": "construcao",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-02/protocolo.json",
+        "reports/fechamento_m00_m09/M02-02/resultado.json",
+        "reports/fechamento_m00_m09/M02-02/parecer.md",
+        "reports/fechamento_m00_m09/M02-02/estimativas.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Definir estimando, estimador, tamanho efetivo e pressupostos do intervalo.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Interpretar incerteza amostral sem confundir intervalo de parâmetro com intervalo de previsão.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M02-02/protocolo.json",
+          "sha256": "deee4abc1776c92e3d22d6ce79b6490fba014832d6d1f5557507a978c70b6a04",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-02/resultado.json",
+          "sha256": "53546ee93fce4dd18610ae796a40405cdcab20cda91753df0e5ea51af3e7820f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-02/parecer.md",
+          "sha256": "3db0b20c5eccd2d1a0d517031d06012ce2e5c61dcfed5ee6ce12f3f13159c60e",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-02/estimativas.csv",
+          "sha256": "4cd8343f88fdd3b780de2e569c0d36d7f4b77903f200905122cd491075a761d2",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md",
+          "sha256": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md",
+          "sha256": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-03",
+      "modulo": "M02",
+      "etapa": 3,
+      "titulo": "Testes de hipóteses e validade",
+      "natureza": "construcao",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-02"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-03/protocolo.json",
+        "reports/fechamento_m00_m09/M02-03/resultado.json",
+        "reports/fechamento_m00_m09/M02-03/parecer.md",
+        "reports/fechamento_m00_m09/M02-03/plano_hipoteses.md",
+        "reports/fechamento_m00_m09/M02-03/comparacao.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Fixar hipótese, efeito mínimo relevante e regra de decisão antes de ver o novo resultado.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Tratar dependência temporal, múltiplas tentativas e seleção anterior; limitar a conclusão ao desenho.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M02-03/protocolo.json",
+          "sha256": "880154282e51ba2352a8a51f3152bec26ca8fbf370e185f550ef2160671052b2",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-03/resultado.json",
+          "sha256": "7d4dfedb625132411db6111f517e129d5f90e4f0cc4fc57345666454f7401970",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-03/parecer.md",
+          "sha256": "c712e3002b15da095fc6c7933bd96d8c38443168bf4e296e6c3eb4368794f6e2",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-03/plano_hipoteses.md",
+          "sha256": "00caeda4f0142cdd48094596f96e1a518d0e5158f1ec39213fb50fc185fef128",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-03/comparacao.csv",
+          "sha256": "a207e87d10fbd8f9a0c0e2f2856e5fafeb9ac7721cc61f8989b636044848e7ca",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md",
+          "sha256": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md",
+          "sha256": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-04",
+      "modulo": "M02",
+      "etapa": 3,
+      "titulo": "Derivar regressão e verificar pressupostos",
+      "natureza": "construcao",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/m08_gradiente_autoral.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-04/protocolo.json",
+        "reports/fechamento_m00_m09/M02-04/resultado.json",
+        "reports/fechamento_m00_m09/M02-04/parecer.md",
+        "notebooks/laboratorio_regressao_fundamentos.py",
+        "reports/fechamento_m00_m09/M02-04/diagnosticos.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Derivar solução/gradiente de regressão linear e efeito da regularização; conferir shapes e posto.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Analisar resíduos, dependência e pressupostos, separando previsão de inferência sobre coeficientes.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M02-04/protocolo.json",
+          "sha256": "96cb1bdf806d8f56f0c391283a373cee8f6340c17312aab5b084339bdefefa74",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-04/resultado.json",
+          "sha256": "343f97a0277cd943f3d82c8d415f97bd31bb248bee636728cd78aa2d55f025be",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-04/parecer.md",
+          "sha256": "59a7965770cec7675a33cabc134a0dff6e39f565e0f68fd8f7be9ed6cccd091b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "notebooks/laboratorio_regressao_fundamentos.py",
+          "sha256": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-04/diagnosticos.csv",
+          "sha256": "81b938236a04d42149ede6a08933406b6a8f9df7fd0e1b47f2fa6f72b8f4597d",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md",
+          "sha256": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md",
+          "sha256": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-05",
+      "modulo": "M02",
+      "etapa": 1,
+      "titulo": "Recuperar a implementação incompleta do bootstrap",
+      "natureza": "construcao",
+      "estado": "validado",
+      "constatacao": "Implementação reconstruída e CLI verificadas em 59 testes pequenos. A execução em previsões reais M02-08 permanece no bloco 2; não se declara RNG idêntico ao código histórico incompleto.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_gain_uncertainty.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-05/protocolo.json",
+        "reports/fechamento_m00_m09/M02-05/resultado.json",
+        "reports/fechamento_m00_m09/M02-05/parecer.md",
+        "src/renewable_forecast/weather_gain_uncertainty.py",
+        "reports/fechamento_m00_m09/M02-05/contraprovas.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Recuperar versão preservada ou completar summarize/CLI com proveniência, retorno explícito e controles de entrada.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Conferir pareamento, circularidade dentro do mesmo fold, contagens e determinismo em casos pequenos, sem treinar modelos.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M02-05/protocolo.json",
+          "sha256": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-05/resultado.json",
+          "sha256": "2a851bec1ed8c11045d5f5966bc7812e354be11445c5e264e2651d46eaf8defa",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-05/parecer.md",
+          "sha256": "cbd5869978096e0f9774b42a91ef221a4a5b4389dca897270c3744aee12da59a",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "src/renewable_forecast/weather_gain_uncertainty.py",
+          "sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M02-05/contraprovas.json",
+          "sha256": "220ce36eba751de638f4bf197d85b8923a4c8e00f4f55d0fa3a22b506798cdf3",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "tests/test_weather_gain_uncertainty.py",
+          "sha256": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M02-06",
+      "modulo": "M02",
+      "etapa": 4,
+      "titulo": "Avaliar as respostas de perda, decisão e risco",
+      "natureza": "interpretacao",
+      "estado": "planejado",
+      "constatacao": "A aula de decisão foi relatada; o arquivo da clínica não foi localizado em notebooks/.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-01",
+        "M02-02"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-06/protocolo.json",
+        "reports/fechamento_m00_m09/M02-06/resultado.json",
+        "reports/fechamento_m00_m09/M02-06/parecer.md",
+        "reports/fechamento_m00_m09/M02-06/respostas.md",
+        "reports/fechamento_m00_m09/M02-06/custos.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Localizar a versão recebida ou documentar sua ausência; conservar vínculo com as previsões usadas.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Conferir cálculo de custo/quantil e limites da probabilidade; registrar revisão das respostas.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-07",
+      "modulo": "M02",
+      "etapa": 4,
+      "titulo": "Transferir a análise estatística para outro recorte",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Prova independente de transferência ainda não validada.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-03",
+        "M02-04",
+        "M02-08",
+        "M02-06"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-07/protocolo.json",
+        "reports/fechamento_m00_m09/M02-07/resultado.json",
+        "reports/fechamento_m00_m09/M02-07/parecer.md",
+        "reports/fechamento_m00_m09/M02-07/resposta_independente.md",
+        "reports/statistical_audit.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Registrar outro recorte e hipóteses antes da análise; calcular efeito e incerteza apropriados à dependência.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Defender a decisão sem copiar a conclusão histórica; uma resposta assistida não certifica autonomia.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M02-08",
+      "modulo": "M02",
+      "etapa": 4,
+      "titulo": "Executar e interpretar o bootstrap em blocos horários",
+      "natureza": "execucao",
+      "estado": "planejado",
+      "constatacao": "E42/E47 registram referências históricas; execução própria e recibo atual ainda não validados.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-02",
+        "M02-05"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_gain_uncertainty.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M02-08/protocolo.json",
+        "reports/fechamento_m00_m09/M02-08/resultado.json",
+        "reports/fechamento_m00_m09/M02-08/parecer.md",
+        "reports/fechamento_m00_m09/M02-08/bootstrap.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Reutilizar previsões pareadas salvas e fixar semente, réplicas e blocos 6/24/48h antes da análise; não refazer ajuste.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Distinguir blocos horários de reamostragem por fold, interpretar intervalos condicionais e não selecionar tamanho de bloco pelo resultado conveniente.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M03-01",
+      "modulo": "M03",
+      "etapa": 5,
+      "titulo": "Defender seleção temporal e baselines",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Baselines, tuning e holdout já executados; falta defesa autônoma.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-03"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/backtest.py",
+        "src/renewable_forecast/modeling.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M03-01/protocolo.json",
+        "reports/fechamento_m00_m09/M03-01/resultado.json",
+        "reports/fechamento_m00_m09/M03-01/parecer.md",
+        "reports/fechamento_m00_m09/M03-01/defesa.md",
+        "docs/model_card.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Explicar disponibilidade dos alvos, purga, ajuste e seleção sem usar o teste na escolha.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Defender baseline e métrica a partir do custo e do horizonte, sem escolher só o melhor fold.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M03-02",
+      "modulo": "M03",
+      "etapa": 5,
+      "titulo": "Produzir explicação local e testar seus limites",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "SHAP ou explicação local equivalente não localizada como entrega validada.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M03-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/modeling.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M03-02/protocolo.json",
+        "reports/fechamento_m00_m09/M03-02/resultado.json",
+        "reports/fechamento_m00_m09/M03-02/parecer.md",
+        "notebooks/explicacao_local.py",
+        "reports/fechamento_m00_m09/M03-02/explicacoes.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Escolher método local compatível com o modelo e fixar fundo/recorte no desenvolvimento.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Conferir previsões e estabilidade entre exemplos; distinguir atribuição, correlação e causa física.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M03-03",
+      "modulo": "M03",
+      "etapa": 5,
+      "titulo": "Selecionar atributos de forma sistemática",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Ablações pontuais existem; seleção completa não validada.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M03-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_ablation.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M03-03/protocolo.json",
+        "reports/fechamento_m00_m09/M03-03/resultado.json",
+        "reports/fechamento_m00_m09/M03-03/parecer.md",
+        "notebooks/selecao_atributos_temporal.py",
+        "reports/fechamento_m00_m09/M03-03/candidatos.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Congelar grupos de atributos e seleção temporal, ajustando preprocessamento dentro de cada treino.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Comparar mesmas origens, baseline e custo; reservar período novo e registrar inclusive resultados negativos.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M03-04",
+      "modulo": "M03",
+      "etapa": 9,
+      "titulo": "Avaliar uma escolha congelada em período novo",
+      "natureza": "execucao",
+      "estado": "planejado",
+      "constatacao": "As semanas já examinadas não são novos testes independentes.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [
+        "M03-02",
+        "M03-03",
+        "M05-01",
+        "M05-02",
+        "M09-03"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "reports/parecer_m09_pre_treinado.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M03-04/protocolo.json",
+        "reports/fechamento_m00_m09/M03-04/resultado.json",
+        "reports/fechamento_m00_m09/M03-04/parecer.md",
+        "reports/fechamento_m00_m09/M03-04/predicoes.csv",
+        "reports/fechamento_m00_m09/M03-04/metricas.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Congelar modelo, atributos, cortes e critérios antes de abrir um novo período elegível.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Comparar baselines pareados, erro, viés, intervalos e custo; não reajustar no teste nem alegar superioridade sem evidência.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M04-01",
+      "modulo": "M04",
+      "etapa": 1,
+      "titulo": "Aplicar a correção E51 no contrato de vento",
+      "natureza": "construcao",
+      "estado": "validado",
+      "constatacao": "Correção E51 aplicada por nomes exatos; 38 casos de geometria e integração JSON conferidos sem fit ou carregamento de modelo.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_artifact.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M04-01/protocolo.json",
+        "reports/fechamento_m00_m09/M04-01/resultado.json",
+        "reports/fechamento_m00_m09/M04-01/parecer.md",
+        "src/renewable_forecast/weather_artifact.py",
+        "reports/fechamento_m00_m09/M04-01/contraprovas.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Selecionar velocidade/u/v pelos nomes exatos mantendo tolerância e hypot.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Rejeitar pedido fisicamente incoerente mesmo com ordem invertida; aceitar componentes negativos válidos e preservar entradas.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M04-01/protocolo.json",
+          "sha256": "de874a96cbba8d3924c38693c520a598c1995d036a766b2bc893dca465b98b6f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-01/resultado.json",
+          "sha256": "47a6e17ed514ed5656663752edd819b0b5e07096af9b419dde52e828bd48b4c4",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-01/parecer.md",
+          "sha256": "0aaddf0aac8f340241112d095ea9c0704370f7ada55e245576232950ab58022b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "src/renewable_forecast/weather_artifact.py",
+          "sha256": "7cb0b45fa5233e0aab8e261ac959335bd4751e14522073c1fe3ce18c46de789f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-01/contraprovas.json",
+          "sha256": "4ea6cd3e1f844512f3173970dd024c832a5ec141434ea5103406776a4692a478",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "tests/test_wind_geometry.py",
+          "sha256": "a1d6b69ba080a069e8c1eb0e17cbeafca81f849077bb1b7ecff6e27683dbc1c0",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M04-02",
+      "modulo": "M04",
+      "etapa": 1,
+      "titulo": "Documentar fuso e intervalo da geração",
+      "natureza": "fonte_externa",
+      "estado": "bloqueado",
+      "constatacao": "Fuso e borda do intervalo ONS não comprovados nas fontes consultadas. Auditoria e parecer disponíveis; sem aceite operacional.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/data_contract.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M04-02/protocolo.json",
+        "reports/fechamento_m00_m09/M04-02/resultado.json",
+        "reports/fechamento_m00_m09/M04-02/parecer.md",
+        "reports/fechamento_m00_m09/M04-02/contrato_geracao.json",
+        "reports/fechamento_m00_m09/M04-02/fontes.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Para concluir, obter evidência primária identificada e suficiente para fuso, unidade e significado do timestamp; ausência documentada mantém o item aberto.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Enquanto não confirmado, manter o bloqueio operacional correspondente e não tratar consistência interna como comprovação da fonte.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M04-02/protocolo.json",
+          "sha256": "2fe9b7078b8e2a1e72a000bf0a32386bbc0ea775235ce3ae0bbaa942cea937c5",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-02/resultado.json",
+          "sha256": "c89e609ee4854a5c998c464397be0ee4ca115259d0774142e61facd0d6fb7736",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-02/parecer.md",
+          "sha256": "0ba92ae102d31286128a942aeeafdf2b72ce0c02506291ef7f5a17bd92ec4971",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-02/contrato_geracao.json",
+          "sha256": "08a1ea51199bc78575aeb10bdd4533b22c0064cf7caf738cdd2ef551d6c12aad",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-02/fontes.md",
+          "sha256": "df5af7494fa8bf967361d6c076d6796f41ef153e95c22e67b36ccc56f3b88a2c",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fontes_e_Limites.md",
+          "sha256": "be564e10ab1a689090692176cae74544e3a3811171d75ff9da1bf7ecf48d6a71",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": {
+        "motivo": "Fuso e borda do intervalo ONS não comprovados nas fontes consultadas.",
+        "condicao_desbloqueio": "Obter referência primária aplicável ao dataset e revisar o contrato contra ela."
+      }
+    },
+    {
+      "id": "M04-03",
+      "modulo": "M04",
+      "etapa": 1,
+      "titulo": "Comprovar disponibilidade histórica da meteorologia",
+      "natureza": "fonte_externa",
+      "estado": "bloqueado",
+      "constatacao": "A disponibilidade histórica foi assumida em seis horas; nenhum horário de publicação observado foi localizado. Auditoria e parecer disponíveis; sem aceite operacional.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_asof.py",
+        "src/renewable_forecast/weather_history.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M04-03/protocolo.json",
+        "reports/fechamento_m00_m09/M04-03/resultado.json",
+        "reports/fechamento_m00_m09/M04-03/parecer.md",
+        "reports/fechamento_m00_m09/M04-03/disponibilidade.csv",
+        "reports/fechamento_m00_m09/M04-03/fontes.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Separar run_time, valid_time, available_at e consulta; preservar evidência da publicação usada.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Verificar ausência de informação posterior à origem com latências observadas; cache baixado hoje não comprova disponibilidade passada.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M04-03/protocolo.json",
+          "sha256": "dbac49295be7060e448532d026bc413baddb45d444fdfb708032209b6c2c8f4c",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-03/resultado.json",
+          "sha256": "ab16136a876bd552c0f66b22a33415621df92285e4b2aebeefd331453a2f05fe",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-03/parecer.md",
+          "sha256": "d89c656c6fa91718eb4d4338ef172efe8c40f631a683caf5f90553ebcdd690fd",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-03/disponibilidade.csv",
+          "sha256": "102100c665d816cfce9b46699a1e3f7d0caa7f10f41960685aceb048c1061347",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-03/fontes.md",
+          "sha256": "bfd8d63a7271b3a075544e91e4a87acd4a17f1bcc1b7c9e5433f9c01afdd8277",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fontes_e_Limites.md",
+          "sha256": "be564e10ab1a689090692176cae74544e3a3811171d75ff9da1bf7ecf48d6a71",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": {
+        "motivo": "A disponibilidade histórica foi assumida em seis horas; nenhum horário de publicação observado foi localizado.",
+        "condicao_desbloqueio": "Obter recibos históricos adequados ou executar coleta prospectiva com disponibilidade observada antes da origem, sem retrovalidar julho."
+      }
+    },
+    {
+      "id": "M04-04",
+      "modulo": "M04",
+      "etapa": 1,
+      "titulo": "Versionar o cadastro com dois tempos",
+      "natureza": "construcao",
+      "estado": "bloqueado",
+      "constatacao": "Mecanismo bitemporal e seis testes construídos; 15 registros exportados com conhecimento observado e vigência histórica não confirmada. Seleção operacional exclui os não comprovados.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/asset_registry.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M04-04/protocolo.json",
+        "reports/fechamento_m00_m09/M04-04/resultado.json",
+        "reports/fechamento_m00_m09/M04-04/parecer.md",
+        "reports/fechamento_m00_m09/M04-04/cadastro_versionado.csv",
+        "reports/fechamento_m00_m09/M04-04/fontes.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Registrar vigência física e momento em que cada versão ficou conhecida, incluindo origem e identidade do snapshot.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Provar que uma versão futura não altera emissões passadas e registrar lacunas sem inventar datas.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M04-04/protocolo.json",
+          "sha256": "0324c7e0ef54d034662e3cdcb2bc53f9c9060f33b70b02d87b2990e418258815",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-04/resultado.json",
+          "sha256": "1495d2922e96922b6a4e393a26483806bc4a0b28833fba24bbc7c941ea786f27",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-04/parecer.md",
+          "sha256": "2fbdaaf6e46851bdab91cd490d581572425d6895885ae66083c126f5e3c5506a",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-04/cadastro_versionado.csv",
+          "sha256": "8c0c777ebecef3d7095ca524a5946df9d599a932188952820eea4cee85336f7f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-04/fontes.md",
+          "sha256": "5eaf5fcfbe823e9513ba66ba0baa4e61dbc76e63e3a8d2c643a56d3e0d7bc8ff",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "src/renewable_forecast/asset_registry_history.py",
+          "sha256": "6287e3ce4ab9346658134366f80ce3ba146106c687f7c8156b4fb245bed54161",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "scripts/preparar_cadastro_bitemporal.py",
+          "sha256": "d3315ed1b9222134b3a0445661c7edf9958e479115770337f8117e47aafa7b24",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "tests/test_asset_registry_history.py",
+          "sha256": "6c384c56554be8ddb3ffdce213c9f1498a44a7a42359d32d6292bf95186bba70",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": {
+        "motivo": "A seleção bitemporal existe, mas a vigência física histórica do snapshot cadastral não é comprovada.",
+        "condicao_desbloqueio": "Obter versões históricas sustentadas de cadastro/capacidades/coordenadas e seus tempos de conhecimento."
+      }
+    },
+    {
+      "id": "M04-05",
+      "modulo": "M04",
+      "etapa": 1,
+      "titulo": "Fechar o contrato operacional point-in-time",
+      "natureza": "auditoria",
+      "estado": "bloqueado",
+      "constatacao": "A coerência interna foi auditada; os contratos externos M04-02/03/04 continuam abertos. Auditoria e parecer disponíveis; sem aceite operacional.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [
+        "M04-01",
+        "M04-02",
+        "M04-03",
+        "M04-04"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_training.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M04-05/protocolo.json",
+        "reports/fechamento_m00_m09/M04-05/resultado.json",
+        "reports/fechamento_m00_m09/M04-05/parecer.md",
+        "reports/fechamento_m00_m09/M04-05/auditoria_temporal.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Auditar geração, meteorologia, cadastro, alvo e disponibilidade em uma mesma emissão.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Distinguir integridade, compatibilidade e atualidade; liberar o escopo operacional apenas com contratos sustentados.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M04-05/protocolo.json",
+          "sha256": "c9b7bce6f70f0dfe220bcd44fdd2fc03ce56b86755e45644c8f3e121dcc9c2cb",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-05/resultado.json",
+          "sha256": "94dccb5573d2b76735bfa28002bea1794be8eb821b862737c87227cd71e8c184",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-05/parecer.md",
+          "sha256": "cb2d168f82a5b46b3081f8653616dce478b8003f9f6f3b329f202ba5b0c735f6",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M04-05/auditoria_temporal.json",
+          "sha256": "e5e694689512f8966b9371694edaa9351084dbe63e942224dc0010b714791a7f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fontes_e_Limites.md",
+          "sha256": "be564e10ab1a689090692176cae74544e3a3811171d75ff9da1bf7ecf48d6a71",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": {
+        "motivo": "A coerência interna foi auditada; os contratos externos M04-02/03/04 continuam abertos.",
+        "condicao_desbloqueio": "Concluir as comprovações externas e reaplicar a auditoria antes de qualquer homologação operacional."
+      }
+    },
+    {
+      "id": "M05-01",
+      "modulo": "M05",
+      "etapa": 6,
+      "titulo": "Medir estabilidade futura dos intervalos",
+      "natureza": "execucao",
+      "estado": "planejado",
+      "constatacao": "Calibração de intervalos aplicada; estabilidade em período novo ainda não estabelecida.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [
+        "M02-08",
+        "M03-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_interval_calibration.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M05-01/protocolo.json",
+        "reports/fechamento_m00_m09/M05-01/resultado.json",
+        "reports/fechamento_m00_m09/M05-01/parecer.md",
+        "reports/fechamento_m00_m09/M05-01/cobertura_por_periodo.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Congelar calibrador antes do novo período e avaliar cobertura, largura e pinball por subperíodo.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Definir tamanhos mínimos e tolerâncias no protocolo, registrar incerteza e reação à quebra sem recalibrar o teste.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M05-02",
+      "modulo": "M05",
+      "etapa": 6,
+      "titulo": "Calibrar probabilidades de classe e avaliar alarmes",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Brier e bins existem; calibração operacional de probabilidade não demonstrada.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [
+        "M02-03",
+        "M03-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_events.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M05-02/protocolo.json",
+        "reports/fechamento_m00_m09/M05-02/resultado.json",
+        "reports/fechamento_m00_m09/M05-02/parecer.md",
+        "reports/fechamento_m00_m09/M05-02/calibracao_classe.csv",
+        "reports/fechamento_m00_m09/M05-02/alarmes.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Separar ajuste, calibração/seleção e avaliação; comparar Brier e confiabilidade com baseline.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Fixar custo/capacidade/limiar antes da avaliação futura; não usar cobertura de intervalos como prova de calibração de classe.",
+          "atendido": false
+        },
+        {
+          "id": "C3",
+          "descricao": "Explicar por que três quantis não determinam a probabilidade exata de uma queda arbitrária e por que uma cota atendida no desenvolvimento não limita alarmes futuros em runtime.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M05-03",
+      "modulo": "M05",
+      "etapa": 6,
+      "titulo": "Definir e avaliar rampas horárias como outro alvo",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Evento entre y(t-2) e y(t+24) cobre 26h; não valida rampas de 1h.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M01-02",
+        "M02-06"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/weather_events.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M05-03/protocolo.json",
+        "reports/fechamento_m00_m09/M05-03/resultado.json",
+        "reports/fechamento_m00_m09/M05-03/parecer.md",
+        "reports/fechamento_m00_m09/M05-03/contrato_rampa.json",
+        "reports/fechamento_m00_m09/M05-03/rampas.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Definir sinal, magnitude, horizonte e disponibilidade de uma rampa de 1h antes dos rótulos.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Avaliar baseline e detector no novo contrato, conservando o experimento antigo de extremos como tarefa distinta.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M05-04",
+      "modulo": "M05",
+      "etapa": 7,
+      "titulo": "Comparar LightGBM e CatBoost no protocolo temporal",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "As duas bibliotecas não têm execução validada registrada.",
+      "portoes": [
+        "ampliacao"
+      ],
+      "depende_de": [
+        "M03-03"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/modeling.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M05-04/protocolo.json",
+        "reports/fechamento_m00_m09/M05-04/resultado.json",
+        "reports/fechamento_m00_m09/M05-04/parecer.md",
+        "reports/fechamento_m00_m09/M05-04/comparacao_modelos.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Fixar versões e orçamento e executar ambos com as mesmas origens e sem seleção pelo teste.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Registrar erro, custo e limitações; ausência de ganho também encerra a comparação técnica.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M05-05",
+      "modulo": "M05",
+      "etapa": 7,
+      "titulo": "Treinar modelo global de múltiplas séries",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Modelo global próprio multissérie não executado no escopo recebido.",
+      "portoes": [
+        "ampliacao"
+      ],
+      "depende_de": [
+        "M03-03",
+        "M07-03"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/supervised.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M05-05/protocolo.json",
+        "reports/fechamento_m00_m09/M05-05/resultado.json",
+        "reports/fechamento_m00_m09/M05-05/parecer.md",
+        "reports/fechamento_m00_m09/M05-05/metricas_por_serie.csv",
+        "reports/fechamento_m00_m09/M05-05/cortes.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Definir conjunto de séries e estratégia de generalização temporal/entre séries antes do treino.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Evitar vazamento de normalizadores e cadastros; comparar global com baselines locais por série e agregado.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-01",
+      "modulo": "M06",
+      "etapa": 1,
+      "titulo": "Reconciliar acesso e inventário do registro local",
+      "natureza": "auditoria",
+      "estado": "validado",
+      "constatacao": "Os oito arquivos foram lidos fora do sandbox e seus hashes coincidem. A restrição observada era de acesso nesse contexto; nenhum arquivo foi restaurado.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/event_registry.py",
+        "docs/Aula_M06_Registro_Rollback.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-01/protocolo.json",
+        "reports/fechamento_m00_m09/M06-01/resultado.json",
+        "reports/fechamento_m00_m09/M06-01/parecer.md",
+        "reports/fechamento_m00_m09/M06-01/inventario_registry.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Distinguir acesso negado de ausência real e identificar recibos/identidades afetados antes de procurar uma versão preservada.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Recuperar apenas fontes verificáveis ou registrar a perda e o limite; não fabricar manifesto nem substituir silenciosamente o run aceito.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M06-01/protocolo.json",
+          "sha256": "b38061b8fa3d773fad0a272434a0e387918980179fb81ae8bfaafa0f4e88f532",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M06-01/resultado.json",
+          "sha256": "e7b1de0eef99d554119a95715793f20dc1a123155bce6f13cb4f7c1a2b49e384",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M06-01/parecer.md",
+          "sha256": "ef049048ee54cbd843bca48bb98ff7f4d8adc70bf08d05826ec14cf549588823",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M06-01/inventario_registry.json",
+          "sha256": "4a145c5b54843802461e5bf822f45237073297e101470e04ae49bd664e086f1e",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "scripts/auditar_evidencias_bloco1.py",
+          "sha256": "0de726d7ca07bf71b918cee8d900af1decc1ad40951151b9961c54ebd46ebc1b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "scripts/evidencias_bloco1.py",
+          "sha256": "6743aa2e03bb15b4f3285b73b61523ec76cfd0de3bf3c4787799434f2ded0b0f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M06-02",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Executar CI remoto no GitHub Actions",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Há template em ci_examples; nenhuma execução remota demonstrada.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "ci_examples/renewcast-container.yml",
+        "docs/Aula_M06_Docker_CI.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-02/protocolo.json",
+        "reports/fechamento_m00_m09/M06-02/resultado.json",
+        "reports/fechamento_m00_m09/M06-02/parecer.md",
+        "reports/fechamento_m00_m09/M06-02/ci_remoto.json",
+        "reports/fechamento_m00_m09/M06-02/url_execucao.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Ativar workflow adequado no repositório remoto e registrar URL, commit, ambiente e logs reais.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Demonstrar sucesso e falha de uma verificação relevante; validar clone limpo sem depender de arquivos locais ignorados.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-03",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Demonstrar MLflow Model Registry",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Tracking/bancos locais e registro SQLite não equivalem ao Model Registry.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [
+        "M06-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/event_registry.py",
+        "pyproject.toml"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-03/protocolo.json",
+        "reports/fechamento_m00_m09/M06-03/resultado.json",
+        "reports/fechamento_m00_m09/M06-03/parecer.md",
+        "reports/fechamento_m00_m09/M06-03/registry_mlflow.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Registrar versão e assinatura do modelo, identidade das entradas e critério de transição.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Demonstrar resolução da versão ativa e rollback reproduzível, distinguindo Registry de tracking e SQLite de exercícios.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-04",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Operar shadow com entrada e chegada reais",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Replay histórico e monitor de exercício já aceitos; shadow ao vivo não demonstrado.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [
+        "M04-05",
+        "M06-02",
+        "M06-07",
+        "M06-08"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/event_batch.py",
+        "src/renewable_forecast/http_telemetry.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-04/protocolo.json",
+        "reports/fechamento_m00_m09/M06-04/resultado.json",
+        "reports/fechamento_m00_m09/M06-04/parecer.md",
+        "reports/fechamento_m00_m09/M06-04/shadow.csv",
+        "reports/fechamento_m00_m09/M06-04/incidentes.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Congelar modelo/política e janela de observação; registrar emissões reais, chegada das entradas e conciliação posterior dos alvos.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Operar sem comandar equipamentos, medir falhas/latência/cobertura e registrar interrupções; replay não conta como shadow ao vivo.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-05",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Monitorar continuamente o serviço e suas previsões",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Telemetria HTTP foi exercitada; continuidade e sustentação ainda não demonstradas.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [
+        "M06-04"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "config/monitoring_h24_v1.json",
+        "src/renewable_forecast/event_monitor.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-05/protocolo.json",
+        "reports/fechamento_m00_m09/M06-05/resultado.json",
+        "reports/fechamento_m00_m09/M06-05/parecer.md",
+        "reports/fechamento_m00_m09/M06-05/monitoramento.csv",
+        "reports/fechamento_m00_m09/M06-05/incidentes.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Observar no período predefinido disponibilidade, latência, atualidade, atrasos de rótulo e qualidade das previsões.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Testar falha/recuperação e responsável por incidente; duração e cobertura devem ser medidas, sem classificar um log isolado como continuidade.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-06",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Detectar drift e testar resposta operacional",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Detecção de drift não tem entrega validada.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [
+        "M06-05"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/event_monitor.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-06/protocolo.json",
+        "reports/fechamento_m00_m09/M06-06/resultado.json",
+        "reports/fechamento_m00_m09/M06-06/parecer.md",
+        "reports/fechamento_m00_m09/M06-06/drift.csv",
+        "reports/fechamento_m00_m09/M06-06/resposta_drift.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Fixar referência, variáveis, testes/limiares e orçamento de falsos alertas antes da janela avaliada.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Distinguir mudança de entrada, atraso/qualidade e queda de desempenho; testar resposta sem retreino ou promoção automática indevida.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-07",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Fechar controles de segurança do escopo de implantação",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Cenários delimitados não constituem aceite operacional de segurança.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/api.py",
+        "deploy/container_template/serve.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-07/protocolo.json",
+        "reports/fechamento_m00_m09/M06-07/resultado.json",
+        "reports/fechamento_m00_m09/M06-07/parecer.md",
+        "reports/fechamento_m00_m09/M06-07/avaliacao_seguranca.md",
+        "reports/fechamento_m00_m09/M06-07/contraprovas.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Definir ameaça, exposição, autenticação, limites de requisição e tratamento de segredos para o ambiente alvo.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Verificar controles com resultados registrados e plano de incidente, sem publicar credenciais ou alegar certificação geral.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-08",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Medir capacidade e custo do ambiente alvo",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Orçamento de cenário e benchmark local não medem sustentação real.",
+      "portoes": [
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/orcamento_distribuicao.py",
+        "scripts/medir_concorrencia.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-08/protocolo.json",
+        "reports/fechamento_m00_m09/M06-08/resultado.json",
+        "reports/fechamento_m00_m09/M06-08/parecer.md",
+        "reports/fechamento_m00_m09/M06-08/capacidade_custo.csv",
+        "reports/fechamento_m00_m09/M06-08/orcamento.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Fixar carga, SLO, teto de gasto e regra de interrupção antes da execução.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Medir CPU/memória/latência/erros e custo do escopo, incluindo falhas e serviços acessórios; distinguir estimativa de cobrança observada.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M06-09",
+      "modulo": "M06",
+      "etapa": 8,
+      "titulo": "Demonstrar implantação cloud delimitada",
+      "natureza": "operacao",
+      "estado": "planejado",
+      "constatacao": "Não há implantação cloud demonstrada.",
+      "portoes": [
+        "ampliacao"
+      ],
+      "depende_de": [
+        "M06-02",
+        "M06-03",
+        "M06-07",
+        "M06-08"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "deploy/container_template/serve.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M06-09/protocolo.json",
+        "reports/fechamento_m00_m09/M06-09/resultado.json",
+        "reports/fechamento_m00_m09/M06-09/parecer.md",
+        "reports/fechamento_m00_m09/M06-09/deploy_cloud.json",
+        "reports/fechamento_m00_m09/M06-09/desligamento.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Preparar ambiente isolado e plano de custo/reversão antes de qualquer criação de recurso.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Com autorização e credenciais do titular, implantar, testar acesso/rollback e encerrar recursos; registrar identidade e custo real sem segredos.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M07-01",
+      "modulo": "M07",
+      "etapa": 7,
+      "titulo": "Construir camadas bronze, silver e gold",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Medallion architecture não localizada como entrega.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M01-02"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/laboratorio_delta.py",
+        "src/renewable_forecast/data_contract.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M07-01/protocolo.json",
+        "reports/fechamento_m00_m09/M07-01/resultado.json",
+        "reports/fechamento_m00_m09/M07-01/parecer.md",
+        "reports/fechamento_m00_m09/M07-01/linhagem.json",
+        "reports/fechamento_m00_m09/M07-01/contratos_camadas.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Preservar bruto imutável e separar limpeza/contratos de tabela de consumo, com chaves e disponibilidade.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Demonstrar versão, quarentena, reprocessamento idempotente e rastreabilidade da gold até a origem.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M07-02",
+      "modulo": "M07",
+      "etapa": 7,
+      "titulo": "Medir escala real sob recursos controlados",
+      "natureza": "execucao",
+      "estado": "planejado",
+      "constatacao": "Equivalência do recorte com partições não comprova benefício em escala.",
+      "portoes": [
+        "ampliacao"
+      ],
+      "depende_de": [
+        "M07-01",
+        "M07-04"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "scripts/executar_m07_spark.py",
+        "docs/Aula_M07_3_Databricks.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M07-02/protocolo.json",
+        "reports/fechamento_m00_m09/M07-02/resultado.json",
+        "reports/fechamento_m00_m09/M07-02/parecer.md",
+        "reports/fechamento_m00_m09/M07-02/benchmark_escala.csv",
+        "reports/fechamento_m00_m09/M07-02/plano_final.txt"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Fixar tamanhos, recursos, repetição, materialização e escopo do cronômetro; separar dado real de ampliação sintética.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Comparar resultados e custo/memória/tempo com plano final observado; não inferir AQE ou causa de desempenho a partir do plano inicial.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M07-03",
+      "modulo": "M07",
+      "etapa": 7,
+      "titulo": "Operar pipeline multissérie incremental",
+      "natureza": "construcao",
+      "estado": "planejado",
+      "constatacao": "Operação distribuída e transferência multissérie não demonstradas.",
+      "portoes": [
+        "ampliacao"
+      ],
+      "depende_de": [
+        "M07-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "scripts/executar_m07_spark.py",
+        "src/renewable_forecast/asset_registry.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M07-03/protocolo.json",
+        "reports/fechamento_m00_m09/M07-03/resultado.json",
+        "reports/fechamento_m00_m09/M07-03/parecer.md",
+        "reports/fechamento_m00_m09/M07-03/execucoes_incrementais.json",
+        "reports/fechamento_m00_m09/M07-03/qualidade_por_serie.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Definir chaves por série/tempo e provar que lags e joins não atravessam séries.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Executar incremento, dado atrasado, repetição e recuperação de falha preservando disponibilidade e mesma saída elegível.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M07-04",
+      "modulo": "M07",
+      "etapa": 2,
+      "titulo": "Corrigir o parecer de plano e medição e defendê-lo",
+      "natureza": "interpretacao",
+      "estado": "aguarda_revisao",
+      "constatacao": "Material e demonstração assistida construídos e executados; aguarda a resposta do aluno e a revisão da compreensão/transferência.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "reports/scale_comparison.md",
+        "docs/Verificacao_M07_3_Professor.json"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M07-04/protocolo.json",
+        "reports/fechamento_m00_m09/M07-04/resultado.json",
+        "reports/fechamento_m00_m09/M07-04/parecer.md",
+        "reports/scale_comparison.md",
+        "reports/fechamento_m00_m09/M07-04/defesa.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Aplicar correções de revisão simulada, janela 20h–01h, cronômetro antes de explain, Exchange de broadcast e Photon nativo.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Explicar limites do plano inicial e tratar cache/aquecimento como hipóteses, sem repetir Spark/Databricks aceitos.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M07-04/protocolo.json",
+          "sha256": "e4f078c813aa62c55fb9b105e6d10bc7bb36b8acb7161de08be08fb5cd233931",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M07-04/resultado.json",
+          "sha256": "955d673db3efb4dff5b5604eda2beea7366f751c3c93da91c1852d15ae3b9b89",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M07-04/parecer.md",
+          "sha256": "f1cb3481315f00e76042d848bc7eb77d639b108fbdaf273ce31c64101a1a48ac",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/scale_comparison.md",
+          "sha256": "7f63d4b2fb19148c0e9b0837921d40c710c07510e13f7370915d35c8d4fb2bef",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M07-04/defesa.md",
+          "sha256": "d3effb4dd6694b1cba1b676b8c0b0a6d859b8fbd5828cbab7038b9888b51c865",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "notebooks/laboratorio_diagnostico_sql.py",
+          "sha256": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Diagnostico_SQL.md",
+          "sha256": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M08-01",
+      "modulo": "M08",
+      "etapa": 1,
+      "titulo": "Auditar os brutos Windows M08.1 e M08.2 localizados",
+      "natureza": "auditoria",
+      "estado": "validado",
+      "constatacao": "Auditoria de preservação concluída: saídas fixadas íntegras e divergência do arquivo autoral atual explicitamente registrada. Não certifica reprodução com o código atual nem autonomia.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "docs/Revisao_M08_2.md",
+        "reports/parecer_m08_autograd.md",
+        "reports/parecer_m08_mlp.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M08-01/protocolo.json",
+        "reports/fechamento_m00_m09/M08-01/resultado.json",
+        "reports/fechamento_m00_m09/M08-01/parecer.md",
+        "reports/fechamento_m00_m09/M08-01/auditoria_brutos.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Inventariar recibos, saídas, código e hashes dos runs locais sem misturar referência Linux e Windows.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Registrar arquivos ausentes ou divergentes e limites da auditoria; recuperar evidência antes de considerar repetir uma execução.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M08-01/protocolo.json",
+          "sha256": "85d266847cda0c14a7dfecc3906227b66bb2b41c6f0b5278e49c1fbb286a50ea",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M08-01/resultado.json",
+          "sha256": "019808bb3cce1a174a9570330f28fc4e1e598befb4b5904a1027c6f647fdf34c",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M08-01/parecer.md",
+          "sha256": "5dc8d0cf5115de7a931167bdeebc56412312309408ef48c4e5a554c4cbea4250",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M08-01/auditoria_brutos.json",
+          "sha256": "31660fae40eba9512768939216bae3f90d49c21a8be5dd5783482f79ec519afe",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "scripts/auditar_evidencias_bloco1.py",
+          "sha256": "0de726d7ca07bf71b918cee8d900af1decc1ad40951151b9961c54ebd46ebc1b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "scripts/evidencias_bloco1.py",
+          "sha256": "6743aa2e03bb15b4f3285b73b61523ec76cfd0de3bf3c4787799434f2ded0b0f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M08-02",
+      "modulo": "M08",
+      "etapa": 9,
+      "titulo": "Defender GRU versus HGB usando os números locais",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Treino e célula aceitos; parecer existente não prova defesa independente.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M02-07",
+        "M03-01",
+        "M08-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "reports/parecer_m08_gru.md",
+        "docs/revisoes_m08_3/Revisao_M08_3.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M08-02/protocolo.json",
+        "reports/fechamento_m00_m09/M08-02/resultado.json",
+        "reports/fechamento_m00_m09/M08-02/parecer.md",
+        "reports/fechamento_m00_m09/M08-02/defesa_independente.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Explicar discordância MAE/RMSE, viés, dispersão entre sementes e erros por origem sem selecionar só a melhor semente.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Defender escolha sob uma restrição de uso e identificar qual nova evidência mudaria a decisão, sem refazer treino aceito.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M08-03",
+      "modulo": "M08",
+      "etapa": 9,
+      "titulo": "Adaptar o fluxo neural em caso novo",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Retenção ou adaptação independente ainda não avaliada.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M08-02"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "notebooks/m08_avaliacao_autoral.py",
+        "notebooks/m08_gru_autoral.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M08-03/protocolo.json",
+        "reports/fechamento_m00_m09/M08-03/resultado.json",
+        "reports/fechamento_m00_m09/M08-03/parecer.md",
+        "reports/fechamento_m00_m09/M08-03/resposta_independente.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Adaptar janela, batching ou estado em exemplo novo e prever shapes antes de executar.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Preservar modo do modelo e separação temporal; registrar resposta do aluno e avaliação sem certificar autonomia a partir de código fornecido.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M09-01",
+      "modulo": "M09",
+      "etapa": 1,
+      "titulo": "Auditar os artefatos completos M09.2 agora presentes",
+      "natureza": "auditoria",
+      "estado": "validado",
+      "constatacao": "Auditoria de composição/persistência concluída, com dois scripts atuais divergentes dos recibos. Blocos e saídas históricas preservados; nenhuma previsão ou treino reexecutado.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "src/renewable_forecast/transformer_blocks.py",
+        "docs/Revisao_M09_1_2.md",
+        "tests/test_m09_transformer_blocks.py"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M09-01/protocolo.json",
+        "reports/fechamento_m00_m09/M09-01/resultado.json",
+        "reports/fechamento_m00_m09/M09-01/parecer.md",
+        "reports/fechamento_m00_m09/M09-01/auditoria_transformer.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Conferir versões, hashes, checkpoint e saídas do run relatado sem atribuir logs de uma rodada a outra.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Delimitar auditoria de persistência/composição versus treino e previsão; reexecutar apenas verificação pontual se faltar evidência necessária.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M09-01/protocolo.json",
+          "sha256": "3a7e231804626cc269aafe6f5e33c081ab84cec444feffbb0c130fc52f4af1ce",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-01/resultado.json",
+          "sha256": "907bbf9766b818bf53ca79f95777be2815e465b4ba88a99dbcce3abd88b58f63",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-01/parecer.md",
+          "sha256": "06ec4e24f465ea1c1413b162bdc04491faf5121d62c67f0032a012117daa44ad",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-01/auditoria_transformer.json",
+          "sha256": "b945efbddd3e3af2da0c65701b5bd2a1ee6b1917e9cc0c6ec3a063db668db50e",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "scripts/auditar_evidencias_bloco1.py",
+          "sha256": "0de726d7ca07bf71b918cee8d900af1decc1ad40951151b9961c54ebd46ebc1b",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "scripts/evidencias_bloco1.py",
+          "sha256": "6743aa2e03bb15b4f3285b73b61523ec76cfd0de3bf3c4787799434f2ded0b0f",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M09-02",
+      "modulo": "M09",
+      "etapa": 9,
+      "titulo": "Transferir a interpretação de atenção e blocos",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Atenção/composição aplicadas; explicação independente ainda não demonstrada.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M08-03",
+        "M09-01"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "reports/parecer_m09_atencao.md",
+        "reports/parecer_m09_transformer.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M09-02/protocolo.json",
+        "reports/fechamento_m00_m09/M09-02/resultado.json",
+        "reports/fechamento_m00_m09/M09-02/parecer.md",
+        "reports/fechamento_m00_m09/M09-02/resposta_independente.md"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Explicar Q/K/V, eixos, máscaras, residual/norma/FFN e diferença entre slots sintéticos e horizontes.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Resolver uma mudança de contexto ou máscara sem solução fornecida, considerando disponibilidade na origem e no prefixo.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    },
+    {
+      "id": "M09-03",
+      "modulo": "M09",
+      "etapa": 1,
+      "titulo": "Delimitar possível sobreposição com o pré-treino",
+      "natureza": "auditoria",
+      "estado": "validado",
+      "constatacao": "Delimitação do pré-treino revisada e aceita tecnicamente: identidade conferida, sobreposição desconhecida, nenhuma alegação de ausência de contaminação ou teste futuro.",
+      "portoes": [
+        "formacao",
+        "operacao"
+      ],
+      "depende_de": [],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "docs/model_source_m09_3.json",
+        "reports/parecer_m09_pre_treinado.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M09-03/protocolo.json",
+        "reports/fechamento_m00_m09/M09-03/resultado.json",
+        "reports/fechamento_m00_m09/M09-03/parecer.md",
+        "reports/fechamento_m00_m09/M09-03/fontes_pre_treino.md",
+        "reports/fechamento_m00_m09/M09-03/limites_avaliacao.json"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Investigar documentação primária da revisão/modelo e registrar o que é conhecido e o que permanece indeterminado.",
+          "atendido": true
+        },
+        {
+          "id": "C2",
+          "descricao": "Não afirmar ausência de contaminação sem prova; definir avaliação prospectiva ou limitação explícita que impeça conclusões externas indevidas.",
+          "atendido": true
+        }
+      ],
+      "evidencias": [
+        {
+          "path": "reports/fechamento_m00_m09/M09-03/protocolo.json",
+          "sha256": "27ebaa74c7b5824267fd6830223ab6ae0c7ee38cacb235163b3d09c83c3e06c0",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-03/resultado.json",
+          "sha256": "96033fbb069dd940dc86d0fe62341e897eca6b89786328e0dd8b1c0822bb95c9",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-03/parecer.md",
+          "sha256": "c223ad2a4f19d470fec4d6dbbca6622cd6bca1321f849b1989388bed4f89baaf",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-03/fontes_pre_treino.md",
+          "sha256": "6c50b6565c30816c381d053cd1a2b00d7e25ef65565b22c542a0f66d1e66aa93",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "reports/fechamento_m00_m09/M09-03/limites_avaliacao.json",
+          "sha256": "4dace0a09dfb492f8c926d06db2bd43bf29c7066d9944ce17019186bfe1e016e",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+          "sha256": "71aac48e542362b7be7252101578acb5b5392f6e7cd320695d651d8069128e51",
+          "kind": "revisao_tecnica_assistida"
+        },
+        {
+          "path": "docs/roadmap_m00_m09/Fontes_e_Limites.md",
+          "sha256": "be564e10ab1a689090692176cae74544e3a3811171d75ff9da1bf7ecf48d6a71",
+          "kind": "entrega_executada_ou_preparada_no_escopo_declarado"
+        }
+      ],
+      "revisao": {
+        "responsavel": "Codex — revisão técnica assistida do agente principal",
+        "data": "2026-11-25",
+        "parecer": "docs/roadmap_m00_m09/Revisao_Tecnica_Bloco1.md",
+        "decisao": "aprovado"
+      },
+      "bloqueio": null
+    },
+    {
+      "id": "M09-04",
+      "modulo": "M09",
+      "etapa": 9,
+      "titulo": "Fechar a decisão integrada e a aplicação",
+      "natureza": "transferencia",
+      "estado": "planejado",
+      "constatacao": "Comparação técnica entregue e parecer local existe; faltam defesa própria e avaliação nova.",
+      "portoes": [
+        "formacao"
+      ],
+      "depende_de": [
+        "M03-04",
+        "M08-02",
+        "M09-02"
+      ],
+      "evidencias_base": [
+        "docs/Roteiro_Auditavel_Data_Science.md",
+        "reports/parecer_m09_pre_treinado.md",
+        "docs/Revisao_M09_3_Windows.md"
+      ],
+      "entregaveis": [
+        "reports/fechamento_m00_m09/M09-04/protocolo.json",
+        "reports/fechamento_m00_m09/M09-04/resultado.json",
+        "reports/fechamento_m00_m09/M09-04/parecer.md",
+        "reports/fechamento_m00_m09/M09-04/defesa_final.md",
+        "reports/fechamento_m00_m09/M09-04/matriz_decisao.csv"
+      ],
+      "criterios": [
+        {
+          "id": "C1",
+          "descricao": "Defender modelo a partir de erro, viés, intervalos, custo e limites do pré-treino no mesmo protocolo.",
+          "atendido": false
+        },
+        {
+          "id": "C2",
+          "descricao": "Apresentar resultado do período novo e um plano de aplicação proporcional à evidência; formação e autorização operacional permanecem decisões separadas.",
+          "atendido": false
+        }
+      ],
+      "evidencias": [],
+      "revisao": null,
+      "bloqueio": null
+    }
+  ],
+  "blocos": [
+    {
+      "id": 1,
+      "nome": "Reparos, diagnóstico e fundamentos",
+      "etapas": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Incerteza, seleção e validação",
+      "etapas": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Ampliação, sustentação e aplicação",
+      "etapas": [
+        7,
+        8,
+        9
+      ]
+    }
+  ]
+}

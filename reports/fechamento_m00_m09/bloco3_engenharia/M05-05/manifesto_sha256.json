@@ -1,0 +1,45 @@
+{
+  "generated_at_utc": "2026-11-26T00:42:37.138749+00:00",
+  "files": [
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/cortes.json",
+      "sha256": "e26b632495af7d6988c8a32eb1cf55319a9b0eba3c9b168946a643554e5cddb3",
+      "bytes": 2309
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/global_hgb.joblib",
+      "sha256": "86ae7defa0b7b5cdfe4ddd57f656f28759a82bb99ff12a3fafa777cbac2f0b71",
+      "bytes": 205840
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/metricas_por_serie.csv",
+      "sha256": "8a3408c5a0a942af8addfa453dfe61c6fc341749f25a4f1818f7ecf423480c36",
+      "bytes": 2677
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/parecer.md",
+      "sha256": "2b408b7fcc9f8564ea1a78606f37bdb2f01143d0c81422158f1954963b9398a0",
+      "bytes": 3898
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/previsoes_pareadas.csv",
+      "sha256": "652eeef997771966247063b29e7314d74cbda17dd0bd4e1d739b5644f4942181",
+      "bytes": 476994
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/protocolo.json",
+      "sha256": "e93a6c8cbb374020a370502585d61f603f894e8ca3df339ebc9b6091d3067bed",
+      "bytes": 3613
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/recursos_treino.csv",
+      "sha256": "2dc66146574c3e414043109d1f2dd245adf33f4cf222c38295f64812596ed5ce",
+      "bytes": 298
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/resultado.json",
+      "sha256": "b1f6703d19b2692ef0356a4278eaf661a7161a080a9cf28906bed8f4149e5604",
+      "bytes": 8693
+    }
+  ]
+}

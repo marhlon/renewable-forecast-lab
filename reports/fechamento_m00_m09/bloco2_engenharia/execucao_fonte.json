@@ -1,0 +1,21 @@
+{
+  "schema": "renewcast-bloco2-observed-source-executions-v1",
+  "observed_date": "2026-11-25",
+  "freeze_command": "python scripts/obter_avaliacao_bloco2.py congelar --arquivo ...",
+  "freeze_exit_code": 0,
+  "frozen_files": 29,
+  "freeze_created_at_utc": "2026-11-25T19:27:20.852938+00:00",
+  "download_command": "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe scripts\\obter_avaliacao_bloco2.py baixar",
+  "attempts": [
+    {"sandbox": "restricted", "exit_code": 1, "reason": "WinError 10013: rede bloqueada antes de obter dados; nenhum bruto gravado"},
+    {"sandbox": "user_approved_escalation", "exit_code": 0, "network_permission_received": true, "raw_bytes": 4629118, "filtered_rows": 744}
+  ],
+  "freeze_verification_command": "python scripts/obter_avaliacao_bloco2.py verificar",
+  "freeze_verification_exit_code": 0,
+  "source_receipt": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/fonte.json",
+  "downloaded_at_utc": "2026-11-25T19:54:23.765913+00:00",
+  "extracted_at_utc": "2026-11-25T19:54:25.018459+00:00",
+  "http_request_start_recorded": false,
+  "models_or_policy_changed_during_network_retry": false,
+  "operational_approval": false
+}

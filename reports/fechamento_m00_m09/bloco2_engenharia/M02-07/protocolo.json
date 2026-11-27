@@ -1,0 +1,66 @@
+{
+  "schema": "renewcast-bloco2-paired-block-bootstrap-protocol-v1",
+  "item_id": "M02-07",
+  "registered_at_utc": "2026-11-25T16:20:13.842474+00:00",
+  "mode": "Applied engineering solution supplied with Codex assistance; no independent authorship claimed.",
+  "primary_horizon_hours": 6,
+  "primary_estimand": "Mean paired abs(target-HGB_history) minus abs(target-HGB_history_weather), MWmed. Positive favours history+weather.",
+  "supplementary_estimand": "Mean paired abs(target-persistence) minus abs(target-HGB_history_weather), MWmed. This answers a separate baseline question.",
+  "fixed_parameters": {
+    "repetitions": 5000,
+    "seed": 42,
+    "block_hours": [
+      6,
+      24,
+      48
+    ],
+    "nominal_confidence_level": 0.95,
+    "quantile_method": "linear"
+  },
+  "method": {
+    "unit": "Consecutive hourly paired error deltas; circular wrapping stays within each fold.",
+    "stratification": "Fixed observed folds; preserve n per fold in every replica.",
+    "aggregation": "Fold means weighted by n; interval from combined weighted replicas.",
+    "rng": "Frozen CLI uses local SeedSequence([seed,block_hours,fold]).",
+    "block_selection": "Report all three lengths; do not select by interval sign.",
+    "nonpositive_fraction": "Descriptive bootstrap fraction, never a p-value.",
+    "no_iid_replacement_for_time": "No IID bootstrap will be used as temporal evidence."
+  },
+  "transfer_comparison": "Compare h6 and h24 conditional analyses and fold sensitivity. Horizons have different targets; no causal test of horizon superiority or uncomputed CI for their difference is claimed.",
+  "baseline_adapter": "Create a separate derived CSV: preserve origin/target/fold/observed/candidate, store original HGB history explicitly, map persistence into CLI reference field hgb_history and recompute its paired delta. Labels in analysis identify persistence, not HGB.",
+  "source_scope": "Saved 504-row development predictions per horizon, already examined/selected historically; not new holdout. No training or inference.",
+  "verification_plan": [
+    "Validate input/metadata/protocol hashes and prior M02-05 method/59-case receipt; do not rerun that test suite.",
+    "Recompute every stored absolute error and paired delta from saved rows.",
+    "Validate command exit, source/code/output hashes, n/fold/time grids and all 12 summary rows per comparison.",
+    "Reconcile all point estimates/MAEs with direct calculations and n-weighted folds; check finite ordered intervals and descriptive fractions.",
+    "Report all folds, all blocks and both estimands, preserving historical metrics and runs."
+  ],
+  "input_sha256": {
+    "reports/weather_ablation/CJU_BA5EIGT/july_development/predictions.csv": "291e9aec32608505b4ec7423de814401e372cf3411fcefad001ffeb4a0f7df76",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development/metadata.json": "132929e6b0f8d477a4d30d25bb925204b93d054d47d46201f47cda16c27ed98e",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development/protocol.json": "c1dfc390bd73ab6658525f8f6e47a453da13200ba1d914fff2f66d24d024d0b4",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development/folds.csv": "d2e719dd31e9b0dc918c4ce93ac63a60dd20963786c7edfb6e9bf281c69424ac",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development/summary.csv": "5190f1d9b997aa92d551e3d4608f2a7d4337fcdfd09a04de1ec0131d2d98cd43",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/predictions.csv": "ae4c804e0e812c426ab5430868d5f482d5af5fd814e7eca3e64c32a9849ae022",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/metadata.json": "d6a837a79d21afe09df96684cd3c262ff48fb1abef20bfc0fe5333feaefb465b",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/protocol.json": "6397c1c8817f9f2eb8da23aea2fe5b43727983f2c1f94029a629deea436c32d3",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/folds.csv": "888375f881434b7e7a6ee766aa767743066b73a28d515d81600a9b1a85fa5f88",
+    "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/summary.csv": "fcc2a861717520c102b17d57fd676a5bf9f70895615acebfd8b51dc083cddf3f"
+  },
+  "frozen_method_sha256": {
+    "src/renewable_forecast/weather_gain_uncertainty.py": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03"
+  },
+  "prior_construction_evidence_sha256": {
+    "reports/fechamento_m00_m09/M02-05/resultado.json": "2a851bec1ed8c11045d5f5966bc7812e354be11445c5e264e2651d46eaf8defa",
+    "reports/fechamento_m00_m09/M02-05/contraprovas.json": "220ce36eba751de638f4bf197d85b8923a4c8e00f4f55d0fa3a22b506798cdf3",
+    "reports/fechamento_m00_m09/M02-05/protocolo.json": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b",
+    "tests/test_weather_gain_uncertainty.py": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e"
+  },
+  "excluded": [
+    "Refit/training/inference",
+    "New predictive test or new data",
+    "Claim of contamination-free or operational validity",
+    "Changes to old code/runs/config/README/roadmap"
+  ]
+}

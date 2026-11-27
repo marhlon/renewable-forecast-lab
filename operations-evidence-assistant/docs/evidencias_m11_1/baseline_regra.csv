@@ -1,0 +1,7 @@
+﻿id,tipo,origem,regra_python
+renewcast_replay,evidencia_anterior,"M06/E69: exemplo real HTTP 200 em inferência de desenvolvimento, forecast_origin 2026-08-01T05:00:00Z",BELOW
+renewcast_sem_resposta,evidencia_anterior,"M06: cliente Windows com API encerrada, state unavailable / exit 3, sem p_event",INSUFFICIENT
+satmon_tres_canais,evidencia_anterior,"M10.4: três canais, semente 17, 2011–2013, resultado de referência",BELOW
+satmon_sem52,evidencia_anterior,"M10.4: sem channel_52, semente 17, 2011–2013, resultado de referência",ISOLATED
+igualdade,contraprova_sintetica,Exemplo construído para mostrar inclusão da igualdade; nenhum ID vem associado,ELIGIBLE
+picos_sem_par,contraprova_sintetica,Exemplo construído de dois picos separados por lacunas; não há par utilizável,ISOLATED

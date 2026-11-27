@@ -1,0 +1,121 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 140148659800,
+      "run_id": 45889590759,
+      "workflow_name": "Bloco 3 - contratos locais",
+      "head_branch": "codex/bloco3-ci-20261126",
+      "run_url": "https://api.github.com/repos/marhlon/renewable-forecast-lab/actions/runs/45889590759",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUfGukM8AAAAgoYLWWA",
+      "head_sha": "a487f7c9f37951102cc2be9ff38830ea04ad5f52",
+      "url": "https://api.github.com/repos/marhlon/renewable-forecast-lab/actions/jobs/140148659800",
+      "html_url": "https://github.com/marhlon/renewable-forecast-lab/actions/runs/45889590759/job/140148659800",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-26T20:14:34Z",
+      "started_at": "2026-11-26T20:14:36Z",
+      "completed_at": "2026-11-26T20:15:27Z",
+      "name": "contracts",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-26T20:14:36Z",
+          "completed_at": "2026-11-26T20:14:37Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-26T20:14:37Z",
+          "completed_at": "2026-11-26T20:14:43Z"
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-26T20:14:43Z",
+          "completed_at": "2026-11-26T20:14:44Z"
+        },
+        {
+          "name": "Dependencias dos contratos",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-26T20:14:44Z",
+          "completed_at": "2026-11-26T20:14:58Z"
+        },
+        {
+          "name": "PyTorch CPU fixado",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-26T20:14:58Z",
+          "completed_at": "2026-11-26T20:15:19Z"
+        },
+        {
+          "name": "Verificar contrato temporal",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-26T20:15:19Z",
+          "completed_at": "2026-11-26T20:15:19Z"
+        },
+        {
+          "name": "Contraprova deve falhar pela razao esperada",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-26T20:15:19Z",
+          "completed_at": "2026-11-26T20:15:20Z"
+        },
+        {
+          "name": "Contratos de dados, operacao local e redes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-26T20:15:20Z",
+          "completed_at": "2026-11-26T20:15:23Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-26T20:15:23Z",
+          "completed_at": "2026-11-26T20:15:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-26T20:15:26Z",
+          "completed_at": "2026-11-26T20:15:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-26T20:15:26Z",
+          "completed_at": "2026-11-26T20:15:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/marhlon/renewable-forecast-lab/check-runs/140148659800",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000443,
+      "runner_name": "GitHub Actions 1000000443",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "executed_at": "2026-11-26T00:37:44.704379+00:00",
+  "execution_kind": "real_local_mlflow_model_registry",
+  "mlflow_version": "3.16.0",
+  "registry_uri": "sqlite:///C:/renewable-forecast-lab/reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/mlflow_registry.sqlite",
+  "registered_model": "renewcast_b3_frozen_hgb",
+  "versions": [
+    "1",
+    "2"
+  ],
+  "active_alias": "active",
+  "active_version": "1",
+  "run_id": "b694192dae75432e9efbc0ef7afa5aa1",
+  "transitions": [
+    {
+      "recorded_at": "2026-11-26T00:37:44.299442+00:00",
+      "action": "activate_initial",
+      "resolved_version": "1",
+      "source": "file:///C:/renewable-forecast-lab/reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/mlflow_model",
+      "run_id": "b694192dae75432e9efbc0ef7afa5aa1",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "recorded_at": "2026-11-26T00:37:44.474378+00:00",
+      "action": "promote_identical_package",
+      "resolved_version": "2",
+      "source": "file:///C:/renewable-forecast-lab/reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/mlflow_model",
+      "run_id": "b694192dae75432e9efbc0ef7afa5aa1",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "recorded_at": "2026-11-26T00:37:44.681896+00:00",
+      "action": "rollback",
+      "resolved_version": "1",
+      "source": "file:///C:/renewable-forecast-lab/reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/mlflow_model",
+      "run_id": "b694192dae75432e9efbc0ef7afa5aa1",
+      "max_prediction_difference": 0.0
+    }
+  ],
+  "input_identity": {
+    "path": "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/input_example.csv",
+    "sha256": "d16eafd6d012a0da35aa7f68c4c4276c8b3770784a8a1514430109820e98bff9",
+    "rows": 48,
+    "features": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_4h",
+      "lag_5h",
+      "lag_6h",
+      "lag_7h",
+      "lag_8h",
+      "lag_9h",
+      "lag_10h",
+      "lag_11h",
+      "lag_12h",
+      "lag_13h",
+      "lag_14h",
+      "lag_15h",
+      "lag_16h",
+      "lag_17h",
+      "lag_18h",
+      "lag_19h",
+      "lag_20h",
+      "lag_21h",
+      "lag_22h",
+      "lag_23h",
+      "lag_24h",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos"
+    ]
+  },
+  "model_identity": {
+    "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib",
+    "sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "selected": "HGB_lags24_calendar",
+    "training_cut": "2026-07-01 00:00",
+    "retraining": false
+  },
+  "signature": {
+    "inputs": "[{\"type\": \"double\", \"name\": \"lag_1h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_2h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_3h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_4h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_5h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_6h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_7h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_8h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_9h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_10h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_11h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_12h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_13h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_14h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_15h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_16h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_17h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_18h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_19h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_20h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_21h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_22h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_23h\", \"required\": true}, {\"type\": \"double\", \"name\": \"lag_24h\", \"required\": true}, {\"type\": \"double\", \"name\": \"hour_sin\", \"required\": true}, {\"type\": \"double\", \"name\": \"hour_cos\", \"required\": true}, {\"type\": \"double\", \"name\": \"dow_sin\", \"required\": true}, {\"type\": \"double\", \"name\": \"dow_cos\", \"required\": true}]",
+    "outputs": "[{\"type\": \"tensor\", \"tensor-spec\": {\"dtype\": \"float64\", \"shape\": [-1]}}]",
+    "params": null
+  },
+  "mlmodel_sha256": "a56e54af1ca746ef2be565b2a710db36352f73ffb7d609b104b715c987135335",
+  "criteria": {
+    "C1": true,
+    "C2": true
+  },
+  "limits": [
+    "SQLite é apenas backend desta instalação real do MLflow Registry; não reutiliza event_registry.",
+    "Duas versões apontam o mesmo modelo: prova resolução/rollback de implantação, não superioridade de candidato.",
+    "Sem autenticação do servidor MLflow, alta disponibilidade ou Registry remoto; API Python local, sem servidor público."
+  ]
+}

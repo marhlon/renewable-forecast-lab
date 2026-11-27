@@ -1,0 +1,64 @@
+[
+  {
+    "batch": 1,
+    "cutoff": "2026-10-08 00:00:00",
+    "action": "committed",
+    "version": 1,
+    "rows": 663,
+    "logical_hash": "c3a30091871b3ea7d1358ae925f4d4ee68320f89dfc36a1929f4731f29d4c9fd"
+  },
+  {
+    "batch": 1,
+    "action": "replay_noop",
+    "version": 1,
+    "rows": 663
+  },
+  {
+    "batch": 2,
+    "injected_failure": "falha injetada após estágio e antes de commit",
+    "state_unchanged": true,
+    "version_after_failure": 1
+  },
+  {
+    "batch": 2,
+    "cutoff": "2026-10-16 00:00:00",
+    "action": "committed",
+    "version": 2,
+    "rows": 1432,
+    "logical_hash": "021ff3b74c84bc5f0fcc10451c22af6cdf43c1488a136438238bed78ce6be607"
+  },
+  {
+    "batch": 2,
+    "action": "replay_noop",
+    "version": 2,
+    "rows": 1432
+  },
+  {
+    "batch": 3,
+    "cutoff": "2026-10-24 00:00:00",
+    "action": "committed",
+    "version": 3,
+    "rows": 2200,
+    "logical_hash": "231cad851f060e228ce7c63602f70bd5fe0893cb635084e5386c65e36528cdbb"
+  },
+  {
+    "batch": 3,
+    "action": "replay_noop",
+    "version": 3,
+    "rows": 2200
+  },
+  {
+    "batch": 4,
+    "cutoff": "2026-11-02 00:00:00",
+    "action": "committed",
+    "version": 4,
+    "rows": 2976,
+    "logical_hash": "e10957673328f31d545b6b6dff39e225d5c81c8459ed7598bbca1d7493c7efd6"
+  },
+  {
+    "batch": 4,
+    "action": "replay_noop",
+    "version": 4,
+    "rows": 2976
+  }
+]

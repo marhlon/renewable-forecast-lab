@@ -1,0 +1,35 @@
+{
+  "schema": "renewcast-bloco1-result-v1",
+  "item": "M04-04",
+  "executed_at_utc": "2026-11-25T11:36:44.108342+00:00",
+  "client_date": "2026-11-25",
+  "python": "3.12.13",
+  "os": "Windows",
+  "checks": {
+    "unit_tests_exit_code": 0,
+    "historical_snapshot_selected": 0,
+    "unknown_validity_excluded": true
+  },
+  "details": {
+    "rows": 15,
+    "historical_validity_verified": false
+  },
+  "assisted_implementation": true,
+  "human_assessment_pending": false,
+  "operational_approval": false,
+  "inputs_sha256": {
+    "data\\reference\\CJU_BA5EIGT\\asset_registry.csv": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+    "data\\reference\\CJU_BA5EIGT\\metadata.json": "a6a85b56b513628fea62c173f084b153912b1553c421feeb2c065eba48d6def8"
+  },
+  "code_sha256": {
+    "scripts\\preparar_cadastro_bitemporal.py": "d3315ed1b9222134b3a0445661c7edf9958e479115770337f8117e47aafa7b24",
+    "src\\renewable_forecast\\asset_registry_history.py": "6287e3ce4ab9346658134366f80ce3ba146106c687f7c8156b4fb245bed54161"
+  },
+  "output_sha256": {
+    "cadastro_versionado.csv": "8c0c777ebecef3d7095ca524a5946df9d599a932188952820eea4cee85336f7f",
+    "fontes.md": "5eaf5fcfbe823e9513ba66ba0baa4e61dbc76e63e3a8d2c643a56d3e0d7bc8ff",
+    "parecer.md": "2fbdaaf6e46851bdab91cd490d581572425d6895885ae66083c126f5e3c5506a",
+    "protocolo.json": "0324c7e0ef54d034662e3cdcb2bc53f9c9060f33b70b02d87b2990e418258815",
+    "testes.log": "c24dffacebc95f01a3077a92bbf9dc3e225791d961396afdab9c545c06e6656f"
+  }
+}

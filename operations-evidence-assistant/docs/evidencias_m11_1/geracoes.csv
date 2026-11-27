@@ -1,0 +1,62 @@
+﻿precisao,modo,temperatura,semente,id,tipo,esperado,codigo,codigo_valido,codigo_correto,entrada_tokens,novos_tokens,teto_novos,parada,ttft_ms_inclui_selecao,tempo_decode_total_ms,texto
+fp32,greedy,,,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,6,6,limite_novos_tokens,527.7583150000282,821.2988949999271,ELIGIBLE means the
+fp32,top_k,0.35,17,satmon_sem52,evidencia_anterior,ISOLATED,ELIGIBLE,True,False,239,36,36,limite_novos_tokens,623.2750789995407,2941.1688800000775,"ELIGIBLE
+
+Record: {""usable"":true,""k"":2,""cutoff"":""0.720126884520454"
+fp32,top_k,0.35,29,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,520.342048999737,2884.546657000101,"ELIGIBLE means the rule can confirm a reading sequence.
+
+The reason for this classification is that the record does not identify a detected incident. The rule is not able"
+fp32,top_k,0.35,41,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,485.2584519994707,2822.12695599992,"ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+Record: {""usable"":true,""k"":2,""cutoff"":"""
+fp32,top_k,1.2,17,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,516.2814260002051,2854.977715000132,"The records that follow can be classified as follows:
+
+1. ""IsOLATED,"" which is true. This indicates the rule can identify a reading sequence when s = 2"
+fp32,top_k,1.2,29,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,501.6080700006569,2843.821103000664,"The record contains the following data: 
+""usable"": 1, ""k"": 2, ""cutoff"": 0.720126884"
+fp32,top_k,1.2,41,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,401.65099400019244,2708.5369100004755,"The record is
+
+{
+""usable"":true,""k"":2,""cutoff"":""0.7201268845204545"
+fp32,greedy,,,renewcast_replay,evidencia_anterior,BELOW,,False,False,208,36,36,limite_novos_tokens,317.62521299970103,2174.633077999715,"ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+{""usable"":true,""k"":"
+int8_linear,greedy,,,renewcast_replay,evidencia_anterior,BELOW,,False,False,208,22,36,eos,230.04664000018238,868.5621250006079,You write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.
+int8_linear,greedy,,,renewcast_sem_resposta,evidencia_anterior,INSUFFICIENT,,False,False,190,12,36,eos,222.44917399984843,558.2401849997041,"
+What is the purpose of the following code block?"
+fp32,greedy,,,renewcast_sem_resposta,evidencia_anterior,INSUFFICIENT,,False,False,190,36,36,limite_novos_tokens,409.07027999946877,2296.500491000188,"ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+{""usable"":false,""k"":"
+fp32,greedy,,,satmon_tres_canais,evidencia_anterior,BELOW,,False,False,239,36,36,limite_novos_tokens,504.94841799991264,2413.174942000296,"ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+""usable:true,k:"
+int8_linear,greedy,,,satmon_tres_canais,evidencia_anterior,BELOW,,False,False,239,36,36,limite_novos_tokens,196.8776789999538,1301.6469499998493,"The following record does not identify a physical cause of the incident:
+
+Record: {""usable"":true,""k"":2,""cutoff"":""0.716435"
+int8_linear,greedy,,,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,305.2540079997925,1381.9836389993725,"The rule is: ""s1 >= cutoff and k is 1, or k is 2 and s2 is null or s2 < cutoff.""
+
+The rule is"
+fp32,greedy,,,satmon_sem52,evidencia_anterior,ISOLATED,,False,False,239,36,36,limite_novos_tokens,510.30853299926093,2391.321421999237,"ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+""usable:true,k:"
+fp32,greedy,,,igualdade,contraprova_sintetica,ELIGIBLE,,False,False,197,36,36,limite_novos_tokens,413.4252990006644,2283.712311999807,"The record is:
+
+""usable:true, k:2, cutoff:0.70, s1:0.73, s2:0.7"
+int8_linear,greedy,,,igualdade,contraprova_sintetica,ELIGIBLE,,False,False,197,36,36,limite_novos_tokens,228.97740400003386,1295.188301000053,"The following is a list of rules that can be used to identify a reading sequence:
+
+- s1 < cutoff
+- s1 >= cutoff
+- s1 >= cutoff"
+int8_linear,greedy,,,picos_sem_par,contraprova_sintetica,ISOLATED,,False,False,194,2,36,eos,132.54030999996758,166.06976599996415,yes
+fp32,greedy,,,picos_sem_par,contraprova_sintetica,ISOLATED,,False,False,194,36,36,limite_novos_tokens,383.94051599971135,2337.4426089994813,"The record is:
+
+""usable:true, k:2, cutoff:0.70, s1:0.80, s2:null""
+"

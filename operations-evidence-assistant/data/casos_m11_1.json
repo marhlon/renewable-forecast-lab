@@ -1,0 +1,38 @@
+[
+  {
+    "id": "renewcast_replay",
+    "tipo": "evidencia_anterior",
+    "origem": "M06/E69: exemplo real HTTP 200 em inferência de desenvolvimento, forecast_origin 2026-08-01T05:00:00Z",
+    "usable": true, "k": 1, "cutoff": "0.5", "s1": "0.20465385372296466", "s2": null
+  },
+  {
+    "id": "renewcast_sem_resposta",
+    "tipo": "evidencia_anterior",
+    "origem": "M06: cliente Windows com API encerrada, state unavailable / exit 3, sem p_event",
+    "usable": false, "k": 1, "cutoff": "0.5", "s1": null, "s2": null
+  },
+  {
+    "id": "satmon_tres_canais",
+    "tipo": "evidencia_anterior",
+    "origem": "M10.4: três canais, semente 17, 2011–2013, resultado de referência",
+    "usable": true, "k": 2, "cutoff": "0.7199442558330269", "s1": "0.7164359650668679", "s2": "0.6382295270617967"
+  },
+  {
+    "id": "satmon_sem52",
+    "tipo": "evidencia_anterior",
+    "origem": "M10.4: sem channel_52, semente 17, 2011–2013, resultado de referência",
+    "usable": true, "k": 2, "cutoff": "0.7201268845204545", "s1": "0.7541511974686277", "s2": "0.6915642216840697"
+  },
+  {
+    "id": "igualdade",
+    "tipo": "contraprova_sintetica",
+    "origem": "Exemplo construído para mostrar inclusão da igualdade; nenhum ID vem associado",
+    "usable": true, "k": 2, "cutoff": "0.70", "s1": "0.73", "s2": "0.70"
+  },
+  {
+    "id": "picos_sem_par",
+    "tipo": "contraprova_sintetica",
+    "origem": "Exemplo construído de dois picos separados por lacunas; não há par utilizável",
+    "usable": true, "k": 2, "cutoff": "0.70", "s1": "0.80", "s2": null
+  }
+]

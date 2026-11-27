@@ -1,0 +1,79 @@
+{
+  "schema": "renewcast-m04-01-protocol-v1",
+  "item": "M04-01",
+  "registered_at_utc": "2026-11-25T11:32:08Z",
+  "status": "protocolo_previo",
+  "objective": "Aplicar E51 somente em validate_wind_geometry e conferir o contrato sem refazer estimadores.",
+  "responsibility": {
+    "implementation": "Implementação e revisão técnica assistidas por Codex.",
+    "independent_human_review": "Pendente; não inferir autonomia do aluno nem aceite humano deste protocolo."
+  },
+  "inputs": {
+    "source_before": {
+      "path": "src/renewable_forecast/weather_artifact.py",
+      "sha256": "bca9e3d64bfe8bb0e0b7cca7d8e66ee10bae9cd24e682a71cb8e64261fab7377"
+    },
+    "historical_request": {
+      "path": "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/request.json",
+      "sha256": "0dfd81cb79f9916097f12023b8c0f5981488bf69424d181f9a2c1fdbb9886d08"
+    },
+    "historical_manifest_json": {
+      "path": "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/model/manifest.json",
+      "sha256": "564083d04c2a86e33e89845e7d59e1cdd623416b3196b30ae1b4bd98f3c8e15e"
+    }
+  },
+  "contract": {
+    "input": "dict de features; a função geométrica exige as três chaves abaixo. O pedido completo conserva o validador existente de 32 entradas.",
+    "exact_fields": ["wind_speed_mean_ms", "wind_u_mean_ms", "wind_v_mean_ms"],
+    "values": "Números reais nativos int/float finitos, sem booleanos; campos obrigatórios não podem ser ausentes ou nulos.",
+    "speed": "wind_speed_mean_ms >= 0",
+    "components": "u e v podem ser negativos",
+    "geometry": "hypot(u, v) - speed <= 1e-8",
+    "tolerance_absolute_ms": 1e-8,
+    "unrelated_fields": "wind_speed_cubed_mean_m3s3 e outras chaves não são usadas para escolher velocidade/u/v.",
+    "mutation": "Nenhuma modificação de valores, chaves ou ordem dos argumentos.",
+    "success": "Retorna None.",
+    "invalid": "Lança ValueError."
+  },
+  "predeclared_checks": [
+    "Mesmos valores com ordem original, invertida e cubed na primeira posição.",
+    "Pedido impossível speed=12, u=30, v=0 rejeitado em todas as ordens.",
+    "Velocidade negativa rejeitada; u/v negativos geometricamente válidos aceitos.",
+    "Igualdade geométrica, desvio dentro da tolerância e desvio acima da tolerância.",
+    "Chaves ausentes, valores nulos/booleanos/texto e NaN/infinidades rejeitados.",
+    "Entrada que não é dict rejeitada; preservação da entrada em sucesso e rejeição.",
+    "hypot com componentes grandes finitos sem elevar componentes ao quadrado.",
+    "JSONs históricos reais: validate_request produz a mesma linha de 32 features nas duas ordens e rejeita geometria impossível.",
+    "Bloquear fit e joblib.load durante a contraprova do pedido completo."
+  ],
+  "planned_commands": [
+    {
+      "argv": ["C:/Users/marhl/miniconda3/envs/renewable-forecast/python.exe", "tests/test_wind_geometry.py", "--contraprovas", "reports/fechamento_m00_m09/M04-01/contraprovas.json"],
+      "purpose": "Executar e registrar as contraprovas locais, sem ajuste ou carregamento do estimador."
+    },
+    {
+      "argv": ["C:/Users/marhl/miniconda3/envs/renewable-forecast/python.exe", "-m", "pytest", "tests/test_wind_geometry.py", "-q", "-p", "no:cacheprovider"],
+      "purpose": "Conferir os mesmos casos como testes focados e a integração do pedido."
+    }
+  ],
+  "acceptance": {
+    "C1": "Seleção por nomes exatos, mantendo hypot e tolerância de 1e-8.",
+    "C2": "Rejeição invariável à ordem, aceitação de componentes negativos válidos e entradas preservadas.",
+    "checks": "Contraprovas e testes com exit code 0, resultados, versões e hashes reais registrados."
+  },
+  "constraints": {
+    "fit": false,
+    "model_pickle_load": false,
+    "docker": false,
+    "network_or_download": false,
+    "new_forecasts_or_benchmark": false,
+    "historical_runs_modified": false,
+    "roadmap_or_config_modified_by_this_task": false,
+    "operational_approval": false
+  },
+  "limits": [
+    "Os JSONs históricos servem à validação do pedido; nenhum model.joblib será aberto.",
+    "Esta correção não verifica fuso, disponibilidade histórica, cadastro point-in-time ou desempenho preditivo.",
+    "O estado do item no cadastro será atualizado somente após revisão independente do agente responsável."
+  ]
+}

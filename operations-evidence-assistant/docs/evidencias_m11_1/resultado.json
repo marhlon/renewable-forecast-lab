@@ -1,0 +1,106 @@
+{
+  "schema": "opevid-m11-1-result-v1",
+  "run_id": "20261124T162732Z_b5d43eda",
+  "completed": true,
+  "model": {
+    "repository": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "license": "Apache-2.0",
+    "weights_sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+    "lock_sha256": "5e9d0eefbb964ad0cebd97a8277d8a92021a054af06e7ec0d3e729f1adff115f",
+    "local_context_limit": 512,
+    "model_max_position_embeddings": 8192,
+    "hidden_size": 576,
+    "vocab_size": 49152
+  },
+  "versions": {
+    "torch": "2.7.1+cpu",
+    "transformers": "4.49.0",
+    "tokenizers": "0.21.1",
+    "safetensors": "0.5.3"
+  },
+  "python": "3.12.14",
+  "os": "Linux",
+  "arch": "x86_64",
+  "threads": 2,
+  "author_sha256": null,
+  "small_sampling_checks": 6,
+  "top_k_real_decisions_checked": 216,
+  "authorship_checked_on_real_logits": false,
+  "greedy_generate_ids_agree": true,
+  "preflight": {
+    "entrada_tokens": 239,
+    "pedidos_novos_tokens": 274,
+    "limite": 512,
+    "rejeitado_antes_de_inferir": true,
+    "motivo": "Orçamento excedido: 239 de entrada + 274 novos > 512."
+  },
+  "case_set_sha256": "c34ae3f9366a540608fd643ec279434619155223e3c122af890fa8dece45da74",
+  "deterministic_rule_cases": 6,
+  "greedy_cases": {
+    "fp32": {
+      "n": 6,
+      "codigos_validos": 0,
+      "codigos_corretos": 0
+    },
+    "int8_linear": {
+      "n": 6,
+      "codigos_validos": 0,
+      "codigos_corretos": 0
+    }
+  },
+  "paired_greedy_different_tokens_cases": 6,
+  "quantizacao": {
+    "status": "medida",
+    "motor": "x86",
+    "motores_torch": [
+      "qnnpack",
+      "none",
+      "onednn",
+      "x86",
+      "fbgemm"
+    ],
+    "fp32_parametros_unicos": 134515008,
+    "pesos_nas_lineares_convertidas": 106168320,
+    "lineares_convertidas": 210,
+    "embedding_e_lm_head_fp32": true,
+    "state_dict_fp32_bytes": 538149619,
+    "state_dict_int8_bytes": 219806563,
+    "reducao_relativa_pct": 59.155120576235134,
+    "conversao_ms_fora_da_medicao": 747.9494740000519,
+    "caso_bench": "satmon_sem52",
+    "rodadas_por_variante": 3,
+    "warmup_por_variante": 1,
+    "medianas": {
+      "fp32": {
+        "prefill_ms": 522.453203000623,
+        "total_ms": 1412.0178800003487,
+        "tokens_decode_s": 18.46600477019104
+      },
+      "int8_linear": {
+        "prefill_ms": 292.7039100004549,
+        "total_ms": 758.5174180003378,
+        "tokens_decode_s": 33.32983745000098
+      }
+    }
+  },
+  "systems": "6 casos de desenvolvimento/ensino, não teste externo",
+  "training": false,
+  "operational_approval": false,
+  "code_sha256": {
+    "scripts/laboratorio_m11_1.py": "82a71870d050488daf8f854309b40df46eece485986fa4c23fc5ebf9041230ae",
+    "scripts/executar_m11_1.py": "f71390ca6ce28d9de9c11da4fb1b0f893c49d82d4179f43f6e9f7b97ad790cdf",
+    "src/opevid/amostragem.py": "02deba7a0fe5fd71929797766fa71d7df75b7f9ac045a0ce621f0a876cbb1ed9",
+    "src/opevid/contrato.py": "6747c38c57f28d307678f3ec8e7247d2027ffe47d14e99dcb2b107baf0ecf4a6",
+    "src/opevid/modelo_local.py": "0c3bcec3778b85cedaaa8cd238eed507b7a29ea6fc7526f1bdf8b29c4f59c10e"
+  },
+  "output_sha256": {
+    "baseline_regra.csv": "acc8b38ccf65242e64127ed7c01a87a81a2b5e041c11c41d50e9993748f1e36b",
+    "benchmark.csv": "9f39ea9ac4a54348d880e35737a11cdf7dd919b4fd7161a969e48ff8ce16b22b",
+    "embeddings.json": "5eef72a100ce15aed10fb5802daf60a378ef9e7853698b333a781dc64bac1ead",
+    "geracoes.csv": "7c105e5d9b2fe1ea46560992f1da8f815e39cfd3b31e0d40ece4a2291f93d57e",
+    "relatorio.html": "306bce2df4e73d3530f3ceb4883db5068eb620c3c9d0a2e1c18402704571a793",
+    "tokens.csv": "91b7e7178f6ddbb76f6f01e79ed4b6c46919ef9cfdff3d2e4cda25598f7fc012",
+    "trilha_tokens.json": "6f31d7ab7db87eac4e20b5523751b0367d488f66e15e75a3b5c4996eae45a35b"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "schema": "renewcast-bloco2-risk-result-v1",
+  "roadmap_id": "M05-01",
+  "completed": true,
+  "phase": "avaliado",
+  "created_at_utc": "2026-11-25T19:26:17.803734+00:00",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "protocol_sha256": "c6a170bf1f18030400574d3e6911059cef2b75705c584f4946345bfc99afe37e",
+  "operational_approval": false,
+  "independent_user_performance_claimed": false,
+  "executions": [
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "notebooks/bloco2_validacao_risco.py",
+        "--preparar"
+      ],
+      "started_at_utc": "2026-11-25T19:26:17.675494+00:00",
+      "finished_at_utc": "2026-11-25T19:26:17.841054+00:00",
+      "exit_code": 0,
+      "log": "execucao_preparar.log",
+      "log_sha256": "206e2b861ae6cf071a2c631702c12469fbfeff1c594f8e458f2329388e5036a4"
+    },
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "notebooks/bloco2_validacao_risco.py",
+        "--ajustar"
+      ],
+      "started_at_utc": "2026-11-25T19:26:42.049586+00:00",
+      "finished_at_utc": "2026-11-25T19:26:45.065007+00:00",
+      "exit_code": 0,
+      "log": "execucao_ajustar.log",
+      "log_sha256": "cd9c80cda026df70a262509162a19d9256b292b706ad90d30ebea1c244e12c90"
+    },
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "notebooks/bloco2_validacao_risco.py",
+        "--avaliar",
+        "--evaluation-parquet",
+        "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/geracao_CJU_BA5EIGT_2026_10.parquet"
+      ],
+      "started_at_utc": "2026-11-25T19:55:14.656357+00:00",
+      "finished_at_utc": "2026-11-25T19:55:15.600457+00:00",
+      "exit_code": 0,
+      "log": "execucao_avaliar.log",
+      "log_sha256": "6efe2ca17e07c841edd643355c2b44e79b85149fd548496e68ee8c523bc10e03"
+    }
+  ],
+  "output_sha256": {
+    "calibracao_congelada.json": "d034e9525a3a301e680f5dabc6f5ac3da82400a0a07ac2aad261656b58f0853c",
+    "cobertura_por_periodo.csv": "e5a5bcc91fa578eb316fd2624ac5a8fe71832fa9b5af3b9934d5a64b8df6291c",
+    "execucao_ajustar.log": "cd9c80cda026df70a262509162a19d9256b292b706ad90d30ebea1c244e12c90",
+    "execucao_avaliar.log": "6efe2ca17e07c841edd643355c2b44e79b85149fd548496e68ee8c523bc10e03",
+    "execucao_preparar.log": "206e2b861ae6cf071a2c631702c12469fbfeff1c594f8e458f2329388e5036a4",
+    "finalizar_evidencias.py": "354d30787c08cd03747d8094c1731c6cb27262f2996e28e1f7b48084723c2ee2",
+    "freeze.json": "0752569eb41eb41f5d8fdd5ce12a7905ccbc66f235ebd91169ba6d13f08fb50e",
+    "incerteza_cobertura.csv": "2c62c93d4833903338b17a832ce8d6c32258c48875bad852a2ff7620663972d9",
+    "interval_bundle.joblib": "a29dc53651925a9b48f330b90885b241226e890cee4f1f2bf382573705d5c6a3",
+    "metodo_ajuste.md": "68c9d566f472b54a77892768c8ad8562ed397c9ce5401cafa83d2c23168caa0f",
+    "metricas_intervalos.csv": "e5a5bcc91fa578eb316fd2624ac5a8fe71832fa9b5af3b9934d5a64b8df6291c",
+    "parecer.md": "96ca17acec70280b293e827c94a6c842575b8010a430e99817ccd340d6240dbe",
+    "predicoes_avaliacao.csv": "55214d8f16237d2d6e6b92c6ac446a41163446d6486aa0fd7d1ddcb7b40ef76c",
+    "predicoes_calibracao.csv": "03845e9f5d5213e31cfbd8727b279418e63b8bedc5da5aff8661d4e58d222ac0",
+    "protocolo.json": "c6a170bf1f18030400574d3e6911059cef2b75705c584f4946345bfc99afe37e",
+    "protocolo_ajuste.json": "3a40af121d5caf6684b12425ea7ccb80044761418e11e40d9ff736bc749b28f2"
+  },
+  "fitted": true,
+  "fitted_at_utc": "2026-11-25T19:26:44.933317+00:00",
+  "train_rows": 7221,
+  "ramp_train_rows": 7244,
+  "train_max_label_available_at": "2026-06-30 23:00:00",
+  "ramp_train_max_label_available_at": "2026-06-30 23:00:00",
+  "calibration_rows": 312,
+  "policy_rows": 360,
+  "features": [
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_4h",
+    "lag_5h",
+    "lag_6h",
+    "lag_7h",
+    "lag_8h",
+    "lag_9h",
+    "lag_10h",
+    "lag_11h",
+    "lag_12h",
+    "lag_13h",
+    "lag_14h",
+    "lag_15h",
+    "lag_16h",
+    "lag_17h",
+    "lag_18h",
+    "lag_19h",
+    "lag_20h",
+    "lag_21h",
+    "lag_22h",
+    "lag_23h",
+    "lag_24h",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "freeze_sha256": "0752569eb41eb41f5d8fdd5ce12a7905ccbc66f235ebd91169ba6d13f08fb50e",
+  "code_sha256": {
+    "notebooks/bloco2_validacao_risco.py": "1ab2efd0018cddbbfbd1449174ca573b27a17fba3fe05523685bd7bfd6e1ec17",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+    "notebooks/bloco2_risco_core.py": "6ac5c71d4d5d45d4aa7fb316b30910dd383362c6b6ac05c09762ae08e2e70b2c"
+  },
+  "versions": {
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0"
+  },
+  "training_performed": true,
+  "evaluation_performed": true,
+  "retrospective_snapshot_not_operational_point_in_time": true,
+  "evaluated_at_utc": "2026-11-25T19:55:15.577118+00:00",
+  "evaluation_source_path": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/geracao_CJU_BA5EIGT_2026_10.parquet",
+  "evaluation_source_sha256": "aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab",
+  "evaluation_source_rows": 744,
+  "evaluation_origins": 695,
+  "evaluation_origin_min": "2026-10-02 01:00:00",
+  "evaluation_origin_max": "2026-10-30 23:00:00",
+  "same_695_origins_for_all_M05_studies": true,
+  "training_during_evaluation": false,
+  "recalibration_during_evaluation": false,
+  "policy_reselection_during_evaluation": false,
+  "weekly_rows": [
+    168,
+    168,
+    168,
+    168,
+    23
+  ],
+  "snapshot_is_historically_point_in_time": false,
+  "live_shadow_demonstrated": false,
+  "source_contract_checks_passed": true,
+  "summary": {
+    "interval_metrics": [
+      {
+        "period": "total",
+        "origin_min": "2026-10-02 01:00:00",
+        "origin_max": "2026-10-30 23:00:00",
+        "enough_rows_for_alert": true,
+        "partial_period": false,
+        "method": "raw_sorted",
+        "n": 695,
+        "coverage": 0.976978417266187,
+        "width": 72.9206231403911,
+        "interval_score": 76.9891828926138,
+        "pinball_p10": 2.65380726618705,
+        "pinball_p50": 8.82509737208333,
+        "pinball_p90": 5.04511102307433,
+        "pinball_mean": 5.50800522044824,
+        "correction": 0,
+        "frozen_expansion": 0.0,
+        "coverage_alert": true
+      },
+      {
+        "period": "total",
+        "origin_min": "2026-10-02 01:00:00",
+        "origin_max": "2026-10-30 23:00:00",
+        "enough_rows_for_alert": true,
+        "partial_period": false,
+        "method": "cqr_frozen",
+        "n": 695,
+        "coverage": 0.98705035971223,
+        "width": 103.168575170945,
+        "interval_score": 104.578288380587,
+        "pinball_p10": 4.16620486771473,
+        "pinball_p50": 8.82509737208333,
+        "pinball_p90": 6.29162397034402,
+        "pinball_mean": 6.42764207004736,
+        "correction": 0,
+        "frozen_expansion": 15.1239760152768,
+        "coverage_alert": true
+      }
+    ]
+  },
+  "source_receipt": {
+    "path": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/fonte.json",
+    "sha256": "3752645a089a952b7aa005db67e37333118ab842e49ce84b33395bb2fcd341e1"
+  },
+  "documentation_finalization": {
+    "finished_at_utc": "2026-11-25T19:59:32.665366+00:00",
+    "reviewed_by": "Codex engineering assistance",
+    "review_scope": "Artifact hashes, independent target reconstruction, same695origins, daily budget, documentation and exact-copy aliases; no model replay",
+    "frozen_artifacts_preserved": true,
+    "source_hash_matches_download_receipt": true,
+    "source_download_after_freeze_and_before_evaluation": true,
+    "h26_targets_reconstructed_from_source": true,
+    "one_hour_targets_reconstructed_from_source": true,
+    "event_counts": {
+      "h26": 117,
+      "ramp1h": 39
+    },
+    "compatibility_aliases": {
+      "cobertura_por_periodo.csv": "metricas_intervalos.csv"
+    },
+    "alias_files_are_byte_identical": true,
+    "finalizer_path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/finalizar_evidencias.py",
+    "finalizer_sha256": "354d30787c08cd03747d8094c1731c6cb27262f2996e28e1f7b48084723c2ee2",
+    "operational_approval": false
+  }
+}

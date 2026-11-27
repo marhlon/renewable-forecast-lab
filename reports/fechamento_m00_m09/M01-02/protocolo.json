@@ -1,0 +1,16 @@
+{
+  "schema": "renewcast-bloco1-protocol-v1",
+  "item": "M01-02",
+  "created_at_utc": "2026-11-25T11:34:15.751441+00:00",
+  "client_date": "2026-11-25",
+  "description": "Exportar outro recorte para exerc?cio SQL sem repetir modelos nem classificar como teste preditivo.",
+  "inputs": {
+    "config\\roadmap_m00_m09.json": "ffab417c08625bd54e2c9524ae13b477b22029da22a91c0aeca63e02254b47f7"
+  },
+  "criteria": [
+    "Nenhum treino antigo ser? repetido.",
+    "Nenhuma resposta independente ser? atribu?da ao aluno."
+  ],
+  "historical_runs_preserved": true,
+  "independent_student_response": false
+}

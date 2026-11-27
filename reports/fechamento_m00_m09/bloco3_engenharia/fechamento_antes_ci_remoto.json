@@ -1,0 +1,143 @@
+{
+  "schema": "renewcast-bloco3-engineering-closure-v1",
+  "completed_at_utc": "2026-11-26T16:33:20.156346+00:00",
+  "scope_ids": 18,
+  "fully_validated_engineering_ids": 11,
+  "partial_local_acceptances": [
+    "M06-06",
+    "M06-07",
+    "M06-08"
+  ],
+  "operational_open_ids": [
+    "M06-02",
+    "M06-04",
+    "M06-05",
+    "M06-06",
+    "M06-07",
+    "M06-08",
+    "M06-09"
+  ],
+  "registry_total": 45,
+  "registry_validated": 34,
+  "registry_blocked": 11,
+  "history_and_dependencies_preserved": true,
+  "operational_criteria_of_partial_items_unchanged": true,
+  "M06_05_C3_C4_still_false": true,
+  "engineering_gates_passed": [
+    1,
+    2,
+    3
+  ],
+  "operational_gate_rejected_as_expected": true,
+  "unrestricted_block3_closure_rejected_as_expected": true,
+  "local_unique_tests": 16,
+  "isolated_CI_copy_same16tests_passed": true,
+  "final_evaluation_origins": 671,
+  "final_methods": 14,
+  "final_frozen_files": 29,
+  "source_and_models_reselected_after_final": false,
+  "original_console_failure_preserved": true,
+  "recovery_only_summarized_saved_predictions": true,
+  "github_remote_ci": false,
+  "cloud_resources_created": false,
+  "docker_required": false,
+  "operational_approval": false,
+  "document_links_verified": 10,
+  "document_links": [
+    {
+      "doc": "Relatorio_Engenharia_Bloco3.md",
+      "target": "Bloco_3_Dados.md"
+    },
+    {
+      "doc": "Relatorio_Engenharia_Bloco3.md",
+      "target": "Bloco_3_Transferencia_Neural.md"
+    },
+    {
+      "doc": "Relatorio_Engenharia_Bloco3.md",
+      "target": "Bloco_3_Operacao_Local.md"
+    },
+    {
+      "doc": "Relatorio_Engenharia_Bloco3.md",
+      "target": "Bloco_3_Execucao.md"
+    },
+    {
+      "doc": "Relatorio_Engenharia_Bloco3.md",
+      "target": "Revisao_Engenharia_Bloco3.md"
+    },
+    {
+      "doc": "Bloco_3_Execucao.md",
+      "target": "Relatorio_Engenharia_Bloco3.md"
+    },
+    {
+      "doc": "Revisao_Engenharia_Bloco3.md",
+      "target": "../../scripts/auditar_bloco3.py"
+    },
+    {
+      "doc": "Revisao_Engenharia_Bloco3.md",
+      "target": "../../reports/fechamento_m00_m09/bloco3_engenharia/auditoria_bloco3.json"
+    },
+    {
+      "doc": "Revisao_Engenharia_Bloco3.md",
+      "target": "Relatorio_Engenharia_Bloco3.md"
+    },
+    {
+      "doc": "Revisao_Engenharia_Bloco3.md",
+      "target": "Bloco_3_Execucao.md"
+    }
+  ],
+  "gitignore_checks": [
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/registry_run_02/mlflow_registry.sqlite",
+      "ignored": true,
+      "expected_ignored": true
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/exemplo.skops",
+      "ignored": true,
+      "expected_ignored": true
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M06-02/copia_isolada_1/notebooks/m08_gru_autoral.py",
+      "ignored": true,
+      "expected_ignored": true
+    },
+    {
+      "path": "src/renewable_forecast/bloco3_data.py",
+      "ignored": false,
+      "expected_ignored": false
+    },
+    {
+      "path": ".github/workflows/bloco3-contratos.yml",
+      "ignored": false,
+      "expected_ignored": false
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/chronos.npz",
+      "ignored": false,
+      "expected_ignored": false
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/summary.csv",
+      "ignored": false,
+      "expected_ignored": false
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/resultado.json",
+      "ignored": false,
+      "expected_ignored": false
+    },
+    {
+      "path": "data/reference/example.sqlite",
+      "ignored": false,
+      "expected_ignored": false
+    }
+  ],
+  "verification_sha256": {
+    "verificacao_roadmap_global.json": "ebebba6cded7d515282cd11c2d9b5d7659551d13f6a408e49a67d7c40eccb1b9",
+    "verificacao_gate_engenharia.json": "5b432dc14b9e8adecfdf4de4829fb02c6b371a4838480ec313a916b284429449",
+    "verificacao_regressao_bloco1.json": "3d9c9b4bd9c8f2d99e477fb876f29cee77600905b1cf3ec38abf6a8a9befecac",
+    "verificacao_regressao_bloco2.json": "a4075d8eb6777ba7bd1ffcae579b129fe41e2976a1f7d980a58dc5bb01d7862c",
+    "verificacao_gate_operacao.json": "2204c6db9fbe5de47ccd6c97fd69b31b6aa78b80d05f24c5dd2db6a5700f4d9e",
+    "verificacao_fechamento_integral.json": "7ed0691d72f73fe55361d4fcc2c20e83e228f92655fcb684f2d24fdad1017037"
+  }
+}

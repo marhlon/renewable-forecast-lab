@@ -1,0 +1,24 @@
+{
+  "executed_at_utc": "2026-11-26T00:34:53.480295+00:00",
+  "rows": 2976,
+  "versions": 4,
+  "state_equals_reference": true,
+  "gold_equals_reference": true,
+  "failed_commit_unchanged": true,
+  "conflicting_payload_rejected": true,
+  "late_feature_masked": true,
+  "no_cross_series": true,
+  "logical_reference_sha256": "1990d7e5ebb72034fd5e6d18a5eebe1b8ec36c87e94b57c4f164d4776bbd8989",
+  "logical_incremental_sha256": "1990d7e5ebb72034fd5e6d18a5eebe1b8ec36c87e94b57c4f164d4776bbd8989",
+  "late_simulation": {
+    "series": "CEECVA",
+    "event": "2026-10-05 12:00:00",
+    "available": "2026-10-12 14:00:00",
+    "synthetic_delay": true
+  },
+  "limits": [
+    "replay local finito",
+    "disponibilidade hipotética, atraso/falha sintéticos",
+    "nenhum broker/shadow/serviço distribuído exercitado"
+  ]
+}

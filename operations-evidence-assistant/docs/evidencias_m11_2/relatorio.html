@@ -1,0 +1,249 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>M11.2 — Relatório e evidência</title>
+<style>body{font:16px/1.5 system-ui;max-width:1120px;margin:2rem auto;padding:0 20px;color:#173045}
+td,th{padding:.48rem;border:1px solid #cdd8de}table{border-collapse:collapse;font-size:14px}div{overflow:auto}
+th{background:#e9f4f4;text-align:left}code,pre{white-space:pre-wrap;background:#f1f4f6}pre{padding:.7rem;overflow-wrap:anywhere}summary{cursor:pointer}</style>
+<h1>M11.2 — JSON, esquema e fidelidade</h1>
+<p>Os números abaixo contam propostas brutas; fallback é resposta em código. O reservado é sintético, e somente
+o prompt escolhido no desenvolvimento foi executado nele.</p>
+<div><table><tr><th>particao</th><th>prompt</th><th>casos</th><th>json_ok</th><th>esquema_ok</th><th>fiel</th><th>fallback</th><th>publicado_conferido</th><th>tokens_entrada</th><th>tokens_novos</th></tr><tr><td>desenvolvimento</td><td>zero_shot</td><td>6</td><td>5</td><td>0</td><td>0</td><td>6</td><td>6</td><td>1881</td><td>375</td></tr><tr><td>desenvolvimento</td><td>um_exemplo</td><td>6</td><td>0</td><td>0</td><td>0</td><td>6</td><td>6</td><td>2451</td><td>720</td></tr><tr><td>reservado</td><td>zero_shot</td><td>6</td><td>6</td><td>0</td><td>0</td><td>6</td><td>6</td><td>1807</td><td>265</td></tr></table></div>
+<p>Prompt congelado: <b>zero_shot</b>. Execução: 20261124T195008Z_3bf3c026.</p>
+<h2>Contraprovas fora da avaliação dos prompts</h2>
+<div><table><tr><th>teste</th><th>etapa</th><th>erros</th></tr><tr><td>fiel</td><td>fiel</td><td>[]</td></tr><tr><td>decimais_equivalentes</td><td>fiel</td><td>[]</td></tr><tr><td>json_incompleto</td><td>json_invalido</td><td>[&#x27;json_malformado&#x27;]</td></tr><tr><td>cerca_markdown</td><td>json_invalido</td><td>[&#x27;json_malformado&#x27;]</td></tr><tr><td>chave_duplicada</td><td>json_invalido</td><td>[&#x27;chave_duplicada&#x27;]</td></tr><tr><td>numero_nao_json</td><td>json_invalido</td><td>[&#x27;constante_nao_json&#x27;]</td></tr><tr><td>omissao_s2</td><td>esquema_invalido</td><td>[&#x27;missing:s2&#x27;]</td></tr><tr><td>coercao_float</td><td>esquema_invalido</td><td>[&#x27;string_type:s1&#x27;]</td></tr><tr><td>campo_extra</td><td>esquema_invalido</td><td>[&#x27;extra_forbidden:observacao&#x27;]</td></tr><tr><td>pico_virou_corte</td><td>divergencia</td><td>[&#x27;numero_divergente:cutoff&#x27;]</td></tr><tr><td>causa_nao_sustentada</td><td>divergencia</td><td>[&#x27;razao_sem_suporte&#x27;]</td></tr><tr><td>citacao_incompleta_e_extra</td><td>divergencia</td><td>[&#x27;citacao_ausente:s2&#x27;, &#x27;citacao_extra:usable&#x27;, &#x27;citacao_repetida&#x27;]</td></tr><tr><td>sem_dado_nao_e_zero</td><td>divergencia</td><td>[&#x27;numero_divergente:s1&#x27;]</td></tr><tr><td>id_e_classe_trocados</td><td>divergencia</td><td>[&#x27;classe_divergente&#x27;, &#x27;id_divergente&#x27;]</td></tr><tr><td>igualdade_inclusiva</td><td>fiel</td><td>[]</td></tr><tr><td>arredondamento_muda_regra</td><td>divergencia</td><td>[&#x27;classe_divergente&#x27;, &#x27;numero_divergente:s2&#x27;]</td></tr></table></div>
+<h2>Tentativas em desenvolvimento</h2><p>Clique para comparar uma saída bruta com a resposta publicada.</p>
+<details><summary>renewcast_replay · zero_shot · esquema_invalido</summary><p>Erros: extra_forbidden:k, extra_forbidden:usable, missing:code, missing:reason, missing:refs</p><pre>{&quot;id&quot;:&quot;renewcast_replay&quot;,&quot;k&quot;:1,&quot;usable&quot;:true,&quot;cutoff&quot;:&quot;0.5&quot;,&quot;s1&quot;:&quot;0.20465385372296466&quot;,&quot;s2&quot;:null}</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;renewcast_replay&quot;,
+  &quot;code&quot;: &quot;BELOW&quot;,
+  &quot;cutoff&quot;: &quot;0.5&quot;,
+  &quot;s1&quot;: &quot;0.20465385372296466&quot;,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;below&quot;,
+  &quot;refs&quot;: [
+    &quot;s1&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico ficou abaixo do corte.&quot;
+}</pre></details>
+<details><summary>renewcast_replay · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;:&quot;renewcast_replay&quot;,
+  &quot;cutoff&quot;:&quot;0.5&quot;,
+  &quot;s1&quot;:&quot;0.20465385372296466&quot;,
+  &quot;s2&quot;:&quot;0.20465385372296466&quot;,
+  &quot;cutoff&quot;:&quot;0.5&quot;,
+  &quot;s1&quot;:&quot;0.20465385372296466&quot;,
+  &quot;s2&quot;:&quot;0.20465385372</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;renewcast_replay&quot;,
+  &quot;code&quot;: &quot;BELOW&quot;,
+  &quot;cutoff&quot;: &quot;0.5&quot;,
+  &quot;s1&quot;: &quot;0.20465385372296466&quot;,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;below&quot;,
+  &quot;refs&quot;: [
+    &quot;s1&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico ficou abaixo do corte.&quot;
+}</pre></details>
+<details><summary>renewcast_sem_resposta · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;:&quot;renewcast_sem_resposta&quot;,&quot;k&quot;:1,&quot;usable&quot;:false,&quot;cutoff&quot;:&quot;0.5&quot;,&quot;s1&quot;:null,&quot;s2&quot;:null}
+
+{
+  &quot;id&quot;:&quot;renewcast_sem_resposta&quot;,&quot;k&quot;:2,&quot;usable&quot;:false,&quot;cutoff&quot;:&quot;0.5&quot;,&quot;s1&quot;:null,&quot;s2&quot;:null}
+
+{
+  &quot;id&quot;:&quot;renewcast_sem_resposta&quot;,&quot;k&quot;:3,&quot;usable&quot;:false,&quot;cutoff&quot;:&quot;0.5&quot;,&quot;s1&quot;:null,&quot;s2&quot;:null}
+
+</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;renewcast_sem_resposta&quot;,
+  &quot;code&quot;: &quot;INSUFFICIENT&quot;,
+  &quot;cutoff&quot;: &quot;0.5&quot;,
+  &quot;s1&quot;: null,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;unavailable&quot;,
+  &quot;refs&quot;: [
+    &quot;usable&quot;
+  ],
+  &quot;explicacao&quot;: &quot;Registro indisponível para aplicar a regra.&quot;
+}</pre></details>
+<details><summary>renewcast_sem_resposta · zero_shot · esquema_invalido</summary><p>Erros: extra_forbidden:k, extra_forbidden:usable, missing:code, missing:reason, missing:refs</p><pre>{&quot;id&quot;:&quot;renewcast_sem_resposta&quot;,&quot;k&quot;:1,&quot;usable&quot;:false,&quot;cutoff&quot;:&quot;0.5&quot;,&quot;s1&quot;:null,&quot;s2&quot;:null}</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;renewcast_sem_resposta&quot;,
+  &quot;code&quot;: &quot;INSUFFICIENT&quot;,
+  &quot;cutoff&quot;: &quot;0.5&quot;,
+  &quot;s1&quot;: null,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;unavailable&quot;,
+  &quot;refs&quot;: [
+    &quot;usable&quot;
+  ],
+  &quot;explicacao&quot;: &quot;Registro indisponível para aplicar a regra.&quot;
+}</pre></details>
+<details><summary>satmon_tres_canais · zero_shot · esquema_invalido</summary><p>Erros: extra_forbidden:k, extra_forbidden:usable, missing:code, missing:reason, missing:refs</p><pre>{&quot;id&quot;:&quot;satmon_tres_canais&quot;,&quot;k&quot;:2,&quot;usable&quot;:true,&quot;cutoff&quot;:&quot;0.7199442558330269&quot;,&quot;s1&quot;:&quot;0.7164359650668679&quot;,&quot;s2&quot;:&quot;0.6382295270617967&quot;}</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;satmon_tres_canais&quot;,
+  &quot;code&quot;: &quot;BELOW&quot;,
+  &quot;cutoff&quot;: &quot;0.7199442558330269&quot;,
+  &quot;s1&quot;: &quot;0.7164359650668679&quot;,
+  &quot;s2&quot;: &quot;0.6382295270617967&quot;,
+  &quot;reason&quot;: &quot;below&quot;,
+  &quot;refs&quot;: [
+    &quot;s1&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico ficou abaixo do corte.&quot;
+}</pre></details>
+<details><summary>satmon_tres_canais · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;: &quot;satmon_tres_canais&quot;,
+  &quot;cutoff&quot;: &quot;0.7199442558330269&quot;,
+  &quot;s1&quot;: &quot;0.7164359650668679&quot;,
+  &quot;cutoff&quot;: &quot;0.7199442558330269&quot;,
+  &quot;s2&quot;: &quot;0.6382295270617967&quot;,
+  &quot;reason&quot;: &quot;below</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;satmon_tres_canais&quot;,
+  &quot;code&quot;: &quot;BELOW&quot;,
+  &quot;cutoff&quot;: &quot;0.7199442558330269&quot;,
+  &quot;s1&quot;: &quot;0.7164359650668679&quot;,
+  &quot;s2&quot;: &quot;0.6382295270617967&quot;,
+  &quot;reason&quot;: &quot;below&quot;,
+  &quot;refs&quot;: [
+    &quot;s1&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico ficou abaixo do corte.&quot;
+}</pre></details>
+<details><summary>satmon_sem52 · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;: &quot;satmon_sem52&quot;,
+  &quot;cutoff&quot;: &quot;0.7201268845204545&quot;,
+  &quot;s1&quot;: &quot;0.7541511974686277&quot;,
+  &quot;cutoff&quot;: &quot;0.7201268845204545&quot;,
+  &quot;s2&quot;: &quot;0.6915642216840697&quot;,
+  &quot;cutoff&quot;: &quot;0.72</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;satmon_sem52&quot;,
+  &quot;code&quot;: &quot;ISOLATED&quot;,
+  &quot;cutoff&quot;: &quot;0.7201268845204545&quot;,
+  &quot;s1&quot;: &quot;0.7541511974686277&quot;,
+  &quot;s2&quot;: &quot;0.6915642216840697&quot;,
+  &quot;reason&quot;: &quot;pair_below&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s1&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico chegou ao corte; o melhor par ficou abaixo.&quot;
+}</pre></details>
+<details><summary>satmon_sem52 · zero_shot · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;: &quot;satmon_sem52&quot;,
+  &quot;k&quot;: 2,
+  &quot;usable&quot;: true,
+  &quot;cutoff&quot;: &quot;0.7201268845204545&quot;,
+  &quot;s1&quot;: &quot;0.7541511974686277&quot;,
+  &quot;s2&quot;: &quot;0.6915642216840697&quot;,
+  &quot;cutoff&quot;: &quot;0.7201268845204</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;satmon_sem52&quot;,
+  &quot;code&quot;: &quot;ISOLATED&quot;,
+  &quot;cutoff&quot;: &quot;0.7201268845204545&quot;,
+  &quot;s1&quot;: &quot;0.7541511974686277&quot;,
+  &quot;s2&quot;: &quot;0.6915642216840697&quot;,
+  &quot;reason&quot;: &quot;pair_below&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s1&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico chegou ao corte; o melhor par ficou abaixo.&quot;
+}</pre></details>
+<details><summary>igualdade · zero_shot · esquema_invalido</summary><p>Erros: extra_forbidden:k, extra_forbidden:usable, missing:code, missing:reason, missing:refs</p><pre>{&quot;id&quot;:&quot;igualdade&quot;,&quot;k&quot;:2,&quot;usable&quot;:true,&quot;cutoff&quot;:&quot;0.70&quot;,&quot;s1&quot;:&quot;0.73&quot;,&quot;s2&quot;:&quot;0.70&quot;}</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;igualdade&quot;,
+  &quot;code&quot;: &quot;ELIGIBLE&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.73&quot;,
+  &quot;s2&quot;: &quot;0.70&quot;,
+  &quot;reason&quot;: &quot;pair_met&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O melhor par chegou ao corte para duas leituras.&quot;
+}</pre></details>
+<details><summary>igualdade · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;: &quot;igualdade&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.73&quot;,
+  &quot;s2&quot;: &quot;0.70&quot;,
+  &quot;usable&quot;: true,
+  &quot;k&quot;: 2,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.73&quot;,
+  &quot;s2&quot;: &quot;0.70&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.73&quot;,
+  &quot;s2&quot;: &quot;0.70&quot;,</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;igualdade&quot;,
+  &quot;code&quot;: &quot;ELIGIBLE&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.73&quot;,
+  &quot;s2&quot;: &quot;0.70&quot;,
+  &quot;reason&quot;: &quot;pair_met&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O melhor par chegou ao corte para duas leituras.&quot;
+}</pre></details>
+<details><summary>picos_sem_par · um_exemplo · json_invalido</summary><p>Erros: json_malformado</p><pre>{
+  &quot;id&quot;: &quot;picos_sem_par&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.80&quot;,
+  &quot;s2&quot;: null,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.53&quot;,
+  &quot;s2&quot;: null,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.80&quot;,
+  &quot;cutoff&quot;: null,
+  &quot;s2&quot;: null,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;picos_sem_par&quot;,
+  &quot;code&quot;: &quot;ISOLATED&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.80&quot;,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;no_pair&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s1&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico chegou ao corte; faltou um par utilizável.&quot;
+}</pre></details>
+<details><summary>picos_sem_par · zero_shot · esquema_invalido</summary><p>Erros: extra_forbidden:k, extra_forbidden:usable, missing:code, missing:reason, missing:refs</p><pre>{&quot;id&quot;:&quot;picos_sem_par&quot;,&quot;k&quot;:2,&quot;usable&quot;:true,&quot;cutoff&quot;:&quot;0.70&quot;,&quot;s1&quot;:&quot;0.80&quot;,&quot;s2&quot;:null}</pre><pre>{
+  &quot;origem&quot;: &quot;fallback&quot;,
+  &quot;id&quot;: &quot;picos_sem_par&quot;,
+  &quot;code&quot;: &quot;ISOLATED&quot;,
+  &quot;cutoff&quot;: &quot;0.70&quot;,
+  &quot;s1&quot;: &quot;0.80&quot;,
+  &quot;s2&quot;: null,
+  &quot;reason&quot;: &quot;no_pair&quot;,
+  &quot;refs&quot;: [
+    &quot;k&quot;,
+    &quot;s1&quot;,
+    &quot;s2&quot;,
+    &quot;cutoff&quot;
+  ],
+  &quot;explicacao&quot;: &quot;O pico chegou ao corte; faltou um par utilizável.&quot;
+}</pre></details>
+<p>O código final repete a regra determinística; os 100% publicados não representam acerto do LLM. O relatório HTML não expõe as tentativas individuais do reservado; os arquivos locais as preservam. Nenhum comando ou alarme é acionado.</p>

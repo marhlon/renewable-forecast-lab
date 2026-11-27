@@ -1,0 +1,57 @@
+{
+  "completed_at_utc": "2026-11-26T16:18:37.418582+00:00",
+  "local_package_complete": true,
+  "isolated_source_copy_verified": true,
+  "environment": "existing Conda packages, not a newly installed clean Python",
+  "executions": [
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "scripts/verificar_ci_bloco3.py"
+      ],
+      "started_at_utc": "2026-11-26T16:17:44.180859+00:00",
+      "completed_at_utc": "2026-11-26T16:17:59.546603+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "copia1_comando0.log",
+      "log_sha256": "11afda37c74989bba83d2b5b639c4d79ba9cca7997b312a14eec35cf3c964e00"
+    },
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "scripts/verificar_ci_bloco3.py",
+        "--contraprova"
+      ],
+      "started_at_utc": "2026-11-26T16:17:59.548132+00:00",
+      "completed_at_utc": "2026-11-26T16:18:15.016111+00:00",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "log": "copia1_comando1.log",
+      "log_sha256": "701fe3a08140aea1035d8c7cffbf48afe4166ffd09f9038aedbdc6911f98f048"
+    },
+    {
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_bloco3_data.py",
+        "tests/test_bloco3_ops.py",
+        "tests/test_bloco3_transferencia_neural.py"
+      ],
+      "started_at_utc": "2026-11-26T16:18:15.018125+00:00",
+      "completed_at_utc": "2026-11-26T16:18:37.382765+00:00",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "copia1_comando2.log",
+      "log_sha256": "26debd2561393ccce4e1f7804c90d0bd28117a7c76126f876382484fcd6cb986"
+    }
+  ],
+  "remote_ci_executed": false,
+  "remote_access_pending": true,
+  "actual_failure_and_success_in_local_copy": true,
+  "ignored_models_or_raw_data_used": false,
+  "operational_approval": false
+}

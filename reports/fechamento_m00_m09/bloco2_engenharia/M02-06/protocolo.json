@@ -1,0 +1,113 @@
+{
+  "schema": "renewcast-decision-risk-protocol-v1",
+  "created_at_utc": "2026-11-25T16:19:50.468071+00:00",
+  "roadmap_id": "M02-06",
+  "mode": "engineering delivery; assisted implementation and interpretation, not independent student assessment",
+  "scope": "post-hoc decision analysis of existing, already explored development predictions; not new validation",
+  "source_clinic": {
+    "path": "D:\\Downloads\\clinica_decisao_forecast.py",
+    "bytes": 8024,
+    "sha256": "5d129c89a32bc782390a7f56de74e7faa39b5c390b30f353085ca74bcc3692ec",
+    "copied_to": "notebooks/clinica_decisao_forecast.py",
+    "copy_sha256": "5d129c89a32bc782390a7f56de74e7faa39b5c390b30f353085ca74bcc3692ec",
+    "copy_modified": false,
+    "authorship": "source received in Downloads; original author not established by file content; byte-preserving copy performed with Codex assistance"
+  },
+  "joint_lesson_lookup": "No matching *M02*M03*M05* lesson found in targeted docs and Downloads search; local M05 quantile/event lessons consulted. This is not proof that no attachment exists elsewhere.",
+  "source_run_id": "20261117T213329Z_3b201a01",
+  "source_run": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01",
+  "source_event_study": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1",
+  "generation_decisions": {
+    "rows_per_policy_expected": 168,
+    "point_variants_expected": 10,
+    "additional_quantile_actions": [
+      0.2,
+      0.8
+    ],
+    "selected_steps": "timestamp target-history_end equals 26 hours; zero-based index25 fixed by h24/d2 source contract",
+    "quantile_selection": "direct native levels p20/p50/p80 in archived grid; no interpolation, quantile sorting, clipping or mass assignment",
+    "scenarios": [
+      {
+        "name": "simetrico",
+        "cost_under": 1,
+        "cost_over": 1,
+        "optimal_tau": 0.5
+      },
+      {
+        "name": "subestimar_custa_4",
+        "cost_under": 4,
+        "cost_over": 1,
+        "optimal_tau": 0.8
+      },
+      {
+        "name": "superestimar_custa_4",
+        "cost_under": 1,
+        "cost_over": 4,
+        "optimal_tau": 0.2
+      }
+    ],
+    "loss": "cu*max(y-action,0)+co*max(action-y,0)",
+    "blocks": "seven chronological blocks of24 origins, descriptive stability only"
+  },
+  "event_decisions": {
+    "rows_per_method_expected": 504,
+    "methods_expected": [
+      "historical_frequency",
+      "logistic_weather",
+      "hgb_weather_classifier"
+    ],
+    "event": "last_available_generation-target_generation>=22.77 MWmed, endpoint26h after history_end; not hourly ramp",
+    "scenarios": [
+      {
+        "name": "simetrico",
+        "cost_fp": 1,
+        "cost_fn": 1
+      },
+      {
+        "name": "perder_evento_custa_4",
+        "cost_fp": 1,
+        "cost_fn": 4
+      },
+      {
+        "name": "alarme_falso_custa_4",
+        "cost_fp": 4,
+        "cost_fn": 1
+      }
+    ],
+    "thresholds": "compare fixed0.5 with theoretical cost_fp/(cost_fp+cost_fn); deduplicate identical thresholds",
+    "tie_rule": "alarm when p_event>=threshold; equal expected costs permit either action at equality",
+    "loss": "cost_fp*FP+cost_fn*FN",
+    "probability_source": "saved classifier p_event only; never inferred from p10/p50/p90 or Chronos quantiles"
+  },
+  "cost_units": "hypothetical relative costs; weighted MWmed for generation; arbitrary units for classification, never currency",
+  "source_contract_limits": {
+    "generation_delay_hours_assumed": 2,
+    "timezone_confirmed": false,
+    "weather_availability_confirmed": false,
+    "historical_registry_confirmed": false,
+    "pretraining_overlap_confirmed": false
+  },
+  "criteria_before_calculation": [
+    "source output hashes match historical receipt and remain unchanged",
+    "same origins, targets and observations within each separate cohort",
+    "all selected decisions and losses finite",
+    "native quantile p50 equals archived point forecast",
+    "asymmetric loss equals (cu+co)*pinball at tau=cu/(cu+co)",
+    "class probabilities in[0,1], labels binary and label thresholds preserved",
+    "threshold policy ties and cohort differences stated",
+    "no retraining, inference, calibration, tuning, source edits or operational approval"
+  ],
+  "input_hashes": {
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/resultado.json": "19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0",
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6",
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+    "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+    "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/predictions.csv": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44",
+    "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/protocol.json": "047c0420e2818688a5b151b8544b5d1a75544dba903f5de5ed591fafeecfe95b",
+    "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/metadata.json": "9b2d641ebbad755b98795e07aa6c20ba17cbfd647ab34056a2f41d19dc0352eb"
+  },
+  "new_training": false,
+  "new_inference": false,
+  "operational_approval": false
+}

@@ -1,0 +1,16 @@
+{
+  "requests": 240,
+  "concurrency": [
+    1,
+    4
+  ],
+  "timeout_seconds": 5,
+  "max_duration_seconds_per_case": 30,
+  "p95_ms_max": 500,
+  "error_fraction_max": 0.01,
+  "rss_mb_max": 2048,
+  "abort_rss_mb": 3072,
+  "cpu_threads": 2,
+  "spend_cap_brl": 0,
+  "cost_scope": "nenhum recurso cloud criado; energia/depreciação local não tarifadas; não equivale a custo observado de produção"
+}

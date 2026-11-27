@@ -1,0 +1,250 @@
+┌─────────────────────────────────────┐
+│┌───────────────────────────────────┐│
+││    Query Profiling Information    ││
+│└───────────────────────────────────┘│
+└─────────────────────────────────────┘
+EXPLAIN ANALYZE WITH lagged AS (  SELECT series_id, event_time, generation_mw,  LAG(generation_mw) OVER(PARTITION BY series_id ORDER BY event_time) AS previous_mw,  LAG(event_time) OVER(PARTITION BY series_id ORDER BY event_time) AS previous_time  FROM read_parquet(?) WHERE series_id IN (SELECT unnest(?)) ) SELECT series_id, count(*) AS rows, avg(generation_mw) AS mean_generation_mw,  avg(CASE WHEN event_time-previous_time=INTERVAL '1 hour' THEN abs(generation_mw-previous_mw) END) AS mean_abs_change_mw FROM lagged GROUP BY series_id ORDER BY series_id
+┌────────────────────────────────────────────────┐
+│┌──────────────────────────────────────────────┐│
+││              Total Time: 0.159s              ││
+│└──────────────────────────────────────────────┘│
+└────────────────────────────────────────────────┘
+┌───────────────────────────┐
+│           QUERY           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│      EXPLAIN_ANALYZE      │
+│    ────────────────────   │
+│                           │
+│           0 rows          │
+│           0.00s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│          ORDER_BY         │
+│    ────────────────────   │
+│    lagged.series_id ASC   │
+│                           │
+│                           │
+│                           │
+│          211 rows         │
+│           0.00s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│       HASH_GROUP_BY       │
+│    ────────────────────   │
+│         Groups: #0        │
+│                           │
+│        Aggregates:        │
+│        count_star()       │
+│          avg(#1)          │
+│          avg(#2)          │
+│                           │
+│                           │
+│                           │
+│          211 rows         │
+│           0.01s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│         series_id         │
+│       generation_mw       │
+│        CASE  WHEN (       │
+│ (normalized_interval((CAST│
+│ (event_time AS TIMESTAMP) │
+│  - CAST(previous_time AS  │
+│  TIMESTAMP))) = '01:00:00'│
+│  ::INTERVAL)) THEN (abs(  │
+│      (generation_mw -     │
+│  previous_mw))) ELSE NULL │
+│             END           │
+│                           │
+│                           │
+│                           │
+│        149,568 rows       │
+│           0.02s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         PROJECTION        │
+│    ────────────────────   │
+│             #0            │
+│             #1            │
+│             #2            │
+│             #3            │
+│             #4            │
+│                           │
+│                           │
+│                           │
+│        149,568 rows       │
+│           0.00s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│           WINDOW          │
+│    ────────────────────   │
+│        Projections:       │
+│  LAG(generation_mw) OVER  │
+│  (PARTITION BY series_id  │
+│   ORDER BY event_time ASC │
+│         NULLS LAST)       │
+│   LAG(event_time) OVER    │
+│  (PARTITION BY series_id  │
+│   ORDER BY event_time ASC │
+│         NULLS LAST)       │
+│                           │
+│                           │
+│                           │
+│        149,568 rows       │
+│           0.08s           │
+└─────────────┬─────────────┘
+┌─────────────┴─────────────┐
+│         HASH_JOIN         │
+│    ────────────────────   │
+│      Join Type: SEMI      │
+│                           │
+│        Conditions:        │
+│       series_id = #0      ├──────────────┐
+│                           │              │
+│                           │              │
+│                           │              │
+│        149,568 rows       │              │
+│           0.01s           │              │
+└─────────────┬─────────────┘              │
+┌─────────────┴─────────────┐┌─────────────┴─────────────┐
+│         TABLE_SCAN        ││         PROJECTION        │
+│    ────────────────────   ││    ────────────────────   │
+│         Function:         ││ UNNEST(['ALUXG', 'AMAA',  │
+│        READ_PARQUET       ││  'AMBA', 'AMCM', 'AMJA',  │
+│                           ││ 'AMPO', 'AMPRC', 'AMTA',  │
+│        Projections:       ││ 'AMTCN', 'AMUTAZ', 'AMUTMU│
+│         series_id         ││    ', 'APCN', 'APFGO',    │
+│         event_time        ││    'APUHCC', 'APUHSJ',    │
+│       generation_mw       ││ 'BASK01', 'BAUAS', 'BAUCV'│
+│                           ││    , 'BAUGD', 'BAUGU',    │
+│      Dynamic Filters:     ││    'BAUITP', 'BAUPR1',    │
+│   optional: series_id>=   ││    'BAUPR2', 'BAUPR3',    │
+│   'ALUXG' AND optional:   ││ 'BAUPR4', 'BAUSB', 'BAUSD'│
+│  series_id<='CJU_RN5ESMB' ││ , 'BAUSQ', 'BAUST', 'BAUSU│
+│                           ││  ', 'BAUTBA', 'BAUTCA',   │
+│    Total Files Read: 1    ││    'BAUVCC', 'CEECVA',    │
+│                           ││ 'CEEMAU', 'CEFFDM', 'CEUCZ│
+│        Filename(s):       ││   ', 'CEUFM', 'CEUMU',    │
+│ C:\renewable-forecast-lab ││    'CEUPTM', 'CEUTCE',    │
+│          \reports         ││    'CEUTCP', 'CEUTPC',    │
+│\fechamento_m00_m09\bloco3_││ 'CEUTPD', 'CJU_BA3FIRE',  │
+│  engenharia\M07-01\silver ││      'CJU_BA4EPND',       │
+│          .parquet         ││      'CJU_BA4FBBC',       │
+│                           ││      'CJU_BA4FBBS',       │
+│                           ││      'CJU_BA4FBMC',       │
+│                           ││      'CJU_BA4FJZD',       │
+│                           ││ 'CJU_BA5EIGT', 'CJU_BAARA'│
+│           0.02s           ││ , 'CJU_BAARI', 'CJU_BABAB'│
+│                           ││ , 'CJU_BABBC', 'CJU_BABBS'│
+│                           ││ , 'CJU_BABJL', 'CJU_BABJU'│
+│                           ││ , 'CJU_BABMC', 'CJU_BABRD'│
+│                           ││ , 'CJU_BABW1', 'CJU_BABW2'│
+│                           ││ , 'CJU_BACAE', 'CJU_BACAN'│
+│                           ││ , 'CJU_BACFO', 'CJU_BACND'│
+│                           ││ , 'CJU_BACRI', 'CJU_BACRL'│
+│                           ││ , 'CJU_BACTA', 'CJU_BACTE'│
+│                           ││ , 'CJU_BACTN', 'CJU_BACVN'│
+│                           ││ , 'CJU_BADFN', 'CJU_BAECLA│
+│                           ││     ', 'CJU_BAEMS2',      │
+│                           ││ 'CJU_BAFFUT', 'CJU_BAFLA',│
+│                           ││  'CJU_BAFLS', 'CJU_BAGOI',│
+│                           ││  'CJU_BAGPX', 'CJU_BAHZT',│
+│                           ││  'CJU_BAIGD', 'CJU_BALAP',│
+│                           ││  'CJU_BALRA', 'CJU_BAMCS',│
+│                           ││  'CJU_BAMOR', 'CJU_BANHZ',│
+│                           ││  'CJU_BAOUR', 'CJU_BAPBR',│
+│                           ││  'CJU_BAPEL', 'CJU_BASAR',│
+│                           ││  'CJU_BASAZ', 'CJU_BASDA1'│
+│                           ││ , 'CJU_BASDB', 'CJU_BASPD'│
+│                           ││ , 'CJU_BASSB', 'CJU_BASSD'│
+│                           ││ , 'CJU_BASSDB', 'CJU_BASVT│
+│                           ││ ', 'CJU_BATBD', 'CJU_BATBV│
+│                           ││ ', 'CJU_BATQN', 'CJU_BATUC│
+│                           ││      ', 'CJU_BAVSE',      │
+│                           ││ 'CJU_BAVSES', 'CJU_CE4FICO│
+│                           ││     ', 'CJU_CE4FRSD',     │
+│                           ││ 'CJU_CEAB2', 'CJU_CEAPA', │
+│                           ││ 'CJU_CEARD', 'CJU_CEAUD', │
+│                           ││ 'CJU_CECAL', 'CJU_CECBS', │
+│                           ││ 'CJU_CECHE', 'CJU_CEESER',│
+│                           ││  'CJU_CEESTI', 'CJU_CEFSA'│
+│                           ││ , 'CJU_CEFSEM', 'CJU_CEICR│
+│                           ││ ', 'CJU_CEITC', 'CJU_CEJAN│
+│                           ││     ', 'CJU_CEKW2W',      │
+│                           ││ 'CJU_CELAV', 'CJU_CELINS',│
+│                           ││  'CJU_CEMTD', 'CJU_CEPPG',│
+│                           ││  'CJU_CEPTM', 'CJU_CEPTN',│
+│                           ││  'CJU_CESDF', 'CJU_CESEM',│
+│                           ││  'CJU_CESERA', 'CJU_CESRO'│
+│                           ││ , 'CJU_CETBA', 'CJU_CETRA'│
+│                           ││      , 'CJU_CEUFAL',      │
+│                           ││ 'CJU_GOCDOU', 'CJU_GOCFVB'│
+│                           ││ , 'CJU_GOEDEI', 'CJU_GOJAT│
+│                           ││     ', 'CJU_GOQUIR',      │
+│                           ││ 'CJU_MAPLN', 'CJU_MG3FBTZS│
+│                           ││ ', 'CJU_MGARN', 'CJU_MGARX│
+│                           ││     ', 'CJU_MGCPIR',      │
+│                           ││ 'CJU_MGDRC', 'CJU_MGFSA', │
+│                           ││ 'CJU_MGJAI3', 'CJU_MGJAN',│
+│                           ││  'CJU_MGJSNU', 'CJU_MGPR4P│
+│                           ││ ', 'CJU_MGSDC', 'CJU_MGSDJ│
+│                           ││     ', 'CJU_MGUFLS',      │
+│                           ││ 'CJU_MGUFPU', 'CJU_MGUFUR'│
+│                           ││      , 'CJU_MGUJAI',      │
+│                           ││ 'CJU_MGVST1', 'CJU_MGVZP',│
+│                           ││       'CJU_MGVZPQ',       │
+│                           ││      'CJU_MS4FINO',       │
+│                           ││ 'CJU_MS4FRBE', 'CJU_MSCAO'│
+│                           ││      , 'CJU_MSCRBR',      │
+│                           ││ 'CJU_MSIVI2', 'CJU_MSUFBR'│
+│                           ││ , 'CJU_MTCFAZ', 'CJU_MTPI'│
+│                           ││ , 'CJU_PBCGT', 'CJU_PBCHN'│
+│                           ││ , 'CJU_PBCHS', 'CJU_PBCHSD│
+│                           ││     ', 'CJU_PBCSDS',      │
+│                           ││ 'CJU_PBLZA', 'CJU_PBRAL', │
+│                           ││ 'CJU_PBSDP', 'CJU_PBSLDF5'│
+│                           ││     , 'CJU_PE2FGRD',      │
+│                           ││ 'CJU_PE4ETAT', 'CJU_PEBELM│
+│                           ││ ', 'CJU_PEBRI', 'CJU_PECE2│
+│                           ││ ', 'CJU_PECIR', 'CJU_PECLE│
+│                           ││     ', 'CJU_PEFTAT',      │
+│                           ││ 'CJU_PEMRRC', 'CJU_PEPAR',│
+│                           ││  'CJU_PESODA', 'CJU_PESPP'│
+│                           ││     , 'CJU_PI4ECNP',      │
+│                           ││      'CJU_PI5FCNC',       │
+│                           ││      'CJU_PI5FGID',       │
+│                           ││ 'CJU_PI5FRGV', 'CJU_PIARP'│
+│                           ││ , 'CJU_PICH1', 'CJU_PICP2'│
+│                           ││ , 'CJU_PICP3', 'CJU_PIFMRG│
+│                           ││     ', 'CJU_PIFSBA',      │
+│                           ││ 'CJU_PILBI', 'CJU_PILDV', │
+│                           ││ 'CJU_PINVO', 'CJU_PIOIT', │
+│                           ││ 'CJU_PIRG3', 'CJU_PISBAE',│
+│                           ││  'CJU_PISJP', 'CJU_PIVSR',│
+│                           ││  'CJU_PRKCL', 'CJU_RN2ESSA│
+│                           ││     ', 'CJU_RN4EMSD',     │
+│                           ││      'CJU_RN5ESMA',       │
+│                           ││      'CJU_RN5ESMB'])      │
+│                           ││                           │
+│                           ││                           │
+│                           ││                           │
+│        389,304 rows       ││          212 rows         │
+│          (0.02s)          ││           0.00s           │
+└───────────────────────────┘└─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │           UNNEST          │
+                             │    ────────────────────   │
+                             │                           │
+                             │          212 rows         │
+                             │           0.00s           │
+                             └─────────────┬─────────────┘
+                             ┌─────────────┴─────────────┐
+                             │         DUMMY_SCAN        │
+                             │    ────────────────────   │
+                             │                           │
+                             │           1 row           │
+                             │           0.00s           │
+                             └───────────────────────────┘

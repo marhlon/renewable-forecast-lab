@@ -1,0 +1,20 @@
+{
+  "executed_at": "2026-11-26T00:37:53.058387+00:00",
+  "execution_kind": "historical_replay_of_collector_contract",
+  "live_guard_rejected": true,
+  "replay_emissions": 48,
+  "replay_reconciliations": 48,
+  "all_counterexamples_rejected": true,
+  "live_emissions": 0,
+  "observed_live_hours": 0,
+  "operational_criteria": {
+    "C1": false,
+    "C2": false
+  },
+  "source_arrivals": "simuladas no replay; received_at é horário real de gravação e não data de emissão histórica",
+  "blocked_by": [
+    "M04-05: fuso/vintage/chegada reais não certificados",
+    "M06-02: CI remoto não demonstrado",
+    "janela prospectiva não transcorrida"
+  ]
+}

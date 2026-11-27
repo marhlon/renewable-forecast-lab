@@ -1,0 +1,25 @@
+{
+  "help": "https://dados.ons.org.br/api/3/action/help_show?name=resource_show",
+  "success": true,
+  "result": {
+    "cache_last_updated": null,
+    "cache_url": null,
+    "created": "2026-09-02T15:04:10.208418",
+    "description": "Extensão PARQUET",
+    "format": "PARQUET",
+    "hash": "",
+    "id": "c6d1f291-c114-4872-b69d-b487f7410e5c",
+    "last_modified": "2026-10-31T22:08:34.414974",
+    "metadata_modified": "2026-10-31T22:08:35.930221",
+    "mimetype": null,
+    "mimetype_inner": null,
+    "name": "Geracao_Usina_2-2026-09",
+    "package_id": "45f11926-a1f1-4083-9c5d-ba81bf0b3a85",
+    "position": 238,
+    "resource_type": null,
+    "size": 4476385,
+    "state": "active",
+    "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/GERACAO_USINA-2_2026_09.parquet",
+    "url_type": null
+  }
+}

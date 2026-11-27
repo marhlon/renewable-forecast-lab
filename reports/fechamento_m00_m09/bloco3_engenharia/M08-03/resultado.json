@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "rows": 11,
+  "batch_sizes": [
+    4,
+    4,
+    3
+  ],
+  "mse": 5.603784129359859,
+  "mse_global_reference": 5.603784129359859,
+  "incorrect_unweighted_batch_mse": 6.324715874928384,
+  "parameter_count": 273,
+  "observed_shapes": {
+    "input": [
+      11,
+      12,
+      1
+    ],
+    "recurrent": [
+      11,
+      12,
+      8
+    ],
+    "hidden": [
+      1,
+      11,
+      8
+    ],
+    "prediction": [
+      11,
+      1
+    ]
+  },
+  "max_numpy_recurrence_difference": 2.220446049250313e-16,
+  "preservation_success_and_failures": true,
+  "rejected_cases": [
+    "alvo_shape_apos_lote_valido",
+    "nan_apos_lote_valido",
+    "loader_vazio",
+    "janela_incorreta"
+  ],
+  "zero_reset_repeat_and_batch_permutation": true,
+  "future_mutation_safe_delta": 0,
+  "unavailable_input_positive_control_delta": 0.2879685512583976,
+  "checks_count": 12,
+  "random_weights_only_contract_no_quality_claim": true,
+  "item": "M08-03",
+  "started_at_utc": "2026-11-26T00:32:54.373829+00:00",
+  "completed_at_utc": "2026-11-26T00:33:09.228582+00:00",
+  "protocol_sha256": "c6396b96aaac417e2c954a827ce890baff0df95ba2a990061857636adf8bfa81",
+  "code_sha256": {
+    "notebooks/bloco3_transferencia_neural.py": "dcf4dc80e595899bd127df1e3ea4cf1cef9611021e351adaf28a8e15abe2fce6",
+    "tests/test_bloco3_transferencia_neural.py": "1a261ec785a2669c7b440408895539052e5cb48057e686766f99dd0f1f297c76",
+    "src/renewable_forecast/neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+    "src/renewable_forecast/transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "authorship": "Codex, solução técnica fornecida e executada; sem autonomia pessoal certificada",
+  "operational_evidence": false,
+  "output_sha256": {
+    "reports/fechamento_m00_m09/bloco3_engenharia/M08-03/avaliacao_11_exemplos.csv": "abc95a6140a29e3f7aeb3081060a444bb8a7cf092c5b836b5cc4bdb60456d44f"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "editorial-readme-evidence-map-v1",
+  "review_date": "2026-11-27",
+  "project": "Renewcast",
+  "experiment_executed_for_this_edit": false,
+  "source_execution_directory": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04",
+  "canonical_run_id_in_source": null,
+  "source_partition": "retrospective final evaluation, September 2026",
+  "source_receipt_completed_at_utc": "2026-11-26T16:16:56.269389+00:00",
+  "original_sources_modified": false,
+  "copies_byte_identical": true,
+  "sources": [
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/summary.csv",
+      "copy": "docs/renewcast/evidencias/summary.csv",
+      "sha256": "d8381d9b7904ee067806a4f704b2370017be2bdd2a73273ea3fd69efa7fb7a5a",
+      "bytes": 1033
+    },
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/metricas_intervalos.csv",
+      "copy": "docs/renewcast/evidencias/metricas_intervalos.csv",
+      "sha256": "30b1d1ae5cab2fd4ee9d363f13c21699140c416b20c76da5a25ffe0c5a4608a5",
+      "bytes": 548
+    },
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/bootstrap_pareado.csv",
+      "copy": "docs/renewcast/evidencias/bootstrap_pareado.csv",
+      "sha256": "db1dd5245886e7f24979fe75bb342c00cbce384c457c0b30e5d14b1c765fb98a",
+      "bytes": 1136
+    },
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/resultado.json",
+      "copy": "docs/renewcast/evidencias/resultado.json",
+      "sha256": "ab8cf503036652fe2b7832128bbe66ae6c7f9aba3e302a2e78dae1f2fc29f5a1",
+      "bytes": 7110
+    },
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/M03-04/protocolo.json",
+      "copy": "docs/renewcast/evidencias/protocolo.json",
+      "sha256": "24bf28aee39c0717047dadd24d425e4b203146f25eae4c6049ff5a5432e7760d",
+      "bytes": 3170
+    },
+    {
+      "source": "reports/fechamento_m00_m09/bloco3_engenharia/congelamento_final.json",
+      "copy": "docs/renewcast/evidencias/congelamento_final.json",
+      "sha256": "c2cc4b4f89d8a522f2ca446f75821e6b446a47a05c78f493865df9b810b102b2",
+      "bytes": 4386
+    }
+  ],
+  "findings": {
+    "1": [
+      "summary.csv",
+      "bootstrap_pareado.csv",
+      "resultado.json"
+    ],
+    "2": [
+      "summary.csv",
+      "protocolo.json"
+    ],
+    "3": [
+      "metricas_intervalos.csv",
+      "resultado.json"
+    ]
+  },
+  "figure_status": "No existing figure of the 671-origin final evaluation was located; specification only, no image generated.",
+  "git_publication_performed": false
+}

@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-11-26T00:35:14.344736+00:00",
+  "scope": [
+    "M03-04",
+    "M09-04"
+  ],
+  "source_month": "2026-09",
+  "resource_id": "c6d1f291-c114-4872-b69d-b487f7410e5c",
+  "resource_page": "https://dados.ons.org.br/dataset/geracao-usina-2/resource/c6d1f291-c114-4872-b69d-b487f7410e5c",
+  "metadata_only_viewed": true,
+  "new_raw_not_present": true,
+  "source": "ONS usina CJU_BA5EIGT, snapshot newly acquired; no historical published vintage proof",
+  "origins_start": "2026-09-02 01:00",
+  "origins_end_exclusive": "2026-09-30 00:00",
+  "source_hours": 720,
+  "origins": 671,
+  "availability": {
+    "history_end": "origin-2h",
+    "context": "24 real chronological values origin-25h..origin-2h",
+    "target": "origin+24h",
+    "label_available": "origin+26h",
+    "chronos_forecast_index": 25,
+    "timezone": "UTC interpreted under hypothesis"
+  },
+  "no_training_on_final": true,
+  "no_tuning_on_final": true,
+  "no_seed_selection": true,
+  "model_families": [
+    "persistence",
+    "legacy linear",
+    "legacy HGB",
+    "MLP all3seeds",
+    "GRU all3seeds",
+    "B2 selected HGB28",
+    "LightGBM dev-selected",
+    "CatBoost dev-selected",
+    "HGB quantile median",
+    "Chronos P50"
+  ],
+  "champion_fixed": "hgb_bloco2",
+  "baseline": "persistence",
+  "primary_metric": "MAE",
+  "paired_gain": "absolute_error_persistence - absolute_error_candidate",
+  "bootstrap": {
+    "method": "circular paired blocks",
+    "block_hours": 24,
+    "repetitions": 2000,
+    "seed": 31,
+    "confidence": 0.95,
+    "scope": "conditional on frozen models/snapshot; no refitting, no p-value"
+  },
+  "consideration_rule": {
+    "minimum_mean_mae_gain_mwmed": 2,
+    "gain_ci_lower_above_zero": true,
+    "cqr_coverage_nominal": 0.8,
+    "coverage_tolerance": 0.1,
+    "interval_mean_width_limit_mwmed": 100,
+    "frozen_policy_cost_less_than_never_alarm": true,
+    "all_runtime_day_alarm_limits_at_most": 6,
+    "operational_data_contract_required": true
+  },
+  "decision": "Engineering may close even with negative results. No automatic promotion; M04 PIT and live evidence remain prerequisites.",
+  "point_cost_scenarios": [
+    {
+      "name": "symmetric",
+      "under": 1,
+      "over": 1
+    },
+    {
+      "name": "under_cost4",
+      "under": 4,
+      "over": 1
+    },
+    {
+      "name": "over_cost4",
+      "under": 1,
+      "over": 4
+    }
+  ],
+  "intervals": [
+    "B2 raw_sorted",
+    "B2 CQR frozen July",
+    "Chronos raw P10-P90"
+  ],
+  "probabilities": "B2 raw / Platt / historical frequency only; do not invent class probabilities from three quantiles or point forecasts",
+  "latency": "record observed scopes and library environments; Chronos separate private process, no claim of isolated model RAM or strict apples-to-apples latency ranking",
+  "legacy_fits": "reused without any retraining; original M08 training vs B2 training differ and must be disclosed",
+  "pretraining_overlap_verified": false,
+  "operational_approval": false,
+  "attribution": "Codex supplied engineering analysis; no independent learning or human approval asserted"
+}

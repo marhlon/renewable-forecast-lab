@@ -1,0 +1,823 @@
+{
+  "item": "M08-01",
+  "method": "read bytes/SHA256; no torch/pickle import",
+  "checks": [
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T131859Z_8f277a44\\curva_treino.csv",
+      "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+      "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+      "status": "match"
+    },
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T131859Z_8f277a44\\linear_state.pt",
+      "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+      "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+      "status": "match"
+    },
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T131859Z_8f277a44\\predictions.csv",
+      "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+      "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+      "status": "match"
+    },
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": "20261104T131859Z_8f277a44",
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_autograd.py",
+      "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132027Z_d5a8612c\\curva_treino.csv",
+      "expected_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+      "actual_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132027Z_d5a8612c\\linear_state.pt",
+      "expected_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+      "actual_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132027Z_d5a8612c\\predictions.csv",
+      "expected_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+      "actual_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132027Z_d5a8612c",
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_autograd.py",
+      "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132133Z_97eada41\\curva_treino.csv",
+      "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+      "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132133Z_97eada41\\linear_state.pt",
+      "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+      "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_1_autograd\\20261104T132133Z_97eada41\\predictions.csv",
+      "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+      "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_autograd.py",
+      "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+      "status": "match"
+    },
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "current_author_file",
+      "path": "notebooks\\m08_gradiente_autoral.py",
+      "expected_sha256": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+      "actual_sha256": "96d810d376e73838481417900aff2fa9956c2289f78f910d8787dc32438f6c1b",
+      "status": "mismatch"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\curvas.csv",
+      "expected_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+      "actual_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\janelas_avaliacao.csv",
+      "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\linear_24h.json",
+      "expected_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+      "actual_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\mlp_seed_17.pt",
+      "expected_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+      "actual_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\mlp_seed_29.pt",
+      "expected_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+      "actual_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\mlp_seed_41.pt",
+      "expected_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+      "actual_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\origens_sem_janela.csv",
+      "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\particoes.csv",
+      "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\predictions.csv",
+      "expected_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+      "actual_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\protocol.json",
+      "expected_sha256": "bfbe548eacc10f9cabf3bbe8112a69e7fb1b4c69696f4a38995804602f579d66",
+      "actual_sha256": "bfbe548eacc10f9cabf3bbe8112a69e7fb1b4c69696f4a38995804602f579d66",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T151533Z_f6d1f721\\summary.csv",
+      "expected_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+      "actual_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\geracao.parquet",
+      "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_mlp.py",
+      "expected_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+      "actual_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\curvas.csv",
+      "expected_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+      "actual_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\janelas_avaliacao.csv",
+      "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\linear_24h.json",
+      "expected_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+      "actual_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\mlp_seed_17.pt",
+      "expected_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+      "actual_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\mlp_seed_29.pt",
+      "expected_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+      "actual_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\mlp_seed_41.pt",
+      "expected_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+      "actual_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\origens_sem_janela.csv",
+      "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\particoes.csv",
+      "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\predictions.csv",
+      "expected_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+      "actual_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\protocol.json",
+      "expected_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+      "actual_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_2_mlp\\20261105T152149Z_941d0398\\summary.csv",
+      "expected_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+      "actual_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\geracao.parquet",
+      "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_mlp.py",
+      "expected_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+      "actual_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+      "status": "match"
+    },
+    {
+      "run": null,
+      "category": "current_author_file",
+      "path": "notebooks\\m08_avaliacao_autoral.py",
+      "expected_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+      "actual_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\curvas.csv",
+      "expected_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+      "actual_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\curvas.png",
+      "expected_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+      "actual_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\gru_24h_seed_17.pt",
+      "expected_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+      "actual_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\gru_24h_seed_29.pt",
+      "expected_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+      "actual_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\gru_24h_seed_41.pt",
+      "expected_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+      "actual_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\hgb_24h.joblib",
+      "expected_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+      "actual_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\janelas_avaliacao.csv",
+      "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\linear_24h.json",
+      "expected_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+      "actual_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\mlp_24h_seed_17.pt",
+      "expected_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+      "actual_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\mlp_24h_seed_29.pt",
+      "expected_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+      "actual_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\mlp_24h_seed_41.pt",
+      "expected_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+      "actual_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\origens_sem_janela.csv",
+      "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\particoes.csv",
+      "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\predictions.csv",
+      "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+      "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\preprocessing.json",
+      "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+      "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\protocol.json",
+      "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+      "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\relatorio.html",
+      "expected_sha256": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+      "actual_sha256": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T164955Z_5e435b09\\summary.csv",
+      "expected_sha256": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140",
+      "actual_sha256": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\geracao.parquet",
+      "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_gru.py",
+      "expected_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+      "actual_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "current_code",
+      "path": "notebooks\\m08_3_base.py",
+      "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+      "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "current_code",
+      "path": "notebooks\\m08_3_verificacao.py",
+      "expected_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+      "actual_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+      "status": "match"
+    },
+    {
+      "run": "20261115T164955Z_5e435b09",
+      "category": "current_code",
+      "path": "src\\renewable_forecast\\neural_gru.py",
+      "expected_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+      "actual_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\curvas.csv",
+      "expected_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+      "actual_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\curvas.png",
+      "expected_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+      "actual_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\gru_24h_seed_17.pt",
+      "expected_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+      "actual_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\gru_24h_seed_29.pt",
+      "expected_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+      "actual_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\gru_24h_seed_41.pt",
+      "expected_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+      "actual_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\hgb_24h.joblib",
+      "expected_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+      "actual_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\janelas_avaliacao.csv",
+      "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\linear_24h.json",
+      "expected_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+      "actual_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\mlp_24h_seed_17.pt",
+      "expected_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+      "actual_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\mlp_24h_seed_29.pt",
+      "expected_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+      "actual_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\mlp_24h_seed_41.pt",
+      "expected_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+      "actual_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\origens_sem_janela.csv",
+      "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\particoes.csv",
+      "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\predictions.csv",
+      "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+      "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\preprocessing.json",
+      "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+      "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\protocol.json",
+      "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+      "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\relatorio.html",
+      "expected_sha256": "c30cf63aa59bec47aea5a64f147b240a3663d6ae35fe6df77adb8f734f6b8715",
+      "actual_sha256": "c30cf63aa59bec47aea5a64f147b240a3663d6ae35fe6df77adb8f734f6b8715",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "outputs",
+      "path": "reports\\neural\\CJU_BA5EIGT\\m08_3_gru\\20261115T170309Z_90a6625f\\summary.csv",
+      "expected_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+      "actual_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\manifesto_entrada.json",
+      "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\geracao.parquet",
+      "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "inputs",
+      "path": "dist\\databricks\\CJU_BA5EIGT\\m07_3\\treino_referencia.parquet",
+      "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "current_code",
+      "path": "notebooks\\laboratorio_gru.py",
+      "expected_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+      "actual_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "current_code",
+      "path": "notebooks\\m08_3_base.py",
+      "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+      "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "current_code",
+      "path": "notebooks\\m08_3_verificacao.py",
+      "expected_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+      "actual_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+      "status": "match"
+    },
+    {
+      "run": "20261115T170309Z_90a6625f",
+      "category": "current_code",
+      "path": "src\\renewable_forecast\\neural_gru.py",
+      "expected_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+      "actual_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+      "status": "match"
+    }
+  ],
+  "counts": {
+    "match": 99,
+    "mismatch": 1
+  },
+  "historical_outputs_intact": true,
+  "current_code_discrepancies": [
+    {
+      "run": "20261104T132133Z_97eada41",
+      "category": "current_author_file",
+      "path": "notebooks\\m08_gradiente_autoral.py",
+      "expected_sha256": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+      "actual_sha256": "96d810d376e73838481417900aff2fa9956c2289f78f910d8787dc32438f6c1b",
+      "status": "mismatch"
+    }
+  ],
+  "independent_reproduction": false,
+  "autonomy_certified": false
+}

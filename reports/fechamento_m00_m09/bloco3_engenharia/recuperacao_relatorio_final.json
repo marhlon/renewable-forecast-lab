@@ -1,0 +1,27 @@
+{
+  "schema": "renewcast-bloco3-report-recovery-v1",
+  "recorded_at_utc": "2026-11-26T16:21:16.668775+00:00",
+  "original_execution_receipt": "execucao_avaliacao_final.json",
+  "original_execution_receipt_sha256": "ef5b97e74ba9d300014b38db7e22b7a5e37a12e39f3077334ef1ec6f9b350842",
+  "original_exit_code": 1,
+  "failure_stage": "Printing captured child stdout after Chronos already wrote forecasts and metadata",
+  "failure": "UnicodeEncodeError: cp1252 console could not print replacement character from captured child stdout",
+  "recovery_command": [
+    "C:/Users/marhl/miniconda3/envs/renewable-forecast/python.exe",
+    "-X",
+    "utf8",
+    "notebooks/bloco3_benchmark.py",
+    "sintetizar"
+  ],
+  "recovery_exit_code_observed": 0,
+  "recovery_only_summarized_saved_forecasts": true,
+  "new_training": false,
+  "new_inference": false,
+  "new_selection": false,
+  "models_calibrators_policy_and_frozen_code_preserved": true,
+  "chronos_forecast_sha256": "e3b22b05be7d22519c0165369491927235afca7552d1f0dc16c87b9ef9b041ae",
+  "chronos_metadata_sha256": "b3132225f03acbf5594b69366d7619c5f98365d9654d06a092ab652e4f9599a7",
+  "filesystem_forecast_lastwrite_utc": "2026-11-26T16:11:37.167268+00:00",
+  "file_timestamp_is_not_claimed_as_process_start": true,
+  "future_reproduction_note": "Set PYTHONUTF8=1 for both parent and child before a new study; do not overwrite this frozen script or repeat this test."
+}

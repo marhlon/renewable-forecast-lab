@@ -1,0 +1,72 @@
+{
+  "executed_at": "2026-11-26T00:37:52.891343+00:00",
+  "execution_kind": "bounded_local_http_load",
+  "budget_predeclared": {
+    "requests": 240,
+    "concurrency": [
+      1,
+      4
+    ],
+    "timeout_seconds": 5,
+    "max_duration_seconds_per_case": 30,
+    "p95_ms_max": 500,
+    "error_fraction_max": 0.01,
+    "rss_mb_max": 2048,
+    "abort_rss_mb": 3072,
+    "cpu_threads": 2,
+    "spend_cap_brl": 0,
+    "cost_scope": "nenhum recurso cloud criado; energia/depreciação local não tarifadas; não equivale a custo observado de produção"
+  },
+  "measurements": [
+    {
+      "concurrency": 1,
+      "attempts": 240,
+      "completed": 240,
+      "elapsed_seconds": 3.3853296999877784,
+      "requests_per_second": 70.89412886457305,
+      "p50_ms": 13.575800010585226,
+      "p95_ms": 18.18491498852381,
+      "p99_ms": 22.960769994242575,
+      "error_count": 0,
+      "error_fraction": 0.0,
+      "process_cpu_seconds": 6.15625,
+      "process_cpu_percent_one_core": 181.85082534271993,
+      "rss_peak_mb": 430.76171875,
+      "resource_scope": "processo runner + cliente HTTP + servidor/modelo/MLflow; RSS total, sem subtração de baseline",
+      "cloud_invoice_observed": false,
+      "cloud_resources_created": 0,
+      "incremental_cloud_charge_brl": 0,
+      "local_energy_or_depreciation_brl": null,
+      "slo_passed": true
+    },
+    {
+      "concurrency": 4,
+      "attempts": 240,
+      "completed": 240,
+      "elapsed_seconds": 3.8751933999883477,
+      "requests_per_second": 61.93239284540525,
+      "p50_ms": 59.14290001965128,
+      "p95_ms": 79.37364000244996,
+      "p99_ms": 240.76577800558854,
+      "error_count": 0,
+      "error_fraction": 0.0,
+      "process_cpu_seconds": 6.671875,
+      "process_cpu_percent_one_core": 172.1688264647659,
+      "rss_peak_mb": 431.6796875,
+      "resource_scope": "processo runner + cliente HTTP + servidor/modelo/MLflow; RSS total, sem subtração de baseline",
+      "cloud_invoice_observed": false,
+      "cloud_resources_created": 0,
+      "incremental_cloud_charge_brl": 0,
+      "local_energy_or_depreciation_brl": null,
+      "slo_passed": true
+    }
+  ],
+  "all_local_slos_passed": true,
+  "sustained_operation_proven": false,
+  "production_cost_measured": false,
+  "limits": [
+    "480 requisições finitas não demonstram operação contínua",
+    "CPU/RSS incluem cliente e servidor no mesmo processo; nenhum processo de nuvem existe",
+    "Nenhuma fatura foi observada; custo local de energia/depreciação não medido"
+  ]
+}

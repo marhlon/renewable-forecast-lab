@@ -1,0 +1,131 @@
+{
+  "schema": "renewcast-bloco1-source-audit-result-v1",
+  "item_id": "M04-02",
+  "completed": true,
+  "completion_scope": "Documentary/local-file audit only; not completion of external operational contracts.",
+  "audit_started_at_utc": "2026-11-25T12:31:27.003129+00:00",
+  "audit_completed_at_utc": "2026-11-25T12:31:59.322905+00:00",
+  "artifacts_finalized_at_utc": "2026-11-25T12:33:55.413408+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-"
+  ],
+  "exit_code": 0,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "method_source_sha256": "7dc8ec6d40f597fb251ce36a8b9546ed7db5dfb5efada29697ab23015d165bec",
+  "method_source_location": "reports/fechamento_m00_m09/M04-05/auditoria_temporal.json/audit_method/source",
+  "input_sha256": {
+    "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/model_frame.csv": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+    "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/metadata.json": "41ece2bdde847478f3da0740b9459f8e48ab71d10c4a7df6e70a1f28104c57d6",
+    "data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_sample/metadata.json": "7c8fe9dc38918ac0c18f6b7bb979946dac3c7905eb63a1e8286ee57ca336d89d",
+    "data/reference/CJU_BA5EIGT/metadata.json": "a6a85b56b513628fea62c173f084b153912b1553c421feeb2c065eba48d6def8",
+    "data/reference/CJU_BA5EIGT/asset_registry.csv": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5"
+  },
+  "protocol": {
+    "path": "reports/fechamento_m00_m09/M04-02/protocolo.json",
+    "sha256": "2fe9b7078b8e2a1e72a000bf0a32386bbc0ea775235ce3ae0bbaa942cea937c5",
+    "preserved_unchanged_by_audit": true
+  },
+  "output_sha256": {
+    "contrato_geracao.json": "08a1ea51199bc78575aeb10bdd4533b22c0064cf7caf738cdd2ef551d6c12aad",
+    "fontes.md": "df5af7494fa8bf967361d6c076d6796f41ef153e95c22e67b36ccc56f3b88a2c",
+    "parecer.md": "0ba92ae102d31286128a942aeeafdf2b72ce0c02506291ef7f5a17bd92ec4971"
+  },
+  "context_document": {
+    "path": "docs/roadmap_m00_m09/Fontes_e_Limites.md",
+    "sha256": "be564e10ab1a689090692176cae74544e3a3811171d75ff9da1bf7ecf48d6a71"
+  },
+  "code_inspected_not_executed_sha256": {
+    "src/renewable_forecast/data_contract.py": "b7df41d574e442424bf1a78170a9fc9b3141f3b85f3d4487dbadd7d3908905cb",
+    "src/renewable_forecast/weather_runs.py": "b839aba0dac4befe4d57de2fd239f6618b3876215b70796da0ab687445eb86d6",
+    "src/renewable_forecast/weather_history.py": "d09375f57f7efdd9f5268bf4acbcfd4555249132666c8b0df39a14d866fda6c4",
+    "src/renewable_forecast/weather_asof.py": "e3c4abc08b74c36315a02c5371c147f1e43fedb5d0f811046e02c424e8a337e9",
+    "src/renewable_forecast/weather_training.py": "491f6c3ea8ffbdc1729d6a25c8aa3da8132f00892813d93a7796d7ad12a840c9"
+  },
+  "primary_documentation": [
+    {
+      "id": "ONS_PORTAL",
+      "url": "https://dados.ons.org.br/dataset/geracao-usina-2",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Hourly source and post-publication revisions; not proof of time zone or historical release times."
+    },
+    {
+      "id": "ONS_DICT",
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/DicionarioDados_GeracaoPorUsina.pdf",
+      "consulted_date": "2026-11-25",
+      "document_date": "2023-06-09",
+      "pages": 3,
+      "method": "web PDF text inspection, all pages",
+      "supports": "din_instante reference label and MWmed; physical time zone and interval edge are not specified in this dictionary."
+    },
+    {
+      "id": "OPENMETEO_RUNS",
+      "url": "https://open-meteo.com/en/docs/single-runs-api",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Run initialisation is different from public availability; archive retrieval does not prove historical availability."
+    },
+    {
+      "id": "OPENMETEO_UPDATES",
+      "url": "https://open-meteo.com/en/docs/model-updates",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Separate initialisation, conversion and API availability; replicated servers can differ."
+    }
+  ],
+  "remote_document_binary_hashes_claimed": false,
+  "criteria_evidence": {
+    "C1": {
+      "fully_supported": false,
+      "reason": "Unit documented; physical timezone, interval edge and historical publication not proven."
+    },
+    "C2": {
+      "restriction_documented": true,
+      "operational_release": false
+    }
+  },
+  "recommended_status": "bloqueado",
+  "operational_approval": false,
+  "independent_student_response": false,
+  "assistance": "Documentation review, local audit and interpretation prepared with Codex assistance; final review/registry decision assigned to root, not a new professor acceptance.",
+  "models_trained": false,
+  "models_inferred": false,
+  "models_refitted": false,
+  "new_datasets_fetched": false,
+  "network_used": true,
+  "network_scope": "Only the four primary documentation URLs read with web tools; no data/model/metadata API calls.",
+  "contacts_sent": false,
+  "gui_used": false,
+  "accepted_metadata_modified": false,
+  "execution_history": [
+    {
+      "exit_code": 1,
+      "failure": "TypeError at local metadata output_sha256: scalar string was incorrectly treated as a mapping.",
+      "date": "2026-11-25",
+      "started_at_utc": null,
+      "timestamp_limit": "First failed command did not persist its start timestamp; none is invented.",
+      "partial_output": "M04-03/disponibilidade.csv",
+      "partial_output_reused_only_if_identical": true,
+      "source_sha256": "fe4d4591255925a024bbe0b24119da89b93b1f2925376667c4dcb748774e7b74"
+    },
+    {
+      "exit_code": 1,
+      "failure": "Own second audit session interrupted before final JSON outputs to remove repeated scalar timestamp parsing from the selector check.",
+      "date": "2026-11-25",
+      "started_at_utc": null,
+      "interrupted": true,
+      "partial_output_reused_only_if_identical": true
+    }
+  ],
+  "limits": [
+    "Checked local hashes measure preservation against recorded digests, not authenticity of provider clocks.",
+    "No future evaluation, training, operational release or independent student transfer is certified."
+  ],
+  "blocking_condition": "Need authoritative physical timezone, hourly interval-edge semantics and observed release/version evidence."
+}

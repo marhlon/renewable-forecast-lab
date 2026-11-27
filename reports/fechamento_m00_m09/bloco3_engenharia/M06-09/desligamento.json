@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-26T00:37:53.090006+00:00",
+  "execution_kind": "no_provisioning_occurred",
+  "resources_created": [],
+  "teardown_required": false,
+  "teardown_executed": false,
+  "cloud_inventory_verified": false,
+  "note": "Nenhum comando/cloud API executado. Não é recibo de desligamento de recursos existentes."
+}

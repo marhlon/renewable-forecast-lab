@@ -1,0 +1,172 @@
+{
+  "schema": "m02-aplicacao-tecnica-result-v1",
+  "item": "M02-04",
+  "completed": true,
+  "status": "concluido_tecnico_assistido",
+  "technical_application_completed": true,
+  "execution_started_at_utc": "2026-11-25T14:14:32.088930+00:00",
+  "execution_finished_at_utc": "2026-11-25T14:14:32.308609+00:00",
+  "protocol_frozen_at_utc": "2026-11-25T14:13:39.184958+00:00",
+  "protocol_before_numeric_calculations": true,
+  "protocol_unchanged_after_execution": true,
+  "os": "Windows",
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "input_sha256": {
+    "reports/fechamento_m00_m09/bloco1_engenharia/M02-04/protocolo.json": "f57a9455fbaab4e32494e5c3c0ac693b1dc5cc1e876f35fb053bbce21357f212"
+  },
+  "source_sha256": {
+    "notebooks/aplicar_fundamentos_quantitativos.py": "fabd97b0fcfe8d307791b1f2d1877223ddc1277a0acdf275020437306dadb2f5",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_aplicados.py": "90224b1d2ee4cd07cf95af671ed39c40fbe82c1bea17159eea16a0437eb8fae0"
+  },
+  "output_sha256": {
+    "reports/fechamento_m00_m09/bloco1_engenharia/M02-04/contas_regressao.csv": "506490363dc2759ab228c2711fa04d26f0c02ed66edabefba1b572c47e8cd99d",
+    "reports/fechamento_m00_m09/bloco1_engenharia/M02-04/parecer.md": "9ed2512c3db4c780451b44459c5220b25e17661e091e95840cef8bbd2521d4b6",
+    "reports/fechamento_m00_m09/bloco1_engenharia/M02-04/protocolo.json": "f57a9455fbaab4e32494e5c3c0ac693b1dc5cc1e876f35fb053bbce21357f212",
+    "reports/fechamento_m00_m09/bloco1_engenharia/M02-04/solucao_tecnica.md": "bc313bc57acaeabf63554af68bb54e2d9618a9c6aadcc7320dfdac8958c01c91",
+    "docs/roadmap_m00_m09/Fundamentos_Aplicados_Resultados.md": "8a12f2a5e6d2fba7399f59d98b65bfa309232aa24bd11ef62c82188dc805e15e"
+  },
+  "checks": {
+    "manual_normal_equations": true,
+    "ols_rational": true,
+    "ridge_rational": true,
+    "initial_gradient_rational": true,
+    "n_lambda_and_intercept_not_penalized": true,
+    "manual_losses": true,
+    "rank_and_null_direction": true,
+    "gradient_step_stability_demonstration": true,
+    "hessian_stability_bounds": true,
+    "inputs_preserved": true
+  },
+  "results": {
+    "shapes": {
+      "X": [
+        3,
+        2
+      ],
+      "y": [
+        3
+      ],
+      "beta": [
+        2
+      ],
+      "prediction": [
+        3
+      ]
+    },
+    "xtx": [
+      [
+        3.0,
+        0.0
+      ],
+      [
+        0.0,
+        8.0
+      ]
+    ],
+    "xty": [
+      6.0,
+      10.0
+    ],
+    "ols_beta": [
+      2.0,
+      1.2500000000000002
+    ],
+    "ridge_beta": [
+      2.0,
+      1.1111111111111107
+    ],
+    "lambda": 0.3333333333333333,
+    "n_lambda": 1.0,
+    "ridge_normal_matrix": [
+      [
+        3.0,
+        0.0
+      ],
+      [
+        0.0,
+        9.0
+      ]
+    ],
+    "initial_gradient": [
+      -4.0,
+      -6.666666666666667
+    ],
+    "initial_mse": 8.666666666666666,
+    "one_step_demonstrations": [
+      {
+        "rate": 0.1,
+        "beta_after_one_step": [
+          0.4,
+          0.6666666666666667
+        ],
+        "mse_after_one_step": 3.9674074074074075
+      },
+      {
+        "rate": 1.0,
+        "beta_after_one_step": [
+          4.0,
+          6.666666666666667
+        ],
+        "mse_after_one_step": 82.74074074074076
+      }
+    ],
+    "stable_rate_upper_bound_ols": 0.375,
+    "stable_rate_upper_bound_ridge": 0.3333333333333333,
+    "ols_mse": 0.5000000000000001,
+    "ridge_mse": 0.5514403292181073,
+    "ols_objective_at_common_ridge_lambda": 1.0208333333333335,
+    "ridge_objective_at_common_ridge_lambda": 0.9629629629629629,
+    "deficient_rank": 2,
+    "deficient_columns": 3,
+    "minimum_norm_beta_deficient": [
+      2.0,
+      0.25000000000000006,
+      0.5000000000000001
+    ],
+    "null_direction": [
+      0.0,
+      2.0,
+      -1.0
+    ],
+    "null_direction_prediction_max_difference": 0.0,
+    "future_observations_supplied": false,
+    "future_autocorrelation_measured": false
+  },
+  "preserved_prior_artifacts_sha256": {
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "reports/fechamento_m00_m09/M02-01/exercicios.md": "d0a26bb8d6bc0c94715318bd018c38d0a87aad0529177c432ce356aa2cf1f25f",
+    "reports/fechamento_m00_m09/M02-01/parecer.md": "b1b02d5954d90e53cfbbe11edaf8c82c1342ac007b68323e1edbb8cc57a9935d",
+    "reports/fechamento_m00_m09/M02-01/protocolo.json": "30b0476985b0dc197e7e0258cbbdfc23f4d0cb550cd54ed1effbea47516fa02c",
+    "reports/fechamento_m00_m09/M02-01/resultado.json": "9b18038791eb79709aa66d3e4714edaf17b02c21c8f85e71b88d854021218928",
+    "reports/fechamento_m00_m09/M02-02/estimativas.csv": "4cd8343f88fdd3b780de2e569c0d36d7f4b77903f200905122cd491075a761d2",
+    "reports/fechamento_m00_m09/M02-02/parecer.md": "3db0b20c5eccd2d1a0d517031d06012ce2e5c61dcfed5ee6ce12f3f13159c60e",
+    "reports/fechamento_m00_m09/M02-02/protocolo.json": "deee4abc1776c92e3d22d6ce79b6490fba014832d6d1f5557507a978c70b6a04",
+    "reports/fechamento_m00_m09/M02-02/resultado.json": "53546ee93fce4dd18610ae796a40405cdcab20cda91753df0e5ea51af3e7820f",
+    "reports/fechamento_m00_m09/M02-03/comparacao.csv": "a207e87d10fbd8f9a0c0e2f2856e5fafeb9ac7721cc61f8989b636044848e7ca",
+    "reports/fechamento_m00_m09/M02-03/parecer.md": "c712e3002b15da095fc6c7933bd96d8c38443168bf4e296e6c3eb4368794f6e2",
+    "reports/fechamento_m00_m09/M02-03/plano_hipoteses.md": "00caeda4f0142cdd48094596f96e1a518d0e5158f1ec39213fb50fc185fef128",
+    "reports/fechamento_m00_m09/M02-03/protocolo.json": "880154282e51ba2352a8a51f3152bec26ca8fbf370e185f550ef2160671052b2",
+    "reports/fechamento_m00_m09/M02-03/resultado.json": "7d4dfedb625132411db6111f517e129d5f90e4f0cc4fc57345666454f7401970",
+    "reports/fechamento_m00_m09/M02-04/diagnosticos.csv": "81b938236a04d42149ede6a08933406b6a8f9df7fd0e1b47f2fa6f72b8f4597d",
+    "reports/fechamento_m00_m09/M02-04/parecer.md": "59a7965770cec7675a33cabc134a0dff6e39f565e0f68fd8f7be9ed6cccd091b",
+    "reports/fechamento_m00_m09/M02-04/protocolo.json": "96cb1bdf806d8f56f0c391283a373cee8f6340c17312aab5b084339bdefefa74",
+    "reports/fechamento_m00_m09/M02-04/resultado.json": "343f97a0277cd943f3d82c8d415f97bd31bb248bee636728cd78aa2d55f025be",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "responsibility": "Codex: implementação, execução e solução técnica assistidas, conforme a demanda atual.",
+  "human_response_required": false,
+  "learning_validated": false,
+  "learning_evaluation": "não avaliada",
+  "independent_student_authorship_claimed": false,
+  "operational_approval": false,
+  "benchmark_retrained": false,
+  "original_frozen_deliveries_modified": false
+}

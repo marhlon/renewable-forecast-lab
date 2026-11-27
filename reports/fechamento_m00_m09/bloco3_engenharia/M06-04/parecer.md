@@ -1,0 +1,3 @@
+# Parecer técnico M06-04
+
+Coletor real construído e exercitado em replay explicitamente marcado. Bloqueio fail-closed de modo live sem contrato M04 e contraprovas de chegada futura, vintage futuro, entrada antiga e duplicação conferidos. Cada emissão conserva origem/alvo, vintage/chegada, hash e trace; alvo é conciliado somente após sua chegada. source_arrived_at é simulado; received_at é relógio real local. Zero emissões live; C1/C2 operacionais não atendidos. Para operar, verificar fonte/PIT e CI, autorizar janela e coletar sete dias reais com conciliação posterior. Construção, execução e parecer: Codex.

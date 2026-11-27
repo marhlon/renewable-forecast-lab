@@ -1,0 +1,4 @@
+{
+  "inject_lag_failure": false,
+  "purpose": "Controlled negative run uses true on the isolated CI branch; accepted source keeps false."
+}

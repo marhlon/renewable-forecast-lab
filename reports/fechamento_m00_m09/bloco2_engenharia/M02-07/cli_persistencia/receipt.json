@@ -1,0 +1,73 @@
+{
+  "schema": "renewcast-weather-gain-bootstrap-result-v1",
+  "completed": true,
+  "exit_code": 0,
+  "started_at_utc": "2026-11-25T16:24:23.783269+00:00",
+  "completed_at_utc": "2026-11-25T16:24:23.950555+00:00",
+  "elapsed_seconds": 0.1675835000060033,
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-m",
+    "renewable_forecast.weather_gain_uncertainty",
+    "--predictions",
+    "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco2_engenharia\\M02-07\\pareado_persistencia.csv",
+    "--output-dir",
+    "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco2_engenharia\\M02-07\\cli_persistencia",
+    "--block-hours",
+    "6",
+    "24",
+    "48",
+    "--repetitions",
+    "5000",
+    "--seed",
+    "42"
+  ],
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input": {
+    "path": "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco2_engenharia\\M02-07\\pareado_persistencia.csv",
+    "bytes": 100180,
+    "sha256": "086c2128f9ec42b568d4a009fb8cbed4562e3a7e613c987bac724b1b84852b2d",
+    "preserved": true
+  },
+  "code": {
+    "path": "C:\\renewable-forecast-lab\\src\\renewable_forecast\\weather_gain_uncertainty.py",
+    "sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03"
+  },
+  "parameters": {
+    "block_hours": [
+      6,
+      24,
+      48
+    ],
+    "repetitions": 5000,
+    "seed": 42,
+    "confidence_level": 0.95
+  },
+  "method": "paired circular block bootstrap, stratified by fold, weighted by fold n; percentile interval, linear quantiles",
+  "rng_stream": "numpy SeedSequence([seed, block_hours, fold]); independent local generators",
+  "gain_definition": "abs(target_generation-hgb_history) - abs(target_generation-hgb_history_weather), MWmed",
+  "rows_input": 504,
+  "fold_counts": {
+    "1": 168,
+    "2": 168,
+    "3": 168
+  },
+  "forecast_origin_start": "2026-07-11T06:00:00+00:00",
+  "forecast_origin_end": "2026-08-01T05:00:00+00:00",
+  "rows_summary": 12,
+  "output_sha256": {
+    "summary.csv": "4a105a3899fa54367b19b1183540085bbc17ec7b365e1dfa2fbb274bcad45e59"
+  },
+  "models_trained": false,
+  "models_refitted": false,
+  "independent_holdout_certified": false,
+  "physical_timezone_verified": false,
+  "scope": "Conditional exploratory uncertainty on supplied saved predictions and fixed folds; selection and future generalization are not corrected.",
+  "timestamp_interpretation": "Timestamps parsed as UTC; naive timestamps are assumed UTC, without verification of their physical meaning.",
+  "nonpositive_fraction_is_p_value": false
+}

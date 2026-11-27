@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-11-26T16:34:44.104644+00:00",
+  "reason": "Default audit command would overwrite its hashed registered receipt. Documentation now uses a wrapper that always creates a new file and checks original hash. No unsafe recheck was executed.",
+  "previous_registry_snapshot": "reports/fechamento_m00_m09/bloco3_engenharia/cadastro_antes_correcao_comando_auditoria.json",
+  "previous_registry_sha256": "0426a465eb6e1b525f5a822c80b41fa6687d53df32d6df518cecfeb7ae398414",
+  "new_registry_sha256": "85a0cf9680eb352bc228953ce7f11f6e1c857ccc7f4b1abef8c5d9c293ad0c64",
+  "original_auditor_source_modified": false,
+  "original_audit_receipt_modified": false,
+  "frozen_producer_or_model_modified": false,
+  "changed_documentation": [
+    "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco3.md",
+    "docs/roadmap_m00_m09/Bloco_3_Execucao.md"
+  ],
+  "new_wrapper": "scripts/conferir_bloco3.py",
+  "operational_criteria_or_dependencies_modified": false
+}

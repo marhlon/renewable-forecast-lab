@@ -1,0 +1,72 @@
+{
+  "schema": "renewcast-bloco2-source-v1",
+  "downloaded_at_utc": "2026-11-25T19:54:23.765913+00:00",
+  "freeze_created_at_utc": "2026-11-25T19:27:20.852938+00:00",
+  "freeze_sha256": "3b66358154e478d57e057a7be8758fdabdaf18b5ce38c43125a0369e51448410",
+  "metadata_api": "https://dados.ons.org.br/api/3/action/resource_show?id=6edb2f1a-5772-44f1-8dad-6180b20bf130",
+  "metadata_http": {
+    "resolved_url": "https://dados.ons.org.br/api/3/action/resource_show?id=6edb2f1a-5772-44f1-8dad-6180b20bf130",
+    "headers": {
+      "Date": "Wed, 25 Nov 2026 19:54:21 GMT",
+      "Content-Type": "application/json;charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Server": "nginx",
+      "Vary": "Cookie",
+      "Cache-Control": "public, max-age=600, must-revalidate",
+      "X-Cache-Status": "MISS",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  "data_http": {
+    "resolved_url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/GERACAO_USINA-2_2026_10.parquet",
+    "headers": {
+      "x-amz-request-id": "YRSXZDYDC803VSG5",
+      "x-amz-id-2": "+YbcrX5EMmY0LEGDAyQ1FFNjxARHyC72wRnFow8AiRHamtcxN778filB7b0LcwD8eYu/mWRKHYFKzQLDkxtIya/30jgywoSP",
+      "Content-Length": "4629118",
+      "Accept-Ranges": "bytes",
+      "Date": "Wed, 25 Nov 2026 19:54:22 GMT",
+      "Server": "AmazonS3",
+      "Last-Modified": "Wed, 25 Nov 2026 15:08:35 GMT",
+      "ETag": "\"1ed8e3de60436247a6728c4bf58225eb\"",
+      "Content-Type": "binary/octet-stream",
+      "x-amz-server-side-encryption": "AES256",
+      "Connection": "close"
+    }
+  },
+  "resource_url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/GERACAO_USINA-2_2026_10.parquet",
+  "resource_page": "https://dados.ons.org.br/dataset/geracao-usina-2/resource/6edb2f1a-5772-44f1-8dad-6180b20bf130",
+  "raw_path": "data/raw/bloco2_locked/geracao_2026_10.parquet",
+  "raw_sha256": "55314b5a072a838d0ae4bd4543b940f1cfd3b7c78143f461a33aa05516e1617d",
+  "raw_bytes": 4629118,
+  "snapshot_caveat": "Snapshot obtido agora; revisões e disponibilidade histórica na origem não comprovadas.",
+  "operational_approval": false,
+  "extraction_status": "validated",
+  "filtered_path": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/geracao_CJU_BA5EIGT_2026_10.parquet",
+  "filtered_sha256": "aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab",
+  "filtered_rows": 744,
+  "columns": [
+    "din_instante",
+    "val_geracao"
+  ],
+  "first_timestamp": "2026-10-01 00:00:00",
+  "last_timestamp": "2026-10-31 23:00:00",
+  "source_total_rows": 537384,
+  "source_columns": [
+    "din_instante",
+    "id_subsistema",
+    "nom_subsistema",
+    "id_estado",
+    "nom_estado",
+    "cod_modalidadeoperacao",
+    "nom_tipousina",
+    "nom_tipocombustivel",
+    "nom_usina",
+    "id_ons",
+    "ceg",
+    "val_geracao"
+  ],
+  "negative_generation_rows": 0,
+  "extracted_at_utc": "2026-11-25T19:54:25.018459+00:00"
+}

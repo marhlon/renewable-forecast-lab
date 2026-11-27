@@ -1,0 +1,48 @@
+{
+  "schema": "m02-fundamentos-protocol-v1",
+  "item": "M02-01",
+  "synthetic_only": true,
+  "purpose": "Demonstração quantitativa; nenhum benchmark histórico é treinado ou reajustado.",
+  "assistance": "Construção e execução assistidas; autonomia depende de resposta e revisão humanas.",
+  "design": {
+    "source": "Somente tabelas e variáveis sintéticas; nenhum dado ONS/ESA.",
+    "population": {
+      "n": 10000,
+      "event_prevalence": 0.01,
+      "sensitivity": 0.9,
+      "false_positive_rate": 0.05
+    },
+    "discrete": {
+      "values": [
+        0,
+        1,
+        2
+      ],
+      "probabilities": [
+        0.5,
+        0.3,
+        0.2
+      ]
+    },
+    "binomial": {
+      "n": 24,
+      "p": 0.01,
+      "independent_trials_assumed": true
+    },
+    "checks": [
+      "PPV = 90/585",
+      "E[X] = 0.7",
+      "Var[X] = 0.61",
+      "binomial probabilities sum to one"
+    ]
+  },
+  "source_sha256": {
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "frozen_at_utc": "2026-11-25T11:43:18.231301+00:00"
+}

@@ -1,0 +1,5 @@
+﻿pergunta,teste,p,alpha,rejeita
+seis_medias_de_blocos,H0_mu_menor_igual_0_5,0.022580683718493685,0.05,True
+outra_familia_bonferroni,H1,0.009,0.016666666666666666,True
+outra_familia_bonferroni,H2,0.03,0.016666666666666666,False
+outra_familia_bonferroni,H3,0.4,0.016666666666666666,False

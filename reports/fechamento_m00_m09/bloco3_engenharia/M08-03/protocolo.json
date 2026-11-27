@@ -1,0 +1,76 @@
+{
+  "schema": "bloco3-neural-protocol-v1",
+  "registered_at_utc": "2026-11-26T00:31:00.424862+00:00",
+  "authorship": "Solução e revisão técnica fornecidas pelo Codex; sem resposta independente do usuário",
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "new_untouched_holdout": false,
+  "operational_evidence": false,
+  "code_sha256": {
+    "notebooks/bloco3_transferencia_neural.py": "dcf4dc80e595899bd127df1e3ea4cf1cef9611021e351adaf28a8e15abe2fce6",
+    "tests/test_bloco3_transferencia_neural.py": "1a261ec785a2669c7b440408895539052e5cb48057e686766f99dd0f1f297c76",
+    "src/renewable_forecast/neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+    "src/renewable_forecast/transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d"
+  },
+  "versions_at_registration": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "item": "M08-03",
+  "hypothesis": "GRU nova de janela12 e hidden8 mantém independência das janelas e avaliação por exemplo em lotes4/4/3",
+  "scope": "11 exemplos determinísticos sintéticos, seed8303, pesos aleatórios float64; qualidade preditiva não avaliada",
+  "predicted_shapes_before_execution": {
+    "input": [
+      11,
+      12,
+      1
+    ],
+    "batches": [
+      4,
+      4,
+      3
+    ],
+    "recurrent_output": [
+      "B",
+      12,
+      8
+    ],
+    "hidden": [
+      1,
+      "B",
+      8
+    ],
+    "last_hidden": [
+      "B",
+      8
+    ],
+    "prediction": [
+      "B",
+      1
+    ],
+    "gru_weight_ih": [
+      24,
+      1
+    ],
+    "gru_weight_hh": [
+      24,
+      8
+    ],
+    "head_weight": [
+      1,
+      8
+    ]
+  },
+  "predicted_parameters": 273,
+  "criteria": [
+    "Comparar avaliador com soma quadrática global/11, demonstrando erro da média por lote",
+    "Preservar pesos, gradientes preexistentes, estado, flags mistas e RNG no sucesso e nas falhas",
+    "Repetição/permutação não carregam estado; mudar futuro indisponível não muda janela",
+    "Rejeitar shape, alvo inválido, não finito e loader vazio; conferir três portas em 12 passos"
+  ],
+  "temporal_contract": "Série sintética horária: origem t14, atraso4h, janela t-1..t10; alvo h1 t15 está separado. Só available_at<=origem entra na janela.",
+  "absolute_tolerance": 1e-12
+}

@@ -1,0 +1,98 @@
+{
+  "additionalProperties": false,
+  "description": "Campos obrigatórios; observações ausentes usam null, sem omitir a chave.",
+  "properties": {
+    "id": {
+      "maxLength": 48,
+      "minLength": 1,
+      "pattern": "^[a-z0-9_]+$",
+      "title": "Id",
+      "type": "string"
+    },
+    "code": {
+      "enum": [
+        "BELOW",
+        "ISOLATED",
+        "ELIGIBLE",
+        "INSUFFICIENT"
+      ],
+      "title": "Code",
+      "type": "string"
+    },
+    "cutoff": {
+      "maxLength": 32,
+      "minLength": 1,
+      "pattern": "^(?:0(?:\\.[0-9]+)?|1(?:\\.0+)?)$",
+      "title": "Cutoff",
+      "type": "string"
+    },
+    "s1": {
+      "anyOf": [
+        {
+          "maxLength": 32,
+          "minLength": 1,
+          "pattern": "^(?:0(?:\\.[0-9]+)?|1(?:\\.0+)?)$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "S1"
+    },
+    "s2": {
+      "anyOf": [
+        {
+          "maxLength": 32,
+          "minLength": 1,
+          "pattern": "^(?:0(?:\\.[0-9]+)?|1(?:\\.0+)?)$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "S2"
+    },
+    "reason": {
+      "enum": [
+        "unavailable",
+        "below",
+        "pair_below",
+        "no_pair",
+        "single_met",
+        "pair_met",
+        "incident_detected",
+        "physical_cause"
+      ],
+      "title": "Reason",
+      "type": "string"
+    },
+    "refs": {
+      "items": {
+        "enum": [
+          "usable",
+          "k",
+          "cutoff",
+          "s1",
+          "s2"
+        ],
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Refs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "code",
+    "cutoff",
+    "s1",
+    "s2",
+    "reason",
+    "refs"
+  ],
+  "title": "Relatorio",
+  "type": "object"
+}

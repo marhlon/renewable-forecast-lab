@@ -1,0 +1,56 @@
+{
+  "schema": "m02-fundamentos-result-v1",
+  "item": "M02-01",
+  "completed": true,
+  "synthetic_data": true,
+  "os": "Windows",
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "protocol_frozen_at_utc": "2026-11-25T11:43:18.231301+00:00",
+  "execution_started_at_utc": "2026-11-25T11:44:06.357195+00:00",
+  "execution_finished_at_utc": "2026-11-25T11:44:06.391860+00:00",
+  "protocol_frozen_before_execution": true,
+  "protocol_unchanged_after_execution": true,
+  "input_sha256": {
+    "protocolo.json": "30b0476985b0dc197e7e0258cbbdfc23f4d0cb550cd54ed1effbea47516fa02c"
+  },
+  "source_sha256": {
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "output_sha256": {
+    "exercicios.md": "d0a26bb8d6bc0c94715318bd018c38d0a87aad0529177c432ce356aa2cf1f25f",
+    "parecer.md": "b1b02d5954d90e53cfbbe11edaf8c82c1342ac007b68323e1edbb8cc57a9935d",
+    "protocolo.json": "30b0476985b0dc197e7e0258cbbdfc23f4d0cb550cd54ed1effbea47516fa02c"
+  },
+  "checks": {
+    "bayes_manual": true,
+    "manual_moments": true,
+    "confusion_total": true,
+    "binomial_sum": true
+  },
+  "results": {
+    "true_positives": 90.0,
+    "false_negatives": 10.0,
+    "false_positives": 495.0,
+    "true_negatives": 9405.0,
+    "posterior_positive": 0.15384615384615385,
+    "discrete_mean": 0.7,
+    "discrete_variance": 0.6100000000000001,
+    "binomial_mean": 0.24,
+    "binomial_variance": 0.23759999999999998,
+    "binomial_pmf_sum": 0.9999999999999998
+  },
+  "execution_responsibility": "Codex: implementação e demonstração assistidas.",
+  "formative_status": "aguarda_resposta_e_revisao_humana",
+  "learning_validated": false,
+  "operational_approval": false,
+  "benchmark_retrained": false
+}

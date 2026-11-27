@@ -1,0 +1,8 @@
+{
+  "registered_at_utc": "2026-11-26T20:12:27.838303+00:00",
+  "reason": "First root repository URL ended with a slash, which GitHub REST returns404 even for public repos. Canonical URL removes slash; no branch or POST occurred in the first attempt.",
+  "previous_receipt_sha256": "fe1f8a056e4edd029b3dd6d20c473ad558a222070cc1cb161db51c585273c4ea",
+  "public_check": "actions/checkout/ returned404; actions/checkout returned200 via GitHub connector",
+  "code_change": "canonical root URL only; credential and branch/package remain unchanged",
+  "retuning_or_model_changes": false
+}

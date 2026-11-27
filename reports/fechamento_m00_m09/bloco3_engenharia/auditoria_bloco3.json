@@ -1,0 +1,449 @@
+{
+  "schema": "bloco3-independent-audit-v1",
+  "audited_at_utc": "2026-11-26T16:27:52.989968+00:00",
+  "author": "Codex — revisão separada dos produtores finais; não é avaliação humana ou certificação pessoal",
+  "scope": [
+    "M03-04",
+    "M05-04",
+    "M05-05",
+    "M06-02",
+    "M06-03",
+    "M06-04",
+    "M06-05",
+    "M06-06",
+    "M06-07",
+    "M06-08",
+    "M06-09",
+    "M07-01",
+    "M07-02",
+    "M07-03",
+    "M08-02",
+    "M08-03",
+    "M09-02",
+    "M09-04"
+  ],
+  "valid": true,
+  "checks": [
+    {
+      "name": "eighteen_items",
+      "passed": true
+    },
+    {
+      "name": "agent_manifests",
+      "passed": true
+    },
+    {
+      "name": "frozen_code_and_chronology",
+      "passed": true
+    },
+    {
+      "name": "final_arrays_and_14_metrics",
+      "passed": true
+    },
+    {
+      "name": "intervals_costs_and_conditional_bootstrap",
+      "passed": true
+    },
+    {
+      "name": "class_probabilities_alarm_cap_and_decision",
+      "passed": true
+    },
+    {
+      "name": "preserved_failures_partial_operation_and_ci",
+      "passed": true
+    }
+  ],
+  "details": {
+    "eighteen_items": {
+      "scope": [
+        "M03-04",
+        "M05-04",
+        "M05-05",
+        "M06-02",
+        "M06-03",
+        "M06-04",
+        "M06-05",
+        "M06-06",
+        "M06-07",
+        "M06-08",
+        "M06-09",
+        "M07-01",
+        "M07-02",
+        "M07-03",
+        "M08-02",
+        "M08-03",
+        "M09-02",
+        "M09-04"
+      ],
+      "full_engineering_recommended": [
+        "M03-04",
+        "M05-04",
+        "M05-05",
+        "M06-03",
+        "M07-01",
+        "M07-02",
+        "M07-03",
+        "M08-02",
+        "M08-03",
+        "M09-02",
+        "M09-04"
+      ],
+      "operational_open": [
+        "M06-02",
+        "M06-04",
+        "M06-05",
+        "M06-06",
+        "M06-07",
+        "M06-08",
+        "M06-09"
+      ],
+      "technical_local_acceptance_only": [
+        "M06-06",
+        "M06-07",
+        "M06-08"
+      ],
+      "counts": {
+        "scope": 18,
+        "full_engineering": 11,
+        "operational_open": 7,
+        "technical_deliveries_including_partial": 14
+      }
+    },
+    "agent_manifests": {
+      "reports/fechamento_m00_m09/bloco3_engenharia/manifesto_transferencia_neural.json": {
+        "references_verified": 18,
+        "unique_files": 18
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M07-01/manifesto_sha256.json": {
+        "references_verified": 13,
+        "unique_files": 13
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/manifesto_sha256.json": {
+        "references_verified": 45,
+        "unique_files": 45
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M07-03/manifesto_sha256.json": {
+        "references_verified": 15,
+        "unique_files": 15
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M05-05/manifesto_sha256.json": {
+        "references_verified": 8,
+        "unique_files": 8
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/manifesto_operacao_local.json": {
+        "references_verified": 54,
+        "unique_files": 54
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M06-03/manifesto_codigo_documentacao.json": {
+        "references_verified": 5,
+        "unique_files": 5
+      },
+      "reports/fechamento_m00_m09/bloco3_engenharia/M06-02/manifesto_pacote_ci.json": {
+        "references_verified": 14,
+        "unique_files": 14
+      }
+    },
+    "frozen_code_and_chronology": {
+      "final_frozen": {
+        "references_verified": 29,
+        "unique_files": 29
+      },
+      "freeze_time": "2026-11-26T16:10:57.439880+00:00",
+      "download_time": "2026-11-26T16:11:00.888494+00:00",
+      "chronology": [
+        {
+          "item": "M03-04",
+          "protocol_time": "2026-11-26T00:35:14.344736+00:00",
+          "producer_time": "2026-11-26T16:16:56.269389+00:00"
+        },
+        {
+          "item": "M05-04",
+          "protocol_time": "2026-11-26T13:57:44.282535+00:00",
+          "producer_time": "2026-11-26T13:57:44.324787+00:00"
+        },
+        {
+          "item": "M05-05",
+          "protocol_time": "2026-11-26T00:32:08.643381+00:00",
+          "producer_time": "2026-11-26T00:35:00.161641+00:00"
+        },
+        {
+          "item": "M06-02",
+          "protocol_time": "2026-11-26T16:15:34.369059+00:00",
+          "producer_time": "2026-11-26T16:18:37.418582+00:00"
+        },
+        {
+          "item": "M06-03",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:44.704379+00:00"
+        },
+        {
+          "item": "M06-04",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:53.058387+00:00"
+        },
+        {
+          "item": "M06-05",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:53.073705+00:00"
+        },
+        {
+          "item": "M06-06",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:53.083538+00:00"
+        },
+        {
+          "item": "M06-07",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:52.863794+00:00"
+        },
+        {
+          "item": "M06-08",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:52.891343+00:00"
+        },
+        {
+          "item": "M06-09",
+          "protocol_time": "2026-11-26T00:34:22.584070+00:00",
+          "producer_time": "2026-11-26T00:37:53.092017+00:00"
+        },
+        {
+          "item": "M07-01",
+          "protocol_time": "2026-11-26T00:32:08.643381+00:00",
+          "producer_time": "2026-11-26T00:34:49.551108+00:00"
+        },
+        {
+          "item": "M07-02",
+          "protocol_time": "2026-11-26T00:32:08.643381+00:00",
+          "producer_time": "2026-11-26T00:40:01.370049+00:00"
+        },
+        {
+          "item": "M07-03",
+          "protocol_time": "2026-11-26T00:32:08.643381+00:00",
+          "producer_time": "2026-11-26T00:34:53.480295+00:00"
+        },
+        {
+          "item": "M08-02",
+          "protocol_time": "2026-11-26T00:31:00.424862+00:00",
+          "producer_time": "2026-11-26T00:32:54.373829+00:00"
+        },
+        {
+          "item": "M08-03",
+          "protocol_time": "2026-11-26T00:31:00.424862+00:00",
+          "producer_time": "2026-11-26T00:32:54.373829+00:00"
+        },
+        {
+          "item": "M09-02",
+          "protocol_time": "2026-11-26T00:31:00.424862+00:00",
+          "producer_time": "2026-11-26T00:32:54.373829+00:00"
+        },
+        {
+          "item": "M09-04",
+          "protocol_time": "2026-11-26T00:35:14.344736+00:00",
+          "producer_time": "2026-11-26T16:16:56.269389+00:00"
+        }
+      ],
+      "time_evidence_limit": "Recibos locais; não certifica relógio externo ou disponibilidade histórica na origem"
+    },
+    "final_arrays_and_14_metrics": {
+      "source_rows": 720,
+      "origins": 671,
+      "paired_prediction_rows": 9394,
+      "methods": 14,
+      "context_start_offset_hours": -25,
+      "context_end_offset_hours": -2,
+      "target_offset_hours": 24,
+      "chronos_shape": [
+        671,
+        9,
+        26
+      ],
+      "chronos_zero_based_index": 25,
+      "metrics_recomputed": [
+        {
+          "method": "catboost",
+          "n": 671,
+          "mae": 40.853216016675994,
+          "rmse": 48.483520414482804,
+          "bias_observed_minus_predicted": 26.82912101308372
+        },
+        {
+          "method": "chronos_p50",
+          "n": 671,
+          "mae": 35.689509420858236,
+          "rmse": 47.64980421634726,
+          "bias_observed_minus_predicted": 3.5948094564969417
+        },
+        {
+          "method": "gru_17",
+          "n": 671,
+          "mae": 37.262907902224406,
+          "rmse": 46.37082720635762,
+          "bias_observed_minus_predicted": 23.423832055900565
+        },
+        {
+          "method": "gru_29",
+          "n": 671,
+          "mae": 38.93903817689899,
+          "rmse": 47.42521119150536,
+          "bias_observed_minus_predicted": 25.320816014115042
+        },
+        {
+          "method": "gru_41",
+          "n": 671,
+          "mae": 36.550594675646806,
+          "rmse": 45.01551462713807,
+          "bias_observed_minus_predicted": 20.323877752107943
+        },
+        {
+          "method": "hgb_bloco2",
+          "n": 671,
+          "mae": 40.16034387330379,
+          "rmse": 48.0848917432384,
+          "bias_observed_minus_predicted": 27.001884006193386
+        },
+        {
+          "method": "hgb_legacy",
+          "n": 671,
+          "mae": 42.97184190034371,
+          "rmse": 52.854430066005065,
+          "bias_observed_minus_predicted": 25.951264569506932
+        },
+        {
+          "method": "hgb_quantile_p50",
+          "n": 671,
+          "mae": 42.33875436616817,
+          "rmse": 51.41929162794225,
+          "bias_observed_minus_predicted": 29.44685127320645
+        },
+        {
+          "method": "lightgbm",
+          "n": 671,
+          "mae": 39.93522646015059,
+          "rmse": 48.0066472022332,
+          "bias_observed_minus_predicted": 23.808182746108372
+        },
+        {
+          "method": "linear_legacy",
+          "n": 671,
+          "mae": 36.77346522468261,
+          "rmse": 46.863352258694164,
+          "bias_observed_minus_predicted": 19.23732542016928
+        },
+        {
+          "method": "mlp_17",
+          "n": 671,
+          "mae": 35.798433875002914,
+          "rmse": 46.331282656448415,
+          "bias_observed_minus_predicted": 13.530202177363252
+        },
+        {
+          "method": "mlp_29",
+          "n": 671,
+          "mae": 36.07112710227909,
+          "rmse": 46.32484715321804,
+          "bias_observed_minus_predicted": 16.434027141337957
+        },
+        {
+          "method": "mlp_41",
+          "n": 671,
+          "mae": 36.07896515570241,
+          "rmse": 46.05744535660656,
+          "bias_observed_minus_predicted": 16.998244951819522
+        },
+        {
+          "method": "persistence",
+          "n": 671,
+          "mae": 35.616479135618484,
+          "rmse": 50.35180584935344,
+          "bias_observed_minus_predicted": -0.11853874813710842
+        }
+      ]
+    },
+    "intervals_costs_and_conditional_bootstrap": {
+      "interval_methods": 3,
+      "quantile_crossings_before_report_rearrangement": {
+        "hgb_raw": 0,
+        "hgb_cqr": 0,
+        "chronos_raw": 0
+      },
+      "point_cost_rows_recomputed": 48,
+      "bootstrap_methods_recomputed": 14,
+      "bootstrap_conditional_only": true,
+      "retraining": false
+    },
+    "class_probabilities_alarm_cap_and_decision": {
+      "event_horizon_between_endpoints_hours": 26,
+      "daily_alarm_max_recomputed": 6,
+      "frozen_daily_budget": 6,
+      "decision_checks": {
+        "mean_gain_at_least2": false,
+        "gain_ci_above_zero": false,
+        "cqr_coverage_within70_90": true,
+        "cqr_width_at_most100": false,
+        "policy_cost_better_than_never": true,
+        "daily_alarm_limits_respected": true
+      },
+      "probability_metrics_recomputed": [
+        {
+          "method": "raw",
+          "brier": 0.2958625100162173,
+          "log_loss": 0.791345644527331,
+          "average_precision": 0.42705742091775706
+        },
+        {
+          "method": "calibrated",
+          "brier": 0.25655586863470986,
+          "log_loss": 0.6993436345984475,
+          "average_precision": 0.42705742091775706
+        },
+        {
+          "method": "frequency",
+          "brier": 0.20246936982150968,
+          "log_loss": 0.5990497667594245,
+          "average_precision": 0.2697466467958271
+        }
+      ],
+      "promotion_authorized": false
+    },
+    "preserved_failures_partial_operation_and_ci": {
+      "original_final_exit": 1,
+      "report_recovery_exit": 0,
+      "new_model_inference_during_audit": false,
+      "ci_isolated_source_files": 14,
+      "ci_copy_passed_tests_recorded": 16,
+      "remote_ci_executed": false,
+      "registry_versions": [
+        1,
+        2
+      ],
+      "registry_transition": [
+        1,
+        2,
+        1
+      ],
+      "identical_model_package_versions": true,
+      "live_shadow_emissions": 0,
+      "load_requests_recorded": 480,
+      "cloud_deployed": false
+    }
+  },
+  "warnings": [
+    "Execução final original terminou em 1 por impressão cp1252; NPZ preservado e somente síntese UTF-8 recuperada com retorno 0.",
+    "Primeira cópia CI omitiu dependência transitiva; tentativa/log preservados, empacotamento corrigido e segunda cópia registrou 16 aprovações.",
+    "M06-03 preserva falha de serialização inicial e adendo de compatibilidade anterior à segunda execução.",
+    "CI remoto, live shadow, continuidade, resposta de drift, segurança/recursos em produção e cloud continuam sem comprovação."
+  ],
+  "audit_code_sha256": "1ede30e946a3c030ce1d074731008737e406f57a804fb41ddc771cc9a2572b3d",
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "models_loaded": false,
+  "models_executed": false,
+  "old_tests_rerun": false,
+  "credentials_read": false,
+  "producer_files_modified": false,
+  "operational_approval": false,
+  "exit_code": 0
+}

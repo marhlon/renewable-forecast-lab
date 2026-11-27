@@ -1,0 +1,18 @@
+{
+  "schema": "renewcast-bloco3-observed-github-access-v1",
+  "observed_date": "2026-11-26",
+  "repository": "marhlon/renewable-forecast-lab",
+  "destination_confirmed_by_user": true,
+  "connector_authenticated_login": "marhlon",
+  "connector_get_repo_http_status": 404,
+  "connector_accessible_repositories_for_owner": [],
+  "connector_installations": [],
+  "allow_all_repositories_for_testing": false,
+  "git_cached_credential_available": false,
+  "credential_probe_exit_code": 1,
+  "credential_values_logged": false,
+  "remote_write_attempted": false,
+  "remote_commit_created": false,
+  "workflow_executed_remotely": false,
+  "remaining_action": "Conceder a conexão GitHub acesso ao repositório confirmado ou configurar autenticação Git local pelo titular; então executar o pacote CI revisado com os limites previstos."
+}

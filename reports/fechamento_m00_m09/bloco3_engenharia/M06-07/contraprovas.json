@@ -1,0 +1,85 @@
+{
+  "executed_at": "2026-11-26T00:37:52.863794+00:00",
+  "scope": "real_http_loopback_only",
+  "controls": {
+    "bind": "127.0.0.1",
+    "authentication": "x-api-key aleatória 256 bits somente em memória",
+    "body_bytes_max": 8192,
+    "rate_per_second": 1000,
+    "test_rate": 3,
+    "telemetry": "apenas timestamp, UUID gerado no servidor, status, bytes, duração e identidade de modelo; sem corpo/cabeçalho/token",
+    "threat": "acesso HTTP local sem chave, exaustão de corpo/taxa e contrato inválido; TLS/RBAC/multitenancy não avaliados"
+  },
+  "contraprovas": [
+    {
+      "case": "missing_key",
+      "expected": 401,
+      "status": 401,
+      "passed": true,
+      "request_id": "df4845981ff84174a6a4ca401e5e2b85"
+    },
+    {
+      "case": "wrong_key",
+      "expected": 401,
+      "status": 401,
+      "passed": true,
+      "request_id": "e4a986c267f6409c84860594ac475239"
+    },
+    {
+      "case": "valid",
+      "expected": 200,
+      "status": 200,
+      "passed": true,
+      "request_id": "1d8cbb5110ac419fb1b2bda593ad9fa7"
+    },
+    {
+      "case": "declared_oversized",
+      "expected": 413,
+      "status": 413,
+      "passed": true,
+      "request_id": "db8c56782e904047af617f7964529ef6"
+    },
+    {
+      "case": "chunked_oversized",
+      "expected": 413,
+      "status": 413,
+      "passed": true,
+      "request_id": "85321400e8d342dfb3e1305ebe3e0c8b"
+    },
+    {
+      "case": "invalid_features",
+      "expected": 422,
+      "status": 422,
+      "passed": true,
+      "request_id": "4cc1734fb8ab4b79bbf913e38b03f88e"
+    },
+    {
+      "case": "malformed_json",
+      "expected": 422,
+      "status": 422,
+      "passed": true,
+      "request_id": "2d84fe92b2aa4fe294517a61ce992c67"
+    },
+    {
+      "case": "rate_limit",
+      "expected_statuses": [
+        200,
+        200,
+        200,
+        429
+      ],
+      "statuses": [
+        200,
+        200,
+        200,
+        429
+      ],
+      "passed": true
+    }
+  ],
+  "secret_in_log": false,
+  "all_passed": true,
+  "service_stopped": true,
+  "key_destroyed_with_process": "token não persistido; variável de memória liberada ao fim do processo",
+  "production_security_certified": false
+}

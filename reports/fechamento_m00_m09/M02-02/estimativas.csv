@@ -1,0 +1,16 @@
+﻿grupo,medida,valor,hipotese
+amostra_manual,n,3,Normal IID; variância desconhecida
+amostra_manual,media,10.0,Normal IID; variância desconhecida
+amostra_manual,variancia_n_menos_1,4.0,Normal IID; variância desconhecida
+amostra_manual,erro_padrao,1.1547005383792515,Normal IID; variância desconhecida
+amostra_manual,t_critico,4.302652729749462,Normal IID; variância desconhecida
+amostra_manual,ic_media_inferior,5.03172457649934,Normal IID; variância desconhecida
+amostra_manual,ic_media_superior,14.96827542350066,Normal IID; variância desconhecida
+amostra_manual,pi_observacao_inferior,0.0634491529986807,Normal IID; variância desconhecida
+amostra_manual,pi_observacao_superior,19.93655084700132,Normal IID; variância desconhecida
+simulacao_iid,vies_media_monte_carlo,-0.003210934304306079,"2000 amostras de Normal(10,2²), n=16"
+simulacao_iid,variancia_mle_media,3.748871282470463,"Expectativa teórica = 3,75"
+simulacao_iid,variancia_n_menos_1_media,3.99879603463516,Expectativa teórica = 4
+simulacao_ar1,n_efetivo_exato,5.877537645564343,"Covariância AR1 conhecida; rho=0,8, n=48"
+simulacao_ar1,cobertura_ic_iid_inadequado,0.4995,Sigma marginal conhecido; dependência ignorada
+simulacao_ar1,cobertura_ic_ar1_conhecido,0.9415,Sigma e rho conhecidos do gerador

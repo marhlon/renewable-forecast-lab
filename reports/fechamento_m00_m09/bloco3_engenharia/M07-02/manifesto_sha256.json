@@ -1,0 +1,230 @@
+{
+  "generated_at_utc": "2026-11-26T00:42:37.112614+00:00",
+  "files": [
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/benchmark_escala.csv",
+      "sha256": "e599fd0506b600757d94a9ecb0b0744706c574e986fbd45ce8fab41b93d65625",
+      "bytes": 4603
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/benchmark_resumo.csv",
+      "sha256": "095ccf392c4016423f0ab9b8fad85b50c453e2f8d3b3da40529f86dd2eabbf26",
+      "bytes": 679
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_1_1.parquet",
+      "sha256": "f1e3806e48778b18b78dedff061228f8c2ec7bcd75bc4f3dccb3bb35bfd4f839",
+      "bytes": 8347
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_1_2.parquet",
+      "sha256": "f1e3806e48778b18b78dedff061228f8c2ec7bcd75bc4f3dccb3bb35bfd4f839",
+      "bytes": 8347
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_1_3.parquet",
+      "sha256": "f1e3806e48778b18b78dedff061228f8c2ec7bcd75bc4f3dccb3bb35bfd4f839",
+      "bytes": 8347
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_2_1.parquet",
+      "sha256": "c6477d152f8fd560c7c13d06599c67f2b8e13213e2b220e865545cdad0e4fcaf",
+      "bytes": 12633
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_2_2.parquet",
+      "sha256": "c6477d152f8fd560c7c13d06599c67f2b8e13213e2b220e865545cdad0e4fcaf",
+      "bytes": 12633
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_2_3.parquet",
+      "sha256": "c6477d152f8fd560c7c13d06599c67f2b8e13213e2b220e865545cdad0e4fcaf",
+      "bytes": 12633
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_3_1.parquet",
+      "sha256": "46b74e42e0039cbffe0c2edc923b22afbf21b2da29446af4dd257c267c208d24",
+      "bytes": 16660
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_3_2.parquet",
+      "sha256": "46b74e42e0039cbffe0c2edc923b22afbf21b2da29446af4dd257c267c208d24",
+      "bytes": 16660
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_duckdb_3_3.parquet",
+      "sha256": "46b74e42e0039cbffe0c2edc923b22afbf21b2da29446af4dd257c267c208d24",
+      "bytes": 16660
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_1_1.parquet",
+      "sha256": "dbcbfeef75183ce943daa679955223e2554f1d083029a8067e8795764e24ead3",
+      "bytes": 8362
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_1_2.parquet",
+      "sha256": "dbcbfeef75183ce943daa679955223e2554f1d083029a8067e8795764e24ead3",
+      "bytes": 8362
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_1_3.parquet",
+      "sha256": "dbcbfeef75183ce943daa679955223e2554f1d083029a8067e8795764e24ead3",
+      "bytes": 8362
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_2_1.parquet",
+      "sha256": "9e955ea52aa1b7de66227d7f0ff45423e69a8fd17e074fccc7603dc938d9c32a",
+      "bytes": 12648
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_2_2.parquet",
+      "sha256": "9e955ea52aa1b7de66227d7f0ff45423e69a8fd17e074fccc7603dc938d9c32a",
+      "bytes": 12648
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_2_3.parquet",
+      "sha256": "9e955ea52aa1b7de66227d7f0ff45423e69a8fd17e074fccc7603dc938d9c32a",
+      "bytes": 12648
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_3_1.parquet",
+      "sha256": "bf1fddbd0f8ffe11a209ab3e8ee4b38c44147bc5ebe3abcb25812c2b1eb863c0",
+      "bytes": 16675
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_3_2.parquet",
+      "sha256": "bf1fddbd0f8ffe11a209ab3e8ee4b38c44147bc5ebe3abcb25812c2b1eb863c0",
+      "bytes": 16675
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/materialized_pandas_3_3.parquet",
+      "sha256": "bf1fddbd0f8ffe11a209ab3e8ee4b38c44147bc5ebe3abcb25812c2b1eb863c0",
+      "bytes": 16675
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/parecer.md",
+      "sha256": "44f0f67f422ec7f613c8f386d81d80c7473a3cae66488813cbf0cfe8d07b1cfc",
+      "bytes": 3966
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/plano_coorte_1.txt",
+      "sha256": "962795ecf55ad045f8edee1cf86ac048415fa1e4a79b20fb3e46c49d6b4e524b",
+      "bytes": 16531
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/plano_coorte_2.txt",
+      "sha256": "2537ad3e740a76646ba7c80f51dc8c3027b88842c4eba36f7531ae544cf644a2",
+      "bytes": 23535
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/plano_coorte_3.txt",
+      "sha256": "7e2da820002be6fd296cca94a7a498261bf0a65319b622d5ab41e65b0209964a",
+      "bytes": 29791
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/plano_final.txt",
+      "sha256": "605d04feaaf7242848b4ee4a17912465f24ea425c2dd521f9bb377e34794a479",
+      "bytes": 70015
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/protocolo.json",
+      "sha256": "3871933132e69f201474079d2b2df9d96dee75c4c1f562699da01e595de0f135",
+      "bytes": 26084
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/resultado.json",
+      "sha256": "5b52a966b6bd7cbbf461a8c69171f45f8ef6054dd05dcf606a83b4c3c3d4bba1",
+      "bytes": 4023
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_1_1.json",
+      "sha256": "3ee3fb531e48fc33607f40cad225dcb5c7a953ddf07e8eae2a5bede25dccfa96",
+      "bytes": 582
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_1_2.json",
+      "sha256": "4ab0eec1ce18584fb805f05d88f5e378363f6f85b0318eab03f29a7afe58440b",
+      "bytes": 584
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_1_3.json",
+      "sha256": "ae62da59ab2b89458fc7b115b856846469fa4b8f31a67dfa9ec5ab64cbc00823",
+      "bytes": 583
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_2_1.json",
+      "sha256": "a06d3141db484156a4b39459df5ee97f11629c06da5bdc4f91fc78cb6aa9cd1e",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_2_2.json",
+      "sha256": "b8b7ba01f80bf41d2a373822201351eed3fd41a6c5f6c01e55e39ff053abcd70",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_2_3.json",
+      "sha256": "d341fe4588bbd619fd3378b64569219474c08d88c467a7207bc0bc41cc915b97",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_3_1.json",
+      "sha256": "7a716a58a17ac74279b3f5a1125c59930a395f4b064f4e4850245ce53fb98bc8",
+      "bytes": 586
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_3_2.json",
+      "sha256": "d0705e02996748d8ade55f46797126fe6e0c27d895e93524fd4fb64612346fc3",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_duckdb_3_3.json",
+      "sha256": "c39614936d55f15a3a7fd0bbd00259ed2a0a45d79a8d4a573c1029400b619754",
+      "bytes": 586
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_1_1.json",
+      "sha256": "7e4510754f6e8d9da0f227239533edab6aa4ba13dec0e52f243b6aa76bd4a79d",
+      "bytes": 583
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_1_2.json",
+      "sha256": "4226a3c4f5b08567d6ef0bfbe48b7e7803fdeb9006e9df629a5641ae4c7d3804",
+      "bytes": 583
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_1_3.json",
+      "sha256": "bd1e870bcc69b1cc9932a7fb0b336e428ea56e9266630a68e1b0aecda49b3cf0",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_2_1.json",
+      "sha256": "7170d2659b37adda48245ccc75640a1d25d426c8f3ffc205eb2f517fd376e543",
+      "bytes": 583
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_2_2.json",
+      "sha256": "c3679cd43545541be599ce52ab721dd1e327432f2b1b9874d959b2ebde9a81e7",
+      "bytes": 584
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_2_3.json",
+      "sha256": "7ce83f099b65fc83ad265631c689f1735feacc5b241f43159da0f11cb65d0309",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_3_1.json",
+      "sha256": "b90fc2771065364ecc0a827129e4e983ae2fd6ae7b4380ee763ba9438f122f4e",
+      "bytes": 586
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_3_2.json",
+      "sha256": "cd66c7ca8d0cf0173e32a52067d00fe4b575075fc9bc2ed6f14caf15daea615c",
+      "bytes": 585
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M07-02/trial_pandas_3_3.json",
+      "sha256": "fdc4a082c2abe3208d0a7bb0e11f5c5642bdf4bd71abfff50fc8a3ee4f814112",
+      "bytes": 583
+    }
+  ]
+}

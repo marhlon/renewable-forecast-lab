@@ -1,0 +1,160 @@
+{
+  "schema": "renewcast-sql-preparation-result-v1",
+  "item": "M01-02",
+  "status": "await_human",
+  "preparation_completed": true,
+  "independent_response_received": false,
+  "human_acceptance_claimed": false,
+  "student_autonomy_claimed": false,
+  "responsibility": "Preparação e revisão técnica assistidas por Codex.",
+  "executed_at_utc": "2026-11-25T12:26:22.257325+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "notebooks/laboratorio_diagnostico_sql.py",
+    "--preparar"
+  ],
+  "exit_code": 0,
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "sqlite": "3.53.2"
+  },
+  "summary": "Mês real exportado sob regra fixada antes do filtro; consulta e reconciliação independentes não executadas.",
+  "demo": {
+    "kind": "demonstracao_sintetica_resolvida_assistida",
+    "passed": true,
+    "checks": [
+      "sql_vs_conta_manual",
+      "sql_vs_pandas",
+      "left_vs_inner",
+      "quarentena_integral",
+      "lag_linha_diferente_de_hora",
+      "lag_na_grade_preserva_lacuna",
+      "particao_por_serie",
+      "cardinalidade_da_grade",
+      "fonte_preservada"
+    ],
+    "source_rows": 11,
+    "clean_rows": 9,
+    "quarantine_rows": 2,
+    "daily_left_rows": 8,
+    "daily_inner_rows": 5,
+    "hourly_grid_rows": 192,
+    "daily_reference": [
+      {
+        "id_ons": "A",
+        "dia": "2027-01-01",
+        "horas_presentes": 3,
+        "horas_validas": 2,
+        "media_mwmed": 6.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-03",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 30.0,
+        "cobertura": 0.041666666666666664
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-04",
+        "horas_presentes": 2,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-01",
+        "horas_presentes": 2,
+        "horas_validas": 2,
+        "media_mwmed": 150.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-03",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-04",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 0.0,
+        "cobertura": 0.041666666666666664
+      }
+    ]
+  },
+  "real_exercise_preparation": {
+    "schema": "renewcast-sql-real-slice-v1",
+    "registered_at_utc": "2026-11-25T12:26:05.569373+00:00",
+    "rule": "terceiro mês civil completo; regra prévia no adendo, sem seleção por diagnóstico",
+    "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+    "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "manifest_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "source_rows": 8760,
+    "source_min": "2025-09-01T00:00:00",
+    "source_max": "2026-08-31T23:00:00",
+    "start_inclusive": "2025-11-01T00:00:00",
+    "end_exclusive": "2025-12-01T00:00:00",
+    "id_ons": "CJU_BA5EIGT",
+    "timezone_assigned": false,
+    "predictive_test_selection": false,
+    "independent_query_executed": false,
+    "filter_started_at_utc": "2026-11-25T12:26:05.578325+00:00",
+    "protocol_written_before_filter": true,
+    "exported_rows": 720,
+    "calendar_positions": 720,
+    "source_preserved": true,
+    "no_imputation": true,
+    "no_injected_failures": true,
+    "export_files": {
+      "recorte_real.csv": "b3cb3ab543b7192ad490373434db68305cfa945d812443da7a3caf6f4176eb36",
+      "calendario_exercicio.csv": "c5aa97e2269d29b9d2947227a834e1593a60f7757de259625f3a8b84cdc82a70"
+    }
+  },
+  "output_sha256": {
+    "notebooks/laboratorio_diagnostico_sql.py": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+    "docs/roadmap_m00_m09/Diagnostico_SQL.md": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+    "reports/fechamento_m00_m09/M01-02/protocolo.json": "57b42fabbd37bcbd614abf1bef5512c6030f4a178f2eca4242e910b011c317e2",
+    "reports/fechamento_m00_m09/M01-02/parecer.md": "60650aca7f44cd26fd2e74c6a51fe2fe841c047a8555a6d3d815b4b053281c7b",
+    "reports/fechamento_m00_m09/M01-02/adendo_protocolo.json": "9408b92346894719a3fa98c0f956b6407e3f4458f09b9b11a755794253ba3ccc",
+    "reports/fechamento_m00_m09/M01-02/resposta_independente.md": "a598184dbc905ba5a79f84247710c6d7154ff8e3e03a46bb6b9b11964f03a92f",
+    "reports/fechamento_m00_m09/M01-02/consultas.sql": "cd13cb06c1d956a717e4f0d44b65376760938b5faee0cc0c0758773e1d86a5e3",
+    "docs/data_card.md": "455b145fb796fcf12af815fbaf5494c2b09388565a17275b0557157c98ccdf4b",
+    "reports/fechamento_m00_m09/M01-02/protocolo_recorte.json": "a8ecf829e5b0ae11cf5dc15c06d28c2c488b58cabd9883d3ea4c613c586add4c",
+    "reports/fechamento_m00_m09/M01-02/calendario_exercicio.csv": "c5aa97e2269d29b9d2947227a834e1593a60f7757de259625f3a8b84cdc82a70",
+    "reports/fechamento_m00_m09/M01-02/diagnostico.csv": "ce031b9429ae5a8093a269c242dc0f9db2b0bffed16976c2c85767fc46f1157b",
+    "reports/fechamento_m00_m09/M01-02/recorte_real.csv": "b3cb3ab543b7192ad490373434db68305cfa945d812443da7a3caf6f4176eb36"
+  },
+  "models_trained": false,
+  "pickle_loaded": false,
+  "spark_or_docker_run": false,
+  "network": false,
+  "historical_runs_modified": false,
+  "operational_approval": false
+}

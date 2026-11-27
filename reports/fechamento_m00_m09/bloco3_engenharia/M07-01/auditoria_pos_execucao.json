@@ -1,0 +1,114 @@
+{
+  "executed_at_utc": "2026-11-26T00:42:37.027312+00:00",
+  "responsible": "Codex — auditoria de código, arquivos e coortes após execução",
+  "frozen_code_checks": [
+    {
+      "item": "M07-01",
+      "path": "src/renewable_forecast/bloco3_data.py",
+      "sha256": "ba3f114303f25c4eac54b45c1b8da5e941eff2f57580df85bb01a6ccc165b1b4",
+      "matches": true
+    },
+    {
+      "item": "M07-01",
+      "path": "notebooks/bloco3_dados_execucao.py",
+      "sha256": "af0e5e0d78a11f8efdec55778d1665d8d57a9e6e9d36a66ba595895b3a03be1e",
+      "matches": true
+    },
+    {
+      "item": "M07-01",
+      "path": "tests/test_bloco3_data.py",
+      "sha256": "eed6bfd56c6900e59dc2dd1b10a24e863bbc8ebd81f799b4c0b53da61fc102b9",
+      "matches": true
+    },
+    {
+      "item": "M07-02",
+      "path": "src/renewable_forecast/bloco3_data.py",
+      "sha256": "ba3f114303f25c4eac54b45c1b8da5e941eff2f57580df85bb01a6ccc165b1b4",
+      "matches": true
+    },
+    {
+      "item": "M07-02",
+      "path": "notebooks/bloco3_dados_execucao.py",
+      "sha256": "af0e5e0d78a11f8efdec55778d1665d8d57a9e6e9d36a66ba595895b3a03be1e",
+      "matches": true
+    },
+    {
+      "item": "M07-02",
+      "path": "tests/test_bloco3_data.py",
+      "sha256": "eed6bfd56c6900e59dc2dd1b10a24e863bbc8ebd81f799b4c0b53da61fc102b9",
+      "matches": true
+    },
+    {
+      "item": "M07-03",
+      "path": "src/renewable_forecast/bloco3_data.py",
+      "sha256": "ba3f114303f25c4eac54b45c1b8da5e941eff2f57580df85bb01a6ccc165b1b4",
+      "matches": true
+    },
+    {
+      "item": "M07-03",
+      "path": "notebooks/bloco3_dados_execucao.py",
+      "sha256": "af0e5e0d78a11f8efdec55778d1665d8d57a9e6e9d36a66ba595895b3a03be1e",
+      "matches": true
+    },
+    {
+      "item": "M07-03",
+      "path": "tests/test_bloco3_data.py",
+      "sha256": "eed6bfd56c6900e59dc2dd1b10a24e863bbc8ebd81f799b4c0b53da61fc102b9",
+      "matches": true
+    },
+    {
+      "item": "M05-05",
+      "path": "src/renewable_forecast/bloco3_data.py",
+      "sha256": "ba3f114303f25c4eac54b45c1b8da5e941eff2f57580df85bb01a6ccc165b1b4",
+      "matches": true
+    },
+    {
+      "item": "M05-05",
+      "path": "notebooks/bloco3_dados_execucao.py",
+      "sha256": "af0e5e0d78a11f8efdec55778d1665d8d57a9e6e9d36a66ba595895b3a03be1e",
+      "matches": true
+    },
+    {
+      "item": "M05-05",
+      "path": "tests/test_bloco3_data.py",
+      "sha256": "eed6bfd56c6900e59dc2dd1b10a24e863bbc8ebd81f799b4c0b53da61fc102b9",
+      "matches": true
+    }
+  ],
+  "physical_reprocessing_checks": [
+    {
+      "layer": "silver",
+      "sha256": "7a2452c75f339e8b620df4c28154e7ba7994aa2aed92f148bbdec820c165f735",
+      "reprocessed_matches": true
+    },
+    {
+      "layer": "quarantine",
+      "sha256": "c818111135e637bf5b27f80e878c9374dfd80a924e5da5fc33affa4afc1b3543",
+      "reprocessed_matches": true
+    },
+    {
+      "layer": "gold",
+      "sha256": "b2c328a37642e6042da3e487bcf9930a188b68a740c5b4447da8d29220ce78b5",
+      "reprocessed_matches": true
+    }
+  ],
+  "paired_predictions": [
+    {
+      "split": "test",
+      "origins_each_model": 956,
+      "identical_keys_targets_availability": true
+    },
+    {
+      "split": "validation",
+      "origins_each_model": 576,
+      "identical_keys_targets_availability": true
+    }
+  ],
+  "source_unchanged": true,
+  "incremental_checks": "seis condições verificadas verdadeiras",
+  "scale_checks": "18 trials, 9 pares equivalentes e RSS amostrado abaixo de 512 MiB",
+  "training_label_purge": true,
+  "model_artifact_hash_matches": true,
+  "auditor_sha256": "5967320253947167d6e6acaccad85a80db897235c3137c5dd1dd0f5220f506e1",
+  "scope": "conferência local pós-execução; não é CI remoto, revisão humana ou prova operacional"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "renewcast-bloco2-observed-test-result-v1",
+  "observed_date": "2026-11-25",
+  "command": "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe -m unittest discover -s tests -p test_bloco2_risco.py -v",
+  "exit_code": 0,
+  "tests_run": 8,
+  "unittest_reported_seconds": 0.079,
+  "result": "OK",
+  "scope": [
+    "Rank finito de CQR e expansão não negativa",
+    "Ordenação de quantis sem alterar entrada",
+    "Pinball manual das bordas originais e expandidas",
+    "Brier, matriz de confusão e custo manuais",
+    "Orçamento causal por dia e invariância de prefixo",
+    "Alternativa explícita sem alarme",
+    "Rejeição de relógios/probabilidades inválidos",
+    "Logit finito nas fronteiras"
+  ],
+  "attribution": "Execução observada e registrada pelo agente principal Codex; não é prova de autoria independente do usuário.",
+  "note": "Registro do segundo comando observado após correção do pinball CQR; nenhum teste anterior foi declarado como novamente executado."
+}

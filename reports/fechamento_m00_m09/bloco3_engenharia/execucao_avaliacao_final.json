@@ -1,0 +1,32 @@
+{
+  "started_at_utc": "2026-11-26T16:10:57.115519+00:00",
+  "completed_at_utc": "2026-11-26T16:11:37.931838+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "notebooks\\bloco3_benchmark.py",
+    "executar-final"
+  ],
+  "exit_code": 1,
+  "completed_phases": [
+    {
+      "phase": "freeze",
+      "started_at_utc": "2026-11-26T16:10:57.116488+00:00",
+      "completed_at_utc": "2026-11-26T16:10:57.733252+00:00",
+      "exit_code": 0
+    },
+    {
+      "phase": "source_download",
+      "started_at_utc": "2026-11-26T16:10:57.733252+00:00",
+      "completed_at_utc": "2026-11-26T16:11:01.346875+00:00",
+      "exit_code": 0
+    },
+    {
+      "phase": "local_inference",
+      "started_at_utc": "2026-11-26T16:11:01.346875+00:00",
+      "completed_at_utc": "2026-11-26T16:11:04.480088+00:00",
+      "exit_code": 0
+    }
+  ],
+  "log_path": "reports/fechamento_m00_m09/bloco3_engenharia/execucao_avaliacao_final.log",
+  "log_sha256": "36a3ee75f1409e663c10b4ddb5b415e5d8ebe4cddc4c43a17cef24c3d6951b67"
+}

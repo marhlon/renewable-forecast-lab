@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-11-26T00:40:49.105606+00:00",
+  "scope": "supplementary code documentation and actual verification receipts",
+  "artifacts": [
+    {
+      "path": "src/renewable_forecast/bloco3_ops.py",
+      "sha256": "e53820e13d3dabcabe9273bbc9c06fa07bfe190b634a5ad4ee65532934dbf98e"
+    },
+    {
+      "path": "scripts/bloco3_operacao_local.py",
+      "sha256": "9b1016e194c131bc1c46590f8033bae1d78fad52bae4487a8aaa6225ee059347"
+    },
+    {
+      "path": "scripts/bloco3_operacao_verificar.py",
+      "sha256": "1b863bc966a20f658da9e5334a85261cdd5fa794fc57d4cc2187e2930b156d3d"
+    },
+    {
+      "path": "tests/test_bloco3_ops.py",
+      "sha256": "15419ae5284f834b8fb7d917a70a5be117220e95d3a4a25f41a93987782eb20c"
+    },
+    {
+      "path": "docs/roadmap_m00_m09/Bloco_3_Operacao_Local.md",
+      "sha256": "68696cf79222c4339567a217ad1f8efe48abe76acd45ab4850e56e0278afeace"
+    }
+  ]
+}

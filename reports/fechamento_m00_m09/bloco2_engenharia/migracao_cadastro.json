@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-25",
+  "items": [
+    "M02-06",
+    "M02-07",
+    "M02-08",
+    "M03-01",
+    "M03-02",
+    "M03-03",
+    "M05-01",
+    "M05-02",
+    "M05-03"
+  ],
+  "preserved_item_count": 45,
+  "previous_registry_path": "reports/fechamento_m00_m09/bloco2_engenharia/cadastro_antes_alteracao.json",
+  "previous_registry_sha256": "93d132546f7da8641275b92047910427c34d2d8740cfec0394df5ec24914d68e",
+  "new_registry_sha256": "07433ae55390fb3d24bd07d596bb82482ab7ceda37f2afb2d65f245cd9582dac",
+  "operational_requirements_retained_at": "M06-05/C3 e C4",
+  "independent_learning_certified": false,
+  "operational_approval": false
+}

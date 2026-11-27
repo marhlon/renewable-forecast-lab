@@ -1,0 +1,83 @@
+{
+  "created_at": "2026-11-26T00:34:22.584070+00:00",
+  "scope": [
+    "M06-07"
+  ],
+  "author": "Codex: construção, execução e análise assistidas; sem certificação de autonomia pessoal",
+  "environment": "Windows local; socket 127.0.0.1; sem Docker/cloud/recursos pagos",
+  "model": {
+    "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib",
+    "sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "selected": "HGB_lags24_calendar",
+    "training_cut": "2026-07-01 00:00",
+    "retraining": false
+  },
+  "source": {
+    "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+    "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+  },
+  "availability": "UTC e atraso de duas horas são hipóteses de estudo do bloco 2; PIT operacional não comprovado",
+  "sample": "Primeiras 48 linhas completas de junho/2026, já examinadas no desenvolvimento; nenhuma alegação de teste intocado",
+  "registry": {
+    "backend": "MLflow Model Registry com MlflowClient, SQLite local novo",
+    "alias": "active",
+    "sequence": "version1 -> version2 -> version1 rollback",
+    "versions": "duas versões do mesmo artefato congelado: ensaio de implantação, sem novo treinamento",
+    "promotion": "integridade do bundle, assinatura exata, igualdade de inferência e escopo local; não autoriza produção"
+  },
+  "security": {
+    "bind": "127.0.0.1",
+    "authentication": "x-api-key aleatória 256 bits somente em memória",
+    "body_bytes_max": 8192,
+    "rate_per_second": 1000,
+    "test_rate": 3,
+    "telemetry": "apenas timestamp, UUID gerado no servidor, status, bytes, duração e identidade de modelo; sem corpo/cabeçalho/token",
+    "threat": "acesso HTTP local sem chave, exaustão de corpo/taxa e contrato inválido; TLS/RBAC/multitenancy não avaliados"
+  },
+  "capacity": {
+    "requests": 240,
+    "concurrency": [
+      1,
+      4
+    ],
+    "timeout_seconds": 5,
+    "max_duration_seconds_per_case": 30,
+    "p95_ms_max": 500,
+    "error_fraction_max": 0.01,
+    "rss_mb_max": 2048,
+    "abort_rss_mb": 3072,
+    "cpu_threads": 2,
+    "spend_cap_brl": 0,
+    "cost_scope": "nenhum recurso cloud criado; energia/depreciação local não tarifadas; não equivale a custo observado de produção"
+  },
+  "shadow": {
+    "live_enabled": false,
+    "reason": "M04-05/PIT, CI remoto e janela real ainda não comprovados",
+    "replay_rows": 48,
+    "horizon_hours": 24,
+    "assumed_input_delay_hours": 2,
+    "prospective_window": "7 dias consecutivos após autorização e fontes verificadas, mínimo 144 emissões e reconciliação posterior; não executada",
+    "intervals_classes": "M06-05 C3/C4 permanecem pendentes, nenhuma calibração ou ajuste aqui"
+  },
+  "drift": {
+    "reference": "primeiras 24 amostras de junho já examinado",
+    "current": "24 seguintes; contraprovas sintéticas separadas",
+    "min_samples": 20,
+    "mean_shift_reference_sd": 1.5,
+    "mae_ratio": 1.5,
+    "mae_absolute_increase_mw": 10,
+    "max_missing_fraction": 0.05,
+    "max_label_delay_hours": 6,
+    "false_alert_budget": "triagem determinística: no máximo uma investigação por janela diária/variável; não é limite probabilístico de falso positivo",
+    "automatic_retrain": false,
+    "automatic_promotion": false
+  },
+  "cloud": {
+    "create_resources": false,
+    "approval_required": "conta/projeto, região, titular, teto monetário e janela antes da execução"
+  },
+  "code": {
+    "src/renewable_forecast/bloco3_ops.py": "e53820e13d3dabcabe9273bbc9c06fa07bfe190b634a5ad4ee65532934dbf98e",
+    "scripts/bloco3_operacao_local.py": "523ffe14125208c0b2163d7d41abcf911846ac4fe5b0a895e2da637f7a810725"
+  }
+}

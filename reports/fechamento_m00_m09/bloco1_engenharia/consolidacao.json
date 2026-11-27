@@ -1,0 +1,16 @@
+{
+  "schema": "renewcast-engineering-mode-consolidation-v1",
+  "recorded_at_utc": "2026-11-25T14:25:33.359208+00:00",
+  "previous_backlog_sha256": "8e8b7d336d5d7b36ce48e4950228fee002e89af76834be11e9727e214b1a6b50",
+  "new_backlog_sha256": "93d132546f7da8641275b92047910427c34d2d8740cfec0394df5ec24914d68e",
+  "script_sha256": "6caf1a008f0312b2d7efe69f7f914434285c71c4c2749fab54c3b442b2f3d314",
+  "engineering_item_count": 14,
+  "operational_blocks_preserved": [
+    "M04-02",
+    "M04-03",
+    "M04-04",
+    "M04-05"
+  ],
+  "independent_learning_certified": false,
+  "models_trained": false
+}

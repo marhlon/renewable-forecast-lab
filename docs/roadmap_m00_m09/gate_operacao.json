@@ -1,0 +1,65 @@
+{
+  "valid": false,
+  "errors": [
+    "gate: portão operacao pendente: M03-04, M04-01, M04-02, M04-03, M04-04, M04-05, M05-01, M05-02, M06-01, M06-02, M06-03, M06-04, M06-05, M06-06, M06-07, M06-08, M09-03"
+  ],
+  "summary": {
+    "total": 45,
+    "por_estado": {
+      "planejado": 42,
+      "em_execucao": 0,
+      "aguarda_revisao": 3,
+      "validado": 0,
+      "bloqueado": 0
+    },
+    "por_modulo": {
+      "M00": 1,
+      "M01": 2,
+      "M02": 8,
+      "M03": 4,
+      "M04": 5,
+      "M05": 5,
+      "M06": 9,
+      "M07": 4,
+      "M08": 3,
+      "M09": 4
+    },
+    "gate": "operacao",
+    "pendentes_no_gate": [
+      "M03-04",
+      "M04-01",
+      "M04-02",
+      "M04-03",
+      "M04-04",
+      "M04-05",
+      "M05-01",
+      "M05-02",
+      "M06-01",
+      "M06-02",
+      "M06-03",
+      "M06-04",
+      "M06-05",
+      "M06-06",
+      "M06-07",
+      "M06-08",
+      "M09-03"
+    ],
+    "prontos_para_iniciar": [
+      "M00-01",
+      "M02-01",
+      "M02-05",
+      "M04-01",
+      "M04-02",
+      "M04-03",
+      "M04-04",
+      "M06-01",
+      "M06-02",
+      "M06-07",
+      "M06-08",
+      "M09-03"
+    ]
+  },
+  "warning": "Consistência documental não comprova autonomia nem operação real.",
+  "schema": "renewcast-roadmap-verification-v1",
+  "backlog": "C:\\renewable-forecast-lab\\config\\roadmap_m00_m09.json"
+}

@@ -1,0 +1,76 @@
+{
+  "probes": [
+    {
+      "probe": 0,
+      "texto": "Geração caiu; corte 0,719944.",
+      "caracteres": 29,
+      "bytes_utf8": 31,
+      "tokens": 18,
+      "forma_embeddings": [
+        1,
+        18,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 1,
+      "texto": "Geracao caiu; corte 0,719944.",
+      "caracteres": 29,
+      "bytes_utf8": 29,
+      "tokens": 17,
+      "forma_embeddings": [
+        1,
+        17,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 2,
+      "texto": "Geração caiu; corte 0.719944.",
+      "caracteres": 29,
+      "bytes_utf8": 31,
+      "tokens": 18,
+      "forma_embeddings": [
+        1,
+        18,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 3,
+      "texto": "An alarm is rejected.\nStatus:",
+      "caracteres": 29,
+      "bytes_utf8": 29,
+      "tokens": 8,
+      "forma_embeddings": [
+        1,
+        8,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 4,
+      "texto": "An alarm is allowed.\nStatus:",
+      "caracteres": 28,
+      "bytes_utf8": 28,
+      "tokens": 8,
+      "forma_embeddings": [
+        1,
+        8,
+        576
+      ],
+      "round_trip": true
+    }
+  ],
+  "contraprova_contexto": {
+    "mesmo_token_final": ":",
+    "token_id": 42,
+    "delta_max_entrada": 0.0,
+    "delta_max_contextual": 1.933715581893921,
+    "cosseno_contextual": 0.9827910661697388
+  }
+}

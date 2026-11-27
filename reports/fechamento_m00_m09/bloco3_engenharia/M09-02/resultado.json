@@ -1,0 +1,323 @@
+{
+  "passed": true,
+  "shapes": {
+    "encoder0.input": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.attention_weights": [
+      2,
+      3,
+      12,
+      12
+    ],
+    "encoder0.residual_attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.after_attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.ffn_hidden": [
+      2,
+      12,
+      24
+    ],
+    "encoder0.feed_forward": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.residual_ffn": [
+      2,
+      12,
+      12
+    ],
+    "encoder0.output": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.input": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.attention_weights": [
+      2,
+      3,
+      12,
+      12
+    ],
+    "encoder1.residual_attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.after_attention": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.ffn_hidden": [
+      2,
+      12,
+      24
+    ],
+    "encoder1.feed_forward": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.residual_ffn": [
+      2,
+      12,
+      12
+    ],
+    "encoder1.output": [
+      2,
+      12,
+      12
+    ],
+    "decoder0.input": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.self_attention": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.self_attention_weights": [
+      2,
+      3,
+      5,
+      5
+    ],
+    "decoder0.residual_self": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.after_self": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.cross_attention": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.cross_attention_weights": [
+      2,
+      3,
+      5,
+      12
+    ],
+    "decoder0.residual_cross": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.after_cross": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.ffn_hidden": [
+      2,
+      5,
+      24
+    ],
+    "decoder0.feed_forward": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.residual_ffn": [
+      2,
+      5,
+      12
+    ],
+    "decoder0.output": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.input": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.self_attention": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.self_attention_weights": [
+      2,
+      3,
+      5,
+      5
+    ],
+    "decoder1.residual_self": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.after_self": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.cross_attention": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.cross_attention_weights": [
+      2,
+      3,
+      5,
+      12
+    ],
+    "decoder1.residual_cross": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.after_cross": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.ffn_hidden": [
+      2,
+      5,
+      24
+    ],
+    "decoder1.feed_forward": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.residual_ffn": [
+      2,
+      5,
+      12
+    ],
+    "decoder1.output": [
+      2,
+      5,
+      12
+    ]
+  },
+  "Q_heads": [
+    2,
+    3,
+    5,
+    4
+  ],
+  "K_heads": [
+    2,
+    3,
+    12,
+    4
+  ],
+  "V_heads": [
+    2,
+    3,
+    12,
+    4
+  ],
+  "output_shape": [
+    2,
+    5,
+    12
+  ],
+  "max_equation_difference": 2.220446049250313e-16,
+  "differences": {
+    "encoder0.residual_attention": 0.0,
+    "encoder0.norm1": 0.0,
+    "encoder0.residual_ffn": 0.0,
+    "encoder0.norm2": 0.0,
+    "encoder0.ffn": 0.0,
+    "encoder1.residual_attention": 0.0,
+    "encoder1.norm1": 0.0,
+    "encoder1.residual_ffn": 0.0,
+    "encoder1.norm2": 0.0,
+    "encoder1.ffn": 0.0,
+    "decoder0.residual_self": 0.0,
+    "decoder0.norm1": 0.0,
+    "decoder0.residual_cross": 0.0,
+    "decoder0.norm2": 0.0,
+    "decoder0.residual_ffn": 0.0,
+    "decoder0.norm3": 0.0,
+    "decoder0.ffn": 0.0,
+    "decoder1.residual_self": 0.0,
+    "decoder1.norm1": 0.0,
+    "decoder1.residual_cross": 0.0,
+    "decoder1.norm2": 0.0,
+    "decoder1.residual_ffn": 0.0,
+    "decoder1.norm3": 0.0,
+    "decoder1.ffn": 0.0,
+    "cross_weights_reconstruction": 0.0,
+    "cross_output_reconstruction": 0.0,
+    "cross_row_sums": 2.220446049250313e-16,
+    "safe_source_unavailable_first_slot": 0.0,
+    "safe_source_first_three_slots": 0.0,
+    "causal_decoder_prefix": 0.0,
+    "encoder0.row_sums": 2.220446049250313e-16,
+    "encoder1.row_sums": 2.220446049250313e-16,
+    "decoder_self0.row_sums": 2.220446049250313e-16,
+    "decoder_self1.row_sums": 2.220446049250313e-16
+  },
+  "only_cross_indirect_leak_delta_first_slot": 0.590813770621786,
+  "causal_encoder_and_cross_safe_delta_first_slot": 0.0,
+  "causal_decoder_prefix_delta": 0.0,
+  "future_slots_positive_control_delta": 2.9840134975551185,
+  "unmasked_self_prefix_leak_delta": 1.2223850103882634,
+  "checks_count": 16,
+  "slots_are_not_forecast_horizons": true,
+  "parameter_count": 6432,
+  "item": "M09-02",
+  "started_at_utc": "2026-11-26T00:32:54.373829+00:00",
+  "completed_at_utc": "2026-11-26T00:33:09.246105+00:00",
+  "protocol_sha256": "26e872319c1e54a4a6e4640e507e8d9bdb097cfa0130ae04fbe7d7b6b03df2ee",
+  "code_sha256": {
+    "notebooks/bloco3_transferencia_neural.py": "dcf4dc80e595899bd127df1e3ea4cf1cef9611021e351adaf28a8e15abe2fce6",
+    "tests/test_bloco3_transferencia_neural.py": "1a261ec785a2669c7b440408895539052e5cb48057e686766f99dd0f1f297c76",
+    "src/renewable_forecast/neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+    "src/renewable_forecast/transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "authorship": "Codex, solução técnica fornecida e executada; sem autonomia pessoal certificada",
+  "operational_evidence": false,
+  "output_sha256": {
+    "reports/fechamento_m00_m09/bloco3_engenharia/M09-02/disponibilidade_e_atencao.csv": "393b693b38a21e89978a14aaac8e14bdb0e4476ed42d8ecdede5103ae3088b1c"
+  }
+}

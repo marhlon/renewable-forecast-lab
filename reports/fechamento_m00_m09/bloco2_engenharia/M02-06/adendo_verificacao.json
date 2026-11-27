@@ -1,0 +1,16 @@
+{
+  "created_at_utc": "2026-11-25T19:15:20.276959+00:00",
+  "scope": "Execucao unica da verificacao independente e aplicacao dos custos de eventos ja definidos no protocolo original",
+  "protocol_sha256": "3a5824eb29396cc40aca713ac835a28fe908196a6c4e5412c41b6ccdb2aba21c",
+  "code_sha256": "a4060b397a9fe83e6dc428291f31fbf94ae6127fe452d39c8ebd4aed04250a60",
+  "wrapper_sha256": "5a07e1711635ea465ccbaed79e30f3da7e8e194232c5fdf10dbd0f6fefa3c71a",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco2_engenharia\\M02-06\\aplicar_custos.py",
+    "--clinic-dir",
+    "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco2_engenharia\\M02-06\\clinica\\20261125T162028Z_f0f4439d"
+  ],
+  "new_training_or_inference": false,
+  "new_analytic_scenarios": false,
+  "clinic_rerun": false
+}

@@ -1,0 +1,4 @@
+﻿particao,prompt,casos,json_ok,esquema_ok,fiel,fiel_entre_esquema,fallback,publicado_conferido,tokens_entrada,tokens_novos
+desenvolvimento,zero_shot,6,5,0,0,,6,6,1881,375
+desenvolvimento,um_exemplo,6,0,0,0,,6,6,2451,720
+reservado,zero_shot,6,6,0,0,,6,6,1807,265

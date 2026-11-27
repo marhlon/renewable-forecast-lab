@@ -1,0 +1,144 @@
+{
+  "started_at": "2026-11-25T19:21:01.621060+00:00",
+  "completed_at": "2026-11-25T19:21:05.975791+00:00",
+  "elapsed_seconds": 4.3538824999995995,
+  "command": [
+    "notebooks\\selecao_atributos_temporal.py",
+    "--ajustar"
+  ],
+  "execution": "new_fit",
+  "manifest": {
+    "selected": "HGB_lags24_calendar",
+    "study_model": "HGB_lags24_calendar",
+    "selected_features": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_4h",
+      "lag_5h",
+      "lag_6h",
+      "lag_7h",
+      "lag_8h",
+      "lag_9h",
+      "lag_10h",
+      "lag_11h",
+      "lag_12h",
+      "lag_13h",
+      "lag_14h",
+      "lag_15h",
+      "lag_16h",
+      "lag_17h",
+      "lag_18h",
+      "lag_19h",
+      "lag_20h",
+      "lag_21h",
+      "lag_22h",
+      "lag_23h",
+      "lag_24h",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "study_features": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_4h",
+      "lag_5h",
+      "lag_6h",
+      "lag_7h",
+      "lag_8h",
+      "lag_9h",
+      "lag_10h",
+      "lag_11h",
+      "lag_12h",
+      "lag_13h",
+      "lag_14h",
+      "lag_15h",
+      "lag_16h",
+      "lag_17h",
+      "lag_18h",
+      "lag_19h",
+      "lag_20h",
+      "lag_21h",
+      "lag_22h",
+      "lag_23h",
+      "lag_24h",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "frozen_at": "2026-11-25T19:21:05.811951+00:00",
+    "final_training_cut": "2026-07-01 00:00",
+    "training_n": 7221,
+    "train_origin_max": "2026-06-29 21:00:00",
+    "train_label_available_max": "2026-06-30 23:00:00",
+    "folds": [
+      {
+        "fold": 1,
+        "train_n": 6501,
+        "validation_n": 168,
+        "train_origin_max": "2026-05-30 21:00:00",
+        "train_label_available_max": "2026-05-31 23:00:00",
+        "validation_start": "2026-06-01",
+        "validation_end_exclusive": "2026-06-08"
+      },
+      {
+        "fold": 2,
+        "train_n": 6669,
+        "validation_n": 168,
+        "train_origin_max": "2026-06-06 21:00:00",
+        "train_label_available_max": "2026-06-07 23:00:00",
+        "validation_start": "2026-06-08",
+        "validation_end_exclusive": "2026-06-15"
+      },
+      {
+        "fold": 3,
+        "train_n": 6837,
+        "validation_n": 168,
+        "train_origin_max": "2026-06-13 21:00:00",
+        "train_label_available_max": "2026-06-14 23:00:00",
+        "validation_start": "2026-06-15",
+        "validation_end_exclusive": "2026-06-22"
+      }
+    ],
+    "calibration_n": 312,
+    "calibration_metrics": {
+      "n": 312,
+      "mae": 32.6729513305515,
+      "rmse": 43.88098855296612,
+      "bias": -10.45766068300887
+    },
+    "baseline_won": false,
+    "evaluation_opened": false,
+    "bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "protocol_sha256": "a9cca9a359b8401099e63fe2805974d20c48e0f7bd994367543801bd4deaf347",
+    "code": {
+      "notebooks/selecao_atributos_temporal.py": "ed3a24b9c79a7721d9c9291a7c45c1207dcb43b83276dc075ea1b2401f30612b",
+      "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+      "notebooks/explicacao_local.py": "7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b"
+    },
+    "source": {
+      "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+      "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+    },
+    "versions": {
+      "python": "3.12.13",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "sklearn": "1.9.0"
+    }
+  },
+  "outputs": {
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/candidatos.csv": "4281ef49d55e21fd5c2a50dc3fcf47db269b1c5bab36bf4160898b475130fb55",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/folds.csv": "637d2d43ac74ad1d49fe70a67fe28aa3ba4afe62f386e341155b51f73c7211d2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_cal.csv": "2d14029d9588178c066da7ff85728540551659c499c1de7ae36db4ed087e8d4c",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_folds.csv": "ab88657c1ba7ffc0d3139bebb70794bd01c4d5da6c836233ad38a535202fd0de",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json": "a9cca9a359b8401099e63fe2805974d20c48e0f7bd994367543801bd4deaf347",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/selection_manifest.json": "f3b254a51978030dad9bc6d270880127bb0e6446b3f736f37df9e4d85a1f28c9"
+  },
+  "attribution": "Codex implementou, executou e analisou; sem resposta independente do usuário"
+}

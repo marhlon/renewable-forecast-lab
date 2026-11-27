@@ -1,0 +1,1867 @@
+{
+  "prompts_renderizados": {
+    "renewcast_replay": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":true,\"k\":1,\"cutoff\":\"0.5\",\"s1\":\"0.20465385372296466\",\"s2\":null}<|im_end|>\n<|im_start|>assistant\n",
+    "renewcast_sem_resposta": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":false,\"k\":1,\"cutoff\":\"0.5\",\"s1\":null,\"s2\":null}<|im_end|>\n<|im_start|>assistant\n",
+    "satmon_tres_canais": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.7199442558330269\",\"s1\":\"0.7164359650668679\",\"s2\":\"0.6382295270617967\"}<|im_end|>\n<|im_start|>assistant\n",
+    "satmon_sem52": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.7201268845204545\",\"s1\":\"0.7541511974686277\",\"s2\":\"0.6915642216840697\"}<|im_end|>\n<|im_start|>assistant\n",
+    "igualdade": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.70\",\"s1\":\"0.73\",\"s2\":\"0.70\"}<|im_end|>\n<|im_start|>assistant\n",
+    "picos_sem_par": "<|im_start|>system\nYou write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.<|im_end|>\n<|im_start|>user\nClassify the record using exactly one code on the first line and a short reason on the second.\nUse these rules in order:\nINSUFFICIENT: usable is false.\nBELOW: usable is true and s1 < cutoff.\nISOLATED: s1 >= cutoff, k is 2, and s2 is null or s2 < cutoff.\nELIGIBLE: s1 >= cutoff and k is 1, or k is 2 and s2 >= cutoff.\nELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.70\",\"s1\":\"0.80\",\"s2\":null}<|im_end|>\n<|im_start|>assistant\n"
+  },
+  "trajetoria_forcada_ids": [
+    2721,
+    7113,
+    25939,
+    198,
+    504,
+    8056,
+    9732,
+    260,
+    35481,
+    28,
+    564,
+    787,
+    6455,
+    23351,
+    354,
+    12991,
+    30
+  ],
+  "geracoes": [
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 6,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.144920349121094
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.126907348632812
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.760967254638672
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.029155731201172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 0.35,
+      "semente": 17,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        198,
+        198,
+        24664,
+        42,
+        9583,
+        19736,
+        1799,
+        10469,
+        1627,
+        91,
+        1799,
+        34,
+        1627,
+        48359,
+        25535,
+        32,
+        30,
+        39,
+        34,
+        32,
+        33,
+        34,
+        38,
+        40,
+        40,
+        36,
+        37,
+        34,
+        32,
+        36,
+        37,
+        36
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.5219839097124932,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.8066907771186791,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.144920349121094
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.126907348632812
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.760967254638672
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.029155731201172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 0.35,
+      "semente": 29,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        30,
+        198,
+        198,
+        504,
+        2166,
+        327,
+        451,
+        9782,
+        314,
+        338,
+        260,
+        2004,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        378,
+        3938,
+        314,
+        441,
+        1730
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.5481190538116991,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.34583182333805484,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.144920349121094
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.126907348632812
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.760967254638672
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.029155731201172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 0.35,
+      "semente": 41,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        43,
+        357,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        198,
+        198,
+        24664,
+        42,
+        9583,
+        19736,
+        1799,
+        10469,
+        1627,
+        91,
+        1799,
+        34,
+        1627,
+        48359,
+        25535
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.38102068999577143,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.23071918631047517,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.144920349121094
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.126907348632812
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.760967254638672
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.029155731201172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 1.2,
+      "semente": 17,
+      "novos_ids": [
+        504,
+        4585,
+        338,
+        1066,
+        416,
+        325,
+        9827,
+        347,
+        5558,
+        42,
+        1116,
+        33,
+        30,
+        476,
+        4182,
+        7113,
+        25939,
+        1627,
+        527,
+        314,
+        2629,
+        30,
+        669,
+        6773,
+        260,
+        3938,
+        416,
+        2669,
+        253,
+        2539,
+        5972,
+        645,
+        262,
+        446,
+        216,
+        34
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.5219839097124932,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.8066907771186791,
+          "id_escolhido": 4585,
+          "top4": [
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 23.141427993774414
+            },
+            {
+              "id": 2887,
+              "peca": "Ġcorrect",
+              "logit": 20.056201934814453
+            },
+            {
+              "id": 4585,
+              "peca": "Ġrecords",
+              "logit": 19.831335067749023
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 19.518291473388672
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 1.2,
+      "semente": 29,
+      "novos_ids": [
+        504,
+        2004,
+        3593,
+        260,
+        1695,
+        940,
+        42,
+        216,
+        198,
+        18,
+        19736,
+        1799,
+        216,
+        33,
+        28,
+        476,
+        91,
+        1799,
+        216,
+        34,
+        28,
+        476,
+        48359,
+        1799,
+        216,
+        32,
+        30,
+        39,
+        34,
+        32,
+        33,
+        34,
+        38,
+        40,
+        40,
+        36
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.5481190538116991,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.34583182333805484,
+          "id_escolhido": 2004,
+          "top4": [
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 23.141427993774414
+            },
+            {
+              "id": 2887,
+              "peca": "Ġcorrect",
+              "logit": 20.056201934814453
+            },
+            {
+              "id": 4585,
+              "peca": "Ġrecords",
+              "logit": 19.831335067749023
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 19.518291473388672
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "top_k",
+      "teto_novos": 36,
+      "temperatura": 1.2,
+      "semente": 41,
+      "novos_ids": [
+        504,
+        2004,
+        314,
+        198,
+        198,
+        107,
+        198,
+        18,
+        19736,
+        1799,
+        10469,
+        1627,
+        91,
+        1799,
+        34,
+        1627,
+        48359,
+        25535,
+        32,
+        30,
+        39,
+        34,
+        32,
+        33,
+        34,
+        38,
+        40,
+        40,
+        36,
+        37,
+        34,
+        32,
+        36,
+        37,
+        36,
+        37
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": 0.38102068999577143,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": 0.23071918631047517,
+          "id_escolhido": 2004,
+          "top4": [
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 23.141427993774414
+            },
+            {
+              "id": 2887,
+              "peca": "Ġcorrect",
+              "logit": 20.056201934814453
+            },
+            {
+              "id": 4585,
+              "peca": "Ġrecords",
+              "logit": 19.831335067749023
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 19.518291473388672
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renewcast_replay",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        43,
+        357,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        198,
+        198,
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        39428,
+        19736,
+        1799,
+        10469,
+        1627,
+        91,
+        1799
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 30.89586639404297
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.743906021118164
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.942060470581055
+            },
+            {
+              "id": 788,
+              "peca": "In",
+              "logit": 29.773242950439453
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.245216369628906
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.2935733795166
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.821043014526367
+            },
+            {
+              "id": 7854,
+              "peca": "IA",
+              "logit": 26.333650588989258
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renewcast_replay",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        2683,
+        2965,
+        2364,
+        29,
+        2542,
+        5293,
+        4658,
+        30,
+        4076,
+        805,
+        260,
+        12919,
+        2004,
+        30,
+        3315,
+        441,
+        23487,
+        253,
+        2099,
+        1728,
+        30,
+        2
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 2683,
+          "top4": [
+            {
+              "id": 2683,
+              "peca": "You",
+              "logit": 32.01093673706055
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 31.67816734313965
+            },
+            {
+              "id": 7334,
+              "peca": "Your",
+              "logit": 31.111019134521484
+            },
+            {
+              "id": 198,
+              "peca": "Ċ",
+              "logit": 30.488779067993164
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 2965,
+          "top4": [
+            {
+              "id": 2965,
+              "peca": "Ġwrite",
+              "logit": 30.354291915893555
+            },
+            {
+              "id": 416,
+              "peca": "Ġcan",
+              "logit": 29.82345962524414
+            },
+            {
+              "id": 359,
+              "peca": "Ġare",
+              "logit": 29.78900909423828
+            },
+            {
+              "id": 4150,
+              "peca": "Ġwrote",
+              "logit": 29.75969886779785
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renewcast_sem_resposta",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        198,
+        1780,
+        314,
+        260,
+        3446,
+        282,
+        260,
+        1695,
+        2909,
+        3608,
+        47,
+        2
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 198,
+          "top4": [
+            {
+              "id": 198,
+              "peca": "Ċ",
+              "logit": 30.781383514404297
+            },
+            {
+              "id": 33,
+              "peca": "1",
+              "logit": 30.23506736755371
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 29.809600830078125
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.752845764160156
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 1780,
+          "top4": [
+            {
+              "id": 1780,
+              "peca": "What",
+              "logit": 33.763206481933594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 33.135929107666016
+            },
+            {
+              "id": 2683,
+              "peca": "You",
+              "logit": 32.65481185913086
+            },
+            {
+              "id": 19161,
+              "peca": "Write",
+              "logit": 32.255428314208984
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "renewcast_sem_resposta",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        43,
+        357,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        198,
+        198,
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        39428,
+        19736,
+        1799,
+        21642,
+        1627,
+        91,
+        1799
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.258779525756836
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.970809936523438
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 30.212646484375
+            },
+            {
+              "id": 788,
+              "peca": "In",
+              "logit": 29.824338912963867
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.615631103515625
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.52117347717285
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 27.29572105407715
+            },
+            {
+              "id": 7854,
+              "peca": "IA",
+              "logit": 26.653400421142578
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_tres_canais",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        43,
+        357,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        198,
+        198,
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        18,
+        19736,
+        42,
+        10469,
+        28,
+        91,
+        42
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.21026611328125
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.44948959350586
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.73086166381836
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.488990783691406
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.11360549926758
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.10093879699707
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.72214126586914
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.004438400268555
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_tres_canais",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        504,
+        1695,
+        2004,
+        1072,
+        441,
+        2669,
+        253,
+        2099,
+        1728,
+        282,
+        260,
+        9208,
+        42,
+        198,
+        198,
+        24664,
+        42,
+        9583,
+        19736,
+        1799,
+        10469,
+        1627,
+        91,
+        1799,
+        34,
+        1627,
+        48359,
+        25535,
+        32,
+        30,
+        39,
+        33,
+        38,
+        36,
+        35,
+        37
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.173839569091797
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.87518310546875
+            },
+            {
+              "id": 198,
+              "peca": "Ċ",
+              "logit": 29.553144454956055
+            },
+            {
+              "id": 49,
+              "peca": "A",
+              "logit": 28.671993255615234
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 1695,
+          "top4": [
+            {
+              "id": 1695,
+              "peca": "Ġfollowing",
+              "logit": 19.282854080200195
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 18.95203399658203
+            },
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 18.373504638671875
+            },
+            {
+              "id": 1836,
+              "peca": "Ġgiven",
+              "logit": 18.36725616455078
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        504,
+        3938,
+        314,
+        42,
+        476,
+        99,
+        33,
+        10888,
+        35481,
+        284,
+        501,
+        314,
+        216,
+        33,
+        28,
+        355,
+        501,
+        314,
+        216,
+        34,
+        284,
+        262,
+        34,
+        314,
+        10034,
+        355,
+        262,
+        34,
+        2067,
+        35481,
+        1270,
+        198,
+        198,
+        504,
+        3938,
+        314
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.14584732055664
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.668376922607422
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.036237716674805
+            },
+            {
+              "id": 1348,
+              "peca": "This",
+              "logit": 28.92582130432129
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 3938,
+          "top4": [
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 20.348331451416016
+            },
+            {
+              "id": 2539,
+              "peca": "Ġreading",
+              "logit": 20.283143997192383
+            },
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 19.637042999267578
+            },
+            {
+              "id": 1695,
+              "peca": "Ġfollowing",
+              "logit": 19.605819702148438
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "satmon_sem52",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        4210,
+        5819,
+        15894,
+        4796,
+        1530,
+        260,
+        3938,
+        416,
+        5143,
+        253,
+        2539,
+        5972,
+        43,
+        357,
+        1072,
+        441,
+        2669,
+        253,
+        8751,
+        9208,
+        30,
+        198,
+        198,
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        18,
+        19736,
+        42,
+        10469,
+        28,
+        91,
+        42
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 4210,
+          "top4": [
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 31.153343200683594
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.426715850830078
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 29.708831787109375
+            },
+            {
+              "id": 18,
+              "peca": "\"",
+              "logit": 29.46390151977539
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 5819,
+          "top4": [
+            {
+              "id": 5819,
+              "peca": "IG",
+              "logit": 34.144920349121094
+            },
+            {
+              "id": 57,
+              "peca": "I",
+              "logit": 29.126907348632812
+            },
+            {
+              "id": 15894,
+              "peca": "IB",
+              "logit": 26.760967254638672
+            },
+            {
+              "id": 5974,
+              "peca": "IM",
+              "logit": 26.029155731201172
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "igualdade",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        18,
+        19736,
+        42,
+        10469,
+        28,
+        501,
+        42,
+        34,
+        28,
+        35481,
+        42,
+        32,
+        30,
+        39,
+        32,
+        28,
+        262,
+        33,
+        42,
+        32,
+        30,
+        39,
+        35,
+        28,
+        262,
+        34,
+        42,
+        32,
+        30,
+        39
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 31.100406646728516
+            },
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 30.924150466918945
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 30.154468536376953
+            },
+            {
+              "id": 788,
+              "peca": "In",
+              "logit": 29.814685821533203
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 2004,
+          "top4": [
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 22.778736114501953
+            },
+            {
+              "id": 2887,
+              "peca": "Ġcorrect",
+              "logit": 19.997583389282227
+            },
+            {
+              "id": 4585,
+              "peca": "Ġrecords",
+              "logit": 19.572296142578125
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 19.435222625732422
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "igualdade",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        504,
+        1695,
+        314,
+        253,
+        1398,
+        282,
+        3372,
+        338,
+        416,
+        325,
+        804,
+        288,
+        2669,
+        253,
+        2539,
+        5972,
+        42,
+        198,
+        198,
+        29,
+        262,
+        33,
+        2067,
+        35481,
+        198,
+        29,
+        262,
+        33,
+        10888,
+        35481,
+        198,
+        29,
+        262,
+        33,
+        10888,
+        35481
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.436260223388672
+            },
+            {
+              "id": 2683,
+              "peca": "You",
+              "logit": 28.839691162109375
+            },
+            {
+              "id": 1780,
+              "peca": "What",
+              "logit": 28.772966384887695
+            },
+            {
+              "id": 1348,
+              "peca": "This",
+              "logit": 28.772018432617188
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 1695,
+          "top4": [
+            {
+              "id": 1695,
+              "peca": "Ġfollowing",
+              "logit": 19.849689483642578
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 18.480348587036133
+            },
+            {
+              "id": 3372,
+              "peca": "Ġrules",
+              "logit": 18.40085792541504
+            },
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 18.207847595214844
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "picos_sem_par",
+      "precisao": "int8_linear",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        10407,
+        2
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 10407,
+          "top4": [
+            {
+              "id": 10407,
+              "peca": "yes",
+              "logit": 27.786998748779297
+            },
+            {
+              "id": 2683,
+              "peca": "You",
+              "logit": 27.406723022460938
+            },
+            {
+              "id": 198,
+              "peca": "Ċ",
+              "logit": 27.364763259887695
+            },
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 27.23137664794922
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 2,
+          "top4": [
+            {
+              "id": 2,
+              "peca": "<|im_end|>",
+              "logit": 31.760169982910156
+            },
+            {
+              "id": 198,
+              "peca": "Ċ",
+              "logit": 31.404102325439453
+            },
+            {
+              "id": 28,
+              "peca": ",",
+              "logit": 29.495893478393555
+            },
+            {
+              "id": 30,
+              "peca": ".",
+              "logit": 29.48346519470215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "picos_sem_par",
+      "precisao": "fp32",
+      "modo": "greedy",
+      "teto_novos": 36,
+      "temperatura": null,
+      "semente": null,
+      "novos_ids": [
+        504,
+        2004,
+        314,
+        42,
+        198,
+        198,
+        18,
+        19736,
+        42,
+        10469,
+        28,
+        501,
+        42,
+        34,
+        28,
+        35481,
+        42,
+        32,
+        30,
+        39,
+        32,
+        28,
+        262,
+        33,
+        42,
+        32,
+        30,
+        40,
+        32,
+        28,
+        262,
+        34,
+        42,
+        18220,
+        18,
+        198
+      ],
+      "dois_primeiros_passos": [
+        {
+          "passo": 1,
+          "u": null,
+          "id_escolhido": 504,
+          "top4": [
+            {
+              "id": 504,
+              "peca": "The",
+              "logit": 30.96293067932129
+            },
+            {
+              "id": 4210,
+              "peca": "EL",
+              "logit": 30.890605926513672
+            },
+            {
+              "id": 11192,
+              "peca": "Based",
+              "logit": 30.21913719177246
+            },
+            {
+              "id": 788,
+              "peca": "In",
+              "logit": 29.79969024658203
+            }
+          ]
+        },
+        {
+          "passo": 2,
+          "u": null,
+          "id_escolhido": 2004,
+          "top4": [
+            {
+              "id": 2004,
+              "peca": "Ġrecord",
+              "logit": 22.66460609436035
+            },
+            {
+              "id": 2887,
+              "peca": "Ġcorrect",
+              "logit": 19.93704605102539
+            },
+            {
+              "id": 4585,
+              "peca": "Ġrecords",
+              "logit": 19.531341552734375
+            },
+            {
+              "id": 3938,
+              "peca": "Ġrule",
+              "logit": 19.38820457458496
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

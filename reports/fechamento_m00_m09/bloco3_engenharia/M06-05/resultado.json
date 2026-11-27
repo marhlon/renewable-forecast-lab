@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-11-26T00:37:53.073705+00:00",
+  "execution_kind": "replay_monitoring_readiness",
+  "live_observation_hours": 0,
+  "replay_rows": 48,
+  "assumed_label_delay_hours": 2,
+  "continuous_service_proven": false,
+  "prospective_intervals_proven": false,
+  "prospective_probability_calibration_proven": false,
+  "operational_criteria": {
+    "C1": false,
+    "C2": false,
+    "C3": false,
+    "C4": false
+  },
+  "incident_owner": "titular deve designar responsável e canal antes de iniciar operação; Codex não se atribui plantão"
+}

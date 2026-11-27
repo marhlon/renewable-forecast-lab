@@ -1,0 +1,14 @@
+{
+  "recorded_at_utc": "2026-11-26T20:11:37.030803+00:00",
+  "change": "Canonical GitHub REST root endpoint removes trailing slash; separate authorized CI orchestration added.",
+  "files": [
+    {
+      "path": "scripts/publicar_ci_bloco3.py",
+      "previous_sha256": "944c323148a163a7769f358325940ef8e85febd870aa954341a94343e12fb99c",
+      "new_sha256": "466bade3b5dee1627137756382a40a5c553428e43cf23363709bf1591e61be25"
+    }
+  ],
+  "model_or_frozen_benchmark_change": false,
+  "criteria_or_dependencies_changed": false,
+  "remote_acceptance_not_assumed": true
+}

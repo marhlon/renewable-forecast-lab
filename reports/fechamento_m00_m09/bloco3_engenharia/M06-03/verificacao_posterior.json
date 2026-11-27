@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-11-26T00:40:49.105606+00:00",
+  "verified_at": "2026-11-26T00:39:02.176847+00:00",
+  "command": "python scripts/bloco3_operacao_verificar.py",
+  "exit_code": 0,
+  "artifacts_verified": 54,
+  "active_version": "1",
+  "registered_versions": [
+    "1",
+    "2"
+  ],
+  "inference_max_difference": 0.0,
+  "security_and_replay_controls_passed": true,
+  "drift_counterexamples_passed": true,
+  "live_shadow_or_cloud_proven": false
+}

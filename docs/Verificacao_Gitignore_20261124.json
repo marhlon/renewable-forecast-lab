@@ -24,12 +24,13 @@
   "method": "git check-ignore --no-index; all curated reference input files included; read-only index inspection",
   "index_modified_by_review": false,
   "readme_validation": {
-    "relative_links_checked": 21,
+    "relative_links_checked": 24,
     "missing_links": [],
     "links_hidden_by_ignore": [],
     "last_section": "Resultados e limites",
     "balanced_code_fences": true,
     "contains_absolute_user_path": false,
-    "passed": true
+    "passed": true,
+    "updated_after_m10_4": "20261124T152509Z_3878d5e2"
   }
 }

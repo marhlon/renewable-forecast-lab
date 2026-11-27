@@ -1,0 +1,30 @@
+{
+  "schema": "renewcast-sql-teaching-addendum-v1",
+  "items": ["M00-01", "M01-01", "M01-02", "M07-04"],
+  "client_date": "2026-11-25",
+  "scope": "Preparação didática assistida, demonstração pequena resolvida e exportação de um exercício real; respostas independentes pendentes.",
+  "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "source_manifest": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+  "selection_rule_fixed_before_query": "Escolher o terceiro mês civil completo coberto pela fonte. Se o primeiro instante não for o início do mês, começar a contagem no mês seguinte. Usar [início do terceiro mês, início do quarto mês). Não escolher pela qualidade, métricas ou resultados.",
+  "selection_order": [
+    "Conferir hash e quantidade declarada da fonte.",
+    "Ler apenas limites temporais para concretizar a regra previamente fixada; isto não é seleção de teste preditivo.",
+    "Gravar protocolo_recorte.json com datas concretas e hashes antes do filtro e das consultas de diagnóstico.",
+    "Exportar recorte_real.csv e calendario_exercicio.csv preservando timestamps e valores, sem imputação ou alteração da fonte."
+  ],
+  "demo": {
+    "kind": "Demonstração sintética resolvida, separada do exercício real.",
+    "period": ["2027-01-01T00:00:00", "2027-01-05T00:00:00"],
+    "series": ["A", "B"],
+    "policy": "Toda chave repetida vai integralmente para quarentena, sem média, soma ou escolha silenciosa de uma cópia.",
+    "checks": ["SQLite e pandas coincidem com conta manual diária.", "LEFT conserva dias vazios; INNER os remove.", "Somente contagens ausentes viram zero; média desconhecida continua NULL.", "LAG na fonte esparsa mede linha anterior, não necessariamente hora anterior.", "Janela na grade completa separa séries e preserva lacunas.", "Quarentena preserva todas as cópias e mantém a fonte original."]
+  },
+  "planned_command": ["C:/Users/marhl/miniconda3/envs/renewable-forecast/python.exe", "notebooks/laboratorio_diagnostico_sql.py", "--preparar"],
+  "response_policy": {
+    "independent_answers": "Não preencher nem gerar respostas em nome do aluno.",
+    "sql_real_exercise": "Somente template comentado pendente; não executar uma consulta resolvida de diagnóstico do recorte real.",
+    "diagnostico_csv": "Referência assistida da demonstração sintética, explicitamente rotulada; não resultado autoral do recorte real.",
+    "status": "await_human"
+  },
+  "constraints": {"models_or_fit": false, "pickle_load": false, "spark_or_docker": false, "network": false, "predictive_benchmark_repeated": false, "source_modified": false, "student_autonomy_claimed": false, "human_acceptance_claimed": false}
+}

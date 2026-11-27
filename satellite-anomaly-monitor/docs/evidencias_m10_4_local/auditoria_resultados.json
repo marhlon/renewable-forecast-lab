@@ -1,0 +1,268 @@
+{
+  "schema": "satmon-m10-4-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-24T15:31:58.881610+00:00",
+  "run_id": "20261124T152509Z_3878d5e2",
+  "run_directory": "reports/m10_4/20261124T152509Z_3878d5e2",
+  "audit_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "method": "Persisted-table consistency plus independent aligned-pair minima, tie-block AP, annual ranks and ID masks for the persisted reference; no project imports or model fits.",
+  "checks": {
+    "source_inputs_outputs_protocol_code_author_hashes": true,
+    "original_m10_3_policy_hash_unchanged": true,
+    "twenty_four_rows_twelve_combinations_three_seeds": true,
+    "fixed_full_channel_fit_and_evaluation_cohorts": true,
+    "algebra_of_metrics_and_threshold_counts": true,
+    "reference_m10_3_metrics_from_persisted_scores_recomputed": true,
+    "reference_s1_s2_and_first_tied_id_end_indices": true,
+    "reference_annual_score_channel_and_rank_profiles": true,
+    "all_ids_masks_and_reported_alarm_times_consistent": true,
+    "paired_id_changes_recomputed": true,
+    "seed_aggregates_recomputed": true
+  },
+  "checked_hashes": {
+    "reports/m10_2/20261119T101049Z_253ff59f/resultado.json": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+    "reports/m10_3/20261123T195301Z_332fb306/resultado.json": "498921e786aa5943f514a16f1bf10b607dde4d645cb8cb71f49a3531f7204a8e",
+    "reports/m10_2/20261119T101049Z_253ff59f/escores_desenvolvimento.csv.gz": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "reports/m10_3/20261123T195301Z_332fb306/escores_teste.csv.gz": "f1a63b628ae93a21505eb7fd39f07891c21dd3c0f40af3e1cb5d4906445e143d",
+    "reports/m10_3/20261123T195301Z_332fb306/politica_congelada.json": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81",
+    "reports/m10_2/20261119T101049Z_253ff59f/casos_reais.csv": "650f84ad1d47869be6d79332a75c4aa7535930e4cdee013f5497dc114d6c81a8",
+    "reports/m10_2/20261119T101049Z_253ff59f/cobertura_eventos.csv": "de79a30d1867fc20a339352d31ac3526b573b61e651095768e546d3c02641313",
+    "reports/m10_2/20261119T101049Z_253ff59f/contextos.csv": "3cafa13da6712694fc338b02fb22ce6a808d789741db723f769d79107ca910ee",
+    "reports/m10_2/20261119T101049Z_253ff59f/metricas.csv": "3bc9ffb82008c36368aef724ad750e557cfb8d9bdcd31bdad5e1de49924d111c",
+    "reports/m10_2/20261119T101049Z_253ff59f/relatorio.html": "62250f331866da3fc7068fcd2679da80821476cdeec981631f713ac9a9a58c1c",
+    "reports/m10_2/20261119T101049Z_253ff59f/sensibilidade_evento.csv": "4717b5dfa9e14d5148995ef3c5a2cafd767144251f75a48ee677bb18dfad8866",
+    "reports/m10_3/20261123T195301Z_332fb306/alarmes_desenvolvimento.csv": "a1bc8335ee8d9f41b0268aa580b63df5314b6d257bbc5b5966041ab1225d577d",
+    "reports/m10_3/20261123T195301Z_332fb306/alarmes_teste.csv": "3fd3d0c5113dfd44f6f46700da059dc5a69b0394294010a88eb7e364e25e1b89",
+    "reports/m10_3/20261123T195301Z_332fb306/candidatos_dev.csv": "d46d657efaf531fe9ac433a4489a2862284011456ab1839e45d009a62da0926e",
+    "reports/m10_3/20261123T195301Z_332fb306/cobertura_canais_desenvolvimento.csv": "b1049bbbeeef3bcc889fe34650e805d85888950db5b79106e104d3310edb905e",
+    "reports/m10_3/20261123T195301Z_332fb306/cobertura_canais_teste.csv": "53711ff3aaf3b4abc349aee2c84c712c47873bd08769fbb79b33bae8da4ae186",
+    "reports/m10_3/20261123T195301Z_332fb306/eventos_desenvolvimento.csv": "1d60e0380fdce5f72ab9dcc37a503ee4b126540a6f81c19714cea80d53c1b286",
+    "reports/m10_3/20261123T195301Z_332fb306/eventos_teste.csv": "65a784138ee3543faadff8e6ad66970e7a937204a5043b2f3cfb9b4577c6154f",
+    "reports/m10_3/20261123T195301Z_332fb306/metricas_episodios.csv": "58d4e3212f91b64cf5779643180c9335ead0694585867aee3e402fb52f6664b3",
+    "reports/m10_3/20261123T195301Z_332fb306/relatorio.html": "10c02db86e823ad009e3f6c5932d41f962f54f737f68945780cf4a798d21e592",
+    "scripts/executar_m10_2.py": "d4e8d924631a909042499cadc570723a9cd72073c2fc07d3ad12d31d1bd7a098",
+    "src/satmon/detectores_m10_2.py": "6a405ba7ab366725b11bf646a30c0d5ecfeaf4ed9ab2ca011471ef34b3076372",
+    "scripts/executar_m10_3.py": "e4c57aa54d6657e2f83b611b18791f839bbd6524e34198c78ad2c883ee2644f0",
+    "src/satmon/alarmes_m10_3.py": "08040b65364ef4e3858596e653f249aa8864fc4a856abbfbf62cbad9998c127d",
+    "docs/m10_3/protocolo_politica.json": "a0ebbf6ebdcc4039c2dbe015376943ea749f2039b45b287b632597ce0602f6a2",
+    "docs/m10_4/protocolo_diagnostico.json": "a597d42732175d7a7e828a63c0cbd096d9e60d23345f431599891d911a1bd98e",
+    "scripts/executar_m10_4.py": "f77cd8180831498cad4e4180d97a39bb696e90b46e526f1ecb2771218b06ce4f",
+    "src/satmon/diagnostico_m10_4.py": "31adeb7929c886ef0318f7e66ad69c3c86f20438b56f5592475b2e3c1629adcc",
+    "notebooks/m10_4_limite_autoral.py": "07fc05e912732eda6e80e999c1ef281741c1546d70ad7659a1cb29d5eb4c40f4",
+    "reports/m10_4/20261124T152509Z_3878d5e2/associacao_canais_ano.csv": "2313390793be1b0b20db0d3e56fc52e8523c6053fcbc1c631202e37380c7ddf2",
+    "reports/m10_4/20261124T152509Z_3878d5e2/estabilidade_sementes.csv": "8d0c6ea72e39b6cb669b6a1418599e13a2454f521900a797d8a2360921f4ec23",
+    "reports/m10_4/20261124T152509Z_3878d5e2/limites_por_id.csv": "8717fb550dc3e056c7800e0cc3be47cf6f50670f431a181815ae279b02f37e09",
+    "reports/m10_4/20261124T152509Z_3878d5e2/metricas_ablacao.csv": "88c53bc98fad1b61d6b9fc492469a5ac335e08296b3db30e4973c18125933422",
+    "reports/m10_4/20261124T152509Z_3878d5e2/mudancas_por_id.csv": "70d61565eb79bbf6da354ddec7ff8514af0560937648b868dd6af6bff87b642a",
+    "reports/m10_4/20261124T152509Z_3878d5e2/perfil_canais_ano.csv": "1197338be3491c5c8e2a209ae926d288bdf1a5cbaf0ef047aef89763f9cdfca7",
+    "reports/m10_4/20261124T152509Z_3878d5e2/perfil_escores_ano.csv": "67385f9e08163ea20188302f329271809944de266768c6968504da9b231326a8",
+    "reports/m10_4/20261124T152509Z_3878d5e2/relatorio.html": "e3358028021b867ab8f78b9f251f44b1e15dc9df7d696ea72da7d059a3fc41ea",
+    "data/reference/esa_mission1_m10_2/protocolo.json": "4561ca442d30c827c6c4db3511f3023a54fc965a56ce4f6931d785123dcb35a0",
+    "data/reference/esa_mission1_m10_2/canais_grade.csv.gz": "80656da260797683081d00855e49f6b077b3177ac5cfcd9d96a28a97b4540cf4",
+    "data/reference/esa_mission1_m10_2/eventos.csv": "3a35bed51cc1cef1d14f579e34077f04ee6a0561f89c00d89c437c301656961e",
+    "data/reference/esa_mission1_m10_3/proveniencia.json": "125b9824693b162b8aeffb853550ffaf0d7a183f1047fb73d13d4131465c7ca4",
+    "data/reference/esa_mission1_m10_3/grade_teste.csv.gz": "459118150635089bf1ccd32f1c9eb4c293fa69495b1b76d45c41e32e730c88ee",
+    "data/reference/esa_mission1_m10_3/eventos_teste.csv": "8418b3d8116672c5b1b91c377c9e32b017e18a966aa5da4d8444af202cdd6b4e"
+  },
+  "metric_rows": 24,
+  "id_rows": 192,
+  "change_rows": 144,
+  "fit_rows_recomputed": 136202,
+  "reference_recomputed": {
+    "desenvolvimento": {
+      "s1": {
+        "limiar_maximo": 0.7593997320951837,
+        "indice_confirmacao": 51428
+      },
+      "s2": {
+        "limiar_maximo": 0.7593997320951837,
+        "indice_confirmacao": 51429
+      },
+      "episode_metrics": {
+        "instantes_na_grade": 105216,
+        "instantes_utilizaveis": 105165,
+        "ids_anomalia": 8,
+        "ids_observaveis": 8,
+        "ids_nao_observaveis": 0,
+        "ids_detectados": 3,
+        "recall_observaveis": 0.375,
+        "recall_todos_ids": 0.375,
+        "precisao_por_inicio_avaliavel": 0.23076923076923078,
+        "alarmes_total": 15,
+        "alarmes_atribuidos": 3,
+        "alarmes_repetidos_no_evento": 6,
+        "alarmes_sem_anotacao": 4,
+        "alarmes_ignorados_categoria": 2,
+        "exposicao_sem_anotacao_dias_equivalentes": 1053.46875,
+        "taxa_sem_anotacao_por_dia": 0.0037969802141734153,
+        "atraso_mediano_min": 26.82835,
+        "atraso_p90_min": 98.46783
+      },
+      "s2_confirmation_utc": "2009-06-19T17:15:00+00:00"
+    },
+    "diagnostico": {
+      "s1": {
+        "limiar_maximo": 0.7164359650668679,
+        "indice_confirmacao": 39353
+      },
+      "s2": {
+        "limiar_maximo": 0.6382295270617967,
+        "indice_confirmacao": 38475
+      },
+      "episode_metrics": {
+        "instantes_na_grade": 105216,
+        "instantes_utilizaveis": 105212,
+        "ids_anomalia": 8,
+        "ids_observaveis": 8,
+        "ids_nao_observaveis": 0,
+        "ids_detectados": 0,
+        "recall_observaveis": 0.0,
+        "recall_todos_ids": 0.0,
+        "precisao_por_inicio_avaliavel": null,
+        "alarmes_total": 0,
+        "alarmes_atribuidos": 0,
+        "alarmes_repetidos_no_evento": 0,
+        "alarmes_sem_anotacao": 0,
+        "alarmes_ignorados_categoria": 0,
+        "exposicao_sem_anotacao_dias_equivalentes": 1065.2083333333333,
+        "taxa_sem_anotacao_por_dia": 0.0,
+        "atraso_mediano_min": null,
+        "atraso_p90_min": null
+      },
+      "s2_confirmation_utc": "2012-02-05T18:45:00+00:00"
+    }
+  },
+  "diagnostic_seed17_cutoff_comparison": [
+    {
+      "variante": "tres_canais",
+      "limiar": 0.7199442558330269,
+      "s1": 0.7164359650668679,
+      "s2": 0.6382295270617967,
+      "pontos_no_corte": 0,
+      "empates_no_corte": 0,
+      "ids_detectados": 0,
+      "max_run_acima_inferido": 0,
+      "inicios_admissiveis_k1_inferidos": 0,
+      "k1_policy_replayed": false,
+      "ids_k1_not_inferred": true
+    },
+    {
+      "variante": "sem_51",
+      "limiar": 0.722118114964441,
+      "s1": 0.768130544915115,
+      "s2": 0.6898463769731896,
+      "pontos_no_corte": 2,
+      "empates_no_corte": 1,
+      "ids_detectados": 0,
+      "max_run_acima_inferido": 1,
+      "inicios_admissiveis_k1_inferidos": 2,
+      "k1_policy_replayed": false,
+      "ids_k1_not_inferred": true
+    },
+    {
+      "variante": "sem_52",
+      "limiar": 0.7201268845204545,
+      "s1": 0.7541511974686277,
+      "s2": 0.6915642216840697,
+      "pontos_no_corte": 4,
+      "empates_no_corte": 0,
+      "ids_detectados": 0,
+      "max_run_acima_inferido": 1,
+      "inicios_admissiveis_k1_inferidos": 4,
+      "k1_policy_replayed": false,
+      "ids_k1_not_inferred": true
+    }
+  ],
+  "development_id_losses": [
+    {
+      "particao": "desenvolvimento",
+      "semente": 17,
+      "variante": "sem_50",
+      "id": "id_145",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 24.6292,
+      "mudanca": "perda"
+    },
+    {
+      "particao": "desenvolvimento",
+      "semente": 17,
+      "variante": "sem_51",
+      "id": "id_145",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 24.6292,
+      "mudanca": "perda"
+    },
+    {
+      "particao": "desenvolvimento",
+      "semente": 29,
+      "variante": "sem_50",
+      "id": "id_145",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 24.6292,
+      "mudanca": "perda"
+    },
+    {
+      "particao": "desenvolvimento",
+      "semente": 29,
+      "variante": "sem_51",
+      "id": "id_145",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 24.6292,
+      "mudanca": "perda"
+    },
+    {
+      "particao": "desenvolvimento",
+      "semente": 41,
+      "variante": "sem_50",
+      "id": "id_145",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 24.6292,
+      "mudanca": "perda"
+    },
+    {
+      "particao": "desenvolvimento",
+      "semente": 41,
+      "variante": "sem_52",
+      "id": "id_18",
+      "estado": "perdido",
+      "atraso_min": null,
+      "canais_anotados": "channel_50,channel_51,channel_52",
+      "estado_tres_canais": "detectado",
+      "atraso_tres_canais_min": 116.3777,
+      "mudanca": "perda"
+    }
+  ],
+  "all_diagnostic_combinations_detected_zero_ids": true,
+  "latest_pointer": {
+    "written_by_runner": false,
+    "audit_uses_explicit_fixed_run_id": true
+  },
+  "limits": {
+    "new_forest_models_fitted_by_auditor": 0,
+    "new_ablation_scores_reproduced": false,
+    "new_ablation_threshold_quantiles_independently_recomputed": false,
+    "new_ablation_weights_or_full_scores_persisted": false,
+    "new_ablation_reported_tables_and_algebra_audited": true,
+    "persisted_reference_metrics_and_limits_recomputed_without_refit": true,
+    "alternative_diagnostic_policy_replayed": false,
+    "note": "Absence of new-variant score vectors/checkpoints limits their audit to identities, cohorts, reported algebra, ID times and aggregates. Three seeds are not temporal confidence intervals; annotation completeness and physical causes remain unknown."
+  }
+}

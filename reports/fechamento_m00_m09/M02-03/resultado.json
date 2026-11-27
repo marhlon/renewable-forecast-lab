@@ -1,0 +1,108 @@
+{
+  "schema": "m02-fundamentos-result-v1",
+  "item": "M02-03",
+  "completed": true,
+  "synthetic_data": true,
+  "os": "Windows",
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "protocol_frozen_at_utc": "2026-11-25T11:43:18.252082+00:00",
+  "execution_started_at_utc": "2026-11-25T11:44:06.514573+00:00",
+  "execution_finished_at_utc": "2026-11-25T11:44:06.550649+00:00",
+  "protocol_frozen_before_execution": true,
+  "protocol_unchanged_after_execution": true,
+  "input_sha256": {
+    "protocolo.json": "880154282e51ba2352a8a51f3152bec26ca8fbf370e185f550ef2160671052b2"
+  },
+  "source_sha256": {
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "output_sha256": {
+    "comparacao.csv": "a207e87d10fbd8f9a0c0e2f2856e5fafeb9ac7721cc61f8989b636044848e7ca",
+    "parecer.md": "c712e3002b15da095fc6c7933bd96d8c38443168bf4e296e6c3eb4368794f6e2",
+    "plano_hipoteses.md": "00caeda4f0142cdd48094596f96e1a518d0e5158f1ec39213fb50fc185fef128",
+    "protocolo.json": "880154282e51ba2352a8a51f3152bec26ca8fbf370e185f550ef2160671052b2"
+  },
+  "checks": {
+    "all_prespecified_hypotheses": true,
+    "same_means": true,
+    "p_values_valid": true,
+    "p_and_interval_decisions_agree": true
+  },
+  "results": {
+    "family_size": 4,
+    "alpha_family": 0.05,
+    "alpha_per_test": 0.0125,
+    "comparison": [
+      {
+        "candidato": "B1",
+        "n_horas": 240,
+        "n_blocos": 10,
+        "efeito_minimo": 1.0,
+        "diferenca_media": 0.9263741858345936,
+        "erro_padrao_ingenuo": 0.1566665644665187,
+        "p_ingenuo": 0.6805911975270424,
+        "erro_padrao_blocos": 0.7913683644987406,
+        "p_blocos": 0.5360434816067323,
+        "alpha_bonferroni": 0.0125,
+        "limite_inferior_bonferroni": -1.1984584566719252,
+        "rejeita_h0_blocos_bonferroni": false
+      },
+      {
+        "candidato": "B2",
+        "n_horas": 240,
+        "n_blocos": 10,
+        "efeito_minimo": 1.0,
+        "diferenca_media": 0.1857701973584292,
+        "erro_padrao_ingenuo": 0.1345272832655214,
+        "p_ingenuo": 0.9999999972622954,
+        "erro_padrao_blocos": 0.674729331361098,
+        "p_blocos": 0.8708556711974714,
+        "alpha_bonferroni": 0.0125,
+        "limite_inferior_bonferroni": -1.6258853760113348,
+        "rejeita_h0_blocos_bonferroni": false
+      },
+      {
+        "candidato": "B3",
+        "n_horas": 240,
+        "n_blocos": 10,
+        "efeito_minimo": 1.0,
+        "diferenca_media": -0.07197215880137187,
+        "erro_padrao_ingenuo": 0.10165167187995765,
+        "p_ingenuo": 1.0,
+        "erro_padrao_blocos": 0.4999164579084316,
+        "p_blocos": 0.9697021449995458,
+        "alpha_bonferroni": 0.0125,
+        "limite_inferior_bonferroni": -1.4142532707875737,
+        "rejeita_h0_blocos_bonferroni": false
+      },
+      {
+        "candidato": "B4",
+        "n_horas": 240,
+        "n_blocos": 10,
+        "efeito_minimo": 1.0,
+        "diferenca_media": 0.3342244034393789,
+        "erro_padrao_ingenuo": 0.12341589016277879,
+        "p_ingenuo": 0.9999999174831041,
+        "erro_padrao_blocos": 0.6154939286549161,
+        "p_blocos": 0.8462405944896731,
+        "alpha_bonferroni": 0.0125,
+        "limite_inferior_bonferroni": -1.3183834711487459,
+        "rejeita_h0_blocos_bonferroni": false
+      }
+    ]
+  },
+  "execution_responsibility": "Codex: implementação e demonstração assistidas.",
+  "formative_status": "aguarda_resposta_e_revisao_humana",
+  "learning_validated": false,
+  "operational_approval": false,
+  "benchmark_retrained": false
+}

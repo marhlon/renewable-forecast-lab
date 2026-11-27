@@ -1,0 +1,17 @@
+{
+  "engine": "duckdb",
+  "cohort": 2,
+  "repetition": 3,
+  "selected_series": 424,
+  "materialized_series": 379,
+  "input_rows_after_filter": 266664,
+  "wall_seconds": 0.24556609999854118,
+  "cpu_seconds": 0.21875,
+  "baseline_rss_bytes": 100818944,
+  "peak_rss_bytes": 128081920,
+  "incremental_peak_rss_bytes": 27262976,
+  "rss_below_512mib": true,
+  "output_bytes": 12633,
+  "output_sha256": "c6477d152f8fd560c7c13d06599c67f2b8e13213e2b220e865545cdad0e4fcaf",
+  "output": "reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-02\\materialized_duckdb_2_3.parquet"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "opevid-m11-2-delivery-v1",
+  "sha256": {
+    "operations-evidence-assistant/data/m11_2/reservado.json": "cc1ccc727b76073e7cda2384c24e68fa8148547f20aaac81e87b4c301ed8946a",
+    "operations-evidence-assistant/docs/COMECE_M11_2.md": "b09c5916ef4cfcfa31c33c991845e6b172ac803b808800ddcd9bbe2597b4cbdd",
+    "operations-evidence-assistant/docs/evidencias_m11_2/Revisao_M11_1_Windows.json": "7e8865d7caeab92ce165561370b6c94c2d02a5ad6813f17eb1913f494b48da56",
+    "operations-evidence-assistant/docs/evidencias_m11_2/contraprovas.json": "b552a49ee50ceac7e79cd98c4de5bc6dbea7bb2c4662f1e3bea01548e289f762",
+    "operations-evidence-assistant/docs/evidencias_m11_2/decisao_prompt.json": "9117bf3d6f61b37cdf7573a8c5f0d8cc1794354f69499d47550677c5b8b4b9bd",
+    "operations-evidence-assistant/docs/evidencias_m11_2/esquema.json": "2f34177f2ea7f3e36c9ea229ae5580fff0f143e97ec6733cc5117dbc7c275ea1",
+    "operations-evidence-assistant/docs/evidencias_m11_2/metricas.csv": "e8a2c6b5543ab26bbf79d4378f5e809ad6a66e1d5f4a67237465935781c48718",
+    "operations-evidence-assistant/docs/evidencias_m11_2/referencia.json": "e5df3d46ddcd8ea2753ccabf5c2240e0c3b4a4e470b4d691617565ea670556b6",
+    "operations-evidence-assistant/docs/evidencias_m11_2/relatorio.html": "307a1a7917f9b7494fd621ac5c675845b0e727e7923ef284779dbcc5f94efb64",
+    "operations-evidence-assistant/docs/m11_2/Aula_01_JSON_e_Esquema.md": "d620b23ca47c5beca7c99f27452dd376b3da4bb4345930891f6af1c2035df5ee",
+    "operations-evidence-assistant/docs/m11_2/Aula_02_Fidelidade_e_Fallback.md": "d315ced6ae1c3fb1fcf6e318038b39afdedade85c041592301d1b21c47d67947",
+    "operations-evidence-assistant/docs/m11_2/Aula_03_Experimento_e_Decisao.md": "1eb6abdf78b6326006a62c1e0bda41da2b56a17cd402b3468c1a44ae4d57678c",
+    "operations-evidence-assistant/docs/m11_2/Resposta_M11_2.md": "3a55911328f091fe3b4e2cde75c1d6bedd61cf4aa07c63647a6da3e4562a2495",
+    "operations-evidence-assistant/docs/m11_2/Revisao_M11_1_Windows.md": "cbed7b412c7a024d22d05a7717f73c975046c6d3d4648ec690d12bb2302c0627",
+    "operations-evidence-assistant/docs/m11_2/protocolo.json": "ea74892aa61116d7190f7eecaa42f69b93ac2f75ed184c9ab07a615cda90e0dc",
+    "operations-evidence-assistant/docs/m11_2/requirements.lock.txt": "e3ef58f6068173d4cc462f1ce2aa2df4428e1f9639a0018166e7ba0312628723",
+    "operations-evidence-assistant/notebooks/m11_2_fidelidade_autoral.py": "6791903f6f95fc681d7ade6992a29447a87a9503dbc1372eb2222f26eb47d1ec",
+    "operations-evidence-assistant/scripts/executar_m11_2.py": "ca51aa8e7a465613ee54b5c37bcfe05d96b959607fd4f58daadb9c0b2e4a6b92",
+    "operations-evidence-assistant/scripts/laboratorio_m11_2.py": "f04ccecb412c7458e4d82c8e8e8612e3280535692771bcd6a1df761cc5dd94fb",
+    "operations-evidence-assistant/src/opevid/contraprovas_m11_2.py": "56c3f49b936e45c6675042889f8fc60256f396d5116eaa6988c4310290be6330",
+    "operations-evidence-assistant/src/opevid/estruturado_m11_2.py": "e3e5956f577c33a8b8007471f2a6b42149998eb36998a77185b8ceaf757a9807",
+    "operations-evidence-assistant/src/opevid/prompts_m11_2.py": "4c627de85f5f0d48928aa3853d5d1adcb425c641e2915102759a87945416966a",
+    "operations-evidence-assistant/tests/test_m11_2.py": "7addd166fbd31f05f900d80ba2d5402a55d597e4094178d435f14a9a19a8342c"
+  }
+}

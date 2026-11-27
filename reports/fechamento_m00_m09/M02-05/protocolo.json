@@ -1,0 +1,177 @@
+{
+  "schema": "renewcast-m02-05-protocol-v1",
+  "item_id": "M02-05",
+  "recorded_before_tests": true,
+  "purpose": "Completar a implementacao local incompleta e comprovar seu contrato em contraprovas pequenas, sem repetir os experimentos historicos E42/E47 ou executar M02-08.",
+  "assistance": "Implementacao, contraprovas e parecer preparados com assistencia Codex; nao constituem autoria ou transferencia independente do aluno.",
+  "preserved_source_search": {
+    "current_file": "src/renewable_forecast/weather_gain_uncertainty.py",
+    "current_original_bytes": 4042,
+    "current_original_sha256": "c065b1c84e07698d8101f03ad52c1072701e6f1605e329a534dabc38e68fa72d",
+    "git_commit": "843e0b9f721d400f453a9091d72ea1bd24f98a1a",
+    "git_blob_bytes": 3946,
+    "git_blob_sha256": "dac2a9756124f2c8bea3cb4130c96e5d049bf800b8d2d25014c322556ac9136f",
+    "observation": "A unica revisao Git localizada tambem termina summarize em rows = []. Busca focada em src/tests/scripts/notebooks/docs/backups/reports/dist nao localizou outra fonte pelo nome; bytecode nao foi tratado como fonte recuperada. Ausencia nessa busca nao prova inexistencia historica.",
+    "decision": "Completar o modulo existente, preservando o metodo circular pareado descrito e a separacao entre construcao e experimento real."
+  },
+  "estimand": "Media por emissao de abs(alvo-historico) - abs(alvo-historico_meteorologia), em MWmed; positivo favorece historia+meteorologia. Agregado ponderado pelo n de cada fold.",
+  "method": {
+    "resampling_unit": "Blocos consecutivos de deltas pareados, com retorno circular somente dentro do mesmo fold.",
+    "fold_stratification": "Manter n de cada fold em cada replica; combinar medias de replicas com pesos n/soma(n).",
+    "paired_observations": "Alvo e as duas previsoes sao ligados pela mesma emissao. Reamostrar o delta preserva esse pareamento.",
+    "rng": "Gerador NumPy local por seed, block_hours e fold; nao alterar o RNG global nem as entradas.",
+    "interval": "Percentis 2.5 e 97.5 das medias reamostradas, quantile(method=linear), nominal 95%; fracao nao positiva e apenas descritiva, nao p-valor.",
+    "production_defaults": {
+      "block_hours": [
+        6,
+        24,
+        48
+      ],
+      "repetitions": 5000,
+      "seed": 42
+    },
+    "small_check_parameters": {
+      "block_hours": [
+        1,
+        2
+      ],
+      "repetitions": 1000,
+      "seed": 42
+    },
+    "historical_replica_identity": "A sequencia original completa nao foi recuperada; nao prometer IC identico bit a bit aos numeros historicos."
+  },
+  "input_contract": [
+    "DataFrame/CSV nao vazio com forecast_origin, fold, target_generation, hgb_history, hgb_history_weather.",
+    "Emissoes UTC validas e unicas; folds inteiros positivos, cronologicamente contiguos e ordenados apos ordenar as emissoes.",
+    "Pelo menos duas emissoes horarias sem lacunas dentro de cada fold; lacunas entre folds sao permitidas.",
+    "Valores e deltas numericos reais finitos; delta opcional deve coincidir com as previsoes.",
+    "Blocos inteiros distintos, 1 <= bloco < tamanho do menor fold; summarize exige pelo menos 1000 replicas; seed inteiro nao negativo.",
+    "Entradas, estado global do RNG e arquivos de origem preservados; parametros invalidos falham explicitamente."
+  ],
+  "planned_counterexamples": [
+    "Pareamento: duas series de erros que diferem por constante devem dar delta e IC constantes.",
+    "Folds de tamanhos distintos e deltas constantes: agregado deve usar n e intervalo degenerado; mistura de folds indevida produziria incerteza artificial.",
+    "Circularidade: confrontar a media de indices sorteados com oracle manual de blocos e conferir retorno ao inicio.",
+    "Determinismo com mesma seed, invariancia a ordem de blocos/linhas, RNG local e preservacao das entradas.",
+    "Rejeitar timestamps duplicados/invalidos, lacuna horaria, folds intercalados/invalidos, nao finitos e delta inconsistente.",
+    "Rejeitar parametros invalidos e RNG invalido; tratar fold curto sem falha silenciosa.",
+    "CLI real em fixture pequena: CSV e receipt com contagens, hashes, parametros, versoes e codigo de saida; recusar sobrescrita."
+  ],
+  "acceptance": {
+    "C1": "Retorno explicito com linhas por fold e agregado para cada bloco; CLI funcional, contratos, proveniencia e receipt.",
+    "C2": "Contraprovas pequenas passam, conferem pareamento/circularidade/estratos/ponderacao/determinismo e preservacao, sem treinar modelos."
+  },
+  "excluded": [
+    "Treino ou inferencia de modelos",
+    "Bootstrap dos CSVs reais E41/E46 (M02-08)",
+    "Rede, GUI, deploy ou CI remoto",
+    "Certificar autonomia, professor ou generalizacao",
+    "Alterar cadastro, README, roadmap ou entregas de outros agentes"
+  ],
+  "limits": [
+    "Bootstrap condicional aos dados/modelos/folds fornecidos nao corrige selecao previa nem dependencias superiores ao bloco.",
+    "Intervalos nominais nao provam causalidade, estabilidade futura ou ausencia de vies; desenvolvimento explorado nao e holdout intocado."
+  ],
+  "recorded_at_utc": "2026-11-25T11:40:03.141398+00:00",
+  "registered_code_sha256": "4c48c292ebed79fcacfbe4a72137146b45f1a7040b864c7cfbc0bd4a9176fdc5",
+  "registered_tests_sha256": "9e259888d66069408c1b6068241e9ada051e4b4e9fcf2141cabe091fe992ab3a",
+  "amendments_before_final_recheck": [
+    {
+      "recorded_at_utc": "2026-11-25T11:44:54.114227+00:00",
+      "reason": "After the first 57 passing counterexamples, explicitly reject arithmetic overflow from finite extreme values and avoid testing seed influence using only one discrete quantile. Method, estimand and real-data exclusion are unchanged.",
+      "prior_protocol_sha256": "16e6e722d7721c448f5198af9f852170a281399cc6450a06072b85e088d984e9",
+      "prior_protocol_document": {
+        "schema": "renewcast-m02-05-protocol-v1",
+        "item_id": "M02-05",
+        "recorded_before_tests": true,
+        "purpose": "Completar a implementacao local incompleta e comprovar seu contrato em contraprovas pequenas, sem repetir os experimentos historicos E42/E47 ou executar M02-08.",
+        "assistance": "Implementacao, contraprovas e parecer preparados com assistencia Codex; nao constituem autoria ou transferencia independente do aluno.",
+        "preserved_source_search": {
+          "current_file": "src/renewable_forecast/weather_gain_uncertainty.py",
+          "current_original_bytes": 4042,
+          "current_original_sha256": "c065b1c84e07698d8101f03ad52c1072701e6f1605e329a534dabc38e68fa72d",
+          "git_commit": "843e0b9f721d400f453a9091d72ea1bd24f98a1a",
+          "git_blob_bytes": 3946,
+          "git_blob_sha256": "dac2a9756124f2c8bea3cb4130c96e5d049bf800b8d2d25014c322556ac9136f",
+          "observation": "A unica revisao Git localizada tambem termina summarize em rows = []. Busca focada em src/tests/scripts/notebooks/docs/backups/reports/dist nao localizou outra fonte pelo nome; bytecode nao foi tratado como fonte recuperada. Ausencia nessa busca nao prova inexistencia historica.",
+          "decision": "Completar o modulo existente, preservando o metodo circular pareado descrito e a separacao entre construcao e experimento real."
+        },
+        "estimand": "Media por emissao de abs(alvo-historico) - abs(alvo-historico_meteorologia), em MWmed; positivo favorece historia+meteorologia. Agregado ponderado pelo n de cada fold.",
+        "method": {
+          "resampling_unit": "Blocos consecutivos de deltas pareados, com retorno circular somente dentro do mesmo fold.",
+          "fold_stratification": "Manter n de cada fold em cada replica; combinar medias de replicas com pesos n/soma(n).",
+          "paired_observations": "Alvo e as duas previsoes sao ligados pela mesma emissao. Reamostrar o delta preserva esse pareamento.",
+          "rng": "Gerador NumPy local por seed, block_hours e fold; nao alterar o RNG global nem as entradas.",
+          "interval": "Percentis 2.5 e 97.5 das medias reamostradas, quantile(method=linear), nominal 95%; fracao nao positiva e apenas descritiva, nao p-valor.",
+          "production_defaults": {
+            "block_hours": [
+              6,
+              24,
+              48
+            ],
+            "repetitions": 5000,
+            "seed": 42
+          },
+          "small_check_parameters": {
+            "block_hours": [
+              1,
+              2
+            ],
+            "repetitions": 1000,
+            "seed": 42
+          },
+          "historical_replica_identity": "A sequencia original completa nao foi recuperada; nao prometer IC identico bit a bit aos numeros historicos."
+        },
+        "input_contract": [
+          "DataFrame/CSV nao vazio com forecast_origin, fold, target_generation, hgb_history, hgb_history_weather.",
+          "Emissoes UTC validas e unicas; folds inteiros positivos, cronologicamente contiguos e ordenados apos ordenar as emissoes.",
+          "Pelo menos duas emissoes horarias sem lacunas dentro de cada fold; lacunas entre folds sao permitidas.",
+          "Valores e deltas numericos reais finitos; delta opcional deve coincidir com as previsoes.",
+          "Blocos inteiros distintos, 1 <= bloco < tamanho do menor fold; summarize exige pelo menos 1000 replicas; seed inteiro nao negativo.",
+          "Entradas, estado global do RNG e arquivos de origem preservados; parametros invalidos falham explicitamente."
+        ],
+        "planned_counterexamples": [
+          "Pareamento: duas series de erros que diferem por constante devem dar delta e IC constantes.",
+          "Folds de tamanhos distintos e deltas constantes: agregado deve usar n e intervalo degenerado; mistura de folds indevida produziria incerteza artificial.",
+          "Circularidade: confrontar a media de indices sorteados com oracle manual de blocos e conferir retorno ao inicio.",
+          "Determinismo com mesma seed, invariancia a ordem de blocos/linhas, RNG local e preservacao das entradas.",
+          "Rejeitar timestamps duplicados/invalidos, lacuna horaria, folds intercalados/invalidos, nao finitos e delta inconsistente.",
+          "Rejeitar parametros invalidos e RNG invalido; tratar fold curto sem falha silenciosa.",
+          "CLI real em fixture pequena: CSV e receipt com contagens, hashes, parametros, versoes e codigo de saida; recusar sobrescrita."
+        ],
+        "acceptance": {
+          "C1": "Retorno explicito com linhas por fold e agregado para cada bloco; CLI funcional, contratos, proveniencia e receipt.",
+          "C2": "Contraprovas pequenas passam, conferem pareamento/circularidade/estratos/ponderacao/determinismo e preservacao, sem treinar modelos."
+        },
+        "excluded": [
+          "Treino ou inferencia de modelos",
+          "Bootstrap dos CSVs reais E41/E46 (M02-08)",
+          "Rede, GUI, deploy ou CI remoto",
+          "Certificar autonomia, professor ou generalizacao",
+          "Alterar cadastro, README, roadmap ou entregas de outros agentes"
+        ],
+        "limits": [
+          "Bootstrap condicional aos dados/modelos/folds fornecidos nao corrige selecao previa nem dependencias superiores ao bloco.",
+          "Intervalos nominais nao provam causalidade, estabilidade futura ou ausencia de vies; desenvolvimento explorado nao e holdout intocado."
+        ],
+        "recorded_at_utc": "2026-11-25T11:40:03.141398+00:00",
+        "registered_code_sha256": "4c48c292ebed79fcacfbe4a72137146b45f1a7040b864c7cfbc0bd4a9176fdc5",
+        "registered_tests_sha256": "9e259888d66069408c1b6068241e9ada051e4b4e9fcf2141cabe091fe992ab3a"
+      },
+      "registered_code_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+      "registered_tests_sha256": "2a927c7ec48d8714281c710ec0ee8cb4a5facfc9796901b7552bb4b5873122c1",
+      "additional_counterexamples": [
+        "Finite bootstrap values with mean overflow must fail explicitly.",
+        "Finite paired predictions with MAE overflow must fail explicitly."
+      ],
+      "criterion_changed": false
+    },
+    {
+      "recorded_at_utc": "2026-11-25T11:49:06.427280+00:00",
+      "reason": "Correct a test metadata label: pytest temporary files can remain after the test, so retention was not audited and cleanup is not claimed. No statistical code or assertion changed.",
+      "registered_code_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+      "registered_tests_sha256": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e",
+      "criterion_changed": false
+    }
+  ]
+}

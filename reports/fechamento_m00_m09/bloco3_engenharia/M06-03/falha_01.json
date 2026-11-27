@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-26T00:36:34.196499+00:00",
+  "attempt": 1,
+  "execution_occurred": true,
+  "stage": "MLflow sklearn.save_model before create_model_version",
+  "error": "MLflow 3.16 skops default rejected sklearn.ensemble._hist_gradient_boosting.predictor.TreePredictor; no model version or alias was created",
+  "residual_artifacts_preserved": [
+    "mlflow_registry.sqlite",
+    "input_example.csv",
+    "mlflow_model"
+  ],
+  "results_or_thresholds_examined": false
+}

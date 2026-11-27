@@ -1,0 +1,126 @@
+{
+  "schema": "renewcast-bloco2-risk-protocol-v1",
+  "created_at_utc": "2026-11-25T19:26:17.797221+00:00",
+  "integrated_protocol": "reports/fechamento_m00_m09/bloco2_engenharia/protocolo_integrado.json",
+  "integrated_protocol_sha256": "5fce3481ca4333fac2e992f2697036e2729d47ca1e1abfbe2957a6592ae0c19c",
+  "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "code_sha256": {
+    "notebooks/bloco2_validacao_risco.py": "1ab2efd0018cddbbfbd1449174ca573b27a17fba3fe05523685bd7bfd6e1ec17",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+    "notebooks/bloco2_risco_core.py": "6ac5c71d4d5d45d4aa7fb316b30910dd383362c6b6ac05c09762ae08e2e70b2c"
+  },
+  "point_bundle": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib",
+  "training_cutoff": "2026-07-01T00:00:00Z",
+  "features_rule": "Use selected point features; if persistence wins, use study_features of the learned candidate",
+  "fit_labels": "strictly before Jul1 cutoff: y24 available origin+26h; ramp available origin+3h",
+  "calibration": {
+    "origin_start": "2026-07-01T00:00:00Z",
+    "origin_end_exclusive": "2026-07-14T00:00:00Z",
+    "method_class": "LogisticRegression(C=1,max_iter=200,random_state=17) sobre logit de p clipado a 1e-6; amostra separada",
+    "method_interval": "quantis HGB 0.1,0.5,0.9; ordenação por linha predefinida, CQR de expansão não negativa, alpha0.2, rankceil((n+1)*0.8)",
+    "calibrator_changes_after_evaluation_allowed": false
+  },
+  "policy_selection": {
+    "origin_start": "2026-07-16T00:00:00Z",
+    "origin_end_exclusive": "2026-07-31T00:00:00Z",
+    "all_labels_known_before": "2026-08-01T02:00:00Z",
+    "cost_fp": 1,
+    "cost_fn": 4,
+    "thresholds": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "include_no_alarm": true,
+    "daily_alarm_budget": 6,
+    "online_budget_rule": "primeiros seis elegíveis do dia, em ordem causal; sem olhar os scores seguintes para ranquear o dia",
+    "tie_break": [
+      "menor_custo",
+      "menos_alarmes",
+      "maior_limiar"
+    ]
+  },
+  "evaluation": {
+    "resource_page": "https://dados.ons.org.br/dataset/geracao-usina-2/resource/6edb2f1a-5772-44f1-8dad-6180b20bf130",
+    "metadata_api": "https://dados.ons.org.br/api/3/action/resource_show?id=6edb2f1a-5772-44f1-8dad-6180b20bf130",
+    "month": "2026-10",
+    "resource_format": "PARQUET",
+    "origin_start": "2026-10-02T01:00:00Z",
+    "origin_end_exclusive": "2026-10-31T00:00:00Z",
+    "expected_origins_if_complete": 695,
+    "new_file_not_fetched_at_planning": true,
+    "metadata_only_consulted": true,
+    "source_snapshot": "publicado/revisado conforme consulta atual, não comprova versão histórica disponível na origem",
+    "download_requires": "freeze de código, modelos, calibradores e política com hashes antes da obtenção",
+    "failure_policy": "contrato da fonte inválido interrompe a avaliação; não trocar mês após ver resultados"
+  },
+  "interval_reporting": {
+    "nominal": 0.8,
+    "coverage_alert_tolerance": 0.1,
+    "min_rows_per_period": 48,
+    "period_grouping": "semanas de origem com limites fixos de 7 dias; parcial pequeno separado",
+    "no_automatic_recalibration": true
+  },
+  "hgb_parameters": {
+    "max_iter": 60,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 0.1,
+    "early_stopping": false,
+    "random_state": 17
+  },
+  "ramp": {
+    "threshold_mwmed": 22.77,
+    "regressor_loss": "squared_error",
+    "classifier_alarm_threshold": 0.5,
+    "baselines": [
+      "rampa_zero",
+      "ultima_rampa_observada",
+      "frequencia_do_treino"
+    ],
+    "same_origins_as_h24": true
+  },
+  "h26_class_label": "last_observed - y24 >= 22.77 MWmed; endpoints26h apart; not hourly ramp",
+  "probability_models": [
+    "raw_hgb",
+    "platt_calibrated",
+    "training_frequency"
+  ],
+  "alarm_comparisons": [
+    "raw_at_0.5",
+    "calibrated_at_0.5",
+    "frequency_at_0.5",
+    "frozen_calibrated_policy"
+  ],
+  "h26_alarm_comparisons_have_daily_budget": 6,
+  "ramp_alarm_comparisons": "fixed classifier probability0.5 or regressor drop22.77; no daily budget",
+  "coverage_bootstrap": {
+    "scope": "695origins aggregated only",
+    "scheme": "circular blocks24h",
+    "repetitions": 2000,
+    "seed": 17,
+    "interval": "conditional percentile2.5/97.5",
+    "paired_raw_cqr_indices": true,
+    "difference_cqr_minus_raw": true,
+    "no_iid_or_exchangeability_guarantee": true
+  },
+  "weekly_anchor": "2026-10-02T01:00:00Z",
+  "evaluation_source_contract": "exclusive CJU_BA5EIGT normalized two columns din_instante,val_geracao; exactly744 finite hourly rows Oct1_00 throughOct31_23; 695 common origins",
+  "no_reselection_or_recalibration_on_evaluation": true,
+  "costs_hypothetical": true,
+  "operational_approval": false,
+  "source_snapshot_limit": "retrospective newly obtained snapshot; not the historically published version at each forecast origin",
+  "assistance": "Codex engineering implementation, execution and interpretation; no independent-user claim",
+  "roadmap_id": "M05-01",
+  "study": "HGB quantiles0.1/0.5/0.9, predefined row sorting and separate nonnegative CQR; coverage/width/score by fixed week"
+}

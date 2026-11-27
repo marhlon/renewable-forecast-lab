@@ -1,0 +1,35 @@
+{
+  "origin": "2026-07-02T04:00:00",
+  "delay_hours_assumed": 3,
+  "window_hours": 4,
+  "history_start": "2026-07-01T22:00:00",
+  "history_end": "2026-07-02T01:00:00",
+  "target_time": "2026-07-02T16:00:00",
+  "target_available_at_assumed": "2026-07-02T19:00:00",
+  "selected_rows": [
+    {
+      "referencia": "2026-07-01T22:00:00",
+      "valor": 4.0,
+      "available_at": "2026-07-02T01:00:00"
+    },
+    {
+      "referencia": "2026-07-01T23:00:00",
+      "valor": 6.0,
+      "available_at": "2026-07-02T02:00:00"
+    },
+    {
+      "referencia": "2026-07-02T00:00:00",
+      "valor": 8.0,
+      "available_at": "2026-07-02T03:00:00"
+    },
+    {
+      "referencia": "2026-07-02T01:00:00",
+      "valor": 10.0,
+      "available_at": "2026-07-02T04:00:00"
+    }
+  ],
+  "selected_mean_synthetic_mwmed": 7.0,
+  "rejected_next_reference": "2026-07-02T02:00:00",
+  "rejected_next_available_at": "2026-07-02T05:00:00",
+  "missing_measurement_complete_window_mean": null
+}

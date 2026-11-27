@@ -1,0 +1,106 @@
+{
+  "schema": "renewcast-m04-01-result-v1",
+  "item": "M04-01",
+  "recorded_at_utc": "2026-11-25T11:38:10.902561+00:00",
+  "execution_date_utc": "2026-11-25",
+  "status": "aguarda_revisao",
+  "completed": true,
+  "responsibility": {
+    "implementation_and_review": "Implementa??o e revis?o t?cnica assistidas por Codex.",
+    "separate_final_review": "Pendente pelo respons?vel pela consolida??o.",
+    "human_acceptance_claimed": false,
+    "independent_student_authorship_claimed": false
+  },
+  "protocol_precedes_execution": true,
+  "python": "3.12.13",
+  "executable": "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.6.0",
+    "pytest": "9.1.1"
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "tests/test_wind_geometry.py",
+        "--contraprovas",
+        "reports/fechamento_m00_m09/M04-01/contraprovas.json"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "completion_observed_before_utc": "2026-11-25T11:36:22Z",
+      "stdout": "38 contraprovas aprovadas; sem fit ou carregamento de modelo.\n"
+    },
+    {
+      "argv": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_wind_geometry.py",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "completion_observed_before_utc": "2026-11-25T11:36:22Z",
+      "stdout": "......................................                                   [100%]\n38 passed in 20.04s\n"
+    }
+  ],
+  "verification": {
+    "counterexamples_passed": 38,
+    "pytest_passed": 38,
+    "pytest_failed": 0,
+    "pytest_skipped": 0,
+    "same_cases_exercised_twice": true,
+    "geometry_cases": 37,
+    "historical_json_integration_cases": 1,
+    "real_request_shape": [
+      1,
+      32
+    ],
+    "reversed_order_same_row": true,
+    "impossible_reversed_request_rejected": true,
+    "inputs_preserved": true,
+    "fit_and_pickle_load_blocked_in_integration": true,
+    "git_diff_check_exit_code": 0
+  },
+  "criteria_observed": {
+    "C1": "Nomes exatos, hypot e toler?ncia preservados.",
+    "C2": "Imposs?vel rejeitado independentemente da ordem; componentes negativas v?lidas aceitas; entradas preservadas."
+  },
+  "construction_diff": {
+    "source_before_sha256": "bca9e3d64bfe8bb0e0b7cca7d8e66ee10bae9cd24e682a71cb8e64261fab7377",
+    "source_after_sha256": "7cb0b45fa5233e0aab8e261ac959335bd4751e14522073c1fe3ce18c46de789f",
+    "scope": "Somente validate_wind_geometry alterada no m?dulo; testes novos em arquivo separado.",
+    "patch": "reports/fechamento_m00_m09/M04-01/correcao.patch"
+  },
+  "historical_inputs_sha256": {
+    "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/request.json": "0dfd81cb79f9916097f12023b8c0f5981488bf69424d181f9a2c1fdbb9886d08",
+    "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/model/manifest.json": "564083d04c2a86e33e89845e7d59e1cdd623416b3196b30ae1b4bd98f3c8e15e"
+  },
+  "deliverables_sha256": {
+    "reports/fechamento_m00_m09/M04-01/protocolo.json": "de874a96cbba8d3924c38693c520a598c1995d036a766b2bc893dca465b98b6f",
+    "reports/fechamento_m00_m09/M04-01/contraprovas.json": "4ea6cd3e1f844512f3173970dd024c832a5ec141434ea5103406776a4692a478",
+    "reports/fechamento_m00_m09/M04-01/parecer.md": "0aaddf0aac8f340241112d095ea9c0704370f7ada55e245576232950ab58022b",
+    "reports/fechamento_m00_m09/M04-01/correcao.patch": "3a55d66c771654b8cd58101f22898b7a0dbe0949c9d44a553564ee0e5909cf2c",
+    "src/renewable_forecast/weather_artifact.py": "7cb0b45fa5233e0aab8e261ac959335bd4751e14522073c1fe3ce18c46de789f",
+    "tests/test_wind_geometry.py": "a1d6b69ba080a069e8c1eb0e17cbeafca81f849077bb1b7ecff6e27683dbc1c0"
+  },
+  "models_trained": false,
+  "model_pickle_loaded": false,
+  "network_or_download": false,
+  "docker_started": false,
+  "new_predictive_metrics": false,
+  "historical_runs_modified": false,
+  "operational_approval": false,
+  "limits": [
+    "N?o comprova fuso, disponibilidade hist?rica ou cadastro point-in-time.",
+    "N?o reestima desempenho nem carrega pesos; valida somente contrato e geometria.",
+    "Conclus?o t?cnica assistida, aguardando revis?o separada e atualiza??o do cadastro."
+  ]
+}

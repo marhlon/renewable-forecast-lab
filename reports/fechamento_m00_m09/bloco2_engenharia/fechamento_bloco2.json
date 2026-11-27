@@ -1,0 +1,103 @@
+{
+  "schema": "renewcast-bloco2-engineering-closure-v1",
+  "completed_at_utc": "2026-11-25T20:04:40.847402+00:00",
+  "engineering_complete": true,
+  "engineering_items": 9,
+  "registry_items_total": 45,
+  "registry_validated_total": 23,
+  "block3_planned": 18,
+  "external_block1_items_blocked": 4,
+  "new_model_and_risk_tests_passed": 14,
+  "auditor_counterexamples_passed": 8,
+  "final_audit_checks": 826,
+  "hash_declarations_checked": 172,
+  "local_document_links_verified": 17,
+  "reviewed_links": [
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/protocolo_integrado.json"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/congelamento_avaliacao.json"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/fonte.json"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "Bloco_2_Bootstrap.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../../reports/statistical_audit.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "Bloco_2_Decisao_Risco.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../model_card.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "Bloco_2_Execucao.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../model_card.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Relatorio_Engenharia_Bloco2.md",
+      "target": "Revisao_Engenharia_Bloco2.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Bloco_2_Execucao.md",
+      "target": "Relatorio_Engenharia_Bloco2.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Revisao_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/auditoria_artefatos.json"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Revisao_Engenharia_Bloco2.md",
+      "target": "../../scripts/auditar_entrega_bloco2.py"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Revisao_Engenharia_Bloco2.md",
+      "target": "../../reports/fechamento_m00_m09/bloco2_engenharia/congelamento_avaliacao.json"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Revisao_Engenharia_Bloco2.md",
+      "target": "Relatorio_Engenharia_Bloco2.md"
+    },
+    {
+      "document": "docs/roadmap_m00_m09/Revisao_Engenharia_Bloco2.md",
+      "target": "Bloco_2_Execucao.md"
+    }
+  ],
+  "operational_gate_expected_failure": true,
+  "operational_approval": false,
+  "live_shadow": false,
+  "prospective_requirements_retained_at": [
+    "M06-05/C3",
+    "M06-05/C4"
+  ],
+  "frozen_evaluation": "retrospective snapshot obtained after all models/calibrators/policy were frozen",
+  "verification_files": {
+    "auditoria_artefatos.json": "c7295e2d426aa1cec6ac54cf84487e08b16a3108f16934591d8eb0a4f6f384c1",
+    "auditoria_cadastro.json": "6465a2ec729daa424e2fcc9023813bd806af8dfa9ff7ab4767ad73efa68fa0f1",
+    "verificacao_roadmap_global.json": "4ad6f9cacabeabaad81d8f65dca2d335f99c30f9d8aae66c584ad4aa71a60df4",
+    "verificacao_gate_engenharia.json": "a4075d8eb6777ba7bd1ffcae579b129fe41e2976a1f7d980a58dc5bb01d7862c",
+    "verificacao_regressao_bloco1.json": "3d9c9b4bd9c8f2d99e477fb876f29cee77600905b1cf3ec38abf6a8a9befecac",
+    "verificacao_gate_operacao.json": "49d4ef1a3c6447e6c46b2d60a11593f7e00053027b0b7edceb871690ced401da"
+  },
+  "previous_registry_snapshot": "cadastro_antes_alteracao.json",
+  "root_review": "Agent principal Codex reviewed protocols, sources, computations, negative findings, chronology, independent audit and registry gates; assisted engineering delivery."
+}

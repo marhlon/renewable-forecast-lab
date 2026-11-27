@@ -1,0 +1,23 @@
+{
+  "bronze": "conteúdo exato SHA256; reutilização só após revalidar hash",
+  "silver": {
+    "key": [
+      "series_id",
+      "event_time"
+    ],
+    "invalid": "id ausente, timestamp inválido/não horário, MW não finito/negativo, todas as duplicatas de chave em quarentena",
+    "availability": "hipótese event_time+2h",
+    "quarantine_reasons": {
+      "missing_series;": 87048,
+      "invalid_generation;": 61032
+    }
+  },
+  "gold": {
+    "key": [
+      "series_id",
+      "forecast_origin"
+    ],
+    "availability": "cada componente temporal exige available_at<=origin; nulos preservados",
+    "cadastro": "quatro ids escolhidos por metadata corrente, sem afirmar disponibilidade histórica"
+  }
+}

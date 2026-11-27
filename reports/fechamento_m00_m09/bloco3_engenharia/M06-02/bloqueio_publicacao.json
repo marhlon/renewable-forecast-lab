@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-11-26T16:19:38.837057+00:00",
+  "command": [
+    "scripts\\publicar_ci_bloco3.py",
+    "verificar-credencial"
+  ],
+  "error": "Git Credential Manager nao forneceu credencial em cache; autorize acesso ao repositorio, sem enviar tokens no chat.",
+  "remote_ci_approved": false,
+  "credential_printed": false
+}

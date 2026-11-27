@@ -1,0 +1,59 @@
+{
+  "schema": "renewcast-lag-context-engineering-result-v1",
+  "completed": true,
+  "started_at_utc": "2026-11-25T14:20:30.534075+00:00",
+  "completed_at_utc": "2026-11-25T14:20:30.813471+00:00",
+  "elapsed_seconds": 0.2787238000018988,
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco1_engenharia\\M01-02\\executar_contexto.py"
+  ],
+  "exit_code": 0,
+  "versions": {
+    "python": "3.12.13",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "sqlite": "3.53.2"
+  },
+  "adendo_sha256": "2fa645ad34760d768bcb7e5f1c4751fce6c863ce4f4a7faa064007afb5c3b711",
+  "code_sha256": {
+    "executar_contexto.py": "4038af7056ac0106e9c4eb7f7e64564d92e1e589d7bd89993f290b198fdc01ef",
+    "executar.py": "fddbeb79874b55a2bb64c0ba609c8dfc24bf72ca9d9344e981aba4c3211ed0dd"
+  },
+  "input_sha256": {
+    "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "lag_com_contexto.sql": "0b08779d86b9126678ef2711c0ed1f26ca92224a2caf39a2f1321b3d5f519252"
+  },
+  "source_rows_with_context": 721,
+  "calendar_rows_with_context": 721,
+  "analysis_rows": 720,
+  "known_lags": 720,
+  "valid_delta_pairs": 720,
+  "previous_hour_present_and_valid": true,
+  "first_november_hour": {
+    "id_ons": "CJU_BA5EIGT",
+    "din_instante": "2025-11-01T00:00:00",
+    "registro_presente": 1,
+    "val_geracao": 10.381,
+    "instante_anterior_1h": "2025-10-31T23:00:00",
+    "valor_anterior_1h": 55.438,
+    "registro_anterior_presente": 1,
+    "delta_1h": -45.057,
+    "estado_lag": "lag_disponivel"
+  },
+  "sql_pandas_comparison": {
+    "rows": 720,
+    "columns": 9,
+    "null_masks_equal": true,
+    "maximum_absolute_numeric_difference": 0.0
+  },
+  "output_sha256": {
+    "lag_com_contexto.csv": "3a16cfe95dd8a5a24244ca747a1c77abae782013883412f616f9e48052f93bc5"
+  },
+  "original_no_context_output_preserved": true,
+  "original_known_lags": 719,
+  "models_trained": false,
+  "models_inferred": false,
+  "new_predictive_test": false,
+  "assistance": "Technical implementation and analysis supplied by Codex."
+}

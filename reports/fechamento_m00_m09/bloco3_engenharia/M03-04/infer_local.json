@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-26T16:11:01.549023+00:00",
+  "completed_at_utc": "2026-11-26T16:11:04.477531+00:00",
+  "command": [
+    "notebooks\\bloco3_benchmark.py",
+    "executar-final"
+  ],
+  "exit_code": 0,
+  "rows": 671,
+  "legacy_all8_load_and_predict_seconds": 0.57405049999943,
+  "models_refitted": false,
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "scope": "Local models, original scalers/weights; legacy group timing includes loading all8; no isolated latency ranking"
+}

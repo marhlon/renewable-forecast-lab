@@ -1,0 +1,65 @@
+{
+  "schema": "m02-fundamentos-result-v1",
+  "item": "M02-02",
+  "completed": true,
+  "synthetic_data": true,
+  "os": "Windows",
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "protocol_frozen_at_utc": "2026-11-25T11:43:18.241965+00:00",
+  "execution_started_at_utc": "2026-11-25T11:44:06.434452+00:00",
+  "execution_finished_at_utc": "2026-11-25T11:44:06.472811+00:00",
+  "protocol_frozen_before_execution": true,
+  "protocol_unchanged_after_execution": true,
+  "input_sha256": {
+    "protocolo.json": "deee4abc1776c92e3d22d6ce79b6490fba014832d6d1f5557507a978c70b6a04"
+  },
+  "source_sha256": {
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "output_sha256": {
+    "estimativas.csv": "4cd8343f88fdd3b780de2e569c0d36d7f4b77903f200905122cd491075a761d2",
+    "parecer.md": "3db0b20c5eccd2d1a0d517031d06012ce2e5c61dcfed5ee6ce12f3f13159c60e",
+    "protocolo.json": "deee4abc1776c92e3d22d6ce79b6490fba014832d6d1f5557507a978c70b6a04"
+  },
+  "checks": {
+    "manual_mean_variance": true,
+    "prediction_interval_wider": true,
+    "independent_n_eff": true,
+    "ar1_covariance_positive": true,
+    "same_samples_variance_identity": true
+  },
+  "results": {
+    "manual": {
+      "n": 3,
+      "media": 10.0,
+      "variancia_n_menos_1": 4.0,
+      "erro_padrao": 1.1547005383792515,
+      "t_critico": 4.302652729749462,
+      "ic_media_inferior": 5.03172457649934,
+      "ic_media_superior": 14.96827542350066,
+      "pi_observacao_inferior": 0.0634491529986807,
+      "pi_observacao_superior": 19.93655084700132
+    },
+    "monte_carlo_mean_bias": -0.003210934304306079,
+    "mean_variance_mle": 3.748871282470463,
+    "mean_variance_unbiased": 3.99879603463516,
+    "ar1_n_eff_exact": 5.877537645564343,
+    "ar1_iid_interval_coverage": 0.4995,
+    "ar1_known_covariance_interval_coverage": 0.9415,
+    "monte_carlo_repetitions": 2000
+  },
+  "execution_responsibility": "Codex: implementação e demonstração assistidas.",
+  "formative_status": "aguarda_resposta_e_revisao_humana",
+  "learning_validated": false,
+  "operational_approval": false,
+  "benchmark_retrained": false
+}

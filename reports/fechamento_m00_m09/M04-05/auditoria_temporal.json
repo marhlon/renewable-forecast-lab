@@ -1,0 +1,227 @@
+{
+  "schema": "renewcast-point-in-time-local-audit-v1",
+  "audited_at_utc": "2026-11-25T12:31:58.383844+00:00",
+  "pinned_cohort": "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development",
+  "pinned_selection": "data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_sample",
+  "scope": "Read existing tables and metadata; independently check clocks and latest eligible run under recorded assumptions, without importing project code or rebuilding features/models.",
+  "hash_checks": [
+    {
+      "path": "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/model_frame.csv",
+      "bytes": 649802,
+      "sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+      "expected_sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635",
+      "matches_expected": true
+    },
+    {
+      "path": "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/metadata.json",
+      "bytes": 78176,
+      "sha256": "41ece2bdde847478f3da0740b9459f8e48ab71d10c4a7df6e70a1f28104c57d6",
+      "expected_sha256": "41ece2bdde847478f3da0740b9459f8e48ab71d10c4a7df6e70a1f28104c57d6",
+      "matches_expected": true
+    },
+    {
+      "path": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/protocol.json",
+      "bytes": 83055,
+      "sha256": "6397c1c8817f9f2eb8da23aea2fe5b43727983f2c1f94029a629deea436c32d3",
+      "expected_sha256": "6397c1c8817f9f2eb8da23aea2fe5b43727983f2c1f94029a629deea436c32d3",
+      "matches_expected": true
+    },
+    {
+      "path": "data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_sample/weather_asof.csv",
+      "bytes": 4453749,
+      "sha256": "51db80d4ba30d2008924e007ca69d5fcc2205b20b354c75289cf58bd3c10763b",
+      "expected_sha256": "51db80d4ba30d2008924e007ca69d5fcc2205b20b354c75289cf58bd3c10763b",
+      "matches_expected": true
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/metadata.json",
+      "bytes": 2577,
+      "sha256": "a6a85b56b513628fea62c173f084b153912b1553c421feeb2c065eba48d6def8",
+      "expected_sha256": null,
+      "matches_expected": null
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/asset_registry.csv",
+      "bytes": 4802,
+      "sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+      "expected_sha256": null,
+      "matches_expected": null
+    }
+  ],
+  "weather_cache_summary": {
+    "cached_runs": 126,
+    "runs_used_in_pinned_h24": 124,
+    "normalized_rows": 90720,
+    "assumed_availability_runs": 126,
+    "historical_availability_verified_runs": 0,
+    "observed_publication_timestamps": 0,
+    "latency_hours_values": [
+      6
+    ],
+    "fetched_at_min_utc": "2026-09-23T16:47:56.074419+00:00",
+    "fetched_at_max_utc": "2026-09-29T00:25:08.214185+00:00",
+    "run_time_min_utc": "2026-07-01T00:00:00+00:00",
+    "run_time_max_utc": "2026-09-01T06:00:00+00:00",
+    "violations": {
+      "normalized_run_matches_protocol": 0,
+      "normalized_available_matches_assumption": 0,
+      "normalized_fetch_matches_receipt": 0,
+      "normalized_valid_grid_complete": 0,
+      "normalized_assumed_flag_all_true": 0,
+      "raw_response_hash_matches_receipt": 0,
+      "registry_hash_matches_current": 0
+    },
+    "pinned_h24_source_hash_mismatches": 0,
+    "observed_fetch_is_not_historical_publication": true
+  },
+  "temporal_checks": {
+    "model_frame_rows": 744,
+    "model_frame_unique_origins": 744,
+    "model_frame_duplicate_origin_target_keys": 0,
+    "selected_weather_rows": 11160,
+    "selected_unique_origins": 744,
+    "selected_unique_plants": 15,
+    "model_frame_missing_generation_matches": 0,
+    "model_frame_incomplete_rows": 0,
+    "horizon_violations": 0,
+    "history_end_plus_assumed_delay_violations": 0,
+    "target_plus_assumed_delay_violations": 0,
+    "assumed_weather_available_after_origin_rows": 0,
+    "weather_valid_time_not_target_rows": 0,
+    "latest_eligible_run_under_assumptions_mismatches": 0,
+    "cache_fetched_after_forecast_origin_rows": 11160,
+    "folds_checked": 3,
+    "fit_label_availability_cutoff_violations": 0,
+    "targets_before_audit_clock": 744,
+    "target_is_model_feature": false,
+    "declared_model_feature_count": 32
+  },
+  "same_origin_example": {
+    "forecast_origin_utc": "2026-07-01T06:00:00+00:00",
+    "forecast_origin_local_label": "2026-07-01 03:00:00-03:00",
+    "history_reference_time_utc": "2026-07-01T05:00:00+00:00",
+    "history_end_utc": "2026-07-01T04:00:00+00:00",
+    "target_time_utc": "2026-07-02T06:00:00+00:00",
+    "target_available_at_assumed_utc": "2026-07-02T08:00:00+00:00",
+    "weather_run_time_utc": "2026-07-01T00:00:00+00:00",
+    "weather_valid_time_utc": "2026-07-02T06:00:00+00:00",
+    "weather_available_at_assumed_utc": "2026-07-01T06:00:00+00:00",
+    "weather_fetched_at_utc": "2026-09-28T22:37:41.415625+00:00",
+    "plants": 15,
+    "registry_membership_as_of": "2026-09-01",
+    "registry_fetched_at_utc": {
+      "relationships": "2026-09-22T21:28:05.056568+00:00",
+      "capacity": "2026-09-22T21:28:06.855407+00:00",
+      "siga_daily": "2026-09-22T21:28:07.986896+00:00"
+    },
+    "observed_publication_time": null,
+    "interpretation": "Internally causal under assumed clocks/delays only; post-hoc fetch does not prove either presence or absence at the historical origin."
+  },
+  "registry": {
+    "metadata": {
+      "path": "data/reference/CJU_BA5EIGT/metadata.json",
+      "bytes": 2577,
+      "sha256": "a6a85b56b513628fea62c173f084b153912b1553c421feeb2c065eba48d6def8",
+      "expected_sha256": null,
+      "matches_expected": null
+    },
+    "membership_as_of": "2026-09-01",
+    "historical_snapshot_verified": false,
+    "plants_recorded": 15,
+    "capacity_ons_mw_recorded": 227.70000000000002,
+    "scope": "membership dates from current registry; historical coordinates/capacity versions not verified"
+  },
+  "generation_metadata": {
+    "timezone_hypothesis": "America/Sao_Paulo",
+    "timezone_verified": false,
+    "interval_semantics": "original_reference_label; interval_start_or_end_unverified",
+    "availability_is_assumed": true,
+    "delay_hours": 2,
+    "source_generation_expected_sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b",
+    "raw_generation_bytes_not_reread": true
+  },
+  "integrity": "Matching checked hashes establish preservation against recorded digests, not authenticity of the provider clock.",
+  "compatibility": "The persisted cohort satisfies checked keys, horizons and availability rules conditional on recorded assumptions.",
+  "freshness": "All counted past targets precede the audit clock; these historical forecasts are not current decision forecasts.",
+  "historical_operational_availability_verified": false,
+  "operational_approval": false,
+  "recommended_status": "bloqueado",
+  "blocking_dependencies": [
+    "M04-02",
+    "M04-03",
+    "M04-04"
+  ],
+  "important_nonimplications": [
+    "A late archive fetch does not prove that the forecast was unavailable at its original origin.",
+    "Zero internal timestamp violations does not prove that the assumed timestamps were observed publication times.",
+    "An as-of membership date in a current registry does not prove that the same coordinates/capacities were known at the historical origin."
+  ],
+  "primary_sources": [
+    {
+      "id": "ONS_PORTAL",
+      "url": "https://dados.ons.org.br/dataset/geracao-usina-2",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Hourly source and post-publication revisions; not proof of time zone or historical release times."
+    },
+    {
+      "id": "ONS_DICT",
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/DicionarioDados_GeracaoPorUsina.pdf",
+      "consulted_date": "2026-11-25",
+      "document_date": "2023-06-09",
+      "pages": 3,
+      "method": "web PDF text inspection, all pages",
+      "supports": "din_instante reference label and MWmed; physical time zone and interval edge are not specified in this dictionary."
+    },
+    {
+      "id": "OPENMETEO_RUNS",
+      "url": "https://open-meteo.com/en/docs/single-runs-api",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Run initialisation is different from public availability; archive retrieval does not prove historical availability."
+    },
+    {
+      "id": "OPENMETEO_UPDATES",
+      "url": "https://open-meteo.com/en/docs/model-updates",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Separate initialisation, conversion and API availability; replicated servers can differ."
+    }
+  ],
+  "audit_execution_history": [
+    {
+      "exit_code": 1,
+      "failure": "TypeError at local metadata output_sha256: scalar string was incorrectly treated as a mapping.",
+      "date": "2026-11-25",
+      "started_at_utc": null,
+      "timestamp_limit": "First failed command did not persist its start timestamp; none is invented.",
+      "partial_output": "M04-03/disponibilidade.csv",
+      "partial_output_reused_only_if_identical": true,
+      "source_sha256": "fe4d4591255925a024bbe0b24119da89b93b1f2925376667c4dcb748774e7b74"
+    },
+    {
+      "exit_code": 1,
+      "failure": "Own second audit session interrupted before final JSON outputs to remove repeated scalar timestamp parsing from the selector check.",
+      "date": "2026-11-25",
+      "started_at_utc": null,
+      "interrupted": true,
+      "partial_output_reused_only_if_identical": true
+    }
+  ],
+  "publication_timestamp_search_scope": "Cached metadata/protocol and normalized schema; raw response bytes hashed, not treated as a complete publication-log inventory.",
+  "audit_method": {
+    "source_sha256": "7dc8ec6d40f597fb251ce36a8b9546ed7db5dfb5efada29697ab23015d165bec",
+    "source": "from pathlib import Path\nfrom datetime import datetime, timezone\nfrom time import perf_counter\nimport csv, hashlib, json, platform, sys\nstarted = datetime.now(timezone.utc).isoformat()\ntimer = perf_counter()\nprint(\"Source audit started: \" + started, flush=True)\nimport numpy as np\nimport pandas as pd\nroot = Path.cwd()\nbase = root / \"reports/fechamento_m00_m09\"\ndef load(p):\n    return json.loads(Path(p).read_text(encoding=\"utf-8-sig\"))\ndef sha(p):\n    h = hashlib.sha256()\n    with Path(p).open(\"rb\") as f:\n        for b in iter(lambda: f.read(1024 * 1024), b\"\"):\n            h.update(b)\n    return h.hexdigest()\ndef rel(p):\n    return Path(p).resolve().relative_to(root).as_posix()\ndef write_json(p, value):\n    with Path(p).open(\"x\", encoding=\"utf-8\", newline=\"\\n\") as f:\n        json.dump(value, f, ensure_ascii=False, indent=2, allow_nan=False)\n        f.write(\"\\n\")\ndef ts(v):\n    return pd.to_datetime(v, utc=True, format=\"mixed\")\ndef file_check(p, expected=None):\n    p = Path(p)\n    actual = sha(p)\n    return {\"path\": rel(p), \"bytes\": p.stat().st_size, \"sha256\": actual,\n            \"expected_sha256\": expected,\n            \"matches_expected\": None if expected is None else actual == expected}\nids = [\"M04-02\", \"M04-03\", \"M04-05\", \"M09-03\"]\nprotocols = {i: file_check(base / i / \"protocolo.json\") for i in ids}\ntargets = [base/\"M04-02/contrato_geracao.json\", base/\"M04-03/disponibilidade.csv\",\n           base/\"M04-05/auditoria_temporal.json\", base/\"M09-03/limites_avaliacao.json\"]\nif any(p.exists() for p in targets if p.name != \"disponibilidade.csv\"):\n    raise RuntimeError(\"Audit target already exists; refusing overwrite.\")\nsources = [\n {\"id\":\"ONS_PORTAL\",\"url\":\"https://dados.ons.org.br/dataset/geracao-usina-2\",\"consulted_date\":\"2026-11-25\",\"method\":\"web open of primary documentation only\",\"supports\":\"Hourly source and post-publication revisions; not proof of time zone or historical release times.\"},\n {\"id\":\"ONS_DICT\",\"url\":\"https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/DicionarioDados_GeracaoPorUsina.pdf\",\"consulted_date\":\"2026-11-25\",\"document_date\":\"2023-06-09\",\"pages\":3,\"method\":\"web PDF text inspection, all pages\",\"supports\":\"din_instante reference label and MWmed; physical time zone and interval edge are not specified in this dictionary.\"},\n {\"id\":\"OPENMETEO_RUNS\",\"url\":\"https://open-meteo.com/en/docs/single-runs-api\",\"consulted_date\":\"2026-11-25\",\"method\":\"web open of primary documentation only\",\"supports\":\"Run initialisation is different from public availability; archive retrieval does not prove historical availability.\"},\n {\"id\":\"OPENMETEO_UPDATES\",\"url\":\"https://open-meteo.com/en/docs/model-updates\",\"consulted_date\":\"2026-11-25\",\"method\":\"web open of primary documentation only\",\"supports\":\"Separate initialisation, conversion and API availability; replicated servers can differ.\"}\n]\ncohort = root / \"data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development\"\ncohort_meta = load(cohort / \"metadata.json\")\nablation_dir = root / \"reports/weather_ablation/CJU_BA5EIGT/july_development_h24\"\nablation = load(ablation_dir / \"protocol.json\")\nselected_dir = root / \"data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_sample\"\nselected_meta = load(selected_dir / \"metadata.json\")\nused_sources = {Path(s[\"directory\"]).resolve(): s for s in selected_meta[\"sources\"]}\nregistry_dir = root / \"data/reference/CJU_BA5EIGT\"\nregistry_meta = load(registry_dir / \"metadata.json\")\nregistry_sha = sha(registry_dir / \"asset_registry.csv\")\nrun_rows = []\nfor metadata_path in sorted((root/\"data/external/weather/CJU_BA5EIGT\").glob(\"*/metadata.json\")):\n    directory = metadata_path.parent\n    m = load(metadata_path); p = m[\"protocol\"]\n    normalized = directory / \"weather_forecasts.csv\"\n    frame = pd.read_csv(normalized, usecols=[\n        \"weather_model\",\"id_ons_usina\",\"weather_run_time\",\"weather_valid_time\",\n        \"weather_available_at\",\"weather_fetched_at\",\"availability_is_assumed\"])\n    run, fetched = ts(p[\"run_time_utc\"]), ts(m[\"fetched_at_utc\"])\n    assumed_available = run + pd.Timedelta(hours=p[\"assumed_latency_hours\"])\n    for col in [\"weather_run_time\",\"weather_valid_time\",\"weather_available_at\",\"weather_fetched_at\"]:\n        frame[col] = ts(frame[col])\n    expected_times = list(pd.date_range(run, periods=p[\"hours\"], freq=\"h\"))\n    valid_grids = all(\n        list(g.weather_valid_time.sort_values()) == expected_times\n        for _,g in frame.groupby(\"id_ons_usina\"))\n    used = used_sources.get(directory.resolve())\n    raw_hash, csv_hash, meta_hash = sha(directory/\"response.json\"), sha(normalized), sha(metadata_path)\n    selected_hashes_match = None if used is None else (\n        used[\"response_sha256\"] == raw_hash and used[\"normalized_csv_sha256\"] == csv_hash\n        and used[\"metadata_sha256\"] == meta_hash)\n    run_rows.append({\n        \"run_directory\":rel(directory),\"used_in_pinned_h24\":used is not None,\n        \"weather_model\":p[\"weather_model\"],\"run_time_utc\":run.isoformat(),\n        \"valid_time_min_utc\":frame.weather_valid_time.min().isoformat(),\n        \"valid_time_max_utc\":frame.weather_valid_time.max().isoformat(),\n        \"assumed_available_at_utc\":assumed_available.isoformat(),\n        \"assumed_latency_hours\":p[\"assumed_latency_hours\"],\n        \"availability_is_assumed\":p[\"availability_is_assumed\"],\n        \"historical_availability_verified\":p[\"historical_availability_verified\"],\n        \"observed_api_publication_at_utc\":\"\",\n        \"fetched_at_utc\":fetched.isoformat(),\n        \"fetch_minus_run_hours\":(fetched-run)/pd.Timedelta(hours=1),\n        \"http_status\":m[\"http_status\"],\"http_last_modified\":m.get(\"http_last_modified\"),\n        \"etag\":m.get(\"etag\"),\"rows\":len(frame),\"plants\":frame.id_ons_usina.nunique(),\n        \"forecast_hours_per_plant\":p[\"hours\"],\n        \"normalized_run_matches_protocol\":bool(frame.weather_run_time.eq(run).all()),\n        \"normalized_available_matches_assumption\":bool(frame.weather_available_at.eq(assumed_available).all()),\n        \"normalized_fetch_matches_receipt\":bool(frame.weather_fetched_at.eq(fetched).all()),\n        \"normalized_valid_grid_complete\":valid_grids,\n        \"normalized_assumed_flag_all_true\":bool(frame.availability_is_assumed.eq(True).all()),\n        \"raw_response_hash_matches_receipt\":raw_hash == m[\"response_sha256\"],\n        \"registry_hash_matches_current\":registry_sha == p[\"registry_sha256\"],\n        \"registry_historical_versions_verified\":p[\"registry_historical_versions_verified\"],\n        \"pinned_h24_source_hashes_match\":selected_hashes_match,\n        \"response_sha256\":raw_hash,\"normalized_csv_sha256\":csv_hash,\"metadata_sha256\":meta_hash})\navailability = pd.DataFrame(run_rows)\navailability_path = base/\"M04-03/disponibilidade.csv\"\navailability_bytes = availability.to_csv(index=False, float_format=\"%.12g\").encode(\"utf-8\")\nif availability_path.exists():\n    if availability_path.read_bytes() != availability_bytes:\n        raise RuntimeError(\"Existing availability CSV differs; refusing overwrite.\")\nelse:\n    with availability_path.open(\"xb\") as f:\n        f.write(availability_bytes)\nbool_checks = [\"normalized_run_matches_protocol\",\"normalized_available_matches_assumption\",\n    \"normalized_fetch_matches_receipt\",\"normalized_valid_grid_complete\",\n    \"normalized_assumed_flag_all_true\",\"raw_response_hash_matches_receipt\",\"registry_hash_matches_current\"]\nrun_summary = {\n    \"cached_runs\":len(run_rows),\"runs_used_in_pinned_h24\":int(availability.used_in_pinned_h24.sum()),\n    \"normalized_rows\":int(availability.rows.sum()),\n    \"assumed_availability_runs\":int(availability.availability_is_assumed.eq(True).sum()),\n    \"historical_availability_verified_runs\":int(availability.historical_availability_verified.eq(True).sum()),\n    \"observed_publication_timestamps\":0,\n    \"latency_hours_values\":sorted(availability.assumed_latency_hours.unique().tolist()),\n    \"fetched_at_min_utc\":ts(availability.fetched_at_utc).min().isoformat(),\n    \"fetched_at_max_utc\":ts(availability.fetched_at_utc).max().isoformat(),\n    \"run_time_min_utc\":ts(availability.run_time_utc).min().isoformat(),\n    \"run_time_max_utc\":ts(availability.run_time_utc).max().isoformat(),\n    \"violations\":{name:int((~availability[name]).sum()) for name in bool_checks},\n    \"pinned_h24_source_hash_mismatches\":sum(r[\"pinned_h24_source_hashes_match\"] is False for r in run_rows),\n    \"observed_fetch_is_not_historical_publication\":True}\nmf = pd.read_csv(cohort/\"model_frame.csv\")\nfor col in [\"forecast_origin\",\"target_time\",\"history_reference_time\",\"history_end\",\n            \"target_available_at\",\"weather_latest_available_at\",\"selected_run_min\",\"selected_run_max\"]:\n    mf[col] = ts(mf[col])\nselected = pd.read_csv(selected_dir/\"weather_asof.csv\")\nfor col in [\"forecast_origin\",\"target_time\",\"weather_valid_time\",\"weather_run_time\",\n            \"weather_available_at\",\"weather_fetched_at\"]:\n    selected[col] = ts(selected[col])\nfolds = pd.read_csv(ablation_dir/\"folds.csv\")\nfor col in [\"latest_train_label_available_at\",\"valid_start\",\"valid_end\"]:\n    folds[col] = ts(folds[col])\nhorizon = int(cohort_meta[\"horizon_hours\"]); delay = int(cohort_meta[\"availability_delay_hours\"])\nexpected_latest = {}\nused_rows = [r for r in run_rows if r[\"used_in_pinned_h24\"]]\nused_ranges = [(ts(r[\"run_time_utc\"]), ts(r[\"assumed_available_at_utc\"]), ts(r[\"valid_time_max_utc\"])) for r in used_rows]\nprint(\"Cached runs checked; auditing pinned origin rules.\", flush=True)\nfor origin in selected.forecast_origin.drop_duplicates():\n    target = origin + pd.Timedelta(hours=horizon)\n    eligible = [run for run,available,last_valid in used_ranges\n        if available <= origin and run <= target <= last_valid]\n    expected_latest[origin] = max(eligible) if eligible else pd.NaT\nselector_mismatches = sum(\n    pd.isna(expected_latest[origin]) or run != expected_latest[origin]\n    for origin,run in zip(selected.forecast_origin,selected.weather_run_time))\nnow = pd.Timestamp(datetime.now(timezone.utc))\nchecks = {\n \"model_frame_rows\":len(mf),\"model_frame_unique_origins\":int(mf.forecast_origin.nunique()),\n \"model_frame_duplicate_origin_target_keys\":int(mf.duplicated([\"forecast_origin\",\"target_time\"]).sum()),\n \"selected_weather_rows\":len(selected),\"selected_unique_origins\":int(selected.forecast_origin.nunique()),\n \"selected_unique_plants\":int(selected.id_ons_usina.nunique()),\n \"model_frame_missing_generation_matches\":int((~mf.generation_match.eq(\"both\")).sum()),\n \"model_frame_incomplete_rows\":int((~mf.model_row_complete.eq(True)).sum()),\n \"horizon_violations\":int((~(mf.target_time-mf.forecast_origin).eq(pd.Timedelta(hours=horizon))).sum()),\n \"history_end_plus_assumed_delay_violations\":int((~(mf.history_end+pd.Timedelta(hours=delay)).eq(mf.forecast_origin)).sum()),\n \"target_plus_assumed_delay_violations\":int((~(mf.target_time+pd.Timedelta(hours=delay)).eq(mf.target_available_at)).sum()),\n \"assumed_weather_available_after_origin_rows\":int((selected.weather_available_at>selected.forecast_origin).sum()),\n \"weather_valid_time_not_target_rows\":int((~selected.weather_valid_time.eq(selected.target_time)).sum()),\n \"latest_eligible_run_under_assumptions_mismatches\":int(selector_mismatches),\n \"cache_fetched_after_forecast_origin_rows\":int((selected.weather_fetched_at>selected.forecast_origin).sum()),\n \"folds_checked\":len(folds),\n \"fit_label_availability_cutoff_violations\":int((~(folds.latest_train_label_available_at<folds.valid_start)).sum()),\n \"targets_before_audit_clock\":int((mf.target_time<now).sum()),\n \"target_is_model_feature\": \"target_generation\" in cohort_meta[\"model_feature_columns\"],\n \"declared_model_feature_count\":len(cohort_meta[\"model_feature_columns\"])}\nfirst = mf.iloc[0]\nfirst_weather = selected.loc[selected.forecast_origin.eq(first.forecast_origin)]\nexample = {\n \"forecast_origin_utc\":first.forecast_origin.isoformat(),\n \"forecast_origin_local_label\":str(first.forecast_origin_local),\n \"history_reference_time_utc\":first.history_reference_time.isoformat(),\n \"history_end_utc\":first.history_end.isoformat(),\"target_time_utc\":first.target_time.isoformat(),\n \"target_available_at_assumed_utc\":first.target_available_at.isoformat(),\n \"weather_run_time_utc\":first_weather.weather_run_time.iloc[0].isoformat(),\n \"weather_valid_time_utc\":first_weather.weather_valid_time.iloc[0].isoformat(),\n \"weather_available_at_assumed_utc\":first_weather.weather_available_at.iloc[0].isoformat(),\n \"weather_fetched_at_utc\":first_weather.weather_fetched_at.iloc[0].isoformat(),\n \"plants\":len(first_weather),\"registry_membership_as_of\":registry_meta[\"membership_as_of\"],\n \"registry_fetched_at_utc\":{k:v[\"fetched_at_utc\"] for k,v in registry_meta[\"sources\"].items()},\n \"observed_publication_time\":None,\n \"interpretation\":\"Internally causal under assumed clocks/delays only; post-hoc fetch does not prove either presence or absence at the historical origin.\"}\nlocal_checks = [\n file_check(cohort/\"model_frame.csv\",cohort_meta[\"output_sha256\"]),\n file_check(cohort/\"metadata.json\",ablation[\"source_metadata_sha256\"]),\n file_check(ablation_dir/\"protocol.json\",load(ablation_dir/\"metadata.json\")[\"protocol_sha256\"]),\n file_check(selected_dir/\"weather_asof.csv\",selected_meta[\"output_sha256\"] if isinstance(selected_meta[\"output_sha256\"], str) else selected_meta[\"output_sha256\"][\"weather_asof.csv\"]),\n file_check(registry_dir/\"metadata.json\"),file_check(registry_dir/\"asset_registry.csv\")]\ncontract = {\n \"schema\":\"renewcast-generation-source-contract-audit-v1\",\"audited_at_utc\":now.isoformat(),\n \"source_field\":\"din_instante\",\"source_value_field\":\"val_geracao\",\n \"hourly_granularity_documented\":True,\"unit_label_documented\":\"MWmed\",\n \"physical_timezone_verified\":False,\"physical_timezone\":None,\n \"interval_start_or_end_verified\":False,\"timestamp_interval_edge\":None,\n \"existing_project_timezone_hypothesis\":cohort_meta[\"generation_timezone_hypothesis\"],\n \"existing_project_generation_delay_hours_assumed\":delay,\n \"generation_publication_history_verified\":False,\n \"post_publication_revisions_possible\":True,\n \"scope_of_missing_proof\":\"Not specified in the checked 3-page dictionary and portal; no claim that no other ONS document exists.\",\n \"operational_approval\":False,\"recommended_status\":\"bloqueado\",\n \"external_evidence_needed\":[\"Authoritative timezone and DST rules for the selected series/period.\",\n \"Explicit hourly interval boundaries and edge-label convention.\",\n \"Observed release/revision timestamps or immutable data vintages for operational availability.\"],\n \"primary_sources\":sources[:2]}\nwrite_json(base/\"M04-02/contrato_geracao.json\",contract)\nmodel_spec = load(root/\"docs/model_source_m09_3.json\")\nmodel_dir = root/\"models/pretrained/chronos-bolt-tiny\"/model_spec[\"revision\"]\nmodel_checks = [file_check(model_dir/name,entry[\"sha256\"]) for name,entry in model_spec[\"files\"].items()]\ncard = (model_dir/\"README.md\").read_text(encoding=\"utf-8\")\nnormal_dir = root/\"reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1\"\nnormal = load(normal_dir/\"resultado.json\")\nmodel_limits = {\n \"schema\":\"renewcast-pretraining-overlap-limits-v1\",\"audited_at_utc\":now.isoformat(),\n \"model_repo\":model_spec[\"repo_id\"],\"revision\":model_spec[\"revision\"],\n \"model_artifact_checks\":model_checks,\"local_spec\":file_check(root/\"docs/model_source_m09_3.json\"),\n \"model_card_consulted\":\"Frozen local README at this revision; no moving-main model card substituted.\",\n \"model_card_context\":\"Describes a broad pretrained time-series model and its own 27-dataset benchmark. That benchmark-specific exposure statement is not an assertion about Renewcast/ONS.\",\n \"corpus_series_level_manifest_present_in_checked_model_card\":False,\n \"ons_cju_ba5eigt_overlap_evidence_present_in_checked_model_card\":False,\n \"pretraining_overlap_verified\":False,\"overlap_status\":\"indeterminate\",\n \"absence_of_contamination_proven\":False,\"contamination_proven\":False,\n \"accepted_local_run\":rel(normal_dir),\"accepted_run_receipt\":file_check(normal_dir/\"resultado.json\"),\n \"recorded_run_flags\":{k:normal[k] for k in [\"pretraining_overlap_verified\",\"untouched_holdout\",\"models_trained\",\"weights_finetuned\",\"optimizer_steps\",\"operational_approval\"]},\n \"no_local_finetune_does_not_prove_no_pretraining_overlap\":True,\n \"permitted_conclusion\":\"Conditional comparison on the previously explored development cohort; no external validity or uncontaminated benchmark claim.\",\n \"operational_approval\":False,\"delimitation_audit_completed\":True,\"recommended_status\":\"aguarda_revisao\",\n \"future_evaluation_plan\":{\"executed\":False,\"reserved_period\":False,\"start\":None,\"end\":None,\n \"requirements\":[\"Freeze model revision, code, context, horizon and selection policy before observing new targets.\",\n \"Choose an unexamined prospective period with supported generation, weather and registry point-in-time contracts.\",\n \"Record predictions and actual observed input publication times before labels; preserve bytes and timestamps.\",\n \"Compare unchanged baselines on identical origins, covering error, bias, intervals, latency and memory; no selection or recalibration on the evaluation period.\"]},\n \"questions_not_sent\":[\"Can the model publisher provide a training-data series manifest and exclusion statement for this ONS series and period?\",\n \"What training cutoff and dataset versions apply to these exact weights?\"]}\nwrite_json(base/\"M09-03/limites_avaliacao.json\",model_limits)\ntemporal = {\n \"schema\":\"renewcast-point-in-time-local-audit-v1\",\"audited_at_utc\":now.isoformat(),\n \"pinned_cohort\":rel(cohort),\"pinned_selection\":rel(selected_dir),\"scope\":\"Read existing tables and metadata; independently check clocks and latest eligible run under recorded assumptions, without importing project code or rebuilding features/models.\",\n \"hash_checks\":local_checks,\"weather_cache_summary\":run_summary,\"temporal_checks\":checks,\"same_origin_example\":example,\n \"registry\":{\"metadata\":file_check(registry_dir/\"metadata.json\"),\"membership_as_of\":registry_meta[\"membership_as_of\"],\n \"historical_snapshot_verified\":registry_meta[\"historical_snapshot_verified\"],\"plants_recorded\":registry_meta[\"plants\"],\"capacity_ons_mw_recorded\":registry_meta[\"capacity_ons_mw\"],\n \"scope\":registry_meta[\"scope\"]},\n \"generation_metadata\":{\"timezone_hypothesis\":cohort_meta[\"generation_timezone_hypothesis\"],\n \"timezone_verified\":cohort_meta[\"generation_timezone_verified\"],\"interval_semantics\":cohort_meta[\"generation_interval_semantics\"],\n \"availability_is_assumed\":cohort_meta[\"generation_availability_is_assumed\"],\n \"delay_hours\":delay,\"source_generation_expected_sha256\":cohort_meta[\"generation_file_sha256\"],\n \"raw_generation_bytes_not_reread\":True},\n \"integrity\":\"Matching checked hashes establish preservation against recorded digests, not authenticity of the provider clock.\",\n \"compatibility\":\"The persisted cohort satisfies checked keys, horizons and availability rules conditional on recorded assumptions.\",\n \"freshness\":\"All counted past targets precede the audit clock; these historical forecasts are not current decision forecasts.\",\n \"historical_operational_availability_verified\":False,\"operational_approval\":False,\n \"recommended_status\":\"bloqueado\",\"blocking_dependencies\":[\"M04-02\",\"M04-03\",\"M04-04\"],\n \"important_nonimplications\":[\"A late archive fetch does not prove that the forecast was unavailable at its original origin.\",\n \"Zero internal timestamp violations does not prove that the assumed timestamps were observed publication times.\",\n \"An as-of membership date in a current registry does not prove that the same coordinates/capacities were known at the historical origin.\"],\n \"primary_sources\":sources,\n \"audit_execution_history\":[{\"exit_code\":1,\"failure\":\"TypeError at local metadata output_sha256: scalar string was incorrectly treated as a mapping.\",\"date\":\"2026-11-25\",\"started_at_utc\":None,\"timestamp_limit\":\"First failed command did not persist its start timestamp; none is invented.\",\"partial_output\":\"M04-03/disponibilidade.csv\",\"partial_output_reused_only_if_identical\":True},{\"exit_code\":1,\"failure\":\"Own second audit session interrupted before final JSON outputs to remove repeated scalar timestamp parsing from the selector check.\",\"date\":\"2026-11-25\",\"started_at_utc\":None,\"interrupted\":True,\"partial_output_reused_only_if_identical\":True}],\n \"publication_timestamp_search_scope\":\"Cached metadata/protocol and normalized schema; raw response bytes hashed, not treated as a complete publication-log inventory.\",\n \"audit_method\":{\"source_sha256\":hashlib.sha256(AUDIT_SOURCE.encode(\"utf-8\")).hexdigest(),\"source\":AUDIT_SOURCE,\n \"versions\":{\"python\":platform.python_version(),\"numpy\":np.__version__,\"pandas\":pd.__version__},\n \"command\":[sys.executable,\"-\"],\"started_at_utc\":started,\"completed_at_utc\":datetime.now(timezone.utc).isoformat()}}\nwrite_json(base/\"M04-05/auditoria_temporal.json\",temporal)\nfor i in ids:\n    assert sha(base/i/\"protocolo.json\")==protocols[i][\"sha256\"]\nprint(json.dumps({\"weather\":run_summary,\"temporal\":checks,\"example\":example,\n    \"hash_mismatches\":[x[\"path\"] for x in local_checks+model_checks if x[\"matches_expected\"] is False],\n    \"elapsed_seconds\":perf_counter()-timer,\"protocols_preserved\":True},ensure_ascii=True))\n",
+    "versions": {
+      "python": "3.12.13",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5"
+    },
+    "command": [
+      "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+      "-"
+    ],
+    "started_at_utc": "2026-11-25T12:31:27.003129+00:00",
+    "completed_at_utc": "2026-11-25T12:31:59.322905+00:00"
+  }
+}

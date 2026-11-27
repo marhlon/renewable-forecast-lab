@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-26T13:58:22.563101+00:00",
+  "origins": 6,
+  "maximum_difference_by_method": {
+    "linear_legacy": 7.105427357601002e-15,
+    "hgb_legacy": 7.105427357601002e-15,
+    "mlp_17": 1.0242405238614083e-05,
+    "mlp_29": 3.837443927068307e-06,
+    "mlp_41": 4.977111728976524e-06,
+    "gru_17": 8.144066299564656e-06,
+    "gru_29": 8.650434779156058e-06,
+    "gru_41": 5.49788606463153e-06
+  },
+  "atol": 0.0001,
+  "trained": false,
+  "scope": "new adapter checked on six old origins, not rerunning training or final dataset"
+}

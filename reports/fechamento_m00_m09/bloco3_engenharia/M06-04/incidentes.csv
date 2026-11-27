@@ -1,0 +1,5 @@
+case,rejected,reason,mode
+future_arrival,True,input_not_available_at_emission,counterexample_replay
+future_vintage,True,input_not_available_at_emission,counterexample_replay
+stale_input,True,stale_or_future_input,counterexample_replay
+duplicate_origin,True,invalid_or_duplicate_emission,counterexample_replay

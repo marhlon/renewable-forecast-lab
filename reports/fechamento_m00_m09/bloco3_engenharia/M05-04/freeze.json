@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-11-26T13:57:49.223772+00:00",
+  "files": {
+    "notebooks/bloco3_alternativas.py": "e968c41f5edf1aaa924b415ff59bdd183b42a647c6b285415264c261acae94cb",
+    "reports/fechamento_m00_m09/bloco3_engenharia/M05-04/protocolo.json": "b5c2be19274c1c345af8c05496c004d4ebf648d9386aa168bb69f826d2b915fb",
+    "reports/fechamento_m00_m09/bloco3_engenharia/M05-04/alternatives.joblib": "7f97f56ff61f28c6f12dc70cfb541bad2b8a9166ee9827b41cafdf9aab0276c4",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc"
+  },
+  "selected": {
+    "lightgbm": {
+      "family": "lightgbm",
+      "trees": 120,
+      "n": 504,
+      "mae": 29.49446601780548,
+      "rmse": 39.599314742785246,
+      "seconds_fit_predict": 0.5788777000270784
+    },
+    "catboost": {
+      "family": "catboost",
+      "trees": 120,
+      "n": 504,
+      "mae": 28.36885546686217,
+      "rmse": 37.77256072647695,
+      "seconds_fit_predict": 1.7365104999626055
+    }
+  },
+  "training_rows": 7221,
+  "maximum_label_available": "2026-06-30 23:00:00",
+  "evaluation_source_opened": false
+}

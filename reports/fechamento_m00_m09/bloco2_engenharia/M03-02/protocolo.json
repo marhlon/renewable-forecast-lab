@@ -1,0 +1,336 @@
+{
+  "created_at": "2026-11-25T19:20:31.949165+00:00",
+  "scope": [
+    "M03-02"
+  ],
+  "authorship": "Implementação e análise fornecidas por Codex; sem certificação de autonomia do usuário.",
+  "execution_kind": "Novo ajuste local sob contrato temporal novo; não é replay nem repetição de treino aceito.",
+  "source": {
+    "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+    "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+  },
+  "code": {
+    "notebooks/selecao_atributos_temporal.py": "ed3a24b9c79a7721d9c9291a7c45c1207dcb43b83276dc075ea1b2401f30612b",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+    "notebooks/explicacao_local.py": "7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b"
+  },
+  "dataset": "CJU_BA5EIGT",
+  "clock": "UTC assumido para relógios ingênuos; fuso físico e latência ONS não certificados",
+  "availability": {
+    "last_observation": "origin-2h",
+    "target": "y(origin+24h)",
+    "target_available": "origin+26h",
+    "training_filter": "label_available_at < cutoff (strict)"
+  },
+  "feature_groups": {
+    "recent6": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_4h",
+      "lag_5h",
+      "lag_6h"
+    ],
+    "older18": [
+      "lag_7h",
+      "lag_8h",
+      "lag_9h",
+      "lag_10h",
+      "lag_11h",
+      "lag_12h",
+      "lag_13h",
+      "lag_14h",
+      "lag_15h",
+      "lag_16h",
+      "lag_17h",
+      "lag_18h",
+      "lag_19h",
+      "lag_20h",
+      "lag_21h",
+      "lag_22h",
+      "lag_23h",
+      "lag_24h"
+    ],
+    "stats": [
+      "mean6",
+      "std6",
+      "mean24",
+      "std24",
+      "delta1"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos"
+    ]
+  },
+  "missing": "Grade horária, sem imputar zero; coorte comum de features e alvo finitos",
+  "folds": [
+    [
+      "2026-06-01",
+      "2026-06-08"
+    ],
+    [
+      "2026-06-08",
+      "2026-06-15"
+    ],
+    [
+      "2026-06-15",
+      "2026-06-22"
+    ]
+  ],
+  "validation_origins_per_fold": 168,
+  "training": "Expansivo; labels disponíveis estritamente antes do início da validação; scaler ajustado apenas no treino",
+  "candidates": [
+    {
+      "name": "persistence",
+      "features": [
+        "lag_1h"
+      ]
+    },
+    {
+      "name": "Ridge24",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h",
+        "lag_7h",
+        "lag_8h",
+        "lag_9h",
+        "lag_10h",
+        "lag_11h",
+        "lag_12h",
+        "lag_13h",
+        "lag_14h",
+        "lag_15h",
+        "lag_16h",
+        "lag_17h",
+        "lag_18h",
+        "lag_19h",
+        "lag_20h",
+        "lag_21h",
+        "lag_22h",
+        "lag_23h",
+        "lag_24h"
+      ]
+    },
+    {
+      "name": "HGB_recent6",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h"
+      ]
+    },
+    {
+      "name": "HGB_lags24",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h",
+        "lag_7h",
+        "lag_8h",
+        "lag_9h",
+        "lag_10h",
+        "lag_11h",
+        "lag_12h",
+        "lag_13h",
+        "lag_14h",
+        "lag_15h",
+        "lag_16h",
+        "lag_17h",
+        "lag_18h",
+        "lag_19h",
+        "lag_20h",
+        "lag_21h",
+        "lag_22h",
+        "lag_23h",
+        "lag_24h"
+      ]
+    },
+    {
+      "name": "HGB_stats",
+      "features": [
+        "mean6",
+        "std6",
+        "mean24",
+        "std24",
+        "delta1"
+      ]
+    },
+    {
+      "name": "HGB_lags24_stats",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h",
+        "lag_7h",
+        "lag_8h",
+        "lag_9h",
+        "lag_10h",
+        "lag_11h",
+        "lag_12h",
+        "lag_13h",
+        "lag_14h",
+        "lag_15h",
+        "lag_16h",
+        "lag_17h",
+        "lag_18h",
+        "lag_19h",
+        "lag_20h",
+        "lag_21h",
+        "lag_22h",
+        "lag_23h",
+        "lag_24h",
+        "mean6",
+        "std6",
+        "mean24",
+        "std24",
+        "delta1"
+      ]
+    },
+    {
+      "name": "HGB_lags24_calendar",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h",
+        "lag_7h",
+        "lag_8h",
+        "lag_9h",
+        "lag_10h",
+        "lag_11h",
+        "lag_12h",
+        "lag_13h",
+        "lag_14h",
+        "lag_15h",
+        "lag_16h",
+        "lag_17h",
+        "lag_18h",
+        "lag_19h",
+        "lag_20h",
+        "lag_21h",
+        "lag_22h",
+        "lag_23h",
+        "lag_24h",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+      ]
+    },
+    {
+      "name": "HGB_all",
+      "features": [
+        "lag_1h",
+        "lag_2h",
+        "lag_3h",
+        "lag_4h",
+        "lag_5h",
+        "lag_6h",
+        "lag_7h",
+        "lag_8h",
+        "lag_9h",
+        "lag_10h",
+        "lag_11h",
+        "lag_12h",
+        "lag_13h",
+        "lag_14h",
+        "lag_15h",
+        "lag_16h",
+        "lag_17h",
+        "lag_18h",
+        "lag_19h",
+        "lag_20h",
+        "lag_21h",
+        "lag_22h",
+        "lag_23h",
+        "lag_24h",
+        "mean6",
+        "std6",
+        "mean24",
+        "std24",
+        "delta1",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos"
+      ]
+    }
+  ],
+  "hgb": {
+    "max_iter": 60,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 0.1,
+    "early_stopping": false,
+    "random_state": 17
+  },
+  "ridge": {
+    "alpha": 1.0,
+    "preprocessing": "StandardScaler fit apenas treino"
+  },
+  "threads": 2,
+  "selection": "Menor MAE agregado ponderado pelo número de origens; desempate n_features, ordem prévia",
+  "baseline": "Persistência do último valor observado, origin-2h, alinhado à disponibilidade e às mesmas origens",
+  "study_model": "Melhor aprendido, mesmo se persistência vencer; estudos não implicam promoção",
+  "explanation": {
+    "method": "Exact grouped interventional Shapley; enumeration of every coalition",
+    "origins": [
+      "2026-07-01 12:00",
+      "2026-07-03 12:00",
+      "2026-07-05 12:00",
+      "2026-07-07 12:00",
+      "2026-07-10 12:00",
+      "2026-07-13 12:00"
+    ],
+    "background": "16 eligible training observations, uniform positions including endpoints",
+    "sensitivity": "8 eligible training observations, uniform positions including endpoints",
+    "maximum_groups": 4,
+    "test": "Analytical linear model and sum(phi)+base=prediction",
+    "limits": "Correlated groups; hybrid out-of-distribution rows; background-sensitive; no physical causality"
+  },
+  "final_training_cut": "2026-07-01 00:00",
+  "calibration_scores": [
+    "2026-07-01",
+    "2026-07-14"
+  ],
+  "policy_calibration": [
+    "2026-07-16",
+    "2026-07-31"
+  ],
+  "evaluation": {
+    "source": "Outubro 2026, obter e abrir apenas após seleção e calibradores congelados",
+    "origins_start_inclusive": "2026-10-02 01:00",
+    "origins_end_exclusive": "2026-10-31 00:00",
+    "latest_target": "2026-10-31 23:00",
+    "no_retuning": true
+  },
+  "prior_exposure": "Agosto 2026 já examinado em estudos h6/h1; setembro 2025–agosto 2026 é desenvolvimento, não holdout novo",
+  "hypothesis": "Grupos adicionais podem melhorar a persistência na MAE; ganho não é condição de aceite de engenharia",
+  "acceptance": [
+    "Sem vazamento conforme testes de causalidade e purga",
+    "Mesmas origens e oito candidatos executados",
+    "Seleção e artefato congelados antes de abrir outubro",
+    "Explicações verificadas sem interpretação causal",
+    "Resultados negativos registrados; nenhuma aprovação operacional inferida"
+  ],
+  "selection_protocol": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json"
+}

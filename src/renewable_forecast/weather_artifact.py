@@ -145,32 +145,31 @@ def fit_artifact(input_dir: Path, model_dir: Path, origin: pd.Timestamp, threads
     return manifest
 
 def validate_wind_geometry(features: dict) -> None:
-    """Valida a consistência física e geométrica das componentes e velocidade do vento.
+    """Exige hypot(u_mean, v_mean) <= speed_mean + 1e-8, com chaves exatas."""
+    if not isinstance(features, dict):
+        raise ValueError("As features de vento devem estar em um dicionário.")
+    names = ("wind_speed_mean_ms", "wind_u_mean_ms", "wind_v_mean_ms")
+    values = []
+    for name in names:
+        if name not in features:
+            raise ValueError(f"Feature de vento ausente: {name}")
+        value = features[name]
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise ValueError(f"Feature de vento não numérica ou não finita: {name}")
+        try:
+            number = float(value)
+        except OverflowError as exc:
+            raise ValueError(f"Feature de vento não finita: {name}") from exc
+        if not np.isfinite(number):
+            raise ValueError(f"Feature de vento não finita: {name}")
+        values.append(number)
+    speed, u, v = values
 
-    Garante que a intensidade vetorial média não exceda a velocidade escalar média:
-    sqrt(u_mean^2 + v_mean^2) <= wind_speed_mean_ms + 1e-8.
-    """
-    # Identificação flexível das chaves de vento no dicionário de features
-    speed_key = next((k for k in features if "wind_speed" in k and "mean" in k), "wind_speed_mean_ms")
-    u_key = next((k for k in features if "u" in k and ("wind" in k or "speed" in k)), "wind_u_mean_ms")
-    v_key = next((k for k in features if "v" in k and ("wind" in k or "speed" in k)), "wind_v_mean_ms")
-
-    speed = features.get(speed_key, features.get("wind_speed_mean_ms"))
-    u = features.get(u_key, features.get("wind_u_mean_ms"))
-    v = features.get(v_key, features.get("wind_v_mean_ms"))
-
-    # Se as features de vento não estiverem presentes no dicionário, ignora
-    if speed is None or u is None or v is None:
-        return
-
-    # 1. Recusar velocidade escalar média negativa
     if speed < 0:
-        raise ValueError(f"A velocidade escalar média do vento ({speed_key}) não pode ser negativa: {speed}")
+        raise ValueError(f"A velocidade escalar média do vento (wind_speed_mean_ms) não pode ser negativa: {speed}")
 
-    # 2. Calcular a intensidade do vetor médio usando np.hypot (aceita u e v negativos)
+    # hypot admite componentes negativas e evita quadrados intermediários grandes.
     vector_magnitude = float(np.hypot(u, v))
-
-    # 3. Lançar ValueError se a magnitude vetorial exceder a velocidade média escalar em mais de 1e-8
     if vector_magnitude - speed > 1e-8:
         raise ValueError(
             f"Inconsistência geométrica do vento: a intensidade vetorial média ({vector_magnitude:.4f} m/s) "

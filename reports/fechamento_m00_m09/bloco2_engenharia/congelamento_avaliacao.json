@@ -1,0 +1,155 @@
+{
+  "schema": "renewcast-bloco2-freeze-v1",
+  "created_at_utc": "2026-11-25T19:27:20.852938+00:00",
+  "evaluation_month": "2026-10",
+  "raw_evaluation_present": false,
+  "files": [
+    {
+      "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+      "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+      "bytes": 125727
+    },
+    {
+      "path": "notebooks/bloco2_modelagem_core.py",
+      "sha256": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+      "bytes": 5022
+    },
+    {
+      "path": "notebooks/bloco2_risco_core.py",
+      "sha256": "6ac5c71d4d5d45d4aa7fb316b30910dd383362c6b6ac05c09762ae08e2e70b2c",
+      "bytes": 5215
+    },
+    {
+      "path": "notebooks/bloco2_validacao_risco.py",
+      "sha256": "1ab2efd0018cddbbfbd1449174ca573b27a17fba3fe05523685bd7bfd6e1ec17",
+      "bytes": 31448
+    },
+    {
+      "path": "notebooks/explicacao_local.py",
+      "sha256": "7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b",
+      "bytes": 10243
+    },
+    {
+      "path": "notebooks/selecao_atributos_temporal.py",
+      "sha256": "ed3a24b9c79a7721d9c9291a7c45c1207dcb43b83276dc075ea1b2401f30612b",
+      "bytes": 24057
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json",
+      "sha256": "d85a4d8b6efa1fa6579a8b8c5cecf87c6dbc835ca98c25d7a68846e84d092fc5",
+      "bytes": 8391
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/protocolo.json",
+      "sha256": "92e3791ae161e8e41ad179fd55bfb72e08fb35a13ef23656a9c850b523a2f6a2",
+      "bytes": 8391
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib",
+      "sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+      "bytes": 155323
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json",
+      "sha256": "a9cca9a359b8401099e63fe2805974d20c48e0f7bd994367543801bd4deaf347",
+      "bytes": 8326
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/selection_manifest.json",
+      "sha256": "f3b254a51978030dad9bc6d270880127bb0e6446b3f736f37df9e4d85a1f28c9",
+      "bytes": 3157
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/calibracao_congelada.json",
+      "sha256": "d034e9525a3a301e680f5dabc6f5ac3da82400a0a07ac2aad261656b58f0853c",
+      "bytes": 919
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json",
+      "sha256": "0752569eb41eb41f5d8fdd5ce12a7905ccbc66f235ebd91169ba6d13f08fb50e",
+      "bytes": 2151
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/interval_bundle.joblib",
+      "sha256": "a29dc53651925a9b48f330b90885b241226e890cee4f1f2bf382573705d5c6a3",
+      "bytes": 371630
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo.json",
+      "sha256": "c6a170bf1f18030400574d3e6911059cef2b75705c584f4946345bfc99afe37e",
+      "bytes": 5528
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo_ajuste.json",
+      "sha256": "3a40af121d5caf6684b12425ea7ccb80044761418e11e40d9ff736bc749b28f2",
+      "bytes": 1422
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json",
+      "sha256": "22147f3fdcedda925be7333341f527c7314e0a86a09801d64a1ee2fe15cbd007",
+      "bytes": 2152
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/politica_congelada.json",
+      "sha256": "40b8eb799258c49f478b6b19bb3b330139eef360858b66c8f5c0feb563e795a7",
+      "bytes": 853
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/probability_bundle.joblib",
+      "sha256": "ff770fb6acd5970aaa8a55625b78ae57c905b091d128d32c760c6f01eac63754",
+      "bytes": 155983
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo.json",
+      "sha256": "c549e9bdec33550d4b8ed039d2bc2edda56aa48715cdc310c780b6c46f2d33bf",
+      "bytes": 5521
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo_ajuste.json",
+      "sha256": "45c00ebeeeb4d0019ea4e1eb8cf0fb4b0b16fa1444c76ef207ba9aab34308acf",
+      "bytes": 1422
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json",
+      "sha256": "336620b4021c9ba48f81b56a280ce852d0fec7580bdab6cbecde732f15fedd2d",
+      "bytes": 1993
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo.json",
+      "sha256": "fbc2e0352f41e2f7cd2bc88e60643e00a0acf294d20c6bacace34f7b6cebe8b2",
+      "bytes": 5513
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo_ajuste.json",
+      "sha256": "8d629a5044dfa7096ce7e444bd39563667f3fe5b21c870f38dceeee7e70acb85",
+      "bytes": 1422
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/ramp_bundle.joblib",
+      "sha256": "898db4dda385be719b66868bb79d0edce7d3c9b6053e821cd4c242a865b7a2ed",
+      "bytes": 307869
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/protocolo_integrado.json",
+      "sha256": "5fce3481ca4333fac2e992f2697036e2729d47ca1e1abfbe2957a6592ae0c19c",
+      "bytes": 4055
+    },
+    {
+      "path": "scripts/obter_avaliacao_bloco2.py",
+      "sha256": "aa79b0595084a60b226b2b3984619f88e47ddc4f57c7d48b411529593b0c876b",
+      "bytes": 7479
+    },
+    {
+      "path": "tests/test_bloco2_modelagem.py",
+      "sha256": "53cd06ee4452806639296c92f335a637b8987c865057fbdb67ba5307d93c4e6b",
+      "bytes": 3871
+    },
+    {
+      "path": "tests/test_bloco2_risco.py",
+      "sha256": "24ebc8cfd71ac06fd3433ca876427c1bcb9f04d8f7a3ef15694a7c686563c4cd",
+      "bytes": 2694
+    }
+  ],
+  "operational_approval": false,
+  "changes_require_new_study": true
+}

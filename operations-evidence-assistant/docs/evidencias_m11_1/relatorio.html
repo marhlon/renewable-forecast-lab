@@ -1,0 +1,62 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>M11.1 — Geração local</title>
+<style>body{font:16px/1.5 system-ui;max-width:1120px;margin:2rem auto;padding:0 20px;color:#163047}
+table{border-collapse:collapse;font-size:14px}td,th{padding:.5rem;border:1px solid #c8d7e0;white-space:pre-wrap}
+th{background:#e7f3f3}.table{overflow:auto}code{background:#edf4f7;padding:1px 4px}.note{background:#eff5f7;padding:.8rem}</style>
+<h1>M11.1 — O que seu modelo gerou de fato?</h1>
+<p>Mesmas seis evidências, regra Python verificável e geração autoregressiva local. O código da primeira linha é o
+único campo julgado automaticamente; a razão em texto continua sujeita à revisão.</p>
+<h2>Entrada: texto, tokens e vetores</h2>
+<div class='table'><table><thead><tr><th>probe</th><th>texto</th><th>caracteres</th><th>bytes_utf8</th><th>tokens</th><th>forma_embeddings</th></tr></thead><tbody><tr><td>0</td><td>Geração caiu; corte 0,719944.</td><td>29</td><td>31</td><td>18</td><td>[1, 18, 576]</td></tr><tr><td>1</td><td>Geracao caiu; corte 0,719944.</td><td>29</td><td>29</td><td>17</td><td>[1, 17, 576]</td></tr><tr><td>2</td><td>Geração caiu; corte 0.719944.</td><td>29</td><td>31</td><td>18</td><td>[1, 18, 576]</td></tr><tr><td>3</td><td>An alarm is rejected.
+Status:</td><td>29</td><td>29</td><td>8</td><td>[1, 8, 576]</td></tr><tr><td>4</td><td>An alarm is allowed.
+Status:</td><td>28</td><td>28</td><td>8</td><td>[1, 8, 576]</td></tr></tbody></table></div>
+<p>Token final id 42: diferença de entrada 0; diferença após as camadas 1.934.</p>
+<h2>Saídas brutas (greedy, com todos os casos)</h2>
+<div class='table'><table><thead><tr><th>id</th><th>precisao</th><th>esperado</th><th>codigo</th><th>codigo_correto</th><th>novos_tokens</th><th>parada</th><th>texto</th></tr></thead><tbody><tr><td>renewcast_replay</td><td>fp32</td><td>BELOW</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+{&quot;usable&quot;:true,&quot;k&quot;:</td></tr><tr><td>renewcast_replay</td><td>int8_linear</td><td>BELOW</td><td>None</td><td>False</td><td>22</td><td>eos</td><td>You write evidence-based monitoring notes. Use only the supplied record. Do not infer a physical cause.</td></tr><tr><td>renewcast_sem_resposta</td><td>int8_linear</td><td>INSUFFICIENT</td><td>None</td><td>False</td><td>12</td><td>eos</td><td>
+What is the purpose of the following code block?</td></tr><tr><td>renewcast_sem_resposta</td><td>fp32</td><td>INSUFFICIENT</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+{&quot;usable&quot;:false,&quot;k&quot;:</td></tr><tr><td>satmon_tres_canais</td><td>fp32</td><td>BELOW</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+&quot;usable:true,k:</td></tr><tr><td>satmon_tres_canais</td><td>int8_linear</td><td>BELOW</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>The following record does not identify a physical cause of the incident:
+
+Record: {&quot;usable&quot;:true,&quot;k&quot;:2,&quot;cutoff&quot;:&quot;0.716435</td></tr><tr><td>satmon_sem52</td><td>int8_linear</td><td>ISOLATED</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>The rule is: &quot;s1 &gt;= cutoff and k is 1, or k is 2 and s2 is null or s2 &lt; cutoff.&quot;
+
+The rule is</td></tr><tr><td>satmon_sem52</td><td>fp32</td><td>ISOLATED</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+The record is:
+
+&quot;usable:true,k:</td></tr><tr><td>igualdade</td><td>fp32</td><td>ELIGIBLE</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>The record is:
+
+&quot;usable:true, k:2, cutoff:0.70, s1:0.73, s2:0.7</td></tr><tr><td>igualdade</td><td>int8_linear</td><td>ELIGIBLE</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>The following is a list of rules that can be used to identify a reading sequence:
+
+- s1 &lt; cutoff
+- s1 &gt;= cutoff
+- s1 &gt;= cutoff</td></tr><tr><td>picos_sem_par</td><td>int8_linear</td><td>ISOLATED</td><td>None</td><td>False</td><td>2</td><td>eos</td><td>yes</td></tr><tr><td>picos_sem_par</td><td>fp32</td><td>ISOLATED</td><td>None</td><td>False</td><td>36</td><td>limite_novos_tokens</td><td>The record is:
+
+&quot;usable:true, k:2, cutoff:0.70, s1:0.80, s2:null&quot;
+</td></tr></tbody></table></div>
+<h2>Uma evidência, orçamentos e decodificações diferentes</h2>
+<div class='table'><table><thead><tr><th>id</th><th>modo</th><th>temperatura</th><th>semente</th><th>esperado</th><th>codigo</th><th>novos_tokens</th><th>parada</th><th>texto</th></tr></thead><tbody><tr><td>satmon_sem52</td><td>greedy</td><td>None</td><td>None</td><td>ISOLATED</td><td>None</td><td>6</td><td>limite_novos_tokens</td><td>ELIGIBLE means the</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>0.3500</td><td>17</td><td>ISOLATED</td><td>ELIGIBLE</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE
+
+Record: {&quot;usable&quot;:true,&quot;k&quot;:2,&quot;cutoff&quot;:&quot;0.720126884520454</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>0.3500</td><td>29</td><td>ISOLATED</td><td>None</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence.
+
+The reason for this classification is that the record does not identify a detected incident. The rule is not able</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>0.3500</td><td>41</td><td>ISOLATED</td><td>None</td><td>36</td><td>limite_novos_tokens</td><td>ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.
+
+Record: {&quot;usable&quot;:true,&quot;k&quot;:2,&quot;cutoff&quot;:&quot;</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>1.2000</td><td>17</td><td>ISOLATED</td><td>None</td><td>36</td><td>limite_novos_tokens</td><td>The records that follow can be classified as follows:
+
+1. &quot;IsOLATED,&quot; which is true. This indicates the rule can identify a reading sequence when s = 2</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>1.2000</td><td>29</td><td>ISOLATED</td><td>None</td><td>36</td><td>limite_novos_tokens</td><td>The record contains the following data: 
+&quot;usable&quot;: 1, &quot;k&quot;: 2, &quot;cutoff&quot;: 0.720126884</td></tr><tr><td>satmon_sem52</td><td>top_k</td><td>1.2000</td><td>41</td><td>ISOLATED</td><td>None</td><td>36</td><td>limite_novos_tokens</td><td>The record is
+
+{
+&quot;usable&quot;:true,&quot;k&quot;:2,&quot;cutoff&quot;:&quot;0.7201268845204545</td></tr></tbody></table></div>
+<h2>Comparação de execução com trajetória fixada</h2>
+<div class='table'><table><thead><tr><th>precisao</th><th>rodada</th><th>tokens_prompt</th><th>tokens_trajetoria</th><th>prefill_ms</th><th>total_ms</th><th>tokens_decode_s</th></tr></thead><tbody><tr><td>fp32</td><td>1</td><td>239</td><td>17</td><td>522.4532</td><td>1412.0179</td><td>17.9863</td></tr><tr><td>int8_linear</td><td>1</td><td>239</td><td>17</td><td>269.5588</td><td>754.4102</td><td>32.9998</td></tr><tr><td>int8_linear</td><td>2</td><td>239</td><td>17</td><td>292.7039</td><td>772.7543</td><td>33.3298</td></tr><tr><td>fp32</td><td>2</td><td>239</td><td>17</td><td>547.2986</td><td>1413.4563</td><td>18.4724</td></tr><tr><td>fp32</td><td>3</td><td>239</td><td>17</td><td>410.1290</td><td>1276.5860</td><td>18.4660</td></tr><tr><td>int8_linear</td><td>3</td><td>239</td><td>17</td><td>298.4950</td><td>758.5174</td><td>34.7809</td></tr></tbody></table></div>
+<p class='note'>Tamanho do state_dict não mede RAM. Tempo de carregar, baixar e converter fica fora da comparação com trajetória fixa. Seis casos explorados não constituem teste de produção. Nenhuma saída é usada para comandar equipamentos ou alterar alarmes.</p>
+<p>Execução: <code>20261124T162732Z_b5d43eda</code>. Dados completos: <code>resultado.json</code>, <code>geracoes.csv</code>, <code>trilha_tokens.json</code>, <code>benchmark.csv</code> se disponível.</p>

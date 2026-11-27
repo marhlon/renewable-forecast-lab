@@ -1,0 +1,42 @@
+{
+  "schema": "renewcast-bloco2-evaluation-execution-addendum-v1",
+  "documented_at_utc": "2026-11-25T20:01:14.560264+00:00",
+  "started_at": "2026-11-25T19:55:10.335848+00:00",
+  "completed_at": "2026-11-25T19:55:10.631933+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-u",
+    "notebooks\\selecao_atributos_temporal.py",
+    "--avaliar",
+    "--evaluation-parquet",
+    "reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\geracao_CJU_BA5EIGT_2026_10.parquet"
+  ],
+  "shell": "powershell",
+  "shell_command": "& 'C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe' -u notebooks\\selecao_atributos_temporal.py --avaliar --evaluation-parquet reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\geracao_CJU_BA5EIGT_2026_10.parquet",
+  "cwd": "C:\\renewable-forecast-lab",
+  "exit_code": 0,
+  "observed_execution_count": 1,
+  "execution_receipt_path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/evaluation_receipt.json",
+  "execution_receipt_sha256": "203a5157dfb1da180bafc33c92efd07d1c243751fb11f46700b30d1e121c61be",
+  "code_sha256": {
+    "notebooks/selecao_atributos_temporal.py": "ed3a24b9c79a7721d9c9291a7c45c1207dcb43b83276dc075ea1b2401f30612b",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc",
+    "notebooks/explicacao_local.py": "7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b"
+  },
+  "point_bundle_path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib",
+  "point_bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+  "source_path": "reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\geracao_CJU_BA5EIGT_2026_10.parquet",
+  "source_sha256": "aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab",
+  "output_sha256": {
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_evaluation.csv": "7f4da0587b94177c00f70843a06390afe46fbd983cb225caebc986b14b751cd5"
+  },
+  "observation": {
+    "tool": "exec_command followed by write_stdin",
+    "session_id": 65435,
+    "completion_chunk_id": "6663e1",
+    "observed_exit_code": 0
+  },
+  "provenance": "Codex registra agora o comando e o codigo zero realmente observados na chamada unica de avaliacao; os horarios de inicio/fim foram copiados do recibo original, sem inventar horarios externos. Nenhuma nova inferencia, ajuste, selecao ou execucao do CLI foi feita para este adendo.",
+  "execution_is_repeated": false,
+  "operational_approval": false
+}

@@ -1,0 +1,411 @@
+{
+  "schema": "opevid-m11-1-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-24T18:29:35.563484+00:00",
+  "run_id": "20261124T182345Z_2a298bc9",
+  "run_directory": "reports/m11_1/20261124T182345Z_2a298bc9",
+  "method": "Standard-library persisted-artifact audit: Decimal, static ByteLevel decoding, partial probability bounds and scalar benchmark arithmetic. No model/tokenizer API, forward, sampling library, benchmark or download executed.",
+  "checks": {
+    "output_case_code_author_model_lock_requirement_hashes": true,
+    "all_seven_snapshot_files_sha256": true,
+    "token_ids_static_bytelevel_roundtrip_and_shapes": true,
+    "decimal_separator_and_context_probe_scalars": true,
+    "six_case_decimal_decisions_and_greedy_counts": true,
+    "generation_ids_text_budget_stop_consistency": true,
+    "six_sampling_combinations_rng_and_partial_trace_bounds": true,
+    "short_long_greedy_prefix": true,
+    "six_paired_benchmark_rows_equal_work_and_medians": true,
+    "state_dict_size_ratios_and_percentages": true
+  },
+  "checked_hashes": {
+    "model/model_lock.json": "5e9d0eefbb964ad0cebd97a8277d8a92021a054af06e7ec0d3e729f1adff115f",
+    "docs/m11_1/requirements.lock.txt": "5bfafbb2656325b50ff7c428f8d68f49d55be89885449120475dd2a76108d4e0",
+    "data/casos_m11_1.json": "c34ae3f9366a540608fd643ec279434619155223e3c122af890fa8dece45da74",
+    "notebooks/m11_1_amostragem_autoral.py": "8171e814f6943757cccd9f7eb9e5b662fa79e6fe4895d1ba4ac27adb1209f23b",
+    "scripts/laboratorio_m11_1.py": "82a71870d050488daf8f854309b40df46eece485986fa4c23fc5ebf9041230ae",
+    "scripts/executar_m11_1.py": "f71390ca6ce28d9de9c11da4fb1b0f893c49d82d4179f43f6e9f7b97ad790cdf",
+    "src/opevid/amostragem.py": "02deba7a0fe5fd71929797766fa71d7df75b7f9ac045a0ce621f0a876cbb1ed9",
+    "src/opevid/contrato.py": "6747c38c57f28d307678f3ec8e7247d2027ffe47d14e99dcb2b107baf0ecf4a6",
+    "src/opevid/modelo_local.py": "0c3bcec3778b85cedaaa8cd238eed507b7a29ea6fc7526f1bdf8b29c4f59c10e",
+    "reports/m11_1/20261124T182345Z_2a298bc9/baseline_regra.csv": "acc8b38ccf65242e64127ed7c01a87a81a2b5e041c11c41d50e9993748f1e36b",
+    "reports/m11_1/20261124T182345Z_2a298bc9/benchmark.csv": "90423ee34508b66e7c45a3ea95d8dd1d81dddd9c54f98401a1482356bcc62d74",
+    "reports/m11_1/20261124T182345Z_2a298bc9/embeddings.json": "2e7ca70e6da5814955538c78cacc39a5896896be9d8602f9d0c8e1dfadd5d216",
+    "reports/m11_1/20261124T182345Z_2a298bc9/geracoes.csv": "804f2628f83d5b005a00a7bd11ae59621020665bf41b7fd1095be319713f8ff9",
+    "reports/m11_1/20261124T182345Z_2a298bc9/relatorio.html": "10c466e58059be46de6f6118f23770c7f031f3cd959e59421f1cc011c1b3696a",
+    "reports/m11_1/20261124T182345Z_2a298bc9/tokens.csv": "91b7e7178f6ddbb76f6f01e79ed4b6c46919ef9cfdff3d2e4cda25598f7fc012",
+    "reports/m11_1/20261124T182345Z_2a298bc9/trilha_tokens.json": "9d2782b6958d8bea46bd213d72d5f6ce90a5988d92068eb45d7d897551302903",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md": "4f97533ad95b1b2fea15fbc075c01b94578ebdd7c8138888fa43fa3abd530dc4",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/config.json": "8eb740e8bbe4cff95ea7b4588d17a2432deb16e8075bc5828ff7ba9be94d982a",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/generation_config.json": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer.json": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/tokenizer_config.json": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/special_tokens_map.json": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52",
+    ".cache/m11_1/12fd25f77366fa6b3b4b768ec3050bf629380bac/model.safetensors": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c"
+  },
+  "model_file_count_verified": 7,
+  "decimal_separator_changes": [
+    {
+      "position_zero_based": 10,
+      "comma_id": 28,
+      "dot_id": 30,
+      "comma_piece": ",",
+      "dot_piece": "."
+    }
+  ],
+  "token_probe_summary": [
+    {
+      "probe": 0,
+      "texto": "Geração caiu; corte 0,719944.",
+      "caracteres": 29,
+      "bytes_utf8": 31,
+      "tokens": 18,
+      "forma_embeddings": [
+        1,
+        18,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 1,
+      "texto": "Geracao caiu; corte 0,719944.",
+      "caracteres": 29,
+      "bytes_utf8": 29,
+      "tokens": 17,
+      "forma_embeddings": [
+        1,
+        17,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 2,
+      "texto": "Geração caiu; corte 0.719944.",
+      "caracteres": 29,
+      "bytes_utf8": 31,
+      "tokens": 18,
+      "forma_embeddings": [
+        1,
+        18,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 3,
+      "texto": "An alarm is rejected.\nStatus:",
+      "caracteres": 29,
+      "bytes_utf8": 29,
+      "tokens": 8,
+      "forma_embeddings": [
+        1,
+        8,
+        576
+      ],
+      "round_trip": true
+    },
+    {
+      "probe": 4,
+      "texto": "An alarm is allowed.\nStatus:",
+      "caracteres": 28,
+      "bytes_utf8": 28,
+      "tokens": 8,
+      "forma_embeddings": [
+        1,
+        8,
+        576
+      ],
+      "round_trip": true
+    }
+  ],
+  "context_embedding_contraproof_recorded": {
+    "mesmo_token_final": ":",
+    "token_id": 42,
+    "delta_max_entrada": 0.0,
+    "delta_max_contextual": 1.9337141513824463,
+    "cosseno_contextual": 0.9827912449836731
+  },
+  "expected_codes_recomputed_with_decimal": {
+    "renewcast_replay": "BELOW",
+    "renewcast_sem_resposta": "INSUFFICIENT",
+    "satmon_tres_canais": "BELOW",
+    "satmon_sem52": "ISOLATED",
+    "igualdade": "ELIGIBLE",
+    "picos_sem_par": "ISOLATED"
+  },
+  "greedy_summary_recomputed": {
+    "fp32": {
+      "n": 6,
+      "codigos_validos": 0,
+      "codigos_corretos": 0
+    },
+    "int8_linear": {
+      "n": 6,
+      "codigos_validos": 0,
+      "codigos_corretos": 0
+    }
+  },
+  "paired_greedy_different_token_sequences": 6,
+  "generation_count": 19,
+  "stop_reason_counts": {
+    "eos": 2,
+    "limite_novos_tokens": 17
+  },
+  "sampled_decisions_count_reconciled": 216,
+  "first_step_partial_probability_bounds": [
+    {
+      "seed": 17,
+      "selected_id": 4210,
+      "u": 0.5219839097124932,
+      "temperature": 0.35,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.8463086531271979,
+      "top1_probability_upper_bound": 0.8698986725988915,
+      "selected_rank_in_saved_top4": 1,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": true,
+      "exact_top8_probability_available": false
+    },
+    {
+      "seed": 29,
+      "selected_id": 4210,
+      "u": 0.5481190538116991,
+      "temperature": 0.35,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.8463086531271979,
+      "top1_probability_upper_bound": 0.8698986725988915,
+      "selected_rank_in_saved_top4": 1,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": true,
+      "exact_top8_probability_available": false
+    },
+    {
+      "seed": 41,
+      "selected_id": 4210,
+      "u": 0.38102068999577143,
+      "temperature": 0.35,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.8463086531271979,
+      "top1_probability_upper_bound": 0.8698986725988915,
+      "selected_rank_in_saved_top4": 1,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": true,
+      "exact_top8_probability_available": false
+    },
+    {
+      "seed": 17,
+      "selected_id": 504,
+      "u": 0.5219839097124932,
+      "temperature": 1.2,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.32582078417802934,
+      "top1_probability_upper_bound": 0.47835112603464064,
+      "selected_rank_in_saved_top4": 2,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": false,
+      "exact_top8_probability_available": false
+    },
+    {
+      "seed": 29,
+      "selected_id": 504,
+      "u": 0.5481190538116991,
+      "temperature": 1.2,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.32582078417802934,
+      "top1_probability_upper_bound": 0.47835112603464064,
+      "selected_rank_in_saved_top4": 2,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": false,
+      "exact_top8_probability_available": false
+    },
+    {
+      "seed": 41,
+      "selected_id": 504,
+      "u": 0.38102068999577143,
+      "temperature": 1.2,
+      "top1_id": 4210,
+      "top1_probability_lower_bound": 0.32582078417802934,
+      "top1_probability_upper_bound": 0.47835112603464064,
+      "selected_rank_in_saved_top4": 2,
+      "choice_possible_from_partial_trace": true,
+      "choice_guaranteed_by_partial_bounds": false,
+      "exact_top8_probability_available": false
+    }
+  ],
+  "sampling_valid_but_wrong": [
+    {
+      "precisao": "fp32",
+      "modo": "top_k",
+      "temperatura": "0.35",
+      "semente": "17",
+      "id": "satmon_sem52",
+      "tipo": "evidencia_anterior",
+      "esperado": "ISOLATED",
+      "codigo": "ELIGIBLE",
+      "codigo_valido": "True",
+      "codigo_correto": "False",
+      "entrada_tokens": "239",
+      "novos_tokens": "36",
+      "teto_novos": "36",
+      "parada": "limite_novos_tokens",
+      "ttft_ms_inclui_selecao": "694.1167000040878",
+      "tempo_decode_total_ms": "5624.36329999764",
+      "texto": "ELIGIBLE\n\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.720126884520454"
+    }
+  ],
+  "short_greedy": {
+    "precisao": "fp32",
+    "modo": "greedy",
+    "temperatura": "",
+    "semente": "",
+    "id": "satmon_sem52",
+    "tipo": "evidencia_anterior",
+    "esperado": "ISOLATED",
+    "codigo": "",
+    "codigo_valido": "False",
+    "codigo_correto": "False",
+    "entrada_tokens": "239",
+    "novos_tokens": "6",
+    "teto_novos": "6",
+    "parada": "limite_novos_tokens",
+    "ttft_ms_inclui_selecao": "578.1816999951843",
+    "tempo_decode_total_ms": "934.9018999928376",
+    "texto": "ELIGIBLE means the"
+  },
+  "invalid_greedy_outputs": [
+    {
+      "id": "renewcast_replay",
+      "precision": "fp32",
+      "expected": "BELOW",
+      "first_nonempty_line": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.",
+      "text": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\n\nThe record is:\n\n{\"usable\":true,\"k\":"
+    },
+    {
+      "id": "renewcast_replay",
+      "precision": "int8_linear",
+      "expected": "BELOW",
+      "first_nonempty_line": "The record is valid because the rule is consistent with the context. The rule is consistent with the context because it is a valid reading sequence. The rule is consistent with the context because",
+      "text": "The record is valid because the rule is consistent with the context. The rule is consistent with the context because it is a valid reading sequence. The rule is consistent with the context because"
+    },
+    {
+      "id": "renewcast_sem_resposta",
+      "precision": "int8_linear",
+      "expected": "INSUFFICIENT",
+      "first_nonempty_line": "I'm ready to help you analyze your data. What's the name of the data set you're working with? What's the name of the data set you're analyzing?",
+      "text": "I'm ready to help you analyze your data. What's the name of the data set you're working with? What's the name of the data set you're analyzing?"
+    },
+    {
+      "id": "renewcast_sem_resposta",
+      "precision": "fp32",
+      "expected": "INSUFFICIENT",
+      "first_nonempty_line": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.",
+      "text": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\n\nThe record is:\n\n{\"usable\":false,\"k\":"
+    },
+    {
+      "id": "satmon_tres_canais",
+      "precision": "fp32",
+      "expected": "BELOW",
+      "first_nonempty_line": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.",
+      "text": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\n\nThe record is:\n\n\"usable:true,k:"
+    },
+    {
+      "id": "satmon_tres_canais",
+      "precision": "int8_linear",
+      "expected": "BELOW",
+      "first_nonempty_line": "Based on the given rules, the following record is invalid:",
+      "text": "Based on the given rules, the following record is invalid:\n\nRecord: {\"usable\":true,\"k\":2,\"cutoff\":\"0.7164359"
+    },
+    {
+      "id": "satmon_sem52",
+      "precision": "int8_linear",
+      "expected": "ISOLATED",
+      "first_nonempty_line": "Based on the rules, the record is:",
+      "text": "Based on the rules, the record is:\n\n\"usable: s1 >= cutoff and k is 1, or k is 2 or s2 >= cutoff.\"\n"
+    },
+    {
+      "id": "satmon_sem52",
+      "precision": "fp32",
+      "expected": "ISOLATED",
+      "first_nonempty_line": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.",
+      "text": "ELIGIBLE means the rule can confirm a reading sequence; it does not identify a detected incident.\n\nThe record is:\n\n\"usable:true,k:"
+    },
+    {
+      "id": "igualdade",
+      "precision": "fp32",
+      "expected": "ELIGIBLE",
+      "first_nonempty_line": "The record is:",
+      "text": "The record is:\n\n\"usable:true, k:2, cutoff:0.70, s1:0.73, s2:0.7"
+    },
+    {
+      "id": "igualdade",
+      "precision": "int8_linear",
+      "expected": "ELIGIBLE",
+      "first_nonempty_line": "The following code is a simple implementation of the rules:",
+      "text": "The following code is a simple implementation of the rules:\n\n```python\ndef is_valid_reading(s1, s2):\n    if s1 >= cutoff and"
+    },
+    {
+      "id": "picos_sem_par",
+      "precision": "int8_linear",
+      "expected": "ISOLATED",
+      "first_nonempty_line": "What is the difference between the two rules?",
+      "text": "\nWhat is the difference between the two rules?"
+    },
+    {
+      "id": "picos_sem_par",
+      "precision": "fp32",
+      "expected": "ISOLATED",
+      "first_nonempty_line": "The record is:",
+      "text": "The record is:\n\n\"usable:true, k:2, cutoff:0.70, s1:0.80, s2:null\"\n"
+    }
+  ],
+  "benchmark_medians_recomputed": {
+    "fp32": {
+      "prefill_ms": 767.3378000035882,
+      "total_ms": 1985.2230999968015,
+      "tokens_decode_s": 11.759840248515466
+    },
+    "int8_linear": {
+      "prefill_ms": 504.95230000524316,
+      "total_ms": 1604.863499989733,
+      "tokens_decode_s": 12.907597734778857
+    }
+  },
+  "serialized_state_sizes": {
+    "fp32_bytes_recorded": 538149619,
+    "int8_bytes_recorded": 219806563,
+    "fp32_mib": 513.2194700241089,
+    "int8_mib": 209.62387371063232,
+    "relative_reduction_percent": 59.155120576235134,
+    "fp32_over_int8_ratio": 2.4482873106932663
+  },
+  "median_total_time_reduction_percent": 19.15953929851416,
+  "median_decode_throughput_gain_percent": 9.75997515279412,
+  "synthetic_exact_top2_probabilities": {
+    "1.0": {
+      "p_id1": 0.7310585786300049,
+      "p_id2": 0.2689414213699951,
+      "choice_at_u_0_8": 2
+    },
+    "0.5": {
+      "p_id1": 0.8807970779778823,
+      "p_id2": 0.11920292202211755,
+      "choice_at_u_0_8": 1
+    }
+  },
+  "limits": {
+    "llm_forward_or_generation_repeated": false,
+    "benchmark_repeated": false,
+    "all_real_top8_decisions_independently_recomputed": false,
+    "full_logits_or_top8_not_persisted": true,
+    "runner_declared_real_logit_checks": 216,
+    "embedding_context_vectors_recomputed": false,
+    "greedy_generate_api_comparison_repeated": false,
+    "prompts_retokenized": false,
+    "serialized_sizes_independently_remeasured": false,
+    "temporary_state_dict_files_were_not_persisted": true,
+    "ram_peak_measured": false,
+    "production_validity_established": false,
+    "note": "Model hashes and persisted scalars support the recorded experiment. Top4 yields only bounds for top8. Runtime vector/quantization assertions are not re-executed; fixed-work medians and six cases do not establish production latency or truth of reasons."
+  }
+}

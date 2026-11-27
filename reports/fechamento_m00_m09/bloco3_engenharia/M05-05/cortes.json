@@ -1,0 +1,74 @@
+{
+  "selected_series": [
+    {
+      "series_id": "CEECVA",
+      "rows": 744,
+      "timestamps": 744,
+      "name": "EOL CTV ACARAU1"
+    },
+    {
+      "series_id": "CEEMAU",
+      "rows": 744,
+      "timestamps": 744,
+      "name": "EOL MALHADINHA"
+    },
+    {
+      "series_id": "CEUCZ",
+      "rows": 744,
+      "timestamps": 744,
+      "name": "EOL ICARAIZINHO"
+    },
+    {
+      "series_id": "CEUFM",
+      "rows": 744,
+      "timestamps": 744,
+      "name": "EOL PRA FORMOSA"
+    }
+  ],
+  "selection": "4 ids lexicograficamente primeiros EOL*, rows=744 e timestamps únicos=744; exclui CJU_BA5EIGT/CJUBA5EIGT; sem consultar geração/desempenho",
+  "generalization": "Temporal nas mesmas quatro séries conhecidas; não mede série nova, transferência geográfica nem anual",
+  "target": "Geração MW em t+1h",
+  "features": [
+    "lag2",
+    "lag3",
+    "lag24",
+    "mean6",
+    "hour_sin",
+    "hour_cos",
+    "series_code"
+  ],
+  "feature_groups": "história causal lag2/lag3/lag24/média t-2..t-7, calendário sen/cos, código categórico fixo por série",
+  "cuts": {
+    "train_origin_before": "2026-10-16 00:00:00",
+    "train_label_available_strictly_before": "2026-10-16 00:00:00",
+    "validation_origin": [
+      "2026-10-16 00:00:00",
+      "2026-10-22 00:00:00"
+    ],
+    "test_origin": [
+      "2026-10-22 00:00:00",
+      "2026-11-01 00:00:00"
+    ],
+    "last_test_origin": "2026-10-31 22:00:00"
+  },
+  "model": {
+    "class": "HistGradientBoostingRegressor",
+    "loss": "squared_error",
+    "max_iter": 100,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "l2_regularization": 1.0,
+    "random_state": 0,
+    "early_stopping": false,
+    "categorical_features_global": [
+      "series_code"
+    ]
+  },
+  "comparison": "Um global, quatro locais mesmos hiperparâmetros e persistência disponível lag2 nas mesmas origens elegíveis; sem normalização, capacidade ou tuning; validação apenas diagnóstico",
+  "criteria": [
+    "fit usa apenas rótulos disponíveis estritamente antes do corte",
+    "coorte pareada global/local/persistência por série e agregado",
+    "métricas MW MAE/RMSE/viés, sem exigir ganho positivo",
+    "nenhuma promoção de P1 ou aprovação operacional"
+  ]
+}

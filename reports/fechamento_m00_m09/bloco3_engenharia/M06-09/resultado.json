@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-11-26T00:37:53.092017+00:00",
+  "engineering_preparation_completed": true,
+  "deployment_executed": false,
+  "actual_cloud_cost_observed": false,
+  "operational_criteria": {
+    "C1": false,
+    "C2": false
+  },
+  "blocked_by": [
+    "titular/conta/projeto/região confirmados",
+    "teto financeiro numérico aprovado",
+    "prazo TTL e alarme de orçamento",
+    "credencial por secret manager/identidade de curta duração",
+    "CI remoto clone limpo comprovado",
+    "artefatos assinados/hash e storage privado",
+    "responsável pelo incidente",
+    "autorização explícita para criar e cobrar recursos"
+  ]
+}

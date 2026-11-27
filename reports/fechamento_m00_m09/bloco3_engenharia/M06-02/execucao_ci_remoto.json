@@ -1,0 +1,42 @@
+{
+  "started_at_utc": "2026-11-26T20:12:43.896284+00:00",
+  "completed_at_utc": "2026-11-26T20:15:39.725773+00:00",
+  "exit_code": 0,
+  "branch": "codex/bloco3-ci-20261126",
+  "runs": [
+    {
+      "run_id": 45889419488,
+      "commit": "047d8662158793f3e0e393957f1a6b382f8f3296",
+      "conclusion": "failure",
+      "html_url": "https://github.com/marhlon/renewable-forecast-lab/actions/runs/45889419488",
+      "logs": [
+        {
+          "file": "actions_falha_job_140148107307.log",
+          "sha256": "9b197e3de365669aa8f510c015e9a9c093cad1060c8b7da6d63fd6b3ff9c7f18",
+          "job_id": 140148107307
+        }
+      ],
+      "jobs_file": "actions_falha_jobs.json"
+    },
+    {
+      "run_id": 45889590759,
+      "commit": "a487f7c9f37951102cc2be9ff38830ea04ad5f52",
+      "conclusion": "success",
+      "html_url": "https://github.com/marhlon/renewable-forecast-lab/actions/runs/45889590759",
+      "logs": [
+        {
+          "file": "actions_sucesso_job_140148659800.log",
+          "sha256": "3fd44cf4011dede979caac05856d03b120222b91c5af8f1b1b6920c13a992480",
+          "job_id": 140148659800
+        }
+      ],
+      "jobs_file": "actions_sucesso_jobs.json"
+    }
+  ],
+  "negative_temporal_contract_confirmed": true,
+  "positive_run_confirmed": true,
+  "merged": false,
+  "deployed": false,
+  "credentials_printed_or_persisted": false,
+  "operational_approval": false
+}

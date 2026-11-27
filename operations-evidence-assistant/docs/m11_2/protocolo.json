@@ -1,0 +1,21 @@
+{
+  "schema": "opevid-m11-2-protocol-v1",
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "dev_sha256": "c34ae3f9366a540608fd643ec279434619155223e3c122af890fa8dece45da74",
+  "reserved_sha256": "cc1ccc727b76073e7cda2384c24e68fa8148547f20aaac81e87b4c301ed8946a",
+  "variants": [
+    "zero_shot",
+    "um_exemplo"
+  ],
+  "threads": 2,
+  "new_tokens": 120,
+  "context_limit": 768,
+  "selection": [
+    "max_fiel",
+    "max_esquema_ok",
+    "min_novos_tokens",
+    "ordem_fixa_do_protocolo"
+  ],
+  "reserved_is_synthetic": true,
+  "no_retries_or_repair": true
+}

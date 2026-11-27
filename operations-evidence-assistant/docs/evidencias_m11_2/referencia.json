@@ -1,0 +1,60 @@
+{
+  "schema": "opevid-m11-2-reference-summary-v1",
+  "tipo": "executado em Linux x86_64; reservado apenas em agregado",
+  "run_id": "20261124T195008Z_3bf3c026",
+  "reference_receipt_sha256": "4713ae2d9c5c55c4ffac24c749d7f4c86bd4a292e74c16bf65657b7bc4c5fbbd",
+  "report_sha256": "307a1a7917f9b7494fd621ac5c675845b0e727e7923ef284779dbcc5f94efb64",
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "versions": {
+    "torch": "2.7.1+cpu",
+    "transformers": "4.49.0",
+    "tokenizers": "0.21.1",
+    "pydantic": "2.13.4",
+    "pydantic-core": "2.46.4"
+  },
+  "protocol_sha256": "ea74892aa61116d7190f7eecaa42f69b93ac2f75ed184c9ab07a615cda90e0dc",
+  "metricas": [
+    {
+      "particao": "desenvolvimento",
+      "prompt": "zero_shot",
+      "casos": 6,
+      "json_ok": 5,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 1881,
+      "tokens_novos": 375
+    },
+    {
+      "particao": "desenvolvimento",
+      "prompt": "um_exemplo",
+      "casos": 6,
+      "json_ok": 0,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 2451,
+      "tokens_novos": 720
+    },
+    {
+      "particao": "reservado",
+      "prompt": "zero_shot",
+      "casos": 6,
+      "json_ok": 6,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 1807,
+      "tokens_novos": 265
+    }
+  ],
+  "contraprovas": 16,
+  "raw_model_typed_checked": 0,
+  "selection_source": "zero_shot"
+}

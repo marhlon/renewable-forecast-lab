@@ -1,0 +1,9 @@
+﻿natureza,id_ons,dia,horas_presentes,horas_validas,media_mwmed,cobertura
+referencia_assistida_demo_sintetica_resolvida,A,2027-01-01,3,2,6.0,0.08333333333333333
+referencia_assistida_demo_sintetica_resolvida,A,2027-01-02,0,0,,0.0
+referencia_assistida_demo_sintetica_resolvida,A,2027-01-03,1,1,30.0,0.041666666666666664
+referencia_assistida_demo_sintetica_resolvida,A,2027-01-04,2,0,,0.0
+referencia_assistida_demo_sintetica_resolvida,B,2027-01-01,2,2,150.0,0.08333333333333333
+referencia_assistida_demo_sintetica_resolvida,B,2027-01-02,0,0,,0.0
+referencia_assistida_demo_sintetica_resolvida,B,2027-01-03,0,0,,0.0
+referencia_assistida_demo_sintetica_resolvida,B,2027-01-04,1,1,0.0,0.041666666666666664

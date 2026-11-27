@@ -1,0 +1,13 @@
+﻿Interpretador: C:\renewable-forecast-lab\.venvs\m09_3_chronos\Scripts\python.exe
+Carregando SmolLM2 em CPU. Sem API externa ou ajuste de pesos.
+Tokens e embeddings conferidos. Testando decodificação, orçamento e sementes.
+Quantização: comparando a mesma trajetória (3 rodadas aquecidas por variante).
+Caso conferido: renewcast_replay
+Caso conferido: renewcast_sem_resposta
+Caso conferido: satmon_tres_canais
+Caso conferido: satmon_sem52
+Caso conferido: igualdade
+Caso conferido: picos_sem_par
+Greedy, código correto: {'fp32': '0/6', 'int8_linear': '0/6'}
+INT8: medida
+Relatório: C:\renewable-forecast-lab\operations-evidence-assistant\reports\m11_1\20261124T182345Z_2a298bc9\relatorio.html

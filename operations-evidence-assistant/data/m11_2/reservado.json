@@ -1,0 +1,8 @@
+[
+  {"id":"hold_abaixo_unitario","tipo":"cenario_sintetico","usable":true,"k":1,"cutoff":"0.5","s1":"0.4999999999999999999","s2":null},
+  {"id":"hold_sem_registro","tipo":"cenario_sintetico","usable":false,"k":2,"cutoff":"0.63","s1":null,"s2":null},
+  {"id":"hold_pico_no_corte","tipo":"cenario_sintetico","usable":true,"k":2,"cutoff":"0.65","s1":"0.650","s2":"0.649"},
+  {"id":"hold_sem_par","tipo":"cenario_sintetico","usable":true,"k":2,"cutoff":"0.63","s1":"0.71","s2":null},
+  {"id":"hold_par_igual","tipo":"cenario_sintetico","usable":true,"k":2,"cutoff":"0.71","s1":"0.79","s2":"0.7100"},
+  {"id":"hold_unitario_igual","tipo":"cenario_sintetico","usable":true,"k":1,"cutoff":"0.58","s1":"0.580","s2":null}
+]

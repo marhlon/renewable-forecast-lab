@@ -1,0 +1,337 @@
+{
+  "schema": "renewcast-m04-01-counterexamples-v1",
+  "item": "M04-01",
+  "executed_at_utc": "2026-11-25T11:35:30.115728+00:00",
+  "argv": [
+    "tests/test_wind_geometry.py",
+    "--contraprovas",
+    "reports/fechamento_m00_m09/M04-01/contraprovas.json"
+  ],
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.6.0",
+    "pytest": "9.1.1"
+  },
+  "passed": true,
+  "case_count": 38,
+  "cases": [
+    {
+      "id": "valido_original",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "valido_invertida",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "valido_cubed_primeiro",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "impossivel_v12_u30_v0_original",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Inconsistência geométrica do vento: a intensidade vetorial média (30.0000 m/s) não pode exceder a velocidade escalar média (12.0000 m/s) em mais de 1e-8.",
+      "passed": true
+    },
+    {
+      "id": "impossivel_v12_u30_v0_invertida",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Inconsistência geométrica do vento: a intensidade vetorial média (30.0000 m/s) não pode exceder a velocidade escalar média (12.0000 m/s) em mais de 1e-8.",
+      "passed": true
+    },
+    {
+      "id": "impossivel_v12_u30_v0_cubed_primeiro",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Inconsistência geométrica do vento: a intensidade vetorial média (30.0000 m/s) não pode exceder a velocidade escalar média (12.0000 m/s) em mais de 1e-8.",
+      "passed": true
+    },
+    {
+      "id": "velocidade_negativa",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "A velocidade escalar média do vento (wind_speed_mean_ms) não pode ser negativa: -5.0",
+      "passed": true
+    },
+    {
+      "id": "u_negativo",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "v_negativo",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "u_v_negativos",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "zero",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "dentro_tolerancia",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "acima_tolerancia",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Inconsistência geométrica do vento: a intensidade vetorial média (1.0000 m/s) não pode exceder a velocidade escalar média (1.0000 m/s) em mais de 1e-8.",
+      "passed": true
+    },
+    {
+      "id": "hypot_grande_finito",
+      "expected": "aceitar",
+      "observed": "aceitar",
+      "input_preserved": true,
+      "error": null,
+      "passed": true
+    },
+    {
+      "id": "ausente_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento ausente: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nan_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "inf_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "menos_inf_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nulo_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "booleano_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "texto_wind_speed_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_speed_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "ausente_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento ausente: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nan_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "inf_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "menos_inf_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nulo_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "booleano_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "texto_wind_u_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_u_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "ausente_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento ausente: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nan_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "inf_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "menos_inf_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "nulo_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "booleano_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "texto_wind_v_mean_ms",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "Feature de vento não numérica ou não finita: wind_v_mean_ms",
+      "passed": true
+    },
+    {
+      "id": "entrada_nula",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "As features de vento devem estar em um dicionário.",
+      "passed": true
+    },
+    {
+      "id": "entrada_lista",
+      "expected": "rejeitar",
+      "observed": "rejeitar",
+      "input_preserved": true,
+      "error": "As features de vento devem estar em um dicionário.",
+      "passed": true
+    },
+    {
+      "id": "pedido_historico_sem_modelo",
+      "passed": true,
+      "shape": [
+        1,
+        32
+      ],
+      "same_row_in_reversed_order": true,
+      "impossible_reversed_request_rejected": true,
+      "input_preserved": true,
+      "fit_and_pickle_load_blocked": true,
+      "inputs": {
+        "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/request.json": "0dfd81cb79f9916097f12023b8c0f5981488bf69424d181f9a2c1fdbb9886d08",
+        "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/model/manifest.json": "564083d04c2a86e33e89845e7d59e1cdd623416b3196b30ae1b4bd98f3c8e15e"
+      }
+    }
+  ],
+  "fit_called": false,
+  "model_pickle_loaded": false
+}

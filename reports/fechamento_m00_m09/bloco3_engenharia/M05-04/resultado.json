@@ -1,0 +1,61 @@
+{
+  "completed": true,
+  "phase": "exploratory_october_complete",
+  "started_at_utc": "2026-11-26T13:57:44.324787+00:00",
+  "completed_at_utc": "2026-11-26T13:57:49.252399+00:00",
+  "fit_seconds": 4.928248699987307,
+  "command": [
+    "notebooks\\bloco3_alternativas.py",
+    "completo"
+  ],
+  "exit_code": 0,
+  "selected": {
+    "lightgbm": {
+      "family": "lightgbm",
+      "trees": 120,
+      "n": 504,
+      "mae": 29.49446601780548,
+      "rmse": 39.599314742785246,
+      "seconds_fit_predict": 0.5788777000270784
+    },
+    "catboost": {
+      "family": "catboost",
+      "trees": 120,
+      "n": 504,
+      "mae": 28.36885546686217,
+      "rmse": 37.77256072647695,
+      "seconds_fit_predict": 1.7365104999626055
+    }
+  },
+  "operational_approval": false,
+  "october_evaluated_at_utc": "2026-11-26T13:57:49.427126+00:00",
+  "october_metrics": [
+    {
+      "method": "lightgbm",
+      "n": 695,
+      "mae": 18.05889307209005,
+      "rmse": 24.708468181380386,
+      "bias_observed_minus_predicted": -0.1477987540750257,
+      "predict_seconds": 0.007608400017488748
+    },
+    {
+      "method": "catboost",
+      "n": 695,
+      "mae": 18.42170832794631,
+      "rmse": 25.158648269702535,
+      "bias_observed_minus_predicted": -0.7991178356561379,
+      "predict_seconds": 0.007318799995118752
+    }
+  ],
+  "october_used_for_selection": false,
+  "output_sha256": {
+    "alternatives.joblib": "7f97f56ff61f28c6f12dc70cfb541bad2b8a9166ee9827b41cafdf9aab0276c4",
+    "candidatos.csv": "290e4144fad2d9f0fcd8592827c73778211f0fe73faaf52c13a66f4fca83e283",
+    "folds.csv": "343d2a51387f43bdbf0875f9cc8275db7914827bb6bc5dfc869bb7a525ca9d37",
+    "freeze.json": "d1144cb86ff644c42c93bcd92377d84b7a0e6562f246c7a02f0c130069c489e8",
+    "metricas_outubro.csv": "74dfd9752d2d92762b19514223e077d48cefb3f06aa0181e0e0c0622a975a96e",
+    "predicoes_dev.csv": "57eb114d8f93c0ba33cfbd97d3427e068e02ae7199db44c889397bcb4766ce12",
+    "predicoes_outubro.csv": "2aa6116388850133cb568e40b89f05014d0131de65b4c7a54623884c3c44bd35",
+    "protocolo.json": "b5c2be19274c1c345af8c05496c004d4ebf648d9386aa168bb69f826d2b915fb"
+  }
+}

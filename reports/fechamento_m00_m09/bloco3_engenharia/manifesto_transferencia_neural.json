@@ -1,0 +1,95 @@
+{
+  "schema": "bloco3-transferencia-neural-manifest-v1",
+  "files": [
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/metricas.csv",
+      "bytes": 1246,
+      "sha256": "f278734f6a534bdb5ced78c61ae94cc0838620e9249629e2feef5229c15b8733"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/parecer.md",
+      "bytes": 4408,
+      "sha256": "ad0bee18f16be7940140f3a8479be85a859d38f2f00849c25a5af8d4c9aa2b17"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/perdas_por_origem.csv",
+      "bytes": 72622,
+      "sha256": "5d032e8adc8a0e285e36b2fe9504119adbdd407dac26e2f1e2dfcb98945ce78d"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/protocolo.json",
+      "bytes": 2520,
+      "sha256": "0531ea275f231ce01c474f87dc499a01a9c10be9857ca37bd58eb613fbff42b8"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/resultado.json",
+      "bytes": 6642,
+      "sha256": "0afb8532cfeefd31974efa260c038c8650fb793d75f2f359960ed13f9178b84d"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-03/avaliacao_11_exemplos.csv",
+      "bytes": 629,
+      "sha256": "abc95a6140a29e3f7aeb3081060a444bb8a7cf092c5b836b5cc4bdb60456d44f"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-03/parecer.md",
+      "bytes": 2953,
+      "sha256": "b92848b5d2505cd12d2827874c69e3b599069132a0380bed0744975891d6fe2b"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-03/protocolo.json",
+      "bytes": 2481,
+      "sha256": "c6396b96aaac417e2c954a827ce890baff0df95ba2a990061857636adf8bfa81"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M08-03/resultado.json",
+      "bytes": 2239,
+      "sha256": "dd778a336b8dfd8f36ad89370777b0045f81b7a7b5b8733d4547825eae7b47db"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M09-02/disponibilidade_e_atencao.csv",
+      "bytes": 1729,
+      "sha256": "393b693b38a21e89978a14aaac8e14bdb0e4476ed42d8ecdede5103ae3088b1c"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M09-02/parecer.md",
+      "bytes": 3860,
+      "sha256": "e8b60b4203040d19cd983b0e4724d6e15df54422508ae001b363327cccc660a2"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M09-02/protocolo.json",
+      "bytes": 3428,
+      "sha256": "26e872319c1e54a4a6e4640e507e8d9bdb097cfa0130ae04fbe7d7b6b03df2ee"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/M09-02/resultado.json",
+      "bytes": 6364,
+      "sha256": "4a1bb6cb02c1598eba1d30a04a1eeaadc5d6605334a00e1edbcced3bdee6e40a"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/execucao_transferencia_neural.json",
+      "bytes": 1571,
+      "sha256": "49da45dab68928d92bf3071d99b15019dac95e0a0e2d9efb2aec63eaeffc9429"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco3_engenharia/verificacao_transferencia_neural.json",
+      "bytes": 2565,
+      "sha256": "64d82a46fb214d14ca62556d611c9ca93a82ba0e0254822379defb526951030d"
+    },
+    {
+      "path": "notebooks/bloco3_transferencia_neural.py",
+      "bytes": 27318,
+      "sha256": "dcf4dc80e595899bd127df1e3ea4cf1cef9611021e351adaf28a8e15abe2fce6"
+    },
+    {
+      "path": "tests/test_bloco3_transferencia_neural.py",
+      "bytes": 930,
+      "sha256": "1a261ec785a2669c7b440408895539052e5cb48057e686766f99dd0f1f297c76"
+    },
+    {
+      "path": "docs/roadmap_m00_m09/Bloco_3_Transferencia_Neural.md",
+      "bytes": 9696,
+      "sha256": "6ad1538c93286de88ba3ba87cd3d40705bc4c7b7f76526f9104698db28e3d84f"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+﻿medida,valor
+media,21.0
+variancia_amostral,6.666666666666667
+erro_padrao,1.2909944487358056
+t_dado,3.182446
+t_scipy,3.1824463052837078
+ic_media_inferior_t_dado,16.89147988059853
+ic_media_superior_t_dado,25.10852011940147
+pi_observacao_inferior_t_dado,11.81306972609276
+pi_observacao_superior_t_dado,30.18693027390724
+n_eff_ar1_aproximado,18.0
+n_eff_ar1_finito_exato,18.481283422459892

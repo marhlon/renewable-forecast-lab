@@ -1,0 +1,50 @@
+{
+  "schema": "satmon-m10-4-result-v1",
+  "completed": true,
+  "run_id": "20261124T152509Z_3878d5e2",
+  "source_m10_2_run_id": "20261119T101049Z_253ff59f",
+  "source_m10_3_run_id": "20261123T195301Z_332fb306",
+  "inputs_sha256": {
+    "receipt_m10_2": "eaff5fefc39c8fb83c9aa6b7c1b018a662995bd782ea061d5d417ab1f84f1f76",
+    "receipt_m10_3": "498921e786aa5943f514a16f1bf10b607dde4d645cb8cb71f49a3531f7204a8e",
+    "scores_dev": "74068db62b07d6bf02cdd5886bb985e56de6fd8eba27396fdeeffa0a959742fd",
+    "scores_test": "f1a63b628ae93a21505eb7fd39f07891c21dd3c0f40af3e1cb5d4906445e143d",
+    "policy": "8d4259755d41c1c1194dd4aa2bde15adacb9ee052b94c1e23395a1fe296d2c81"
+  },
+  "protocol_sha256": "a597d42732175d7a7e828a63c0cbd096d9e60d23345f431599891d911a1bd98e",
+  "runner_sha256": "f77cd8180831498cad4e4180d97a39bb696e90b46e526f1ecb2771218b06ce4f",
+  "core_sha256": "31adeb7929c886ef0318f7e66ad69c3c86f20438b56f5592475b2e3c1629adcc",
+  "authorship_sha256": "07fc05e912732eda6e80e999c1ef281741c1546d70ad7659a1cb29d5eb4c40f4",
+  "author_cases_passed": 7,
+  "verified_against_reference_real_data": true,
+  "seeds": [
+    17,
+    29,
+    41
+  ],
+  "same_full_channel_cohort": true,
+  "fitted_rows": 136202,
+  "forests_fitted_only_on_adjustment": 11,
+  "original_scores_used_verbatim": true,
+  "test_used_to_choose_parameters": false,
+  "test_is_retrospective": true,
+  "frozen_policy_unchanged": true,
+  "operational_approval": false,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0"
+  },
+  "python": "3.12.13",
+  "elapsed_seconds": 35.87498750000668,
+  "output_sha256": {
+    "associacao_canais_ano.csv": "2313390793be1b0b20db0d3e56fc52e8523c6053fcbc1c631202e37380c7ddf2",
+    "estabilidade_sementes.csv": "8d0c6ea72e39b6cb669b6a1418599e13a2454f521900a797d8a2360921f4ec23",
+    "limites_por_id.csv": "8717fb550dc3e056c7800e0cc3be47cf6f50670f431a181815ae279b02f37e09",
+    "metricas_ablacao.csv": "88c53bc98fad1b61d6b9fc492469a5ac335e08296b3db30e4973c18125933422",
+    "mudancas_por_id.csv": "70d61565eb79bbf6da354ddec7ff8514af0560937648b868dd6af6bff87b642a",
+    "perfil_canais_ano.csv": "1197338be3491c5c8e2a209ae926d288bdf1a5cbaf0ef047aef89763f9cdfca7",
+    "perfil_escores_ano.csv": "67385f9e08163ea20188302f329271809944de266768c6968504da9b231326a8",
+    "relatorio.html": "e3358028021b867ab8f78b9f251f44b1e15dc9df7d696ea72da7d059a3fc41ea"
+  }
+}

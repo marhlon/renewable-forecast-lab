@@ -1,0 +1,9 @@
+-- PENDENTE: consulta independente do exercício REAL.
+-- Não há gabarito implementado neste arquivo e ele ainda não foi executado.
+-- Fontes CSV: recorte_real.csv (id_ons,din_instante,val_geracao)
+-- e calendario_exercicio.csv (id_ons,din_instante).
+-- Contrato: chave (id_ons,din_instante), uma linha por hora e série.
+-- Antes da consulta, declare granularidade, política de duplicidade e nulos.
+-- Escreva aqui a SQL que produz uma linha por dia, conserva o calendário,
+-- separa presença/validade/zero e investiga a distância temporal do LAG.
+-- Responda também às questões novas em resposta_independente.md.

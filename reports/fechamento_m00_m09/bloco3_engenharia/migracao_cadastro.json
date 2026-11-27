@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-11-26T16:31:38.889717+00:00",
+  "previous_registry_path": "reports/fechamento_m00_m09/bloco3_engenharia/cadastro_antes_alteracao.json",
+  "previous_registry_sha256": "07433ae55390fb3d24bd07d596bb82482ab7ceda37f2afb2d65f245cd9582dac",
+  "new_registry_sha256": "0426a465eb6e1b525f5a822c80b41fa6687d53df32d6df518cecfeb7ae398414",
+  "validated": [
+    "M03-04",
+    "M05-04",
+    "M05-05",
+    "M06-03",
+    "M07-01",
+    "M07-02",
+    "M07-03",
+    "M08-02",
+    "M08-03",
+    "M09-02",
+    "M09-04"
+  ],
+  "operational_open": [
+    "M06-02",
+    "M06-04",
+    "M06-05",
+    "M06-06",
+    "M06-07",
+    "M06-08",
+    "M06-09"
+  ],
+  "item_count_preserved": 45,
+  "dependencies_preserved": true,
+  "partial_operational_criteria_not_transferred": true
+}

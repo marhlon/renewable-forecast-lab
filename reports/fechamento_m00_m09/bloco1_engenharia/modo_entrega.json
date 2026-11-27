@@ -1,0 +1,24 @@
+{
+  "schema": "renewcast-engineering-delivery-mode-v1",
+  "recorded_at_utc": "2026-11-25 14:11:28 UTC",
+  "client_date": "2026-11-25",
+  "authorization": "O usuário esclareceu que não deseja atuação como professor: aplicar as correções necessárias e explicar minuciosamente resultados e execução.",
+  "delivery": "engenharia_aplicada",
+  "human_exercises_required": false,
+  "independent_learning_certified": false,
+  "operational_contracts_must_remain_truthful": true,
+  "historical_snapshots_preserved": true,
+  "acceptance_gate": "engenharia",
+  "scope": {
+    "bloco": 1,
+    "etapas": [
+      1,
+      2,
+      3
+    ]
+  },
+  "not_executed": [
+    2,
+    3
+  ]
+}

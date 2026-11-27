@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-11-27T16:11:39.945806+00:00",
+  "scope": "Documentation-only copies; no detector execution.",
+  "windows_run_id": "20261124T152509Z_3878d5e2",
+  "reference_figure_run_id": "20261123T235056Z_d98b7536",
+  "figure_comparison_partition": "diagnostico",
+  "figure_comparison_years": [
+    2011,
+    2013
+  ],
+  "figure_comparison_seed": 17,
+  "figure_compared_fields": [
+    "limiar",
+    "s1",
+    "s2"
+  ],
+  "figure_max_absolute_difference_reference_windows": 0.0,
+  "source_and_copy_identical": true,
+  "files": [
+    {
+      "source": "docs/evidencias_m10_4/alcance_do_corte.png",
+      "copy": "docs/images/alcance_confirmacao_2011_2013.png",
+      "sha256": "61145bb5b7216967ee7dda6e03e7a1945b6ae2e2842e432c06018284b2eadced"
+    },
+    {
+      "source": "reports/m10_4/20261124T152509Z_3878d5e2/resultado.json",
+      "copy": "docs/evidencias_readme/m10_4_windows_resultado.json",
+      "sha256": "7030dee3ab410ec74bcefd6d68b504f6e9c23477288b116764517cfc02819bce"
+    },
+    {
+      "source": "reports/m10_4/20261124T152509Z_3878d5e2/metricas_ablacao.csv",
+      "copy": "docs/evidencias_readme/m10_4_windows_metricas_ablacao.csv",
+      "sha256": "88c53bc98fad1b61d6b9fc492469a5ac335e08296b3db30e4973c18125933422"
+    }
+  ]
+}

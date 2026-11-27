@@ -1,0 +1,42 @@
+{
+  "schema": "renewcast-generation-source-contract-audit-v1",
+  "audited_at_utc": "2026-11-25T12:31:58.383844+00:00",
+  "source_field": "din_instante",
+  "source_value_field": "val_geracao",
+  "hourly_granularity_documented": true,
+  "unit_label_documented": "MWmed",
+  "physical_timezone_verified": false,
+  "physical_timezone": null,
+  "interval_start_or_end_verified": false,
+  "timestamp_interval_edge": null,
+  "existing_project_timezone_hypothesis": "America/Sao_Paulo",
+  "existing_project_generation_delay_hours_assumed": 2,
+  "generation_publication_history_verified": false,
+  "post_publication_revisions_possible": true,
+  "scope_of_missing_proof": "Not specified in the checked 3-page dictionary and portal; no claim that no other ONS document exists.",
+  "operational_approval": false,
+  "recommended_status": "bloqueado",
+  "external_evidence_needed": [
+    "Authoritative timezone and DST rules for the selected series/period.",
+    "Explicit hourly interval boundaries and edge-label convention.",
+    "Observed release/revision timestamps or immutable data vintages for operational availability."
+  ],
+  "primary_sources": [
+    {
+      "id": "ONS_PORTAL",
+      "url": "https://dados.ons.org.br/dataset/geracao-usina-2",
+      "consulted_date": "2026-11-25",
+      "method": "web open of primary documentation only",
+      "supports": "Hourly source and post-publication revisions; not proof of time zone or historical release times."
+    },
+    {
+      "id": "ONS_DICT",
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/DicionarioDados_GeracaoPorUsina.pdf",
+      "consulted_date": "2026-11-25",
+      "document_date": "2023-06-09",
+      "pages": 3,
+      "method": "web PDF text inspection, all pages",
+      "supports": "din_instante reference label and MWmed; physical time zone and interval edge are not specified in this dictionary."
+    }
+  ]
+}

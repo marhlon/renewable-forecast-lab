@@ -1,0 +1,60 @@
+{
+  "records": [
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v1\\example_request.json",
+      "expected_sha256": "fd4a281f0b2cc6a4ecc3a6194e31c3da0244348009d812667dec75bece633f47",
+      "actual_sha256": "fd4a281f0b2cc6a4ecc3a6194e31c3da0244348009d812667dec75bece633f47",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v1\\manifest.json",
+      "expected_sha256": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7",
+      "actual_sha256": "18c7d26df9c78728e96acf68fd77eafd1a130beafe50461d066fb73e38854dc7",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v1\\model.joblib",
+      "expected_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+      "actual_sha256": "8ecd88cd427ac822fe0e72f853680e3987764c2b30b646c5a2cab9d89b73a94a",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v1\\policy.json",
+      "expected_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "actual_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v2\\example_request.json",
+      "expected_sha256": "2d13524f017fccd9319922b2a646107b7775f2e085e2d59fa68a88aa3e441b33",
+      "actual_sha256": "2d13524f017fccd9319922b2a646107b7775f2e085e2d59fa68a88aa3e441b33",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v2\\manifest.json",
+      "expected_sha256": "214dcfc273dca9b6f363a428738a112ad37f3058043ef4aa3b1bea5ebbe7bfe4",
+      "actual_sha256": "214dcfc273dca9b6f363a428738a112ad37f3058043ef4aa3b1bea5ebbe7bfe4",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v2\\model.joblib",
+      "expected_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+      "actual_sha256": "7ab0a5cbc45a47df62b3ce44166f090b0ab686481aa37872d25e7c6353a1e17d",
+      "status": "match"
+    },
+    {
+      "path": "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\registry\\versions\\v2\\policy.json",
+      "expected_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "actual_sha256": "309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7",
+      "status": "match"
+    }
+  ],
+  "counts": {
+    "match": 8
+  },
+  "all_expected_hashes_match": true,
+  "read_only": true,
+  "restored_files": false,
+  "deserialized_model": false,
+  "interpretation": "Hashes lidos quando permitido; acesso negado não é ausência. Se leitura externa ao sandbox coincidir, a limitação observada é de acesso nesse contexto."
+}

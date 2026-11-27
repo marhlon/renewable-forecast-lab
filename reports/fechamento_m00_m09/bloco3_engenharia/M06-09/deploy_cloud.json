@@ -1,0 +1,46 @@
+{
+  "prepared_at": "2026-11-26T00:37:53.088497+00:00",
+  "kind": "reviewable_plan_only",
+  "execution_authorized": false,
+  "target": {
+    "provider": "a escolher pelo titular",
+    "account_project": null,
+    "region": null,
+    "architecture": "uma VM/container isolado de CPU, rede privada, acesso por túnel autenticado; sem endpoint público no primeiro ensaio",
+    "model_bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "max_instances": 1,
+    "gpu": false
+  },
+  "required_before_provision": [
+    "titular/conta/projeto/região confirmados",
+    "teto financeiro numérico aprovado",
+    "prazo TTL e alarme de orçamento",
+    "credencial por secret manager/identidade de curta duração",
+    "CI remoto clone limpo comprovado",
+    "artefatos assinados/hash e storage privado",
+    "responsável pelo incidente",
+    "autorização explícita para criar e cobrar recursos"
+  ],
+  "steps": [
+    "validar plano e identidade sem credenciais em logs",
+    "aplicar rede privada/identidade mínima/storage com TTL",
+    "subir uma instância do artefato congelado",
+    "testar auth/limites/smoke e rollback de versão",
+    "medir latência/CPU/RSS/erros e serviços acessórios/fatura",
+    "desligar VM, IP, storage temporário e identidades conforme inventário",
+    "conferir inventário e custo após teardown"
+  ],
+  "stop_rules": [
+    "gasto chega a 80% do teto aprovado",
+    "TTL expira",
+    "falha de autenticação/rede privada/integridade",
+    "erros ou latência ultrapassam SLO aprovado"
+  ],
+  "resources_created": [],
+  "endpoints_created": [],
+  "invoice_observed": false,
+  "criteria": {
+    "C1_preparation_only": true,
+    "C2": false
+  }
+}

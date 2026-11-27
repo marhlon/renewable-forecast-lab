@@ -1,0 +1,130 @@
+{
+  "schema": "renewcast-sql-preparation-result-v1",
+  "item": "M00-01",
+  "status": "await_human",
+  "preparation_completed": true,
+  "independent_response_received": false,
+  "human_acceptance_claimed": false,
+  "student_autonomy_claimed": false,
+  "responsibility": "Preparação e revisão técnica assistidas por Codex.",
+  "executed_at_utc": "2026-11-25T12:26:06.192387+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "notebooks/laboratorio_diagnostico_sql.py",
+    "--preparar"
+  ],
+  "exit_code": 0,
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "sqlite": "3.53.2"
+  },
+  "summary": "Mapa do percurso CLI/features preparado; caso novo e adaptação humana ainda sem resposta.",
+  "demo": {
+    "kind": "demonstracao_sintetica_resolvida_assistida",
+    "passed": true,
+    "checks": [
+      "sql_vs_conta_manual",
+      "sql_vs_pandas",
+      "left_vs_inner",
+      "quarentena_integral",
+      "lag_linha_diferente_de_hora",
+      "lag_na_grade_preserva_lacuna",
+      "particao_por_serie",
+      "cardinalidade_da_grade",
+      "fonte_preservada"
+    ],
+    "source_rows": 11,
+    "clean_rows": 9,
+    "quarantine_rows": 2,
+    "daily_left_rows": 8,
+    "daily_inner_rows": 5,
+    "hourly_grid_rows": 192,
+    "daily_reference": [
+      {
+        "id_ons": "A",
+        "dia": "2027-01-01",
+        "horas_presentes": 3,
+        "horas_validas": 2,
+        "media_mwmed": 6.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-03",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 30.0,
+        "cobertura": 0.041666666666666664
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-04",
+        "horas_presentes": 2,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-01",
+        "horas_presentes": 2,
+        "horas_validas": 2,
+        "media_mwmed": 150.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-03",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-04",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 0.0,
+        "cobertura": 0.041666666666666664
+      }
+    ]
+  },
+  "real_exercise_preparation": {
+    "independent_query_executed": false
+  },
+  "output_sha256": {
+    "notebooks/laboratorio_diagnostico_sql.py": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+    "docs/roadmap_m00_m09/Diagnostico_SQL.md": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+    "reports/fechamento_m00_m09/M00-01/protocolo.json": "db83200952f49c122e5b0b483fddc765c756b384268ee74945affea9f9b76035",
+    "reports/fechamento_m00_m09/M00-01/parecer.md": "7e6325f380421ae83f7ff4cc1c53afb1da0501acf3830f00f1a4e8e455a45546",
+    "reports/fechamento_m00_m09/M01-02/adendo_protocolo.json": "9408b92346894719a3fa98c0f956b6407e3f4458f09b9b11a755794253ba3ccc",
+    "reports/fechamento_m00_m09/M00-01/resposta_independente.md": "2a56c777029eaacc451fda649c4a9d5c94f3b4f9f64f5ecf727f83afb84ecc07",
+    "docs/learning/checkpoint.md": "eb28f657759b2c6fc01ca7286419f49f68c4db814ad81280e79fe43450f027a3"
+  },
+  "models_trained": false,
+  "pickle_loaded": false,
+  "spark_or_docker_run": false,
+  "network": false,
+  "historical_runs_modified": false,
+  "operational_approval": false
+}

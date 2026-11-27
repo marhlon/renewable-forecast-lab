@@ -1,0 +1,51 @@
+{
+  "schema": "m02-fundamentos-protocol-v1",
+  "item": "M02-03",
+  "synthetic_only": true,
+  "purpose": "Demonstração quantitativa; nenhum benchmark histórico é treinado ou reajustado.",
+  "assistance": "Construção e execução assistidas; autonomia depende de resposta e revisão humanas.",
+  "design": {
+    "source": "Diferenças de perda geradas diretamente; nenhum modelo ou benchmark treinado.",
+    "seed": 2026112503,
+    "bit_generator": "PCG64",
+    "n_blocks": 10,
+    "observations_per_block": 24,
+    "family_size": 4,
+    "true_mean_differences": [
+      1.2,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "block_shift_sigma": 1.8,
+    "within_block_sigma": 0.5,
+    "estimand": "Média populacional de perda_A - perda_B por unidade sintética.",
+    "h0": "mu_d <= 1.0",
+    "h1": "mu_d > 1.0",
+    "minimum_relevant_effect": 1.0,
+    "alpha_family": 0.05,
+    "multiplicity": "Bonferroni: alpha = 0.05 / 4, before generating any data",
+    "decision": "Reject H0 only if block-based one-sided p < 0.0125. Never select the smallest unadjusted p as confirmatory evidence.",
+    "assumptions": [
+      "independent normal block shifts",
+      "independent normal within-block noise",
+      "adjacent observations share a block effect",
+      "same fixed family of four hypotheses"
+    ],
+    "checks": [
+      "all four prespecified hypotheses reported",
+      "block mean equals full mean",
+      "p-values between zero and one",
+      "lower-bound and p-value decisions agree"
+    ]
+  },
+  "source_sha256": {
+    "notebooks/_fundamentos_evidencias.py": "e5c6adeacd7b248aabae203d9aaff237f24603ec766b54b3cd89f6a1a720dfd8",
+    "notebooks/laboratorio_probabilidade.py": "3b87fb05ff10cbefb77762e3dc07765d850e05724d619fc11dadfc6452bf46ed",
+    "notebooks/laboratorio_regressao_fundamentos.py": "f53c99c7d94b2eea2b783265f8a29946e01da851c8996b5b46d57763e5a16afd",
+    "docs/roadmap_m00_m09/Fundamentos_Quantitativos.md": "4e67ce019078b088ca8fb3fd7d7ee4e018a8d5753c204f02427f3dc6315e3329",
+    "docs/roadmap_m00_m09/Avaliacao_Fundamentos.md": "bed776fac8d1fdde41323b9992a365d2d0b786ecbedb93e5bf314874c279fabb",
+    "tests/test_fundamentos_quantitativos.py": "8953f91a8b5d43b4380a464af3c3764a523f715f98cf3dfeae58cb4d9981641d"
+  },
+  "frozen_at_utc": "2026-11-25T11:43:18.252082+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "registered_at_utc": "2026-11-26T20:27:51.330808+00:00",
+  "previous_registry_snapshot": "reports/fechamento_m00_m09/bloco3_engenharia/cadastro_antes_aceite_ci_remoto.json",
+  "previous_registry_sha256": "184ac1aaa90cfb9aac1649444afed5bfd5c38462e13f520f27303cff06c72e67",
+  "new_registry_sha256": "b63609f4693a2a151595c0b83ac05988232aabe1b37e360c30f661fe97b20baf",
+  "M06-02_criteria_satisfied": [
+    "C1",
+    "C2"
+  ],
+  "block3_validated_ids": 12,
+  "block3_open": 6,
+  "total_validated": 35,
+  "total_blocked": 10,
+  "old_local_and_audit_receipts_preserved": true,
+  "review_ci_sha256": "82e5cf9fec7e70e4db7a18d618dfe65c654fd19cab3e4a14e715cc722acdc7e9",
+  "old_auditor_source_sha256": "1ede30e946a3c030ce1d074731008737e406f57a804fb41ddc771cc9a2572b3d",
+  "current_auditor_source_sha256": "26afbb45a3ce10bd53a1501a508166e4a91c2cec995f0d4e6076872665291418",
+  "new_audit_sha256": "337e5943041a96c6dcca897ef82e44ae3d779fee059503682c4f2987bb5baf49",
+  "models_retrained_or_final_data_retuned": false,
+  "main_merged": false,
+  "deployed": false,
+  "operational_approval": false
+}

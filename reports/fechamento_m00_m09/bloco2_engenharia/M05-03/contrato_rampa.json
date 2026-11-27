@@ -1,0 +1,21 @@
+{
+  "documented_at_utc": "2026-11-25T19:59:32.633097+00:00",
+  "role": "Explanatory extraction of the contract fixed before model fitting; not a new definition after evaluation",
+  "definition_fixed_in": "protocolo.json",
+  "protocol_sha256": "fbc2e0352f41e2f7cd2bc88e60643e00a0acf294d20c6bacace34f7b6cebe8b2",
+  "freeze_sha256": "336620b4021c9ba48f81b56a280ce852d0fec7580bdab6cbecde732f15fedd2d",
+  "target": "generation(origin)-generation(origin+1h)",
+  "positive_means": "drop",
+  "event": "drop>=22.77 MWmed",
+  "latest_input": "generation(origin-2h)",
+  "label_available_at": "origin+3h under the fixed2h availability assumption",
+  "last_ramp_baseline": "generation(origin-3h)-generation(origin-2h)",
+  "training_rows": 7244,
+  "training_label_cutoff_exclusive": "2026-07-01T00:00:00Z",
+  "evaluation_origins": 695,
+  "classifier_probability_threshold": 0.5,
+  "regression_alarm_threshold": 22.77,
+  "daily_budget_applied": false,
+  "recalibration_or_reselection_performed": false,
+  "operational_approval": false
+}

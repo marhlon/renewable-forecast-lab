@@ -1,0 +1,43 @@
+{
+  "schema": "renewcast-decision-clinic-v1",
+  "completed": true,
+  "source_run_id": "20261117T213329Z_3b201a01",
+  "source_result_sha256": "19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0",
+  "source_outputs_preserved": true,
+  "policies": 12,
+  "scenarios": [
+    [
+      "simetrico",
+      1.0,
+      1.0
+    ],
+    [
+      "subestimar_custa_4",
+      4.0,
+      1.0
+    ],
+    [
+      "superestimar_custa_4",
+      1.0,
+      4.0
+    ]
+  ],
+  "rows_per_policy": 168,
+  "scope": "Post-hoc didactic analysis of an already explored development week; no new validation or policy selection.",
+  "cost_unit": "Hypothetical relative loss per emission, weighted MWmed; not currency.",
+  "optimal_quantile_statement": "Conditional optimum under the stated linear costs; model quantiles may be inaccurate.",
+  "model_retrained": false,
+  "new_inference": false,
+  "operational_policy_approved": false,
+  "checks": {
+    "manual_expected_losses_verified": true,
+    "asymmetric_loss_equals_scaled_pinball": true,
+    "nonfinite_inputs_rejected": true
+  },
+  "code_sha256": "5d129c89a32bc782390a7f56de74e7faa39b5c390b30f353085ca74bcc3692ec",
+  "numpy_version": "2.5.3",
+  "output_sha256": {
+    "perdas_cenarios.csv": "9fafed981d07f9981d47e910a4534e8b5205e7151cc38bf9332c0e0a4a81e4d4",
+    "perdas_blocos_24h.csv": "8a5777a26bacc9613ed6949ecfbf82eb5aeceb0a2539916b16498f65e354458d"
+  }
+}

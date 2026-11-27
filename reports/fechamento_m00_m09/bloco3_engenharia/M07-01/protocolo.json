@@ -1,0 +1,29 @@
+{
+  "frozen_at_utc": "2026-11-26T00:32:08.643381+00:00",
+  "schema_version": "bloco3-v1",
+  "source": "data\\raw\\bloco2_locked\\geracao_2026_10.parquet",
+  "source_sha256": "55314b5a072a838d0ae4bd4543b940f1cfd3b7c78143f461a33aa05516e1617d",
+  "source_rows": 537384,
+  "code_sha256_before_execution": {
+    "src/renewable_forecast/bloco3_data.py": "ba3f114303f25c4eac54b45c1b8da5e941eff2f57580df85bb01a6ccc165b1b4",
+    "notebooks/bloco3_dados_execucao.py": "af0e5e0d78a11f8efdec55778d1665d8d57a9e6e9d36a66ba595895b3a03be1e",
+    "tests/test_bloco3_data.py": "eed6bfd56c6900e59dc2dd1b10a24e863bbc8ebd81f799b4c0b53da61fc102b9"
+  },
+  "attribution": "Código, execução e análise fornecidos por Codex; sem certificação de autonomia pessoal",
+  "data_scope": "Outubro/2026 retrospectivo; fonte já no disco e CJU_BA5EIGT já examinada no bloco 2. Seleção nova por metadata não torna o mês intocado.",
+  "availability": "event_time + 2h é hipótese, não chegada histórica comprovada; timestamps de calendário do arquivo sem fuso verificado",
+  "operational_claim": false,
+  "commands": [
+    "python -m pytest tests/test_bloco3_data.py -q",
+    "python notebooks/bloco3_dados_execucao.py freeze",
+    "python notebooks/bloco3_dados_execucao.py execute"
+  ],
+  "item": "M07-01",
+  "design": "Bronze endereçada por SHA256 sem sobrescrita; silver chave id_ons/event_time, quarentena sem imputação; gold joins exatos causais por série",
+  "criteria": [
+    "bruto físico igual ao hash original",
+    "quarentena explícita; linhagem source_row até fonte",
+    "reprocessamento lógico e físico determinístico",
+    "contraprovas declaradas em dados pequenos"
+  ]
+}

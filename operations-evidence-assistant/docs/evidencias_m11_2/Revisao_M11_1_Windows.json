@@ -1,0 +1,47 @@
+{
+  "schema": "opevid-m11-1-submission-audit-v1",
+  "windows_run": "20261124T182345Z_2a298bc9",
+  "windows_receipt_sha256": "e580a2e9cfb9ce911863b75135525393e24652550622095ca386e248b9de8ba2",
+  "author_exact_sha256": "8171e814f6943757cccd9f7eb9e5b662fa79e6fe4895d1ba4ac27adb1209f23b",
+  "windows_outputs_sha256_verified": {
+    "baseline_regra.csv": "acc8b38ccf65242e64127ed7c01a87a81a2b5e041c11c41d50e9993748f1e36b",
+    "benchmark.csv": "90423ee34508b66e7c45a3ea95d8dd1d81dddd9c54f98401a1482356bcc62d74",
+    "embeddings.json": "2e7ca70e6da5814955538c78cacc39a5896896be9d8602f9d0c8e1dfadd5d216",
+    "geracoes.csv": "804f2628f83d5b005a00a7bd11ae59621020665bf41b7fd1095be319713f8ff9",
+    "relatorio.html": "10c466e58059be46de6f6118f23770c7f031f3cd959e59421f1cc011c1b3696a",
+    "tokens.csv": "91b7e7178f6ddbb76f6f01e79ed4b6c46919ef9cfdff3d2e4cda25598f7fc012",
+    "trilha_tokens.json": "9d2782b6958d8bea46bd213d72d5f6ce90a5988d92068eb45d7d897551302903"
+  },
+  "rule_eval_and_generated_text_rows_reconciled": 19,
+  "tokenizer_probes_reconciled": 5,
+  "windows_216_top_k_checks_reported_by_runner": 216,
+  "windows_logits_available_only_top4_first2": true,
+  "new_forward_or_benchmark": false,
+  "authorship_cases_reproduced": 6,
+  "independent_decimal_sampling_cases": 256,
+  "valid_format_wrong_code_samples": [
+    {
+      "case": "satmon_sem52",
+      "codigo": "ELIGIBLE",
+      "esperado": "ISOLATED",
+      "temperatura": "0.35",
+      "semente": "17"
+    }
+  ],
+  "p90_and_peak_ram_not_measured": true,
+  "median_total_ms": {
+    "fp32": 1985.2230999968015,
+    "int8_linear": 1604.863499989733
+  },
+  "first_round_total_ms": {
+    "fp32": 2292.623999994248,
+    "int8_linear": 2630.0330000085523
+  },
+  "median_time_reduction_pct": 19.15953929851416,
+  "serialized_size_reduction_pct": 59.155120576235134,
+  "state_dict_mib": {
+    "fp32": 513.2194700241089,
+    "int8_linear": 209.62387371063232
+  },
+  "author_three_written_answers_accepted": true
+}

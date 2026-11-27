@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-26T00:36:34.197782+00:00",
+  "original_protocol_sha256": "fe4d1c0976164d3a80ab60b9c455ae724ba60d62977c19af08c32a96471a5960",
+  "reason": "Compatibility repair after real failed attempt; installed signature API uses to_dict, sklearn save_model defaults to skops and requires specific reviewed TreePredictor trust. Bundle was generated locally in B2 and SHA verified. Only that built-in type is trusted. New database/model path registry_run_02 preserves failure artifacts. No sample, model, threshold, SLO or clock assumption changed.",
+  "code_after_repair": {
+    "scripts/bloco3_operacao_local.py": "9b1016e194c131bc1c46590f8033bae1d78fad52bae4487a8aaa6225ee059347"
+  },
+  "failure_receipt_sha256": "2e6965b54c202496e440849a2c8966f20c5c0565b4bf4d6f0b6b9587e8e83e11"
+}

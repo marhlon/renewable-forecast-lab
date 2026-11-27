@@ -1,0 +1,29 @@
+{
+  "source_path": "reports/weather_ablation/CJU_BA5EIGT/july_development/predictions.csv",
+  "source_sha256": "291e9aec32608505b4ec7423de814401e372cf3411fcefad001ffeb4a0f7df76",
+  "derived_path": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/pareado_persistencia.csv",
+  "derived_sha256": "086c2128f9ec42b568d4a009fb8cbed4562e3a7e613c987bac724b1b84852b2d",
+  "rows": 504,
+  "keys": [
+    "forecast_origin",
+    "target_time",
+    "fold"
+  ],
+  "preserved_exactly": [
+    "forecast_origin",
+    "target_time",
+    "target_available_at",
+    "fold",
+    "target_generation",
+    "persistence",
+    "hgb_history_weather"
+  ],
+  "mapping": {
+    "CLI_hgb_history": "source.persistence",
+    "CLI_hgb_history_weather": "source.hgb_history_weather",
+    "original_hgb_history": "source.hgb_history"
+  },
+  "estimand": "abs(y-persistence) - abs(y-HGB_history_weather), MWmed",
+  "source_delta_not_reused": "Derived delta is recomputed for the new reference; original source remains unchanged.",
+  "new_training_or_predictions": false
+}

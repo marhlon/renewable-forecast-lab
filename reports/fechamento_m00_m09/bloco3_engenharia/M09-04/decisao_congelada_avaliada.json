@@ -1,0 +1,13 @@
+{
+  "fixed_champion": "hgb_bloco2",
+  "mean_gain_at_least2": false,
+  "gain_ci_above_zero": false,
+  "cqr_coverage_within70_90": true,
+  "cqr_width_at_most100": false,
+  "policy_cost_better_than_never": true,
+  "daily_alarm_limits_respected": true,
+  "maximum_daily_alarms": 6,
+  "operational_data_contract_proven": false,
+  "promotion_authorized": false,
+  "no_reselection_on_final": true
+}

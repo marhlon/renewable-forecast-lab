@@ -1,0 +1,17 @@
+{
+  "engine": "pandas",
+  "cohort": 3,
+  "repetition": 3,
+  "selected_series": 635,
+  "materialized_series": 545,
+  "input_rows_after_filter": 389304,
+  "wall_seconds": 0.2151093000138644,
+  "cpu_seconds": 0.1875,
+  "baseline_rss_bytes": 100855808,
+  "peak_rss_bytes": 155885568,
+  "incremental_peak_rss_bytes": 55029760,
+  "rss_below_512mib": true,
+  "output_bytes": 16675,
+  "output_sha256": "bf1fddbd0f8ffe11a209ab3e8ee4b38c44147bc5ebe3abcb25812c2b1eb863c0",
+  "output": "reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-02\\materialized_pandas_3_3.parquet"
+}

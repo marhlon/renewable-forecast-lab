@@ -1,0 +1,10 @@
+{
+  "version": 4,
+  "batches": {
+    "batch-1": "c3a30091871b3ea7d1358ae925f4d4ee68320f89dfc36a1929f4731f29d4c9fd",
+    "batch-2": "04091b112ce586655a825521756ac4bd23952ea2f8267ee98532ae80be0cd90c",
+    "batch-3": "0ffc9649595251f07b83e375fed37206bcc55c3c88419c59183fbf8afeddd094",
+    "batch-4": "9076a38f5b8ce8b95db503425003a18a637fd6be09452e0dee304085f65cc170"
+  },
+  "table": "snapshot_004_e10957673328.parquet"
+}

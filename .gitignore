@@ -106,7 +106,13 @@ mlartifacts/
 /reports/**/*.pt
 /reports/**/*.pth
 /reports/**/*.safetensors
+/reports/**/*.skops
+/reports/**/*.sqlite
+/reports/**/*.sqlite-shm
+/reports/**/*.sqlite-wal
 /reports/**/checkpoints/
+# Copias de ensaio do CI: conservar manifestos/logs selecionados, nao duplicar fonte.
+/reports/fechamento_m00_m09/bloco3_engenharia/M06-02/copia_isolada*/
 /satellite-anomaly-monitor/reports/**/*.log
 /satellite-anomaly-monitor/reports/**/*.parquet
 /satellite-anomaly-monitor/reports/**/*.joblib

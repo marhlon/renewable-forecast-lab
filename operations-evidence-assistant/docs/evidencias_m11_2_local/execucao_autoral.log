@@ -1,0 +1,27 @@
+﻿Interpretador: C:\renewable-forecast-lab\.venvs\m09_3_chronos\Scripts\python.exe
+16 contraprovas aprovadas (JSON, esquema, fidelidade e saída final).
+Rodando SmolLM2 FP32, 2 threads, greedy. Mesmos casos e orçamento nos dois prompts.
+Dev renewcast_replay | zero_shot: esquema_invalido
+Dev renewcast_replay | um_exemplo: json_invalido
+Dev renewcast_sem_resposta | um_exemplo: json_invalido
+Dev renewcast_sem_resposta | zero_shot: esquema_invalido
+Dev satmon_tres_canais | zero_shot: esquema_invalido
+Dev satmon_tres_canais | um_exemplo: json_invalido
+Dev satmon_sem52 | um_exemplo: json_invalido
+Dev satmon_sem52 | zero_shot: json_invalido
+Dev igualdade | zero_shot: esquema_invalido
+Dev igualdade | um_exemplo: json_invalido
+Dev picos_sem_par | um_exemplo: json_invalido
+Dev picos_sem_par | zero_shot: esquema_invalido
+Prompt zero_shot congelado. Lendo reservado sintético só agora.
+Reservado hold_abaixo_unitario: esquema_invalido
+Reservado hold_sem_registro: esquema_invalido
+Reservado hold_pico_no_corte: esquema_invalido
+Reservado hold_sem_par: esquema_invalido
+Reservado hold_par_igual: esquema_invalido
+Reservado hold_unitario_igual: esquema_invalido
+Partição | Prompt | JSON | Esquema | Fiel | Fallback
+desenvolvimento | zero_shot | 5/6 | 0/6 | 0/6 | 6/6
+desenvolvimento | um_exemplo | 0/6 | 0/6 | 0/6 | 6/6
+reservado | zero_shot | 6/6 | 0/6 | 0/6 | 6/6
+Relatório: C:\renewable-forecast-lab\operations-evidence-assistant\reports\m11_2\20261125T000415Z_b376eb6f\relatorio.html

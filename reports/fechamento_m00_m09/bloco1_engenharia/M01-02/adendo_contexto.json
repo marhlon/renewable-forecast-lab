@@ -1,0 +1,21 @@
+{
+  "schema": "renewcast-sql-context-addendum-v1",
+  "registered_at_utc": "2026-11-25T14:19:16.583795+00:00",
+  "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "context_start_inclusive": "2025-10-31T23:00:00",
+  "analysis_start_inclusive": "2025-11-01T00:00:00",
+  "analysis_end_exclusive": "2025-12-01T00:00:00",
+  "policy": "Compute LAG on the extended complete calendar; apply the November filter only after the window. Preserve original 719-pair output.",
+  "expected_if_previous_hour_is_present_and_valid": {
+    "analysis_hours": 720,
+    "known_lags": 720,
+    "valid_delta_pairs": 720
+  },
+  "timezone_assigned": false,
+  "new_predictive_test": false,
+  "new_training": false,
+  "sql_sha256": "0b08779d86b9126678ef2711c0ed1f26ca92224a2caf39a2f1321b3d5f519252",
+  "original_hourly_sha256": "4f0ee41fb30f165c2bf3e5280bce792ed5f36172eeb3bae3f71b236abe54ad3a",
+  "original_result_sha256_before_finalization": "74b57f4a06926bd24acccc26d120f6fc0091d38d2374f91121176723ed8e733a"
+}

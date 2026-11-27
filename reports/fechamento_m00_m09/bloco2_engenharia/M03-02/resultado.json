@@ -1,0 +1,77 @@
+{
+  "started_at": "2026-11-25T19:21:48.672100+00:00",
+  "completed_at": "2026-11-25T19:21:52.213604+00:00",
+  "execution": "new_exact_group_shapley",
+  "model": "HGB_lags24_calendar",
+  "selected_candidate": "HGB_lags24_calendar",
+  "bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "code_sha256": "7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b",
+  "protocol_sha256": "92e3791ae161e8e41ad179fd55bfb72e08fb35a13ef23656a9c850b523a2f6a2",
+  "origins": [
+    "2026-07-01 12:00",
+    "2026-07-03 12:00",
+    "2026-07-05 12:00",
+    "2026-07-07 12:00",
+    "2026-07-10 12:00",
+    "2026-07-13 12:00"
+  ],
+  "backgrounds": {
+    "fundo.csv": "8b5dc4bc24e006d2f8cc3f89d88c962b53b96bf7f77f053671405058a5ceecaf",
+    "fundo_sensibilidade.csv": "d951500a2b9fb5a03029555583f762f502ed11708190013f283b3a7a6331298f"
+  },
+  "groups": {
+    "recent6": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_4h",
+      "lag_5h",
+      "lag_6h"
+    ],
+    "older18": [
+      "lag_7h",
+      "lag_8h",
+      "lag_9h",
+      "lag_10h",
+      "lag_11h",
+      "lag_12h",
+      "lag_13h",
+      "lag_14h",
+      "lag_15h",
+      "lag_16h",
+      "lag_17h",
+      "lag_18h",
+      "lag_19h",
+      "lag_20h",
+      "lag_21h",
+      "lag_22h",
+      "lag_23h",
+      "lag_24h"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos"
+    ]
+  },
+  "coalitions_per_example": 8,
+  "max_additivity_error_mw": 7.105427357601002e-15,
+  "max_background_change_mw": 19.782387992842583,
+  "sign_changes": 0,
+  "command": [
+    "notebooks\\explicacao_local.py"
+  ],
+  "outputs": {
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/coalizoes.csv": "ec9264c75d2b033fec51439125d5655dd6e886391a7f929629a098ff0a61d46d",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes.csv": "09dc8f6ab9db3f79723772e186b301331d2205569dfaa5ce0a0266c5e09d0cb3",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes_fundos.csv": "e1ca77011be90a6b8a5cc2542da41a8580ab44c1d206b2215aff139dfb65fc4e",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo.csv": "8b5dc4bc24e006d2f8cc3f89d88c962b53b96bf7f77f053671405058a5ceecaf",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo_sensibilidade.csv": "d951500a2b9fb5a03029555583f762f502ed11708190013f283b3a7a6331298f",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/parecer.md": "3c10481a17597ef8077a5571d332fdce295574f068cac4f841ef80618f048961",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/protocolo.json": "92e3791ae161e8e41ad179fd55bfb72e08fb35a13ef23656a9c850b523a2f6a2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/sensibilidade.csv": "cb1ad3ddfbf1f2f3c9172fc329a7d9b93b83c47e6c98ae988fb7674a3068e360"
+  },
+  "attribution": "Codex implementou, executou e analisou; sem resposta independente do usuário"
+}

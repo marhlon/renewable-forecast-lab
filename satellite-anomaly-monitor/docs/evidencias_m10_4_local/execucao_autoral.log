@@ -1,0 +1,16 @@
+﻿7 contraprovas de confirmação aprovadas.
+Ajuste 2004–2007; mesma coorte completa para todas as variantes.
+Semente 17: quatro variantes com cortes determinados exclusivamente em desenvolvimento.
+Semente 29: quatro variantes com cortes determinados exclusivamente em desenvolvimento.
+Semente 41: quatro variantes com cortes determinados exclusivamente em desenvolvimento.
+Cortes calculados; lendo 2011–2013 para diagnóstico retrospectivo.
+       particao    variante   limiar       s1       s2  ap_por_instante  ids_detectados  taxa_sem_anotacao_por_dia
+desenvolvimento tres_canais 0.719944 0.759400 0.759400         0.758149               3                   0.003797
+    diagnostico tres_canais 0.719944 0.716436 0.638230         0.000756               0                   0.000000
+desenvolvimento      sem_50 0.748468 0.748468 0.748468         0.745271               2                   0.000949
+    diagnostico      sem_50 0.748468 0.694022 0.693513         0.000904               0                   0.000000
+desenvolvimento      sem_51 0.722118 0.768131 0.768131         0.738713               2                   0.000949
+    diagnostico      sem_51 0.722118 0.768131 0.689846         0.000923               0                   0.000000
+desenvolvimento      sem_52 0.720127 0.754151 0.754151         0.746365               3                   0.005695
+    diagnostico      sem_52 0.720127 0.754151 0.691564         0.001226               0                   0.000000
+Relatório: C:\renewable-forecast-lab\satellite-anomaly-monitor\reports\m10_4\20261124T152509Z_3878d5e2\relatorio.html

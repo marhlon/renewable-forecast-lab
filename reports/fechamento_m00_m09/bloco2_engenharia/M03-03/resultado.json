@@ -1,0 +1,78 @@
+{
+  "adjustment_receipt": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json",
+  "adjustment_sha256": "3393dec45514b885ecd4f1a071b7f26a4cdee92817408124b1a1f2879aa58fb3",
+  "evaluation": {
+    "started_at": "2026-11-25T19:55:10.335848+00:00",
+    "completed_at": "2026-11-25T19:55:10.631933+00:00",
+    "execution": "first_frozen_october_evaluation_no_refit",
+    "source_path": "reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\geracao_CJU_BA5EIGT_2026_10.parquet",
+    "source_sha256": "aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab",
+    "bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+    "selected": "HGB_lags24_calendar",
+    "study_model": "HGB_lags24_calendar",
+    "selected_metrics": {
+      "n": 695,
+      "mae": 19.520624057477644,
+      "rmse": 24.98958222829185,
+      "bias": 1.0546342468879313
+    },
+    "study_metrics": {
+      "n": 695,
+      "mae": 19.520624057477644,
+      "rmse": 24.98958222829185,
+      "bias": 1.0546342468879313
+    },
+    "persistence_metrics": {
+      "n": 695,
+      "mae": 19.218456115107916,
+      "rmse": 31.732297193018397,
+      "bias": 0.7329856115107913
+    },
+    "origin_min": "2026-10-02 01:00:00",
+    "origin_max": "2026-10-30 23:00:00",
+    "target_max": "2026-10-31 23:00:00",
+    "outputs": {
+      "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_evaluation.csv": "7f4da0587b94177c00f70843a06390afe46fbd983cb225caebc986b14b751cd5"
+    }
+  },
+  "review_sha256": "51d507a7d9d69f2f6fc53b680940061af05b4dcf6795454dace858c965bd5fc5",
+  "evaluation_receipt": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/evaluation_receipt.json",
+  "evaluation_receipt_sha256": "203a5157dfb1da180bafc33c92efd07d1c243751fb11f46700b30d1e121c61be",
+  "final_documentation_sha256": {
+    "docs/model_card.md": "55e0e1649b1a8ad8e0c2ac663be901b995183eaec9816bd94c301a36409ddab7",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/parecer.md": "51d507a7d9d69f2f6fc53b680940061af05b4dcf6795454dace858c965bd5fc5",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/analise_selecao.md": "9b198e0764dc269e49c4c064ea7498fa2d4f89d89110ce5126497c8aab42f641",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/interpretacao_adicional.md": "db0dd0c045a354923e40434dfb0138757b487a3d5d305f85c12b559d9402ccd1",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json": "1a1495dac2034585577107602a544f802075e3edde2af2e75ff0996e6d1bc93a"
+  },
+  "documentation_finalized_at": "2026-11-25T20:01:14.560264+00:00",
+  "primary_mae_difference_selected_minus_persistence_mw": 0.3021679423697279,
+  "evaluation_temporal_interpretation": "retrospective new reserved snapshot, not prospective collection or live shadow",
+  "operational_approval": false,
+  "independent_user_authorship_certified": false,
+  "evaluation_receipt_path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/evaluation_receipt.json",
+  "documented_outputs": [
+    {
+      "path": "docs/model_card.md",
+      "sha256": "55e0e1649b1a8ad8e0c2ac663be901b995183eaec9816bd94c301a36409ddab7"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/parecer.md",
+      "sha256": "51d507a7d9d69f2f6fc53b680940061af05b4dcf6795454dace858c965bd5fc5"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/analise_selecao.md",
+      "sha256": "9b198e0764dc269e49c4c064ea7498fa2d4f89d89110ce5126497c8aab42f641"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/interpretacao_adicional.md",
+      "sha256": "db0dd0c045a354923e40434dfb0138757b487a3d5d305f85c12b559d9402ccd1"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json",
+      "sha256": "1a1495dac2034585577107602a544f802075e3edde2af2e75ff0996e6d1bc93a"
+    }
+  ],
+  "evaluation_execution_addendum_path": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json",
+  "evaluation_execution_addendum_sha256": "1a1495dac2034585577107602a544f802075e3edde2af2e75ff0996e6d1bc93a"
+}

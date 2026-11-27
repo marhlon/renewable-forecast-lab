@@ -1,0 +1,36 @@
+{
+  "source": "data\\raw\\bloco2_locked\\geracao_2026_10.parquet",
+  "bronze": {
+    "path": "C:\\renewable-forecast-lab\\reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-01\\bronze\\55314b5a072a838d0ae4bd4543b940f1cfd3b7c78143f461a33aa05516e1617d\\geracao_2026_10.parquet",
+    "sha256": "55314b5a072a838d0ae4bd4543b940f1cfd3b7c78143f461a33aa05516e1617d",
+    "bytes": 4629118,
+    "reused": false
+  },
+  "outputs": {
+    "silver": {
+      "path": "reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-01\\silver.parquet",
+      "rows": 389304,
+      "sha256": "7a2452c75f339e8b620df4c28154e7ba7994aa2aed92f148bbdec820c165f735",
+      "logical_sha256": "89443f240eb1d73519124e10d2c16e39ee165cdb9aaf0ec3ce565969d6cc3aef",
+      "physical_idempotent": true
+    },
+    "quarantine": {
+      "path": "reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-01\\quarantine.parquet",
+      "rows": 148080,
+      "sha256": "c818111135e637bf5b27f80e878c9374dfd80a924e5da5fc33affa4afc1b3543",
+      "logical_sha256": "9e589c6b1e68b9430e8771fbd5936fbe7824a84cacc962b6d91249f228a348b0",
+      "physical_idempotent": true
+    },
+    "gold": {
+      "path": "reports\\fechamento_m00_m09\\bloco3_engenharia\\M07-01\\gold.parquet",
+      "rows": 2976,
+      "sha256": "b2c328a37642e6042da3e487bcf9930a188b68a740c5b4447da8d29220ce78b5",
+      "logical_sha256": "76957776eb721e712808e9f7f732a5a6bc06bdc16fe1eb8e3e073cade951cf53",
+      "physical_idempotent": true
+    }
+  },
+  "silver_row_lineage": "source_row (posição zero-based na bronze) + SHA256 original",
+  "gold_lineage": "series_id/forecast_origin; lag2=t-2, lag3=t-3, lag24=t-24, mean6=t-2..t-7; target=t+1; join exato em silver e available_at<=origin",
+  "versions": "3.0.5",
+  "schema": "bloco3-v1"
+}

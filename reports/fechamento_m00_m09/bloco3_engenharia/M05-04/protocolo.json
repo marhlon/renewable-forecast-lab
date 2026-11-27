@@ -1,0 +1,165 @@
+{
+  "created_at_utc": "2026-11-26T13:57:44.282535+00:00",
+  "id": "M05-04",
+  "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "point_bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+  "code_sha256": {
+    "notebooks/bloco3_alternativas.py": "e968c41f5edf1aaa924b415ff59bdd183b42a647c6b285415264c261acae94cb",
+    "notebooks/bloco2_modelagem_core.py": "451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc"
+  },
+  "features": [
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_4h",
+    "lag_5h",
+    "lag_6h",
+    "lag_7h",
+    "lag_8h",
+    "lag_9h",
+    "lag_10h",
+    "lag_11h",
+    "lag_12h",
+    "lag_13h",
+    "lag_14h",
+    "lag_15h",
+    "lag_16h",
+    "lag_17h",
+    "lag_18h",
+    "lag_19h",
+    "lag_20h",
+    "lag_21h",
+    "lag_22h",
+    "lag_23h",
+    "lag_24h",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos"
+  ],
+  "folds": [
+    [
+      "2026-06-01",
+      "2026-06-08"
+    ],
+    [
+      "2026-06-08",
+      "2026-06-15"
+    ],
+    [
+      "2026-06-15",
+      "2026-06-22"
+    ]
+  ],
+  "configs": [
+    {
+      "family": "lightgbm",
+      "trees": 60,
+      "params": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 60,
+        "n_jobs": 2,
+        "num_leaves": 15,
+        "objective": null,
+        "random_state": 17,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.1,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "family": "lightgbm",
+      "trees": 120,
+      "params": {
+        "boosting_type": "gbdt",
+        "class_weight": null,
+        "colsample_bytree": 1.0,
+        "importance_type": "split",
+        "learning_rate": 0.05,
+        "max_depth": -1,
+        "min_child_samples": 20,
+        "min_child_weight": 0.001,
+        "min_split_gain": 0.0,
+        "n_estimators": 120,
+        "n_jobs": 2,
+        "num_leaves": 15,
+        "objective": null,
+        "random_state": 17,
+        "reg_alpha": 0.0,
+        "reg_lambda": 0.1,
+        "subsample": 1.0,
+        "subsample_for_bin": 200000,
+        "subsample_freq": 0,
+        "verbosity": -1,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    },
+    {
+      "family": "catboost",
+      "trees": 60,
+      "params": {
+        "iterations": 60,
+        "learning_rate": 0.05,
+        "depth": 4,
+        "l2_leaf_reg": 0.1,
+        "loss_function": "RMSE",
+        "thread_count": 2,
+        "random_seed": 17,
+        "verbose": false,
+        "random_strength": 0,
+        "allow_writing_files": false,
+        "bootstrap_type": "No"
+      }
+    },
+    {
+      "family": "catboost",
+      "trees": 120,
+      "params": {
+        "iterations": 120,
+        "learning_rate": 0.05,
+        "depth": 4,
+        "l2_leaf_reg": 0.1,
+        "loss_function": "RMSE",
+        "thread_count": 2,
+        "random_seed": 17,
+        "verbose": false,
+        "random_strength": 0,
+        "allow_writing_files": false,
+        "bootstrap_type": "No"
+      }
+    }
+  ],
+  "selection": "minimum pooled validation MAE per family; first configuration wins ties; no October tuning",
+  "cutoff": "2026-07-01",
+  "strict_purge": "label_available_at < validation/final cutoff",
+  "common_origins": "504 development; training feature eligibility same as B2 33-feature common cohort",
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.8"
+  },
+  "installation": "only two wheels in .venvs/bloco3-packages, no dependency upgrades in Conda; optional plotting dependencies not used",
+  "budget": "4 configurations x 3 folds + 2 final fits, 60/120 trees, CPU two threads, no other tuning",
+  "october": "already examined B2; exploratory comparison only after fit",
+  "reserved_final": "September2026 acquired only after all integrated artifacts/code are frozen; no selection on this period",
+  "operational_approval": false,
+  "assistance": "Codex engineering solution, not independent student authorship"
+}

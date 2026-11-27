@@ -1,0 +1,27 @@
+{
+  "schema": "renewcast-bloco1-result-v1",
+  "item": "M06-01",
+  "executed_at_utc": "2026-11-25T13:46:54.357646+00:00",
+  "client_date": "2026-11-25",
+  "python": "3.12.13",
+  "os": "Windows",
+  "checks": {
+    "all_expected_hashes_match": true,
+    "no_restore_or_deserialization": true
+  },
+  "details": {},
+  "assisted_implementation": true,
+  "human_assessment_pending": false,
+  "operational_approval": false,
+  "inputs_sha256": {
+    "reports\\registry\\CJU_BA5EIGT\\h24_event_registry_v1\\51cb4456d07d4f01b8b20f32e4ed1f78\\versions.csv": "7ea670f9ed0b037d71c130e57ce8db3a52376dd6c9d716c9d5406f64cc7d056b"
+  },
+  "code_sha256": {
+    "scripts\\auditar_evidencias_bloco1.py": "0de726d7ca07bf71b918cee8d900af1decc1ad40951151b9961c54ebd46ebc1b"
+  },
+  "output_sha256": {
+    "inventario_registry.json": "4a145c5b54843802461e5bf822f45237073297e101470e04ae49bd664e086f1e",
+    "parecer.md": "ef049048ee54cbd843bca48bb98ff7f4d8adc70bf08d05826ec14cf549588823",
+    "protocolo.json": "b38061b8fa3d773fad0a272434a0e387918980179fb81ae8bfaafa0f4e88f532"
+  }
+}

@@ -1,0 +1,4 @@
+method,n,estimate,lower_percentile_2p5,upper_percentile_97p5,block_hours,bootstrap_repetitions,seed,same_resampled_indices_for_both_methods,interpretation
+raw_sorted,695,0.976978417266187,0.948201438848921,0.998561151079137,24,2000,17,True,conditional retrospective block-bootstrap CI; not a conformal or iid guarantee
+cqr_frozen,695,0.98705035971223,0.968345323741007,1,24,2000,17,True,conditional retrospective block-bootstrap CI; not a conformal or iid guarantee
+paired_difference_cqr_minus_raw,695,0.0100719424460432,0.00143884892086332,0.0230215827338129,24,2000,17,True,conditional retrospective block-bootstrap CI; not a conformal or iid guarantee

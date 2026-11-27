@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "origins": 168,
+  "gru_seeds": [
+    17,
+    29,
+    41
+  ],
+  "paired_comparisons": [
+    {
+      "seed": 17,
+      "origins": 168,
+      "mae_delta_gru_minus_hgb": 3.3520135193950513,
+      "mse_delta_gru_minus_hgb": 87.5490041199795,
+      "origins_gru_smaller_absolute_error": 64,
+      "origins_gru_larger_absolute_error": 104,
+      "five_most_favorable_squared_loss_delta_sum": -21904.592874914713,
+      "remaining_163_squared_loss_delta_sum": 36612.82556707127
+    },
+    {
+      "seed": 29,
+      "origins": 168,
+      "mae_delta_gru_minus_hgb": 2.5872705898896933,
+      "mse_delta_gru_minus_hgb": -35.69799193834197,
+      "origins_gru_smaller_absolute_error": 76,
+      "origins_gru_larger_absolute_error": 92,
+      "five_most_favorable_squared_loss_delta_sum": -23111.03408799967,
+      "remaining_163_squared_loss_delta_sum": 17113.771442358222
+    },
+    {
+      "seed": 41,
+      "origins": 168,
+      "mae_delta_gru_minus_hgb": 2.2492461736442015,
+      "mse_delta_gru_minus_hgb": -100.87517030427759,
+      "origins_gru_smaller_absolute_error": 72,
+      "origins_gru_larger_absolute_error": 96,
+      "five_most_favorable_squared_loss_delta_sum": -23453.535823945444,
+      "remaining_163_squared_loss_delta_sum": 6506.5072128268
+    }
+  ],
+  "gru_seed_spread_not_confidence_interval": {
+    "mae": {
+      "min": 34.573202435059805,
+      "median": 34.9112268513053,
+      "max": 35.67596978081066,
+      "sd_across_3_seeds_ddof1": 0.5649761164658401
+    },
+    "rmse": {
+      "min": 43.066020242508245,
+      "median": 43.81619880699449,
+      "max": 45.20073311299704,
+      "sd_across_3_seeds_ddof1": 1.0829513810680464
+    },
+    "bias_prediction_minus_target": {
+      "min": -18.525120286139124,
+      "median": -17.993097537821622,
+      "max": -14.777710416230347,
+      "sd_across_3_seeds_ddof1": 2.027512567964009
+    }
+  },
+  "metrics": [
+    {
+      "method": "gru_24h",
+      "seed": 17,
+      "rows": 168,
+      "mae": 35.67596978081066,
+      "rmse": 45.20073311299704,
+      "bias_prediction_minus_target": -18.525120286139124,
+      "centered_rmse": 41.230161197071055,
+      "p90_absolute_error": 72.45919797028209,
+      "max_absolute_error": 122.67536315908907
+    },
+    {
+      "method": "gru_24h",
+      "seed": 29,
+      "rows": 168,
+      "mae": 34.9112268513053,
+      "rmse": 43.81619880699449,
+      "bias_prediction_minus_target": -17.993097537821622,
+      "centered_rmse": 39.9513168605054,
+      "p90_absolute_error": 66.41669912361486,
+      "max_absolute_error": 120.32007506363438
+    },
+    {
+      "method": "gru_24h",
+      "seed": 41,
+      "rows": 168,
+      "mae": 34.573202435059805,
+      "rmse": 43.066020242508245,
+      "bias_prediction_minus_target": -14.777710416230347,
+      "centered_rmse": 40.451222161786,
+      "p90_absolute_error": 66.11704792418364,
+      "max_absolute_error": 115.13661394908908
+    },
+    {
+      "method": "hgb_24h",
+      "seed": 17,
+      "rows": 168,
+      "mae": 32.32395626141561,
+      "rmse": 44.22168325417303,
+      "bias_prediction_minus_target": -13.11903850391513,
+      "centered_rmse": 42.23089033592827,
+      "p90_absolute_error": 73.26083084775439,
+      "max_absolute_error": 133.05894343848553
+    },
+    {
+      "method": "linear_24h",
+      "seed": "",
+      "rows": 168,
+      "mae": 33.678663658982636,
+      "rmse": 44.93811098256651,
+      "bias_prediction_minus_target": -15.148681136093051,
+      "centered_rmse": 42.307815808883866,
+      "p90_absolute_error": 69.39519355425564,
+      "max_absolute_error": 127.76769171809718
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 17,
+      "rows": 168,
+      "mae": 32.724828086773655,
+      "rmse": 44.01986639522692,
+      "bias_prediction_minus_target": -10.65594684986793,
+      "centered_rmse": 42.710647784673306,
+      "p90_absolute_error": 70.57615345566686,
+      "max_absolute_error": 124.58444354026736
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 29,
+      "rows": 168,
+      "mae": 33.700811473289775,
+      "rmse": 44.89231615366763,
+      "bias_prediction_minus_target": -12.652757051576796,
+      "centered_rmse": 43.07235527150357,
+      "p90_absolute_error": 69.97403284876358,
+      "max_absolute_error": 129.4457836005783
+    },
+    {
+      "method": "mlp_24h",
+      "seed": 41,
+      "rows": 168,
+      "mae": 33.15978842314019,
+      "rmse": 44.069511080351134,
+      "bias_prediction_minus_target": -13.724279886271457,
+      "centered_rmse": 41.87798883022531,
+      "p90_absolute_error": 67.90092921418133,
+      "max_absolute_error": 124.6869566107521
+    },
+    {
+      "method": "persistence_d2",
+      "seed": "",
+      "rows": 168,
+      "mae": 37.99164583333333,
+      "rmse": 55.43434225554642,
+      "bias_prediction_minus_target": 3.016872023809524,
+      "centered_rmse": 55.352188615239186,
+      "p90_absolute_error": 99.81930000000001,
+      "max_absolute_error": 131.548
+    }
+  ],
+  "historical_predictions_hash_matched_receipt": true,
+  "new_untouched_holdout": false,
+  "retraining_performed": false,
+  "checks_count": 8,
+  "item": "M08-02",
+  "started_at_utc": "2026-11-26T00:32:54.373829+00:00",
+  "completed_at_utc": "2026-11-26T00:32:55.009076+00:00",
+  "protocol_sha256": "0531ea275f231ce01c474f87dc499a01a9c10be9857ca37bd58eb613fbff42b8",
+  "code_sha256": {
+    "notebooks/bloco3_transferencia_neural.py": "dcf4dc80e595899bd127df1e3ea4cf1cef9611021e351adaf28a8e15abe2fce6",
+    "tests/test_bloco3_transferencia_neural.py": "1a261ec785a2669c7b440408895539052e5cb48057e686766f99dd0f1f297c76",
+    "src/renewable_forecast/neural_gru.py": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+    "src/renewable_forecast/transformer_blocks.py": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d"
+  },
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "training_performed": false,
+  "optimizer_steps": 0,
+  "authorship": "Codex, solução técnica fornecida e executada; sem autonomia pessoal certificada",
+  "operational_evidence": false,
+  "output_sha256": {
+    "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/metricas.csv": "f278734f6a534bdb5ced78c61ae94cc0838620e9249629e2feef5229c15b8733",
+    "reports/fechamento_m00_m09/bloco3_engenharia/M08-02/perdas_por_origem.csv": "5d032e8adc8a0e285e36b2fe9504119adbdd407dac26e2f1e2dfcb98945ce78d"
+  }
+}

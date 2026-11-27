@@ -1,0 +1,29 @@
+{
+  "schema": "renewcast-bloco1-result-v1",
+  "item": "M08-01",
+  "executed_at_utc": "2026-11-25T12:15:37.342118+00:00",
+  "client_date": "2026-11-25",
+  "python": "3.12.13",
+  "os": "Windows",
+  "checks": {
+    "output_hashes_match": true,
+    "version_discrepancies_disclosed": true
+  },
+  "details": {
+    "current_code_discrepancy_declarations": 1
+  },
+  "assisted_implementation": true,
+  "human_assessment_pending": false,
+  "operational_approval": false,
+  "inputs_sha256": {
+    "docs\\roadmap_m00_m09\\auditoria_m08_m09.json": "838f06e7735abd4961d041d3fb6b211a2cba8c4a54b1c19d3c662f1504813ed5"
+  },
+  "code_sha256": {
+    "scripts\\auditar_evidencias_bloco1.py": "0de726d7ca07bf71b918cee8d900af1decc1ad40951151b9961c54ebd46ebc1b"
+  },
+  "output_sha256": {
+    "auditoria_brutos.json": "31660fae40eba9512768939216bae3f90d49c21a8be5dd5783482f79ec519afe",
+    "parecer.md": "5dc8d0cf5115de7a931167bdeebc56412312309408ef48c4e5a554c4cbea4250",
+    "protocolo.json": "85d266847cda0c14a7dfecc3906227b66bb2b41c6f0b5278e49c1fbb286a50ea"
+  }
+}

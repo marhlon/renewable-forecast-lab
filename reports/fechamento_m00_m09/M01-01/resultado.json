@@ -1,0 +1,130 @@
+{
+  "schema": "renewcast-sql-preparation-result-v1",
+  "item": "M01-01",
+  "status": "await_human",
+  "preparation_completed": true,
+  "independent_response_received": false,
+  "human_acceptance_claimed": false,
+  "student_autonomy_claimed": false,
+  "responsibility": "Preparação e revisão técnica assistidas por Codex.",
+  "executed_at_utc": "2026-11-25T12:26:21.842432+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "notebooks/laboratorio_diagnostico_sql.py",
+    "--preparar"
+  ],
+  "exit_code": 0,
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "sqlite": "3.53.2"
+  },
+  "summary": "Demonstração JOIN/nulos/LAG/quarentena conferida; novo caso C e sua defesa continuam pendentes.",
+  "demo": {
+    "kind": "demonstracao_sintetica_resolvida_assistida",
+    "passed": true,
+    "checks": [
+      "sql_vs_conta_manual",
+      "sql_vs_pandas",
+      "left_vs_inner",
+      "quarentena_integral",
+      "lag_linha_diferente_de_hora",
+      "lag_na_grade_preserva_lacuna",
+      "particao_por_serie",
+      "cardinalidade_da_grade",
+      "fonte_preservada"
+    ],
+    "source_rows": 11,
+    "clean_rows": 9,
+    "quarantine_rows": 2,
+    "daily_left_rows": 8,
+    "daily_inner_rows": 5,
+    "hourly_grid_rows": 192,
+    "daily_reference": [
+      {
+        "id_ons": "A",
+        "dia": "2027-01-01",
+        "horas_presentes": 3,
+        "horas_validas": 2,
+        "media_mwmed": 6.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-03",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 30.0,
+        "cobertura": 0.041666666666666664
+      },
+      {
+        "id_ons": "A",
+        "dia": "2027-01-04",
+        "horas_presentes": 2,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-01",
+        "horas_presentes": 2,
+        "horas_validas": 2,
+        "media_mwmed": 150.0,
+        "cobertura": 0.08333333333333333
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-02",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-03",
+        "horas_presentes": 0,
+        "horas_validas": 0,
+        "media_mwmed": null,
+        "cobertura": 0.0
+      },
+      {
+        "id_ons": "B",
+        "dia": "2027-01-04",
+        "horas_presentes": 1,
+        "horas_validas": 1,
+        "media_mwmed": 0.0,
+        "cobertura": 0.041666666666666664
+      }
+    ]
+  },
+  "real_exercise_preparation": {
+    "independent_query_executed": false
+  },
+  "output_sha256": {
+    "notebooks/laboratorio_diagnostico_sql.py": "dbdbfd264a27650ca49db2cbb70e9df4c6b312c198f0247e50708788bc9a311f",
+    "docs/roadmap_m00_m09/Diagnostico_SQL.md": "0bd45d5bc88a016317cfd0988d5ca4d2512894ff9f19f345eaf1b54701ab4584",
+    "reports/fechamento_m00_m09/M01-01/protocolo.json": "9bc62dae567c0cbddb67ff1446cd1a94cb3ede33ce1ca2f7a9d702aa6c0827ff",
+    "reports/fechamento_m00_m09/M01-01/parecer.md": "88db892f8a69e25e1e42fd03f4d58fd689f035baaeb860d1a7cbd4d78536c26b",
+    "reports/fechamento_m00_m09/M01-02/adendo_protocolo.json": "9408b92346894719a3fa98c0f956b6407e3f4458f09b9b11a755794253ba3ccc",
+    "reports/fechamento_m00_m09/M01-01/resposta_independente.md": "10312cfd267b6db9921a40d8ca1d8ec13a2205d873ba9ceda0176599ef46686a",
+    "reports/fechamento_m00_m09/M01-01/consultas.sql": "8b0794ee90dbf9fdd6b306542ab1097379689d3821e199f4fe0be23a9cee9600"
+  },
+  "models_trained": false,
+  "pickle_loaded": false,
+  "spark_or_docker_run": false,
+  "network": false,
+  "historical_runs_modified": false,
+  "operational_approval": false
+}

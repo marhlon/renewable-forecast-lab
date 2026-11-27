@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-11-26T00:40:49.105606+00:00",
+  "command": "python -m pytest tests/test_bloco3_ops.py -q",
+  "execution_observed": true,
+  "exit_code": 0,
+  "passed": 9,
+  "duration_seconds_reported_by_pytest": 17.49,
+  "warnings": [
+    "PytestCacheWarning: could not create .pytest_cache/v/cache/nodeids; access denied"
+  ],
+  "test_file_sha256": "15419ae5284f834b8fb7d917a70a5be117220e95d3a4a25f41a93987782eb20c"
+}

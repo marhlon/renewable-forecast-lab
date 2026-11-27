@@ -1,0 +1,17 @@
+{
+  "schema": "renewcast-sql-real-slice-v1",
+  "registered_at_utc": "2026-11-25T12:26:05.569373+00:00",
+  "rule": "terceiro mês civil completo; regra prévia no adendo, sem seleção por diagnóstico",
+  "source": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "source_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+  "manifest_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+  "source_rows": 8760,
+  "source_min": "2025-09-01T00:00:00",
+  "source_max": "2026-08-31T23:00:00",
+  "start_inclusive": "2025-11-01T00:00:00",
+  "end_exclusive": "2025-12-01T00:00:00",
+  "id_ons": "CJU_BA5EIGT",
+  "timezone_assigned": false,
+  "predictive_test_selection": false,
+  "independent_query_executed": false
+}

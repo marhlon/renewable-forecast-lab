@@ -1,0 +1,6 @@
+model,series,train_rows,fit_wall_seconds,fit_cpu_seconds
+global_hgb,all,1332,0.3918812000192702,0.359375
+local_hgb,CEECVA,333,0.1212373000162188,0.125
+local_hgb,CEEMAU,333,0.19168009998975322,0.1875
+local_hgb,CEUCZ,333,0.1560592000023462,0.15625
+local_hgb,CEUFM,333,0.1993296000000555,0.1875

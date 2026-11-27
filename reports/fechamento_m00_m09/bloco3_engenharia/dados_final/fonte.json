@@ -1,0 +1,47 @@
+{
+  "downloaded_at_utc": "2026-11-26T16:11:00.888494+00:00",
+  "freeze_sha256": "c2cc4b4f89d8a522f2ca446f75821e6b446a47a05c78f493865df9b810b102b2",
+  "freeze_created_at_utc": "2026-11-26T16:10:57.439880+00:00",
+  "raw_path": "data/raw/bloco3_locked/geracao_2026_09.parquet",
+  "raw_sha256": "de289d8c8d8db65b98b4fd99f0a77d5dd809029a34e85b368895815885f83d90",
+  "raw_bytes": 4476385,
+  "http": {
+    "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/GERACAO_USINA-2_2026_09.parquet",
+    "headers": {
+      "x-amz-request-id": "GHTYX1EGC7QTNB1M",
+      "x-amz-id-2": "kEMozF/THRHsrKUIFN42QTiLWQvnVoZadtygxDnoGg5RZH/CuXgAb4Vbp2dgXu2F9qc7+gKwHik=",
+      "Content-Length": "4476385",
+      "Accept-Ranges": "bytes",
+      "Date": "Thu, 26 Nov 2026 16:10:59 GMT",
+      "Server": "AmazonS3",
+      "Last-Modified": "Sat, 31 Oct 2026 22:06:37 GMT",
+      "ETag": "\"2e46bb1a9cabca987c0c7e63f04b250b\"",
+      "Content-Type": "binary/octet-stream",
+      "x-amz-server-side-encryption": "AES256",
+      "Connection": "close"
+    }
+  },
+  "metadata_http": {
+    "url": "https://dados.ons.org.br/api/3/action/resource_show?id=c6d1f291-c114-4872-b69d-b487f7410e5c",
+    "headers": {
+      "Date": "Thu, 26 Nov 2026 16:10:59 GMT",
+      "Content-Type": "application/json;charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Server": "nginx",
+      "Vary": "Cookie",
+      "Cache-Control": "public, max-age=600, must-revalidate",
+      "X-Cache-Status": "MISS",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  "retrospective_snapshot": true,
+  "historically_point_in_time_proven": false,
+  "operational_approval": false,
+  "filtered_path": "reports/fechamento_m00_m09/bloco3_engenharia/dados_final/geracao_CJU_BA5EIGT_2026_09.parquet",
+  "filtered_sha256": "1b7d541576a80868d377c79e0aa4cac95da2b535dfa2373129256f6a654f5798",
+  "filtered_rows": 720,
+  "extracted_at_utc": "2026-11-26T16:11:01.344325+00:00",
+  "extraction_status": "validated"
+}

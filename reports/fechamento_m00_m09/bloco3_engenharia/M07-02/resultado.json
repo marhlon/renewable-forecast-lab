@@ -1,0 +1,150 @@
+{
+  "executed_at_utc": "2026-11-26T00:40:01.370049+00:00",
+  "trials": 18,
+  "real_source": true,
+  "synthetic_replication": false,
+  "equivalence": [
+    {
+      "cohort": 1,
+      "repetition": 1,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 1,
+      "repetition": 2,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 1,
+      "repetition": 3,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 2,
+      "repetition": 1,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 2,
+      "repetition": 2,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 2,
+      "repetition": 3,
+      "equivalent": true,
+      "max_abs_numeric_difference": 1.3642420526593924e-12
+    },
+    {
+      "cohort": 3,
+      "repetition": 1,
+      "equivalent": true,
+      "max_abs_numeric_difference": 3.183231456205249e-12
+    },
+    {
+      "cohort": 3,
+      "repetition": 2,
+      "equivalent": true,
+      "max_abs_numeric_difference": 3.183231456205249e-12
+    },
+    {
+      "cohort": 3,
+      "repetition": 3,
+      "equivalent": true,
+      "max_abs_numeric_difference": 3.183231456205249e-12
+    }
+  ],
+  "summary": [
+    {
+      "engine": "duckdb",
+      "cohort": 1,
+      "rows": 149568,
+      "wall_median": 0.326142300007632,
+      "wall_min": 0.17048239998985082,
+      "wall_max": 0.6260764999897219,
+      "cpu_median": 0.15625,
+      "rss_peak": 121765888,
+      "output_bytes": 8347
+    },
+    {
+      "engine": "duckdb",
+      "cohort": 2,
+      "rows": 266664,
+      "wall_median": 0.2501287000195589,
+      "wall_min": 0.24556609999854118,
+      "wall_max": 0.27277139999205247,
+      "cpu_median": 0.21875,
+      "rss_peak": 128720896,
+      "output_bytes": 12633
+    },
+    {
+      "engine": "duckdb",
+      "cohort": 3,
+      "rows": 389304,
+      "wall_median": 0.22283510002307594,
+      "wall_min": 0.18253230000846088,
+      "wall_max": 0.28761840000515804,
+      "cpu_median": 0.21875,
+      "rss_peak": 135127040,
+      "output_bytes": 16660
+    },
+    {
+      "engine": "pandas",
+      "cohort": 1,
+      "rows": 149568,
+      "wall_median": 0.24717070002225228,
+      "wall_min": 0.23277790000429377,
+      "wall_max": 0.4155363999889232,
+      "cpu_median": 0.203125,
+      "rss_peak": 155054080,
+      "output_bytes": 8362
+    },
+    {
+      "engine": "pandas",
+      "cohort": 2,
+      "rows": 266664,
+      "wall_median": 0.3968718000105582,
+      "wall_min": 0.3169396999874152,
+      "wall_max": 0.47918329999083653,
+      "cpu_median": 0.3125,
+      "rss_peak": 165986304,
+      "output_bytes": 12648
+    },
+    {
+      "engine": "pandas",
+      "cohort": 3,
+      "rows": 389304,
+      "wall_median": 0.2151093000138644,
+      "wall_min": 0.2103083000110928,
+      "wall_max": 0.29555100001743995,
+      "cpu_median": 0.234375,
+      "rss_peak": 156143616,
+      "output_bytes": 16675
+    }
+  ],
+  "all_rss_under_512mib": true,
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_logical": 8,
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:16:45) [MSC v.1942 64 bit (AMD64)]",
+    "packages": {
+      "pandas": "3.0.5",
+      "duckdb": "1.5.5",
+      "numpy": "2.5.3",
+      "pyarrow": "25.0.1",
+      "psutil": "7.2.2"
+    }
+  },
+  "limits": [
+    "Local single process/one thread; não mede rede/cluster/distribuição",
+    "Fonte de 4.6 MB e 537k registros brutos, sem inferir big data",
+    "warm OS cache possível",
+    "DuckDB limite 512MB; pandas só RSS observado, sem imposição rígida",
+    "EXPLAIN ANALYZE posterior aos trials não faz parte do tempo medido"
+  ]
+}

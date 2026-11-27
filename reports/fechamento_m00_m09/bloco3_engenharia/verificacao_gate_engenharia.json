@@ -1,0 +1,90 @@
+{
+  "valid": true,
+  "errors": [],
+  "summary": {
+    "total": 18,
+    "total_global": 45,
+    "bloco": 3,
+    "etapas_do_bloco": [
+      7,
+      8,
+      9
+    ],
+    "itens_no_bloco": [
+      "M03-04",
+      "M05-04",
+      "M05-05",
+      "M06-02",
+      "M06-03",
+      "M06-04",
+      "M06-05",
+      "M06-06",
+      "M06-07",
+      "M06-08",
+      "M06-09",
+      "M07-01",
+      "M07-02",
+      "M07-03",
+      "M08-02",
+      "M08-03",
+      "M09-02",
+      "M09-04"
+    ],
+    "por_estado": {
+      "planejado": 0,
+      "em_execucao": 0,
+      "aguarda_revisao": 0,
+      "validado": 12,
+      "bloqueado": 6
+    },
+    "por_modulo": {
+      "M00": 0,
+      "M01": 0,
+      "M02": 0,
+      "M03": 1,
+      "M04": 0,
+      "M05": 2,
+      "M06": 8,
+      "M07": 3,
+      "M08": 2,
+      "M09": 2
+    },
+    "exigir_fechamento": false,
+    "pendentes_no_bloco": [
+      "M06-04",
+      "M06-05",
+      "M06-06",
+      "M06-07",
+      "M06-08",
+      "M06-09"
+    ],
+    "gate": "engenharia",
+    "itens_no_gate": [
+      "M03-04",
+      "M05-04",
+      "M05-05",
+      "M06-02",
+      "M06-03",
+      "M07-01",
+      "M07-02",
+      "M07-03",
+      "M08-02",
+      "M08-03",
+      "M09-02",
+      "M09-04"
+    ],
+    "pendencias_fora_do_gate": [
+      "M06-04",
+      "M06-05",
+      "M06-06",
+      "M06-07",
+      "M06-08",
+      "M06-09"
+    ],
+    "pendentes_no_gate": [],
+    "prontos_para_iniciar": []
+  },
+  "warning": "Consistência documental não comprova autonomia nem operação real.",
+  "schema": "renewcast-roadmap-verification-v1",
+  "backlog": "C:\\renewable-forecast-lab\\config\\roadmap_m00_m09.json"
+}

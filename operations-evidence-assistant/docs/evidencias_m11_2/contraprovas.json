@@ -1,0 +1,638 @@
+[
+  {
+    "teste": "fiel",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "fiel",
+    "erros": [],
+    "candidato": {
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "conferido",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "decimais_equivalentes",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.700\", \"s1\": \"0.800\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "fiel",
+    "erros": [],
+    "candidato": {
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.700",
+      "s1": "0.800",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "conferido",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "json_incompleto",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]",
+    "etapa": "json_invalido",
+    "erros": [
+      "json_malformado"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "cerca_markdown",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "```json\n{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}\n```",
+    "etapa": "json_invalido",
+    "erros": [
+      "json_malformado"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "chave_duplicada",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"],\"cutoff\":\"0.10\"}",
+    "etapa": "json_invalido",
+    "erros": [
+      "chave_duplicada"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "numero_nao_json",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": NaN, \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "json_invalido",
+    "erros": [
+      "constante_nao_json"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "omissao_s2",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "esquema_invalido",
+    "erros": [
+      "missing:s2"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "coercao_float",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": 0.8, \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "esquema_invalido",
+    "erros": [
+      "string_type:s1"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "campo_extra",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"], \"observacao\": \"not verified\"}",
+    "etapa": "esquema_invalido",
+    "erros": [
+      "extra_forbidden:observacao"
+    ],
+    "candidato": null,
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "pico_virou_corte",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.80\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "numero_divergente:cutoff"
+    ],
+    "candidato": {
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.80",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "causa_nao_sustentada",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"physical_cause\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "razao_sem_suporte"
+    ],
+    "candidato": {
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "physical_cause",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "citacao_incompleta_e_extra",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"caso_s2\", \"code\": \"ISOLATED\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"cutoff\", \"usable\", \"s1\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "citacao_ausente:s2",
+      "citacao_extra:usable",
+      "citacao_repetida"
+    ],
+    "candidato": {
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "cutoff",
+        "usable",
+        "s1"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "sem_dado_nao_e_zero",
+    "fonte": {
+      "id": "caso_sem_dado",
+      "k": 2,
+      "usable": false,
+      "cutoff": "0.70",
+      "s1": null,
+      "s2": null
+    },
+    "texto": "{\"id\": \"caso_sem_dado\", \"code\": \"INSUFFICIENT\", \"cutoff\": \"0.70\", \"s1\": \"0\", \"s2\": null, \"reason\": \"unavailable\", \"refs\": [\"usable\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "numero_divergente:s1"
+    ],
+    "candidato": {
+      "id": "caso_sem_dado",
+      "code": "INSUFFICIENT",
+      "cutoff": "0.70",
+      "s1": "0",
+      "s2": null,
+      "reason": "unavailable",
+      "refs": [
+        "usable"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_sem_dado",
+      "code": "INSUFFICIENT",
+      "cutoff": "0.70",
+      "s1": null,
+      "s2": null,
+      "reason": "unavailable",
+      "refs": [
+        "usable"
+      ],
+      "explicacao": "Registro indisponível para aplicar a regra."
+    }
+  },
+  {
+    "teste": "id_e_classe_trocados",
+    "fonte": {
+      "id": "caso_s2",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62"
+    },
+    "texto": "{\"id\": \"outro_caso\", \"code\": \"ELIGIBLE\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.62\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "classe_divergente",
+      "id_divergente"
+    ],
+    "candidato": {
+      "id": "outro_caso",
+      "code": "ELIGIBLE",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_s2",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.62",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  },
+  {
+    "teste": "igualdade_inclusiva",
+    "fonte": {
+      "id": "caso_igualdade",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.700"
+    },
+    "texto": "{\"id\": \"caso_igualdade\", \"code\": \"ELIGIBLE\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.700\", \"reason\": \"pair_met\", \"refs\": [\"k\", \"s2\", \"cutoff\"]}",
+    "etapa": "fiel",
+    "erros": [],
+    "candidato": {
+      "id": "caso_igualdade",
+      "code": "ELIGIBLE",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.700",
+      "reason": "pair_met",
+      "refs": [
+        "k",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "conferido",
+      "id": "caso_igualdade",
+      "code": "ELIGIBLE",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.700",
+      "reason": "pair_met",
+      "refs": [
+        "k",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O melhor par chegou ao corte para duas leituras."
+    }
+  },
+  {
+    "teste": "arredondamento_muda_regra",
+    "fonte": {
+      "id": "caso_precisao",
+      "k": 2,
+      "usable": true,
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.6999999999999999999"
+    },
+    "texto": "{\"id\": \"caso_precisao\", \"code\": \"ELIGIBLE\", \"cutoff\": \"0.70\", \"s1\": \"0.80\", \"s2\": \"0.70\", \"reason\": \"pair_below\", \"refs\": [\"k\", \"s1\", \"s2\", \"cutoff\"]}",
+    "etapa": "divergencia",
+    "erros": [
+      "classe_divergente",
+      "numero_divergente:s2"
+    ],
+    "candidato": {
+      "id": "caso_precisao",
+      "code": "ELIGIBLE",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.70",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ]
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "caso_precisao",
+      "code": "ISOLATED",
+      "cutoff": "0.70",
+      "s1": "0.80",
+      "s2": "0.6999999999999999999",
+      "reason": "pair_below",
+      "refs": [
+        "k",
+        "s1",
+        "s2",
+        "cutoff"
+      ],
+      "explicacao": "O pico chegou ao corte; o melhor par ficou abaixo."
+    }
+  }
+]

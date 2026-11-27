@@ -1,0 +1,2377 @@
+{
+  "schema": "renewcast-m00-m09-local-evidence-integrity-audit-v1",
+  "audited_at_utc": "2026-11-25T01:10:15.446880+00:00",
+  "scope": "Point-in-time local file SHA256 verification of explicitly pinned M08/M09 receipts and selected delivery lists. Repeated paths are counted once per declaration, not as unique files.",
+  "method": "stdlib JSON reading and SHA256 only. No imports of project code, torch checkpoint loading, execution of tests, model training or inference, CI, cloud, network or deployment.",
+  "runs": [
+    {
+      "label": "M08.1_default",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/resultado.json",
+        "bytes": 3614,
+        "actual_sha256": "40b013b41834c1062765d28d6ff94a3984e4af48c7cb83d0cb7c0a130645bf6d",
+        "status": "present"
+      },
+      "schema": "renewcast-autograd-m08-1-v1",
+      "run_id_in_receipt": "20261104T131859Z_8f277a44",
+      "recorded_completed": null,
+      "recorded_training_state": "completed",
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/curva_treino.csv",
+          "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "bytes": 9509,
+          "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/linear_state.pt",
+          "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "bytes": 2061,
+          "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/predictions.csv",
+          "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "bytes": 16518,
+          "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_autograd.py",
+          "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "bytes": 16646,
+          "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "operational_model_approved": false,
+        "authorship_checked": false
+      }
+    },
+    {
+      "label": "M08.1_unstable",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/resultado.json",
+        "bytes": 3618,
+        "actual_sha256": "bf09db201fb2104206e238818d234c9b8bb7cef9a9b140194f500bb4d240b941",
+        "status": "present"
+      },
+      "schema": "renewcast-autograd-m08-1-v1",
+      "run_id_in_receipt": "20261104T132027Z_d5a8612c",
+      "recorded_completed": null,
+      "recorded_training_state": "completed",
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/curva_treino.csv",
+          "expected_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+          "bytes": 717,
+          "actual_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/linear_state.pt",
+          "expected_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+          "bytes": 2061,
+          "actual_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/predictions.csv",
+          "expected_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+          "bytes": 16699,
+          "actual_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_autograd.py",
+          "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "bytes": 16646,
+          "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "operational_model_approved": false,
+        "authorship_checked": false
+      }
+    },
+    {
+      "label": "M08.1_author",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/resultado.json",
+        "bytes": 3676,
+        "actual_sha256": "d222d66b1d1ddac4b1eb2367e6abf5c2528666939d6e1aeb8222e918e2e34cc2",
+        "status": "present"
+      },
+      "schema": "renewcast-autograd-m08-1-v1",
+      "run_id_in_receipt": "20261104T132133Z_97eada41",
+      "recorded_completed": null,
+      "recorded_training_state": "completed",
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/curva_treino.csv",
+          "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "bytes": 9509,
+          "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/linear_state.pt",
+          "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "bytes": 2061,
+          "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/predictions.csv",
+          "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "bytes": 16518,
+          "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_autograd.py",
+          "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "bytes": 16646,
+          "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "status": "match"
+        }
+      ],
+      "current_author_file": {
+        "path": "notebooks/m08_gradiente_autoral.py",
+        "expected_sha256": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+        "bytes": 998,
+        "actual_sha256": "96d810d376e73838481417900aff2fa9956c2289f78f910d8787dc32438f6c1b",
+        "status": "mismatch"
+      },
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "operational_model_approved": false,
+        "authorship_checked": true
+      }
+    },
+    {
+      "label": "M08.2_reference",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/resultado.json",
+        "bytes": 3747,
+        "actual_sha256": "5a7760c70a8a43bd241635851848277f2acfdc637a130fe4cfd50ccfc94905c3",
+        "status": "present"
+      },
+      "schema": "renewcast-mlp-result-v1",
+      "run_id_in_receipt": null,
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/curvas.csv",
+          "expected_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "bytes": 5063,
+          "actual_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/janelas_avaliacao.csv",
+          "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "bytes": 21670,
+          "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/linear_24h.json",
+          "expected_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+          "bytes": 804,
+          "actual_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/mlp_seed_17.pt",
+          "expected_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+          "bytes": 7045,
+          "actual_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/mlp_seed_29.pt",
+          "expected_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+          "bytes": 7045,
+          "actual_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/mlp_seed_41.pt",
+          "expected_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+          "bytes": 7045,
+          "actual_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/origens_sem_janela.csv",
+          "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "bytes": 1976,
+          "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/predictions.csv",
+          "expected_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+          "bytes": 115042,
+          "actual_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/protocol.json",
+          "expected_sha256": "bfbe548eacc10f9cabf3bbe8112a69e7fb1b4c69696f4a38995804602f579d66",
+          "bytes": 1094,
+          "actual_sha256": "bfbe548eacc10f9cabf3bbe8112a69e7fb1b4c69696f4a38995804602f579d66",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T151533Z_f6d1f721/summary.csv",
+          "expected_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "bytes": 445,
+          "actual_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_mlp.py",
+          "expected_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+          "bytes": 22594,
+          "actual_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "operational_approval": false
+      }
+    },
+    {
+      "label": "M08.2_author",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/resultado.json",
+        "bytes": 3748,
+        "actual_sha256": "4d8f62339556b70332bd64ccc98c61e72161d35372232a9a7a7339f16fd4db8e",
+        "status": "present"
+      },
+      "schema": "renewcast-mlp-result-v1",
+      "run_id_in_receipt": null,
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/curvas.csv",
+          "expected_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "bytes": 5063,
+          "actual_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/janelas_avaliacao.csv",
+          "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "bytes": 21670,
+          "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/linear_24h.json",
+          "expected_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+          "bytes": 804,
+          "actual_sha256": "4ee9048710c03992dffe159f43527df15637e2d013e27205c1a86edaf54be9bf",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/mlp_seed_17.pt",
+          "expected_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+          "bytes": 7045,
+          "actual_sha256": "92401563df7c91b39c7defbd05d6956591ee389cc2a0a8098110b0b7429fe96f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/mlp_seed_29.pt",
+          "expected_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+          "bytes": 7045,
+          "actual_sha256": "9edc239b472cc95aeab68a19e89cccfc2d774b83915bb8cd2956e046d4e6ce01",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/mlp_seed_41.pt",
+          "expected_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+          "bytes": 7045,
+          "actual_sha256": "c3af421ecbb6fa3316ed6fa0641fd2cd549c0e63bc21c1bc6605dc5b085ef3e5",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/origens_sem_janela.csv",
+          "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "bytes": 1976,
+          "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/predictions.csv",
+          "expected_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+          "bytes": 115042,
+          "actual_sha256": "96c7908b5620439114139f83fd80638c621a41c532f58ecbcdbce894fa4eb7f4",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/protocol.json",
+          "expected_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+          "bytes": 1156,
+          "actual_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/summary.csv",
+          "expected_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "bytes": 445,
+          "actual_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_mlp.py",
+          "expected_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+          "bytes": 22594,
+          "actual_sha256": "31ab6c59122e708d3b516a5091310e4160f1639b4e725bafd6f032e2414390c2",
+          "status": "match"
+        }
+      ],
+      "current_author_file": {
+        "path": "notebooks/m08_avaliacao_autoral.py",
+        "expected_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+        "bytes": 1883,
+        "actual_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+        "status": "match"
+      },
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "operational_approval": false
+      }
+    },
+    {
+      "label": "M08.3_accepted",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/resultado.json",
+        "bytes": 7532,
+        "actual_sha256": "60e58cc9837d987eb346c2e7af339c35972c78bb8fad1fc7f4e53fee02a60eab",
+        "status": "present"
+      },
+      "schema": "renewcast-gru-result-v1",
+      "run_id_in_receipt": "20261115T164955Z_5e435b09",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/curvas.csv",
+          "expected_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+          "bytes": 13682,
+          "actual_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/curvas.png",
+          "expected_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+          "bytes": 151316,
+          "actual_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/gru_24h_seed_17.pt",
+          "expected_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+          "bytes": 8061,
+          "actual_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/gru_24h_seed_29.pt",
+          "expected_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+          "bytes": 8061,
+          "actual_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/gru_24h_seed_41.pt",
+          "expected_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+          "bytes": 8061,
+          "actual_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/hgb_24h.joblib",
+          "expected_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+          "bytes": 405024,
+          "actual_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/janelas_avaliacao.csv",
+          "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "bytes": 21670,
+          "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/linear_24h.json",
+          "expected_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+          "bytes": 720,
+          "actual_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/mlp_24h_seed_17.pt",
+          "expected_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+          "bytes": 7221,
+          "actual_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/mlp_24h_seed_29.pt",
+          "expected_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+          "bytes": 7221,
+          "actual_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/mlp_24h_seed_41.pt",
+          "expected_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+          "bytes": 7221,
+          "actual_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/origens_sem_janela.csv",
+          "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "bytes": 1976,
+          "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/predictions.csv",
+          "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "bytes": 293086,
+          "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/preprocessing.json",
+          "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "bytes": 2177,
+          "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/protocol.json",
+          "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "bytes": 2296,
+          "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/relatorio.html",
+          "expected_sha256": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+          "bytes": 3694,
+          "actual_sha256": "8dbe67403bf9d275c65ddbf0bfd6a1d3934d03891751152cd74693b5195bcb0e",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T164955Z_5e435b09/summary.csv",
+          "expected_sha256": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140",
+          "bytes": 963,
+          "actual_sha256": "46402457a561869a90840308a4c7c21de82d960aac6b371aa16a84db9a00b140",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_gru.py",
+          "expected_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+          "bytes": 21134,
+          "actual_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_verificacao.py",
+          "expected_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+          "bytes": 6861,
+          "actual_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+          "status": "match"
+        },
+        {
+          "path": "src/renewable_forecast/neural_gru.py",
+          "expected_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+          "bytes": 2441,
+          "actual_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "physical_timezone_verified": false,
+        "operational_policy_approved": false
+      }
+    },
+    {
+      "label": "M08.3_baseline_M09_3",
+      "run_directory": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f",
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/resultado.json",
+        "bytes": 7533,
+        "actual_sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+        "status": "present"
+      },
+      "schema": "renewcast-gru-result-v1",
+      "run_id_in_receipt": "20261115T170309Z_90a6625f",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/curvas.csv",
+          "expected_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+          "bytes": 13682,
+          "actual_sha256": "441ea1d442e88ebf9d39a35560176e6f74405b79841723b7f0687b70beb6ddad",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/curvas.png",
+          "expected_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+          "bytes": 151316,
+          "actual_sha256": "5e565b9c7eddb32460fcebce94c154ebe34b1c3053a17dc1081541b84d762a7f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_17.pt",
+          "expected_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+          "bytes": 8061,
+          "actual_sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_29.pt",
+          "expected_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+          "bytes": 8061,
+          "actual_sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_41.pt",
+          "expected_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+          "bytes": 8061,
+          "actual_sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/hgb_24h.joblib",
+          "expected_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+          "bytes": 405024,
+          "actual_sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/janelas_avaliacao.csv",
+          "expected_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "bytes": 21670,
+          "actual_sha256": "ad3e493b4ad97a639a4d2619797aa067e1cd7175c281c903f4a2a071b5fdaa39",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/linear_24h.json",
+          "expected_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+          "bytes": 720,
+          "actual_sha256": "4d5af49c48c0cb154cf5959f11fbb721be534792764e75fcdabb82cc21e64cca",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/mlp_24h_seed_17.pt",
+          "expected_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+          "bytes": 7221,
+          "actual_sha256": "b99bd99ce7f69e3dad82c49475c13ad777c65eeb1480f59b148599caa2c9eb89",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/mlp_24h_seed_29.pt",
+          "expected_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+          "bytes": 7221,
+          "actual_sha256": "081fd7f5a263a94ccb97b2ae66b774f23539eda6b9535d437e7cb02b13df134a",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/mlp_24h_seed_41.pt",
+          "expected_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+          "bytes": 7221,
+          "actual_sha256": "99102fc32e522f9f563513b17fff11a3d48f1e0d460a39720fed1e0bfdfe507d",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/origens_sem_janela.csv",
+          "expected_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "bytes": 1976,
+          "actual_sha256": "10d32eb47fc527a155d1594b1f5ec2f344258832407101e97e48f8071fec9faa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv",
+          "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "bytes": 293086,
+          "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/preprocessing.json",
+          "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "bytes": 2177,
+          "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json",
+          "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "bytes": 2296,
+          "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/relatorio.html",
+          "expected_sha256": "c30cf63aa59bec47aea5a64f147b240a3663d6ae35fe6df77adb8f734f6b8715",
+          "bytes": 3695,
+          "actual_sha256": "c30cf63aa59bec47aea5a64f147b240a3663d6ae35fe6df77adb8f734f6b8715",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv",
+          "expected_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "bytes": 961,
+          "actual_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_gru.py",
+          "expected_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+          "bytes": 21134,
+          "actual_sha256": "2e21099dfdbcf90d9ccbdea26979fbf15c6055090edb58cc4a1a93ec07cbf4eb",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_verificacao.py",
+          "expected_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+          "bytes": 6861,
+          "actual_sha256": "8e333880375d018c9ef02039fd8fedb3d0a35c1886dce252793bf8f0e582bda2",
+          "status": "match"
+        },
+        {
+          "path": "src/renewable_forecast/neural_gru.py",
+          "expected_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+          "bytes": 2441,
+          "actual_sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "availability_is_assumed": true,
+        "physical_timezone_verified": false,
+        "operational_policy_approved": false
+      }
+    },
+    {
+      "label": "M09.1_author",
+      "run_directory": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf",
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/resultado.json",
+        "bytes": 2891,
+        "actual_sha256": "c113d87309c77772fc09f04f7a42127253cfceb65e7226ca6f3d8ef3586340f9",
+        "status": "present"
+      },
+      "schema": "renewcast-attention-lab-v1",
+      "run_id_in_receipt": "20261117T144205Z_917f4acf",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/conferencia.json",
+          "expected_sha256": "c1c95845fdbc2ea2bbffae6bab83b24b71e6b9e879af5715f8910dcb0c60fd60",
+          "bytes": 632,
+          "actual_sha256": "c1c95845fdbc2ea2bbffae6bab83b24b71e6b9e879af5715f8910dcb0c60fd60",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/janela_e_representacoes.csv",
+          "expected_sha256": "1e7c3d2f77c955b9dce1e79e9c4bea6cc8fbf29f2ed5d1309d1811855ad7692a",
+          "bytes": 1700,
+          "actual_sha256": "1e7c3d2f77c955b9dce1e79e9c4bea6cc8fbf29f2ed5d1309d1811855ad7692a",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/pesos_causais.csv",
+          "expected_sha256": "197301c9eefbdafe57279e5a58ac6ea56690251685f95026c76aae9d096b6dcd",
+          "bytes": 7267,
+          "actual_sha256": "197301c9eefbdafe57279e5a58ac6ea56690251685f95026c76aae9d096b6dcd",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/pesos_livres.csv",
+          "expected_sha256": "002c457ba829b8a29e9fb838ccbe1538b46b2853cb86c3b5ba01b9a22ee5eafb",
+          "bytes": 11872,
+          "actual_sha256": "002c457ba829b8a29e9fb838ccbe1538b46b2853cb86c3b5ba01b9a22ee5eafb",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/projecoes.json",
+          "expected_sha256": "7cfe00f5fb68aa973e67d15810bb30c0f29b9068062598fd832f947b6bf04465",
+          "bytes": 4074,
+          "actual_sha256": "7cfe00f5fb68aa973e67d15810bb30c0f29b9068062598fd832f947b6bf04465",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_1_atencao/20261117T144205Z_917f4acf/relatorio.html",
+          "expected_sha256": "40fd7ea323896e806124f8779be195977f9ae4b036b9ca4de1832189166a3d03",
+          "bytes": 162136,
+          "actual_sha256": "40fd7ea323896e806124f8779be195977f9ae4b036b9ca4de1832189166a3d03",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_atencao.py",
+          "expected_sha256": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8",
+          "bytes": 13280,
+          "actual_sha256": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8",
+          "status": "match"
+        }
+      ],
+      "current_author_file": {
+        "path": "notebooks/m09_atencao_autoral.py",
+        "expected_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+        "bytes": 2427,
+        "actual_sha256": "97d73011dbaa0cc1cb529223da35eb74766ed125369c5aa1d60a0440dee63fea",
+        "status": "match"
+      },
+      "recorded_scope_flags": {
+        "models_trained": false,
+        "forecast_metrics_computed": false
+      }
+    },
+    {
+      "label": "M09.2_first",
+      "run_directory": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2",
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/resultado.json",
+        "bytes": 5185,
+        "actual_sha256": "bac655e84d38b29f3132ccab9bafa22d667e65a8a356137521029249cb8b982e",
+        "status": "present"
+      },
+      "schema": "renewcast-transformer-composition-result-v1",
+      "run_id_in_receipt": "20261117T151609Z_61643ec2",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/conferencia.json",
+          "expected_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "bytes": 1785,
+          "actual_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/config.json",
+          "expected_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "bytes": 823,
+          "actual_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/estado_transformer.pt",
+          "expected_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "bytes": 122661,
+          "actual_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/fluxo.csv",
+          "expected_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "bytes": 3945,
+          "actual_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/janela.csv",
+          "expected_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "bytes": 1278,
+          "actual_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/pesos_atencao.csv",
+          "expected_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "bytes": 260540,
+          "actual_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/preprocessing.json",
+          "expected_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "bytes": 2046,
+          "actual_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/relatorio.html",
+          "expected_sha256": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+          "bytes": 443761,
+          "actual_sha256": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_decoder.csv",
+          "expected_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "bytes": 2071,
+          "actual_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_encoder.csv",
+          "expected_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "bytes": 8259,
+          "actual_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_transformer.py",
+          "expected_sha256": "46fe3d383d34dd5cff08af211d4a452a1ebaca6f9007231212bf7123fd24edf8",
+          "bytes": 17308,
+          "actual_sha256": "5720af145ec672f780b488c2464be0176de5a7d163208f0596ee2d5274ddd0dc",
+          "status": "mismatch"
+        },
+        {
+          "path": "notebooks/m09_transformer_verificacao.py",
+          "expected_sha256": "498f7d64a464dede47afbf1386c130fd4cd8678aade3d8f2171f3d0e0e88e03c",
+          "bytes": 10312,
+          "actual_sha256": "ec80bba7d9111e829ffc8aec1581c78b2befc774775f1a69ca827e1633bbfd14",
+          "status": "mismatch"
+        },
+        {
+          "path": "src/renewable_forecast/transformer_blocks.py",
+          "expected_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "bytes": 11158,
+          "actual_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "models_trained": false,
+        "optimizer_steps": 0,
+        "forecast_metrics_computed": false,
+        "pretrained_weights_used": false,
+        "physical_timezone_verified": false,
+        "operational_approval": false
+      },
+      "recorded_parameter_count": 11200,
+      "recorded_shapes": {
+        "source": [
+          1,
+          24,
+          1
+        ],
+        "queries": [
+          1,
+          6,
+          1
+        ],
+        "source_embedding": [
+          1,
+          24,
+          16
+        ],
+        "memory": [
+          1,
+          24,
+          16
+        ],
+        "decoder": [
+          1,
+          6,
+          16
+        ]
+      },
+      "recorded_checks": {
+        "passed": true,
+        "checks": [
+          "multiplas_cabecas_retangulares_e_mascara_vs_pytorch",
+          "encoder_post_norm_vs_pytorch",
+          "residuais_e_normalizacao_por_token",
+          "decoder_self_cross_ffn_vs_pytorch",
+          "cross_attention_respeita_mascara_de_memoria",
+          "duas_camadas_encoder_decoder_vs_pilhas_pytorch",
+          "decoder_duas_camadas_preserva_prefixo_com_memoria_fixa",
+          "batch_nao_mistura_origens",
+          "posicao_fixa_altera_equivariancia_do_encoder",
+          "ultima_consulta_pode_mudar_apos_empilhamento",
+          "contratos_de_cabecas_mascaras_e_posicao_impar",
+          "gradientes_atravessam_blocos_sem_atualizar_parametros",
+          "recarregamento_configuracao_e_pesos"
+        ],
+        "checks_count": 13,
+        "tolerance": 1e-12,
+        "max_difference": 6.661338147750939e-16,
+        "differences": {
+          "mha_output": 0.0,
+          "mha_weights": 0.0,
+          "mha_row_sums": 2.220446049250313e-16,
+          "encoder_free": 0.0,
+          "encoder_causal": 4.440892098500626e-16,
+          "residual_attention": 0.0,
+          "residual_ffn": 0.0,
+          "norm1": 0.0,
+          "norm2": 0.0,
+          "decoder": 6.661338147750939e-16,
+          "cross_mask": 0.0,
+          "stack_memory": 0.0,
+          "stack_decoder": 6.661338147750939e-16,
+          "decoder_prefix": 0.0,
+          "batch_permutation": 0.0,
+          "without_position": 4.440892098500626e-16,
+          "last_query_one_layer": 0.0,
+          "reload": 0.0
+        },
+        "gradient_paths": {
+          "source_projection": 1.1325574375031862,
+          "encoder_value_projection": 4.390851497987397,
+          "decoder_cross_value_projection": 6.550242524191484
+        },
+        "future_decoder_delta": 2.808372951937531,
+        "fixed_position_delta": 1.4627723722006247,
+        "last_query_two_layers_delta": 0.06132611481851291,
+        "parameter_count": 11200,
+        "optimizer_steps": 0,
+        "training_performed": false
+      },
+      "recorded_optimizer_steps": 0
+    },
+    {
+      "label": "M09.2_reported_review",
+      "run_directory": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a",
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/resultado.json",
+        "bytes": 5185,
+        "actual_sha256": "56ee08364b8dc1cf46c1fc8643f6825f90e78a88ac933060e78fe212a4891ded",
+        "status": "present"
+      },
+      "schema": "renewcast-transformer-composition-result-v1",
+      "run_id_in_receipt": "20261117T154658Z_0897bf5a",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/conferencia.json",
+          "expected_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "bytes": 1785,
+          "actual_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/config.json",
+          "expected_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "bytes": 823,
+          "actual_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/estado_transformer.pt",
+          "expected_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "bytes": 122661,
+          "actual_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/fluxo.csv",
+          "expected_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "bytes": 3945,
+          "actual_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/janela.csv",
+          "expected_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "bytes": 1278,
+          "actual_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/pesos_atencao.csv",
+          "expected_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "bytes": 260540,
+          "actual_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/preprocessing.json",
+          "expected_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "bytes": 2046,
+          "actual_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/relatorio.html",
+          "expected_sha256": "429223164139726515c3a83d626c5f0644582e684a9a106fbcc66d02a2a534ca",
+          "bytes": 443761,
+          "actual_sha256": "429223164139726515c3a83d626c5f0644582e684a9a106fbcc66d02a2a534ca",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/representacoes_decoder.csv",
+          "expected_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "bytes": 2071,
+          "actual_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T154658Z_0897bf5a/representacoes_encoder.csv",
+          "expected_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "bytes": 8259,
+          "actual_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_transformer.py",
+          "expected_sha256": "46fe3d383d34dd5cff08af211d4a452a1ebaca6f9007231212bf7123fd24edf8",
+          "bytes": 17308,
+          "actual_sha256": "5720af145ec672f780b488c2464be0176de5a7d163208f0596ee2d5274ddd0dc",
+          "status": "mismatch"
+        },
+        {
+          "path": "notebooks/m09_transformer_verificacao.py",
+          "expected_sha256": "498f7d64a464dede47afbf1386c130fd4cd8678aade3d8f2171f3d0e0e88e03c",
+          "bytes": 10312,
+          "actual_sha256": "ec80bba7d9111e829ffc8aec1581c78b2befc774775f1a69ca827e1633bbfd14",
+          "status": "mismatch"
+        },
+        {
+          "path": "src/renewable_forecast/transformer_blocks.py",
+          "expected_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "bytes": 11158,
+          "actual_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "models_trained": false,
+        "optimizer_steps": 0,
+        "forecast_metrics_computed": false,
+        "pretrained_weights_used": false,
+        "physical_timezone_verified": false,
+        "operational_approval": false
+      },
+      "recorded_parameter_count": 11200,
+      "recorded_shapes": {
+        "source": [
+          1,
+          24,
+          1
+        ],
+        "queries": [
+          1,
+          6,
+          1
+        ],
+        "source_embedding": [
+          1,
+          24,
+          16
+        ],
+        "memory": [
+          1,
+          24,
+          16
+        ],
+        "decoder": [
+          1,
+          6,
+          16
+        ]
+      },
+      "recorded_checks": {
+        "passed": true,
+        "checks": [
+          "multiplas_cabecas_retangulares_e_mascara_vs_pytorch",
+          "encoder_post_norm_vs_pytorch",
+          "residuais_e_normalizacao_por_token",
+          "decoder_self_cross_ffn_vs_pytorch",
+          "cross_attention_respeita_mascara_de_memoria",
+          "duas_camadas_encoder_decoder_vs_pilhas_pytorch",
+          "decoder_duas_camadas_preserva_prefixo_com_memoria_fixa",
+          "batch_nao_mistura_origens",
+          "posicao_fixa_altera_equivariancia_do_encoder",
+          "ultima_consulta_pode_mudar_apos_empilhamento",
+          "contratos_de_cabecas_mascaras_e_posicao_impar",
+          "gradientes_atravessam_blocos_sem_atualizar_parametros",
+          "recarregamento_configuracao_e_pesos"
+        ],
+        "checks_count": 13,
+        "tolerance": 1e-12,
+        "max_difference": 6.661338147750939e-16,
+        "differences": {
+          "mha_output": 0.0,
+          "mha_weights": 0.0,
+          "mha_row_sums": 2.220446049250313e-16,
+          "encoder_free": 0.0,
+          "encoder_causal": 4.440892098500626e-16,
+          "residual_attention": 0.0,
+          "residual_ffn": 0.0,
+          "norm1": 0.0,
+          "norm2": 0.0,
+          "decoder": 6.661338147750939e-16,
+          "cross_mask": 0.0,
+          "stack_memory": 0.0,
+          "stack_decoder": 6.661338147750939e-16,
+          "decoder_prefix": 0.0,
+          "batch_permutation": 0.0,
+          "without_position": 4.440892098500626e-16,
+          "last_query_one_layer": 0.0,
+          "reload": 0.0
+        },
+        "gradient_paths": {
+          "source_projection": 1.1325574375031862,
+          "encoder_value_projection": 4.390851497987397,
+          "decoder_cross_value_projection": 6.550242524191484
+        },
+        "future_decoder_delta": 2.808372951937531,
+        "fixed_position_delta": 1.4627723722006247,
+        "last_query_two_layers_delta": 0.06132611481851291,
+        "parameter_count": 11200,
+        "optimizer_steps": 0,
+        "training_performed": false
+      },
+      "recorded_optimizer_steps": 0
+    },
+    {
+      "label": "M09.3_accepted_normal",
+      "run_directory": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1",
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/resultado.json",
+        "bytes": 4278,
+        "actual_sha256": "4fe6b103e6d0f85684857f7f9da4b453be46d108b6f280ec92bcf3294dbfe869",
+        "status": "present"
+      },
+      "schema": "renewcast-pretrained-result-v1",
+      "run_id_in_receipt": "20261117T212230Z_965de3d1",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/alinhamento_alvos.csv",
+          "expected_sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+          "bytes": 39694,
+          "actual_sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/comparacao_pareada.csv",
+          "expected_sha256": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83",
+          "bytes": 17868,
+          "actual_sha256": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/conferencia.json",
+          "expected_sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787",
+          "bytes": 389,
+          "actual_sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/latencias_lotes.csv",
+          "expected_sha256": "d740cebd127f5a3180abd20c89e7e935fd68622198a8886842aaac51ed5f8637",
+          "bytes": 326,
+          "actual_sha256": "d740cebd127f5a3180abd20c89e7e935fd68622198a8886842aaac51ed5f8637",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/predictions.csv",
+          "expected_sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+          "bytes": 343050,
+          "actual_sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/protocol.json",
+          "expected_sha256": "c91677faec605bb9f7094d0218be9f9c27d9feacbc8fd3fa70f51c67e779233f",
+          "bytes": 3414,
+          "actual_sha256": "c91677faec605bb9f7094d0218be9f9c27d9feacbc8fd3fa70f51c67e779233f",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/quantile_metrics.json",
+          "expected_sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1",
+          "bytes": 411,
+          "actual_sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/quantis_26_passos.npz",
+          "expected_sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+          "bytes": 138147,
+          "actual_sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/relatorio.html",
+          "expected_sha256": "7f02fcc9b7d0c2b89bf587aa8f0eb2b414b062e4de174a6299651ac9b8131103",
+          "bytes": 8420,
+          "actual_sha256": "7f02fcc9b7d0c2b89bf587aa8f0eb2b414b062e4de174a6299651ac9b8131103",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/summary.csv",
+          "expected_sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d",
+          "bytes": 1225,
+          "actual_sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T212230Z_965de3d1/trajetorias_26_passos.csv",
+          "expected_sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96",
+          "bytes": 1021256,
+          "actual_sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_pre_treinado.py",
+          "expected_sha256": "2076dbaecbaca2214e73119525dca32edd1c29f937d085db34d0fbc6ad9dea00",
+          "bytes": 17324,
+          "actual_sha256": "2076dbaecbaca2214e73119525dca32edd1c29f937d085db34d0fbc6ad9dea00",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m09_pre_treinado_core.py",
+          "expected_sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf",
+          "bytes": 5511,
+          "actual_sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf",
+          "status": "match"
+        },
+        {
+          "path": "scripts/executar_m09_3.py",
+          "expected_sha256": "891513d975b8371bd9662db5c841d737a79955ec16ed8180fa38634dd135dda0",
+          "bytes": 5599,
+          "actual_sha256": "891513d975b8371bd9662db5c841d737a79955ec16ed8180fa38634dd135dda0",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        }
+      ],
+      "recorded_scope_flags": {
+        "models_trained": false,
+        "optimizer_steps": 0,
+        "pretraining_overlap_verified": false,
+        "availability_is_assumed": true,
+        "physical_timezone_verified": false,
+        "operational_approval": false,
+        "untouched_holdout": false
+      },
+      "baseline_receipt_files": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv",
+          "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "bytes": 293086,
+          "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv",
+          "expected_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "bytes": 961,
+          "actual_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/preprocessing.json",
+          "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "bytes": 2177,
+          "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json",
+          "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "bytes": 2296,
+          "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/resultado.json",
+          "expected_sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+          "bytes": 7533,
+          "actual_sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+          "status": "match"
+        }
+      ],
+      "baseline_run_id": "20261115T170309Z_90a6625f",
+      "recorded_model_revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+      "model_files_hashes_present_in_receipt": {
+        "README.md": "cc7f60bc7290b5e6146589dae9842a3c9b59d254e9d1d65fc2ef127f3c2498cd",
+        "config.json": "278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0",
+        "model.safetensors": "75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32"
+      },
+      "model_files_not_read_in_this_audit": true
+    },
+    {
+      "label": "M09.3_separate_author",
+      "run_directory": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01",
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/resultado.json",
+        "bytes": 4280,
+        "actual_sha256": "19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0",
+        "status": "present"
+      },
+      "schema": "renewcast-pretrained-result-v1",
+      "run_id_in_receipt": "20261117T213329Z_3b201a01",
+      "recorded_completed": true,
+      "recorded_training_state": null,
+      "outputs": [
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv",
+          "expected_sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+          "bytes": 39694,
+          "actual_sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/comparacao_pareada.csv",
+          "expected_sha256": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83",
+          "bytes": 17868,
+          "actual_sha256": "c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/conferencia.json",
+          "expected_sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787",
+          "bytes": 389,
+          "actual_sha256": "af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/latencias_lotes.csv",
+          "expected_sha256": "99a30b13b57c85eb27f2f6aaa0765932beb9e46249d875dc300d6ba72151179a",
+          "bytes": 324,
+          "actual_sha256": "99a30b13b57c85eb27f2f6aaa0765932beb9e46249d875dc300d6ba72151179a",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv",
+          "expected_sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+          "bytes": 343050,
+          "actual_sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json",
+          "expected_sha256": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6",
+          "bytes": 3476,
+          "actual_sha256": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantile_metrics.json",
+          "expected_sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1",
+          "bytes": 411,
+          "actual_sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz",
+          "expected_sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+          "bytes": 138147,
+          "actual_sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/relatorio.html",
+          "expected_sha256": "19bf4a28922b4d79bfacdb273c433639cef41da25ad9a2c5c827a841a9da804b",
+          "bytes": 8422,
+          "actual_sha256": "19bf4a28922b4d79bfacdb273c433639cef41da25ad9a2c5c827a841a9da804b",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/summary.csv",
+          "expected_sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d",
+          "bytes": 1225,
+          "actual_sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/trajetorias_26_passos.csv",
+          "expected_sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96",
+          "bytes": 1021256,
+          "actual_sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96",
+          "status": "match"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+          "expected_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "bytes": 1594,
+          "actual_sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+          "expected_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "bytes": 125727,
+          "actual_sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+          "status": "match"
+        },
+        {
+          "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+          "expected_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "bytes": 394579,
+          "actual_sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e",
+          "status": "match"
+        }
+      ],
+      "current_code": [
+        {
+          "path": "notebooks/laboratorio_pre_treinado.py",
+          "expected_sha256": "2076dbaecbaca2214e73119525dca32edd1c29f937d085db34d0fbc6ad9dea00",
+          "bytes": 17324,
+          "actual_sha256": "2076dbaecbaca2214e73119525dca32edd1c29f937d085db34d0fbc6ad9dea00",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m09_pre_treinado_core.py",
+          "expected_sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf",
+          "bytes": 5511,
+          "actual_sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf",
+          "status": "match"
+        },
+        {
+          "path": "scripts/executar_m09_3.py",
+          "expected_sha256": "891513d975b8371bd9662db5c841d737a79955ec16ed8180fa38634dd135dda0",
+          "bytes": 5599,
+          "actual_sha256": "891513d975b8371bd9662db5c841d737a79955ec16ed8180fa38634dd135dda0",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        }
+      ],
+      "current_author_file": {
+        "path": "notebooks/m09_alinhamento_autoral.py",
+        "expected_sha256": "aa5c08ffa7ecea83648cf76f9f0a97581873266c34458f4eac86fc4f894acee1",
+        "bytes": 3479,
+        "actual_sha256": "aa5c08ffa7ecea83648cf76f9f0a97581873266c34458f4eac86fc4f894acee1",
+        "status": "match"
+      },
+      "recorded_scope_flags": {
+        "models_trained": false,
+        "optimizer_steps": 0,
+        "pretraining_overlap_verified": false,
+        "availability_is_assumed": true,
+        "physical_timezone_verified": false,
+        "operational_approval": false,
+        "untouched_holdout": false
+      },
+      "baseline_receipt_files": [
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv",
+          "expected_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "bytes": 293086,
+          "actual_sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv",
+          "expected_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "bytes": 961,
+          "actual_sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/particoes.csv",
+          "expected_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "bytes": 658822,
+          "actual_sha256": "f6d15643397151034a4c9dacc84bf8f89d3cfcf76eb56e906d47dc7a677648bd",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/preprocessing.json",
+          "expected_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "bytes": 2177,
+          "actual_sha256": "a9ba0f3e6618c1b5d76462fa96e7fbc97085a76b51cd41a1a61515987ea6ce3f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json",
+          "expected_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "bytes": 2296,
+          "actual_sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/resultado.json",
+          "expected_sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+          "bytes": 7533,
+          "actual_sha256": "d878c158db7a41b24ee9c76c85552b30994b1ea54205dee1d620fd3fc9b9cced",
+          "status": "match"
+        }
+      ],
+      "baseline_run_id": "20261115T170309Z_90a6625f",
+      "recorded_model_revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+      "model_files_hashes_present_in_receipt": {
+        "README.md": "cc7f60bc7290b5e6146589dae9842a3c9b59d254e9d1d65fc2ef127f3c2498cd",
+        "config.json": "278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0",
+        "model.safetensors": "75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32"
+      },
+      "model_files_not_read_in_this_audit": true
+    }
+  ],
+  "delivery_lists": [
+    {
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/verificacao_entrega_20261104.json",
+        "bytes": 4268,
+        "actual_sha256": "51ad46dccb067529ede4babd7331eed2261e788b62c39e074fe7b24be3132c44",
+        "status": "present"
+      },
+      "declared_hash_field": "files_sha256",
+      "entries": [
+        {
+          "path": "notebooks/m08_gradiente_autoral.py",
+          "expected_sha256": "c3380caddee752737a1e3100157b693cc38a4f277bc8d2ad376333513a4fbcc1",
+          "bytes": 998,
+          "actual_sha256": "96d810d376e73838481417900aff2fa9956c2289f78f910d8787dc32438f6c1b",
+          "status": "mismatch"
+        },
+        {
+          "path": "notebooks/laboratorio_autograd.py",
+          "expected_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "bytes": 16646,
+          "actual_sha256": "3b8ffdc46ecbb64406de1220c29e43b7dd37943d33a8ab4b3095334148ee935b",
+          "status": "match"
+        },
+        {
+          "path": "reports/parecer_m08_autograd.md",
+          "expected_sha256": "e72f05aee2985f569d6ff8c4d604ce2579d91450c822ed1e535efb023a1b83a1",
+          "bytes": 6323,
+          "actual_sha256": "e72f05aee2985f569d6ff8c4d604ce2579d91450c822ed1e535efb023a1b83a1",
+          "status": "match"
+        },
+        {
+          "path": "docs/Explicacao_M08_1_Passo_a_Passo.md",
+          "expected_sha256": "0ac65ef70e670d261fbf0aca168fb988100c2f2a6650e82576b93e09c608d91c",
+          "bytes": 8652,
+          "actual_sha256": "0ac65ef70e670d261fbf0aca168fb988100c2f2a6650e82576b93e09c608d91c",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/curva_treino.csv",
+          "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "bytes": 9509,
+          "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/linear_state.pt",
+          "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "bytes": 2061,
+          "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/predictions.csv",
+          "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "bytes": 16518,
+          "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T131859Z_8f277a44/resultado.json",
+          "expected_sha256": "40b013b41834c1062765d28d6ff94a3984e4af48c7cb83d0cb7c0a130645bf6d",
+          "bytes": 3614,
+          "actual_sha256": "40b013b41834c1062765d28d6ff94a3984e4af48c7cb83d0cb7c0a130645bf6d",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/curva_treino.csv",
+          "expected_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+          "bytes": 717,
+          "actual_sha256": "20e1690b425ec67cb1c8634244bdb7d7d463291eaf909af93a2acb1b7b683e29",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/linear_state.pt",
+          "expected_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+          "bytes": 2061,
+          "actual_sha256": "0b43d847ea7233f756acd6d507e8a69f37d6354e0803cb20854f24e427e96669",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/predictions.csv",
+          "expected_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+          "bytes": 16699,
+          "actual_sha256": "909c85a1e82ac3f764a8c2f8a8f34fad364aec6081aaa6e9be6459717e6b1e07",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132027Z_d5a8612c/resultado.json",
+          "expected_sha256": "bf09db201fb2104206e238818d234c9b8bb7cef9a9b140194f500bb4d240b941",
+          "bytes": 3618,
+          "actual_sha256": "bf09db201fb2104206e238818d234c9b8bb7cef9a9b140194f500bb4d240b941",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/curva_treino.csv",
+          "expected_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "bytes": 9509,
+          "actual_sha256": "be59cc97193e5d7674bd904f8a4d196f95863858026ce345667be963618ad231",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/linear_state.pt",
+          "expected_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "bytes": 2061,
+          "actual_sha256": "b097bd9162eca52625c7a68fe334a797c4ca7a43dcc5e6aa10764cc0a9f24b61",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/predictions.csv",
+          "expected_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "bytes": 16518,
+          "actual_sha256": "077b114a42107db0d5b7e665ed465e235abffcbf9570becdff6195ac3c1977f9",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_1_autograd/20261104T132133Z_97eada41/resultado.json",
+          "expected_sha256": "d222d66b1d1ddac4b1eb2367e6abf5c2528666939d6e1aeb8222e918e2e34cc2",
+          "bytes": 3676,
+          "actual_sha256": "d222d66b1d1ddac4b1eb2367e6abf5c2528666939d6e1aeb8222e918e2e34cc2",
+          "status": "match"
+        }
+      ],
+      "status_counts": {
+        "mismatch": 1,
+        "match": 15
+      },
+      "original_assistance_statement": "Codex, at user request; not independent student authorship",
+      "original_verification_is_historical_only": true
+    },
+    {
+      "receipt": {
+        "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/verificacao_entrega_20261105.json",
+        "bytes": 3712,
+        "actual_sha256": "4115704882f3272ccc0f4f616972d77f4899a0d34a02fa46c59328dc817e46cb",
+        "status": "present"
+      },
+      "declared_hash_field": "submission_files_sha256",
+      "entries": [
+        {
+          "path": "notebooks/m08_avaliacao_autoral.py",
+          "expected_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+          "bytes": 1883,
+          "actual_sha256": "b7fea0f2acce2878056d5433b0bc9fa3c80e09d571fc328070bf2e6e85d183c9",
+          "status": "match"
+        },
+        {
+          "path": "tests/test_m08_avaliacao_autoral.py",
+          "expected_sha256": "de0fa66546416717fe6f1a79295b4e338f21f4e8bbae2c68bd4fde8df33373e7",
+          "bytes": 3950,
+          "actual_sha256": "de0fa66546416717fe6f1a79295b4e338f21f4e8bbae2c68bd4fde8df33373e7",
+          "status": "match"
+        },
+        {
+          "path": "reports/parecer_m08_mlp.md",
+          "expected_sha256": "4703fd914e4ec3c2fea9541f40eb242527f8a71e3bab40a9d21afd4b62dff704",
+          "bytes": 4484,
+          "actual_sha256": "4703fd914e4ec3c2fea9541f40eb242527f8a71e3bab40a9d21afd4b62dff704",
+          "status": "match"
+        },
+        {
+          "path": "docs/Explicacao_M08_2_Passo_a_Passo.md",
+          "expected_sha256": "2d103c57e2132d7d8a4962647f091b99b4af9c181feba4addafdf10a9c2d6ee7",
+          "bytes": 12535,
+          "actual_sha256": "2d103c57e2132d7d8a4962647f091b99b4af9c181feba4addafdf10a9c2d6ee7",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/resultado.json",
+          "expected_sha256": "4d8f62339556b70332bd64ccc98c61e72161d35372232a9a7a7339f16fd4db8e",
+          "bytes": 3748,
+          "actual_sha256": "4d8f62339556b70332bd64ccc98c61e72161d35372232a9a7a7339f16fd4db8e",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/summary.csv",
+          "expected_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "bytes": 445,
+          "actual_sha256": "134abce9f072a30a5c1400b998c530f5cad32fc193ccdd1db04819321be21b4f",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/curvas.csv",
+          "expected_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "bytes": 5063,
+          "actual_sha256": "522e0e2adbdb41a3d2f922a631c4fe14b1d91c536f6dff9e94f3d16d7fa3c7fa",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/20261105T152149Z_941d0398/protocol.json",
+          "expected_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+          "bytes": 1156,
+          "actual_sha256": "d8b25b5d14e2f05c7f42e795cf70f3b57fa13dbdf4ce31f45db433d24f19ab22",
+          "status": "match"
+        },
+        {
+          "path": "reports/neural/CJU_BA5EIGT/m08_2_mlp/curvas_autoria_20261105.png",
+          "expected_sha256": "71ec9e12f2892168093742dc45a95ec1a555d7732ee83939f9b1dd8828f0316b",
+          "bytes": 131911,
+          "actual_sha256": "71ec9e12f2892168093742dc45a95ec1a555d7732ee83939f9b1dd8828f0316b",
+          "status": "match"
+        }
+      ],
+      "status_counts": {
+        "match": 9
+      },
+      "original_assistance_statement": "Codex, at user request; not independent student authorship",
+      "original_verification_is_historical_only": true
+    },
+    {
+      "receipt": {
+        "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/verificacao_entrega_20261117.json",
+        "bytes": 5678,
+        "actual_sha256": "e18aeae92c70f35f6033e568a6a76859655b7977d3304abc4e57bc2c8546b30f",
+        "status": "present"
+      },
+      "declared_hash_field": "files_sha256",
+      "entries": [
+        {
+          "path": "src/renewable_forecast/transformer_blocks.py",
+          "expected_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "bytes": 11158,
+          "actual_sha256": "68bc185989d0f2bdd818c81d0338be70b6b5f903046634fc592425b77289a40d",
+          "status": "match"
+        },
+        {
+          "path": "notebooks/laboratorio_transformer.py",
+          "expected_sha256": "46fe3d383d34dd5cff08af211d4a452a1ebaca6f9007231212bf7123fd24edf8",
+          "bytes": 17308,
+          "actual_sha256": "5720af145ec672f780b488c2464be0176de5a7d163208f0596ee2d5274ddd0dc",
+          "status": "mismatch"
+        },
+        {
+          "path": "notebooks/m09_transformer_verificacao.py",
+          "expected_sha256": "498f7d64a464dede47afbf1386c130fd4cd8678aade3d8f2171f3d0e0e88e03c",
+          "bytes": 10312,
+          "actual_sha256": "ec80bba7d9111e829ffc8aec1581c78b2befc774775f1a69ca827e1633bbfd14",
+          "status": "mismatch"
+        },
+        {
+          "path": "notebooks/m08_3_base.py",
+          "expected_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "bytes": 8078,
+          "actual_sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9",
+          "status": "match"
+        },
+        {
+          "path": "tests/test_m09_transformer_blocks.py",
+          "expected_sha256": "9bd6817434f982624d29449f28383a1b420f63e9fab319e5e13669f421127bda",
+          "bytes": 14995,
+          "actual_sha256": "9bd6817434f982624d29449f28383a1b420f63e9fab319e5e13669f421127bda",
+          "status": "match"
+        },
+        {
+          "path": "docs/Aula_M09_2_Transformer.md",
+          "expected_sha256": "7ff26ef072800c837adf4c6309e6dc8bd878d6851b9fb85daf0ed817c851da0d",
+          "bytes": 13216,
+          "actual_sha256": "7ff26ef072800c837adf4c6309e6dc8bd878d6851b9fb85daf0ed817c851da0d",
+          "status": "match"
+        },
+        {
+          "path": "reports/parecer_m09_transformer.md",
+          "expected_sha256": "5926b7ee5a0ee5fbbf7ea34bf0de903e891e56ee0a31f06f60bf7e70aad33a17",
+          "bytes": 6205,
+          "actual_sha256": "5926b7ee5a0ee5fbbf7ea34bf0de903e891e56ee0a31f06f60bf7e70aad33a17",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/conferencia.json",
+          "expected_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "bytes": 1785,
+          "actual_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/config.json",
+          "expected_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "bytes": 823,
+          "actual_sha256": "48b75aa577d07d9e66e6d2409c271219984fe18a5f6a330e66e2a2ad7dd70414",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/estado_transformer.pt",
+          "expected_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "bytes": 122661,
+          "actual_sha256": "7d7ac4bee7445ab9c62cca1b26b3a22a9df5481614a6ca9196f4860bb0a26349",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/execucao_testes.json",
+          "expected_sha256": "8b061f1098b5f3d5decc63c817ab2b0e6db8103ee471eeb58867861eb42a2b0f",
+          "bytes": 623,
+          "actual_sha256": "8b061f1098b5f3d5decc63c817ab2b0e6db8103ee471eeb58867861eb42a2b0f",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/execucao_verificar.json",
+          "expected_sha256": "766fdb2a64a30e3cc415d898e567f2bf4f77cc5281954894a2e5be6a24b02448",
+          "bytes": 359,
+          "actual_sha256": "766fdb2a64a30e3cc415d898e567f2bf4f77cc5281954894a2e5be6a24b02448",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/fluxo.csv",
+          "expected_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "bytes": 3945,
+          "actual_sha256": "a038b6bed4be63d9dd0be76d8f46c8fc0db2513b1c2d27221effdaa6091a9bbb",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/janela.csv",
+          "expected_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "bytes": 1278,
+          "actual_sha256": "e7be17e47aef7fbdb94b38aaa971d394c5e73aeeadca136d03aa1269dad95ebe",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/pesos_atencao.csv",
+          "expected_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "bytes": 260540,
+          "actual_sha256": "5d51d55863c3cfc083f694fe4e6577e76bc36d8f1fcced3af33f511d746003d6",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/preprocessing.json",
+          "expected_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "bytes": 2046,
+          "actual_sha256": "3d15c1ea49d5555773c2300bc71a7265f3b98ac9098e509d704a351a6d6ae7fc",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/relatorio.html",
+          "expected_sha256": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+          "bytes": 443761,
+          "actual_sha256": "cac3abd7e0c40a076baee17ad944935b954d3a59693212574e9ed7105b599d12",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_decoder.csv",
+          "expected_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "bytes": 2071,
+          "actual_sha256": "ab9fab897939fcd12b28c7b90d7fdb7e2faa2d01296533bc1cccc64e55ef0d7d",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/representacoes_encoder.csv",
+          "expected_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "bytes": 8259,
+          "actual_sha256": "5da9b050502bda7c761f874833d5ba8b48747f83f9f385d66fb5b4ad6192dbd4",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/resultado.json",
+          "expected_sha256": "bac655e84d38b29f3132ccab9bafa22d667e65a8a356137521029249cb8b982e",
+          "bytes": 5185,
+          "actual_sha256": "bac655e84d38b29f3132ccab9bafa22d667e65a8a356137521029249cb8b982e",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/seletor_js_test.log",
+          "expected_sha256": "b847534cc0f1582127cd9994e696e9311b4305e396ce1269beb30ce00a111944",
+          "bytes": 26,
+          "actual_sha256": "b847534cc0f1582127cd9994e696e9311b4305e396ce1269beb30ce00a111944",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/testes_stderr.log",
+          "expected_sha256": "2c23dca77361be27b9dc545067f4377c72adfbe37fc178069001f93531cbedc5",
+          "bytes": 2096,
+          "actual_sha256": "2c23dca77361be27b9dc545067f4377c72adfbe37fc178069001f93531cbedc5",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/testes_stdout.log",
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/validacao_artefatos.json",
+          "expected_sha256": "ee9c01ebb07d188b93dac238a51f35a747d857696f8a76a3155c297f351ce7e6",
+          "bytes": 768,
+          "actual_sha256": "ee9c01ebb07d188b93dac238a51f35a747d857696f8a76a3155c297f351ce7e6",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/verificar_stderr.log",
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T151609Z_61643ec2/verificar_stdout.log",
+          "expected_sha256": "b8c5132f0373f6cafab36bf0292b948967e3047d67a7920a6c513dfaae6d82ca",
+          "bytes": 179,
+          "actual_sha256": "b8c5132f0373f6cafab36bf0292b948967e3047d67a7920a6c513dfaae6d82ca",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/20261117T152951Z_c137f60d/conferencia.json",
+          "expected_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "bytes": 1785,
+          "actual_sha256": "9099d95a3666b291eca77995c550d33e256127a157af04fe3de02e0299102678",
+          "status": "match"
+        },
+        {
+          "path": "reports/transformer/CJU_BA5EIGT/m09_2_transformer/fluxo_transformer_20261117.png",
+          "expected_sha256": "eeac7628477a6090eeec1d605a5be5279e5c4232bd9abeb99f00ecb6504d93f4",
+          "bytes": 117792,
+          "actual_sha256": "eeac7628477a6090eeec1d605a5be5279e5c4232bd9abeb99f00ecb6504d93f4",
+          "status": "match"
+        }
+      ],
+      "status_counts": {
+        "match": 26,
+        "mismatch": 2
+      },
+      "original_assistance_statement": null,
+      "original_verification_is_historical_only": true
+    }
+  ],
+  "current_written_reports": [
+    {
+      "path": "reports/parecer_m08_autograd.md",
+      "bytes": 6323,
+      "actual_sha256": "e72f05aee2985f569d6ff8c4d604ce2579d91450c822ed1e535efb023a1b83a1",
+      "status": "present"
+    },
+    {
+      "path": "reports/parecer_m08_mlp.md",
+      "bytes": 4484,
+      "actual_sha256": "4703fd914e4ec3c2fea9541f40eb242527f8a71e3bab40a9d21afd4b62dff704",
+      "status": "present"
+    },
+    {
+      "path": "reports/parecer_m08_gru.md",
+      "bytes": 5796,
+      "actual_sha256": "76a28af1e41048a314ae130a4fd1725e22b0e4db4b4ec476a105246690ca2dd5",
+      "status": "present"
+    },
+    {
+      "path": "reports/parecer_m09_atencao.md",
+      "bytes": 4646,
+      "actual_sha256": "58ad2ea0fe967225add26a4dad87c164822cbc2e51f2453082b312a8e4c2b15d",
+      "status": "present"
+    },
+    {
+      "path": "reports/parecer_m09_transformer.md",
+      "bytes": 6205,
+      "actual_sha256": "5926b7ee5a0ee5fbbf7ea34bf0de903e891e56ee0a31f06f60bf7e70aad33a17",
+      "status": "present"
+    },
+    {
+      "path": "reports/parecer_m09_pre_treinado.md",
+      "bytes": 6503,
+      "actual_sha256": "96e5c9deef17fe475d78b6bd39e2b95e631f5044a9ccec4221a283f424273eb3",
+      "status": "present"
+    }
+  ],
+  "summary": {
+    "pinned_run_count": 12,
+    "declaration_check_count": 268,
+    "declaration_status_counts": {
+      "present": 21,
+      "match": 239,
+      "mismatch": 8
+    },
+    "unique_paths_checked": 172,
+    "output_declarations_checked": 115,
+    "output_status_counts": {
+      "match": 115,
+      "mismatch": 0,
+      "missing": 0,
+      "permission_denied": 0
+    },
+    "input_declarations_checked": 33
+  },
+  "historical_review_reconciliation": [
+    {
+      "units": [
+        "M08.1",
+        "M08.2"
+      ],
+      "old_review_limitation": "Raw Windows run files were not attached to the old review.",
+      "current_observation": "Pinned local receipt/output files were checked now; consult statuses. Presence now does not retroactively change the material seen in the old review."
+    },
+    {
+      "unit": "M09.2",
+      "old_review_limitation": "Blocks module and complete artifacts were not attached to E117.",
+      "current_observation": "The current blocks module and the two separate full run receipts/output lists are checked here. This establishes local preservation only, not independent reproduction or predictive performance."
+    },
+    {
+      "unit": "M09.3",
+      "old_review_limitation": "E119 accepted normal 212230Z run, while the secondary author run did not have its complete receipt attached.",
+      "current_observation": "Both distinct run directories now have local completed receipts/output lists checked separately. Their identities have not been merged."
+    }
+  ],
+  "limits": [
+    "Matching hashes establish preservation relative to the recorded digest, not source authenticity, independent authorship, educational mastery, professor acceptance or absence of data leakage.",
+    "Current authored functions and written reports can be present without proving independent transfer or an oral/written defense by the learner.",
+    "No model output, metric, numerical tolerance, test result or teacher verification was reproduced in this audit; scalar fields are recorded statements from receipts.",
+    "M09.2 composition checks are not training or a validated forecast.",
+    "Pretraining overlap remains unverified in M09.3; binary identity and fixed revision do not answer corpus overlap.",
+    "Current code/document mismatches, if any, can reflect changes after historical receipts; outputs are not silently rewritten.",
+    "Registry paths with permission errors were not probed further or restored; unrelated pre-existing Git deletions remain outside this hash audit."
+  ],
+  "current_code_encoding_check": {
+    "method": "Read-only hash of the same decoded text encoded as LF or CRLF, each with or without UTF-8 BOM.",
+    "paths_checked": [
+      "notebooks/m08_gradiente_autoral.py",
+      "notebooks/laboratorio_transformer.py",
+      "notebooks/m09_transformer_verificacao.py"
+    ],
+    "matching_historical_hash_variants": 0,
+    "interpretation": "The three mismatches are not explained by these newline/BOM variants. Their cause is not isolated; historical output hashes remain matching."
+  }
+}

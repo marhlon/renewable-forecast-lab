@@ -1,0 +1,1691 @@
+{
+  "schema": "renewcast-m02-05-counterexamples-v1",
+  "started_at_utc": "2026-11-25T11:50:07.901664+00:00",
+  "finished_at_utc": "2026-11-25T11:51:36.901432+00:00",
+  "scope": "Only manufactured small fixtures; no real saved experiment, model training or inference.",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_weather_gain_uncertainty.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=xunit1",
+    "--junitxml",
+    "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_m02_05_verified_3uh9j1yb\\pytest.xml"
+  ],
+  "exit_code": 0,
+  "counts": {
+    "passed": 59,
+    "failed": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "test_weighted_aggregate_and_no_cross_fold_mixing",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.111,
+      "properties": {
+        "evidence": {
+          "fold_sizes": [
+            3,
+            5
+          ],
+          "fold_gains": [
+            1.0,
+            3.0
+          ],
+          "weighted_aggregate": 2.25,
+          "unweighted_mean_rejected": 2.0,
+          "ci95_each_block": [
+            2.25,
+            2.25
+          ],
+          "rows_summary": 6
+        }
+      }
+    },
+    {
+      "name": "test_paired_errors_keep_the_constant_difference",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.04,
+      "properties": {
+        "evidence": {
+          "reference_absolute_errors": [
+            2,
+            6,
+            10
+          ],
+          "candidate_absolute_errors": [
+            1,
+            5,
+            9
+          ],
+          "paired_gain": 1,
+          "ci95": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "test_circular_indices_match_manual_blocks_and_preserve_values",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.018,
+      "properties": {
+        "evidence": {
+          "n": 5,
+          "block": 2,
+          "repetitions": 1031,
+          "seed": 17,
+          "first_starts": [
+            3,
+            4,
+            0
+          ],
+          "first_mean_manual": 14.6,
+          "first_mean_function": 14.6,
+          "circular_wrap_observed": true,
+          "max_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "name": "test_aggregate_intervals_are_from_weighted_replicas",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.112,
+      "properties": {
+        "evidence": {
+          "point_gain": 3.125,
+          "manual_ci95": [
+            0.49375000000000036,
+            5.625
+          ],
+          "function_ci95": [
+            0.49375000000000036,
+            5.625
+          ]
+        }
+      }
+    },
+    {
+      "name": "test_determinism_order_and_input_global_rng_preservation",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.23
+    },
+    {
+      "name": "test_nonpositive_fraction_and_zero_gain",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.135
+    },
+    {
+      "name": "test_overflow_of_finite_bootstrap_values_is_rejected",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_overflow_of_finite_mae_values_is_rejected",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.051
+    },
+    {
+      "name": "test_invalid_prediction_contracts[empty]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.012
+    },
+    {
+      "name": "test_invalid_prediction_contracts[missing_column]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.015
+    },
+    {
+      "name": "test_invalid_prediction_contracts[duplicate_column]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.014
+    },
+    {
+      "name": "test_invalid_prediction_contracts[duplicate_time]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.017
+    },
+    {
+      "name": "test_invalid_prediction_contracts[bad_time]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.016
+    },
+    {
+      "name": "test_invalid_prediction_contracts[nat_time]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.016
+    },
+    {
+      "name": "test_invalid_prediction_contracts[numeric_time]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.014
+    },
+    {
+      "name": "test_invalid_prediction_contracts[gap]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.029
+    },
+    {
+      "name": "test_invalid_prediction_contracts[singleton]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.026
+    },
+    {
+      "name": "test_invalid_prediction_contracts[interleaved_folds]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "name": "test_invalid_prediction_contracts[zero_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.021
+    },
+    {
+      "name": "test_invalid_prediction_contracts[negative_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.025
+    },
+    {
+      "name": "test_invalid_prediction_contracts[fractional_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.023
+    },
+    {
+      "name": "test_invalid_prediction_contracts[bool_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "name": "test_invalid_prediction_contracts[infinite_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.024
+    },
+    {
+      "name": "test_invalid_prediction_contracts[overflow_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.022
+    },
+    {
+      "name": "test_invalid_prediction_contracts[text_fold]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.023
+    },
+    {
+      "name": "test_invalid_prediction_contracts[missing_target]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.012
+    },
+    {
+      "name": "test_invalid_prediction_contracts[infinite_prediction]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "name": "test_invalid_prediction_contracts[text_prediction]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.017
+    },
+    {
+      "name": "test_invalid_prediction_contracts[bool_prediction]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.019
+    },
+    {
+      "name": "test_invalid_prediction_contracts[complex_prediction]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.02
+    },
+    {
+      "name": "test_invalid_prediction_contracts[wrong_saved_delta]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.036
+    },
+    {
+      "name": "test_invalid_prediction_contracts[missing_saved_delta]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.031
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes0]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.006
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes1]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.006
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes2]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.026
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes3]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes4]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes5]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes6]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.006
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes7]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.006
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes8]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.005
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes9]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.005
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes10]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.007
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes11]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.004
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes12]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.005
+    },
+    {
+      "name": "test_invalid_bootstrap_parameters[changes13]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.005
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values0-1-1-rng0]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.002
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values1-1-1-rng1]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.002
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values2-1-1-rng2]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.002
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values3-1-1-rng3]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values4-1-1-rng4]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.002
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values5-1-1-rng5]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values6-3-1-rng6]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values7-1-0-rng7]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_invalid_circular_inputs_and_rng[values8-1-1-None]",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.003
+    },
+    {
+      "name": "test_csv_loader_recomputes_delta_without_writing_input",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.063
+    },
+    {
+      "name": "test_csv_loader_rejects_duplicate_header",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 0.012
+    },
+    {
+      "name": "test_cli_creates_real_csv_receipt_and_refuses_overwrite",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 49.646,
+      "properties": {
+        "evidence": {
+          "fixture_only": true,
+          "command": [
+            "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+            "-m",
+            "renewable_forecast.weather_gain_uncertainty",
+            "--predictions",
+            "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+            "--output-dir",
+            "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\output",
+            "--block-hours",
+            "1",
+            "2",
+            "--repetitions",
+            "1000",
+            "--seed",
+            "42"
+          ],
+          "exit_code": 0,
+          "overwrite_exit_code": 2,
+          "input_sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+          "receipt": {
+            "schema": "renewcast-weather-gain-bootstrap-result-v1",
+            "completed": true,
+            "exit_code": 0,
+            "started_at_utc": "2026-11-25T11:50:45.871123+00:00",
+            "completed_at_utc": "2026-11-25T11:50:45.967830+00:00",
+            "elapsed_seconds": 0.09644020002451725,
+            "command": [
+              "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+              "-m",
+              "renewable_forecast.weather_gain_uncertainty",
+              "--predictions",
+              "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+              "--output-dir",
+              "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\output",
+              "--block-hours",
+              "1",
+              "2",
+              "--repetitions",
+              "1000",
+              "--seed",
+              "42"
+            ],
+            "versions": {
+              "python": "3.12.13",
+              "numpy": "2.5.3",
+              "pandas": "3.0.5",
+              "platform": "Windows-11-10.0.26200-SP0"
+            },
+            "input": {
+              "path": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+              "bytes": 448,
+              "sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+              "preserved": true
+            },
+            "code": {
+              "path": "C:\\renewable-forecast-lab\\src\\renewable_forecast\\weather_gain_uncertainty.py",
+              "sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03"
+            },
+            "parameters": {
+              "block_hours": [
+                1,
+                2
+              ],
+              "repetitions": 1000,
+              "seed": 42,
+              "confidence_level": 0.95
+            },
+            "method": "paired circular block bootstrap, stratified by fold, weighted by fold n; percentile interval, linear quantiles",
+            "rng_stream": "numpy SeedSequence([seed, block_hours, fold]); independent local generators",
+            "gain_definition": "abs(target_generation-hgb_history) - abs(target_generation-hgb_history_weather), MWmed",
+            "rows_input": 8,
+            "fold_counts": {
+              "1": 3,
+              "2": 5
+            },
+            "forecast_origin_start": "2026-01-01T00:00:00+00:00",
+            "forecast_origin_end": "2026-01-04T04:00:00+00:00",
+            "rows_summary": 6,
+            "output_sha256": {
+              "summary.csv": "815e7556d5bd213117aaa379de3a27a1c905202c7bb71b4a55d081e32d59ca08"
+            },
+            "models_trained": false,
+            "models_refitted": false,
+            "independent_holdout_certified": false,
+            "physical_timezone_verified": false,
+            "scope": "Conditional exploratory uncertainty on supplied saved predictions and fixed folds; selection and future generalization are not corrected.",
+            "timestamp_interpretation": "Timestamps parsed as UTC; naive timestamps are assumed UTC, without verification of their physical meaning.",
+            "nonpositive_fraction_is_p_value": false
+          },
+          "receipt_sha256": "b72f62c98128628116747b0961bddc6775f2f06ac6d4d8d1187e75fc0f1b8a2b",
+          "temporary_artifacts_retention_not_audited": true
+        }
+      }
+    },
+    {
+      "name": "test_cli_rejects_invalid_parameters_without_publishing",
+      "classname": "tests.test_weather_gain_uncertainty",
+      "status": "passed",
+      "seconds": 17.985
+    }
+  ],
+  "stdout": "...........................................................              [100%]\n59 passed in 86.31s (0:01:26)\n",
+  "stderr": "",
+  "registered_hashes": {
+    "source_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+    "tests_sha256": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e",
+    "protocol_sha256": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b"
+  },
+  "after_hashes": {
+    "source_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+    "tests_sha256": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e",
+    "protocol_sha256": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b"
+  },
+  "prior_executions": [
+    {
+      "schema": "renewcast-m02-05-counterexamples-v1",
+      "started_at_utc": "2026-11-25T11:45:50.256477+00:00",
+      "finished_at_utc": "2026-11-25T11:47:16.560974+00:00",
+      "scope": "Only manufactured small fixtures; no real saved experiment, model training or inference.",
+      "command": [
+        "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_weather_gain_uncertainty.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "-o",
+        "junit_family=xunit1",
+        "--junitxml",
+        "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_m02_05_final_o4ajas5c\\pytest.xml"
+      ],
+      "exit_code": 0,
+      "counts": {
+        "passed": 59,
+        "failed": 0,
+        "skipped": 0
+      },
+      "cases": [
+        {
+          "name": "test_weighted_aggregate_and_no_cross_fold_mixing",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.1,
+          "properties": {
+            "evidence": {
+              "fold_sizes": [
+                3,
+                5
+              ],
+              "fold_gains": [
+                1.0,
+                3.0
+              ],
+              "weighted_aggregate": 2.25,
+              "unweighted_mean_rejected": 2.0,
+              "ci95_each_block": [
+                2.25,
+                2.25
+              ],
+              "rows_summary": 6
+            }
+          }
+        },
+        {
+          "name": "test_paired_errors_keep_the_constant_difference",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.043,
+          "properties": {
+            "evidence": {
+              "reference_absolute_errors": [
+                2,
+                6,
+                10
+              ],
+              "candidate_absolute_errors": [
+                1,
+                5,
+                9
+              ],
+              "paired_gain": 1,
+              "ci95": [
+                1,
+                1
+              ]
+            }
+          }
+        },
+        {
+          "name": "test_circular_indices_match_manual_blocks_and_preserve_values",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.018,
+          "properties": {
+            "evidence": {
+              "n": 5,
+              "block": 2,
+              "repetitions": 1031,
+              "seed": 17,
+              "first_starts": [
+                3,
+                4,
+                0
+              ],
+              "first_mean_manual": 14.6,
+              "first_mean_function": 14.6,
+              "circular_wrap_observed": true,
+              "max_absolute_difference": 0.0
+            }
+          }
+        },
+        {
+          "name": "test_aggregate_intervals_are_from_weighted_replicas",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.107,
+          "properties": {
+            "evidence": {
+              "point_gain": 3.125,
+              "manual_ci95": [
+                0.49375000000000036,
+                5.625
+              ],
+              "function_ci95": [
+                0.49375000000000036,
+                5.625
+              ]
+            }
+          }
+        },
+        {
+          "name": "test_determinism_order_and_input_global_rng_preservation",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.179
+        },
+        {
+          "name": "test_nonpositive_fraction_and_zero_gain",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.086
+        },
+        {
+          "name": "test_overflow_of_finite_bootstrap_values_is_rejected",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.002
+        },
+        {
+          "name": "test_overflow_of_finite_mae_values_is_rejected",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.036
+        },
+        {
+          "name": "test_invalid_prediction_contracts[empty]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.011
+        },
+        {
+          "name": "test_invalid_prediction_contracts[missing_column]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.01
+        },
+        {
+          "name": "test_invalid_prediction_contracts[duplicate_column]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.01
+        },
+        {
+          "name": "test_invalid_prediction_contracts[duplicate_time]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.017
+        },
+        {
+          "name": "test_invalid_prediction_contracts[bad_time]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.014
+        },
+        {
+          "name": "test_invalid_prediction_contracts[nat_time]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.014
+        },
+        {
+          "name": "test_invalid_prediction_contracts[numeric_time]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.011
+        },
+        {
+          "name": "test_invalid_prediction_contracts[gap]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.02
+        },
+        {
+          "name": "test_invalid_prediction_contracts[singleton]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "test_invalid_prediction_contracts[interleaved_folds]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.018
+        },
+        {
+          "name": "test_invalid_prediction_contracts[zero_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.017
+        },
+        {
+          "name": "test_invalid_prediction_contracts[negative_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.015
+        },
+        {
+          "name": "test_invalid_prediction_contracts[fractional_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.021
+        },
+        {
+          "name": "test_invalid_prediction_contracts[bool_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.018
+        },
+        {
+          "name": "test_invalid_prediction_contracts[infinite_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.018
+        },
+        {
+          "name": "test_invalid_prediction_contracts[overflow_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.02
+        },
+        {
+          "name": "test_invalid_prediction_contracts[text_fold]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.02
+        },
+        {
+          "name": "test_invalid_prediction_contracts[missing_target]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.014
+        },
+        {
+          "name": "test_invalid_prediction_contracts[infinite_prediction]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "test_invalid_prediction_contracts[text_prediction]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.01
+        },
+        {
+          "name": "test_invalid_prediction_contracts[bool_prediction]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.014
+        },
+        {
+          "name": "test_invalid_prediction_contracts[complex_prediction]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.013
+        },
+        {
+          "name": "test_invalid_prediction_contracts[wrong_saved_delta]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.019
+        },
+        {
+          "name": "test_invalid_prediction_contracts[missing_saved_delta]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.021
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes0]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes1]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes2]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.021
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes3]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes4]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes5]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes6]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes7]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.006
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes8]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes9]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes10]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.006
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes11]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.01
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes12]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.01
+        },
+        {
+          "name": "test_invalid_bootstrap_parameters[changes13]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.008
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values0-1-1-rng0]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values1-1-1-rng1]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values2-1-1-rng2]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values3-1-1-rng3]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values4-1-1-rng4]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.003
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values5-1-1-rng5]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.002
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values6-3-1-rng6]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.004
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values7-1-0-rng7]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_invalid_circular_inputs_and_rng[values8-1-1-None]",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.005
+        },
+        {
+          "name": "test_csv_loader_recomputes_delta_without_writing_input",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.094
+        },
+        {
+          "name": "test_csv_loader_rejects_duplicate_header",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 0.016
+        },
+        {
+          "name": "test_cli_creates_real_csv_receipt_and_refuses_overwrite",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 48.135,
+          "properties": {
+            "evidence": {
+              "fixture_only": true,
+              "command": [
+                "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+                "-m",
+                "renewable_forecast.weather_gain_uncertainty",
+                "--predictions",
+                "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-41\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                "--output-dir",
+                "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-41\\test_cli_creates_real_csv_rece0\\output",
+                "--block-hours",
+                "1",
+                "2",
+                "--repetitions",
+                "1000",
+                "--seed",
+                "42"
+              ],
+              "exit_code": 0,
+              "overwrite_exit_code": 2,
+              "input_sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+              "receipt": {
+                "schema": "renewcast-weather-gain-bootstrap-result-v1",
+                "completed": true,
+                "exit_code": 0,
+                "started_at_utc": "2026-11-25T11:46:27.078496+00:00",
+                "completed_at_utc": "2026-11-25T11:46:27.178132+00:00",
+                "elapsed_seconds": 0.09969810000620782,
+                "command": [
+                  "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+                  "-m",
+                  "renewable_forecast.weather_gain_uncertainty",
+                  "--predictions",
+                  "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-41\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                  "--output-dir",
+                  "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-41\\test_cli_creates_real_csv_rece0\\output",
+                  "--block-hours",
+                  "1",
+                  "2",
+                  "--repetitions",
+                  "1000",
+                  "--seed",
+                  "42"
+                ],
+                "versions": {
+                  "python": "3.12.13",
+                  "numpy": "2.5.3",
+                  "pandas": "3.0.5",
+                  "platform": "Windows-11-10.0.26200-SP0"
+                },
+                "input": {
+                  "path": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-41\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                  "bytes": 448,
+                  "sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+                  "preserved": true
+                },
+                "code": {
+                  "path": "C:\\renewable-forecast-lab\\src\\renewable_forecast\\weather_gain_uncertainty.py",
+                  "sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03"
+                },
+                "parameters": {
+                  "block_hours": [
+                    1,
+                    2
+                  ],
+                  "repetitions": 1000,
+                  "seed": 42,
+                  "confidence_level": 0.95
+                },
+                "method": "paired circular block bootstrap, stratified by fold, weighted by fold n; percentile interval, linear quantiles",
+                "rng_stream": "numpy SeedSequence([seed, block_hours, fold]); independent local generators",
+                "gain_definition": "abs(target_generation-hgb_history) - abs(target_generation-hgb_history_weather), MWmed",
+                "rows_input": 8,
+                "fold_counts": {
+                  "1": 3,
+                  "2": 5
+                },
+                "forecast_origin_start": "2026-01-01T00:00:00+00:00",
+                "forecast_origin_end": "2026-01-04T04:00:00+00:00",
+                "rows_summary": 6,
+                "output_sha256": {
+                  "summary.csv": "815e7556d5bd213117aaa379de3a27a1c905202c7bb71b4a55d081e32d59ca08"
+                },
+                "models_trained": false,
+                "models_refitted": false,
+                "independent_holdout_certified": false,
+                "physical_timezone_verified": false,
+                "scope": "Conditional exploratory uncertainty on supplied saved predictions and fixed folds; selection and future generalization are not corrected.",
+                "timestamp_interpretation": "Timestamps parsed as UTC; naive timestamps are assumed UTC, without verification of their physical meaning.",
+                "nonpositive_fraction_is_p_value": false
+              },
+              "receipt_sha256": "cced6e172f40792c707cc16d164201891a82081c9a32a508ddf58e18e2b5684a",
+              "temporary_artifacts_discarded_after_test": true
+            }
+          }
+        },
+        {
+          "name": "test_cli_rejects_invalid_parameters_without_publishing",
+          "classname": "tests.test_weather_gain_uncertainty",
+          "status": "passed",
+          "seconds": 17.637
+        }
+      ],
+      "stdout": "...........................................................              [100%]\n59 passed in 83.68s (0:01:23)\n",
+      "stderr": "",
+      "registered_hashes": {
+        "source_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+        "tests_sha256": "2a927c7ec48d8714281c710ec0ee8cb4a5facfc9796901b7552bb4b5873122c1",
+        "protocol_sha256": "a2e25cdabf2387a1f73e05f104b859d686de823626b400f969a1a195cd434c00"
+      },
+      "after_hashes": {
+        "source_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+        "tests_sha256": "2a927c7ec48d8714281c710ec0ee8cb4a5facfc9796901b7552bb4b5873122c1",
+        "protocol_sha256": "a2e25cdabf2387a1f73e05f104b859d686de823626b400f969a1a195cd434c00"
+      },
+      "prior_executions": [
+        {
+          "schema": "renewcast-m02-05-counterexamples-v1",
+          "started_at_utc": "2026-11-25T11:40:53.179029+00:00",
+          "finished_at_utc": "2026-11-25T11:42:29.110893+00:00",
+          "scope": "Only manufactured small fixtures; no real saved experiment, model training or inference.",
+          "command": [
+            "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+            "-m",
+            "pytest",
+            "tests/test_weather_gain_uncertainty.py",
+            "-q",
+            "-o",
+            "junit_family=xunit1",
+            "--junitxml",
+            "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_m02_05_l2l30w2h\\pytest.xml"
+          ],
+          "exit_code": 0,
+          "counts": {
+            "passed": 57,
+            "failed": 0,
+            "skipped": 0
+          },
+          "cases": [
+            {
+              "name": "test_weighted_aggregate_and_no_cross_fold_mixing",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.829,
+              "properties": {
+                "evidence": {
+                  "fold_sizes": [
+                    3,
+                    5
+                  ],
+                  "fold_gains": [
+                    1.0,
+                    3.0
+                  ],
+                  "weighted_aggregate": 2.25,
+                  "unweighted_mean_rejected": 2.0,
+                  "ci95_each_block": [
+                    2.25,
+                    2.25
+                  ],
+                  "rows_summary": 6
+                }
+              }
+            },
+            {
+              "name": "test_paired_errors_keep_the_constant_difference",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.46,
+              "properties": {
+                "evidence": {
+                  "reference_absolute_errors": [
+                    2,
+                    6,
+                    10
+                  ],
+                  "candidate_absolute_errors": [
+                    1,
+                    5,
+                    9
+                  ],
+                  "paired_gain": 1,
+                  "ci95": [
+                    1,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "name": "test_circular_indices_match_manual_blocks_and_preserve_values",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.074,
+              "properties": {
+                "evidence": {
+                  "n": 5,
+                  "block": 2,
+                  "repetitions": 1031,
+                  "seed": 17,
+                  "first_starts": [
+                    3,
+                    4,
+                    0
+                  ],
+                  "first_mean_manual": 14.6,
+                  "first_mean_function": 14.6,
+                  "circular_wrap_observed": true,
+                  "max_absolute_difference": 0.0
+                }
+              }
+            },
+            {
+              "name": "test_aggregate_intervals_are_from_weighted_replicas",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 1.322,
+              "properties": {
+                "evidence": {
+                  "point_gain": 3.125,
+                  "manual_ci95": [
+                    0.49375000000000036,
+                    5.625
+                  ],
+                  "function_ci95": [
+                    0.49375000000000036,
+                    5.625
+                  ]
+                }
+              }
+            },
+            {
+              "name": "test_determinism_order_and_input_global_rng_preservation",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.747
+            },
+            {
+              "name": "test_nonpositive_fraction_and_zero_gain",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.213
+            },
+            {
+              "name": "test_invalid_prediction_contracts[empty]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.097
+            },
+            {
+              "name": "test_invalid_prediction_contracts[missing_column]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.018
+            },
+            {
+              "name": "test_invalid_prediction_contracts[duplicate_column]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.042
+            },
+            {
+              "name": "test_invalid_prediction_contracts[duplicate_time]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.035
+            },
+            {
+              "name": "test_invalid_prediction_contracts[bad_time]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.033
+            },
+            {
+              "name": "test_invalid_prediction_contracts[nat_time]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.021
+            },
+            {
+              "name": "test_invalid_prediction_contracts[numeric_time]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.02
+            },
+            {
+              "name": "test_invalid_prediction_contracts[gap]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.04
+            },
+            {
+              "name": "test_invalid_prediction_contracts[singleton]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.039
+            },
+            {
+              "name": "test_invalid_prediction_contracts[interleaved_folds]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.037
+            },
+            {
+              "name": "test_invalid_prediction_contracts[zero_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.046
+            },
+            {
+              "name": "test_invalid_prediction_contracts[negative_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.038
+            },
+            {
+              "name": "test_invalid_prediction_contracts[fractional_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.036
+            },
+            {
+              "name": "test_invalid_prediction_contracts[bool_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.037
+            },
+            {
+              "name": "test_invalid_prediction_contracts[infinite_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.035
+            },
+            {
+              "name": "test_invalid_prediction_contracts[overflow_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.082
+            },
+            {
+              "name": "test_invalid_prediction_contracts[text_fold]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.098
+            },
+            {
+              "name": "test_invalid_prediction_contracts[missing_target]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.06
+            },
+            {
+              "name": "test_invalid_prediction_contracts[infinite_prediction]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.145
+            },
+            {
+              "name": "test_invalid_prediction_contracts[text_prediction]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.043
+            },
+            {
+              "name": "test_invalid_prediction_contracts[bool_prediction]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.055
+            },
+            {
+              "name": "test_invalid_prediction_contracts[complex_prediction]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.039
+            },
+            {
+              "name": "test_invalid_prediction_contracts[wrong_saved_delta]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.064
+            },
+            {
+              "name": "test_invalid_prediction_contracts[missing_saved_delta]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.047
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes0]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.011
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes1]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.013
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes2]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.115
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes3]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.018
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes4]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.035
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes5]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.025
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes6]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.026
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes7]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.01
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes8]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.032
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes9]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.008
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes10]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.025
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes11]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.029
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes12]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.022
+            },
+            {
+              "name": "test_invalid_bootstrap_parameters[changes13]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.014
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values0-1-1-rng0]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.01
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values1-1-1-rng1]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.005
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values2-1-1-rng2]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.016
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values3-1-1-rng3]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.007
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values4-1-1-rng4]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.008
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values5-1-1-rng5]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.004
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values6-3-1-rng6]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.01
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values7-1-0-rng7]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.008
+            },
+            {
+              "name": "test_invalid_circular_inputs_and_rng[values8-1-1-None]",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.003
+            },
+            {
+              "name": "test_csv_loader_recomputes_delta_without_writing_input",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.468
+            },
+            {
+              "name": "test_csv_loader_rejects_duplicate_header",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 0.062
+            },
+            {
+              "name": "test_cli_creates_real_csv_receipt_and_refuses_overwrite",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 52.199,
+              "properties": {
+                "evidence": {
+                  "fixture_only": true,
+                  "command": [
+                    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+                    "-m",
+                    "renewable_forecast.weather_gain_uncertainty",
+                    "--predictions",
+                    "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-40\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                    "--output-dir",
+                    "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-40\\test_cli_creates_real_csv_rece0\\output",
+                    "--block-hours",
+                    "1",
+                    "2",
+                    "--repetitions",
+                    "1000",
+                    "--seed",
+                    "42"
+                  ],
+                  "exit_code": 0,
+                  "overwrite_exit_code": 2,
+                  "input_sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+                  "receipt": {
+                    "schema": "renewcast-weather-gain-bootstrap-result-v1",
+                    "completed": true,
+                    "exit_code": 0,
+                    "started_at_utc": "2026-11-25T11:41:39.076377+00:00",
+                    "completed_at_utc": "2026-11-25T11:41:39.156379+00:00",
+                    "elapsed_seconds": 0.07943469999008812,
+                    "command": [
+                      "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+                      "-m",
+                      "renewable_forecast.weather_gain_uncertainty",
+                      "--predictions",
+                      "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-40\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                      "--output-dir",
+                      "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-40\\test_cli_creates_real_csv_rece0\\output",
+                      "--block-hours",
+                      "1",
+                      "2",
+                      "--repetitions",
+                      "1000",
+                      "--seed",
+                      "42"
+                    ],
+                    "versions": {
+                      "python": "3.12.13",
+                      "numpy": "2.5.3",
+                      "pandas": "3.0.5",
+                      "platform": "Windows-11-10.0.26200-SP0"
+                    },
+                    "input": {
+                      "path": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-40\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+                      "bytes": 448,
+                      "sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+                      "preserved": true
+                    },
+                    "code": {
+                      "path": "C:\\renewable-forecast-lab\\src\\renewable_forecast\\weather_gain_uncertainty.py",
+                      "sha256": "4c48c292ebed79fcacfbe4a72137146b45f1a7040b864c7cfbc0bd4a9176fdc5"
+                    },
+                    "parameters": {
+                      "block_hours": [
+                        1,
+                        2
+                      ],
+                      "repetitions": 1000,
+                      "seed": 42,
+                      "confidence_level": 0.95
+                    },
+                    "method": "paired circular block bootstrap, stratified by fold, weighted by fold n; percentile interval, linear quantiles",
+                    "rng_stream": "numpy SeedSequence([seed, block_hours, fold]); independent local generators",
+                    "gain_definition": "abs(target_generation-hgb_history) - abs(target_generation-hgb_history_weather), MWmed",
+                    "rows_input": 8,
+                    "fold_counts": {
+                      "1": 3,
+                      "2": 5
+                    },
+                    "forecast_origin_start": "2026-01-01T00:00:00+00:00",
+                    "forecast_origin_end": "2026-01-04T04:00:00+00:00",
+                    "rows_summary": 6,
+                    "output_sha256": {
+                      "summary.csv": "815e7556d5bd213117aaa379de3a27a1c905202c7bb71b4a55d081e32d59ca08"
+                    },
+                    "models_trained": false,
+                    "models_refitted": false,
+                    "independent_holdout_certified": false,
+                    "physical_timezone_verified": false,
+                    "scope": "Conditional exploratory uncertainty on supplied saved predictions and fixed folds; selection and future generalization are not corrected.",
+                    "timestamp_interpretation": "Timestamps parsed as UTC; naive timestamps are assumed UTC, without verification of their physical meaning.",
+                    "nonpositive_fraction_is_p_value": false
+                  },
+                  "receipt_sha256": "21de229da63c8acf8903ac4cafe45daa89f95f64617dec493b489619bbe11533",
+                  "temporary_artifacts_discarded_after_test": true
+                }
+              }
+            },
+            {
+              "name": "test_cli_rejects_invalid_parameters_without_publishing",
+              "classname": "tests.test_weather_gain_uncertainty",
+              "status": "passed",
+              "seconds": 17.096
+            }
+          ],
+          "stdout": ".........................................................                [100%]\n============================== warnings summary ===============================\n..\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\Lib\\site-packages\\_pytest\\cacheprovider.py:469\n  C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\Lib\\site-packages\\_pytest\\cacheprovider.py:469: PytestCacheWarning: could not create cache path C:\\renewable-forecast-lab\\.pytest_cache\\v\\cache\\nodeids: [WinError 5] Acesso negado: 'C:\\\\renewable-forecast-lab\\\\.pytest_cache\\\\v\\\\cache'\n    config.cache.set(\"cache/nodeids\", sorted(self.cached_nodeids))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n57 passed, 1 warning in 93.47s (0:01:33)\n",
+          "stderr": "",
+          "registered_hashes": {
+            "source_sha256": "4c48c292ebed79fcacfbe4a72137146b45f1a7040b864c7cfbc0bd4a9176fdc5",
+            "tests_sha256": "9e259888d66069408c1b6068241e9ada051e4b4e9fcf2141cabe091fe992ab3a",
+            "protocol_sha256": "16e6e722d7721c448f5198af9f852170a281399cc6450a06072b85e088d984e9"
+          },
+          "after_hashes": {
+            "source_sha256": "4c48c292ebed79fcacfbe4a72137146b45f1a7040b864c7cfbc0bd4a9176fdc5",
+            "tests_sha256": "9e259888d66069408c1b6068241e9ada051e4b4e9fcf2141cabe091fe992ab3a",
+            "protocol_sha256": "16e6e722d7721c448f5198af9f852170a281399cc6450a06072b85e088d984e9"
+          },
+          "independent_authorship_proven": false
+        }
+      ],
+      "independent_authorship_proven": false,
+      "temporary_retention_correction": "The former property claiming discarded artifacts was not verified; pytest tmp_path retained the observed CLI files. The final test label states retention not audited. No cleanup is claimed."
+    }
+  ],
+  "independent_authorship_proven": false,
+  "cli_fixture_archive": [
+    {
+      "case": "test_cli_creates_real_csv_receipt_and_refuses_overwrite",
+      "fixture_only": true,
+      "archived_inline_at_utc": "2026-11-25T11:52:50.900156+00:00",
+      "input_csv": {
+        "path_at_execution": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+        "bytes": 448,
+        "sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+        "content_utf8": "forecast_origin,fold,target_generation,hgb_history,hgb_history_weather\r\n2026-01-01 00:00:00+00:00,1,100.0,103.0,102.0\r\n2026-01-01 01:00:00+00:00,1,100.0,103.0,102.0\r\n2026-01-01 02:00:00+00:00,1,100.0,103.0,102.0\r\n2026-01-04 00:00:00+00:00,2,100.0,105.0,102.0\r\n2026-01-04 01:00:00+00:00,2,100.0,105.0,102.0\r\n2026-01-04 02:00:00+00:00,2,100.0,105.0,102.0\r\n2026-01-04 03:00:00+00:00,2,100.0,105.0,102.0\r\n2026-01-04 04:00:00+00:00,2,100.0,105.0,102.0\r\n"
+      },
+      "summary_csv": {
+        "path_at_execution": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\output\\summary.csv",
+        "bytes": 570,
+        "sha256": "815e7556d5bd213117aaa379de3a27a1c905202c7bb71b4a55d081e32d59ca08",
+        "content_utf8": "scope,fold,block_hours,n,mae_history_mwmed,mae_history_weather_mwmed,mean_gain_mwmed,bootstrap_mean_gain_mwmed,ci95_low_mwmed,ci95_high_mwmed,bootstrap_fraction_nonpositive,confidence_level,repetitions,seed\r\nfold,1,1,3,3,2,1,1,1,1,0,0.94999999999999996,1000,42\r\nfold,2,1,5,5,2,3,3,3,3,0,0.94999999999999996,1000,42\r\naggregate,,1,8,4.25,2,2.25,2.25,2.25,2.25,0,0.94999999999999996,1000,42\r\nfold,1,2,3,3,2,1,1,1,1,0,0.94999999999999996,1000,42\r\nfold,2,2,5,5,2,3,3,3,3,0,0.94999999999999996,1000,42\r\naggregate,,2,8,4.25,2,2.25,2.25,2.25,2.25,0,0.94999999999999996,1000,42\r\n"
+      },
+      "receipt": {
+        "path_at_execution": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\output\\receipt.json",
+        "bytes": 2645,
+        "sha256": "b72f62c98128628116747b0961bddc6775f2f06ac6d4d8d1187e75fc0f1b8a2b",
+        "content_utf8": "{\n  \"schema\": \"renewcast-weather-gain-bootstrap-result-v1\",\n  \"completed\": true,\n  \"exit_code\": 0,\n  \"started_at_utc\": \"2026-11-25T11:50:45.871123+00:00\",\n  \"completed_at_utc\": \"2026-11-25T11:50:45.967830+00:00\",\n  \"elapsed_seconds\": 0.09644020002451725,\n  \"command\": [\n    \"C:\\\\Users\\\\marhl\\\\miniconda3\\\\envs\\\\renewable-forecast\\\\python.exe\",\n    \"-m\",\n    \"renewable_forecast.weather_gain_uncertainty\",\n    \"--predictions\",\n    \"C:\\\\Users\\\\marhl\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-marhl\\\\pytest-42\\\\test_cli_creates_real_csv_rece0\\\\paired_fixture.csv\",\n    \"--output-dir\",\n    \"C:\\\\Users\\\\marhl\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-marhl\\\\pytest-42\\\\test_cli_creates_real_csv_rece0\\\\output\",\n    \"--block-hours\",\n    \"1\",\n    \"2\",\n    \"--repetitions\",\n    \"1000\",\n    \"--seed\",\n    \"42\"\n  ],\n  \"versions\": {\n    \"python\": \"3.12.13\",\n    \"numpy\": \"2.5.3\",\n    \"pandas\": \"3.0.5\",\n    \"platform\": \"Windows-11-10.0.26200-SP0\"\n  },\n  \"input\": {\n    \"path\": \"C:\\\\Users\\\\marhl\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-marhl\\\\pytest-42\\\\test_cli_creates_real_csv_rece0\\\\paired_fixture.csv\",\n    \"bytes\": 448,\n    \"sha256\": \"4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02\",\n    \"preserved\": true\n  },\n  \"code\": {\n    \"path\": \"C:\\\\renewable-forecast-lab\\\\src\\\\renewable_forecast\\\\weather_gain_uncertainty.py\",\n    \"sha256\": \"f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03\"\n  },\n  \"parameters\": {\n    \"block_hours\": [\n      1,\n      2\n    ],\n    \"repetitions\": 1000,\n    \"seed\": 42,\n    \"confidence_level\": 0.95\n  },\n  \"method\": \"paired circular block bootstrap, stratified by fold, weighted by fold n; percentile interval, linear quantiles\",\n  \"rng_stream\": \"numpy SeedSequence([seed, block_hours, fold]); independent local generators\",\n  \"gain_definition\": \"abs(target_generation-hgb_history) - abs(target_generation-hgb_history_weather), MWmed\",\n  \"rows_input\": 8,\n  \"fold_counts\": {\n    \"1\": 3,\n    \"2\": 5\n  },\n  \"forecast_origin_start\": \"2026-01-01T00:00:00+00:00\",\n  \"forecast_origin_end\": \"2026-01-04T04:00:00+00:00\",\n  \"rows_summary\": 6,\n  \"output_sha256\": {\n    \"summary.csv\": \"815e7556d5bd213117aaa379de3a27a1c905202c7bb71b4a55d081e32d59ca08\"\n  },\n  \"models_trained\": false,\n  \"models_refitted\": false,\n  \"independent_holdout_certified\": false,\n  \"physical_timezone_verified\": false,\n  \"scope\": \"Conditional exploratory uncertainty on supplied saved predictions and fixed folds; selection and future generalization are not corrected.\",\n  \"timestamp_interpretation\": \"Timestamps parsed as UTC; naive timestamps are assumed UTC, without verification of their physical meaning.\",\n  \"nonpositive_fraction_is_p_value\": false\n}\n"
+      }
+    }
+  ],
+  "temporary_file_retention": "Temporary CLI files were observed after pytest and read to archive their exact UTF-8 bytes inline here. No deletion or future retention is promised."
+}

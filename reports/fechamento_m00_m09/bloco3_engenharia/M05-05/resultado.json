@@ -1,0 +1,335 @@
+{
+  "executed_at_utc": "2026-11-26T00:35:00.161641+00:00",
+  "series": [
+    "CEECVA",
+    "CEEMAU",
+    "CEUCZ",
+    "CEUFM"
+  ],
+  "cohorts": {
+    "train": 1332,
+    "validation": 576,
+    "test": 956
+  },
+  "train_max_origin": "2026-10-15 20:00:00",
+  "train_max_label_available": "2026-10-15 23:00:00",
+  "strict_label_purge": true,
+  "test_last_origin": "2026-10-31 22:00:00",
+  "metrics": [
+    {
+      "split": "test",
+      "model": "global_hgb",
+      "series_id": "CEECVA",
+      "n": 239,
+      "mae_mw": 0.9728724468993311,
+      "rmse_mw": 1.3521101274142933,
+      "bias_mw": 0.05078953854275923
+    },
+    {
+      "split": "test",
+      "model": "global_hgb",
+      "series_id": "CEEMAU",
+      "n": 239,
+      "mae_mw": 2.809614374901389,
+      "rmse_mw": 3.8073614966136726,
+      "bias_mw": 0.02046191284087428
+    },
+    {
+      "split": "test",
+      "model": "global_hgb",
+      "series_id": "CEUCZ",
+      "n": 239,
+      "mae_mw": 7.933634420274115,
+      "rmse_mw": 10.5029555665056,
+      "bias_mw": 2.0303790935249855
+    },
+    {
+      "split": "test",
+      "model": "global_hgb",
+      "series_id": "CEUFM",
+      "n": 239,
+      "mae_mw": 12.206883451939772,
+      "rmse_mw": 16.296137402587767,
+      "bias_mw": -2.508647179578956
+    },
+    {
+      "split": "test",
+      "model": "local_hgb",
+      "series_id": "CEECVA",
+      "n": 239,
+      "mae_mw": 0.9874646691890676,
+      "rmse_mw": 1.6631446341896534,
+      "bias_mw": -0.6580635421741517
+    },
+    {
+      "split": "test",
+      "model": "local_hgb",
+      "series_id": "CEEMAU",
+      "n": 239,
+      "mae_mw": 2.7137147099631953,
+      "rmse_mw": 3.8401009296442825,
+      "bias_mw": -0.12067497048400244
+    },
+    {
+      "split": "test",
+      "model": "local_hgb",
+      "series_id": "CEUCZ",
+      "n": 239,
+      "mae_mw": 8.631438840676237,
+      "rmse_mw": 11.978585279879574,
+      "bias_mw": 3.1152668650471496
+    },
+    {
+      "split": "test",
+      "model": "local_hgb",
+      "series_id": "CEUFM",
+      "n": 239,
+      "mae_mw": 12.372470552041149,
+      "rmse_mw": 16.612107158539647,
+      "bias_mw": -1.8245815520874078
+    },
+    {
+      "split": "test",
+      "model": "persistence",
+      "series_id": "CEECVA",
+      "n": 239,
+      "mae_mw": 0.5832970711297072,
+      "rmse_mw": 1.1207925711065803,
+      "bias_mw": 0.005150627615062765
+    },
+    {
+      "split": "test",
+      "model": "persistence",
+      "series_id": "CEEMAU",
+      "n": 239,
+      "mae_mw": 4.661912133891214,
+      "rmse_mw": 6.524998753747135,
+      "bias_mw": 0.0045857740585774215
+    },
+    {
+      "split": "test",
+      "model": "persistence",
+      "series_id": "CEUCZ",
+      "n": 239,
+      "mae_mw": 6.615253138075313,
+      "rmse_mw": 9.581303488497948,
+      "bias_mw": -0.07350836820083682
+    },
+    {
+      "split": "test",
+      "model": "persistence",
+      "series_id": "CEUFM",
+      "n": 239,
+      "mae_mw": 20.393228033472802,
+      "rmse_mw": 28.21571554826543,
+      "bias_mw": -0.11146234309623466
+    },
+    {
+      "split": "validation",
+      "model": "global_hgb",
+      "series_id": "CEECVA",
+      "n": 144,
+      "mae_mw": 1.5901509371054283,
+      "rmse_mw": 2.440516659978649,
+      "bias_mw": 0.014176413571123647
+    },
+    {
+      "split": "validation",
+      "model": "global_hgb",
+      "series_id": "CEEMAU",
+      "n": 144,
+      "mae_mw": 2.797858023253198,
+      "rmse_mw": 4.09779006428218,
+      "bias_mw": -0.16522744190856764
+    },
+    {
+      "split": "validation",
+      "model": "global_hgb",
+      "series_id": "CEUCZ",
+      "n": 144,
+      "mae_mw": 8.941904942724156,
+      "rmse_mw": 11.578283308098442,
+      "bias_mw": 1.9274226972552004
+    },
+    {
+      "split": "validation",
+      "model": "global_hgb",
+      "series_id": "CEUFM",
+      "n": 144,
+      "mae_mw": 11.465121631720113,
+      "rmse_mw": 15.953796530953104,
+      "bias_mw": -2.0187816764625466
+    },
+    {
+      "split": "validation",
+      "model": "local_hgb",
+      "series_id": "CEECVA",
+      "n": 144,
+      "mae_mw": 1.4009933192641768,
+      "rmse_mw": 2.4517417244976047,
+      "bias_mw": -1.1688758924032
+    },
+    {
+      "split": "validation",
+      "model": "local_hgb",
+      "series_id": "CEEMAU",
+      "n": 144,
+      "mae_mw": 2.7487475270576343,
+      "rmse_mw": 4.095726798898656,
+      "bias_mw": -0.13189914871268638
+    },
+    {
+      "split": "validation",
+      "model": "local_hgb",
+      "series_id": "CEUCZ",
+      "n": 144,
+      "mae_mw": 8.920350177389944,
+      "rmse_mw": 11.854515764702015,
+      "bias_mw": 3.415973399889835
+    },
+    {
+      "split": "validation",
+      "model": "local_hgb",
+      "series_id": "CEUFM",
+      "n": 144,
+      "mae_mw": 11.237958168026605,
+      "rmse_mw": 15.569193142353974,
+      "bias_mw": -2.1063492205004772
+    },
+    {
+      "split": "validation",
+      "model": "persistence",
+      "series_id": "CEECVA",
+      "n": 144,
+      "mae_mw": 1.495076388888889,
+      "rmse_mw": 2.6058519153745308,
+      "bias_mw": -0.000624999999999999
+    },
+    {
+      "split": "validation",
+      "model": "persistence",
+      "series_id": "CEEMAU",
+      "n": 144,
+      "mae_mw": 4.71671875,
+      "rmse_mw": 6.665784999382002,
+      "bias_mw": 0.019753472222222162
+    },
+    {
+      "split": "validation",
+      "model": "persistence",
+      "series_id": "CEUCZ",
+      "n": 144,
+      "mae_mw": 7.913642361111111,
+      "rmse_mw": 10.460866641968135,
+      "bias_mw": -0.18712847222222237
+    },
+    {
+      "split": "validation",
+      "model": "persistence",
+      "series_id": "CEUFM",
+      "n": 144,
+      "mae_mw": 20.64925,
+      "rmse_mw": 28.68661913619794,
+      "bias_mw": 0.3783819444444443
+    },
+    {
+      "split": "test",
+      "model": "global_hgb",
+      "series_id": "ALL_micro",
+      "n": 956,
+      "mae_mw": 5.980751173503652,
+      "rmse_mw": 9.902024707585863,
+      "bias_mw": -0.1017541586675841
+    },
+    {
+      "split": "test",
+      "model": "local_hgb",
+      "series_id": "ALL_micro",
+      "n": 956,
+      "mae_mw": 6.176272192967413,
+      "rmse_mw": 10.451806479961256,
+      "bias_mw": 0.1279867000753968
+    },
+    {
+      "split": "test",
+      "model": "persistence",
+      "series_id": "ALL_micro",
+      "n": 956,
+      "mae_mw": 8.06342259414226,
+      "rmse_mw": 15.26237010725382,
+      "bias_mw": -0.04380857740585776
+    },
+    {
+      "split": "validation",
+      "model": "global_hgb",
+      "series_id": "ALL_micro",
+      "n": 576,
+      "mae_mw": 6.198758883700723,
+      "rmse_mw": 10.140614787726202,
+      "bias_mw": -0.060602501886197487
+    },
+    {
+      "split": "validation",
+      "model": "local_hgb",
+      "series_id": "ALL_micro",
+      "n": 576,
+      "mae_mw": 6.077012297934591,
+      "rmse_mw": 10.071188294019105,
+      "bias_mw": 0.0022122845683679847
+    },
+    {
+      "split": "validation",
+      "model": "persistence",
+      "series_id": "ALL_micro",
+      "n": 576,
+      "mae_mw": 8.693671875,
+      "rmse_mw": 15.680999667026706,
+      "bias_mw": 0.05259548611111103
+    }
+  ],
+  "fit_resources": [
+    {
+      "model": "global_hgb",
+      "series": "all",
+      "train_rows": 1332,
+      "fit_wall_seconds": 0.3918812000192702,
+      "fit_cpu_seconds": 0.359375
+    },
+    {
+      "model": "local_hgb",
+      "series": "CEECVA",
+      "train_rows": 333,
+      "fit_wall_seconds": 0.1212373000162188,
+      "fit_cpu_seconds": 0.125
+    },
+    {
+      "model": "local_hgb",
+      "series": "CEEMAU",
+      "train_rows": 333,
+      "fit_wall_seconds": 0.19168009998975322,
+      "fit_cpu_seconds": 0.1875
+    },
+    {
+      "model": "local_hgb",
+      "series": "CEUCZ",
+      "train_rows": 333,
+      "fit_wall_seconds": 0.1560592000023462,
+      "fit_cpu_seconds": 0.15625
+    },
+    {
+      "model": "local_hgb",
+      "series": "CEUFM",
+      "train_rows": 333,
+      "fit_wall_seconds": 0.1993296000000555,
+      "fit_cpu_seconds": 0.1875
+    }
+  ],
+  "normalization": "nenhuma; geração em MW; código categórico atribuído antes do fit; sem capacidade/cadastro externo",
+  "scope": "estudo exploratório retrospectivo, 1 mês, 4 séries; não benchmark final intocado",
+  "model_artifact_sha256": "86ae7defa0b7b5cdfe4ddd57f656f28759a82bb99ff12a3fafa777cbac2f0b71",
+  "positive_gain_required": false,
+  "operational_approval": false,
+  "packages": {
+    "sklearn": "1.9.0"
+  }
+}

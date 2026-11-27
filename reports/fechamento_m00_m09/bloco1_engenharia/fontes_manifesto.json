@@ -1,0 +1,1195 @@
+{
+  "schema": "renewcast-existing-source-lineage-v1",
+  "inspected_at_utc": "2026-11-25T14:15:11.899195+00:00",
+  "scope": "read-only tracing of existing sources and predictions; selected artifacts, not a new model run or closure receipt",
+  "prepared_by": "Codex assistance; engineering source tracing",
+  "independent_human_transfer_demonstrated": false,
+  "source_confirmation_or_operational_acceptance_created": false,
+  "roadmap_ids_referenced": [
+    "M04-02",
+    "M04-03",
+    "M04-04",
+    "M04-05",
+    "M09-03"
+  ],
+  "new_model_execution": false,
+  "new_data_download": false,
+  "new_forecast_request": false,
+  "remote_document_binary_hashes_captured": false,
+  "primary_documentation": [
+    {
+      "url": "https://dados.ons.org.br/dataset/geracao-usina-2",
+      "role": "ONS hourly generation portal; Type III group forecast exception must not be generalized"
+    },
+    {
+      "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/geracao_usina_2_ho/DicionarioDados_GeracaoPorUsina.pdf",
+      "role": "ONS field dictionary referenced by existing source review"
+    },
+    {
+      "url": "https://open-meteo.com/en/docs/single-runs-api",
+      "role": "archived numerical weather model runs"
+    },
+    {
+      "url": "https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gfs.php",
+      "role": "NOAA/NCEP GFS atmospheric forecast source"
+    },
+    {
+      "url": "https://huggingface.co/amazon/chronos-bolt-tiny/blob/a0e552de83495b5c28c14c71c374f3e33280b340/README.md",
+      "role": "frozen pretrained model documentation; local source review exists"
+    }
+  ],
+  "generation": {
+    "entity_id": "CJU_BA5EIGT",
+    "source_monthly_files_count": 12,
+    "source_months": [
+      "GERACAO_USINA-2_2025_09",
+      "GERACAO_USINA-2_2025_10",
+      "GERACAO_USINA-2_2025_11",
+      "GERACAO_USINA-2_2025_12",
+      "GERACAO_USINA-2_2026_01",
+      "GERACAO_USINA-2_2026_02",
+      "GERACAO_USINA-2_2026_03",
+      "GERACAO_USINA-2_2026_04",
+      "GERACAO_USINA-2_2026_05",
+      "GERACAO_USINA-2_2026_06",
+      "GERACAO_USINA-2_2026_07",
+      "GERACAO_USINA-2_2026_08"
+    ],
+    "prepared_rows": 8760,
+    "reference_time_min": "2025-09-01 00:00:00",
+    "reference_time_max": "2026-08-31 23:00:00",
+    "entity_modes": [
+      "Conjunto de Usinas"
+    ],
+    "entity_ids": [
+      "CJU_BA5EIGT"
+    ],
+    "unit": "MWmed",
+    "timezone_confirmed": false,
+    "interval_start_or_end_confirmed": false,
+    "historical_versions_confirmed": false,
+    "raw_monthly_acquisition_receipts_located": false,
+    "role": "historical generation labels/history; not an ONS individual-plant forecast API"
+  },
+  "registry": {
+    "conjunto_id": "CJU_BA5EIGT",
+    "membership_as_of": "2026-09-01",
+    "plants": 15,
+    "capacity_records": 27,
+    "capacity_ons_mw": 227.70000000000002,
+    "capacity_aneel_mw": 227.70000000000002,
+    "max_absolute_capacity_difference_mw": 0.0,
+    "sources": {
+      "relationships": {
+        "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/usina_conjunto/RELACIONAMENTO_USINA_CONJUNTO.csv",
+        "http_status": 200,
+        "fetched_at_utc": "2026-09-22T21:28:05.056568+00:00",
+        "http_last_modified": "Tue, 22 Sep 2026 15:05:08 GMT",
+        "etag": "\"5abf817f18ead81175f209f8ab17ea09\"",
+        "sha256": "052776ef1c78beebf0d8c1947d4e3cdec5d5bb6c0587f8613be6714a8572b689",
+        "bytes": 336323
+      },
+      "capacity": {
+        "url": "https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/capacidade-geracao/CAPACIDADE_GERACAO.csv",
+        "http_status": 200,
+        "fetched_at_utc": "2026-09-22T21:28:06.855407+00:00",
+        "http_last_modified": "Tue, 22 Sep 2026 15:00:50 GMT",
+        "etag": "\"ada853c0aa78fb46d963d9b9b0dfb5e6\"",
+        "sha256": "afab94be2941e8534a9ba01ebe89a2bd2876baf240f7141548c38d64d28310a4",
+        "bytes": 1282133
+      },
+      "siga_daily": {
+        "url": "https://dadosabertos.aneel.gov.br/dataset/6d90b77c-c5f5-4d81-bdec-7bc619494bb9/resource/2f65a1b0-19b8-4360-8238-b34ab4693d55/download/siga-empreendimentos-geracao-diario.csv",
+        "http_status": 200,
+        "fetched_at_utc": "2026-09-22T21:28:07.986896+00:00",
+        "http_last_modified": "Tue, 22 Sep 2026 10:40:58 GMT",
+        "etag": "\"1790073658.2245355-8418652-1847136755\"",
+        "sha256": "a617d47068df726aa58a22fe3d4d1b0456958654f8d97e0776d577eed459032f",
+        "bytes": 8418652
+      }
+    },
+    "ceg_normalization": "preserve full CEG; normalize leading zeros of numeric final suffix",
+    "join_contract": "one relationship, one aggregated capacity and one SIGA record per CEG",
+    "membership_dates": "start inclusive; end inclusive by calendar date",
+    "capacity_dates": "commercial operation <= date; deactivation > date or absent",
+    "historical_snapshot_verified": false,
+    "scope": "membership dates from current registry; historical coordinates/capacity versions not verified",
+    "coordinates_scope": "registered plant location, not individual turbine locations",
+    "ons_attribution": "Operador Nacional do Sistema Elétrico — dados abertos, CC-BY",
+    "aneel_attribution": "ANEEL — SIGA, Open Database License (ODbL)",
+    "transformations": "CEG formatting, capacity aggregation, kW to MW, decimal conversion and joins"
+  },
+  "weather": {
+    "endpoint": "https://single-runs-api.open-meteo.com/v1/forecast",
+    "provider": "NOAA/NCEP GFS via Open-Meteo",
+    "representative_request": {
+      "request_url": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=-13.83506285%2C-13.82661024%2C-14.32898043%2C-13.99459845%2C-14.04405600%2C-13.86355786%2C-13.82937522%2C-13.84187496%2C-14.00546660%2C-14.01696831%2C-14.53557321%2C-13.98084040%2C-14.01545978%2C-13.97988782%2C-14.25403541&longitude=-42.70377690%2C-42.70428516%2C-42.57230176%2C-42.69078304%2C-42.65429301%2C-42.69089807%2C-42.69082273%2C-42.69056477%2C-42.66704098%2C-42.67641007%2C-42.57583880%2C-42.67878101%2C-42.66330327%2C-42.66518946%2C-42.54905022&models=gfs_global&hourly=wind_speed_100m%2Cwind_direction_100m&wind_speed_unit=ms&timezone=UTC&run=2026-07-01T00%3A00&forecast_hours=48&cell_selection=nearest&elevation=nan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan%2Cnan",
+      "request_params": {
+        "latitude": "-13.83506285,-13.82661024,-14.32898043,-13.99459845,-14.04405600,-13.86355786,-13.82937522,-13.84187496,-14.00546660,-14.01696831,-14.53557321,-13.98084040,-14.01545978,-13.97988782,-14.25403541",
+        "longitude": "-42.70377690,-42.70428516,-42.57230176,-42.69078304,-42.65429301,-42.69089807,-42.69082273,-42.69056477,-42.66704098,-42.67641007,-42.57583880,-42.67878101,-42.66330327,-42.66518946,-42.54905022",
+        "models": "gfs_global",
+        "hourly": "wind_speed_100m,wind_direction_100m",
+        "wind_speed_unit": "ms",
+        "timezone": "UTC",
+        "run": "2026-07-01T00:00",
+        "forecast_hours": 48,
+        "cell_selection": "nearest",
+        "elevation": "nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan"
+      },
+      "protocol": {
+        "schema_version": 1,
+        "weather_model": "gfs_global",
+        "run_time_utc": "2026-07-01T00:00:00+00:00",
+        "hours": 48,
+        "assumed_latency_hours": 6,
+        "availability_is_assumed": true,
+        "historical_availability_verified": false,
+        "availability_rule": "weather_run_time + assumed_latency_hours; not observed release time",
+        "registry_sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5",
+        "request_plant_ids": [
+          "BAEAMC",
+          "BAEBAB",
+          "BAECED",
+          "BAEFAC",
+          "BAEGEL",
+          "BAEIBM",
+          "BAEJAT",
+          "BAEJUA",
+          "BAEMLG",
+          "BAEMNN",
+          "BAEPDA",
+          "BAEQUN",
+          "BAESBU",
+          "BAEUMB",
+          "BAEVLZ"
+        ],
+        "registry_historical_versions_verified": false,
+        "generation_timezone_verified": false
+      },
+      "http_status": 200,
+      "fetched_at_utc": "2026-09-28T22:37:41.415625+00:00",
+      "response_sha256": "eb986434f2d7d9b0cbba86c1e86f7fb8846efb13f188423f0f96634368f79254",
+      "response_bytes": 24868,
+      "http_last_modified": null,
+      "etag": null,
+      "attribution": "Weather data: NOAA GFS via Open-Meteo; locations: ONS/ANEEL.",
+      "documentation": "https://open-meteo.com/en/docs/single-runs-api"
+    },
+    "response_units": {
+      "wind_speed_100m": "m/s",
+      "wind_direction_100m": "degree"
+    },
+    "representative_normalized_rows": 720,
+    "requested_locations": 15,
+    "distinct_selected_grid_cells": 5,
+    "grid_weights": [
+      {
+        "grid_latitude": -14.585091,
+        "grid_longitude": -42.539062,
+        "num_usinas": 1,
+        "capacity_weight": 0.0790513834
+      },
+      {
+        "grid_latitude": -14.350792,
+        "grid_longitude": -42.539062,
+        "num_usinas": 1,
+        "capacity_weight": 0.0527009223
+      },
+      {
+        "grid_latitude": -14.233643,
+        "grid_longitude": -42.539062,
+        "num_usinas": 1,
+        "capacity_weight": 0.0724637681
+      },
+      {
+        "grid_latitude": -13.999344,
+        "grid_longitude": -42.65625,
+        "num_usinas": 7,
+        "capacity_weight": 0.4756258235
+      },
+      {
+        "grid_latitude": -13.8821945,
+        "grid_longitude": -42.65625,
+        "num_usinas": 5,
+        "capacity_weight": 0.3201581028
+      }
+    ],
+    "cached_runs_found_now": 126,
+    "cached_response_hashes_checked_now": 126,
+    "all_response_hashes_match_receipts": true,
+    "existing_full_cache_inspection": {
+      "cached_runs": 126,
+      "runs_used_in_pinned_h24": 124,
+      "normalized_rows": 90720,
+      "assumed_availability_runs": 126,
+      "historical_availability_verified_runs": 0,
+      "observed_publication_timestamps": 0,
+      "latency_hours_values": [
+        6
+      ],
+      "fetched_at_min_utc": "2026-09-23T16:47:56.074419+00:00",
+      "fetched_at_max_utc": "2026-09-29T00:25:08.214185+00:00",
+      "run_time_min_utc": "2026-07-01T00:00:00+00:00",
+      "run_time_max_utc": "2026-09-01T06:00:00+00:00",
+      "violations": {
+        "normalized_run_matches_protocol": 0,
+        "normalized_available_matches_assumption": 0,
+        "normalized_fetch_matches_receipt": 0,
+        "normalized_valid_grid_complete": 0,
+        "normalized_assumed_flag_all_true": 0,
+        "raw_response_hash_matches_receipt": 0,
+        "registry_hash_matches_current": 0
+      },
+      "pinned_h24_source_hash_mismatches": 0,
+      "observed_fetch_is_not_historical_publication": true
+    }
+  },
+  "feature_construction": {
+    "historical_features": [
+      "lag_1h",
+      "lag_2h",
+      "lag_3h",
+      "lag_6h",
+      "lag_12h",
+      "lag_24h",
+      "lag_48h",
+      "lag_168h",
+      "rolling_mean_6h",
+      "rolling_std_6h",
+      "rolling_mean_24h",
+      "rolling_std_24h",
+      "rolling_mean_168h",
+      "rolling_std_168h",
+      "hour_sin_1",
+      "hour_cos_1",
+      "hour_sin_2",
+      "hour_cos_2",
+      "hour_sin_3",
+      "hour_cos_3",
+      "hour_sin_4",
+      "hour_cos_4",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos",
+      "recent_delta_1h"
+    ],
+    "weather_features": [
+      "wind_speed_mean_ms",
+      "wind_speed_spatial_std_ms",
+      "wind_u_mean_ms",
+      "wind_v_mean_ms",
+      "wind_speed_cubed_mean_m3s3"
+    ],
+    "total_features": 32,
+    "origin_rows": 744,
+    "complete_rows": 744,
+    "selection": "valid_time == forecast_origin + 24h; available_at <= forecast_origin; latest eligible run_time",
+    "capacity_weighting": "15 plant locations represented by five grid cells; fixed ONS capacity weights",
+    "wind_cube_is_electrical_power": false,
+    "generation_timezone_hypothesis": "America/Sao_Paulo",
+    "generation_delay_hours_assumed": 2,
+    "weather_latency_hours_assumed": 6
+  },
+  "forecast_studies": {
+    "weather_point_h24": {
+      "directory": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24",
+      "uses_weather": true,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "persistence",
+          "rows": 504,
+          "mae": 29.3942569444,
+          "rmse": 43.7417815052,
+          "signed_bias": 3.0329712302,
+          "mae_gain_vs_history_pct": 23.0156454075,
+          "mae_gain_vs_persistence_pct": 0.0,
+          "mean_absolute_fold_bias": 3.0329712302
+        },
+        {
+          "method": "hgb_history",
+          "rows": 504,
+          "mae": 38.1821177823,
+          "rmse": 51.2626136808,
+          "signed_bias": 13.3169137116,
+          "mae_gain_vs_history_pct": 0.0,
+          "mae_gain_vs_persistence_pct": -29.8965231694,
+          "mean_absolute_fold_bias": 21.2759684174
+        },
+        {
+          "method": "hgb_history_weather",
+          "rows": 504,
+          "mae": 28.7980008111,
+          "rmse": 36.5365302765,
+          "signed_bias": 1.5334759209,
+          "mae_gain_vs_history_pct": 24.5772563605,
+          "mae_gain_vs_persistence_pct": 2.0284783333,
+          "mean_absolute_fold_bias": 12.3003194864
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    },
+    "weather_quantiles_h24": {
+      "directory": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_quantiles_v1",
+      "uses_weather": true,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "persistence_residual_quantiles",
+          "rows": 504,
+          "coverage_80": 0.8849206349,
+          "below_p10_rate": 0.0555555556,
+          "above_p90_rate": 0.0595238095,
+          "mean_width_mwmed": 139.5632487103,
+          "interval_score_80": 166.5230195437,
+          "mae_p50": 29.4037827381,
+          "pinball_p10": 7.2545178075,
+          "pinball_p50": 14.701891369,
+          "pinball_p90": 9.3977841468,
+          "mean_pinball": 10.4513977745,
+          "raw_crossing_rate": 0.0
+        },
+        {
+          "method": "hgb_weather_quantiles",
+          "rows": 504,
+          "coverage_80": 0.5535714286,
+          "below_p10_rate": 0.1448412698,
+          "above_p90_rate": 0.3015873016,
+          "mean_width_mwmed": 57.6127887102,
+          "interval_score_80": 114.7395266751,
+          "mae_p50": 25.5150027992,
+          "pinball_p10": 4.9330386903,
+          "pinball_p50": 12.7575013996,
+          "pinball_p90": 6.5409139772,
+          "mean_pinball": 8.0771513557,
+          "raw_crossing_rate": 0.128968254
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    },
+    "weather_calibrated_intervals_h24": {
+      "directory": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_calibration_v1",
+      "uses_weather": true,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "hgb_uncalibrated",
+          "rows": 504,
+          "coverage_80": 0.5138888889,
+          "below_lower_rate": 0.1349206349,
+          "above_upper_rate": 0.3511904762,
+          "mean_width_mwmed": 60.6792784608,
+          "interval_score_80": 129.8529818599,
+          "mae_p50": 26.086416296
+        },
+        {
+          "method": "hgb_cqr_expansion",
+          "rows": 504,
+          "coverage_80": 0.7718253968,
+          "below_lower_rate": 0.0396825397,
+          "above_upper_rate": 0.1884920635,
+          "mean_width_mwmed": 89.8702000846,
+          "interval_score_80": 120.0222256128,
+          "mae_p50": 26.086416296
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    },
+    "weather_drop_probability_h24": {
+      "directory": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1",
+      "uses_weather": true,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "historical_frequency",
+          "rows": 504,
+          "events": 113,
+          "event_rate": 0.2242063492,
+          "brier": 0.1746397184,
+          "log_loss": 0.5340923411,
+          "pooled_average_precision": 0.214276935,
+          "alarm_threshold": 0.5,
+          "alarms": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 113,
+          "tn": 391,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "mean_fold_average_precision": 0.2242063492,
+          "folds_with_defined_ap": 3.0,
+          "brier_skill_vs_frequency": 0.0
+        },
+        {
+          "method": "logistic_weather",
+          "rows": 504,
+          "events": 113,
+          "event_rate": 0.2242063492,
+          "brier": 0.1322616703,
+          "log_loss": 0.5362198942,
+          "pooled_average_precision": 0.5909689916,
+          "alarm_threshold": 0.5,
+          "alarms": 81,
+          "tp": 53,
+          "fp": 28,
+          "fn": 60,
+          "tn": 363,
+          "precision": 0.6543209877,
+          "recall": 0.4690265487,
+          "f1": 0.5463917526,
+          "mean_fold_average_precision": 0.6746821828,
+          "folds_with_defined_ap": 3.0,
+          "brier_skill_vs_frequency": 0.2426598515
+        },
+        {
+          "method": "hgb_weather_classifier",
+          "rows": 504,
+          "events": 113,
+          "event_rate": 0.2242063492,
+          "brier": 0.1111418229,
+          "log_loss": 0.4016773468,
+          "pooled_average_precision": 0.686493956,
+          "alarm_threshold": 0.5,
+          "alarms": 109,
+          "tp": 74,
+          "fp": 35,
+          "fn": 39,
+          "tn": 356,
+          "precision": 0.6788990826,
+          "recall": 0.6548672566,
+          "f1": 0.6666666667,
+          "mean_fold_average_precision": 0.7496607044,
+          "folds_with_defined_ap": 3.0,
+          "brier_skill_vs_frequency": 0.3635936664
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    },
+    "generation_only_m08_3": {
+      "directory": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f",
+      "uses_weather": false,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "persistence_d2",
+          "seed": null,
+          "rows": 168,
+          "mae_mwmed": 37.9916458333,
+          "rmse_mwmed": 55.4343422555,
+          "bias_observed_minus_predicted_mwmed": -3.0168720238,
+          "parameters": null,
+          "training_seconds": 0.0
+        },
+        {
+          "method": "linear_24h",
+          "seed": null,
+          "rows": 168,
+          "mae_mwmed": 33.678663659,
+          "rmse_mwmed": 44.9381109826,
+          "bias_observed_minus_predicted_mwmed": 15.1486811361,
+          "parameters": 25.0,
+          "training_seconds": 0.0053495
+        },
+        {
+          "method": "hgb_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 32.3239562614,
+          "rmse_mwmed": 44.2216832542,
+          "bias_observed_minus_predicted_mwmed": 13.1190385039,
+          "parameters": null,
+          "training_seconds": 0.6931831
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 32.7248280868,
+          "rmse_mwmed": 44.0198663952,
+          "bias_observed_minus_predicted_mwmed": 10.6559468499,
+          "parameters": 833.0,
+          "training_seconds": 7.3208329
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 29.0,
+          "rows": 168,
+          "mae_mwmed": 33.7008114733,
+          "rmse_mwmed": 44.8923161537,
+          "bias_observed_minus_predicted_mwmed": 12.6527570516,
+          "parameters": 833.0,
+          "training_seconds": 9.7466543
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 41.0,
+          "rows": 168,
+          "mae_mwmed": 33.1597884231,
+          "rmse_mwmed": 44.0695110804,
+          "bias_observed_minus_predicted_mwmed": 13.7242798863,
+          "parameters": 833.0,
+          "training_seconds": 11.9314397
+        },
+        {
+          "method": "gru_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 35.6759697808,
+          "rmse_mwmed": 45.200733113,
+          "bias_observed_minus_predicted_mwmed": 18.5251202861,
+          "parameters": 929.0,
+          "training_seconds": 91.3393253
+        },
+        {
+          "method": "gru_24h",
+          "seed": 29.0,
+          "rows": 168,
+          "mae_mwmed": 34.9112268513,
+          "rmse_mwmed": 43.816198807,
+          "bias_observed_minus_predicted_mwmed": 17.9930975378,
+          "parameters": 929.0,
+          "training_seconds": 67.4198931
+        },
+        {
+          "method": "gru_24h",
+          "seed": 41.0,
+          "rows": 168,
+          "mae_mwmed": 34.5732024351,
+          "rmse_mwmed": 43.0660202425,
+          "bias_observed_minus_predicted_mwmed": 14.7777104162,
+          "parameters": 929.0,
+          "training_seconds": 51.3650403
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    },
+    "generation_only_m09_3": {
+      "directory": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01",
+      "uses_weather": false,
+      "summary_rows_from_existing_csv": [
+        {
+          "method": "persistence_d2",
+          "seed": null,
+          "rows": 168,
+          "mae_mwmed": 37.9916458333,
+          "rmse_mwmed": 55.4343422555,
+          "bias_observed_minus_predicted_mwmed": -3.0168720238,
+          "mae_gain_vs_hgb_pct": -17.5340219065,
+          "mae_gain_vs_persistence_pct": 0.0
+        },
+        {
+          "method": "linear_24h",
+          "seed": null,
+          "rows": 168,
+          "mae_mwmed": 33.678663659,
+          "rmse_mwmed": 44.9381109826,
+          "bias_observed_minus_predicted_mwmed": 15.1486811361,
+          "mae_gain_vs_hgb_pct": -4.1910321454,
+          "mae_gain_vs_persistence_pct": 11.3524488865
+        },
+        {
+          "method": "hgb_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 32.3239562614,
+          "rmse_mwmed": 44.2216832542,
+          "bias_observed_minus_predicted_mwmed": 13.1190385039,
+          "mae_gain_vs_hgb_pct": 0.0,
+          "mae_gain_vs_persistence_pct": 14.9182522831
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 32.7248280868,
+          "rmse_mwmed": 44.0198663952,
+          "bias_observed_minus_predicted_mwmed": 10.6559468499,
+          "mae_gain_vs_hgb_pct": -1.2401694338,
+          "mae_gain_vs_persistence_pct": 13.8630944541
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 29.0,
+          "rows": 168,
+          "mae_mwmed": 33.7008114733,
+          "rmse_mwmed": 44.8923161537,
+          "bias_observed_minus_predicted_mwmed": 12.6527570516,
+          "mae_gain_vs_hgb_pct": -4.2595504113,
+          "mae_gain_vs_persistence_pct": 11.2941523483
+        },
+        {
+          "method": "mlp_24h",
+          "seed": 41.0,
+          "rows": 168,
+          "mae_mwmed": 33.1597884231,
+          "rmse_mwmed": 44.0695110804,
+          "bias_observed_minus_predicted_mwmed": 13.7242798863,
+          "mae_gain_vs_hgb_pct": -2.5857978366,
+          "mae_gain_vs_persistence_pct": 12.7182102913
+        },
+        {
+          "method": "gru_24h",
+          "seed": 17.0,
+          "rows": 168,
+          "mae_mwmed": 35.6759697808,
+          "rmse_mwmed": 45.200733113,
+          "bias_observed_minus_predicted_mwmed": 18.5251202861,
+          "mae_gain_vs_hgb_pct": -10.3700595691,
+          "mae_gain_vs_persistence_pct": 6.0952243624
+        },
+        {
+          "method": "gru_24h",
+          "seed": 29.0,
+          "rows": 168,
+          "mae_mwmed": 34.9112268513,
+          "rmse_mwmed": 43.816198807,
+          "bias_observed_minus_predicted_mwmed": 17.9930975378,
+          "mae_gain_vs_hgb_pct": -8.0041891189,
+          "mae_gain_vs_persistence_pct": 8.1081482901
+        },
+        {
+          "method": "gru_24h",
+          "seed": 41.0,
+          "rows": 168,
+          "mae_mwmed": 34.5732024351,
+          "rmse_mwmed": 43.0660202425,
+          "bias_observed_minus_predicted_mwmed": 14.7777104162,
+          "mae_gain_vs_hgb_pct": -6.9584495024,
+          "mae_gain_vs_persistence_pct": 8.9978818324
+        },
+        {
+          "method": "chronos_bolt_tiny_zero_shot",
+          "seed": null,
+          "rows": 168,
+          "mae_mwmed": 31.3407382427,
+          "rmse_mwmed": 45.3801359502,
+          "bias_observed_minus_predicted_mwmed": 2.9624120581,
+          "mae_gain_vs_hgb_pct": 3.0417626194,
+          "mae_gain_vs_persistence_pct": 17.5062370811
+        }
+      ],
+      "metrics_recomputed_in_this_inspection": false
+    }
+  },
+  "chronos": {
+    "repo_id": "amazon/chronos-bolt-tiny",
+    "revision": "a0e552de83495b5c28c14c71c374f3e33280b340",
+    "inputs": "24 historical hourly generation values; no weather",
+    "weights_finetuned": false,
+    "forecast_steps": 26,
+    "horizon_from_origin_hours": 24,
+    "assumed_generation_delay_hours": 2,
+    "selected_index_zero_based": 25,
+    "archived_quantile_shape": [
+      168,
+      9,
+      26
+    ],
+    "quantile_metrics_from_existing_json": {
+      "pinball_p10": 6.724571170134771,
+      "pinball_p50": 15.67036912136986,
+      "pinball_p90": 9.284080198051816,
+      "coverage_80": 0.8035714285714286,
+      "below_p10": 0.11904761904761904,
+      "above_p90": 0.07738095238095238,
+      "mean_width_mwmed": 83.59523707344418,
+      "interval_score_80": 160.08651368186588,
+      "crossing_rows": 0,
+      "negative_p50_rows": 0,
+      "clipped": false,
+      "recalibrated": false
+    }
+  },
+  "event_semantics": {
+    "event": "last available generation minus generation at origin+24h >= 22.77 MWmed",
+    "not_hourly_ramp_or_any_intermediate_fall": true,
+    "alarm_threshold": 0.5,
+    "drop_threshold_basis": "fixed development hypothesis; 10% of current registry reference capacity 227.7 MW"
+  },
+  "checks_performed_now": {
+    "prepared_generation_sha_matches_feature_metadata": true,
+    "model_frame_sha_matches_metadata": true,
+    "representative_weather_response_matches_receipt": true,
+    "all_cached_weather_response_hashes_match_receipts": true,
+    "representative_registry_sha_matches_weather_protocol": true,
+    "registry_raw_relationships_sha_matches_receipt": true,
+    "registry_raw_capacity_sha_matches_receipt": true,
+    "registry_raw_siga_daily_sha_matches_receipt": true
+  },
+  "limits": [
+    "No new inference, training, metric recalculation, model promotion or untouched holdout was produced.",
+    "Weather collection in September does not prove availability at July historical origins; run+6h is an assumption.",
+    "Generation timestamps are retained; America/Sao_Paulo and two-hour delay are unconfirmed hypotheses.",
+    "Current registry collected in September does not establish historical coordinates/capacities/membership snapshots.",
+    "M08/M09 generation-only metrics and weather ablation metrics use distinct protocols and evaluation cohorts.",
+    "Historical forecasts are not current forecasts; no current operational accuracy claim is made.",
+    "M09.1 attention and M09.2 Transformer block demonstrations alone are not generation forecasts."
+  ],
+  "artifacts": [
+    {
+      "path": "data/raw/GERACAO_USINA-2_2025_09.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4506677,
+      "sha256": "adc987c963829d622290fadc2b62a0688ed2cc6f88c91c8ad9c34113e75056af"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2025_10.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4470658,
+      "sha256": "108482042cc2de3a817cdc9e3e87edb5ecf437af2d6a77529e22b712e3c45577"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2025_11.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4347750,
+      "sha256": "84790f2d84d96267921d800c2af6959d287ea94748e400f2f41e95885518e465"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2025_12.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4483220,
+      "sha256": "6eab1db070c3ea962a65bee8f18b53409ec0909e49d43ff4fb19e270099d1be7"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_01.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4514617,
+      "sha256": "57db2a68425f74fd51f13dc5bacb8271f53618d86f94461ffd0e2223915a282b"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_02.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4113547,
+      "sha256": "a0995f815a5a503cc7677e3b772f18bebb9f77eb3684c6dd2eaf9d8218b05aa0"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_03.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4431724,
+      "sha256": "082a67b10a69b74cce27107ebbcea4fd36a2adc85cfa0be810c48fdb4b760f87"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_04.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4239276,
+      "sha256": "bc6c339cc135fd91f3587ce745abc75fc8e5566f191094b729a61be123c67236"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_05.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4497694,
+      "sha256": "c90f2bed4471381a23a971e61ce3e93046555adabe1dfa5cafa5db87b074ddf5"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_06.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4403679,
+      "sha256": "0787fe30e3c9ade5c8914ce846a41b23748866c6378fefae010205e39caea205"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_07.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4559494,
+      "sha256": "b5a385e25ea3f09b5a6016d94aa558c000ce54c9445def5ec74d27d5eb750ce6"
+    },
+    {
+      "path": "data/raw/GERACAO_USINA-2_2026_08.parquet",
+      "role": "ONS monthly generation source retained locally",
+      "bytes": 4596995,
+      "sha256": "f17c6eea64bd77901606a4bbc411b8d2151e0a0067dc584d023f2e23313b8481"
+    },
+    {
+      "path": "data/raw/DicionarioDados_GeracaoPorUsina.json",
+      "role": "local data dictionary",
+      "bytes": 1508,
+      "sha256": "5bc25c0f2d81371548fe9b23fb5b4ba61922755732291eca561ade07020640a3"
+    },
+    {
+      "path": "data/interim/CJU_BA5EIGT_hourly.parquet",
+      "role": "prepared generation series",
+      "bytes": 66409,
+      "sha256": "13881f433e4b7586f33f94418123304bc2e1fbeaadc2a850c3cd4e32a34d643b"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/asset_registry.csv",
+      "role": "15-plant joined registry",
+      "bytes": 4802,
+      "sha256": "750ea3921824287b103053662a9b6b16a4bc9b37c7e71c3869d0661caf013bf5"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/metadata.json",
+      "role": "registry acquisition metadata and assumptions",
+      "bytes": 2577,
+      "sha256": "a6a85b56b513628fea62c173f084b153912b1553c421feeb2c065eba48d6def8"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/grid_weights.csv",
+      "role": "five grid cells and capacity weights",
+      "bytes": 277,
+      "sha256": "f2a9f179954b3ba6d1e0d7549f4e3e70ee20380df2685593ef50a08c2393d23a"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/raw/relationships.csv",
+      "role": "ONS plant-conjunto relationships",
+      "bytes": 336323,
+      "sha256": "052776ef1c78beebf0d8c1947d4e3cdec5d5bb6c0587f8613be6714a8572b689"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/raw/capacity.csv",
+      "role": "ONS unit capacity source",
+      "bytes": 1282133,
+      "sha256": "afab94be2941e8534a9ba01ebe89a2bd2876baf240f7141548c38d64d28310a4"
+    },
+    {
+      "path": "data/reference/CJU_BA5EIGT/raw/siga_daily.csv",
+      "role": "ANEEL SIGA coordinates and capacity source",
+      "bytes": 8418652,
+      "sha256": "a617d47068df726aa58a22fe3d4d1b0456958654f8d97e0776d577eed459032f"
+    },
+    {
+      "path": "data/external/weather/CJU_BA5EIGT/gfs_20260701T0000Z/response.json",
+      "role": "representative archived weather response",
+      "bytes": 24868,
+      "sha256": "eb986434f2d7d9b0cbba86c1e86f7fb8846efb13f188423f0f96634368f79254"
+    },
+    {
+      "path": "data/external/weather/CJU_BA5EIGT/gfs_20260701T0000Z/metadata.json",
+      "role": "exact weather request and acquisition receipt",
+      "bytes": 2812,
+      "sha256": "e6cc303fee7e8fc204d39aed051f72e1656acd89a8bfcbd293b7c581d6c5fd23"
+    },
+    {
+      "path": "data/external/weather/CJU_BA5EIGT/gfs_20260701T0000Z/weather_forecasts.csv",
+      "role": "normalized representative weather forecast",
+      "bytes": 184916,
+      "sha256": "9860abc7bb51ed2d26de2e1b93db512d6135ffb9c4f8ff727b1d30270e07dccf"
+    },
+    {
+      "path": "data/external/weather/CJU_BA5EIGT/gfs_20260701T0000Z/grid_mapping.csv",
+      "role": "15 requested coordinates to five grid cells",
+      "bytes": 1911,
+      "sha256": "63df7ed9b09fb1ccfb505b4867c98fe63cd0a40724a3801bb1716edbd95e13d1"
+    },
+    {
+      "path": "data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_sample/weather_asof.csv",
+      "role": "historical weather selection under assumed availability",
+      "bytes": 4453749,
+      "sha256": "51db80d4ba30d2008924e007ca69d5fcc2205b20b354c75289cf58bd3c10763b"
+    },
+    {
+      "path": "data/interim/weather/CJU_BA5EIGT/july_development_h24/h24_spatial_sample/weather_features.csv",
+      "role": "five weighted weather features for 744 origins",
+      "bytes": 215456,
+      "sha256": "2df7b2f43937d24a2557c7793592f46b7a7759d682ab9df80f5ed7b7a62b0065"
+    },
+    {
+      "path": "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/model_frame.csv",
+      "role": "32-feature joined generation-weather frame",
+      "bytes": 649802,
+      "sha256": "d142dbaf75a0e18fb203b77dfea8d8377c6d3b1d2c9fc1fc5908b1a50a9a6635"
+    },
+    {
+      "path": "data/interim/modeling/CJU_BA5EIGT/h24_d2_july_development/metadata.json",
+      "role": "feature names, source hashes and assumptions",
+      "bytes": 78176,
+      "sha256": "41ece2bdde847478f3da0740b9459f8e48ab71d10c4a7df6e70a1f28104c57d6"
+    },
+    {
+      "path": "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json",
+      "role": "frozen M07.3 input manifest reused by M08/M09",
+      "bytes": 1594,
+      "sha256": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34"
+    },
+    {
+      "path": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+      "role": "8760 observed generation rows reused by M08/M09",
+      "bytes": 125727,
+      "sha256": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+    },
+    {
+      "path": "dist/databricks/CJU_BA5EIGT/m07_3/treino_referencia.parquet",
+      "role": "7485 M07.3 training reference rows",
+      "bytes": 394579,
+      "sha256": "6ab1e8fc1e6c11673d3620a937e98ff43e2cee5965c19beab4566a6b87b7762e"
+    },
+    {
+      "path": "reports/forecasts/h6_d2/d401657267524b528120f2c0ca7ea184/forecast_20260901T010000.json",
+      "role": "generation-only h6 point forecast",
+      "bytes": 845,
+      "sha256": "7b1b438458fe0c8c5d472595221d3083531a3f237249edacefafc6ae18f3ffa4"
+    },
+    {
+      "path": "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/prediction.json",
+      "role": "history-and-weather h24 point replay",
+      "bytes": 1141,
+      "sha256": "f461aa195cce13c86834cc0eb1b7edd587ea91ef6b0572d96766b277ed8790d6"
+    },
+    {
+      "path": "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/request.json",
+      "role": "historical replay input request",
+      "bytes": 1522,
+      "sha256": "0dfd81cb79f9916097f12023b8c0f5981488bf69424d181f9a2c1fdbb9886d08"
+    },
+    {
+      "path": "reports/inference/CJU_BA5EIGT/h24_replay_20260801T0500Z/model/manifest.json",
+      "role": "historical replay model identity",
+      "bytes": 2471,
+      "sha256": "564083d04c2a86e33e89845e7d59e1cdd623416b3196b30ae1b4bd98f3c8e15e"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/M04-03/disponibilidade.csv",
+      "role": "complete pre-existing weather availability inventory",
+      "bytes": 62675,
+      "sha256": "102100c665d816cfce9b46699a1e3f7d0caa7f10f41960685aceb048c1061347"
+    },
+    {
+      "path": "reports/fechamento_m00_m09/M04-03/resultado.json",
+      "role": "pre-existing weather cache inspection; not rerun here",
+      "bytes": 7607,
+      "sha256": "ab16136a876bd552c0f66b22a33415621df92285e4b2aebeefd331453a2f05fe"
+    },
+    {
+      "path": "src/renewable_forecast/data_contract.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 18245,
+      "sha256": "b7df41d574e442424bf1a78170a9fc9b3141f3b85f3d4487dbadd7d3908905cb"
+    },
+    {
+      "path": "src/renewable_forecast/asset_registry.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 11405,
+      "sha256": "09d83d3ec194959ce7b7d2e1b7487ca4479c40812eaf7ae2abb510f513a5009b"
+    },
+    {
+      "path": "src/renewable_forecast/weather_runs.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 13635,
+      "sha256": "b839aba0dac4befe4d57de2fd239f6618b3876215b70796da0ab687445eb86d6"
+    },
+    {
+      "path": "src/renewable_forecast/weather_asof.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 12242,
+      "sha256": "e3c4abc08b74c36315a02c5371c147f1e43fedb5d0f811046e02c424e8a337e9"
+    },
+    {
+      "path": "src/renewable_forecast/weather_features.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 9403,
+      "sha256": "de95c4e5df99b5be8843f9bebf1664ed42368640329dd6d8b9c194741a86bd61"
+    },
+    {
+      "path": "src/renewable_forecast/weather_training.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 11418,
+      "sha256": "491f6c3ea8ffbdc1729d6a25c8aa3da8132f00892813d93a7796d7ad12a840c9"
+    },
+    {
+      "path": "src/renewable_forecast/weather_ablation.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 12208,
+      "sha256": "c1c6c86725e324d46766e96ed5b63e71e3decf553bf1d8e5842e4d79c49ce9c7"
+    },
+    {
+      "path": "src/renewable_forecast/weather_quantiles.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 10584,
+      "sha256": "7be5f34039297ba953775e18c9fcc1d75d15bbb6eb294c78f0e037a5d7043895"
+    },
+    {
+      "path": "src/renewable_forecast/weather_interval_calibration.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 14619,
+      "sha256": "4c31754c6dcdfc9c3176df5b9acc9aa3204b53f75e35b3d324140cf7f7f78efb"
+    },
+    {
+      "path": "src/renewable_forecast/weather_events.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 15628,
+      "sha256": "90909495af7d0d19825f64b48bfb9b104e65b8d1b62cba62cf7ee4dc676bc415"
+    },
+    {
+      "path": "src/renewable_forecast/neural_gru.py",
+      "role": "implementation inspected for source-to-output lineage",
+      "bytes": 2441,
+      "sha256": "1cf52ceb65846e2475c51793cb94bbb69babdfa4d566fd7fa8fdb90d7e68779b"
+    },
+    {
+      "path": "notebooks/m08_3_base.py",
+      "role": "generation-only M08/M09 implementation",
+      "bytes": 8078,
+      "sha256": "acc7e2d647be2366ffac15e9947b49ca833b1a9010b32c2607b40472a2131af9"
+    },
+    {
+      "path": "notebooks/m09_pre_treinado_core.py",
+      "role": "generation-only M08/M09 implementation",
+      "bytes": 5511,
+      "sha256": "cf6274ee75238e3dfc60084a360206aff3ab5101b5bdedad2e52cc822e2403bf"
+    },
+    {
+      "path": "notebooks/laboratorio_atencao.py",
+      "role": "generation-only M08/M09 implementation",
+      "bytes": 13280,
+      "sha256": "1a29a0efece482587228aacffeadfdd585135afd36e2e3892b38616cbef254a8"
+    },
+    {
+      "path": "notebooks/laboratorio_transformer.py",
+      "role": "generation-only M08/M09 implementation",
+      "bytes": 17308,
+      "sha256": "5720af145ec672f780b488c2464be0176de5a7d163208f0596ee2d5274ddd0dc"
+    },
+    {
+      "path": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/predictions.csv",
+      "role": "weather_point_h24: retained results and protocol",
+      "bytes": 105189,
+      "sha256": "ae4c804e0e812c426ab5430868d5f482d5af5fd814e7eca3e64c32a9849ae022"
+    },
+    {
+      "path": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/summary.csv",
+      "role": "weather_point_h24: retained results and protocol",
+      "bytes": 475,
+      "sha256": "fcc2a861717520c102b17d57fd676a5bf9f70895615acebfd8b51dc083cddf3f"
+    },
+    {
+      "path": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/protocol.json",
+      "role": "weather_point_h24: retained results and protocol",
+      "bytes": 83055,
+      "sha256": "6397c1c8817f9f2eb8da23aea2fe5b43727983f2c1f94029a629deea436c32d3"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_quantiles_v1/predictions.csv",
+      "role": "weather_quantiles_h24: retained results and protocol",
+      "bytes": 252275,
+      "sha256": "e7de5de9a11dcb7891bc51b440a3a09651b4e39c086abcc382361f121a6156bf"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_quantiles_v1/summary.csv",
+      "role": "weather_quantiles_h24: retained results and protocol",
+      "bytes": 626,
+      "sha256": "0d932723e2b2ebee6dd7d2d6569f4caefe46a2e85c6dd5474ce7b7b62cfe845a"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_quantiles_v1/protocol.json",
+      "role": "weather_quantiles_h24: retained results and protocol",
+      "bytes": 84490,
+      "sha256": "ab12f1a17ff217124c76212ab3ffdf6315c29c281cbcd8db9228ba62b2fedb13"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_calibration_v1/predictions.csv",
+      "role": "weather_calibrated_intervals_h24: retained results and protocol",
+      "bytes": 316306,
+      "sha256": "044b4fecd2337d40c89f5dc77f49fc83ea76f0fbcfb73af3c7eb35dbcb190611"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_calibration_v1/summary.csv",
+      "role": "weather_calibrated_intervals_h24: retained results and protocol",
+      "bytes": 375,
+      "sha256": "19e49101616a20a50581ffef251d16fa5102406b709f272fa45e13a979c12d32"
+    },
+    {
+      "path": "reports/probabilistic/CJU_BA5EIGT/h24_d2_july_calibration_v1/protocol.json",
+      "role": "weather_calibrated_intervals_h24: retained results and protocol",
+      "bytes": 84846,
+      "sha256": "4653017031b515fb1acdd482466d15ad878634a4267638b84a89413801ee43e2"
+    },
+    {
+      "path": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/predictions.csv",
+      "role": "weather_drop_probability_h24: retained results and protocol",
+      "bytes": 298320,
+      "sha256": "578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44"
+    },
+    {
+      "path": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/summary.csv",
+      "role": "weather_drop_probability_h24: retained results and protocol",
+      "bytes": 813,
+      "sha256": "4b0693bc6230b5ed7c8264dc340223a5c59b077e4c3eb8c4e34979d012c612c7"
+    },
+    {
+      "path": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/protocol.json",
+      "role": "weather_drop_probability_h24: retained results and protocol",
+      "bytes": 83782,
+      "sha256": "047c0420e2818688a5b151b8544b5d1a75544dba903f5de5ed591fafeecfe95b"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/predictions.csv",
+      "role": "generation_only_m08_3: retained results and protocol",
+      "bytes": 293086,
+      "sha256": "a6bc7b6dd363af95f71409af9e49da0d06a0857dd44ec4e7b76ef8f995c85364"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/summary.csv",
+      "role": "generation_only_m08_3: retained results and protocol",
+      "bytes": 961,
+      "sha256": "55b81c00c5998ea934b9af51f2d2387b545c92cf43f1daf0739a65e9c59be37a"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/protocol.json",
+      "role": "generation_only_m08_3: retained results and protocol",
+      "bytes": 2296,
+      "sha256": "6a845f34d8bc540940b317493a8bd8223c1c9df96600b8c49f57f7c2b946ccbb"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv",
+      "role": "generation_only_m09_3: retained results and protocol",
+      "bytes": 343050,
+      "sha256": "0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/summary.csv",
+      "role": "generation_only_m09_3: retained results and protocol",
+      "bytes": 1225,
+      "sha256": "2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json",
+      "role": "generation_only_m09_3: retained results and protocol",
+      "bytes": 3476,
+      "sha256": "d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz",
+      "role": "Chronos archived quantile trajectories, alignment and metrics",
+      "bytes": 138147,
+      "sha256": "8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv",
+      "role": "Chronos archived quantile trajectories, alignment and metrics",
+      "bytes": 39694,
+      "sha256": "4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/trajetorias_26_passos.csv",
+      "role": "Chronos archived quantile trajectories, alignment and metrics",
+      "bytes": 1021256,
+      "sha256": "6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96"
+    },
+    {
+      "path": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantile_metrics.json",
+      "role": "Chronos archived quantile trajectories, alignment and metrics",
+      "bytes": 411,
+      "sha256": "8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/hgb_24h.joblib",
+      "role": "fitted generation-only estimator/checkpoint retained locally",
+      "bytes": 405024,
+      "sha256": "a4b398544e372796eb880c097fc5d6f5401ede5793be34311923ed138f2cf5b3"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_17.pt",
+      "role": "fitted generation-only estimator/checkpoint retained locally",
+      "bytes": 8061,
+      "sha256": "83c536228190584d3dad25dbf3c74c7baa024f85bbca222e6f55666722e33410"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_29.pt",
+      "role": "fitted generation-only estimator/checkpoint retained locally",
+      "bytes": 8061,
+      "sha256": "7e84983f78cb182af0f01c78bf24023d5445a7630de6db82209a3a27a94cb19b"
+    },
+    {
+      "path": "reports/neural/CJU_BA5EIGT/m08_3_gru/20261115T170309Z_90a6625f/gru_24h_seed_41.pt",
+      "role": "fitted generation-only estimator/checkpoint retained locally",
+      "bytes": 8061,
+      "sha256": "e1ff4e1da8d6f389493f2443438fe751dd15b518bd9c1ce6610d75d6027a4121"
+    }
+  ]
+}

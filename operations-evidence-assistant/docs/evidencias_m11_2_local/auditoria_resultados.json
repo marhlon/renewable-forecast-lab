@@ -1,0 +1,176 @@
+{
+  "schema": "opevid-m11-2-independent-audit-v1",
+  "verified": true,
+  "verified_at_utc": "2026-11-25T00:11:33.706864+00:00",
+  "run_id": "20261125T000415Z_b376eb6f",
+  "run_directory": "reports/m11_2/20261125T000415Z_b376eb6f",
+  "method": "Standard-library audit of the completed run: strict JSON, explicit schema fields, Decimal fidelity, source-exact publication and independent DEV-only selection. No Pydantic/cache/project import or inference.",
+  "checks": {
+    "input_output_protocol_code_author_hashes": true,
+    "eighteen_unique_attempts_and_frozen_reserved_prompt": true,
+    "independent_json_schema_fidelity_stages": true,
+    "source_exact_final_fields_and_controlled_explanation": true,
+    "csv_and_json_metrics_routes_tokens_recounted": true,
+    "development_only_selection_recomputed": true,
+    "sixteen_contraprovas_reassessed": true,
+    "frozen_decision_hash_preserved": true
+  },
+  "checked_hashes": {
+    "docs/m11_2/protocolo.json": "ea74892aa61116d7190f7eecaa42f69b93ac2f75ed184c9ab07a615cda90e0dc",
+    "data/casos_m11_1.json": "c34ae3f9366a540608fd643ec279434619155223e3c122af890fa8dece45da74",
+    "data/m11_2/reservado.json": "cc1ccc727b76073e7cda2384c24e68fa8148547f20aaac81e87b4c301ed8946a",
+    "model/model_lock.json": "5e9d0eefbb964ad0cebd97a8277d8a92021a054af06e7ec0d3e729f1adff115f",
+    "notebooks/m11_2_fidelidade_autoral.py": "ca2ba4099b6cdd1f2a8b094a67ec90ca147e9401f777af79a3d76f15e3ee4403",
+    "scripts/executar_m11_2.py": "ca51aa8e7a465613ee54b5c37bcfe05d96b959607fd4f58daadb9c0b2e4a6b92",
+    "scripts/laboratorio_m11_2.py": "f04ccecb412c7458e4d82c8e8e8612e3280535692771bcd6a1df761cc5dd94fb",
+    "src/opevid/estruturado_m11_2.py": "e3e5956f577c33a8b8007471f2a6b42149998eb36998a77185b8ceaf757a9807",
+    "src/opevid/contraprovas_m11_2.py": "56c3f49b936e45c6675042889f8fc60256f396d5116eaa6988c4310290be6330",
+    "src/opevid/prompts_m11_2.py": "4c627de85f5f0d48928aa3853d5d1adcb425c641e2915102759a87945416966a",
+    "docs/m11_2/requirements.lock.txt": "e3ef58f6068173d4cc462f1ce2aa2df4428e1f9639a0018166e7ba0312628723",
+    "reports/m11_2/20261125T000415Z_b376eb6f/contraprovas.json": "a9c7aedf8967478fc9f1369715e6fb898cac0e4805a668b81d0f0257e447ba01",
+    "reports/m11_2/20261125T000415Z_b376eb6f/decisao_prompt.json": "42f02911db3fccc5ebfce877134d5300ac075046a20ec98ce708fff7a8539e7c",
+    "reports/m11_2/20261125T000415Z_b376eb6f/esquema.json": "a41f987ce8480ddc9200589619f7c06cb30c297a658b6df63f846d878a4286f7",
+    "reports/m11_2/20261125T000415Z_b376eb6f/metricas.csv": "e8a2c6b5543ab26bbf79d4378f5e809ad6a66e1d5f4a67237465935781c48718",
+    "reports/m11_2/20261125T000415Z_b376eb6f/relatorio.html": "e2c7e8c5030ac1fec5f485779d305de43a8d9e70ee6149b0b5b504d9f53cb362",
+    "reports/m11_2/20261125T000415Z_b376eb6f/tentativas.csv": "be2b09f0a49fe0477dfca08519379bf99292bd8939ada67cfc4a4cda552c6c7f",
+    "reports/m11_2/20261125T000415Z_b376eb6f/tentativas.jsonl": "03f415eb20879af23a6af45221e14dca43375af7e2db8f45ad426b66afa560db"
+  },
+  "metrics_recomputed": [
+    {
+      "particao": "desenvolvimento",
+      "prompt": "zero_shot",
+      "casos": 6,
+      "json_ok": 5,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 1881,
+      "tokens_novos": 375
+    },
+    {
+      "particao": "desenvolvimento",
+      "prompt": "um_exemplo",
+      "casos": 6,
+      "json_ok": 0,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 2451,
+      "tokens_novos": 720
+    },
+    {
+      "particao": "reservado",
+      "prompt": "zero_shot",
+      "casos": 6,
+      "json_ok": 6,
+      "esquema_ok": 0,
+      "fiel": 0,
+      "fiel_entre_esquema": null,
+      "fallback": 6,
+      "publicado_conferido": 6,
+      "tokens_entrada": 1807,
+      "tokens_novos": 265
+    }
+  ],
+  "chosen_prompt_recomputed": "zero_shot",
+  "real_typed_attempt_count": 0,
+  "contraprova_stage_counts": {
+    "fiel": 3,
+    "json_invalido": 4,
+    "esquema_invalido": 3,
+    "divergencia": 6
+  },
+  "published_routes": {
+    "fallback": 18
+  },
+  "published_source_exact_count": 18,
+  "extra_input_tokens_by_case": [
+    {
+      "id": "renewcast_replay",
+      "extra_input_tokens_with_example": 95
+    },
+    {
+      "id": "renewcast_sem_resposta",
+      "extra_input_tokens_with_example": 95
+    },
+    {
+      "id": "satmon_tres_canais",
+      "extra_input_tokens_with_example": 95
+    },
+    {
+      "id": "satmon_sem52",
+      "extra_input_tokens_with_example": 95
+    },
+    {
+      "id": "igualdade",
+      "extra_input_tokens_with_example": 95
+    },
+    {
+      "id": "picos_sem_par",
+      "extra_input_tokens_with_example": 95
+    }
+  ],
+  "development_example": {
+    "id": "renewcast_replay",
+    "prompt": "zero_shot",
+    "texto": "{\"id\":\"renewcast_replay\",\"k\":1,\"usable\":true,\"cutoff\":\"0.5\",\"s1\":\"0.20465385372296466\",\"s2\":null}",
+    "etapa": "esquema_invalido",
+    "erros": [
+      "extra_forbidden:k",
+      "extra_forbidden:usable",
+      "missing:code",
+      "missing:reason",
+      "missing:refs"
+    ],
+    "candidato": null,
+    "fonte": {
+      "id": "renewcast_replay",
+      "k": 1,
+      "usable": true,
+      "cutoff": "0.5",
+      "s1": "0.20465385372296466",
+      "s2": null
+    },
+    "publicado": {
+      "origem": "fallback",
+      "id": "renewcast_replay",
+      "code": "BELOW",
+      "cutoff": "0.5",
+      "s1": "0.20465385372296466",
+      "s2": null,
+      "reason": "below",
+      "refs": [
+        "s1",
+        "cutoff"
+      ],
+      "explicacao": "O pico ficou abaixo do corte."
+    }
+  },
+  "freeze_evidence": {
+    "frozen_at_utc": "2026-11-25T00:06:05.673257+00:00",
+    "decision_sha256": "42f02911db3fccc5ebfce877134d5300ac075046a20ec98ce708fff7a8539e7c",
+    "reserved_read_before_freeze_declared": false,
+    "final_attempts_file_mtime_utc": "2026-11-25T00:06:33.705801+00:00",
+    "first_reserved_read_timestamp_available": false,
+    "limit": "The runner orders freeze before the reserved read; persisted hashes/declarations and file order do not independently timestamp the first read."
+  },
+  "limits": {
+    "llm_inference_repeated": false,
+    "pydantic_or_private_cache_imported": false,
+    "full_pydantic_engine_equivalence_certified": false,
+    "manual_schema_checked_only_for_recorded_cases": true,
+    "original_reserved_content_reparsed": false,
+    "original_reserved_sha256_verified": true,
+    "reserved_sources_checked_from_completed_attempts": true,
+    "tokenization_or_eos_ids_reproduced": false,
+    "all_attempts_generated_before_auditor_read_outputs": true,
+    "reference_artifacts_read": false,
+    "benchmark_repeated": false,
+    "production_validity_established": false,
+    "note": "Frozen reserved is synthetic. Published fallback correctness is deterministic-system behavior, not LLM fidelity. Stop reasons/token budgets are scalar checks because output token IDs are not persisted."
+  }
+}

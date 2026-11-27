@@ -1,0 +1,34 @@
+{
+  "started_at": "2026-11-25T19:55:10.335848+00:00",
+  "completed_at": "2026-11-25T19:55:10.631933+00:00",
+  "execution": "first_frozen_october_evaluation_no_refit",
+  "source_path": "reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\geracao_CJU_BA5EIGT_2026_10.parquet",
+  "source_sha256": "aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab",
+  "bundle_sha256": "369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6",
+  "selected": "HGB_lags24_calendar",
+  "study_model": "HGB_lags24_calendar",
+  "selected_metrics": {
+    "n": 695,
+    "mae": 19.520624057477644,
+    "rmse": 24.98958222829185,
+    "bias": 1.0546342468879313
+  },
+  "study_metrics": {
+    "n": 695,
+    "mae": 19.520624057477644,
+    "rmse": 24.98958222829185,
+    "bias": 1.0546342468879313
+  },
+  "persistence_metrics": {
+    "n": 695,
+    "mae": 19.218456115107916,
+    "rmse": 31.732297193018397,
+    "bias": 0.7329856115107913
+  },
+  "origin_min": "2026-10-02 01:00:00",
+  "origin_max": "2026-10-30 23:00:00",
+  "target_max": "2026-10-31 23:00:00",
+  "outputs": {
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_evaluation.csv": "7f4da0587b94177c00f70843a06390afe46fbd983cb225caebc986b14b751cd5"
+  }
+}

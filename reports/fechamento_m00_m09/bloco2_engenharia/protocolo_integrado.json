@@ -1,0 +1,117 @@
+{
+  "schema": "renewcast-bloco2-locked-study-plan-v1",
+  "created_at_utc": "2026-11-25 19:15:12 UTC",
+  "client_date": "2026-11-25",
+  "scope": "engenharia_aplicada; novos experimentos separados de benchmarks aceitos",
+  "plant": "CJU_BA5EIGT",
+  "old_series": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet",
+  "features": "24 lags desde history_end, 5 estatísticas e 4 coordenadas cíclicas; geração apenas",
+  "clocks": {
+    "interpretation": "UTC de laboratório sob hipótese; fuso físico não comprovado",
+    "history_end_hours_from_origin": -2,
+    "point_target_hours_from_origin": 24,
+    "point_label_available_hours_from_origin": 26,
+    "ramp_definition": "y(origem)-y(origem+1)>=22.77",
+    "ramp_label_available_hours_from_origin": 3,
+    "train_label_boundary": "strictly_before_cutoff"
+  },
+  "selection_folds": [
+    [
+      "2026-06-01T00:00:00Z",
+      "2026-06-08T00:00:00Z"
+    ],
+    [
+      "2026-06-08T00:00:00Z",
+      "2026-06-15T00:00:00Z"
+    ],
+    [
+      "2026-06-15T00:00:00Z",
+      "2026-06-22T00:00:00Z"
+    ]
+  ],
+  "final_training_cutoff": "2026-07-01T00:00:00Z",
+  "calibration": {
+    "origin_start": "2026-07-01T00:00:00Z",
+    "origin_end_exclusive": "2026-07-14T00:00:00Z",
+    "method_class": "LogisticRegression(C=1,max_iter=200,random_state=17) sobre logit de p clipado a 1e-6; amostra separada",
+    "method_interval": "quantis HGB 0.1,0.5,0.9; ordenação por linha predefinida, CQR de expansão não negativa, alpha0.2, rankceil((n+1)*0.8)",
+    "calibrator_changes_after_evaluation_allowed": false
+  },
+  "policy_selection": {
+    "origin_start": "2026-07-16T00:00:00Z",
+    "origin_end_exclusive": "2026-07-31T00:00:00Z",
+    "all_labels_known_before": "2026-08-01T02:00:00Z",
+    "cost_fp": 1,
+    "cost_fn": 4,
+    "thresholds": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1
+    ],
+    "include_no_alarm": true,
+    "daily_alarm_budget": 6,
+    "online_budget_rule": "primeiros seis elegíveis do dia, em ordem causal; sem olhar os scores seguintes para ranquear o dia",
+    "tie_break": [
+      "menor_custo",
+      "menos_alarmes",
+      "maior_limiar"
+    ]
+  },
+  "evaluation": {
+    "resource_page": "https://dados.ons.org.br/dataset/geracao-usina-2/resource/6edb2f1a-5772-44f1-8dad-6180b20bf130",
+    "metadata_api": "https://dados.ons.org.br/api/3/action/resource_show?id=6edb2f1a-5772-44f1-8dad-6180b20bf130",
+    "month": "2026-10",
+    "resource_format": "PARQUET",
+    "origin_start": "2026-10-02T01:00:00Z",
+    "origin_end_exclusive": "2026-10-31T00:00:00Z",
+    "expected_origins_if_complete": 695,
+    "new_file_not_fetched_at_planning": true,
+    "metadata_only_consulted": true,
+    "source_snapshot": "publicado/revisado conforme consulta atual, não comprova versão histórica disponível na origem",
+    "download_requires": "freeze de código, modelos, calibradores e política com hashes antes da obtenção",
+    "failure_policy": "contrato da fonte inválido interrompe a avaliação; não trocar mês após ver resultados"
+  },
+  "hgb_parameters": {
+    "max_iter": 60,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "learning_rate": 0.05,
+    "l2_regularization": 0.1,
+    "early_stopping": false,
+    "random_state": 17
+  },
+  "interval_reporting": {
+    "nominal": 0.8,
+    "coverage_alert_tolerance": 0.1,
+    "min_rows_per_period": 48,
+    "period_grouping": "semanas de origem com limites fixos de 7 dias; parcial pequeno separado",
+    "no_automatic_recalibration": true
+  },
+  "ramp": {
+    "threshold_mwmed": 22.77,
+    "regressor_loss": "squared_error",
+    "classifier_alarm_threshold": 0.5,
+    "baselines": [
+      "rampa_zero",
+      "ultima_rampa_observada",
+      "frequencia_do_treino"
+    ],
+    "same_origins_as_h24": true
+  },
+  "existing_periods_previously_examined": [
+    "Julho/2026",
+    "Agosto/2026",
+    "backtest h1 Março–Agosto/2026"
+  ],
+  "no_claim_of_live_shadow": true,
+  "operational_approval": false,
+  "no_reselection_on_evaluation": true
+}

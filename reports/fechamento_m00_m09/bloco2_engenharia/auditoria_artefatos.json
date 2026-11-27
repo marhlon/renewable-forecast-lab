@@ -1,0 +1,4086 @@
+{
+  "schema": "renewcast-bloco2-engineering-delivery-audit-v1",
+  "completed": true,
+  "valid": true,
+  "exit_code": 0,
+  "started_at_utc": "2026-11-25T20:02:02.512161+00:00",
+  "completed_at_utc": "2026-11-25T20:02:02.917822+00:00",
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "C:\\renewable-forecast-lab\\scripts\\auditar_entrega_bloco2.py",
+    "--freeze",
+    "reports\\fechamento_m00_m09\\bloco2_engenharia\\congelamento_avaliacao.json",
+    "--download-receipt",
+    "reports\\fechamento_m00_m09\\bloco2_engenharia\\dados_avaliacao\\fonte.json",
+    "--output",
+    "reports\\fechamento_m00_m09\\bloco2_engenharia\\auditoria_artefatos.json"
+  ],
+  "auditor_sha256": "b2e2b6384b8bbfc27fdeb11f4ce7a9be2cd9a46b5eb6f3ff9ef47ed117c23228",
+  "items": [
+    "M02-06",
+    "M02-07",
+    "M02-08",
+    "M03-01",
+    "M03-02",
+    "M03-03",
+    "M05-01",
+    "M05-02",
+    "M05-03"
+  ],
+  "checks_count": 798,
+  "hash_declarations_checked": 172,
+  "errors": [],
+  "checks": [
+    {
+      "where": "M02-06.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-06.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-06.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-06.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/resultado.json.output_sha256.perdas_cenarios.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/perdas_cenarios.csv: 9fafed981d07f9981d47e910a4534e8b5205e7151cc38bf9332c0e0a4a81e4d4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/resultado.json.output_sha256.perdas_blocos_24h.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/perdas_blocos_24h.csv: 8a5777a26bacc9613ed6949ecfbf82eb5aeceb0a2539916b16498f65e354458d"
+    },
+    {
+      "where": "M02-06/resultado.json.operational_policy_approved",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.source_clinic.copy_sha256",
+      "passed": true,
+      "detail": "notebooks/clinica_decisao_forecast.py: 5d129c89a32bc782390a7f56de74e7faa39b5c390b30f353085ca74bcc3692ec"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/resultado.json",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/resultado.json: 19d2e7e311d97ffd14474f575aa62686d53e939ccd18eab2d182aa9fed73fbe0"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/protocol.json: d9c1bbcaaeb4ebf5bc886ca0dcce5eabfd1a276352bd8d942c3fcb23fc3db1e6"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/predictions.csv: 0b98e3916940f6c5f55c22b8a7005e756d0ae6b963d1c18899195767dc0c48aa"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/alinhamento_alvos.csv: 4f7a2e8e56f4cf25fb41feeee3d869d3a532288fc4d1fd469837c9481726311f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantis_26_passos.npz: 8dbf43b7897d960abaccc12bdfb17aee30cf87bac86afd4dfb99c2241f8a714b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/predictions.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/predictions.csv: 578ed553c87ef484432bde665f35f5d864a50e5bc2af43b9c47d711d62422e44"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/protocol.json",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/protocol.json: 047c0420e2818688a5b151b8544b5d1a75544dba903f5de5ed591fafeecfe95b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.input_hashes.reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/metadata.json",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/metadata.json: 9b2d641ebbad755b98795e07aa6c20ba17cbfd647ab34056a2f41d19dc0352eb"
+    },
+    {
+      "where": "M02-06/protocolo.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.custos.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/custos.csv: 9fafed981d07f9981d47e910a4534e8b5205e7151cc38bf9332c0e0a4a81e4d4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.custos_alarmes.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/custos_alarmes.csv: 96d80735727742092d7c5acab8c45c06d30050eef77bcf3f2db3087758519770"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.execucao_clinica.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/execucao_clinica.log: 5609222397168d354add847ed2ee1f2ac3aad7699b1762fcca08624f468803c8"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.execucao_verificacao.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/execucao_verificacao.log: a9a3cbd20d3c22b916b8e45b4daf40f2f95c5af5e003050da8d1698cf1d0cacd"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/parecer.md: 2e010e6ce63909c5bd7348ddf29a22865de0c9f7d73d279d57bb5fbc015553a8"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.respostas.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/respostas.md: 3d8efc752271e2ed8155e1de9765d68e261ab6a92de4e5d9b72fc8b4c2462b7f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json: 3a5824eb29396cc40aca713ac835a28fe908196a6c4e5412c41b6ccdb2aba21c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.adendo_verificacao.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/adendo_verificacao.json: 371c3867cb7e74cc256c9eab977258ec8f9e01cb3bc1533bd7d1843b1e64849a"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.aplicar_custos.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/aplicar_custos.py: a4060b397a9fe83e6dc428291f31fbf94ae6127fe452d39c8ebd4aed04250a60"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.executar_verificacao.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/executar_verificacao.py: 5a07e1711635ea465ccbaed79e30f3da7e8e194232c5fdf10dbd0f6fefa3c71a"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.output_sha256.finalizar_documentacao.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/finalizar_documentacao.py: 1b7f56b78f71678edf1518d848e3533d8616435eeb6408526eeb6e50268f1cf3"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.documentation_finalization.files[2].sha256",
+      "passed": true,
+      "detail": "docs/roadmap_m00_m09/Bloco_2_Decisao_Risco.md: 0d590cb0821d29cb1250e52a472d0c89cd44df84c0d193fa13ceecb88aaa9c3b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json.documentation_finalization.original_policy_context.sha256",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/decisions/policy.json: 309906646dabc7a998a05071982b56dfad1fda140b45383e7b5e3b02d41decb7"
+    },
+    {
+      "where": "M02-06/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-06/resultado.json.independent_user_performance_claimed",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-06.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M02-06.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T16:19:50.468071+00:00 < 2026-11-25T19:15:20.573741+00:00"
+    },
+    {
+      "where": "M02-06.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M02-06.verification",
+      "passed": true,
+      "detail": "verificacao real com exit zero"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.comparacao_pareada.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/comparacao_pareada.csv: c0a25066b29cc4be13d65235cb96744d632d2c7278cc30c6925084e2cdff2a83"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.conferencia.json",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/conferencia.json: af236a26d000c91ca08e3cf2402226c82ccb27cbe66f2790398e8eba5fcc8787"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.latencias_lotes.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/latencias_lotes.csv: 99a30b13b57c85eb27f2f6aaa0765932beb9e46249d875dc300d6ba72151179a"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.quantile_metrics.json",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/quantile_metrics.json: 8cb58f976ca45fb9e1c9e0081ad76952a080ff43f1d09b7bdd69e28e3ee7cfe1"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.relatorio.html",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/relatorio.html: 19bf4a28922b4d79bfacdb273c433639cef41da25ad9a2c5c827a841a9da804b"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.summary.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/summary.csv: 2d84a2105e4cada6512a5af44b4b8d90d793122ea96e559b2bfb1b520830867d"
+    },
+    {
+      "where": "M02-06.source_m09_output_hashes.trajetorias_26_passos.csv",
+      "passed": true,
+      "detail": "reports/transformer/CJU_BA5EIGT/m09_3_pre_treinado/20261117T213329Z_3b201a01/trajetorias_26_passos.csv: 6accd7af1591879800c89af4a65f4c08c5311714ce3e19750c896a22da65ce96"
+    },
+    {
+      "where": "M02-06.source_event_output_hashes.event_labels.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/event_labels.csv: 8590bfed2936b8a47e4177b614cdecd99ab2050a22351d3d47f489ac16f0f287"
+    },
+    {
+      "where": "M02-06.source_event_output_hashes.folds.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/folds.csv: bfdc2a488f9d91830ebc603ea5a3b40b4fc0937bbb41fc1c309e555ebc47b759"
+    },
+    {
+      "where": "M02-06.source_event_output_hashes.fold_metrics.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/fold_metrics.csv: 15819a8543134476458c1ab21cb3850c720888b7925b0bee8e0a7dd3cff92ef2"
+    },
+    {
+      "where": "M02-06.source_event_output_hashes.summary.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/summary.csv: 4b0693bc6230b5ed7c8264dc340223a5c59b077e4c3eb8c4e34979d012c612c7"
+    },
+    {
+      "where": "M02-06.source_event_output_hashes.probability_bins.csv",
+      "passed": true,
+      "detail": "reports/events/CJU_BA5EIGT/h24_d2_july_drop22p77_v1/probability_bins.csv: d4b8e5be61c0a47bd9aca7744678b573907ac9add4c3caf255e78f5ecca8c82e"
+    },
+    {
+      "where": "M02-06.clinic_result",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/resultado.json: 7d9a9b6b7fe457c178bf38a28cc09cb714a0dc4719a4ba0d70987f0f2f5e233e"
+    },
+    {
+      "where": "M02-06.generation_cohort",
+      "passed": true,
+      "detail": "168 pares da clinica"
+    },
+    {
+      "where": "M02-06.event_cohort",
+      "passed": true,
+      "detail": "504 eventos por metodo, coorte separada"
+    },
+    {
+      "where": "M02-07.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-07.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-07.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-07.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.docs/roadmap_m00_m09/Bloco_2_Bootstrap.md",
+      "passed": true,
+      "detail": "docs/roadmap_m00_m09/Bloco_2_Bootstrap.md: e698d5db2607a49c7b4c934fc0282a09a1ad89c0f09915506500a08420c1bb8c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/analise_tecnica.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/analise_tecnica.md: bf4bb4c024e3ac4356260255e55a0df29683aa4a66ebbd87c1a4e1bf2f3f872a"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/bootstrap.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/bootstrap.csv: 389ca4012c3f50d3aaaae5961ce4730c20be45b58932bca71b3ceedf9463fe86"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/bootstrap_vs_persistencia.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/bootstrap_vs_persistencia.csv: 4a105a3899fa54367b19b1183540085bbc17ec7b365e1dfa2fbb274bcad45e59"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/receipt.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/receipt.json: cac8593cff5946a4509a22e3844909559b46c120595de529778e9fdf95d6cb70"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/summary.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/summary.csv: 389ca4012c3f50d3aaaae5961ce4730c20be45b58932bca71b3ceedf9463fe86"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_persistencia/receipt.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_persistencia/receipt.json: 40edbcbdf4ccf008aca93a94273b75fe1e6ce5d92c50343642c048b2519a17b7"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_persistencia/summary.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_persistencia/summary.csv: 4a105a3899fa54367b19b1183540085bbc17ec7b365e1dfa2fbb274bcad45e59"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/linhagem_persistencia.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/linhagem_persistencia.json: 6f06d4c96d842eb4408995f2e1abf37b8e1f9af01b2f81054b6e7209dcc490ec"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/pareado_persistencia.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/pareado_persistencia.csv: 086c2128f9ec42b568d4a009fb8cbed4562e3a7e613c987bac724b1b84852b2d"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/parecer.md: 48515e5df1b258029c6da967c6537cdc2161b79402f30f2b2df1302a964dd3ec"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json: e0eef6c506771f0284508ee1e58f413e8538e2ce794b6f516d1307d8cea93c31"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resposta_tecnica.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resposta_tecnica.md: 98e22b3cfef2d8da3d333a70a26733119abb0407547fe4bce32f1c4fff4aa7fe"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resultado.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resultado.json: 1143e2a90f28e17029fb77bab080ddef189f294a6f29737ac3a92cf7eb0ab3f0"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json.output_sha256.reports/statistical_audit.md",
+      "passed": true,
+      "detail": "reports/statistical_audit.md: e2e50f612f8bddf1cad8bc4acbf9b8caf0a75f9930b04416cc5070ae1363b1be"
+    },
+    {
+      "where": "M02-07/auditoria_final.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-07/auditoria_final.json.independent_user_authorship_certified",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/receipt.json.input.sha256",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development/predictions.csv: 291e9aec32608505b4ec7423de814401e372cf3411fcefad001ffeb4a0f7df76"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/receipt.json.code.sha256",
+      "passed": true,
+      "detail": "src/renewable_forecast/weather_gain_uncertainty.py: f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development/metadata.json",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development/metadata.json: 132929e6b0f8d477a4d30d25bb925204b93d054d47d46201f47cda16c27ed98e"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development/protocol.json",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development/protocol.json: c1dfc390bd73ab6658525f8f6e47a453da13200ba1d914fff2f66d24d024d0b4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development/folds.csv",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development/folds.csv: d2e719dd31e9b0dc918c4ce93ac63a60dd20963786c7edfb6e9bf281c69424ac"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development/summary.csv",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development/summary.csv: 5190f1d9b997aa92d551e3d4608f2a7d4337fcdfd09a04de1ec0131d2d98cd43"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development_h24/predictions.csv",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/predictions.csv: ae4c804e0e812c426ab5430868d5f482d5af5fd814e7eca3e64c32a9849ae022"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development_h24/metadata.json",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/metadata.json: d6a837a79d21afe09df96684cd3c262ff48fb1abef20bfc0fe5333feaefb465b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development_h24/protocol.json",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/protocol.json: 6397c1c8817f9f2eb8da23aea2fe5b43727983f2c1f94029a629deea436c32d3"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development_h24/folds.csv",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/folds.csv: 888375f881434b7e7a6ee766aa767743066b73a28d515d81600a9b1a85fa5f88"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.input_sha256.reports/weather_ablation/CJU_BA5EIGT/july_development_h24/summary.csv",
+      "passed": true,
+      "detail": "reports/weather_ablation/CJU_BA5EIGT/july_development_h24/summary.csv: fcc2a861717520c102b17d57fd676a5bf9f70895615acebfd8b51dc083cddf3f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.prior_construction_evidence_sha256.reports/fechamento_m00_m09/M02-05/resultado.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/M02-05/resultado.json: 2a851bec1ed8c11045d5f5966bc7812e354be11445c5e264e2651d46eaf8defa"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.prior_construction_evidence_sha256.reports/fechamento_m00_m09/M02-05/contraprovas.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/M02-05/contraprovas.json: 220ce36eba751de638f4bf197d85b8923a4c8e00f4f55d0fa3a22b506798cdf3"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.prior_construction_evidence_sha256.reports/fechamento_m00_m09/M02-05/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/M02-05/protocolo.json: 7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json.prior_construction_evidence_sha256.tests/test_weather_gain_uncertainty.py",
+      "passed": true,
+      "detail": "tests/test_weather_gain_uncertainty.py: 478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resultado.json.cross_horizon_analysis.24.history_reference.receipt_sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_historia/receipt.json: abf6f6a71f9c78a771f8f02c40a7870ff2c06d4579c944fa9beb25983f31732b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resultado.json.cross_horizon_analysis.24.persistence_reference.receipt_sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_persistencia/receipt.json: 78ac7fe3c483354b3f9e15ca591ce1a7146ecd35db00fee8cbb22bb688c89eaf"
+    },
+    {
+      "where": "M02-07/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-07.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M02-07.exit_code",
+      "passed": true,
+      "detail": "comando terminou com zero"
+    },
+    {
+      "where": "M02-07.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T16:20:13.842474+00:00 < 2026-11-25T16:22:39.991143+00:00"
+    },
+    {
+      "where": "M02-07.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M02-07.bootstrap.csv",
+      "passed": true,
+      "detail": "12 resumos: tres folds e agregado por bloco"
+    },
+    {
+      "where": "M02-07.blocks",
+      "passed": true,
+      "detail": "todos os blocos fixados publicados"
+    },
+    {
+      "where": "M02-07.parameters",
+      "passed": true,
+      "detail": "5000 replicas, seed42"
+    },
+    {
+      "where": "M02-07.bootstrap_vs_persistencia.csv",
+      "passed": true,
+      "detail": "12 resumos: tres folds e agregado por bloco"
+    },
+    {
+      "where": "M02-07.blocks",
+      "passed": true,
+      "detail": "todos os blocos fixados publicados"
+    },
+    {
+      "where": "M02-07.parameters",
+      "passed": true,
+      "detail": "5000 replicas, seed42"
+    },
+    {
+      "where": "M02-07.not_holdout",
+      "passed": true,
+      "detail": "previsoes historicas examinadas"
+    },
+    {
+      "where": "M02-07.not_pvalue",
+      "passed": true,
+      "detail": "fracao bootstrap nao e p-valor"
+    },
+    {
+      "where": "M02-08.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-08.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-08.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M02-08.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/analise_tecnica.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/analise_tecnica.md: ee462e7da239957ba1e6c36ab4f4f81be7029cfc9d2a7bbe521ee3a518061f26"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/bootstrap.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/bootstrap.csv: fc326f9b0a822dfb02e55c5211aafb9300a0f423e2dbb4f85e21d059e4a4f5de"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/bootstrap_vs_persistencia.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/bootstrap_vs_persistencia.csv: afc4dc4dce37fab423fadbd6ed235d917508171362c23508b3aaab619552bf47"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_historia/summary.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_historia/summary.csv: fc326f9b0a822dfb02e55c5211aafb9300a0f423e2dbb4f85e21d059e4a4f5de"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_persistencia/summary.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_persistencia/summary.csv: afc4dc4dce37fab423fadbd6ed235d917508171362c23508b3aaab619552bf47"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/documentar_e_auditar.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/documentar_e_auditar.py: e0777e7d087f680b67148289de7f81295cedb8d5a64309f1edfd1cb3b8c280a8"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/executar.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/executar.py: 3ef45a17b96e665ef98ab7d171fe851e5963d2546108c7c17085b6f88ea0cc10"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/linhagem_persistencia.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/linhagem_persistencia.json: 67a5f3e222ef4cc5547e48493e2c3fefa9dc5dbe8f3e248ad819cfa477470075"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/pareado_persistencia.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/pareado_persistencia.csv: 5147fae549fb5137f6ceeed24001811d558233115de324baf70b8af660141fa4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/parecer.md: 5e5c663d72ffd20f15828581046a172e3e7633cef4b15db8077f6c56e1074438"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/protocolo.json: 26bc483a92096f88be5427afa2c469af229e8f0d7e99ba7b96e542911688401b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M02-08/resultado.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/resultado.json: 97b719629cb849a762ea528942a0cc9ca6342769bc29e9ee493188dc508591c3"
+    },
+    {
+      "where": "M02-08/auditoria_final.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-08/auditoria_final.json.independent_user_authorship_certified",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-08/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M02-08.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M02-08.exit_code",
+      "passed": true,
+      "detail": "comando terminou com zero"
+    },
+    {
+      "where": "M02-08.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T16:20:13.778025+00:00 < 2026-11-25T16:22:39.991143+00:00"
+    },
+    {
+      "where": "M02-08.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M02-08.bootstrap.csv",
+      "passed": true,
+      "detail": "12 resumos: tres folds e agregado por bloco"
+    },
+    {
+      "where": "M02-08.blocks",
+      "passed": true,
+      "detail": "todos os blocos fixados publicados"
+    },
+    {
+      "where": "M02-08.parameters",
+      "passed": true,
+      "detail": "5000 replicas, seed42"
+    },
+    {
+      "where": "M02-08.bootstrap_vs_persistencia.csv",
+      "passed": true,
+      "detail": "12 resumos: tres folds e agregado por bloco"
+    },
+    {
+      "where": "M02-08.blocks",
+      "passed": true,
+      "detail": "todos os blocos fixados publicados"
+    },
+    {
+      "where": "M02-08.parameters",
+      "passed": true,
+      "detail": "5000 replicas, seed42"
+    },
+    {
+      "where": "M02-08.not_holdout",
+      "passed": true,
+      "detail": "previsoes historicas examinadas"
+    },
+    {
+      "where": "M02-08.not_pvalue",
+      "passed": true,
+      "detail": "fracao bootstrap nao e p-valor"
+    },
+    {
+      "where": "M03-01.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-01.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-01.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-01.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json.source.sha256",
+      "passed": true,
+      "detail": "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet: bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json.code.notebooks/selecao_atributos_temporal.py",
+      "passed": true,
+      "detail": "notebooks/selecao_atributos_temporal.py: ed3a24b9c79a7721d9c9291a7c45c1207dcb43b83276dc075ea1b2401f30612b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json.code.notebooks/bloco2_modelagem_core.py",
+      "passed": true,
+      "detail": "notebooks/bloco2_modelagem_core.py: 451ec3cdd9bba01c069a54478c17ca32734335928a07ffab5a0f80f34b6fa5cc"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json.code.notebooks/explicacao_local.py",
+      "passed": true,
+      "detail": "notebooks/explicacao_local.py: 7e053714bf18ed7c01c384c6730ffb594e6e59f0aa4f5c443db2417a56159e6b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-01/defesa.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/defesa.md: 9e114ba51efc57f22418d461c3781e918d4d4e37c533dc334d9acb3177034d8d"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-01/defesa_tecnica.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/defesa_tecnica.md: 9e114ba51efc57f22418d461c3781e918d4d4e37c533dc334d9acb3177034d8d"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-01/parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/parecer.md: de7cb722f710dd6deb3bf5a766345d7eedd491b58a5c37143c0be1ae21abcb70"
+    },
+    {
+      "where": "M03-01.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:20:31.949165+00:00 < 2026-11-25T19:21:01.621060+00:00"
+    },
+    {
+      "where": "M03-01.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M03-02.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-02.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-02.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-02.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/coalizoes.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/coalizoes.csv: ec9264c75d2b033fec51439125d5655dd6e886391a7f929629a098ff0a61d46d"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes.csv: 09dc8f6ab9db3f79723772e186b301331d2205569dfaa5ce0a0266c5e09d0cb3"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes_fundos.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/explicacoes_fundos.csv: e1ca77011be90a6b8a5cc2542da41a8580ab44c1d206b2215aff139dfb65fc4e"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo.csv: 8b5dc4bc24e006d2f8cc3f89d88c962b53b96bf7f77f053671405058a5ceecaf"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo_sensibilidade.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/fundo_sensibilidade.csv: d951500a2b9fb5a03029555583f762f502ed11708190013f283b3a7a6331298f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/parecer.md: 3c10481a17597ef8077a5571d332fdce295574f068cac4f841ef80618f048961"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/protocolo.json: 92e3791ae161e8e41ad179fd55bfb72e08fb35a13ef23656a9c850b523a2f6a2"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-02/sensibilidade.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/sensibilidade.csv: cb1ad3ddfbf1f2f3c9172fc329a7d9b93b83c47e6c98ae988fb7674a3068e360"
+    },
+    {
+      "where": "M03-02.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:20:31.949165+00:00 < 2026-11-25T19:21:48.672100+00:00"
+    },
+    {
+      "where": "M03-02.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M03-02.bundle_sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/point_bundle.joblib: 369e7fd10ca50d8fa2128b9824a0ec0ca250fb86e87d535ec1bf5926bd3962d6"
+    },
+    {
+      "where": "M03-02.additivity",
+      "passed": true,
+      "detail": "soma das atribuicoes reproduz a previsao"
+    },
+    {
+      "where": "M03-03.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-03.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-03.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M03-03.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json.execution_receipt_sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/evaluation_receipt.json: 203a5157dfb1da180bafc33c92efd07d1c243751fb11f46700b30d1e121c61be"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json.source_sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/geracao_CJU_BA5EIGT_2026_10.parquet: aecb3a89ff306b93fa694d800b9659aa7d4d551763930589b5abad70931a87ab"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json.output_sha256.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_evaluation.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_evaluation.csv: 7f4da0587b94177c00f70843a06390afe46fbd983cb225caebc986b14b751cd5"
+    },
+    {
+      "where": "M03-03/adendo_execucao_avaliacao.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/candidatos.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/candidatos.csv: 4281ef49d55e21fd5c2a50dc3fcf47db269b1c5bab36bf4160898b475130fb55"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/folds.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/folds.csv: 637d2d43ac74ad1d49fe70a67fe28aa3ba4afe62f386e341155b51f73c7211d2"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_cal.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_cal.csv: 2d14029d9588178c066da7ff85728540551659c499c1de7ae36db4ed087e8d4c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_folds.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/predicoes_folds.csv: ab88657c1ba7ffc0d3139bebb70794bd01c4d5da6c836233ad38a535202fd0de"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json: a9cca9a359b8401099e63fe2805974d20c48e0f7bd994367543801bd4deaf347"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json.outputs.reports/fechamento_m00_m09/bloco2_engenharia/M03-03/selection_manifest.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/selection_manifest.json: f3b254a51978030dad9bc6d270880127bb0e6446b3f736f37df9e4d85a1f28c9"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json.documented_outputs[0].sha256",
+      "passed": true,
+      "detail": "docs/model_card.md: 55e0e1649b1a8ad8e0c2ac663be901b995183eaec9816bd94c301a36409ddab7"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json.documented_outputs[1].sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/parecer.md: 51d507a7d9d69f2f6fc53b680940061af05b4dcf6795454dace858c965bd5fc5"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json.documented_outputs[2].sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/analise_selecao.md: 9b198e0764dc269e49c4c064ea7498fa2d4f89d89110ce5126497c8aab42f641"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json.documented_outputs[3].sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/interpretacao_adicional.md: db0dd0c045a354923e40434dfb0138757b487a3d5d305f85c12b559d9402ccd1"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json.documented_outputs[4].sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json: 1a1495dac2034585577107602a544f802075e3edde2af2e75ff0996e6d1bc93a"
+    },
+    {
+      "where": "M03-03/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M03-03/resultado.json.independent_user_authorship_certified",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M03-03.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:20:31.949165+00:00 < 2026-11-25T19:21:01.621060+00:00"
+    },
+    {
+      "where": "M03-03.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M03-03.adjustment_receipt",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json: 3393dec45514b885ecd4f1a071b7f26a4cdee92817408124b1a1f2879aa58fb3"
+    },
+    {
+      "where": "M03-03.selection_closed_test",
+      "passed": true,
+      "detail": "manifesto de selecao antecede abertura do teste"
+    },
+    {
+      "where": "M03-03.evaluation_receipt",
+      "passed": true,
+      "detail": "avaliacao congelada de outubro presente"
+    },
+    {
+      "where": "M03-03.no_refit",
+      "passed": true,
+      "detail": "recibo identifica aplicacao sem ajuste"
+    },
+    {
+      "where": "M03-03.evaluation_command",
+      "passed": true,
+      "detail": "comando real e zero observado em chamada unica; adendo posterior identificado"
+    },
+    {
+      "where": "M03-03.addendum_times",
+      "passed": true,
+      "detail": "adendo preserva horarios internos do recibo sem inventar inicio externo"
+    },
+    {
+      "where": "M03-03.october_cohort",
+      "passed": true,
+      "detail": "695 origens exatas; alvo+24, historico-2"
+    },
+    {
+      "where": "M03-03.selected_metrics.mae",
+      "passed": true,
+      "detail": "MAE recomputado=19.520624057477644; recibo=19.520624057477644"
+    },
+    {
+      "where": "M03-03.study_metrics.mae",
+      "passed": true,
+      "detail": "MAE recomputado=19.520624057477644; recibo=19.520624057477644"
+    },
+    {
+      "where": "M03-03.persistence_metrics.mae",
+      "passed": true,
+      "detail": "MAE recomputado=19.218456115107912; recibo=19.218456115107916"
+    },
+    {
+      "where": "M05-01.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-01.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-01.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-01.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.notebooks/bloco2_validacao_risco.py",
+      "passed": true,
+      "detail": "notebooks/bloco2_validacao_risco.py: 1ab2efd0018cddbbfbd1449174ca573b27a17fba3fe05523685bd7bfd6e1ec17"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.notebooks/bloco2_risco_core.py",
+      "passed": true,
+      "detail": "notebooks/bloco2_risco_core.py: 6ac5c71d4d5d45d4aa7fb316b30910dd383362c6b6ac05c09762ae08e2e70b2c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/protocolo_integrado.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/protocolo_integrado.json: 5fce3481ca4333fac2e992f2697036e2729d47ca1e1abfbe2957a6592ae0c19c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo.json: c6a170bf1f18030400574d3e6911059cef2b75705c584f4946345bfc99afe37e"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo_ajuste.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo_ajuste.json: 3a40af121d5caf6684b12425ea7ccb80044761418e11e40d9ff736bc749b28f2"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-01/interval_bundle.joblib",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/interval_bundle.joblib: a29dc53651925a9b48f330b90885b241226e890cee4f1f2bf382573705d5c6a3"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-01/calibracao_congelada.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/calibracao_congelada.json: d034e9525a3a301e680f5dabc6f5ac3da82400a0a07ac2aad261656b58f0853c"
+    },
+    {
+      "where": "M05-01/protocolo.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.cobertura_por_periodo.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/cobertura_por_periodo.csv: e5a5bcc91fa578eb316fd2624ac5a8fe71832fa9b5af3b9934d5a64b8df6291c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.execucao_ajustar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/execucao_ajustar.log: cd9c80cda026df70a262509162a19d9256b292b706ad90d30ebea1c244e12c90"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.execucao_avaliar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/execucao_avaliar.log: 6efe2ca17e07c841edd643355c2b44e79b85149fd548496e68ee8c523bc10e03"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.execucao_preparar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/execucao_preparar.log: 206e2b861ae6cf071a2c631702c12469fbfeff1c594f8e458f2329388e5036a4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.finalizar_evidencias.py",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/finalizar_evidencias.py: 354d30787c08cd03747d8094c1731c6cb27262f2996e28e1f7b48084723c2ee2"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.freeze.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json: 0752569eb41eb41f5d8fdd5ce12a7905ccbc66f235ebd91169ba6d13f08fb50e"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.incerteza_cobertura.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/incerteza_cobertura.csv: 2c62c93d4833903338b17a832ce8d6c32258c48875bad852a2ff7620663972d9"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.metodo_ajuste.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/metodo_ajuste.md: 68c9d566f472b54a77892768c8ad8562ed397c9ce5401cafa83d2c23168caa0f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.metricas_intervalos.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/metricas_intervalos.csv: e5a5bcc91fa578eb316fd2624ac5a8fe71832fa9b5af3b9934d5a64b8df6291c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/parecer.md: 96ca17acec70280b293e827c94a6c842575b8010a430e99817ccd340d6240dbe"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.predicoes_avaliacao.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/predicoes_avaliacao.csv: 55214d8f16237d2d6e6b92c6ac446a41163446d6486aa0fd7d1ddcb7b40ef76c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.output_sha256.predicoes_calibracao.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/predicoes_calibracao.csv: 03845e9f5d5213e31cfbd8727b279418e63b8bedc5da5aff8661d4e58d222ac0"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json.source_receipt.sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/fonte.json: 3752645a089a952b7aa005db67e37333118ab842e49ce84b33395bb2fcd341e1"
+    },
+    {
+      "where": "M05-01/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-01/resultado.json.independent_user_performance_claimed",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-01/resultado.json.documentation_finalization.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-01.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M05-01.fit_receipt",
+      "passed": true,
+      "detail": "comando de ajuste real registrado"
+    },
+    {
+      "where": "M05-01.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:26:17.797221+00:00 < 2026-11-25T19:26:42.049586+00:00"
+    },
+    {
+      "where": "M05-01.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M05-01.evaluation_performed",
+      "passed": true,
+      "detail": "avaliacao concluida"
+    },
+    {
+      "where": "M05-01.training_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-01.recalibration_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-01.policy_reselection_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-01.snapshot_is_historically_point_in_time",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-01.live_shadow_demonstrated",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-01.evaluation_origins",
+      "passed": true,
+      "detail": "695 origens declaradas"
+    },
+    {
+      "where": "M05-01.weeks",
+      "passed": true,
+      "detail": "quatro semanas e parcial23"
+    },
+    {
+      "where": "M05-01.calibration_policy",
+      "passed": true,
+      "detail": "coortes312/360 separadas"
+    },
+    {
+      "where": "M05-01.fit_protocol_order",
+      "passed": true,
+      "detail": "plano e detalhe do ajuste precedem freeze"
+    },
+    {
+      "where": "M05-01.october_cohort",
+      "passed": true,
+      "detail": "695 origens exatas verificadas no CSV"
+    },
+    {
+      "where": "M05-01.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-01.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-01.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-01.coverage_uncertainty_prefixed",
+      "passed": true,
+      "detail": "2000 replicas pareadas seed17 previstas antes dos dados"
+    },
+    {
+      "where": "M05-01.coverage_uncertainty_summary",
+      "passed": true,
+      "detail": "tres resumos condicionais com parametros fixados; sorteios nao repetidos"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=0.97697841726618706; salvo=0.97697841726618695"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=72.920623140391129; salvo=72.9206231403911"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=76.989182892613769; salvo=76.989182892613798"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=2.6538072661870507; salvo=2.6538072661870502"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=8.8250973720833308; salvo=8.8250973720833308"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=5.045111023074325; salvo=5.0451110230743303"
+    },
+    {
+      "where": "M05-01.total.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.5080052204482355; salvo=5.5080052204482399"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=0.98705035971223021; salvo=0.98705035971222999"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=103.16857517094468; salvo=103.168575170945"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=104.57828838058752; salvo=104.578288380587"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=4.1662048677147308; salvo=4.1662048677147299"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=8.8250973720833308; salvo=8.8250973720833308"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=6.2916239703440198; salvo=6.2916239703440198"
+    },
+    {
+      "where": "M05-01.total.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=6.4276420700473595; salvo=6.4276420700473604"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=0.99404761904761907; salvo=0.99404761904761896"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=75.64029653994244; salvo=75.640296539942398"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=75.652169767684768; salvo=75.652169767684796"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=3.8134732142857142; salvo=3.8134732142857199"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=10.225021519722214; salvo=10.225021519722199"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=3.7517437624827621; salvo=3.7517437624827599"
+    },
+    {
+      "where": "M05-01.semana_01.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.9300794988302306; salvo=5.9300794988302297"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=105.88824857049597; salvo=105.888248570496"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=105.88824857049597; salvo=105.888248570496"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=5.3258708158133947; salvo=5.3258708158133903"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=10.225021519722214; salvo=10.225021519722199"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=5.2629540412362035; salvo=5.2629540412361999"
+    },
+    {
+      "where": "M05-01.semana_01.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=6.9379487922572709; salvo=6.93794879225727"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=73.794715450992996; salvo=73.794715450992996"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=73.794715450992996; salvo=73.794715450992996"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=2.4001279761904764; salvo=2.4001279761904799"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=7.5133006522692414; salvo=7.5133006522692396"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=4.9793435689088232; salvo=4.9793435689088197"
+    },
+    {
+      "where": "M05-01.semana_02.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=4.9642573991228467; salvo=4.9642573991228502"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=104.04266748154653; salvo=104.042667481546"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=104.04266748154653; salvo=104.042667481546"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=3.9125255777181565; salvo=3.9125255777181498"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=7.5133006522692414; salvo=7.5133006522692396"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=6.4917411704364962; salvo=6.4917411704364998"
+    },
+    {
+      "where": "M05-01.semana_02.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.9725224668079653; salvo=5.97252246680796"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=0.94047619047619047; salvo=0.94047619047619002"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=68.678244064242264; salvo=68.678244064242307"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=77.856024997051762; salvo=77.856024997051804"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=2.3829523809523812; salvo=2.3829523809523798"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=8.2182900427703416; salvo=8.2182900427703398"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=5.4026501187527955; salvo=5.4026501187528"
+    },
+    {
+      "where": "M05-01.semana_03.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.33463084749184; salvo=5.33463084749184"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=0.9642857142857143; salvo=0.96428571428571397"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=98.926196094795827; salvo=98.926196094795799"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=100.76028699166372; salvo=100.760286991664"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=3.8953499824800613; salvo=3.8953499824800599"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=8.2182900427703416; salvo=8.2182900427703398"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=6.1806787166863089; salvo=6.1806787166863097"
+    },
+    {
+      "where": "M05-01.semana_03.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=6.0981062473122378; salvo=6.0981062473122396"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=0.97023809523809523; salvo=0.97023809523809501"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=73.818046934137669; salvo=73.818046934137698"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=81.459636986649713; salvo=81.459636986649699"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=2.2606342261904766; salvo=2.2606342261904802"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=9.762313502369004; salvo=9.7623135023690004"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=5.8853294724744947; salvo=5.8853294724744902"
+    },
+    {
+      "where": "M05-01.semana_04.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.9694257336779915; salvo=5.9694257336779897"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=0.9821428571428571; salvo=0.98214285714285698"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=104.06599896469126; salvo=104.065998964691"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=108.06375735771486; salvo=108.06375735771501"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=3.7730318277181558; salvo=3.77303182771815"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=9.762313502369004; salvo=9.7623135023690004"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=7.0333439080533298; salvo=7.0333439080533298"
+    },
+    {
+      "where": "M05-01.semana_04.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=6.8562297460468296; salvo=6.8562297460468304"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.coverage",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.width",
+      "passed": true,
+      "detail": "calculado=71.103225233341448; salvo=71.103225233341405"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.interval_score",
+      "passed": true,
+      "detail": "calculado=71.103225233341448; salvo=71.103225233341405"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.pinball_p10",
+      "passed": true,
+      "detail": "calculado=0.88645652173913048; salvo=0.88645652173913003"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.pinball_p50",
+      "passed": true,
+      "detail": "calculado=5.7679631791278485; salvo=5.7679631791278503"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.pinball_p90",
+      "passed": true,
+      "detail": "calculado=6.2238660015950131; salvo=6.2238660015950096"
+    },
+    {
+      "where": "M05-01.semana_05.raw_sorted.pinball_mean",
+      "passed": true,
+      "detail": "calculado=4.2927619008206639; salvo=4.2927619008206603"
+    },
+    {
+      "where": "M05-01.quantile_order",
+      "passed": true,
+      "detail": "extremos e mediana ordenados"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.coverage",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.width",
+      "passed": true,
+      "detail": "calculado=101.35117726389494; salvo=101.351177263895"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.interval_score",
+      "passed": true,
+      "detail": "calculado=101.35117726389494; salvo=101.351177263895"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.pinball_p10",
+      "passed": true,
+      "detail": "calculado=2.3988541232668106; salvo=2.3988541232668101"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.pinball_p50",
+      "passed": true,
+      "detail": "calculado=5.7679631791278485; salvo=5.7679631791278503"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.pinball_p90",
+      "passed": true,
+      "detail": "calculado=7.7362636031226817; salvo=7.7362636031226799"
+    },
+    {
+      "where": "M05-01.semana_05.cqr_frozen.pinball_mean",
+      "passed": true,
+      "detail": "calculado=5.3010269685057798; salvo=5.3010269685057798"
+    },
+    {
+      "where": "M05-02.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-02.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-02.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-02.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo.json: c549e9bdec33550d4b8ed039d2bc2edda56aa48715cdc310c780b6c46f2d33bf"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo_ajuste.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo_ajuste.json: 45c00ebeeeb4d0019ea4e1eb8cf0fb4b0b16fa1444c76ef207ba9aab34308acf"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-02/probability_bundle.joblib",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/probability_bundle.joblib: ff770fb6acd5970aaa8a55625b78ae57c905b091d128d32c760c6f01eac63754"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-02/politica_congelada.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/politica_congelada.json: 40b8eb799258c49f478b6b19bb3b330139eef360858b66c8f5c0feb563e795a7"
+    },
+    {
+      "where": "M05-02/protocolo.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.alarmes.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/alarmes.csv: 13a0dc444608df2b02d985578ad9690f2849d38acc0572f809d23a959bbe3a67"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.calibracao_classe.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/calibracao_classe.csv: 230a6d7b9633bfb59dd23a76d41352c9245195ebc700dbcd27f8409b922c0b9b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.candidatos_politica.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/candidatos_politica.csv: 413f904f37a2e516be9bb2d2a41d2d4b2b31ace2524aa5bd6663b299f42b94f6"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.confiabilidade.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/confiabilidade.csv: 71a169c727dfaec4b00bb70bacc64d24ef4c85c430aeda7079d8ff814938536f"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.execucao_ajustar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/execucao_ajustar.log: cd9c80cda026df70a262509162a19d9256b292b706ad90d30ebea1c244e12c90"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.execucao_avaliar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/execucao_avaliar.log: 6efe2ca17e07c841edd643355c2b44e79b85149fd548496e68ee8c523bc10e03"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.execucao_preparar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/execucao_preparar.log: 206e2b861ae6cf071a2c631702c12469fbfeff1c594f8e458f2329388e5036a4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.freeze.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json: 22147f3fdcedda925be7333341f527c7314e0a86a09801d64a1ee2fe15cbd007"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.metodo_ajuste.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/metodo_ajuste.md: 9fc5d63ad6a41583a7256006e4b72361cf06c4cb6142abf44e8068671e9ea545"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.metricas_alarmes.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/metricas_alarmes.csv: 13a0dc444608df2b02d985578ad9690f2849d38acc0572f809d23a959bbe3a67"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.metricas_probabilidades.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/metricas_probabilidades.csv: 230a6d7b9633bfb59dd23a76d41352c9245195ebc700dbcd27f8409b922c0b9b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.orcamento_diario.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/orcamento_diario.csv: 3167ace0a0caf2ffc2f15f34117d61e94bb899b2477e2a1fb041f1768eac70ad"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/parecer.md: f841ac6f2a997a81e4871d62283db7ee4cecd32ae511f537cc8dc50c0671feb5"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.predicoes_avaliacao.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/predicoes_avaliacao.csv: 5ce4a2ea57688d3086fc44e4f3cc84efae54e5101dfeb9fa482e0c4252835a5c"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.predicoes_calibracao.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/predicoes_calibracao.csv: 3c310cbb6516c7a4da476786752ec446804044728c96a53b1c2253e866bfbe11"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json.output_sha256.predicoes_selecao_politica.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/predicoes_selecao_politica.csv: fb1a833b4c048599b4701287fa91fefb723c87f62b97c6bbb9535497e4e70a4e"
+    },
+    {
+      "where": "M05-02/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-02/resultado.json.independent_user_performance_claimed",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-02/resultado.json.documentation_finalization.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-02.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M05-02.fit_receipt",
+      "passed": true,
+      "detail": "comando de ajuste real registrado"
+    },
+    {
+      "where": "M05-02.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:26:17.797221+00:00 < 2026-11-25T19:26:42.049586+00:00"
+    },
+    {
+      "where": "M05-02.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M05-02.evaluation_performed",
+      "passed": true,
+      "detail": "avaliacao concluida"
+    },
+    {
+      "where": "M05-02.training_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-02.recalibration_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-02.policy_reselection_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-02.snapshot_is_historically_point_in_time",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-02.live_shadow_demonstrated",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-02.evaluation_origins",
+      "passed": true,
+      "detail": "695 origens declaradas"
+    },
+    {
+      "where": "M05-02.weeks",
+      "passed": true,
+      "detail": "quatro semanas e parcial23"
+    },
+    {
+      "where": "M05-02.calibration_policy",
+      "passed": true,
+      "detail": "coortes312/360 separadas"
+    },
+    {
+      "where": "M05-02.fit_protocol_order",
+      "passed": true,
+      "detail": "plano e detalhe do ajuste precedem freeze"
+    },
+    {
+      "where": "M05-02.october_cohort",
+      "passed": true,
+      "detail": "695 origens exatas verificadas no CSV"
+    },
+    {
+      "where": "M05-02.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-02.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-02.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-02.daily_budget",
+      "passed": true,
+      "detail": "capacidade causal de seis por dia respeitada"
+    },
+    {
+      "where": "M05-02.total.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=117; salvo=117"
+    },
+    {
+      "where": "M05-02.total.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.16834532374100719; salvo=0.168345323741007"
+    },
+    {
+      "where": "M05-02.total.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.085677153329102099; salvo=0.085677153329102099"
+    },
+    {
+      "where": "M05-02.total.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=117; salvo=117"
+    },
+    {
+      "where": "M05-02.total.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.16834532374100719; salvo=0.168345323741007"
+    },
+    {
+      "where": "M05-02.total.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.083296431741546662; salvo=0.083296431741546703"
+    },
+    {
+      "where": "M05-02.total.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=117; salvo=117"
+    },
+    {
+      "where": "M05-02.total.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.16834532374100719; salvo=0.168345323741007"
+    },
+    {
+      "where": "M05-02.total.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.14075232026799439; salvo=0.140752320267994"
+    },
+    {
+      "where": "M05-02.semana_01.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=26; salvo=26"
+    },
+    {
+      "where": "M05-02.semana_01.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.15476190476190477; salvo=0.15476190476190499"
+    },
+    {
+      "where": "M05-02.semana_01.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.10757347824116162; salvo=0.10757347824116199"
+    },
+    {
+      "where": "M05-02.semana_01.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=26; salvo=26"
+    },
+    {
+      "where": "M05-02.semana_01.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.15476190476190477; salvo=0.15476190476190499"
+    },
+    {
+      "where": "M05-02.semana_01.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.086822939827798457; salvo=0.086822939827798498"
+    },
+    {
+      "where": "M05-02.semana_01.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=26; salvo=26"
+    },
+    {
+      "where": "M05-02.semana_01.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.15476190476190477; salvo=0.15476190476190499"
+    },
+    {
+      "where": "M05-02.semana_01.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.13248488827614349; salvo=0.13248488827614299"
+    },
+    {
+      "where": "M05-02.semana_02.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=34; salvo=34"
+    },
+    {
+      "where": "M05-02.semana_02.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.20238095238095238; salvo=0.202380952380952"
+    },
+    {
+      "where": "M05-02.semana_02.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.097246006540858437; salvo=0.097246006540858396"
+    },
+    {
+      "where": "M05-02.semana_02.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=34; salvo=34"
+    },
+    {
+      "where": "M05-02.semana_02.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.20238095238095238; salvo=0.202380952380952"
+    },
+    {
+      "where": "M05-02.semana_02.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.095952842635558824; salvo=0.095952842635558797"
+    },
+    {
+      "where": "M05-02.semana_02.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=34; salvo=34"
+    },
+    {
+      "where": "M05-02.semana_02.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.20238095238095238; salvo=0.202380952380952"
+    },
+    {
+      "where": "M05-02.semana_02.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.16146781505715921; salvo=0.16146781505715899"
+    },
+    {
+      "where": "M05-02.semana_03.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_03.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.10714285714285714; salvo=0.107142857142857"
+    },
+    {
+      "where": "M05-02.semana_03.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.04781007094628132; salvo=0.047810070946281299"
+    },
+    {
+      "where": "M05-02.semana_03.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_03.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.10714285714285714; salvo=0.107142857142857"
+    },
+    {
+      "where": "M05-02.semana_03.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.046656519407384724; salvo=0.046656519407384703"
+    },
+    {
+      "where": "M05-02.semana_03.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_03.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.10714285714285714; salvo=0.107142857142857"
+    },
+    {
+      "where": "M05-02.semana_03.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.10350196149512778; salvo=0.103501961495128"
+    },
+    {
+      "where": "M05-02.semana_04.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=36; salvo=36"
+    },
+    {
+      "where": "M05-02.semana_04.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.21428571428571427; salvo=0.214285714285714"
+    },
+    {
+      "where": "M05-02.semana_04.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.093479104273806207; salvo=0.093479104273806193"
+    },
+    {
+      "where": "M05-02.semana_04.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=36; salvo=36"
+    },
+    {
+      "where": "M05-02.semana_04.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.21428571428571427; salvo=0.214285714285714"
+    },
+    {
+      "where": "M05-02.semana_04.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.10563911878567456; salvo=0.105639118785675"
+    },
+    {
+      "where": "M05-02.semana_04.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=36; salvo=36"
+    },
+    {
+      "where": "M05-02.semana_04.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.21428571428571427; salvo=0.214285714285714"
+    },
+    {
+      "where": "M05-02.semana_04.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.16871354675241315; salvo=0.16871354675241301"
+    },
+    {
+      "where": "M05-02.semana_05.raw_hgb.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.raw_hgb.positives",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.raw_hgb.prevalence",
+      "passed": true,
+      "detail": "calculado=0.13043478260869565; salvo=0.13043478260869601"
+    },
+    {
+      "where": "M05-02.semana_05.raw_hgb.brier",
+      "passed": true,
+      "detail": "calculado=0.060842029711821025; salvo=0.060842029711820997"
+    },
+    {
+      "where": "M05-02.semana_05.platt_calibrated.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.platt_calibrated.positives",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.platt_calibrated.prevalence",
+      "passed": true,
+      "detail": "calculado=0.13043478260869565; salvo=0.13043478260869601"
+    },
+    {
+      "where": "M05-02.semana_05.platt_calibrated.brier",
+      "passed": true,
+      "detail": "calculado=0.069522669134650106; salvo=0.069522669134650106"
+    },
+    {
+      "where": "M05-02.semana_05.training_frequency.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.training_frequency.positives",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.training_frequency.prevalence",
+      "passed": true,
+      "detail": "calculado=0.13043478260869565; salvo=0.13043478260869601"
+    },
+    {
+      "where": "M05-02.semana_05.training_frequency.brier",
+      "passed": true,
+      "detail": "calculado=0.1176783930727985; salvo=0.117678393072799"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=45; salvo=45"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=70; salvo=70"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=72; salvo=72"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=508; salvo=508"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=115; salvo=115"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=358; salvo=358"
+    },
+    {
+      "where": "M05-02.total.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.51510791366906472; salvo=0.51510791366906505"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=43; salvo=43"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=12; salvo=12"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=74; salvo=74"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=566; salvo=566"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=55; salvo=55"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=308; salvo=308"
+    },
+    {
+      "where": "M05-02.total.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.44316546762589926; salvo=0.44316546762589898"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=117; salvo=117"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=578; salvo=578"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=468; salvo=468"
+    },
+    {
+      "where": "M05-02.total.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.67338129496402876; salvo=0.67338129496402899"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=48; salvo=48"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=78; salvo=78"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=69; salvo=69"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=500; salvo=500"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=126; salvo=126"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=354; salvo=354"
+    },
+    {
+      "where": "M05-02.total.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.50935251798561154; salvo=0.50935251798561199"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=32; salvo=32"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=110; salvo=110"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=40; salvo=40"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=104; salvo=104"
+    },
+    {
+      "where": "M05-02.semana_01.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.61904761904761907; salvo=0.61904761904761896"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=16; salvo=16"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=10; salvo=10"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=134; salvo=134"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=24; salvo=24"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=48; salvo=48"
+    },
+    {
+      "where": "M05-02.semana_01.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.2857142857142857; salvo=0.28571428571428598"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=26; salvo=26"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=142; salvo=142"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=104; salvo=104"
+    },
+    {
+      "where": "M05-02.semana_01.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.61904761904761907; salvo=0.61904761904761896"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=33; salvo=33"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=109; salvo=109"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=41; salvo=41"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=105; salvo=105"
+    },
+    {
+      "where": "M05-02.semana_01.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.625; salvo=0.625"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=11; salvo=11"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=22; salvo=22"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=23; salvo=23"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=112; salvo=112"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=33; salvo=33"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=114; salvo=114"
+    },
+    {
+      "where": "M05-02.semana_02.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.6785714285714286; salvo=0.67857142857142905"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=10; salvo=10"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=2; salvo=2"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=24; salvo=24"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=132; salvo=132"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=12; salvo=12"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=98; salvo=98"
+    },
+    {
+      "where": "M05-02.semana_02.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.58333333333333337; salvo=0.58333333333333304"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=34; salvo=34"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=134; salvo=134"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=136; salvo=136"
+    },
+    {
+      "where": "M05-02.semana_02.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.80952380952380953; salvo=0.80952380952380998"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=14; salvo=14"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=23; salvo=23"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=20; salvo=20"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=111; salvo=111"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=37; salvo=37"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=103; salvo=103"
+    },
+    {
+      "where": "M05-02.semana_02.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.61309523809523814; salvo=0.61309523809523803"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=11; salvo=11"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=7; salvo=7"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=147; salvo=147"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=14; salvo=14"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=31; salvo=31"
+    },
+    {
+      "where": "M05-02.semana_03.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.18452380952380953; salvo=0.18452380952381001"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=10; salvo=10"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=150; salvo=150"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=40; salvo=40"
+    },
+    {
+      "where": "M05-02.semana_03.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.23809523809523808; salvo=0.238095238095238"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=18; salvo=18"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=150; salvo=150"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=72; salvo=72"
+    },
+    {
+      "where": "M05-02.semana_03.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.42857142857142855; salvo=0.42857142857142899"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=8; salvo=8"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=7; salvo=7"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=10; salvo=10"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=143; salvo=143"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=15; salvo=15"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=47; salvo=47"
+    },
+    {
+      "where": "M05-02.semana_03.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.27976190476190477; salvo=0.27976190476190499"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=13; salvo=13"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=13; salvo=13"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=23; salvo=23"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=119; salvo=119"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=26; salvo=26"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=105; salvo=105"
+    },
+    {
+      "where": "M05-02.semana_04.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.625; salvo=0.625"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=9; salvo=9"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=2; salvo=2"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=27; salvo=27"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=130; salvo=130"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=11; salvo=11"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=110; salvo=110"
+    },
+    {
+      "where": "M05-02.semana_04.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.65476190476190477; salvo=0.65476190476190499"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=36; salvo=36"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=132; salvo=132"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=144; salvo=144"
+    },
+    {
+      "where": "M05-02.semana_04.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.8571428571428571; salvo=0.85714285714285698"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=16; salvo=16"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=14; salvo=14"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=20; salvo=20"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=118; salvo=118"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=30; salvo=30"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=94; salvo=94"
+    },
+    {
+      "where": "M05-02.semana_04.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.55952380952380953; salvo=0.55952380952380998"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=2; salvo=2"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=20; salvo=20"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=2; salvo=2"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=4; salvo=4"
+    },
+    {
+      "where": "M05-02.semana_05.raw_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.17391304347826086; salvo=0.173913043478261"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=20; salvo=20"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=12; salvo=12"
+    },
+    {
+      "where": "M05-02.semana_05.calibrated_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.52173913043478259; salvo=0.52173913043478304"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.tp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.fp",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.fn",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.tn",
+      "passed": true,
+      "detail": "calculado=20; salvo=20"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.alarms",
+      "passed": true,
+      "detail": "calculado=0; salvo=0"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.cost",
+      "passed": true,
+      "detail": "calculado=12; salvo=12"
+    },
+    {
+      "where": "M05-02.semana_05.frequency_at_0.5.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.52173913043478259; salvo=0.52173913043478304"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.tp",
+      "passed": true,
+      "detail": "calculado=2; salvo=2"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.fp",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.fn",
+      "passed": true,
+      "detail": "calculado=1; salvo=1"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.tn",
+      "passed": true,
+      "detail": "calculado=19; salvo=19"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.alarms",
+      "passed": true,
+      "detail": "calculado=3; salvo=3"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.cost",
+      "passed": true,
+      "detail": "calculado=5; salvo=5"
+    },
+    {
+      "where": "M05-02.semana_05.frozen_calibrated_policy.cost_per_origin",
+      "passed": true,
+      "detail": "calculado=0.21739130434782608; salvo=0.217391304347826"
+    },
+    {
+      "where": "M05-02.causal_policy_reconciliation",
+      "passed": true,
+      "detail": "primeiros seis elegiveis, limiar congelado; nenhuma ordenacao futura do dia"
+    },
+    {
+      "where": "M05-02.event_label",
+      "passed": true,
+      "detail": "evento26h corresponde aos endpoints gravados"
+    },
+    {
+      "where": "M05-03.protocolo.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-03.resultado.json",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-03.parecer.md",
+      "passed": true,
+      "detail": "artefato obrigatorio presente"
+    },
+    {
+      "where": "M05-03.parecer",
+      "passed": true,
+      "detail": "parecer contem interpretacao atribuida"
+    },
+    {
+      "where": "M05-03/contrato_rampa.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo.json: fbc2e0352f41e2f7cd2bc88e60643e00a0acf294d20c6bacace34f7b6cebe8b2"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo_ajuste.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo_ajuste.json: 8d629a5044dfa7096ce7e444bd39563667f3fe5b21c870f38dceeee7e70acb85"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json.files.reports/fechamento_m00_m09/bloco2_engenharia/M05-03/ramp_bundle.joblib",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/ramp_bundle.joblib: 898db4dda385be719b66868bb79d0edce7d3c9b6053e821cd4c242a865b7a2ed"
+    },
+    {
+      "where": "M05-03/protocolo.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.contrato_rampa.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/contrato_rampa.json: 7595d45bf55cc284e217e6cf66e52ea762a3e6f013d274aeb92d72a9de93456b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.execucao_ajustar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/execucao_ajustar.log: cd9c80cda026df70a262509162a19d9256b292b706ad90d30ebea1c244e12c90"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.execucao_avaliar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/execucao_avaliar.log: 6efe2ca17e07c841edd643355c2b44e79b85149fd548496e68ee8c523bc10e03"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.execucao_preparar.log",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/execucao_preparar.log: 206e2b861ae6cf071a2c631702c12469fbfeff1c594f8e458f2329388e5036a4"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.freeze.json",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json: 336620b4021c9ba48f81b56a280ce852d0fec7580bdab6cbecde732f15fedd2d"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.metodo_ajuste.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/metodo_ajuste.md: 31f37c402f0dda6f2c61b6a853c091055a1d48db2e39097be8087a43c163f1ed"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.metricas_alarmes_rampa.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/metricas_alarmes_rampa.csv: 97795b39f7638a0e93593cfc9d7e047a52540f4f55ea6a67fd3c777562446cfa"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.metricas_probabilidade_rampa.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/metricas_probabilidade_rampa.csv: f2246e83508c3eadaa1b4e914b59b1c2052abccd3c0503dfffbbdbbf7672ef7a"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.metricas_regressao_rampa.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/metricas_regressao_rampa.csv: a73f8f88ece7ba43d32455c43797f3589cd67c0d6a5f483618a0215d4fc63fab"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.parecer.md",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/parecer.md: ff0f122b8888a537a1b7e091c1f3d8065e42994d720bca0ed157977288168a0b"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.predicoes_avaliacao.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/predicoes_avaliacao.csv: 511bb36d6ed39612f16630cdd23d9474782881fd491164a91a1f7697d8504479"
+    },
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json.output_sha256.rampas.csv",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/rampas.csv: 511bb36d6ed39612f16630cdd23d9474782881fd491164a91a1f7697d8504479"
+    },
+    {
+      "where": "M05-03/resultado.json.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-03/resultado.json.independent_user_performance_claimed",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-03/resultado.json.documentation_finalization.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "M05-03.completed",
+      "passed": true,
+      "detail": "recibo concluido"
+    },
+    {
+      "where": "M05-03.fit_receipt",
+      "passed": true,
+      "detail": "comando de ajuste real registrado"
+    },
+    {
+      "where": "M05-03.protocol_before_execution",
+      "passed": true,
+      "detail": "2026-11-25T19:26:17.797221+00:00 < 2026-11-25T19:26:42.049586+00:00"
+    },
+    {
+      "where": "M05-03.execution_clock",
+      "passed": true,
+      "detail": "inicio antecede fim"
+    },
+    {
+      "where": "M05-03.evaluation_performed",
+      "passed": true,
+      "detail": "avaliacao concluida"
+    },
+    {
+      "where": "M05-03.training_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-03.recalibration_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-03.policy_reselection_during_evaluation",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-03.snapshot_is_historically_point_in_time",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-03.live_shadow_demonstrated",
+      "passed": true,
+      "detail": "sem ajuste no teste, disponibilidade historica ou shadow alegados"
+    },
+    {
+      "where": "M05-03.evaluation_origins",
+      "passed": true,
+      "detail": "695 origens declaradas"
+    },
+    {
+      "where": "M05-03.weeks",
+      "passed": true,
+      "detail": "quatro semanas e parcial23"
+    },
+    {
+      "where": "M05-03.calibration_policy",
+      "passed": true,
+      "detail": "coortes312/360 separadas"
+    },
+    {
+      "where": "M05-03.fit_protocol_order",
+      "passed": true,
+      "detail": "plano e detalhe do ajuste precedem freeze"
+    },
+    {
+      "where": "M05-03.ramp_availability",
+      "passed": true,
+      "detail": "rotulo de rampa horario disponivel em origem+3h"
+    },
+    {
+      "where": "M05-03.october_cohort",
+      "passed": true,
+      "detail": "695 origens exatas verificadas no CSV"
+    },
+    {
+      "where": "M05-03.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-03.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-03.execution_exit",
+      "passed": true,
+      "detail": "comando de fase concluido com zero"
+    },
+    {
+      "where": "M05-03.total.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.total.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=6.9742452755261599; salvo=6.9742452755261599"
+    },
+    {
+      "where": "M05-03.total.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=12.029621085278567; salvo=12.029621085278601"
+    },
+    {
+      "where": "M05-03.total.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.44106543118320157; salvo=0.44106543118320202"
+    },
+    {
+      "where": "M05-03.total.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.total.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=7.5725654676258989; salvo=7.5725654676258998"
+    },
+    {
+      "where": "M05-03.total.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=14.543586707232551; salvo=14.543586707232601"
+    },
+    {
+      "where": "M05-03.total.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.0062230215827338555; salvo=-0.0062230215827338399"
+    },
+    {
+      "where": "M05-03.total.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.total.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=12.829047482014388; salvo=12.829047482014399"
+    },
+    {
+      "where": "M05-03.total.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=21.037675971128252; salvo=21.037675971128301"
+    },
+    {
+      "where": "M05-03.total.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.00622302158273382; salvo=-0.0062230215827338"
+    },
+    {
+      "where": "M05-03.semana_01.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_01.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=7.7606676247147952; salvo=7.7606676247147899"
+    },
+    {
+      "where": "M05-03.semana_01.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=14.189473656772273; salvo=14.1894736567723"
+    },
+    {
+      "where": "M05-03.semana_01.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.34069084355357443; salvo=-0.34069084355357399"
+    },
+    {
+      "where": "M05-03.semana_01.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_01.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=9.3641666666666676; salvo=9.3641666666666694"
+    },
+    {
+      "where": "M05-03.semana_01.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=17.733752834167202; salvo=17.733752834167198"
+    },
+    {
+      "where": "M05-03.semana_01.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.21303571428571441; salvo=-0.213035714285714"
+    },
+    {
+      "where": "M05-03.semana_01.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_01.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=16.821369047619051; salvo=16.8213690476191"
+    },
+    {
+      "where": "M05-03.semana_01.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=25.763172353232839; salvo=25.7631723532328"
+    },
+    {
+      "where": "M05-03.semana_01.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.30511904761904762; salvo=0.30511904761904801"
+    },
+    {
+      "where": "M05-03.semana_02.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_02.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=6.9436876487672192; salvo=6.9436876487672201"
+    },
+    {
+      "where": "M05-03.semana_02.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=11.039170484078259; salvo=11.0391704840783"
+    },
+    {
+      "where": "M05-03.semana_02.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.77138747618580306; salvo=0.77138747618580294"
+    },
+    {
+      "where": "M05-03.semana_02.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_02.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=7.5816964285714281; salvo=7.5816964285714299"
+    },
+    {
+      "where": "M05-03.semana_02.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=14.22531820821594; salvo=14.225318208215899"
+    },
+    {
+      "where": "M05-03.semana_02.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.39110119047619063; salvo=0.39110119047619002"
+    },
+    {
+      "where": "M05-03.semana_02.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_02.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=13.158005952380952; salvo=13.158005952381"
+    },
+    {
+      "where": "M05-03.semana_02.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=20.60245564781631; salvo=20.602455647816299"
+    },
+    {
+      "where": "M05-03.semana_02.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.10026785714285709; salvo=-0.10026785714285801"
+    },
+    {
+      "where": "M05-03.semana_03.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_03.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=5.7425757330782368; salvo=5.7425757330782403"
+    },
+    {
+      "where": "M05-03.semana_03.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=10.577269586512388; salvo=10.577269586512401"
+    },
+    {
+      "where": "M05-03.semana_03.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.078122777584450645; salvo=-0.078122777584450298"
+    },
+    {
+      "where": "M05-03.semana_03.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_03.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=6.1617559523809522; salvo=6.1617559523809504"
+    },
+    {
+      "where": "M05-03.semana_03.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=12.60805996343873; salvo=12.6080599634387"
+    },
+    {
+      "where": "M05-03.semana_03.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-0.54693452380952401; salvo=-0.54693452380952401"
+    },
+    {
+      "where": "M05-03.semana_03.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_03.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=10.070267857142857; salvo=10.0702678571429"
+    },
+    {
+      "where": "M05-03.semana_03.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=18.690794641092076; salvo=18.690794641092101"
+    },
+    {
+      "where": "M05-03.semana_03.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.054434523809523884; salvo=0.054434523809524002"
+    },
+    {
+      "where": "M05-03.semana_04.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_04.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=7.3740750936900152; salvo=7.3740750936900099"
+    },
+    {
+      "where": "M05-03.semana_04.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=12.15626704349361; salvo=12.1562670434936"
+    },
+    {
+      "where": "M05-03.semana_04.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.88689839816418148; salvo=0.88689839816418203"
+    },
+    {
+      "where": "M05-03.semana_04.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_04.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=7.5775773809523805; salvo=7.5775773809523796"
+    },
+    {
+      "where": "M05-03.semana_04.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=13.631676224968849; salvo=13.6316762249688"
+    },
+    {
+      "where": "M05-03.semana_04.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.18187500000000006; salvo=0.18187500000000001"
+    },
+    {
+      "where": "M05-03.semana_04.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_04.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=12.031029761904762; salvo=12.031029761904801"
+    },
+    {
+      "where": "M05-03.semana_04.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=19.327773742910558; salvo=19.327773742910601"
+    },
+    {
+      "where": "M05-03.semana_04.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=0.061309523809523737; salvo=0.061309523809523703"
+    },
+    {
+      "where": "M05-03.semana_05.hgb_ramp.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_05.hgb_ramp.mae",
+      "passed": true,
+      "detail": "calculado=7.5291931151581011; salvo=7.5291931151581002"
+    },
+    {
+      "where": "M05-03.semana_05.hgb_ramp.rmse",
+      "passed": true,
+      "detail": "calculado=10.743169644648859; salvo=10.7431696446489"
+    },
+    {
+      "where": "M05-03.semana_05.hgb_ramp.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=4.2743102666398212; salvo=4.2743102666398203"
+    },
+    {
+      "where": "M05-03.semana_05.rampa_zero.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_05.rampa_zero.mae",
+      "passed": true,
+      "detail": "calculado=4.6878260869565223; salvo=4.6878260869565196"
+    },
+    {
+      "where": "M05-03.semana_05.rampa_zero.rmse",
+      "passed": true,
+      "detail": "calculado=9.8895607015461113; salvo=9.8895607015461096"
+    },
+    {
+      "where": "M05-03.semana_05.rampa_zero.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=1.1778260869565216; salvo=1.17782608695652"
+    },
+    {
+      "where": "M05-03.semana_05.ultima_rampa_observada.n",
+      "passed": true,
+      "detail": "contagem reconciliada"
+    },
+    {
+      "where": "M05-03.semana_05.ultima_rampa_observada.mae",
+      "passed": true,
+      "detail": "calculado=7.2449999999999992; salvo=7.2450000000000001"
+    },
+    {
+      "where": "M05-03.semana_05.ultima_rampa_observada.rmse",
+      "passed": true,
+      "detail": "calculado=12.030977904884793; salvo=12.0309779048848"
+    },
+    {
+      "where": "M05-03.semana_05.ultima_rampa_observada.bias_observed_minus_predicted",
+      "passed": true,
+      "detail": "calculado=-2.5297826086956525; salvo=-2.5297826086956499"
+    },
+    {
+      "where": "integrated_freeze.files[6].sha256",
+      "passed": true,
+      "detail": "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json: d85a4d8b6efa1fa6579a8b8c5cecf87c6dbc835ca98c25d7a68846e84d092fc5"
+    },
+    {
+      "where": "integrated_freeze.files[26].sha256",
+      "passed": true,
+      "detail": "scripts/obter_avaliacao_bloco2.py: aa79b0595084a60b226b2b3984619f88e47ddc4f57c7d48b411529593b0c876b"
+    },
+    {
+      "where": "integrated_freeze.files[27].sha256",
+      "passed": true,
+      "detail": "tests/test_bloco2_modelagem.py: 53cd06ee4452806639296c92f335a637b8987c865057fbdb67ba5307d93c4e6b"
+    },
+    {
+      "where": "integrated_freeze.files[28].sha256",
+      "passed": true,
+      "detail": "tests/test_bloco2_risco.py: 24ebc8cfd71ac06fd3433ca876427c1bcb9f04d8f7a3ef15694a7c686563c4cd"
+    },
+    {
+      "where": "october_download.raw_sha256",
+      "passed": true,
+      "detail": "data/raw/bloco2_locked/geracao_2026_10.parquet: 55314b5a072a838d0ae4bd4543b940f1cfd3b7c78143f461a33aa05516e1617d"
+    },
+    {
+      "where": "freeze_download.order",
+      "passed": true,
+      "detail": "freeze=2026-11-25T19:27:20.852938+00:00; recebido=2026-11-25T19:54:23.765913+00:00; extraido=2026-11-25T19:54:25.018459+00:00"
+    },
+    {
+      "where": "freeze_download.raw_absent",
+      "passed": true,
+      "detail": "selo registra ausencia do bruto antes de obter"
+    },
+    {
+      "where": "freeze_download.source_contract",
+      "passed": true,
+      "detail": "recorte744horas validado pelo extrator congelado"
+    },
+    {
+      "where": "freeze_download.freeze_hash",
+      "passed": true,
+      "detail": "fonte referencia o selo exato"
+    },
+    {
+      "where": "freeze_download.freeze_timestamp",
+      "passed": true,
+      "detail": "fonte referencia horario do mesmo selo"
+    },
+    {
+      "where": "M03-03.evaluation_after_download",
+      "passed": true,
+      "detail": "2026-11-25T19:54:25.018459+00:00 <= 2026-11-25T19:55:10.335848+00:00"
+    },
+    {
+      "where": "M05-01.evaluation_after_download",
+      "passed": true,
+      "detail": "2026-11-25T19:54:25.018459+00:00 <= 2026-11-25T19:55:14.656357+00:00"
+    },
+    {
+      "where": "M05-01.freeze_before_global",
+      "passed": true,
+      "detail": "bundle/politica local congelados antes do selo conjunto"
+    },
+    {
+      "where": "M05-02.evaluation_after_download",
+      "passed": true,
+      "detail": "2026-11-25T19:54:25.018459+00:00 <= 2026-11-25T19:55:14.656357+00:00"
+    },
+    {
+      "where": "M05-02.freeze_before_global",
+      "passed": true,
+      "detail": "bundle/politica local congelados antes do selo conjunto"
+    },
+    {
+      "where": "M05-03.evaluation_after_download",
+      "passed": true,
+      "detail": "2026-11-25T19:54:25.018459+00:00 <= 2026-11-25T19:55:14.656357+00:00"
+    },
+    {
+      "where": "M05-03.freeze_before_global",
+      "passed": true,
+      "detail": "bundle/politica local congelados antes do selo conjunto"
+    },
+    {
+      "where": "freeze.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    },
+    {
+      "where": "download.operational_approval",
+      "passed": true,
+      "detail": "entrega local nao deve alegar operacao/autonomia"
+    }
+  ],
+  "notes": [
+    {
+      "where": "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json.source_clinic",
+      "not_read_external_provenance": "D:\\Downloads\\clinica_decisao_forecast.py"
+    },
+    {
+      "where": "freeze_download",
+      "download_request_start_not_persisted": true,
+      "interpretation": "ordem corroborada por selo/recebimento/extracao e codigo congelado que verifica selo antes da rede; sem inventar inicio HTTP"
+    }
+  ],
+  "files_read_sha256": {
+    "reports/fechamento_m00_m09/bloco2_engenharia/congelamento_avaliacao.json": "3b66358154e478d57e057a7be8758fdabdaf18b5ce38c43125a0369e51448410",
+    "reports/fechamento_m00_m09/bloco2_engenharia/dados_avaliacao/fonte.json": "3752645a089a952b7aa005db67e37333118ab842e49ce84b33395bb2fcd341e1",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/adendo_verificacao.json": "371c3867cb7e74cc256c9eab977258ec8f9e01cb3bc1533bd7d1843b1e64849a",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/clinica/20261125T162028Z_f0f4439d/resultado.json": "7d9a9b6b7fe457c178bf38a28cc09cb714a0dc4719a4ba0d70987f0f2f5e233e",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/protocolo.json": "3a5824eb29396cc40aca713ac835a28fe908196a6c4e5412c41b6ccdb2aba21c",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-06/resultado.json": "083af0e965543048fe6b11581fac1d3aff21ef553ad1e05e36920d9650a7a3b2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/auditoria_final.json": "8dc8db72165525120b1328d2663d9d7060ce60a43352a97f8028fbce62480e76",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_historia/receipt.json": "cac8593cff5946a4509a22e3844909559b46c120595de529778e9fdf95d6cb70",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/cli_persistencia/receipt.json": "40edbcbdf4ccf008aca93a94273b75fe1e6ce5d92c50343642c048b2519a17b7",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/linhagem_persistencia.json": "6f06d4c96d842eb4408995f2e1abf37b8e1f9af01b2f81054b6e7209dcc490ec",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/protocolo.json": "e0eef6c506771f0284508ee1e58f413e8538e2ce794b6f516d1307d8cea93c31",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-07/resultado.json": "1143e2a90f28e17029fb77bab080ddef189f294a6f29737ac3a92cf7eb0ab3f0",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/auditoria_final.json": "789125f6a93460227a9b53b6076c3756d47b5823a225e93efcdb11810bb02c66",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_historia/receipt.json": "abf6f6a71f9c78a771f8f02c40a7870ff2c06d4579c944fa9beb25983f31732b",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/cli_persistencia/receipt.json": "78ac7fe3c483354b3f9e15ca591ce1a7146ecd35db00fee8cbb22bb688c89eaf",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/linhagem_persistencia.json": "67a5f3e222ef4cc5547e48493e2c3fefa9dc5dbe8f3e248ad819cfa477470075",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/protocolo.json": "26bc483a92096f88be5427afa2c469af229e8f0d7e99ba7b96e542911688401b",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M02-08/resultado.json": "97b719629cb849a762ea528942a0cc9ca6342769bc29e9ee493188dc508591c3",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/protocolo.json": "d85a4d8b6efa1fa6579a8b8c5cecf87c6dbc835ca98c25d7a68846e84d092fc5",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-01/resultado.json": "1adc702e4272fe07103c8889465ef5fc0a93e8e7493c1833525d32767c1170c9",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/protocolo.json": "92e3791ae161e8e41ad179fd55bfb72e08fb35a13ef23656a9c850b523a2f6a2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-02/resultado.json": "83e63cdf2ccc3dd34301834d9802269fbc92ceae552df587e156ae560ccf25a9",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/adendo_execucao_avaliacao.json": "1a1495dac2034585577107602a544f802075e3edde2af2e75ff0996e6d1bc93a",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/ajuste_receipt.json": "3393dec45514b885ecd4f1a071b7f26a4cdee92817408124b1a1f2879aa58fb3",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/evaluation_receipt.json": "203a5157dfb1da180bafc33c92efd07d1c243751fb11f46700b30d1e121c61be",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/protocolo.json": "a9cca9a359b8401099e63fe2805974d20c48e0f7bd994367543801bd4deaf347",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/resultado.json": "38c43d0767f04e8dd4c23808cc8b689d1869e8494c53c0c7e7b6ea50f4252178",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M03-03/selection_manifest.json": "f3b254a51978030dad9bc6d270880127bb0e6446b3f736f37df9e4d85a1f28c9",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/calibracao_congelada.json": "d034e9525a3a301e680f5dabc6f5ac3da82400a0a07ac2aad261656b58f0853c",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/freeze.json": "0752569eb41eb41f5d8fdd5ce12a7905ccbc66f235ebd91169ba6d13f08fb50e",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo.json": "c6a170bf1f18030400574d3e6911059cef2b75705c584f4946345bfc99afe37e",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/protocolo_ajuste.json": "3a40af121d5caf6684b12425ea7ccb80044761418e11e40d9ff736bc749b28f2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-01/resultado.json": "58add79def9d35244be20ce364b169d0d046d616c7be1e773f88eda4c18c3ff0",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/freeze.json": "22147f3fdcedda925be7333341f527c7314e0a86a09801d64a1ee2fe15cbd007",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/politica_congelada.json": "40b8eb799258c49f478b6b19bb3b330139eef360858b66c8f5c0feb563e795a7",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo.json": "c549e9bdec33550d4b8ed039d2bc2edda56aa48715cdc310c780b6c46f2d33bf",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/protocolo_ajuste.json": "45c00ebeeeb4d0019ea4e1eb8cf0fb4b0b16fa1444c76ef207ba9aab34308acf",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-02/resultado.json": "fdcfbb86b2fcb7b51f5ac1472f88ffae99e44bdb06a91379131b74c20b5b71c0",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/contrato_rampa.json": "7595d45bf55cc284e217e6cf66e52ea762a3e6f013d274aeb92d72a9de93456b",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/freeze.json": "336620b4021c9ba48f81b56a280ce852d0fec7580bdab6cbecde732f15fedd2d",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo.json": "fbc2e0352f41e2f7cd2bc88e60643e00a0acf294d20c6bacace34f7b6cebe8b2",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/protocolo_ajuste.json": "8d629a5044dfa7096ce7e444bd39563667f3fe5b21c870f38dceeee7e70acb85",
+    "reports/fechamento_m00_m09/bloco2_engenharia/M05-03/resultado.json": "b1883653cd1227946223966ba96b9d435a54d0c24619da2adeaa5f5fbfa05dd8"
+  },
+  "experiment_execution": false,
+  "model_deserialization": false,
+  "operational_approval": false,
+  "independent_user_authorship_certified": false,
+  "warning": "Auditoria documental local; outubro e avaliacao retrospectiva apos congelamento, nao coleta prospectiva ou shadow."
+}

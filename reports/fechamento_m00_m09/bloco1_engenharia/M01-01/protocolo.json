@@ -1,0 +1,124 @@
+{
+  "schema": "renewcast-bloco1-engineering-protocol-v1",
+  "item_id": "M01-01",
+  "registered_at_utc": "2026-11-25T14:10:44.259700+00:00",
+  "purpose": "Provide and verify an assisted technical solution; no teacher, examination or independent-student-response gate.",
+  "assistance": "Codex implementation and analysis; independent authorship is not claimed.",
+  "source_month_fixed_before_query": {
+    "entity": "CJU_BA5EIGT",
+    "start_inclusive": "2025-11-01T00:00:00",
+    "end_exclusive": "2025-12-01T00:00:00",
+    "manual_check_date": "2025-11-15",
+    "reason": "Month fixed in the existing slice protocol and explicitly requested; not selected by diagnostic quality.",
+    "already_examined_project_source": true,
+    "new_predictive_test": false,
+    "timezone_assigned": false
+  },
+  "sql_policy": {
+    "key": [
+      "id_ons",
+      "din_instante"
+    ],
+    "grain": "one hourly reference-label measurement per entity",
+    "duplicates": "All rows sharing a duplicate key are quarantined; no averaging or last-row choice.",
+    "calendar": "Keep every expected hour; partial-day denominators use only requested exposure hours.",
+    "missing": "Fill missing counts only; unknown generation remains NULL.",
+    "lag": "After complete entity-hour calendar, PARTITION BY entity ORDER BY reference timestamp. First row has unavailable preceding context."
+  },
+  "comparison_tolerance": {
+    "float_absolute": 1e-10,
+    "float_relative": 1e-12,
+    "integer_keys_and_null_masks": "exact"
+  },
+  "predeclared_examples": {
+    "M00_origin": "2026-07-02T04:00:00",
+    "M00_delay_hours": 3,
+    "M00_horizon_hours": 12,
+    "M00_window_hours": 4,
+    "M00_expected_reference_hours": [
+      "2026-07-01T22:00:00",
+      "2026-07-01T23:00:00",
+      "2026-07-02T00:00:00",
+      "2026-07-02T01:00:00"
+    ],
+    "M07_origin": "2026-07-02T05:00:00",
+    "M07_delay_hours": 3,
+    "M07_window_hours": 4,
+    "M07_expected_reference_hours": [
+      "2026-07-01T23:00:00",
+      "2026-07-02T00:00:00",
+      "2026-07-02T01:00:00",
+      "2026-07-02T02:00:00"
+    ],
+    "case_C_start": "2027-02-10T22:00:00",
+    "case_C_end_inclusive": "2027-02-12T00:00:00",
+    "case_C_calendar_hours": 27,
+    "case_C_daily_expected_hours": [
+      2,
+      24,
+      1
+    ],
+    "case_C_clean_present": [
+      2,
+      1,
+      1
+    ],
+    "case_C_clean_valid": [
+      2,
+      0,
+      1
+    ],
+    "case_C_daily_means": [
+      2.5,
+      null,
+      4.0
+    ]
+  },
+  "expected_checks": [
+    "Full SQL-versus-pandas comparison of daily, hourly, duplicate and sparse-LAG tables.",
+    "Manual case C counts, partial denominators, duplicate quarantine and midnight LAG.",
+    "Zero versus missing, wholly missing day, multi-entity partition and input-order counterexamples.",
+    "Full November calendar, null/zero/duplicate/gap diagnostics and LAG; manual 15 November mean via math.fsum.",
+    "Reference-label temporal windows M00/M07; reject measurements whose assumed available_at exceeds origin.",
+    "No model training, inference, Spark, Docker, new downloads or old receipt overwrite."
+  ],
+  "input_sha256": {
+    "dist/databricks/CJU_BA5EIGT/m07_3/manifesto_entrada.json": "93c1e7b340823e684a26bbd8a96dc719f94dfdbbf89016cb545211ce586eca34",
+    "dist/databricks/CJU_BA5EIGT/m07_3/geracao.parquet": "bf3a58b37a2857951eba280452b622db4f541ad13b2c663c2fd5c54c94ec7104",
+    "reports/scale_comparison.md": "7f63d4b2fb19148c0e9b0837921d40c710c07510e13f7370915d35c8d4fb2bef",
+    "src/renewable_forecast/cli.py": "71915cda909ca85df4c92a38c69d2774fc700a491c7dde0c234d69d3e10c7d78",
+    "src/renewable_forecast/modeling.py": "419c3dc1b2b35cec216e83e81fe3293199d2b56f4842c27d86d76b798a11f0de",
+    "src/renewable_forecast/features.py": "de2f3e129713c348a7cbc7f00d6894df3dc048fecc3366364e0d2c93a8c60233",
+    "pyproject.toml": "7068e21a944d389c365bc2e2d8a7f6004f103400afc4d0e8832c21b709abecdc"
+  },
+  "preserved_historical_files_sha256": {
+    "reports/fechamento_m00_m09/M00-01/parecer.md": "7e6325f380421ae83f7ff4cc1c53afb1da0501acf3830f00f1a4e8e455a45546",
+    "reports/fechamento_m00_m09/M00-01/protocolo.json": "db83200952f49c122e5b0b483fddc765c756b384268ee74945affea9f9b76035",
+    "reports/fechamento_m00_m09/M00-01/resposta_independente.md": "2a56c777029eaacc451fda649c4a9d5c94f3b4f9f64f5ecf727f83afb84ecc07",
+    "reports/fechamento_m00_m09/M00-01/resultado.json": "dfdc4dfce25d01d2ffc459f75a3c2b0fe85e94071b72f6401843fde7436c4dec",
+    "reports/fechamento_m00_m09/M01-01/consultas.sql": "8b0794ee90dbf9fdd6b306542ab1097379689d3821e199f4fe0be23a9cee9600",
+    "reports/fechamento_m00_m09/M01-01/parecer.md": "88db892f8a69e25e1e42fd03f4d58fd689f035baaeb860d1a7cbd4d78536c26b",
+    "reports/fechamento_m00_m09/M01-01/protocolo.json": "9bc62dae567c0cbddb67ff1446cd1a94cb3ede33ce1ca2f7a9d702aa6c0827ff",
+    "reports/fechamento_m00_m09/M01-01/resposta_independente.md": "10312cfd267b6db9921a40d8ca1d8ec13a2205d873ba9ceda0176599ef46686a",
+    "reports/fechamento_m00_m09/M01-01/resultado.json": "67dce20fab2b0033810c98d03eaa9401872eb5dabfaa4ea8f3f756dbc83a9de4",
+    "reports/fechamento_m00_m09/M01-02/adendo_protocolo.json": "9408b92346894719a3fa98c0f956b6407e3f4458f09b9b11a755794253ba3ccc",
+    "reports/fechamento_m00_m09/M01-02/calendario_exercicio.csv": "c5aa97e2269d29b9d2947227a834e1593a60f7757de259625f3a8b84cdc82a70",
+    "reports/fechamento_m00_m09/M01-02/consultas.sql": "cd13cb06c1d956a717e4f0d44b65376760938b5faee0cc0c0758773e1d86a5e3",
+    "reports/fechamento_m00_m09/M01-02/diagnostico.csv": "ce031b9429ae5a8093a269c242dc0f9db2b0bffed16976c2c85767fc46f1157b",
+    "reports/fechamento_m00_m09/M01-02/parecer.md": "60650aca7f44cd26fd2e74c6a51fe2fe841c047a8555a6d3d815b4b053281c7b",
+    "reports/fechamento_m00_m09/M01-02/protocolo.json": "57b42fabbd37bcbd614abf1bef5512c6030f4a178f2eca4242e910b011c317e2",
+    "reports/fechamento_m00_m09/M01-02/protocolo_recorte.json": "a8ecf829e5b0ae11cf5dc15c06d28c2c488b58cabd9883d3ea4c613c586add4c",
+    "reports/fechamento_m00_m09/M01-02/recorte_real.csv": "b3cb3ab543b7192ad490373434db68305cfa945d812443da7a3caf6f4176eb36",
+    "reports/fechamento_m00_m09/M01-02/resposta_independente.md": "a598184dbc905ba5a79f84247710c6d7154ff8e3e03a46bb6b9b11964f03a92f",
+    "reports/fechamento_m00_m09/M01-02/resultado.json": "761fb87e3afe55acbd0f4e553707ac5a3243a57ceef96b8bbedfe4a8ed5714a9",
+    "reports/fechamento_m00_m09/M07-04/defesa.md": "d3effb4dd6694b1cba1b676b8c0b0a6d859b8fbd5828cbab7038b9888b51c865",
+    "reports/fechamento_m00_m09/M07-04/parecer.md": "f1cb3481315f00e76042d848bc7eb77d639b108fbdaf273ce31c64101a1a48ac",
+    "reports/fechamento_m00_m09/M07-04/protocolo.json": "e4f078c813aa62c55fb9b105e6d10bc7bb36b8acb7161de08be08fb5cd233931",
+    "reports/fechamento_m00_m09/M07-04/resultado.json": "955d673db3efb4dff5b5604eda2beea7366f751c3c93da91c1852d15ae3b9b89"
+  },
+  "excluded": [
+    "Config/README/AGENTS as stable analytical inputs",
+    "New predictive model evaluation",
+    "Physical timestamp/availability certification (external M04 limits remain)"
+  ]
+}

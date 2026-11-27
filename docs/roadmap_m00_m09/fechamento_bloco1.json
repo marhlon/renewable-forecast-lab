@@ -1,0 +1,70 @@
+{
+  "valid": false,
+  "errors": [
+    "exigir_fechamento: bloco 1 pendente: M04-02, M04-03, M04-04, M04-05"
+  ],
+  "summary": {
+    "total": 18,
+    "total_global": 45,
+    "bloco": 1,
+    "etapas_do_bloco": [
+      1,
+      2,
+      3
+    ],
+    "itens_no_bloco": [
+      "M00-01",
+      "M01-01",
+      "M01-02",
+      "M02-01",
+      "M02-02",
+      "M02-03",
+      "M02-04",
+      "M02-05",
+      "M04-01",
+      "M04-02",
+      "M04-03",
+      "M04-04",
+      "M04-05",
+      "M06-01",
+      "M07-04",
+      "M08-01",
+      "M09-01",
+      "M09-03"
+    ],
+    "por_estado": {
+      "planejado": 0,
+      "em_execucao": 0,
+      "aguarda_revisao": 0,
+      "validado": 14,
+      "bloqueado": 4
+    },
+    "por_modulo": {
+      "M00": 1,
+      "M01": 2,
+      "M02": 5,
+      "M03": 0,
+      "M04": 5,
+      "M05": 0,
+      "M06": 1,
+      "M07": 1,
+      "M08": 1,
+      "M09": 2
+    },
+    "exigir_fechamento": true,
+    "pendentes_no_bloco": [
+      "M04-02",
+      "M04-03",
+      "M04-04",
+      "M04-05"
+    ],
+    "gate": null,
+    "itens_no_gate": [],
+    "pendencias_fora_do_gate": [],
+    "pendentes_no_gate": [],
+    "prontos_para_iniciar": []
+  },
+  "warning": "Consistência documental não comprova autonomia nem operação real.",
+  "schema": "renewcast-roadmap-verification-v1",
+  "backlog": "C:\\renewable-forecast-lab\\config\\roadmap_m00_m09.json"
+}

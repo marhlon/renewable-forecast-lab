@@ -1,0 +1,107 @@
+{
+  "schema": "renewcast-m02-05-result-v1",
+  "item_id": "M02-05",
+  "completed": true,
+  "implementation_status": "awaiting_parent_review",
+  "started_at_utc": "2026-11-25T11:50:07.901664+00:00",
+  "completed_at_utc": "2026-11-25T11:51:36.901432+00:00",
+  "elapsed_seconds": 89.01054469999508,
+  "command": [
+    "C:\\Users\\marhl\\miniconda3\\envs\\renewable-forecast\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_weather_gain_uncertainty.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-o",
+    "junit_family=xunit1",
+    "--junitxml",
+    "C:\\Users\\marhl\\AppData\\Local\\Temp\\renewcast_m02_05_verified_3uh9j1yb\\pytest.xml"
+  ],
+  "exit_code": 0,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "pytest": "9.1.1",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input_sha256": {
+    "protocolo.json": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b"
+  },
+  "code_sha256": {
+    "src/renewable_forecast/weather_gain_uncertainty.py": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+    "tests/test_weather_gain_uncertainty.py": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e"
+  },
+  "output_sha256": {
+    "contraprovas.json": "220ce36eba751de638f4bf197d85b8923a4c8e00f4f55d0fa3a22b506798cdf3",
+    "parecer.md": "cbd5869978096e0f9774b42a91ef221a4a5b4389dca897270c3744aee12da59a"
+  },
+  "test_counts": {
+    "passed": 59,
+    "failed": 0,
+    "skipped": 0
+  },
+  "prior_execution_summary": [
+    {
+      "started_at_utc": "2026-11-25T11:45:50.256477+00:00",
+      "finished_at_utc": "2026-11-25T11:47:16.560974+00:00",
+      "exit_code": 0,
+      "counts": {
+        "passed": 59,
+        "failed": 0,
+        "skipped": 0
+      },
+      "registered_hashes": {
+        "source_sha256": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+        "tests_sha256": "2a927c7ec48d8714281c710ec0ee8cb4a5facfc9796901b7552bb4b5873122c1",
+        "protocol_sha256": "a2e25cdabf2387a1f73e05f104b859d686de823626b400f969a1a195cd434c00"
+      },
+      "preserved_in": "contraprovas.json/prior_executions/0"
+    }
+  ],
+  "models_trained": false,
+  "models_refitted": false,
+  "real_predictions_bootstrapped": false,
+  "M02_08_executed": false,
+  "network_used": false,
+  "gui_used": false,
+  "independent_authorship_proven": false,
+  "assistance": "Implementation, tests, execution and interpretation prepared with Codex assistance; review and roadmap registration belong to root, not a professor acceptance.",
+  "limits": [
+    "Only construction and small counterexamples of M02-05.",
+    "Historical complete source was not recovered; historical bootstrap RNG sequence is not guaranteed.",
+    "No claim about current real-data gain, historical confidence intervals, future generalization or operation.",
+    "Pytest temporary-file retention is not a cleanup receipt."
+  ],
+  "small_fixture_inputs": [
+    {
+      "path_at_execution": "C:\\Users\\marhl\\AppData\\Local\\Temp\\pytest-of-marhl\\pytest-42\\test_cli_creates_real_csv_rece0\\paired_fixture.csv",
+      "bytes": 448,
+      "sha256": "4dd321743f7099d80bf540303809e702960e88fddb43e94746ebdff18de43d02",
+      "archived_inline_in": "contraprovas.json/cli_fixture_archive/0/input_csv"
+    }
+  ],
+  "cli_fixture_archive_note": "Exact fixture CSV, summary CSV and receipt bytes are archived inline in contraprovas.json; no extra delivery files or new CLI execution were needed.",
+  "criteria_evidence": {
+    "C1": {
+      "technical_evidence_observed": true,
+      "description": "Explicit return by fold and n-weighted aggregate; input controls; CLI executed on 8 manufactured rows with CSV/receipt/hash checks and overwrite refusal."
+    },
+    "C2": {
+      "technical_evidence_observed": true,
+      "description": "59 passed, zero failed/skipped; pairing, within-fold circularity, weighted replica quantiles, deterministic local RNG, preservation and rejection controls."
+    }
+  },
+  "protocol_before_execution": true,
+  "registered_inputs_code_preserved_during_tests": true,
+  "artifacts_sha256": {
+    "src/renewable_forecast/weather_gain_uncertainty.py": "f8c1dff888fb5796e5405b87761da038d73af4164435f829abd1f1cca078dc03",
+    "tests/test_weather_gain_uncertainty.py": "478d7f74e80574e210b2dcc35691e10ca80b0290427197c3b1edfb630c0fb29e",
+    "reports/fechamento_m00_m09/M02-05/protocolo.json": "7cd02d111b3886b65b319aa0a9fede9dd67c3c64241291408e8a0a20cf721f5b",
+    "reports/fechamento_m00_m09/M02-05/contraprovas.json": "220ce36eba751de638f4bf197d85b8923a4c8e00f4f55d0fa3a22b506798cdf3",
+    "reports/fechamento_m00_m09/M02-05/parecer.md": "cbd5869978096e0f9774b42a91ef221a4a5b4389dca897270c3744aee12da59a"
+  },
+  "artifacts_finalized_at_utc": "2026-11-25T11:52:50.960529+00:00"
+}
